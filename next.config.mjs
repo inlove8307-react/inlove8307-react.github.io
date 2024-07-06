@@ -7,7 +7,7 @@ const nextConfig = {
     includePaths: ['styles'],
   },
   output: "export",
-  assetPrefix: ".",
+  assetPrefix: prefix,
 };
 
 export default nextConfig;
