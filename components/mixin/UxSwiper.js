@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxSection = (props, ref) => {
-  const originClassName = 'ux-section';
+const UxSwiper = (props, ref) => {
+  const originClassName = 'ux-swiper';
   const mixinClassName = classnames(originClassName, props.className);
 
   return (
-    <section className={mixinClassName}>
+    <div className={mixinClassName}>
       {props.children}
-    </section>
+    </div>
   )
 };
 
-export default React.forwardRef(UxSection);
+export default React.forwardRef(UxSwiper);

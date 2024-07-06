@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 import Link from 'next/link'
 import UxSection from "@/components/layout/UxSection";
@@ -6,10 +6,11 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
 const UxHeader = (props, ref) => {
-  const originClass = 'ux-header';
+  const originClassName = 'ux-header';
+  const mixinClassName = classnames(originClassName, props.className);
 
   return (
-    <header className={classnames(originClass, props.className)}>
+    <header className={mixinClassName}>
       <UxSection>
         <UxArticle>
           <UxContent>

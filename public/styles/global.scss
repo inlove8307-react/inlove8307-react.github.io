@@ -101,7 +101,7 @@ body {}
     width: 72rem;
   }
 
-  html.mobile & {
+  html.mobile .ux-section > & {
     padding: 0 var(--space);
   }
 }

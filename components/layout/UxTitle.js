@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxTitle = (props, ref) => {
-  const originClass = 'ux-title';
+  const originClassName = 'ux-title';
+  const mixinClassName = classnames(originClassName, props.className);
 
   return (
-    <div className={classnames(originClass, props.className)}>
+    <div className={mixinClassName}>
       {props.children}
     </div>
   )

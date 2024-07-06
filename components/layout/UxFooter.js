@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
 const UxFooter = (props, ref) => {
-  const originClass = 'ux-footer';
+  const originClassName = 'ux-footer';
+  const mixinClassName = classnames(originClassName, props.className);
 
   return (
-    <footer className={classnames(originClass, props.className)}>
+    <footer className={mixinClassName}>
       <UxSection>
         <UxArticle>
           <UxContent>
