@@ -1,15 +1,93 @@
-export default function IndexPage() {
-  // 실제 렌더링되는 컴포넌트 내용은 비워둡니다.
-  // 왜냐하면 이 페이지는 실제로 렌더링되지 않고 리다이렉트될 것이기 때문입니다.
-  return <div></div>;
-}
+import UxSection from "@/components/layout/UxSection";
+import UxArticle from "@/components/layout/UxArticle";
+import UxTitle from "@/components/layout/UxTitle";
+import UxContent from "@/components/layout/UxContent";
 
-export async function getServerSideProps(context) {
-  // 리다이렉트 설정
-  return {
-      redirect: {
-          destination: '/view/Main', // 리다이렉트할 경로
-          permanent: false, // 일시적 리다이렉트
-      },
-  };
+export default function Index() {
+  return (
+    <UxSection>
+      <UxArticle>
+        <UxTitle>
+          <h3>H3 Title</h3>
+        </UxTitle>
+        <UxContent>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+          <p>Index Content</p>
+        </UxContent>
+      </UxArticle>
+    </UxSection>
+  )
 }

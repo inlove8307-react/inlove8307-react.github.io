@@ -13,7 +13,9 @@ const UxHeader = (props, ref) => {
       <UxSection>
         <UxArticle>
           <UxContent>
+            <Link href="/">Index</Link>
             <Link href="/view/Main">Main</Link>
+            <Link href="/view/Page">Page</Link>
             <Link href="/view/Sample">Sample</Link>
           </UxContent>
         </UxArticle>
