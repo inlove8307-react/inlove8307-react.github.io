@@ -4,8 +4,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['styles'],
   },
-  // assetPrefix: ".",
   output: "export",
+  assetPrefix: ".",
 };
 
 export default nextConfig;
