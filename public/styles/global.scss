@@ -79,7 +79,7 @@ body {}
 /* LAYOUT MAIN */
 .ux-main {
   margin-top: $headerHeight;
-  padding-top: 2rem;
+  padding: 3.2rem 0;
 }
 /* LAYOUT FOOTER */
 .ux-footer {}
@@ -96,23 +96,55 @@ body {}
 .ux-article {
   display: flex;
   flex-direction: column;
+  gap: .8rem;
 
   html.desktop & {
     width: 72rem;
   }
-
   html.mobile .ux-section > & {
     padding: 0 var(--space);
   }
+
+  &.h3 {
+    gap: 2.4rem;
+  }
+  &.h4 {
+    gap: 1.6rem;
+  }
+  &.h5 {
+    gap: .8rem;
+  }
 }
 /* LAYOUT TITLE */
-.ux-title {}
+.ux-title {
+  font-weight: 700;
+
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+}
 /* LAYOUT CONTENT */
 .ux-content {
   display: flex;
+  gap: .8rem;
 
   .ux-main & {
     flex-direction: column;
+  }
+  .ux-article.h3 & {
+    gap: 2.4rem;
+  }
+  .ux-article.h4 & {
+    gap: 1.6rem;
+  }
+  .ux-article.h5 & {
+    gap: .8rem;
   }
 }
 /* LAYOUT Z-INDEX */

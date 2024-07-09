@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 
 // Styles
 import "@/public/styles/base.css";
+import "@/public/styles/icon.scss";
 import "@/public/styles/global.scss";
 import "@/public/styles/components.scss";
 
