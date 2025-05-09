@@ -40,9 +40,9 @@ export default function Page() {
         <UxContent>
           <ul
             style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '1.6rem .8rem',
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1.6rem .8rem",
             }}
           >
             {
@@ -50,14 +50,14 @@ export default function Page() {
                 <li
                   key={index}
                   style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '.4rem',
-                    padding: '.8rem',
-                    borderRadius: '.8rem',
-                    border: '.1rem solid var(--light1)',
-                    boxShadow: '0 .2rem .4rem rgba(0, 0, 0, .05)'
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: ".4rem",
+                    padding: ".8rem",
+                    borderRadius: ".8rem",
+                    border: ".1rem solid var(--light1)",
+                    boxShadow: "0 .2rem .4rem rgba(0, 0, 0, .05)"
                   }}
                 >
                   <UxIcon className={icon} />

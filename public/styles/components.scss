@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 :root {
   --inset: inset 0 0 0 .1rem var(--light2);
   --inset-focus: inset 0 0 0 .2rem var(--light3);
@@ -20,23 +21,30 @@
   background-color: var(--light0);
   transition: box-shadow .1s ease-in-out;
   transform: translateZ(0);
+
   &:focus-within {
     box-shadow: var(--inset-focus);
   }
+
   &.valid {
     box-shadow: var(--inset-valid);
   }
+
   &.valid:focus-within {
     box-shadow: var(--inset-valid-focus);
   }
+
   &.invalid {
     box-shadow: var(--inset-invalid);
   }
+
   &.invalid:focus-within {
     box-shadow: var(--inset-invalid-focus);
   }
+
   &.readonly {
     background-color: var(--light1);
+
     .ux-input-base,
     .ux-input-prefix,
     .ux-input-suffix,
@@ -44,9 +52,11 @@
       color: var(--dark3);
     }
   }
+
   &.disabled {
     box-shadow: inset 0 0 0 .1rem var(--light3);
     background-color: var(--light2);
+
     .ux-input-base,
     .ux-input-prefix,
     .ux-input-suffix,
@@ -54,38 +64,49 @@
       color: var(--dark3);
     }
   }
+
   .ux-input-base {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0;
+    flex: {
+      grow: 1;
+      shrink: 0;
+      basis: 0;
+    }
     width: 100%;
     border: 0;
     background-color: transparent;
     caret-color: var(--dark3);
+
     &:focus,
     &:focus-visible {
       outline: none;
     }
   }
+
   &.left .ux-input-base {
     text-align: left;
   }
+
   &.right .ux-input-base {
     text-align: right;
   }
+
   &.center .ux-input-base {
     text-align: center;
   }
+
   .ux-input-prefix {
     flex-shrink: 0;
   }
+
   .ux-input-suffix {
     flex-shrink: 0;
   }
+
   .ux-input-timer {
     flex-shrink: 0;
     color: var(--invalid);
   }
+
   .ux-button {
     flex-shrink: 0;
     padding: 0 0.8rem;
@@ -145,24 +166,134 @@
   &:hover {
     box-shadow: inset 0 0 0 .2rem var(--light2);
   }
+
   &:focus {
     box-shadow: inset 0 0 0 .2rem var(--light3);
   }
+
   &.fill {
     box-shadow: none;
     background-color: var(--color1);
     color: var(--light0);
   }
+
   &.fill:hover {
     box-shadow: inset 0 0 0 .2rem rgba(183, 11, 74, .75);
   }
+
   &.fill:focus {
     box-shadow: inset 0 0 0 .2rem rgba(183, 11, 74, 1);
   }
+
   &.disabled,
   &:disabled {
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
+  }
+}
+
+/* UxCheckbox */
+.ux-checkbox {
+	display: inline-flex;
+
+  .ux-checkbox-base {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+
+    .ux-checkbox-input[type=checkbox] {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0;
+      background-color: transparent;
+      opacity: 0;
+    }
+  }
+
+  .ux-checkbox-label {
+    flex-shrink: 0;
+  }
+
+  .ux-icon {
+    flex-shrink: 0;
+    pointer-events: none;
+  }
+
+  &.checked .ux-icon {
+    background-color: var(--color1);
+  }
+
+  &.disabled .ux-icon {
+    background-color: var(--light2);
+  }
+}
+
+/* UxCheckboxGroup */
+.ux-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  &.column {
+    flex-direction: column;
+  }
+}
+
+/* UxRadio */
+.ux-radio {
+	display: inline-flex;
+
+  .ux-radio-base {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+
+    .ux-radio-input[type=radio] {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0;
+      background-color: transparent;
+      opacity: 0;
+    }
+  }
+
+  .ux-radio-label {
+    flex-shrink: 0;
+  }
+
+  .ux-icon {
+    flex-shrink: 0;
+  }
+
+  &.checked .ux-icon {
+    background-color: var(--color1);
+  }
+
+  &.disabled .ux-icon {
+    background-color: var(--light2);
+  }
+}
+
+/* UxRadioGroup */
+.ux-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  &.column {
+    flex-direction: column;
   }
 }

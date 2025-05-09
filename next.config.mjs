@@ -6,8 +6,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['styles'],
   },
-  output: "export",
-  assetPrefix: prefix,
+  // output: "export",
+  // assetPrefix: prefix,
 };
 
 export default nextConfig;

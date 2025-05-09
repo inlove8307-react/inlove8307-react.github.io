@@ -4,14 +4,14 @@ import UxIcon from "@/components/base/UxIcon";
 import UxButton from "@/components/base/UxButton";
 
 const UxInput = (props, ref) => {
-  const originClassName = 'ux-input';
+  const originClassName = "ux-input";
   const mixinClassName = classnames(originClassName, props.className, {
-		valid: props.valid,
-		invalid: props.invalid,
-		readonly: props.readonly,
-		disabled: props.disabled
-	});
-  const [value, setValue] = useState(props.value || '');
+    valid: props.valid,
+    invalid: props.invalid,
+    readonly: props.readonly,
+    disabled: props.disabled
+  });
+  const [value, setValue] = useState(props.value || "");
 
   const handleInput = (event) => {
     props.onInput && props.onInput(event);
@@ -39,7 +39,7 @@ const UxInput = (props, ref) => {
   };
 
   const handleClear = (event) => {
-    setValue('');
+    setValue("");
     props.onClear && props.onClear(event);
   };
 
@@ -61,7 +61,7 @@ const UxInput = (props, ref) => {
     >
       {
         props.prefix &&
-				<span className={`${originClassName}-prefix`}>
+        <span className={`${originClassName}-prefix`}>
           {props.prefix}
         </span>
       }
@@ -86,6 +86,7 @@ const UxInput = (props, ref) => {
           tagName="button"
           className="clear"
           onClick={handleClear}
+          title="initialize"
         />
       }
       {
@@ -95,14 +96,17 @@ const UxInput = (props, ref) => {
         </span>
       }
       {
-				props.timer &&
-				<span className={`${originClassName}-timer`}>
+        props.timer &&
+        <span className={`${originClassName}-timer`}>
           {props.timer}
         </span>
-			}
+      }
       {
-        props.submit &&
-        <UxButton label={props.submit} />
+        props.submit && !props.readonly && !props.disabled &&
+        <UxButton
+          label={props.submit}
+          onClick={handleClick}
+        />
       }
     </div>
   )

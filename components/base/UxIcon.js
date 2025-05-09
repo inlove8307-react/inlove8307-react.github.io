@@ -3,11 +3,11 @@ import classnames from "classnames";
 import { mergeProps } from "@/utils/core";
 
 const UxIcon = (props, ref) => {
-  const originClassName = 'ux-icon';
+  const originClassName = "ux-icon";
   const mixinClassName = classnames(originClassName, props.className);
 
   const Component = (props) => {
-    const TagName = props.tagName || 'i';
+    const TagName = props.tagName || "i";
     const element = (
       <TagName
         className={mixinClassName}
@@ -16,24 +16,34 @@ const UxIcon = (props, ref) => {
           height: props.size,
           backgroundColor: props.color
         }}
+        onClick={handleClick}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
       />
     );
     const buttonProps = {
-      type: props.type || 'button',
+      type: props.type || "button",
       title: props.title,
-      onClick: handleClick,
-      onFocus: handleFocus,
-      onBlur: handleBlur
+    };
+    const anchorProps = {
+      href: props.href || "#",
+      title: props.title,
+      target: props.target,
     };
 
     switch(props.tagName){
-      case 'button': return mergeProps(element, buttonProps);
-      default: return element;
-    }
+      case "button":
+        return mergeProps(element, buttonProps);
+      case "a":
+        return mergeProps(element, anchorProps);
+      default:
+        return element;
+    };
   };
 
   const handleClick = (event) => {
     event && event.stopPropagation();
+    event && event.preventDefault();
     props.onClick && props.onClick(event);
   };
 

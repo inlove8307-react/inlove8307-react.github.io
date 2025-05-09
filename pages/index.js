@@ -14,6 +14,7 @@ import UxInput from "@/components/base/UxInput";
 import UxLink from "@/components/base/UxLink";
 import UxPassword from "@/components/base/UxPassword";
 import UxRadio from "@/components/base/UxRadio";
+import UxRadioGroup from "@/components/base/UxRadioGroup";
 import UxRange from "@/components/base/UxRange";
 import UxSelect from "@/components/base/UxSelect";
 import UxSpacer from "@/components/base/UxSpacer";
@@ -23,6 +24,7 @@ import UxTextarea from "@/components/base/UxTextarea";
 import UxBadge from "@/components/base/UxBadge";
 import UxButton from "@/components/base/UxButton";
 import UxCheckbox from "@/components/base/UxCheckbox";
+import UxCheckboxGroup from "@/components/base/UxCheckboxGroup";
 /* MIXIN */
 import UxAlert from "@/components/mixin/UxAlert";
 import UxBottomSheet from "@/components/mixin/UxBottomSheet";
@@ -115,58 +117,119 @@ export default function Sample() {
                 type="text"
                 value="default"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
               />
               <UxInput
                 type="text"
                 value="valid"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 valid
               />
               <UxInput
                 type="text"
                 value="invalid"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 invalid
               />
               <UxInput
                 type="text"
                 value="readonly"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 readonly
               />
               <UxInput
                 type="text"
                 value="disabled"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 disabled
               />
               <UxInput
                 type="text"
-                value="prefix"
+                value="value"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 prefix="prefix"
               />
               <UxInput
                 type="text"
-                value="suffix"
+                value="value"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 suffix="suffix"
               />
               <UxInput
                 type="text"
-                value="timer"
+                value="value"
                 placeholder="placeholder"
-                isClear={true}
+                isClear
                 timer="03:00"
                 submit="submit"
               />
+            </UxContent>
+          </UxArticle>
+
+          <UxArticle className="h4">
+            <UxTitle>
+              <h4>UxCheckbox</h4>
+            </UxTitle>
+            <UxContent>
+              <UxCheckboxGroup>
+                <UxCheckbox
+                  label="checkbox"
+                  checked={true}
+                />
+                <UxCheckbox
+                  label="checkbox"
+                  checked={false}
+                />
+              </UxCheckboxGroup>
+              <UxCheckboxGroup className="column">
+                <UxCheckbox
+                  label="checkbox"
+                  checked={true}
+                />
+                <UxCheckbox
+                  label="checkbox"
+                  checked={false}
+                />
+              </UxCheckboxGroup>
+            </UxContent>
+          </UxArticle>
+
+          <UxArticle className="h4">
+            <UxTitle>
+              <h4>UxRadio</h4>
+            </UxTitle>
+            <UxContent>
+              <UxRadioGroup
+                name="RADIO01"
+              >
+                <UxRadio
+                  label="radio01"
+                  value="value01"
+                />
+                <UxRadio
+                  label="radio02"
+                  value="value02"
+                />
+              </UxRadioGroup>
+              <UxRadioGroup
+                className="column"
+                name="RADIO02"
+              >
+                <UxRadio
+                  label="radio01"
+                  value="value01"
+                />
+                <UxRadio
+                  label="radio02"
+                  value="value02"
+                />
+              </UxRadioGroup>
             </UxContent>
           </UxArticle>
 
@@ -177,7 +240,7 @@ export default function Sample() {
           <UxImage>UxImage</UxImage>
           <UxLink>UxLink</UxLink>
           <UxPassword>UxPassword</UxPassword>
-          <UxRadio>UxRadio</UxRadio>
+
           <UxRange>UxRange</UxRange>
           <UxSelect>UxSelect</UxSelect>
           <UxSpacer>UxSpacer</UxSpacer>
@@ -185,7 +248,7 @@ export default function Sample() {
           <UxText>UxText</UxText>
           <UxTextarea>UxTextarea</UxTextarea>
           <UxBadge>UxBadge</UxBadge>
-          <UxCheckbox>UxCheckbox</UxCheckbox>
+
           {/* MIXIN */}
           <UxAlert>UxAlert</UxAlert>
           <UxBottomSheet>UxBottomSheet</UxBottomSheet>
