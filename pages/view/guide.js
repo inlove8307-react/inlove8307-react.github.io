@@ -22,6 +22,9 @@ import UxField from "@/components/base/UxField";
 import UxFieldset from "@/components/base/UxFieldset";
 import UxInput from "@/components/base/UxInput";
 import UxPhone from "@/components/base/UxPhone";
+import UxRrn from "@/components/base/UxRrn";
+import UxLrn from "@/components/base/UxLrn";
+import UxBrn from "@/components/base/UxBrn";
 import UxTextarea from "@/components/base/UxTextarea";
 import UxCheckbox from "@/components/base/UxCheckbox";
 import UxCheckboxGroup from "@/components/base/UxCheckboxGroup";
@@ -286,6 +289,106 @@ export default function Sample() {
 
           <UxArticle className="h4">
             <UxSubject>
+              <h4>UxPassword</h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    placeholder="비밀번호를 입력해주세요."
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - MaxLength</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    placeholder="비밀번호를 입력해주세요."
+                    maxLength={7}
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    maxLength={7}
+                    value="1234567"
+                    clear
+                    valid={true}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    maxLength={7}
+                    value="1234567"
+                    clear
+                    valid={false}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    maxLength={7}
+                    value="1234567"
+                    clear
+                    readonly
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPassword - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPassword
+                    maxLength={7}
+                    value="1234567"
+                    clear
+                    disabled
+                  />
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
+
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
               <h4>UxPhone</h4>
             </UxSubject>
             <UxContent>
@@ -294,7 +397,10 @@ export default function Sample() {
                   <h5>UxPhone - Default</h5>
                 </UxSubject>
                 <UxContent>
-                  <UxPhone clear />
+                  <UxPhone
+                    clear
+                    submit="submit"
+                  />
                 </UxContent>
               </UxArticle>
 
@@ -309,8 +415,8 @@ export default function Sample() {
                     value1="010"
                     value2="1234"
                     value3="5678"
-                    submit="submit"
                     clear
+                    submit="submit"
                   />
                 </UxContent>
               </UxArticle>
@@ -376,6 +482,305 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    disabled
+                  />
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
+
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
+              <h4>UxRrn (주민등록번호)</h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRrn - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxRrn
+                    clear
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRrn - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxRrn
+                    value1="987654"
+                    value2="9876543"
+                    clear
+                    valid={true}
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRrn - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxRrn
+                    value1="987654"
+                    value2="9876543"
+                    clear
+                    valid={false}
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRrn - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxRrn
+                    value1="987654"
+                    value2="9876543"
+                    clear
+                    readonly
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRrn - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxRrn
+                    value1="987654"
+                    value2="9876543"
+                    clear
+                    disabled
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
+
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
+              <h4>UxLrn (운전면허번호)</h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn clear />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={true}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={false}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    readonly
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxLrn - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxLrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    disabled
+                  />
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
+
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
+              <h4>UxBrn (사업자번호)</h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn clear />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={true}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={false}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    readonly
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxBrn - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxBrn
                     value1="010"
                     value2="1234"
                     value3="5678"
@@ -493,24 +898,6 @@ export default function Sample() {
                       </UxRadio>
                     </UxRadioGroup>
                   </UxCheckboxGroup>
-                </UxContent>
-              </UxArticle>
-            </UxContent>
-          </UxArticle>
-
-          <UxDivider />
-
-          <UxArticle className="h4">
-            <UxSubject>
-              <h4></h4>
-            </UxSubject>
-            <UxContent>
-              <UxArticle className="h5">
-                <UxSubject>
-                  <h5></h5>
-                </UxSubject>
-                <UxContent>
-
                 </UxContent>
               </UxArticle>
             </UxContent>

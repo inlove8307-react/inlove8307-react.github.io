@@ -6,14 +6,14 @@ import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
 
 /**
- * <UxInput>
+ * <UxBrn> (사업자번호)
  * [props]
  *
  * [event]
  *
  */
 
-const UxPhone = (props, ref) => {
+const UxBrn = (props, ref) => {
   const baseClassName = 'ux-input-group';
   const caseClassName = classnames(baseClassName, props.className, {
     valid: props.valid === true,
@@ -104,4 +104,4 @@ const UxPhone = (props, ref) => {
   )
 };
 
-export default React.forwardRef(UxPhone);
+export default React.forwardRef(UxBrn);

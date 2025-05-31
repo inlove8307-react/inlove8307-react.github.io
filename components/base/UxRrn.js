@@ -4,16 +4,17 @@ import classnames from 'classnames';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
+import UxPassword from '@/components/base/UxPassword';
 
 /**
- * <UxInput>
+ * <UxRrn> (주민등록번호)
  * [props]
  *
  * [event]
  *
  */
 
-const UxPhone = (props, ref) => {
+const UxRrn = (props, ref) => {
   const baseClassName = 'ux-input-group';
   const caseClassName = classnames(baseClassName, props.className, {
     valid: props.valid === true,
@@ -55,35 +56,25 @@ const UxPhone = (props, ref) => {
       style={props.style}
     >
       <UxInput
-        style={{ width: '2.8rem' }}
-        placeholder="010"
+        style={{ width: '5.2rem'}}
+        placeholder="000000"
         value={value1}
-        maxLength={3}
+        maxLength={6}
         readonly={props.readonly}
         disabled={props.disabled}
         onChange={(value) => setValue1(value)}
       />
-      <UxInput
-        className="dash"
-        style={{ width: '5rem' }}
-        placeholder="1234"
+      <UxPassword
+        className="dash last"
+        placeholder="0000000"
         value={value2}
-        maxLength={4}
+        maxLength={7}
         readonly={props.readonly}
         disabled={props.disabled}
         onChange={(value) => setValue2(value)}
       />
-      <UxInput
-        className="dash last"
-        placeholder="5678"
-        value={value3}
-        maxLength={4}
-        readonly={props.readonly}
-        disabled={props.disabled}
-        onChange={(value) => setValue3(value)}
-      />
       {
-        props.clear && (value1 || value2 || value3) && !props.readonly && !props.disabled &&
+        props.clear && (value1 || value2) && !props.readonly && !props.disabled &&
         <UxIcon
           title="initialize"
           tagName="button"
@@ -104,4 +95,4 @@ const UxPhone = (props, ref) => {
   )
 };
 
-export default React.forwardRef(UxPhone);
+export default React.forwardRef(UxRrn);

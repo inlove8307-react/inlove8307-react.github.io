@@ -6,14 +6,14 @@ import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
 
 /**
- * <UxInput>
+ * <UxLrn> (운전면허번호)
  * [props]
  *
  * [event]
  *
  */
 
-const UxPhone = (props, ref) => {
+const UxLrn = (props, ref) => {
   const baseClassName = 'ux-input-group';
   const caseClassName = classnames(baseClassName, props.className, {
     valid: props.valid === true,
@@ -104,4 +104,4 @@ const UxPhone = (props, ref) => {
   )
 };
 
-export default React.forwardRef(UxPhone);
+export default React.forwardRef(UxLrn);
