@@ -78,7 +78,7 @@
 .ux-masking .ux-masking-mask {display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
 .ux-masking .ux-masking-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--light2);}
 /* <UxMasking> Input */
-.ux-masking .ux-masking-input {padding: 0; width: 100%; height: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
+.ux-masking .ux-masking-input {padding: 0; width: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
 .ux-masking .ux-masking-input:focus,
 .ux-masking .ux-masking-input:focus-visible {outline: none;}
 .ux-masking .ux-masking-input::selection {background-color: transparent; /* WebKit/Blink Browsers */}
