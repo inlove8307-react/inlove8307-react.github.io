@@ -33,106 +33,6 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4">
 						<UxSubject>
-							<h4>UxCollapse</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxCollapse - Default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCollapse>
-										<div data-role="summary">summary</div>
-										<div data-role="details">details</div>
-									</UxCollapse>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxCollapse - Expanded</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCollapse
-										expanded
-									>
-										<div data-role="summary">summary</div>
-										<div data-role="details">details</div>
-									</UxCollapse>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxCollapse - Group</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCollapseGroup>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-									</UxCollapseGroup>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxCollapse - Group Selected</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCollapseGroup
-										selected={0}
-									>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-									</UxCollapseGroup>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxCollapse - Group Once</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCollapseGroup
-										selected={0}
-										once
-									>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-										<UxCollapse>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
-										</UxCollapse>
-									</UxCollapseGroup>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxArticle className="h4">
-						<UxSubject>
 							<h4>UxButton</h4>
 						</UxSubject>
 						<UxContent>
@@ -347,7 +247,7 @@ export default function Sample() {
 								<UxContent>
 									<UxPassword
 										placeholder="비밀번호를 입력해주세요."
-										// scrollIntoView
+										scrollIntoView
 										clear
 									/>
 								</UxContent>
@@ -900,6 +800,107 @@ export default function Sample() {
 											</UxRadio>
 										</UxRadioGroup>
 									</UxCheckboxGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxCollapse</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapse>
+										<div data-role="summary">summary</div>
+										<div data-role="details">details</div>
+									</UxCollapse>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Expanded</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapse
+										expanded
+									>
+										<div data-role="summary">summary</div>
+										<div data-role="details">details</div>
+									</UxCollapse>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group Selected</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup
+										selected={0}
+									>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group Once</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup
+										once
+									>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

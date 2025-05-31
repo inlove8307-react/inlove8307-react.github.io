@@ -13,7 +13,7 @@ import classnames from 'classnames';
 const UxCollapseGroup = (props, ref) => {
 	const baseClassName = 'ux-collapse-group';
 	const caseClassName = classnames(baseClassName, props.className);
-	const [selected, setSelected] = useState(props.selected || 0);
+	const [selected, setSelected] = useState(props.selected);
 
 	const handleChange = (index) => {
 		setSelected(index);
