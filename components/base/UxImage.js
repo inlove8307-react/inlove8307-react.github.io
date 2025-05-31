@@ -2,11 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxImage = (props, ref) => {
-  const originClassName = 'ux-image';
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = 'ux-image';
+  const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={mixinClassName}>
+    <div className={caseClassName}>
       {props.children}
     </div>
   )

@@ -14,8 +14,9 @@ const UxHeader = (props, ref) => {
       <UxSection>
         <UxArticle>
           <UxContent>
-            <Link href="/">Sample</Link>
-            <Link href="/view/Icon">ICON</Link>
+            <Link href="/">HOME</Link>
+            <Link href="/view/guide">GUIDE</Link>
+            <Link href="/view/icons">ICONS</Link>
           </UxContent>
         </UxArticle>
       </UxSection>

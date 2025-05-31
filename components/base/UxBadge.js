@@ -2,11 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxBadge = (props, ref) => {
-  const originClassName = 'ux-badge';
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = 'ux-badge';
+  const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={mixinClassName}>
+    <div
+      ref={ref}
+      className={caseClassName}
+    >
       {props.children}
     </div>
   )

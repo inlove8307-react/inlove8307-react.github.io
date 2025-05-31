@@ -2,11 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxPassword = (props, ref) => {
-  const originClassName = 'ux-password';
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = 'ux-password';
+  const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={mixinClassName}>
+    <div className={caseClassName}>
       {props.children}
     </div>
   )

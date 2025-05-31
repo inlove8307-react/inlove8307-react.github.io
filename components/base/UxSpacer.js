@@ -2,11 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxSpacer = (props, ref) => {
-  const originClassName = 'ux-spacer';
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = 'ux-spacer';
+  const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={mixinClassName}>
+    <div className={caseClassName}>
       {props.children}
     </div>
   )

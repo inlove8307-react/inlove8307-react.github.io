@@ -2,11 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxTextarea = (props, ref) => {
-  const originClassName = 'ux-textarea';
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = 'ux-textarea';
+  const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={mixinClassName}>
+    <div className={caseClassName}>
       {props.children}
     </div>
   )

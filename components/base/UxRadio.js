@@ -1,78 +1,50 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import classnames from "classnames";
+/* COMPONENT */
 import UxIcon from "@/components/base/UxIcon";
 
 const UxRadio = (props, ref) => {
-  const originClassName = "ux-radio";
-  const mixinClassName = classnames(originClassName, props.className, { disabled: props.disabled });
-  const [isChecked, setIsChecked] = useState(props.checked || false);
+  const baseClassName = "ux-radio";
+  const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
+  const [checked, setChecked] = useState(props.checked || false);
+  const [name, setName] = useState(props.name || '');
 
-  const handleInput = (event) => {
-    props.onInput && props.onInput(event);
-  };
-
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setIsChecked(event.target.checked);
-    props.onChange && props.onChange(event);
-  };
-
-  const handleFocus = (event) => {
-    props.onFocus && props.onFocus(event);
-  };
-
-  const handleBlur = (event) => {
-    props.onBlur && props.onBlur(event);
-  };
-
-  const handleClick = (event) => {
-    props.onBlur && props.onBlur(event);
-  };
-
-  const handleKeyDown = (event) => {
-    event.keyCode === 13 && setIsChecked(!isChecked);
-    props.onKeyDown && props.onKeyDown(event);
-  };
-
-  const handleKeyUp = (event) => {
-    props.onKeyUp && props.onKeyUp(event);
+  const handleChange = () => {
+    props.onChange && props.onChange(props.value);
   };
 
   useEffect(() => {
-    props.checked && setIsChecked(props.checked);
-  }, [props.checked]);
+    if (!name) {
+      setName(props.randomChar);
+    }
+  }, [props.randomChar]);
+
+  useEffect(() => {
+    setChecked(props.value === props.selected);
+  }, [props.selected]);
 
   return (
-    <div className={classnames(mixinClassName, { checked: isChecked })}>
-      <label
-        className={`${originClassName}-base`}
-        tabIndex="0"
-        onClick={handleClick}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onKeyDown={handleKeyDown}
-        onKeyUp={handleKeyUp}
-      >
+    <div
+      ref={ref}
+      className={classnames(caseClassName, { checked })}
+    >
+      <label className={`${baseClassName}-base`}>
         <input
           type="radio"
-          className={`${originClassName}-input`}
-          name={props.name}
+          className={`${baseClassName}-input`}
+          name={name}
           value={props.value}
-          checked={isChecked}
+          checked={checked}
           disabled={props.disabled}
-          onInput={handleInput}
           onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
         />
         <UxIcon
           className="unselected-circle"
           size="2.4rem"
         />
         {
-          props.label &&
-          <span className={`${originClassName}-label`}>
-            {props.label}
+          <span className={`${baseClassName}-label`}>
+            {props.children}
           </span>
         }
       </label>

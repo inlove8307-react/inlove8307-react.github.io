@@ -2,9 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxButton = (props, ref) => {
-  const originClassName = "ux-button";
-  const mixinClassName = classnames(originClassName, props.className);
-  const iconAlign = props.icon?.props.align || "left";
+  const baseClassName = "ux-button";
+  const caseClassName = classnames(baseClassName, props.className);
 
   const handleClick = (event) => {
     props.onClick && props.onClick(event);
@@ -20,32 +19,16 @@ const UxButton = (props, ref) => {
 
   return (
     <button
+      ref={ref}
       type="button"
-      className={mixinClassName}
+      className={caseClassName}
       disabled={props.disabled}
       title={props.title}
       onClick={handleClick}
       onFocus={handleFocus}
       onBlur={handleBlur}
     >
-      {
-        props.icon && iconAlign === "left" &&
-        props.icon
-      }
-      {
-        props.children &&
-        props.children
-      }
-      {
-        !props.children && props.label &&
-        <span className={`${originClassName}-label`}>
-          {props.label}
-        </span>
-      }
-      {
-        props.icon && iconAlign === "right" &&
-        props.icon
-      }
+      {props.children}
     </button>
   )
 };

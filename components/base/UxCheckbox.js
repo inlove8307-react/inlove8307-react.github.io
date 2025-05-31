@@ -1,77 +1,58 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { getRandomChar } from '@/utils/core';
 import classnames from "classnames";
+/* COMPONENT */
 import UxIcon from "@/components/base/UxIcon";
 
 const UxCheckbox = (props, ref) => {
-  const originClassName = "ux-checkbox";
-  const mixinClassName = classnames(originClassName, props.className, { disabled: props.disabled });
-  const [isChecked, setIsChecked] = useState(props.checked || false);
-
-  const handleInput = (event) => {
-    props.onInput && props.onInput(event);
-  };
+  const baseClassName = "ux-checkbox";
+  const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
+  const [checked, setChecked] = useState(props.checked || false);
+  const [name, setName] = useState(props.name || '');
 
   const handleChange = (event) => {
-    console.log(event);
-    setIsChecked(event.target.checked);
-    props.onChange && props.onChange(event);
-  };
-
-  const handleFocus = (event) => {
-    props.onFocus && props.onFocus(event);
-  };
-
-  const handleBlur = (event) => {
-    props.onBlur && props.onBlur(event);
-  };
-
-  const handleClick = (event) => {
-    console.log(event);
-    props.onBlur && props.onBlur(event);
-  };
-
-  const handleKeyDown = (event) => {
-    event.keyCode === 13 && setIsChecked(!isChecked);
-    props.onKeyDown && props.onKeyDown(event);
-  };
-
-  const handleKeyUp = (event) => {
-    props.onKeyUp && props.onKeyUp(event);
+    setChecked(event.target.checked);
   };
 
   useEffect(() => {
-    props.checked && setIsChecked(props.checked);
+    if (!name) {
+      setName(getRandomChar());
+    }
+  }, []);
+
+  useEffect(() => {
+    props.onChange && props.onChange(checked);
+  }, [checked]);
+
+  useEffect(() => {
+    if (typeof props.checked === 'boolean') {
+      setChecked(props.checked);
+    }
   }, [props.checked]);
 
   return (
-    <div className={classnames(mixinClassName, { checked: isChecked })}>
+    <div
+      ref={ref}
+      className={classnames(caseClassName, { checked })}
+    >
       <label
-        className={`${originClassName}-base`}
-        tabIndex="0"
-        onClick={handleClick}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onKeyDown={handleKeyDown}
-        onKeyUp={handleKeyUp}
+        className={`${baseClassName}-base`}
       >
         <input
           type="checkbox"
-          className={`${originClassName}-input`}
-          checked={isChecked}
+          className={`${baseClassName}-input`}
+          name={name}
+          checked={checked}
           disabled={props.disabled}
-          onInput={handleInput}
           onChange={handleChange}
         />
         <UxIcon
           className="unchecked-circle"
           size="2.4rem"
         />
-        {
-          props.label &&
-          <span className={`${originClassName}-label`}>
-            {props.label}
-          </span>
-        }
+        <span className={`${baseClassName}-label`}>
+          {props.children}
+        </span>
       </label>
     </div>
   );

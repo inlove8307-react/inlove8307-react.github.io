@@ -1,34 +1,38 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import classnames from "classnames";
 import { mergeProps } from "@/utils/core";
 
 const UxIcon = (props, ref) => {
-  const originClassName = "ux-icon";
-  const mixinClassName = classnames(originClassName, props.className);
+  const baseClassName = "ux-icon";
+  const caseClassName = classnames(baseClassName, props.className);
 
   const Component = (props) => {
     const TagName = props.tagName || "i";
+    const events = {
+      onClick: handleClick,
+      onFocus: handleFocus,
+      onBlur: handleBlur,
+    }
     const element = (
       <TagName
-        className={mixinClassName}
+        className={caseClassName}
         style={{
           width: props.size,
           height: props.size,
           backgroundColor: props.color
         }}
-        onClick={handleClick}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
       />
     );
     const buttonProps = {
       type: props.type || "button",
       title: props.title,
+      ...events
     };
     const anchorProps = {
       href: props.href || "#",
       title: props.title,
       target: props.target,
+      ...events
     };
 
     switch(props.tagName){
@@ -42,8 +46,8 @@ const UxIcon = (props, ref) => {
   };
 
   const handleClick = (event) => {
-    event && event.stopPropagation();
-    event && event.preventDefault();
+    event.stopPropagation();
+    event.preventDefault();
     props.onClick && props.onClick(event);
   };
 
@@ -55,7 +59,12 @@ const UxIcon = (props, ref) => {
     props.onBlur && props.onBlur(event);
   };
 
-  return <Component {...props} />;
+  return  (
+    <Component
+      ref={ref}
+      {...props}
+    />
+  );
 };
 
 export default React.forwardRef(UxIcon);

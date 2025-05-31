@@ -1,0 +1,107 @@
+import React, { useState, useEffect } from 'react';
+import { getArray, mergeProps } from '@/utils/core';
+import classnames from 'classnames';
+/* COMPONENT */
+import UxIcon from '@/components/base/UxIcon';
+import UxButton from '@/components/base/UxButton';
+import UxInput from '@/components/base/UxInput';
+
+/**
+ * <UxInput>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const UxInputGroup = (props, ref) => {
+  const baseClassName = 'ux-input-group';
+  const caseClassName = classnames(baseClassName, props.className, {
+    valid: props.valid === true,
+    invalid: props.valid === false,
+    readonly: props.readonly,
+    disabled: props.disabled
+  });
+  const [value1, setValue1] = useState(props.value1 || '');
+  const [value2, setValue2] = useState(props.value2 || '');
+  const [value3, setValue3] = useState(props.value3 || '');
+
+  const handleClear = (event) => {
+    setValue1('');
+    setValue2('');
+    setValue3('');
+    props.onClear && props.onClear(event);
+  };
+
+  const handleSubmit = (event) => {
+    props.onSubmit && props.onSubmit(event);
+  }
+
+  useEffect(() => {
+    props.onChange && props.onChange(value1, value2, value3);
+  }, [value1, value2, value3]);
+
+  useEffect(() => {
+    if (props.value === 'string') {
+      setValue1(props.value1);
+      setValue2(props.value2);
+      setValue3(props.value3);
+    }
+  }, [props.value1, props.value2, props.value3]);
+
+  return (
+    <div
+      ref={ref}
+      className={caseClassName}
+      style={props.style}
+    >
+      <UxInput
+        style={{ width: '2.8rem' }}
+        placeholder="010"
+        value={value1}
+        maxLength={3}
+        readonly={props.readonly}
+        disabled={props.disabled}
+        onChange={(value) => setValue1(value)}
+      />
+      <UxInput
+        className="dash"
+        style={{ width: '5rem' }}
+        placeholder="1234"
+        value={value2}
+        maxLength={4}
+        readonly={props.readonly}
+        disabled={props.disabled}
+        onChange={(value) => setValue2(value)}
+      />
+      <UxInput
+        className="dash last"
+        placeholder="5678"
+        value={value3}
+        maxLength={4}
+        readonly={props.readonly}
+        disabled={props.disabled}
+        onChange={(value) => setValue3(value)}
+      />
+      {
+        props.clear && (value1 || value2 || value3) && !props.readonly && !props.disabled &&
+        <UxIcon
+          title="initialize"
+          tagName="button"
+          className="clear"
+          onClick={handleClear}
+        />
+      }
+      {
+        props.submit && !props.readonly && !props.disabled &&
+        <UxButton
+          onClick={handleSubmit}
+        >
+          {props.submit}
+        </UxButton>
+      }
+    </div>
+  )
+};
+
+export default React.forwardRef(UxInputGroup);

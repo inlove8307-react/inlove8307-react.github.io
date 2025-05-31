@@ -78,7 +78,6 @@ body {}
 /* LAYOUT MAIN */
 .ux-main {
   margin-top: $headerHeight;
-  padding: 3.2rem 0;
 }
 /* LAYOUT FOOTER */
 .ux-footer {}
@@ -98,7 +97,7 @@ body {}
   gap: .8rem;
 
   html.desktop & {
-    width: 72rem;
+    width: 37.5rem;
   }
   html.mobile .ux-section > & {
     padding: 0 var(--space);
@@ -115,7 +114,7 @@ body {}
   }
 }
 /* LAYOUT TITLE */
-.ux-title {
+.ux-subject {
   font-weight: 700;
 
   // h3 {
