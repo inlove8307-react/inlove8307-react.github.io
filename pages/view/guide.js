@@ -549,24 +549,6 @@ export default function Sample() {
 
               <UxArticle className="h5">
                 <UxSubject>
-                  <h5>UxLrn - Default</h5>
-                </UxSubject>
-                <UxContent>
-                  <UxLrn
-                    value1="12"
-                    value2="34"
-                    value3="567890"
-                    value4="89"
-                    submit="submit"
-                    clear
-                  />
-                </UxContent>
-              </UxArticle>
-
-              <UxDivider className="linear" />
-
-              <UxArticle className="h5">
-                <UxSubject>
                   <h5>UxLrn - Valid</h5>
                 </UxSubject>
                 <UxContent>
@@ -652,23 +634,6 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn clear />
-                </UxContent>
-              </UxArticle>
-
-              <UxDivider className="linear" />
-
-              <UxArticle className="h5">
-                <UxSubject>
-                  <h5>UxBrn - Default</h5>
-                </UxSubject>
-                <UxContent>
-                  <UxBrn
-                    value1="123"
-                    value2="45"
-                    value3="12345"
-                    submit="submit"
-                    clear
-                  />
                 </UxContent>
               </UxArticle>
 
