@@ -1,15 +1,43 @@
-import React, { useState, useRef, useEffect } from "react";
-import classnames from "classnames";
+import React, { useState, useRef, useEffect } from 'react';
+import { getArray, mergeProps } from '@/utils/core';
+import classnames from 'classnames';
+
+/**
+ * <UxCollapseGroup>
+ * [props]
+ *
+ * [event]
+ *
+ */
 
 const UxCollapseGroup = (props, ref) => {
-  const baseClassName = 'ux-collapse-group';
-  const caseClassName = classnames(baseClassName, props.className);
+	const baseClassName = 'ux-collapse-group';
+	const caseClassName = classnames(baseClassName, props.className);
+	const [selected, setSelected] = useState(props.selected || 0);
 
-  return (
-    <div className={caseClassName}>
-      {props.children}
-    </div>
-  )
+	const handleChange = (index) => {
+		setSelected(index);
+		props.onChange && props.onChange(selected);
+	};
+
+	return (
+		<div
+			ref={ref}
+			className={caseClassName}
+		>
+			{
+				getArray(props.children).map((collapse, index) =>
+					mergeProps(collapse, {
+						key: index,
+						index: index,
+						selected,
+						expanded: index === selected,
+						onChange: handleChange,
+					})
+				)
+			}
+		</div>
+	);
 };
 
 export default React.forwardRef(UxCollapseGroup);

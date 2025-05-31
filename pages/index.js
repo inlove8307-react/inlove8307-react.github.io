@@ -10,16 +10,16 @@ import UxContent from "@/components/layout/UxContent";
 
 
 export default function Home() {
-  return (
-    <UxSection>
-      <UxArticle className="h3">
-        <UxSubject>
-          <h3>Home</h3>
-        </UxSubject>
-        <UxContent>
-          <p>Home</p>
-        </UxContent>
-      </UxArticle>
-    </UxSection>
-  )
+	return (
+		<UxSection>
+			<UxArticle className="h3">
+				<UxSubject>
+					<h3>Home</h3>
+				</UxSubject>
+				<UxContent>
+					<p>Home</p>
+				</UxContent>
+			</UxArticle>
+		</UxSection>
+	)
 }

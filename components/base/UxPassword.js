@@ -1,11 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
-import classnames from "classnames";
+import React, { useState, useRef, useEffect } from 'react';
+import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from "@/components/base/UxIcon";
-import UxMasking from "@/components/base/UxMasking";
+import UxIcon from '@/components/base/UxIcon';
+import UxMasking from '@/components/base/UxMasking';
+
+/**
+ * <UxPassword>
+ * [props]
+ *
+ * [event]
+ *
+ */
 
 const UxPassword = (props, ref) => {
-	const baseClassName = "ux-password";
+	const baseClassName = 'ux-password';
 	const caseClassName = classnames(baseClassName, props.className, {
 		valid: props.valid === true,
 		invalid: props.valid === false,
@@ -22,39 +30,39 @@ const UxPassword = (props, ref) => {
 		setValue('');
 	};
 
-  useEffect(() => {
-    props.onChange && props.onChange(value);
-  }, [value]);
+	useEffect(() => {
+		props.onChange && props.onChange(value);
+	}, [value]);
 
-  useEffect(() => {
-    if (typeof props.value === 'string') {
-      setValue(props.value);
-    }
-  }, [props.value]);
+	useEffect(() => {
+		if (typeof props.value === 'string') {
+			setValue(props.value);
+		}
+	}, [props.value]);
 
 	return (
 		<div
-      ref={ref}
-      className={caseClassName}
-      style={props.style}
-    >
+			ref={ref}
+			className={caseClassName}
+			style={props.style}
+		>
 			<UxMasking
-        placeholder={props.placeholder}
+				placeholder={props.placeholder}
 				value={value}
-        maxLength={props.maxLength}
-        readonly={props.readonly}
-        disabled={props.disabled}
-        scrollIntoView={props.scrollIntoView}
+				maxLength={props.maxLength}
+				readonly={props.readonly}
+				disabled={props.disabled}
+				scrollIntoView={props.scrollIntoView}
 				onChange={handleChange}
 			/>
 			{
 				props.clear && value && !props.readonly && !props.disabled &&
 				 <UxIcon
-          title="initialize"
-          tagName="button"
-          className="clear"
-          onClick={handleClear}
-        />
+					title="initialize"
+					tagName="button"
+					className="clear"
+					onClick={handleClear}
+				/>
 			}
 		</div>
 	);

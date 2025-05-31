@@ -22,17 +22,17 @@ export const mergeProps = (element, object) => {
 };
 
 export const getRole = (array, role) => {
-  return array.filter(item => item.props["data-role"] === role)[0];
+	return array.filter(item => item.props["data-role"] === role)[0];
 }
 
 export const getRandomChar = (length = 12) => {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  const digit = new Date().getTime().toString(36);
-  let result = '';
+	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	const digit = new Date().getTime().toString(36);
+	let result = '';
 
-  while(result.length < length - digit.length) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
+	while(result.length < length - digit.length) {
+		result += chars.charAt(Math.floor(Math.random() * chars.length));
+	}
 
-  return result + digit;
+	return result + digit;
 }

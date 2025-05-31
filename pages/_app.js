@@ -11,24 +11,24 @@ import "@/public/styles/global.scss";
 import "@/public/styles/components.scss";
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    $('html').addClass(classnames({
-      desktop: isDesktop,
-      windows: isWindows,
-      macos: isMacOs,
-      mobile: isMobile,
-      ios: isIOS,
-      aos: isAndroid,
-      chrome: isChrome,
-      firefox: isFirefox,
-      safari: isSafari,
-      edge: isEdge
-    }));
-  }, []);
+	useEffect(() => {
+		$('html').addClass(classnames({
+			desktop: isDesktop,
+			windows: isWindows,
+			macos: isMacOs,
+			mobile: isMobile,
+			ios: isIOS,
+			aos: isAndroid,
+			chrome: isChrome,
+			firefox: isFirefox,
+			safari: isSafari,
+			edge: isEdge
+		}));
+	}, []);
 
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+	return (
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
+	)
 }

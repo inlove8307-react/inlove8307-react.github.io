@@ -5,18 +5,18 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
 const UxBreadcrumb = (props, ref) => {
-  const originClassName = 'ux-breadcrumb';
-  const mixinClassName = classnames(originClassName, props.className);
+	const originClassName = 'ux-breadcrumb';
+	const mixinClassName = classnames(originClassName, props.className);
 
-  return (
-    <UxSection className={mixinClassName}>
-      <UxArticle>
-        <UxContent>
+	return (
+		<UxSection className={mixinClassName}>
+			<UxArticle>
+				<UxContent>
 
-        </UxContent>
-      </UxArticle>
-    </UxSection>
-  )
+				</UxContent>
+			</UxArticle>
+		</UxSection>
+	)
 };
 
 export default React.forwardRef(UxBreadcrumb);

@@ -5,20 +5,20 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
 const UxFooter = (props, ref) => {
-  const originClassName = 'ux-footer';
-  const mixinClassName = classnames(originClassName, props.className);
+	const originClassName = 'ux-footer';
+	const mixinClassName = classnames(originClassName, props.className);
 
-  return (
-    <footer className={mixinClassName}>
-      <UxSection>
-        <UxArticle>
-          <UxContent>
+	return (
+		<footer className={mixinClassName}>
+			<UxSection>
+				<UxArticle>
+					<UxContent>
 
-          </UxContent>
-        </UxArticle>
-      </UxSection>
-    </footer>
-  )
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+		</footer>
+	)
 };
 
 export default React.forwardRef(UxFooter);
