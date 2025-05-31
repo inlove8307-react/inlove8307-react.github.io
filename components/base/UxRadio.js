@@ -47,7 +47,7 @@ const UxRadio = (props, ref) => {
 					onChange={handleChange}
 				/>
 				<UxIcon
-					className="unselected-circle"
+					className="i009"
 					size="2.4rem"
 				/>
 				{

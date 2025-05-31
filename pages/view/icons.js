@@ -7,28 +7,28 @@ import UxIcon from "@/components/base/UxIcon";
 
 export default function Page() {
 	const icons = [
-		"clear",
-		"calendar",
-		"checked",
-		"checked-square",
-		"unchecked-square",
-		"checked-circle",
-		"unchecked-circle",
-		"selected-circle",
-		"unselected-circle",
-		"angle-left",
-		"angle-right",
-		"angle-up",
-		"angle-down",
-		"angle-left-double",
-		"angle-right-double",
-		"caret-left",
-		"caret-right",
-		"caret-up",
-		"caret-down",
-		"backward",
-		"forward",
-		"question",
+		"i001", /* i001 : clear */
+		"i002", /* i002 : calendar */
+		"i003", /* i003 : checked */
+		"i004", /* i004 : checked-square */
+		"i005", /* i005 : unchecked-square */
+		"i006", /* i006 : checked-circle */
+		"i007", /* i007 : unchecked-circle */
+		"i008", /* i008 : selected-circle */
+		"i009", /* i009 : unselected-circle */
+		"i010", /* i010 : angle-left */
+		"i011", /* i011 : angle-right */
+		"i012", /* i012 : angle-up */
+		"i013", /* i013 : angle-down */
+		"i014", /* i014 : angle-left-double */
+		"i015", /* i015 : angle-right-double */
+		"i016", /* i016 : caret-left */
+		"i017", /* i017 : caret-right */
+		"i018", /* i018 : caret-up */
+		"i019", /* i019 : caret-down */
+		"i020", /* i020 : backward */
+		"i021", /* i021 : forward */
+		"i022", /* i022 : question */
 	];
 
 	return (
@@ -42,7 +42,6 @@ export default function Page() {
 						style={{
 							display: "flex",
 							flexWrap: "wrap",
-							gap: "1.6rem .8rem",
 						}}
 					>
 						{
@@ -54,14 +53,12 @@ export default function Page() {
 										flexDirection: "column",
 										alignItems: "center",
 										gap: ".4rem",
-										padding: ".8rem",
-										borderRadius: ".8rem",
-										border: ".1rem solid var(--light1)",
-										boxShadow: "0 .2rem .4rem rgba(0, 0, 0, .05)"
+										padding: "1.2rem 0",
+										width: "calc(100% / 6)",
 									}}
 								>
 									<UxIcon className={icon} />
-									<span>.{icon}</span>
+									<span>{icon}</span>
 								</li>
 							))
 						}

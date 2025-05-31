@@ -69,7 +69,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton>
 										<span className="label">icon</span>
-										<UxIcon className="calendar" />
+										<UxIcon className="i022" />
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -82,7 +82,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxButton>
-										<UxIcon className="calendar" />
+										<UxIcon className="i022" />
 										<span className="label">icon</span>
 									</UxButton>
 								</UxContent>

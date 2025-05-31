@@ -100,7 +100,7 @@ const UxLrn = (props, ref) => {
 				<UxIcon
 					title="initialize"
 					tagName="button"
-					className="clear"
+					className="i001"
 					onClick={handleClear}
 				/>
 			}
