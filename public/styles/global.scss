@@ -4,7 +4,7 @@
 :root {
   /* SPACE */
   --space: 2rem;
-  --minus: calc(var(--space) * -1);
+  --space-minus: calc(var(--space) * -1);
 
   /* COLOR */
   --color1: rgb(217, 13, 88);
@@ -96,11 +96,22 @@ body {}
   flex-direction: column;
   gap: .8rem;
 
-  html.desktop & {
+  html.desktop .ux-main .ux-section > & {
+    margin: 3.2rem 0;
+    padding: 3.2rem var(--space);
+    width: 37.5rem;
+    border-radius: 1.6rem;
+    box-shadow: inset 0 0 0 .1rem var(--light1), var(--shadow);
+  }
+  html.mobile .ux-main .ux-section > & {
+    padding: 3.2rem var(--space);
+  }
+  html.desktop .ux-header .ux-section > & {
+    padding: 0 var(--space);
     width: 37.5rem;
   }
-  html.mobile .ux-section > & {
-    padding: 0 var(--space);
+  html.mobile .ux-header .ux-section > & {
+    padding: 3.2rem var(--space);
   }
 
   &.h3 {

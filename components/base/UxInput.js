@@ -131,6 +131,7 @@ const UxInput = (props, ref) => {
       {
         props.submit && !props.readonly && !props.disabled &&
         <UxButton
+          className="submit"
           onClick={handleSubmit}
         >
           {props.submit}

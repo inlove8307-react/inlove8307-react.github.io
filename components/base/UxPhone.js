@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { getArray, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
@@ -95,6 +94,7 @@ const UxInputGroup = (props, ref) => {
       {
         props.submit && !props.readonly && !props.disabled &&
         <UxButton
+          className="submit"
           onClick={handleSubmit}
         >
           {props.submit}

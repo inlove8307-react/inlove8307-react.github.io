@@ -21,7 +21,7 @@ import UxForm from "@/components/base/UxForm";
 import UxField from "@/components/base/UxField";
 import UxFieldset from "@/components/base/UxFieldset";
 import UxInput from "@/components/base/UxInput";
-import UxPhoneNumber from "@/components/base/UxPhoneNumber";
+import UxPhone from "@/components/base/UxPhone";
 import UxTextarea from "@/components/base/UxTextarea";
 import UxCheckbox from "@/components/base/UxCheckbox";
 import UxCheckboxGroup from "@/components/base/UxCheckboxGroup";
@@ -85,252 +85,454 @@ export default function Sample() {
               <h4>UxButton</h4>
             </UxSubject>
             <UxContent>
-              <UxButton>
-                <span className="label">label</span>
-              </UxButton>
-              <UxButton disabled>
-                <span className="label">label</span>
-              </UxButton>
-              <UxButton>
-                <span className="label">icon</span>
-                <UxIcon className="calendar" />
-              </UxButton>
-              <UxButton>
-                <UxIcon className="calendar" />
-                <span className="label">icon</span>
-              </UxButton>
-              <UxButton className="fill">
-                <span className="label">label</span>
-                <UxIcon
-                  className="calendar"
-                  color="white"
-                />
-              </UxButton>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxButton - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxButton>
+                    <span className="label">label</span>
+                  </UxButton>
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxButton - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxButton disabled>
+                    <span className="label">label</span>
+                  </UxButton>
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxButton - Icon Right</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxButton>
+                    <span className="label">icon</span>
+                    <UxIcon className="calendar" />
+                  </UxButton>
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxButton - Icon Left</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxButton>
+                    <UxIcon className="calendar" />
+                    <span className="label">icon</span>
+                  </UxButton>
+                </UxContent>
+              </UxArticle>
             </UxContent>
           </UxArticle>
+
+          <UxDivider />
 
           <UxArticle className="h4">
             <UxSubject>
               <h4>UxInput</h4>
             </UxSubject>
             <UxContent>
-              <UxInput
-                type="text"
-                value="default"
-                placeholder="placeholder"
-                clear
-              />
-              <UxInput
-                type="text"
-                value="valid"
-                placeholder="placeholder"
-                clear
-                valid={true}
-              />
-              <UxInput
-                type="text"
-                value="invalid"
-                placeholder="placeholder"
-                clear
-                valid={false}
-              />
-              <UxInput
-                type="text"
-                value="readonly"
-                placeholder="placeholder"
-                clear
-                readonly
-              />
-              <UxInput
-                type="text"
-                value="disabled"
-                placeholder="placeholder"
-                clear
-                disabled
-              />
-              <UxInput
-                type="text"
-                value="value"
-                placeholder="placeholder"
-                clear
-                prefix="prefix"
-              />
-              <UxInput
-                type="text"
-                value="value"
-                placeholder="placeholder"
-                clear
-                suffix="suffix"
-              />
-              <UxInput
-                type="text"
-                value="value"
-                placeholder="placeholder"
-                clear
-                timer="03:00"
-                submit="submit"
-              />
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="default"
+                    placeholder="placeholder"
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="valid"
+                    placeholder="placeholder"
+                    clear
+                    valid={true}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="invalid"
+                    placeholder="placeholder"
+                    clear
+                    valid={false}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="readonly"
+                    placeholder="placeholder"
+                    clear
+                    readonly
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="disabled"
+                    placeholder="placeholder"
+                    clear
+                    disabled
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Prefix</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="value"
+                    placeholder="placeholder"
+                    clear
+                    prefix="prefix"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Suffix</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="value"
+                    placeholder="placeholder"
+                    clear
+                    suffix="suffix"
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxInput - Timer</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxInput
+                    type="text"
+                    value="value"
+                    placeholder="placeholder"
+                    clear
+                    timer="03:00"
+                    submit="submit"
+                  />
+                </UxContent>
+              </UxArticle>
             </UxContent>
           </UxArticle>
 
+          <UxDivider />
+
           <UxArticle className="h4">
             <UxSubject>
-              <h4>UxPhoneNumber</h4>
+              <h4>UxPhone</h4>
             </UxSubject>
             <UxContent>
-              <UxPhoneNumber clear />
-              <UxPhoneNumber
-                value1="010"
-                value2="1234"
-                value3="5678"
-                submit="submit"
-                clear
-              />
-              <UxPhoneNumber
-                value1="010"
-                value2="1234"
-                value3="5678"
-                submit="submit"
-                clear
-                valid={true}
-              />
-              <UxPhoneNumber
-                value1="010"
-                value2="1234"
-                value3="5678"
-                submit="submit"
-                clear
-                valid={false}
-              />
-              <UxPhoneNumber
-                value1="010"
-                value2="1234"
-                value3="5678"
-                clear
-                readonly
-              />
-              <UxPhoneNumber
-                value1="010"
-                value2="1234"
-                value3="5678"
-                clear
-                disabled
-              />
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone clear />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Valid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={true}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Invalid</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    submit="submit"
+                    clear
+                    valid={false}
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Readonly</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    readonly
+                  />
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxPhone - Disabled</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxPhone
+                    value1="010"
+                    value2="1234"
+                    value3="5678"
+                    clear
+                    disabled
+                  />
+                </UxContent>
+              </UxArticle>
             </UxContent>
           </UxArticle>
+
+          <UxDivider />
 
           <UxArticle className="h4">
             <UxSubject>
               <h4>UxCheckbox</h4>
             </UxSubject>
             <UxContent>
-              <UxCheckboxGroup>
-                <UxCheckbox
-                  checked={true}
-                >
-                  CHECKBOX_01
-                </UxCheckbox>
-                <UxCheckbox
-                  checked={false}
-                >
-                  CHECKBOX_02
-                </UxCheckbox>
-              </UxCheckboxGroup>
-              <UxCheckboxGroup className="column">
-                <UxCheckbox
-                  checked={true}
-                >
-                  CHECKBOX_01
-                </UxCheckbox>
-                <UxCheckbox
-                  checked={false}
-                >
-                  CHECKBOX_02
-                </UxCheckbox>
-              </UxCheckboxGroup>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxCheckbox - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxCheckboxGroup>
+                    <UxCheckbox
+                      checked={true}
+                    >
+                      CHECKBOX_01
+                    </UxCheckbox>
+                    <UxCheckbox
+                      checked={false}
+                    >
+                      CHECKBOX_02
+                    </UxCheckbox>
+                  </UxCheckboxGroup>
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxCheckbox - Column</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxCheckboxGroup className="column">
+                    <UxCheckbox
+                      checked={true}
+                    >
+                      CHECKBOX_01
+                    </UxCheckbox>
+                    <UxCheckbox
+                      checked={false}
+                    >
+                      CHECKBOX_02
+                    </UxCheckbox>
+                  </UxCheckboxGroup>
+                </UxContent>
+              </UxArticle>
             </UxContent>
           </UxArticle>
+
+          <UxDivider />
 
           <UxArticle className="h4">
             <UxSubject>
               <h4>UxRadio</h4>
             </UxSubject>
             <UxContent>
-              <UxRadioGroup>
-                <UxRadio
-                  value="value01"
-                >
-                  RADIO_01
-                </UxRadio>
-                <UxRadio
-                  value="value02"
-                >
-                  RADIO_02
-                </UxRadio>
-              </UxRadioGroup>
-              <UxRadioGroup className="column">
-                <UxRadio
-                  value="value01"
-                >
-                  RADIO_01
-                </UxRadio>
-                <UxRadio
-                  value="value02"
-                >
-                  RADIO_02
-                </UxRadio>
-              </UxRadioGroup>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRadio - Default</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxCheckboxGroup className="column">
+                    <UxRadioGroup
+                      selected="value01"
+                    >
+                      <UxRadio
+                        value="value01"
+                      >
+                        RADIO_01
+                      </UxRadio>
+                      <UxRadio
+                        value="value02"
+                      >
+                        RADIO_02
+                      </UxRadio>
+                    </UxRadioGroup>
+                  </UxCheckboxGroup>
+                </UxContent>
+              </UxArticle>
+
+              <UxDivider className="linear" />
+
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5>UxRadio - Column</h5>
+                </UxSubject>
+                <UxContent>
+                  <UxCheckboxGroup className="column">
+                    <UxRadioGroup
+                      className="column"
+                      selected="value01"
+                    >
+                      <UxRadio
+                        value="value01"
+                      >
+                        RADIO_01
+                      </UxRadio>
+                      <UxRadio
+                        value="value02"
+                      >
+                        RADIO_02
+                      </UxRadio>
+                    </UxRadioGroup>
+                  </UxCheckboxGroup>
+                </UxContent>
+              </UxArticle>
             </UxContent>
           </UxArticle>
 
-          <UxChip>UxChip</UxChip>
-          <UxDivider>UxDivider</UxDivider>
-          <UxFile>UxFile</UxFile>
-          <UxIcon>UxIcon</UxIcon>
-          <UxImage>UxImage</UxImage>
-          <UxLink>UxLink</UxLink>
-          <UxPassword>UxPassword</UxPassword>
-          <UxRange>UxRange</UxRange>
-          <UxSelect>UxSelect</UxSelect>
-          <UxSpacer>UxSpacer</UxSpacer>
-          <UxSwitch>UxSwitch</UxSwitch>
-          <UxText>UxText</UxText>
-          <UxTextarea>UxTextarea</UxTextarea>
-          <UxBadge>UxBadge</UxBadge>
-          <UxAlert>UxAlert</UxAlert>
-          <UxBottomSheet>UxBottomSheet</UxBottomSheet>
-          <UxCalendar>UxCalendar</UxCalendar>
-          <UxCard>UxCard</UxCard>
-          <UxCollapse>UxCollapse</UxCollapse>
-          <UxConfirm>UxConfirm</UxConfirm>
-          <UxDateCalendar>UxDateCalendar</UxDateCalendar>
-          <UxDatepicker>UxDatepicker</UxDatepicker>
-          <UxDropdown>UxDropdown</UxDropdown>
-          <UxField>UxField</UxField>
-          <UxFieldset>UxFieldset</UxFieldset>
-          <UxFilter>UxFilter</UxFilter>
-          <UxForm>UxForm</UxForm>
-          <UxGroup>UxGroup</UxGroup>
-          <UxInfo>UxInfo</UxInfo>
-          <UxKeypad>UxKeypad</UxKeypad>
-          <UxList>UxList</UxList>
-          <UxMasking>UxMasking</UxMasking>
-          <UxModal>UxModal</UxModal>
-          <UxMonthCalendar>UxMonthCalendar</UxMonthCalendar>
-          <UxPagination>UxPagination</UxPagination>
-          <UxPopover>UxPopover</UxPopover>
-          <UxProgress>UxProgress</UxProgress>
-          <UxSwiper>UxSwiper</UxSwiper>
-          <UxTab>UxTab</UxTab>
-          <UxTable>UxTable</UxTable>
-          <UxTextList>UxTextList</UxTextList>
-          <UxThumb>UxThumb</UxThumb>
-          <UxTimeline>UxTimeline</UxTimeline>
-          <UxToast>UxToast</UxToast>
-          <UxToggle>UxToggle</UxToggle>
-          <UxToggleGroup>UxToggleGroup</UxToggleGroup>
-          <UxTooltip>UxTooltip</UxTooltip>
-          <UxYearCalendar>UxYearCalendar</UxYearCalendar>
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
+              <h4></h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5></h5>
+                </UxSubject>
+                <UxContent>
+
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
+
+          <UxDivider />
+
+          <UxArticle className="h4">
+            <UxSubject>
+              <h4></h4>
+            </UxSubject>
+            <UxContent>
+              <UxArticle className="h5">
+                <UxSubject>
+                  <h5></h5>
+                </UxSubject>
+                <UxContent>
+
+                </UxContent>
+              </UxArticle>
+            </UxContent>
+          </UxArticle>
         </UxContent>
       </UxArticle>
     </UxSection>

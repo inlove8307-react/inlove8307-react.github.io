@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import classnames from "classnames";
 
 const UxDivider = (props, ref) => {
@@ -6,9 +6,7 @@ const UxDivider = (props, ref) => {
   const caseClassName = classnames(baseClassName, props.className);
 
   return (
-    <div className={caseClassName}>
-      {props.children}
-    </div>
+    <hr className={caseClassName} />
   )
 };
 
