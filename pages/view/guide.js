@@ -355,23 +355,6 @@ export default function Sample() {
 
               <UxArticle className="h5">
                 <UxSubject>
-                  <h5>UxPhone - Default</h5>
-                </UxSubject>
-                <UxContent>
-                  <UxPhone
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
-                    clear
-                    submit="submit"
-                  />
-                </UxContent>
-              </UxArticle>
-
-              <UxDivider className="linear" />
-
-              <UxArticle className="h5">
-                <UxSubject>
                   <h5>UxPhone - Valid</h5>
                 </UxSubject>
                 <UxContent>
