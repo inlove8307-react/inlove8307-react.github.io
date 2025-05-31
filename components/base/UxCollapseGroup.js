@@ -31,6 +31,7 @@ const UxCollapseGroup = (props, ref) => {
 						key: index,
 						index: index,
 						selected,
+						once: props.once,
 						expanded: index === selected,
 						onChange: handleChange,
 					})
