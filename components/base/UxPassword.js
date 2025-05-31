@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 /* COMPONENT */
-import UxButton from "@/components/base/UxButton";
 import UxIcon from "@/components/base/UxIcon";
 import UxMasking from "@/components/base/UxMasking";
 
@@ -37,14 +36,16 @@ const UxPassword = (props, ref) => {
 		<div
       ref={ref}
       className={caseClassName}
+      style={props.style}
     >
 			<UxMasking
         placeholder={props.placeholder}
 				value={value}
         maxLength={props.maxLength}
-				onChange={handleChange}
         readonly={props.readonly}
         disabled={props.disabled}
+        scrollIntoView={props.scrollIntoView}
+				onChange={handleChange}
 			/>
 			{
 				props.clear && value && !props.readonly && !props.disabled &&

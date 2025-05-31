@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from "react";
-import { slotArray, mergeProps, getRole, getRandomChar } from "@/utils/core";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -9,73 +8,20 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxDivider from "@/components/base/UxDivider";
-import UxSpacer from "@/components/base/UxSpacer";
 import UxIcon from "@/components/base/UxIcon";
-import UxImage from "@/components/base/UxImage";
 import UxButton from "@/components/base/UxButton";
-import UxLink from "@/components/base/UxLink";
-import UxChip from "@/components/base/UxChip";
-import UxBadge from "@/components/base/UxBadge";
-import UxThumb from "@/components/base/UxThumb";
-import UxForm from "@/components/base/UxForm";
-import UxField from "@/components/base/UxField";
-import UxFieldset from "@/components/base/UxFieldset";
 import UxInput from "@/components/base/UxInput";
 import UxPhone from "@/components/base/UxPhone";
 import UxRrn from "@/components/base/UxRrn";
 import UxLrn from "@/components/base/UxLrn";
 import UxBrn from "@/components/base/UxBrn";
-import UxTextarea from "@/components/base/UxTextarea";
 import UxCheckbox from "@/components/base/UxCheckbox";
 import UxCheckboxGroup from "@/components/base/UxCheckboxGroup";
 import UxRadio from "@/components/base/UxRadio";
 import UxRadioGroup from "@/components/base/UxRadioGroup";
-import UxSwitch from "@/components/base/UxSwitch";
-import UxFile from "@/components/base/UxFile";
-import UxMasking from "@/components/base/UxMasking";
 import UxPassword from "@/components/base/UxPassword";
-import UxSelect from "@/components/base/UxSelect";
-import UxRange from "@/components/base/UxRange";
-import UxCard from "@/components/base/UxCard";
-import UxCardGroup from "@/components/base/UxCardGroup";
-import UxToggle from "@/components/base/UxToggle";
-import UxToggleGroup from "@/components/base/UxToggleGroup";
-import UxDropdown from "@/components/base/UxDropdown";
-import UxFilter from "@/components/base/UxFilter";
-import UxGroup from "@/components/base/UxGroup";
-import UxList from "@/components/base/UxList";
-import UxInfo from "@/components/base/UxInfo";
-import UxTimeline from "@/components/base/UxTimeline";
-import UxText from "@/components/base/UxText";
-import UxTextList from "@/components/base/UxTextList";
-import UxTable from "@/components/base/UxTable";
-import UxPagination from "@/components/base/UxPagination";
-import UxProgress from "@/components/base/UxProgress";
-import UxKeypad from "@/components/base/UxKeypad";
-import UxPopover from "@/components/base/UxPopover";
-import UxTooltip from "@/components/base/UxTooltip";
-import UxSwiper from "@/components/base/UxSwiper";
-import UxSwiperSlide from "@/components/base/UxSwiperSlide";
-import UxCollapse from "@/components/base/UxCollapse";
-import UxCollapseGroup from "@/components/base/UxCollapseGroup";
-import UxTab from "@/components/base/UxTab";
-import UxTabPanel from "@/components/base/UxTabPanel";
-import UxDatepicker from "@/components/base/UxDatepicker";
-import UxCalendar from "@/components/base/UxCalendar";
-import UxDateCalendar from "@/components/base/UxDateCalendar";
-import UxMonthCalendar from "@/components/base/UxMonthCalendar";
-import UxYearCalendar from "@/components/base/UxYearCalendar";
-import UxModal from "@/components/base/UxModal";
-import UxAlert from "@/components/base/UxAlert";
-import UxConfirm from "@/components/base/UxConfirm";
-import UxBottomSheet from "@/components/base/UxBottomSheet";
-import UxToast from "@/components/base/UxToast";
 
 export default function Sample() {
-  useEffect(() => {
-    console.log(getRandomChar());
-  }, []);
-
   return (
     <UxSection>
       <UxArticle className="h3">
@@ -299,6 +245,7 @@ export default function Sample() {
                 <UxContent>
                   <UxPassword
                     placeholder="비밀번호를 입력해주세요."
+                    // scrollIntoView
                     clear
                   />
                 </UxContent>
@@ -606,9 +553,10 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxLrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="12"
+                    value2="34"
+                    value3="567890"
+                    value4="89"
                     submit="submit"
                     clear
                   />
@@ -623,9 +571,10 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxLrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="12"
+                    value2="34"
+                    value3="567890"
+                    value4="89"
                     submit="submit"
                     clear
                     valid={true}
@@ -641,9 +590,10 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxLrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="12"
+                    value2="34"
+                    value3="567890"
+                    value4="89"
                     submit="submit"
                     clear
                     valid={false}
@@ -659,9 +609,10 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxLrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="12"
+                    value2="34"
+                    value3="567890"
+                    value4="89"
                     clear
                     readonly
                   />
@@ -676,9 +627,10 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxLrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="12"
+                    value2="34"
+                    value3="567890"
+                    value4="89"
                     clear
                     disabled
                   />
@@ -691,7 +643,7 @@ export default function Sample() {
 
           <UxArticle className="h4">
             <UxSubject>
-              <h4>UxBrn (사업자번호)</h4>
+              <h4>UxBrn (사업자등록번호)</h4>
             </UxSubject>
             <UxContent>
               <UxArticle className="h5">
@@ -711,9 +663,9 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="123"
+                    value2="45"
+                    value3="12345"
                     submit="submit"
                     clear
                   />
@@ -728,9 +680,9 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="123"
+                    value2="45"
+                    value3="12345"
                     submit="submit"
                     clear
                     valid={true}
@@ -746,9 +698,9 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="123"
+                    value2="45"
+                    value3="12345"
                     submit="submit"
                     clear
                     valid={false}
@@ -764,9 +716,9 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="123"
+                    value2="45"
+                    value3="12345"
                     clear
                     readonly
                   />
@@ -781,9 +733,9 @@ export default function Sample() {
                 </UxSubject>
                 <UxContent>
                   <UxBrn
-                    value1="010"
-                    value2="1234"
-                    value3="5678"
+                    value1="123"
+                    value2="45"
+                    value3="12345"
                     clear
                     disabled
                   />

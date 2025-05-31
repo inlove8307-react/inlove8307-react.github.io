@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { sleep } from "@/utils/core";
 import classnames from "classnames";
 
 const UxMasking = (props, ref) => {
@@ -9,10 +10,13 @@ const UxMasking = (props, ref) => {
   });
   const [value, setValue] = useState(props.value || '');
   const [placeholder] = useState(!props.maxLength ? props.placeholder : '');
+  const maskRef = useRef([]);
 
 	const Masking = (props) => {
 		const maxLength = props.maxLength || value.length;
     let array = [];
+
+    maskRef.current = [];
 
     while (array.length < maxLength) {
       array.length < value.length
@@ -22,9 +26,10 @@ const UxMasking = (props, ref) => {
 
 		return (
 			<div className={`${baseClassName}-mask`}>
-				{array.map((enabled, index)=>(
+				{array.map((enabled, index) => (
 					<span
 						key={index}
+            ref={(element) => maskRef.current[index] = element}
 						className={classnames(`${baseClassName}-item`, {enabled})}
 					/>
 				))}
@@ -36,6 +41,24 @@ const UxMasking = (props, ref) => {
     setValue(event.target.value);
     props.onChange && props.onChange(event);
 	}
+
+  const setScroll = () => {
+    const element = maskRef.current[maskRef.current.length - 1];
+
+    if (!element) return;
+
+    setTimeout(() => {
+      element.scrollIntoView({
+        block: "nearest",
+        inline: "center",
+        behavior: "smooth"
+      });
+    }, 1);
+	};
+
+  useEffect(() => {
+    props.scrollIntoView && setScroll(props.value);
+  }, [value]);
 
   useEffect(() => {
     if (typeof props.value === 'string') {

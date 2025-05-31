@@ -4,9 +4,10 @@ import classnames from 'classnames';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
+import UxPassword from '@/components/base/UxPassword';
 
 /**
- * <UxBrn> (사업자번호)
+ * <UxBrn> (사업자등록번호)
  * [props]
  *
  * [event]
@@ -56,7 +57,7 @@ const UxBrn = (props, ref) => {
     >
       <UxInput
         style={{ width: '2.8rem' }}
-        placeholder="010"
+        placeholder="000"
         value={value1}
         maxLength={3}
         readonly={props.readonly}
@@ -65,19 +66,18 @@ const UxBrn = (props, ref) => {
       />
       <UxInput
         className="dash"
-        style={{ width: '5rem' }}
-        placeholder="1234"
+        style={{ width: '3.2rem' }}
+        placeholder="00"
         value={value2}
-        maxLength={4}
+        maxLength={2}
         readonly={props.readonly}
         disabled={props.disabled}
         onChange={(value) => setValue2(value)}
       />
-      <UxInput
+      <UxPassword
         className="dash last"
-        placeholder="5678"
         value={value3}
-        maxLength={4}
+        maxLength={5}
         readonly={props.readonly}
         disabled={props.disabled}
         onChange={(value) => setValue3(value)}

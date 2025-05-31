@@ -38,7 +38,7 @@ const UxRrn = (props, ref) => {
   }
 
   useEffect(() => {
-    props.onChange && props.onChange(value1, value2, value3);
+    props.onChange && props.onChange({ value1, value2, value3 });
   }, [value1, value2, value3]);
 
   useEffect(() => {

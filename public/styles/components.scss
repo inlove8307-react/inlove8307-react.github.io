@@ -72,10 +72,11 @@
 
 
 /* <UxMasking> */
-.ux-masking {display: flex; align-items: center; position: relative;}
+.ux-masking {overflow-x: auto; display: flex; align-items: center; position: relative;}
+.ux-masking::-webkit-scrollbar {display: none;}
 /* <UxMasking> Mask */
 .ux-masking .ux-masking-mask {display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
-.ux-masking .ux-masking-item {width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--light2);}
+.ux-masking .ux-masking-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--light2);}
 /* <UxMasking> Input */
 .ux-masking .ux-masking-input {padding: 0; width: 100%; height: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
 .ux-masking .ux-masking-input:focus,
@@ -131,7 +132,7 @@
 .ux-input-group.disabled .ux-password {background-color: transparent;}
 /* <UxInputGroup> Dash */
 .ux-input-group .ux-input.dash::before,
-.ux-input-group .ux-password.dash::before {content: ''; width: 6px; height: 2px; background-color: var(--light3);}
+.ux-input-group .ux-password.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
 /* <UxInputGroup> Last */
 .ux-input-group .ux-input.last,
 .ux-input-group .ux-password.last {flex-grow: 1; flex-shrink: initial;}
