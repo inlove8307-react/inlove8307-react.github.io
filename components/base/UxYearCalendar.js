@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
-import { useInView } from 'react-intersection-observer';
 import { format, set, getYear } from "date-fns";
 
 const UxYearCalendar = (props, ref) => {
@@ -42,14 +41,6 @@ const UxYearCalendar = (props, ref) => {
 	};
 
 	useEffect(() => {
-
-	}, [topInView]);
-
-	useEffect(() => {
-
-	}, [BottomInView]);
-
-	useEffect(() => {
 		setData(getData(year));
 	}, [year]);
 
@@ -74,10 +65,6 @@ const UxYearCalendar = (props, ref) => {
 			ref={ref}
 			className={`${originClassName}-year`}
 		>
-			<span
-				ref={topRef}
-				className={`${originClassName}-observer`}
-			/>
 			{
 				data.map((item, index) => {
 					const selected = item === getYear(date);
@@ -104,10 +91,6 @@ const UxYearCalendar = (props, ref) => {
 					)
 				})
 			}
-			<span
-				ref={bottomRef}
-				className={`${originClassName}-observer`}
-			/>
 		</div>
 	);
 };
