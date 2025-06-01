@@ -50,11 +50,9 @@ const UxRadio = (props, ref) => {
 					className="i009"
 					size="2.4rem"
 				/>
-				{
-					<span className={`${baseClassName}-label`}>
-						{props.children}
-					</span>
-				}
+				<span className={`${baseClassName}-label`}>
+					{props.children}
+				</span>
 			</label>
 		</div>
 	);

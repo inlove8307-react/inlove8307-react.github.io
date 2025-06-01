@@ -28,6 +28,8 @@ import UxMonthCalendar from "@/components/base/UxMonthCalendar";
 import UxYearCalendar from "@/components/base/UxYearCalendar";
 import UxToggle from "@/components/base/UxToggle";
 import UxToggleGroup from "@/components/base/UxToggleGroup";
+import UxCard from "@/components/base/UxCard";
+import UxCardGroup from "@/components/base/UxCardGroup";
 
 export default function Sample() {
 	return (
@@ -954,6 +956,101 @@ export default function Sample() {
 
 					<UxArticle className="h4">
 						<UxSubject>
+							<h4>UxCard</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCard - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCardGroup>
+										<UxCard>
+											CARD 01
+										</UxCard>
+										<UxCard>
+											CARD 02
+										</UxCard>
+									</UxCardGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCard - Column</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCardGroup
+										className="column"
+									>
+										<UxCard>
+											CARD 01
+										</UxCard>
+										<UxCard>
+											CARD 02
+										</UxCard>
+									</UxCardGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCard - Checkbox</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCardGroup
+										type="checkbox"
+									>
+										<UxCard
+											value="value01"
+											checked={true}
+										>
+											CARD 01
+										</UxCard>
+										<UxCard
+											value="value02"
+										>
+											CARD 02
+										</UxCard>
+									</UxCardGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCard - Radio</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCardGroup
+										type="radio"
+										selected="value01"
+									>
+										<UxCard
+											value="value01"
+										>
+											CARD 01
+										</UxCard>
+										<UxCard
+											value="value02"
+										>
+											CARD 02
+										</UxCard>
+									</UxCardGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
 							<h4>UxCollapse</h4>
 						</UxSubject>
 						<UxContent>
@@ -1105,7 +1202,7 @@ export default function Sample() {
 					</UxArticle>
 
 					<UxDivider />
-
+``
 					<UxArticle className="h4">
 						<UxSubject>
 							<h4></h4>
