@@ -13,7 +13,7 @@ const UxYearCalendar = (props, ref) => {
 	const focusRef = useRef();
 
 	const getData = (year) => {
-		let count = row * col * 3;
+		let count = row * col * 11;
 		let index = year + Math.floor(count / 2);
 		let array = [];
 

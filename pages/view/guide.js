@@ -1202,7 +1202,7 @@ export default function Sample() {
 					</UxArticle>
 
 					<UxDivider />
-``
+
 					<UxArticle className="h4">
 						<UxSubject>
 							<h4></h4>
