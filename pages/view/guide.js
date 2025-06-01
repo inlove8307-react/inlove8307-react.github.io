@@ -26,6 +26,8 @@ import UxCalendar from "@/components/base/UxCalendar";
 import UxDateCalendar from "@/components/base/UxDateCalendar";
 import UxMonthCalendar from "@/components/base/UxMonthCalendar";
 import UxYearCalendar from "@/components/base/UxYearCalendar";
+import UxToggle from "@/components/base/UxToggle";
+import UxToggleGroup from "@/components/base/UxToggleGroup";
 
 export default function Sample() {
 	return (
@@ -804,6 +806,145 @@ export default function Sample() {
 											</UxRadio>
 										</UxRadioGroup>
 									</UxCheckboxGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxToggle</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxToggle - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxToggleGroup>
+										<UxToggle
+											value="value01"
+										>
+											Toggle 01
+										</UxToggle>
+										<UxToggle
+											value="value02"
+										>
+											Toggle 02
+										</UxToggle>
+										<UxToggle
+											value="value03"
+										>
+											Toggle 03
+										</UxToggle>
+									</UxToggleGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxToggle - Selected</h5>
+								</UxSubject>
+								<UxContent>
+									<UxToggleGroup selected="value03">
+										<UxToggle
+											value="value01"
+										>
+											Toggle 01
+										</UxToggle>
+										<UxToggle
+											value="value02"
+										>
+											Toggle 02
+										</UxToggle>
+										<UxToggle
+											value="value03"
+										>
+											Toggle 03
+										</UxToggle>
+									</UxToggleGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxToggle - Col2</h5>
+								</UxSubject>
+								<UxContent>
+									<UxToggleGroup
+										className="col2"
+									>
+										<UxToggle
+											value="value01"
+										>
+											Toggle 01
+										</UxToggle>
+										<UxToggle
+											value="value02"
+										>
+											Toggle 02
+										</UxToggle>
+										<UxToggle
+											value="value03"
+										>
+											Toggle 03
+										</UxToggle>
+										<UxToggle
+											value="value04"
+										>
+											Toggle 04
+										</UxToggle>
+									</UxToggleGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxToggle - Col3</h5>
+								</UxSubject>
+								<UxContent>
+									<UxToggleGroup
+										className="col3"
+									>
+										<UxToggle
+											value="value01"
+										>
+											Toggle 01
+										</UxToggle>
+										<UxToggle
+											value="value02"
+										>
+											Toggle 02
+										</UxToggle>
+										<UxToggle
+											value="value03"
+										>
+											Toggle 03
+										</UxToggle>
+										<UxToggle
+											value="value04"
+										>
+											Toggle 04
+										</UxToggle>
+										<UxToggle
+											value="value05"
+										>
+											Toggle 05
+										</UxToggle>
+										<UxToggle
+											value="value06"
+										>
+											Toggle 06
+										</UxToggle>
+									</UxToggleGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
