@@ -22,9 +22,9 @@ import UxRadioGroup from "@/components/base/UxRadioGroup";
 import UxPassword from "@/components/base/UxPassword";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxCollapseGroup from "@/components/base/UxCollapseGroup";
-import UxCalendar from "@/components/base/UxCalendar";
-import UxDateCalendar from "@/components/base/UxDateCalendar";
-import UxMonthCalendar from "@/components/base/UxMonthCalendar";
+// import UxCalendar from "@/components/base/UxCalendar";
+// import UxDateCalendar from "@/components/base/UxDateCalendar";
+// import UxMonthCalendar from "@/components/base/UxMonthCalendar";
 import UxYearCalendar from "@/components/base/UxYearCalendar";
 
 export default function Sample() {
@@ -917,7 +917,7 @@ export default function Sample() {
 							<h4>UxCalendar</h4>
 						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
+							{/* <UxArticle className="h5">
 								<UxSubject>
 									<h5>UxCalendar</h5>
 								</UxSubject>
@@ -926,31 +926,31 @@ export default function Sample() {
 										scrollIntoView
 									/>
 								</UxContent>
-							</UxArticle>
+							</UxArticle> */}
 
-							<UxDivider className="linear" />
+							{/* <UxDivider className="linear" /> */}
 
-							<UxArticle className="h5">
+							{/* <UxArticle className="h5">
 								<UxSubject>
 									<h5>UxCalendar - DateCalendar</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDateCalendar />
 								</UxContent>
-							</UxArticle>
+							</UxArticle> */}
 
-							<UxDivider className="linear" />
+							{/* <UxDivider className="linear" /> */}
 
-							<UxArticle className="h5">
+							{/* <UxArticle className="h5">
 								<UxSubject>
 									<h5>UxCalendar - MonthCalendar</h5>
 								</UxSubject>
 								<UxContent>
 									<UxMonthCalendar />
 								</UxContent>
-							</UxArticle>
+							</UxArticle> */}
 
-							<UxDivider className="linear" />
+							{/* <UxDivider className="linear" /> */}
 
 							<UxArticle className="h5">
 								<UxSubject>
