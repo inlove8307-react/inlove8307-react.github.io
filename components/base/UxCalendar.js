@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
+import { lowDate } from '@/utils/core';
 import { format, set, add, sub, getMonth, getYear } from "date-fns";
 /* COMPONENT */
 import UxDateCalendar from "@/components/base/UxDateCalendar";
@@ -17,11 +18,11 @@ const UxCalendar = (props, ref) => {
 	const [isMonth, setIsMonth] = useState(false);
 
 	const handlePrev = () => {
-		setDate(format(sub(date, { months: 1 }), dateFormat));
+		setDate(format(sub(lowDate(date), { months: 1 }), dateFormat));
 	};
 
 	const handleNext = () => {
-		setDate(format(add(date, { months: 1 }), dateFormat));
+		setDate(format(add(lowDate(date), { months: 1 }), dateFormat));
 	};
 
 	const handleYear = () => {
@@ -35,24 +36,24 @@ const UxCalendar = (props, ref) => {
 	};
 
 	const handleDateChange = (value) => {
-		setDate(format(set(date, { date: value }), dateFormat));
+		setDate(format(set(lowDate(date), { date: value }), dateFormat));
 		props.onDateChange && props.onDateChange(value);
 	};
 
 	const handleMonthChange = (value) => {
-		setDate(format(set(date, { month: value}), dateFormat));
+		setDate(format(set(lowDate(date), { month: value}), dateFormat));
 		props.onMonthChange && props.onMonthChange(value);
 	};
 
 	const handleYearChange = (value) => {
-		setDate(format(set(date, { year: value }), dateFormat));
+		setDate(format(set(lowDate(date), { year: value }), dateFormat));
 		props.onYearChange && props.onYearChange(value);
 	};
 
 	useEffect(() => {
 		setIsYear(false);
 		setIsMonth(false);
-		props.onChange && props.onChange(format(date, dateFormat));
+		props.onChange && props.onChange(format(lowDate(date), dateFormat));
 	}, [date]);
 
 	return (
@@ -74,7 +75,7 @@ const UxCalendar = (props, ref) => {
 						className={classnames(`${originClassName}-select`)}
 						onClick={handleYear}
 					>
-						<span>{`${getYear(date)}년`}</span>
+						<span>{`${getYear(lowDate(date))}년`}</span>
 						<UxIcon className={ isYear ? 'i012' : 'i013' } />
 					</button>
 					<button
@@ -82,7 +83,7 @@ const UxCalendar = (props, ref) => {
 						className={classnames(`${originClassName}-select`)}
 						onClick={handleMonth}
 					>
-						<span>{`${getMonth(date) + 1}월`}</span>
+						<span>{`${getMonth(lowDate(date)) + 1}월`}</span>
 						<UxIcon className={ isMonth ? 'i012' : 'i013' } />
 					</button>
 					<button
