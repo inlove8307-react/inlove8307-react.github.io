@@ -23,7 +23,7 @@ import UxPassword from "@/components/base/UxPassword";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 // import UxCalendar from "@/components/base/UxCalendar";
-// import UxDateCalendar from "@/components/base/UxDateCalendar";
+import UxDateCalendar from "@/components/base/UxDateCalendar";
 import UxMonthCalendar from "@/components/base/UxMonthCalendar";
 import UxYearCalendar from "@/components/base/UxYearCalendar";
 
@@ -930,16 +930,16 @@ export default function Sample() {
 
 							{/* <UxDivider className="linear" /> */}
 
-							{/* <UxArticle className="h5">
+							<UxArticle className="h5">
 								<UxSubject>
 									<h5>UxCalendar - DateCalendar</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDateCalendar />
 								</UxContent>
-							</UxArticle> */}
+							</UxArticle>
 
-							{/* <UxDivider className="linear" /> */}
+							<UxDivider className="linear" />
 
 							<UxArticle className="h5">
 								<UxSubject>

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
+import { lowDate } from '@/utils/core';
 import { format, set, getYear } from "date-fns";
 
 const UxYearCalendar = (props, ref) => {
@@ -7,7 +8,7 @@ const UxYearCalendar = (props, ref) => {
 	const [data, setData] = useState([]);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
-	const [year] = useState(getYear(date));
+	const [year] = useState(getYear(lowDate(date)));
 	const [row, col] = [5, 3];
 	const focusRef = useRef();
 
@@ -24,7 +25,7 @@ const UxYearCalendar = (props, ref) => {
 	};
 
 	const handleClick = (item) => {
-		setDate(format(set(date, { year: item}), dateFormat));
+		setDate(format(set(lowDate(date), { year: item }), dateFormat));
 		props.onChange && props.onChange(item);
 	};
 
@@ -65,13 +66,13 @@ const UxYearCalendar = (props, ref) => {
 		>
 			{
 				data.map((item, index) => {
-					const selected = item === getYear(date);
+					const selected = item === getYear(lowDate(date));
 
 					return (
 						<button
 							key={index}
 							ref={(element) => {
-								if (item === getYear(date)) {
+								if (item === getYear(lowDate(date))) {
 									focusRef.current = element;
 								}
 							}}

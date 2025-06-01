@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { format, add, sub, isEqual, getDay, getDate, getMonth, getYear } from "date-fns";
+import { lowDate } from '@/utils/core';
+import { format, set, add, sub, isEqual, getDay, getDate, getMonth, getYear } from "date-fns";
 
 const UxDateCalendar = (props, ref) => {
 	const originClassName = 'ux-calendar';
@@ -11,7 +12,7 @@ const UxDateCalendar = (props, ref) => {
 	const today = format(new Date(), dateFormat);
 
 	const getData = ({ year, month }) => {
-		let date = new Date([year, month + 1, 1]);
+		let date = new Date(year, month, 1);
 		let prev = sub(date, { days: 1 });
 		let next = add(date, { months: 1 });
 		let array = [];
@@ -19,7 +20,7 @@ const UxDateCalendar = (props, ref) => {
 		do {
 			array.push({
 				year: getYear(date),
-				month: getMonth(date),
+				month: getMonth(date) + 1,
 				date: getDate(date),
 				week: getDay(date),
 			});
@@ -31,7 +32,7 @@ const UxDateCalendar = (props, ref) => {
 		while(array[0].week !== 0) {
 			array.unshift({
 				year: getYear(prev),
-				month: getMonth(prev),
+				month: getMonth(prev) + 1,
 				date: getDate(prev),
 				week: getDay(prev),
 			});
@@ -42,7 +43,7 @@ const UxDateCalendar = (props, ref) => {
 		do {
 			array.push({
 				year: getYear(next),
-				month: getMonth(next),
+				month: getMonth(next) + 1,
 				date: getDate(next),
 				week: getDay(next),
 			});
@@ -55,13 +56,14 @@ const UxDateCalendar = (props, ref) => {
 	}
 
 	const handleClick = (item) => {
+		setDate(format(set(lowDate(date), { date: item.date }), dateFormat));
 		props.onChange && props.onChange(item.date);
 	};
 
 	useEffect(() => {
 		setData(getData({
-			year: getYear(date),
-			month: getMonth(date),
+			year: getYear(lowDate(date)),
+			month: getMonth(lowDate(date)),
 		}));
 	}, [date]);
 
@@ -90,9 +92,9 @@ const UxDateCalendar = (props, ref) => {
 			}
 			{
 				data.map((item, index) => {
-					const disabled = item.month !== getMonth(date);
-					const selected = isEqual(date, new Date(item.year, item.month, item.date));
-					const isToday = isEqual(today, new Date(item.year, item.month, item.date));
+					const disabled = item.month !== getMonth(lowDate(date)) + 1;
+					const selected = isEqual(lowDate(date), new Date(item.year, item.month - 1, item.date));
+					const isToday = isEqual(lowDate(today), new Date(item.year, item.month - 1, item.date));
 
 					return (
 						<button

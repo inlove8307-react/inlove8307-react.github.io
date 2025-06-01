@@ -25,6 +25,11 @@ export const getRole = (array, role) => {
 	return array.filter(item => item.props["data-role"] === role)[0];
 }
 
+export const lowDate = (date) => {
+	const array = date.split('.');
+	return new Date(Number(array[0]), Number(array[1]) - 1, Number(array[2]));
+};
+
 export const getRandomChar = (length = 12) => {
 	const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	const digit = new Date().getTime().toString(36);
