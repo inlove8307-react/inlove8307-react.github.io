@@ -22,6 +22,10 @@ import UxRadioGroup from "@/components/base/UxRadioGroup";
 import UxPassword from "@/components/base/UxPassword";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxCollapseGroup from "@/components/base/UxCollapseGroup";
+import UxCalendar from "@/components/base/UxCalendar";
+import UxDateCalendar from "@/components/base/UxDateCalendar";
+import UxMonthCalendar from "@/components/base/UxMonthCalendar";
+import UxYearCalendar from "@/components/base/UxYearCalendar";
 
 export default function Sample() {
 	return (
@@ -901,6 +905,59 @@ export default function Sample() {
 											<div data-role="details">details</div>
 										</UxCollapse>
 									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxCalendar</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCalendar</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCalendar
+										scrollIntoView
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCalendar - DateCalendar</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDateCalendar />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCalendar - MonthCalendar</h5>
+								</UxSubject>
+								<UxContent>
+									<UxMonthCalendar />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCalendar - YearCalendar</h5>
+								</UxSubject>
+								<UxContent>
+									<UxYearCalendar />
 								</UxContent>
 							</UxArticle>
 						</UxContent>

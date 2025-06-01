@@ -1,15 +1,115 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
+import { useInView } from 'react-intersection-observer';
+import { format, set, getYear } from "date-fns";
 
 const UxYearCalendar = (props, ref) => {
-	const baseClassName = 'ux-yearcalendar';
-	const caseClassName = classnames(baseClassName, props.className);
+	const originClassName = 'ux-calendar';
+	const [data, setData] = useState([]);
+	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
+	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
+	const [year] = useState(getYear(date));
+	const [row, col] = [5, 3];
+	const focusRef = useRef();
+	const [topRef, topInView] = useInView();
+	const [bottomRef, BottomInView] = useInView();
+
+	const getData = (year) => {
+		let count = row * col * 3;
+		let index = year + Math.floor(count / 2);
+		let array = [];
+
+		while (array.length < count) {
+			array.unshift(index--);
+		}
+
+		return array;
+	};
+
+	const handleClick = (item) => {
+		setDate(format(set(date, { year: item}), dateFormat));
+		props.onChange && props.onChange(item);
+	};
+
+	const setScroll = () => {
+		if (focusRef.current) {
+			focusRef.current.scrollIntoView({
+				block: "center",
+				inline: "nearest",
+				behavior: "smooth"
+			});
+		}
+	};
+
+	useEffect(() => {
+
+	}, [topInView]);
+
+	useEffect(() => {
+
+	}, [BottomInView]);
+
+	useEffect(() => {
+		setData(getData(year));
+	}, [year]);
+
+	useEffect(() => {
+		props.scrollIntoView && setScroll();
+	}, [data]);
+
+	useEffect(() => {
+		if (typeof props.year === 'number') {
+			setData(getData(props.year));
+		}
+	}, [props.year]);
+
+	useEffect(() => {
+		if (typeof props.date === 'string') {
+			setDate(props.date);
+		}
+	}, [props.date]);
 
 	return (
-		<div className={caseClassName}>
-			{props.children}
+		<div
+			ref={ref}
+			className={`${originClassName}-year`}
+		>
+			<span
+				ref={topRef}
+				className={`${originClassName}-observer`}
+			/>
+			{
+				data.map((item, index) => {
+					const selected = item === getYear(date);
+
+					return (
+						<button
+							key={index}
+							ref={(element) => {
+								if (item === getYear(date)) {
+									focusRef.current = element;
+								}
+							}}
+							type="button"
+							className={classnames(`${originClassName}-button`, {selected})}
+							style={{width: `${100 / col}%`}}
+							onClick={() => handleClick(item)}
+						>
+							<span
+								className={`${originClassName}-label`}
+							>
+								{`${item}년`}
+							</span>
+						</button>
+					)
+				})
+			}
+			<span
+				ref={bottomRef}
+				className={`${originClassName}-observer`}
+			/>
 		</div>
-	)
+	);
 };
 
 export default React.forwardRef(UxYearCalendar);
