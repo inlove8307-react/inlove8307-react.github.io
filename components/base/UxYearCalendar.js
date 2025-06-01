@@ -10,8 +10,6 @@ const UxYearCalendar = (props, ref) => {
 	const [year] = useState(getYear(date));
 	const [row, col] = [5, 3];
 	const focusRef = useRef();
-	const [topRef, topInView] = useInView();
-	const [bottomRef, BottomInView] = useInView();
 
 	const getData = (year) => {
 		let count = row * col * 3;
