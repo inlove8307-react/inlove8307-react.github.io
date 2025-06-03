@@ -200,11 +200,12 @@
 .ux-toggle-group {display: flex; flex-wrap: wrap; gap: .1rem 0; width: 100%; border-radius: .8rem; box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent 4rem, var(--light1) 4rem, var(--light1) 4.1rem); background-color: var(--light0);}
 .ux-toggle-group .ux-toggle {position: relative; flex-grow: 1; flex-shrink: 0; flex-basis: 0;}
 .ux-toggle-group .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: 50%; background-color: var(--light1); transform: translateY(-50%);}
+.ux-toggle-group .ux-toggle.checked + .ux-toggle::before {display: none;}
 /* <UxToggleGroup> Col */
 .ux-toggle-group[class*=col] .ux-toggle {flex-grow: 0;}
-.ux-toggle-group.col2 .ux-toggle {flex-basis: calc(100% / 2);}
-.ux-toggle-group.col3 .ux-toggle {flex-basis: calc(100% / 3);}
-.ux-toggle-group.col4 .ux-toggle {flex-basis: calc(100% / 4);}
+.ux-toggle-group.col2 .ux-toggle {flex-basis: calc(100% / 2); width: calc(100% / 2);}
+.ux-toggle-group.col3 .ux-toggle {flex-basis: calc(100% / 3); width: calc(100% / 3);}
+.ux-toggle-group.col4 .ux-toggle {flex-basis: calc(100% / 4); width: calc(100% / 4);}
 .ux-toggle-group.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-toggle-group.col2 .ux-toggle:nth-child(2n + 1)::before,
 .ux-toggle-group.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
@@ -213,7 +214,7 @@
 
 /* <UxCard> */
 .ux-card {position: relative; border-radius: .8rem;}
-.ux-card-base {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.ux-card-base {position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;}
 .ux-card-input[type=radio],
 .ux-card-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
 .ux-card-label {display: flex; padding: 1.2rem; border-radius: .8rem; box-shadow: var(--inset); transition: var(--inset-transition);}
@@ -244,6 +245,31 @@
 /* <UxCollapseGroup> */
 .ux-collapse-group {overflow: hidden; width: 100%; border-radius: .8rem; border: .1rem solid var(--light2); background-color: var(--light0);}
 .ux-collapse-group .ux-collapse {border-radius: initial; box-shadow: initial;}
+
+
+
+/* UxTab */
+.ux-tab {width: 100%; background-color: var(--light0)}
+.ux-tab .ux-tab-base {overflow: hidden}
+.ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1)}
+.ux-tab .ux-tab-list {display: flex; position: relative; z-index: 1}
+.ux-tab .ux-tab-button {position: relative; flex-shrink: 0; padding: .8rem 1.6rem; box-shadow: inset 0 -.1rem 0 transparent; transition: box-shadow .1s ease-in-out}
+.ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--color1)}
+.ux-tab .ux-tab-button.active .ux-tab-label {color: var(--color1)}
+.ux-tab .ux-tab-panel {display: none; padding: 1.2rem 1.6rem;}
+.ux-tab .ux-tab-panel.active {display: block}
+/* UxTab Linear */
+.ux-tab.linear .ux-tab-button.active {box-shadow: none}
+.ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: .2rem; background-color: var(--color1); transition: all .1s ease-in-out}
+/* UxTab Scroll */
+.ux-tab.scroll .ux-tab-scroll {overflow-x: auto}
+.ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none}
+/* UxTab Full */
+.ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
+/* UxTab Mobile */
+.ux-container.mobile .ux-tab {width: calc(var(--100vw) - var(--space) * 2)}
+/* UxKeypad in UxCard */
+.ux-card .ux-tab {margin: -1.6rem; width: initial; background-color: transparent}
 
 
 
@@ -284,3 +310,32 @@
 .ux-calendar-year .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 100%; height: 4rem; border-radius: 2rem;}
 /* <UxCalendar> YearCalendar Selected */
 .ux-calendar-year .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
+
+
+
+/* <UxSlider> */
+.ux-slider {position: relative; width: 200px; text-align: center; margin-bottom: 50px;}
+.ux-slider span.value {height: 1.7em; font-weight: bold; display: inline-block;}
+.ux-slider span.value.lower::before {content: "€"; display: inline-block;}
+.ux-slider span.value.upper::before {content: "- €"; display: inline-block; margin-left: 0.4em;}
+// .ux-slider .legend {display: flex; justify-content: space-between;}
+// .ux-slider .legend > * {font-size: small; opacity: 0.25;}
+.ux-slider input {cursor: pointer; position: absolute;}
+/* webkit specific styling */
+.ux-slider input {
+  -webkit-appearance: none;
+  outline: none!important;
+  background: transparent;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, silver 30%, silver 60%, transparent 60%, transparent 100%);
+}
+.ux-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 14px; /* Set a specific slider handle width */
+  height: 14px; /* Slider handle height */
+  background: #eee; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 1px solid gray;
+  border-radius: 100%;
+}
+.ux-slider input::-webkit-slider-runnable-track {cursor: pointer;}

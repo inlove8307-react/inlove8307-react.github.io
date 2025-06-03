@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { lowDate } from '@/utils/core';
+import { rawDate } from '@/utils/core';
 import { format, set, add, sub, isEqual, getDay, getDate, getMonth, getYear } from "date-fns";
 
 const UxDateCalendar = (props, ref) => {
@@ -56,14 +56,14 @@ const UxDateCalendar = (props, ref) => {
 	}
 
 	const handleClick = (item) => {
-		setDate(format(set(lowDate(date), { date: item.date }), dateFormat));
+		setDate(format(set(rawDate(date), { date: item.date }), dateFormat));
 		props.onChange && props.onChange(item.date);
 	};
 
 	useEffect(() => {
 		setData(getData({
-			year: getYear(lowDate(date)),
-			month: getMonth(lowDate(date)),
+			year: getYear(rawDate(date)),
+			month: getMonth(rawDate(date)),
 		}));
 	}, [date]);
 
@@ -92,9 +92,9 @@ const UxDateCalendar = (props, ref) => {
 			}
 			{
 				data.map((item, index) => {
-					const disabled = item.month !== getMonth(lowDate(date)) + 1;
-					const selected = isEqual(lowDate(date), new Date(item.year, item.month - 1, item.date));
-					const isToday = isEqual(lowDate(today), new Date(item.year, item.month - 1, item.date));
+					const disabled = item.month !== getMonth(rawDate(date)) + 1;
+					const selected = isEqual(rawDate(date), new Date(item.year, item.month - 1, item.date));
+					const isToday = isEqual(rawDate(today), new Date(item.year, item.month - 1, item.date));
 
 					return (
 						<button

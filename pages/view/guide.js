@@ -30,6 +30,9 @@ import UxToggle from "@/components/base/UxToggle";
 import UxToggleGroup from "@/components/base/UxToggleGroup";
 import UxCard from "@/components/base/UxCard";
 import UxCardGroup from "@/components/base/UxCardGroup";
+import UxTab from "@/components/base/UxTab";
+import UxTabPanel from "@/components/base/UxTabPanel";
+import UxSlider from "@/components/base/UxSlider";
 
 export default function Sample() {
 	return (
@@ -39,6 +42,83 @@ export default function Sample() {
 					<h3>Sample</h3>
 				</UxSubject>
 				<UxContent>
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxSlider</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSlider</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSlider
+										step={1}
+										min={0}
+										max={3000}
+									/>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxTab</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTab>
+										<div data-label="label01">
+											content01
+										</div>
+										<div data-label="label02">
+											content02
+										</div>
+										<div data-label="label03">
+											content03
+										</div>
+									</UxTab>
+
+									<UxTab>
+										<UxTabPanel>
+											<div data-role="summary">
+												tab01
+											</div>
+											<div data-role="details">
+												content01
+											</div>
+										</UxTabPanel>
+										<UxTabPanel>
+											<div data-role="summary">
+												tab01
+											</div>
+											<div data-role="details">
+												content01
+											</div>
+										</UxTabPanel>
+										<UxTabPanel>
+											<div data-role="summary">
+												tab01
+											</div>
+											<div data-role="details">
+												content01
+											</div>
+										</UxTabPanel>
+									</UxTab>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
 					<UxArticle className="h4">
 						<UxSubject>
 							<h4>UxButton</h4>
@@ -914,7 +994,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup
-										className="col3"
+										className="col4"
 									>
 										<UxToggle
 											value="value01"
@@ -945,6 +1025,16 @@ export default function Sample() {
 											value="value06"
 										>
 											Toggle 06
+										</UxToggle>
+										<UxToggle
+											value="value07"
+										>
+											Toggle 07
+										</UxToggle>
+										<UxToggle
+											value="value08"
+										>
+											Toggle 08
 										</UxToggle>
 									</UxToggleGroup>
 								</UxContent>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { lowDate } from '@/utils/core';
+import { rawDate } from '@/utils/core';
 import { format, set, getMonth } from "date-fns";
 
 const UxMonthCalendar = (props, ref) => {
@@ -20,7 +20,7 @@ const UxMonthCalendar = (props, ref) => {
 	};
 
 	const handleClick = (item) => {
-		setDate(format(set(lowDate(date), { month: item - 1 }), dateFormat));
+		setDate(format(set(rawDate(date), { month: item - 1 }), dateFormat));
 		props.onChange && props.onChange(item - 1);
 	};
 
@@ -41,7 +41,7 @@ const UxMonthCalendar = (props, ref) => {
 		>
 			{
 				data.map((item, index) => {
-					const selected = item === getMonth(lowDate(date)) + 1;
+					const selected = item === getMonth(rawDate(date)) + 1;
 
 					return (
 						<button
