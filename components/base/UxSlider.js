@@ -20,6 +20,7 @@ const UxSlier = (props, ref) => {
 	const [maxWidth, setMaxWidth] = useState();
 	const [style, setStyle] = useState({});
 	const sliderRef = useRef();
+	const fillRef = useRef();
 	const minRef = useRef();
 	const maxRef = useRef();
 	const thumbSize = 24;
@@ -36,10 +37,10 @@ const UxSlier = (props, ref) => {
 		maxValue > props.max - 1 && setMaxValue(props.max);
 
 		setStyle({
-			marginLeft: `${percentLeft}%`,
-			width: `${percentWith}%`
+			left: percentLeft,
+			width: percentWith,
 		});
-	}
+	};
 
 	const handleInput = () => {
 		setMinValue(Math.floor(minRef.current.value))
@@ -61,11 +62,11 @@ const UxSlier = (props, ref) => {
 			className={caseClassName}
 		>
 			<div className={`${baseClassName}-base`}>
-				<label className={`${baseClassName}-label min`}>
+				<label className={`${baseClassName}-label`}>
 					<input
 						ref={minRef}
 						type="range"
-						className={`${baseClassName}-input min`}
+						className={`${baseClassName}-input`}
 						style={{ width: `${minWidth}px` }}
 						value={minValue}
 						step={props.step}
@@ -90,8 +91,20 @@ const UxSlier = (props, ref) => {
 			</div>
 			<span className={`${baseClassName}-rail`}>
 				<span
+					className={`${baseClassName}-min`}
+					style={{ left: `${style.left}%` }}
+				/>
+				<span
+					className={`${baseClassName}-max`}
+					style={{ left: `calc(${style.left + style.width}% + ${thumbSize}px)` }}
+				/>
+				<span
+					ref={fillRef}
 					className={`${baseClassName}-fill`}
-					style={style}
+					style={{
+						left: `${style.left}%`,
+						width: `${style.width}%`,
+					}}
 				/>
 			</span>
 		</div>
