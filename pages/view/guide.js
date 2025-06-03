@@ -53,9 +53,8 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxSlider
-										step={1}
-										min={0}
-										max={3000}
+										min="0"
+										max="1000"
 									/>
 								</UxContent>
 							</UxArticle>

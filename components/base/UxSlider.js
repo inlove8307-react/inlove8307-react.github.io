@@ -13,47 +13,70 @@ import classnames from 'classnames';
 const UxSlier = (props, ref) => {
 	const baseClassName = 'ux-slider';
 	const caseClassName = classnames(baseClassName, props.className);
-	const [minValue, setMinValue] = useState(props.min);
-	const [maxValue, setMaxValue] = useState(props.max);
-	const [average, setAverage] = useState((props.min + props.max) / 2);
-	const [minWidth, setMinWidth] = useState();
-	const [maxWidth, setMaxWidth] = useState();
+	const [fromValue, setFromValue] = useState(Number(props.from) || Number(props.min));
+	const [toValue, setToValue] = useState(Number(props.to) || Number(props.max));
 	const [style, setStyle] = useState({});
+	const [zIndex, setZIndex] = useState({});
+	const fromRef = useRef();
+	const toRef = useRef();
 	const sliderRef = useRef();
 	const fillRef = useRef();
-	const minRef = useRef();
-	const maxRef = useRef();
 	const thumbSize = 24;
 
-	const draw = () => {
-		const width = sliderRef.current.offsetWidth;
-		const percentThumb = thumbSize * 2 / width * 100;
-		const percentLeft = minValue / props.max * (100 - percentThumb);
-		const percentWith = maxValue / props.max * (100 - percentThumb) - percentLeft;
+	const setFrom = (from, to) => {
+		const [fromValue, toValue] = [Number(from.value), Number(to.value)];
 
-		setMinWidth(parseInt(thumbSize + ((average - props.min) / (props.max - props.min)) * (width - (2 * thumbSize))));
-		setMaxWidth(parseInt(thumbSize + ((props.max - average) / (props.max - props.min)) * (width - (2 * thumbSize))));
+		setFill();
 
-		maxValue > props.max - 1 && setMaxValue(props.max);
-
-		setStyle({
-			left: percentLeft,
-			width: percentWith,
-		});
+		fromValue > toValue
+			? setFromValue(toValue)
+			: setFromValue(fromValue);
 	};
 
-	const handleInput = () => {
-		setMinValue(Math.floor(minRef.current.value))
-		setMaxValue(Math.floor(maxRef.current.value))
-		setAverage((Math.floor(minRef.current.value) + Math.floor(maxRef.current.value)) / 2);
+	const setTo = (from, to) => {
+		const [fromValue, toValue] = [Number(from.value), Number(to.value)];
+
+		setFill();
+		setToggle(to);
+
+		fromValue <= toValue
+			? setToValue(toValue)
+			: setToValue(fromValue);
+	};
+
+	const setFill = () => {
+		const distance = sliderRef.current.offsetWidth;
+		const thumb = thumbSize / distance * 100;
+		const left = fromValue / props.max * (100 - thumb);
+		const width = toValue / props.max * (100 - thumb) - left;
+
+		setStyle({ left, width });
+	};
+
+	const setToggle = (to) => {
+		Number(to.value) <= 0
+			? setZIndex(2)
+			: setZIndex(0);
+	};
+
+	const handlerInput = (role) => {
+		switch (role) {
+			case 'from':
+				return setFrom(fromRef.current, toRef.current);
+			case 'to':
+				return setTo(fromRef.current, toRef.current);
+		}
 	};
 
 	useEffect(() => {
-		draw();
-	}, [minValue, maxValue, average]);
+		props.onChange && props.onChange(fromValue, toValue);
+	}, [fromValue, toValue]);
 
 	useEffect(() => {
-		draw();
+		if (fromRef.current && toRef.current) {
+			setFill();
+			setToggle(toRef.current);
+		}
 	}, []);
 
 	return (
@@ -62,41 +85,42 @@ const UxSlier = (props, ref) => {
 			className={caseClassName}
 		>
 			<div className={`${baseClassName}-base`}>
-				<label className={`${baseClassName}-label`}>
+				<label>
 					<input
-						ref={minRef}
+						id="fromSlider"
+						ref={fromRef}
 						type="range"
-						className={`${baseClassName}-input`}
-						style={{ width: `${minWidth}px` }}
-						value={minValue}
+						className={`${baseClassName}-input from`}
+						value={fromValue}
 						step={props.step}
 						min={props.min}
-						max={average}
-						onInput={handleInput}
+						max={props.max}
+						onInput={() => handlerInput('from')}
 					/>
 				</label>
-				<label className={`${baseClassName}-label`}>
+				<label>
 					<input
-						ref={maxRef}
+						id="toSlider"
+						ref={toRef}
 						type="range"
-						className={`${baseClassName}-input`}
-						style={{ width: `${maxWidth}px` }}
-						value={maxValue}
+						className={`${baseClassName}-input to`}
+						style={{ zIndex }}
+						value={toValue}
 						step={props.step}
-						min={average}
+						min={props.min}
 						max={props.max}
-						onInput={handleInput}
+						onInput={() => handlerInput('to')}
 					/>
 				</label>
 			</div>
-			<span className={`${baseClassName}-rail`}>
+			<div className={`${baseClassName}-rail`}>
 				<span
 					className={`${baseClassName}-min`}
 					style={{ left: `${style.left}%` }}
 				/>
 				<span
 					className={`${baseClassName}-max`}
-					style={{ left: `calc(${style.left + style.width}% + ${thumbSize}px)` }}
+					style={{ left: `${style.left + style.width}%` }}
 				/>
 				<span
 					ref={fillRef}
@@ -106,7 +130,7 @@ const UxSlier = (props, ref) => {
 						width: `${style.width}%`,
 					}}
 				/>
-			</span>
+			</div>
 		</div>
 	)
 };
