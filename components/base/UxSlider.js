@@ -26,15 +26,14 @@ const UxSlier = (props, ref) => {
 
 	const draw = () => {
 		const width = sliderRef.current.offsetWidth;
+		const percentThumb = thumbSize * 2 / width * 100;
+		const percentLeft = minValue / props.max * (100 - percentThumb);
+		const percentWith = maxValue / props.max * (100 - percentThumb) - percentLeft;
 
 		setMinWidth(parseInt(thumbSize + ((average - props.min) / (props.max - props.min)) * (width - (2 * thumbSize))));
 		setMaxWidth(parseInt(thumbSize + ((props.max - average) / (props.max - props.min)) * (width - (2 * thumbSize))));
 
 		maxValue > props.max - 1 && setMaxValue(props.max);
-
-		const percentThumb = thumbSize / props.max * 100;
-		const percentLeft = minValue / props.max * 100 - percentThumb;
-		const percentWith = maxValue / props.max * 100 - percentLeft - percentThumb;
 
 		setStyle({
 			marginLeft: `${percentLeft}%`,
@@ -72,20 +71,20 @@ const UxSlier = (props, ref) => {
 						step={props.step}
 						min={props.min}
 						max={average}
-						onInput={(event) => handleInput(event, 'min')}
+						onInput={handleInput}
 					/>
 				</label>
-				<label className={`${baseClassName}-label max`}>
+				<label className={`${baseClassName}-label`}>
 					<input
 						ref={maxRef}
 						type="range"
-						className={`${baseClassName}-input max`}
+						className={`${baseClassName}-input`}
 						style={{ width: `${maxWidth}px` }}
 						value={maxValue}
 						step={props.step}
 						min={average}
 						max={props.max}
-						onInput={(event) => handleInput(event, 'max')}
+						onInput={handleInput}
 					/>
 				</label>
 			</div>
