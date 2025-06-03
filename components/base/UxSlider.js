@@ -16,27 +16,35 @@ const UxSlier = (props, ref) => {
 	const [minValue, setMinValue] = useState(props.min);
 	const [maxValue, setMaxValue] = useState(props.max);
 	const [average, setAverage] = useState((props.min + props.max) / 2);
+	const [minWidth, setMinWidth] = useState();
+	const [maxWidth, setMaxWidth] = useState();
+	const [style, setStyle] = useState({});
 	const sliderRef = useRef();
 	const minRef = useRef();
 	const maxRef = useRef();
-	const thumbSize = 14;
+	const thumbSize = 24;
 
 	const draw = () => {
-		var min = minRef.current;
-		var max = maxRef.current;
-		var width = sliderRef.current.offsetWidth;
+		const width = sliderRef.current.offsetWidth;
 
-		min.style.width = parseInt(thumbSize + ((average - props.min) / (props.max - props.min)) * (width - (2 * thumbSize))) + 'px';
-		max.style.width = parseInt(thumbSize + ((props.max - average) / (props.max - props.min)) * (width - (2 * thumbSize))) + 'px';
-		min.style.left = '0px';
-		max.style.left = parseInt(min.style.width)+'px';
+		setMinWidth(parseInt(thumbSize + ((average - props.min) / (props.max - props.min)) * (width - (2 * thumbSize))));
+		setMaxWidth(parseInt(thumbSize + ((props.max - average) / (props.max - props.min)) * (width - (2 * thumbSize))));
 
-		if (max.value > props.max - 1) setMaxValue(props.max);
+		maxValue > props.max - 1 && setMaxValue(props.max);
+
+		const percentThumb = thumbSize / props.max * 100;
+		const percentLeft = minValue / props.max * 100 - percentThumb;
+		const percentWith = maxValue / props.max * 100 - percentLeft - percentThumb;
+
+		setStyle({
+			marginLeft: `${percentLeft}%`,
+			width: `${percentWith}%`
+		});
 	}
 
 	const handleInput = () => {
-		setMinValue(Math.floor(minRef.current.value));
-		setMaxValue(Math.floor(maxRef.current.value));
+		setMinValue(Math.floor(minRef.current.value))
+		setMaxValue(Math.floor(maxRef.current.value))
 		setAverage((Math.floor(minRef.current.value) + Math.floor(maxRef.current.value)) / 2);
 	};
 
@@ -53,34 +61,40 @@ const UxSlier = (props, ref) => {
 			ref={sliderRef}
 			className={caseClassName}
 		>
-			<label
-				className={`${baseClassName}-label min`}
-			>
-				<input
-					ref={minRef}
-					type="range"
-					className={`${baseClassName}-input min`}
-					value={minValue}
-					step={props.step}
-					min={props.min}
-					max={average}
-					onInput={handleInput}
+			<div className={`${baseClassName}-base`}>
+				<label className={`${baseClassName}-label min`}>
+					<input
+						ref={minRef}
+						type="range"
+						className={`${baseClassName}-input min`}
+						style={{ width: `${minWidth}px` }}
+						value={minValue}
+						step={props.step}
+						min={props.min}
+						max={average}
+						onInput={(event) => handleInput(event, 'min')}
+					/>
+				</label>
+				<label className={`${baseClassName}-label max`}>
+					<input
+						ref={maxRef}
+						type="range"
+						className={`${baseClassName}-input max`}
+						style={{ width: `${maxWidth}px` }}
+						value={maxValue}
+						step={props.step}
+						min={average}
+						max={props.max}
+						onInput={(event) => handleInput(event, 'max')}
+					/>
+				</label>
+			</div>
+			<span className={`${baseClassName}-rail`}>
+				<span
+					className={`${baseClassName}-fill`}
+					style={style}
 				/>
-			</label>
-			<label
-				className={`${baseClassName}-label max`}
-			>
-				<input
-					ref={maxRef}
-					type="range"
-					className={`${baseClassName}-input max`}
-					value={maxValue}
-					step={props.step}
-					min={average}
-					max={props.max}
-					onInput={handleInput}
-				/>
-			</label>
+			</span>
 		</div>
 	)
 };
