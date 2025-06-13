@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxRange = (props, ref) => {
+const UxRange = ({ ref, ...props }) => {
 	const baseClassName = 'ux-range';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxRange = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxRange);
+export default UxRange;

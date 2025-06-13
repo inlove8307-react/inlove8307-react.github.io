@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxChip = (props, ref) => {
+const UxChip = ({ ref, ...props }) => {
 	const baseClassName = 'ux-chip';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxChip = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxChip);
+export default UxChip;

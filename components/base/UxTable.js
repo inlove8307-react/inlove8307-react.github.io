@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxTable = (props, ref) => {
+const UxTable = ({ ref, ...props }) => {
 	const baseClassName = 'ux-table';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxTable = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxTable);
+export default UxTable;

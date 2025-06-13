@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxKeypad = (props, ref) => {
+const UxKeypad = ({ ref, ...props }) => {
 	const baseClassName = 'ux-keypad';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxKeypad = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxKeypad);
+export default UxKeypad;

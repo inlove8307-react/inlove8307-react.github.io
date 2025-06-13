@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxToast = (props, ref) => {
+const UxToast = ({ ref, ...props }) => {
 	const baseClassName = 'ux-toast';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxToast = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxToast);
+export default UxToast;

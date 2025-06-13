@@ -4,7 +4,7 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
-const UxFooter = (props, ref) => {
+const UxFooter = ({ ref, ...props }) => {
 	const originClassName = 'ux-footer';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -21,4 +21,4 @@ const UxFooter = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxFooter);
+export default UxFooter;

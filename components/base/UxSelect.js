@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxSelect = (props, ref) => {
+const UxSelect = ({ ref, ...props }) => {
 	const baseClassName = 'ux-select';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxSelect = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxSelect);
+export default UxSelect;

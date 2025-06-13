@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxLayout = (props, ref) => {
+const UxLayout = ({ ref, ...props }) => {
 	const originClassName = 'ux-layout';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxLayout = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxLayout);
+export default UxLayout;

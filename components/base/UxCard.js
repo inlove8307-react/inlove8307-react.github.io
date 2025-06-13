@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
@@ -11,19 +11,27 @@ import UxIcon from '@/components/base/UxIcon';
  *
  */
 
-const UxCard = (props, ref) => {
+const UxCard = ({ ref, ...props }) => {
 	const baseClassName = 'ux-card';
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
 	const [name, setName] = useState(props.name || '');
+	const labelRef = useRef();
 
 	const handleChange = (event) => {
-		if (props.type === 'checkbox') {
-			setChecked(event.target.checked);
+		switch (props.type) {
+			case 'checkbox':
+				return setChecked(event.target.checked);
+			case 'radio':
+				return props.onChange && props.onChange(props.value);
 		}
-		if (props.type === 'radio') {
-			props.onChange && props.onChange(props.value);
-		}
+	};
+
+	const handleClick = () => {
+		if (!props.type) return;
+
+		labelRef.current?.click();
+		props.onClick && props.onClick();
 	};
 
 	useEffect(() => {
@@ -50,7 +58,10 @@ const UxCard = (props, ref) => {
 			className={classnames(caseClassName, { checked })}
 		>
 			{(props.type === 'radio' || props.type === 'checkbox') &&
-				<label className={`${baseClassName}-base`}>
+				<label
+					ref={labelRef}
+					className={`${baseClassName}-label`}
+				>
 					<input
 						type={props.type}
 						className={`${baseClassName}-input`}
@@ -62,11 +73,16 @@ const UxCard = (props, ref) => {
 					/>
 				</label>
 			}
-			<span className={`${baseClassName}-label`}>
+			<div
+				role="button"
+				tabIndex="0"
+				className={`${baseClassName}-base`}
+				onClick={handleClick}
+			>
 				{props.children}
-			</span>
+			</div>
 		</div>
 	);
 };
 
-export default React.forwardRef(UxCard);
+export default UxCard;

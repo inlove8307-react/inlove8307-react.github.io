@@ -13,7 +13,7 @@ import UxInput from '@/components/base/UxInput';
  *
  */
 
-const UxPhone = (props, ref) => {
+const UxPhone = ({ ref, ...props }) => {
 	const baseClassName = 'ux-input-group';
 	const caseClassName = classnames(baseClassName, props.className, {
 		valid: props.valid === true,
@@ -104,4 +104,4 @@ const UxPhone = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxPhone);
+export default UxPhone;

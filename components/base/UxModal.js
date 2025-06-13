@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxModal = (props, ref) => {
+const UxModal = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxModal = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxModal);
+export default UxModal;

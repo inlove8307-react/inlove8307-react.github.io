@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxList = (props, ref) => {
+const UxList = ({ ref, ...props }) => {
 	const baseClassName = 'ux-list';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxList = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxList);
+export default UxList;

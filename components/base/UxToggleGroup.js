@@ -10,7 +10,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxToggleGroup = (props, ref) => {
+const UxToggleGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-toggle-group';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [selected, setSelected] = useState(props.selected || null);
@@ -47,4 +47,4 @@ const UxToggleGroup = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxToggleGroup);
+export default UxToggleGroup;

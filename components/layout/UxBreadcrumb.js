@@ -4,7 +4,7 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
-const UxBreadcrumb = (props, ref) => {
+const UxBreadcrumb = ({ ref, ...props }) => {
 	const originClassName = 'ux-breadcrumb';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -19,4 +19,4 @@ const UxBreadcrumb = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxBreadcrumb);
+export default UxBreadcrumb;

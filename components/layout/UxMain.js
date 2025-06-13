@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxMain = (props, ref) => {
+const UxMain = ({ ref, ...props }) => {
 	const originClassName = 'ux-main';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxMain = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxMain);
+export default UxMain;

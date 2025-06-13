@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxText = (props, ref) => {
+const UxText = ({ ref, ...props }) => {
 	const baseClassName = 'ux-text';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxText = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxText);
+export default UxText;

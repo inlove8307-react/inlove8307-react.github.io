@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxBottomSheet = (props, ref) => {
+const UxBottomSheet = ({ ref, ...props }) => {
 	const baseClassName = 'ux-bottomsheet';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -15,4 +15,4 @@ const UxBottomSheet = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxBottomSheet);
+export default UxBottomSheet;

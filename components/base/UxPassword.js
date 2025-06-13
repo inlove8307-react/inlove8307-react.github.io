@@ -12,7 +12,7 @@ import UxMasking from '@/components/base/UxMasking';
  *
  */
 
-const UxPassword = (props, ref) => {
+const UxPassword = ({ ref, ...props }) => {
 	const baseClassName = 'ux-password';
 	const caseClassName = classnames(baseClassName, props.className, {
 		valid: props.valid === true,
@@ -68,4 +68,4 @@ const UxPassword = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxPassword);
+export default UxPassword;

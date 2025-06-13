@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxFilter = (props, ref) => {
+const UxFilter = ({ ref, ...props }) => {
 	const baseClassName = 'ux-filter';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxFilter = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxFilter);
+export default UxFilter;

@@ -14,7 +14,7 @@ import UxPassword from '@/components/base/UxPassword';
  *
  */
 
-const UxLrn = (props, ref) => {
+const UxLrn = ({ ref, ...props }) => {
 	const baseClassName = 'ux-input-group';
 	const caseClassName = classnames(baseClassName, props.className, {
 		valid: props.valid === true,
@@ -117,4 +117,4 @@ const UxLrn = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxLrn);
+export default UxLrn;

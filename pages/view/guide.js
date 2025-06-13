@@ -49,12 +49,27 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSlider</h5>
+									<h5>UxSlider Single</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSlider
 										min="0"
-										max="1000"
+										max="100"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSlider Range</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSlider
+										type="range"
+										min="0"
+										max="100"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -84,6 +99,8 @@ export default function Sample() {
 											content03
 										</div>
 									</UxTab>
+
+									<UxDivider className="linear" />
 
 									<UxTab>
 										<UxTabPanel>

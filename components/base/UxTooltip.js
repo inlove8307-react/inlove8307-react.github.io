@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxTooltip = (props, ref) => {
+const UxTooltip = ({ ref, ...props }) => {
 	const baseClassName = 'ux-tooltip';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxTooltip = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxTooltip);
+export default UxTooltip;

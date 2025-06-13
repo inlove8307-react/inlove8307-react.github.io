@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { rawDate } from '@/utils/core';
 import { format, set, add, sub, isEqual, getDay, getDate, getMonth, getYear } from "date-fns";
 
-const UxDateCalendar = (props, ref) => {
+const UxDateCalendar = ({ ref, ...props }) => {
 	const originClassName = 'ux-calendar';
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
@@ -121,4 +121,4 @@ const UxDateCalendar = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxDateCalendar);
+export default UxDateCalendar;

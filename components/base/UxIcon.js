@@ -10,7 +10,7 @@ import { mergeProps } from '@/utils/core';
  *
  */
 
-const UxIcon = (props, ref) => {
+const UxIcon = ({ ref, ...props }) => {
 	const baseClassName = 'ux-icon';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -75,4 +75,4 @@ const UxIcon = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxIcon);
+export default UxIcon;

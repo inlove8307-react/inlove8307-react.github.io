@@ -5,7 +5,7 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 
-const UxHeader = (props, ref) => {
+const UxHeader = ({ ref, ...props }) => {
 	const originClassName = 'ux-header';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -24,4 +24,4 @@ const UxHeader = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxHeader);
+export default UxHeader;

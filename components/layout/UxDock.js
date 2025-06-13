@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxDock = (props, ref) => {
+const UxDock = ({ ref, ...props }) => {
 	const originClassName = 'ux-dock';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxDock = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxDock);
+export default UxDock;

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxGroup = (props, ref) => {
+const UxGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-group';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxGroup = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxGroup);
+export default UxGroup;

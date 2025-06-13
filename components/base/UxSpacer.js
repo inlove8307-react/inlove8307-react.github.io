@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxSpacer = (props, ref) => {
+const UxSpacer = ({ ref, ...props }) => {
 	const baseClassName = 'ux-spacer';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxSpacer = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxSpacer);
+export default UxSpacer;

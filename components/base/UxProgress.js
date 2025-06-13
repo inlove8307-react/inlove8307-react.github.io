@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxProgress = (props, ref) => {
+const UxProgress = ({ ref, ...props }) => {
 	const baseClassName = 'ux-progress';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxProgress = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxProgress);
+export default UxProgress;

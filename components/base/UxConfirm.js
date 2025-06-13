@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxConfirm = (props, ref) => {
+const UxConfirm = ({ ref, ...props }) => {
 	const baseClassName = 'ux-confirm';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxConfirm = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxConfirm);
+export default UxConfirm;

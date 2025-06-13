@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxTimeline = (props, ref) => {
+const UxTimeline = ({ ref, ...props }) => {
 	const baseClassName = 'ux-timeline';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxTimeline = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxTimeline);
+export default UxTimeline;

@@ -13,7 +13,7 @@ import UxButton from '@/components/base/UxButton';
  *
  */
 
-const UxInput = (props, ref) => {
+const UxInput = ({ ref, ...props }) => {
 	const baseClassName = 'ux-input';
 	const caseClassName = classnames(baseClassName, props.className, {
 		valid: props.valid === true,
@@ -141,4 +141,4 @@ const UxInput = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxInput);
+export default UxInput;

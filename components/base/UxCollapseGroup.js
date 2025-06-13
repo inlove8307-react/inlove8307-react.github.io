@@ -10,7 +10,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxCollapseGroup = (props, ref) => {
+const UxCollapseGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-collapse-group';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [selected, setSelected] = useState(props.selected);
@@ -41,4 +41,4 @@ const UxCollapseGroup = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCollapseGroup);
+export default UxCollapseGroup;

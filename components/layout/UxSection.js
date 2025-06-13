@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxSection = (props, ref) => {
+const UxSection = ({ ref, ...props }) => {
 	const originClassName = 'ux-section';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxSection = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxSection);
+export default UxSection;

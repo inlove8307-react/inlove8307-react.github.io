@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxDropdown = (props, ref) => {
+const UxDropdown = ({ ref, ...props }) => {
 	const baseClassName = 'ux-dropdown';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxDropdown = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxDropdown);
+export default UxDropdown;

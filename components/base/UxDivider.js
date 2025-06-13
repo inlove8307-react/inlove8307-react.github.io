@@ -9,7 +9,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxDivider = (props, ref) => {
+const UxDivider = ({ ref, ...props }) => {
 	const baseClassName = 'ux-divider';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -18,4 +18,4 @@ const UxDivider = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxDivider);
+export default UxDivider;

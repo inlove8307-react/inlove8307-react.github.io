@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxFile = (props, ref) => {
+const UxFile = ({ ref, ...props }) => {
 	const baseClassName = 'ux-file';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxFile = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxFile);
+export default UxFile;

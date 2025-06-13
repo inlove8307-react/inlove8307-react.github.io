@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxImage = (props, ref) => {
+const UxImage = ({ ref, ...props }) => {
 	const baseClassName = 'ux-image';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxImage = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxImage);
+export default UxImage;

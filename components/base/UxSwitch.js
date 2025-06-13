@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxSwitch = (props, ref) => {
+const UxSwitch = ({ ref, ...props }) => {
 	const baseClassName = 'ux-switch';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxSwitch = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxSwitch);
+export default UxSwitch;

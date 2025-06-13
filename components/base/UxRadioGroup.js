@@ -10,7 +10,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxRadioGroup = (props, ref) => {
+const UxRadioGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-radio-group';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [selected, setSelected] = useState(props.selected || null);
@@ -47,4 +47,4 @@ const UxRadioGroup = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxRadioGroup);
+export default UxRadioGroup;

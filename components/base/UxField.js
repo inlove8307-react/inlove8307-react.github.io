@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxField = (props, ref) => {
+const UxField = ({ ref, ...props }) => {
 	const baseClassName = 'ux-field';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxField = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxField);
+export default UxField;

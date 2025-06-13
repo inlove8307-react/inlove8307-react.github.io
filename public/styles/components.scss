@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 :root {
+	--height-form: 4.8rem;
+	--height-submit: 2.8rem;
+	--radius-form: 1.2rem;
+	--radius-card: 1.6rem;
 	--inset: inset 0 0 0 .1rem var(--light2);
 	--inset-focus: inset 0 0 0 .2rem var(--light3);
 	--inset-valid: inset 0 0 0 .1rem var(--valid);
@@ -20,7 +24,7 @@
 
 
 /* <UxButton> */
-.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; padding: 0 1.2rem; width: 100%; min-height: 4rem; border-radius: 1rem; box-shadow: var(--inset); background-color: var(--light0); font-size: 1.6rem; color: var(--dark1); letter-spacing: 0; transition: var(--inset-transition); transform: translateZ(0);}
+.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; padding: 0 1.2rem; width: 100%; height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); font-size: 1.6rem; color: var(--dark1); letter-spacing: 0; transition: var(--inset-transition); transform: translateZ(0);}
 .ux-button-label {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 /* <UxButton> Focus */
 .ux-button:hover,
@@ -32,7 +36,7 @@
 
 
 /* <UxInput> */
-.ux-input {display: flex; align-items: center; gap: .8rem; padding: 0 1.2rem; height: 4rem; border-radius: .8rem; box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-input {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
 .ux-input .ux-input-base {flex-grow: 1; flex-shrink: 0; flex-basis: 0; width: 100%; border: 0; background-color: transparent; caret-color: var(--dark3);}
 .ux-input .ux-input-base:focus,
 .ux-input .ux-input-base:focus-visible {outline: none;}
@@ -47,7 +51,7 @@
 /* <UxInput> Timer */
 .ux-input .ux-input-timer {flex-shrink: 0; color: var(--invalid);}
 /* <UxInput> Submit */
-.ux-input .ux-button.submit {flex-shrink: 0; padding: 0 0.8rem; width: initial; min-height: initial; height: 2.4rem; border-radius: .8rem; background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
+.ux-input .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
 .ux-input .ux-button.submit:hover,
 .ux-input .ux-button.submit:focus {box-shadow: none;}
 /* <UxInput> Focus */
@@ -64,7 +68,7 @@
 .ux-input.readonly .ux-input-suffix,
 .ux-input.readonly .ux-input-timer {color: var(--dark3);}
 /* <UxInput> Disabled */
-.ux-input.disabled {box-shadow: inset 0 0 0 .1rem var(--light3); background-color: var(--light1);}
+.ux-input.disabled {background-color: var(--light1);}
 .ux-input.disabled .ux-input-base,
 .ux-input.disabled .ux-input-prefix,
 .ux-input.disabled .ux-input-suffix,
@@ -95,7 +99,7 @@
 
 
 /* <UxPassword> */
-.ux-password {display: flex; align-items: center; gap: .8rem; padding: 0 1.2rem; height: 4rem; border-radius: .8rem; box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-password {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
 /* <UxPassword> Focus */
 .ux-password:focus-within {box-shadow: var(--inset-focus);}
 /* <UxPassword> Valid */
@@ -112,7 +116,7 @@
 
 
 /* <UxInputGroup> */
-.ux-input-group {display: flex; align-items: center; gap: .8rem; padding: 0 1.2rem; height: 4rem; border-radius: .8rem; box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-input-group {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
 /* <UxInputGroup> Focus */
 .ux-input-group:focus-within {box-shadow: var(--inset-focus);}
 /* <UxInputGroup> Valid */
@@ -122,7 +126,7 @@
 .ux-input-group.invalid {box-shadow: var(--inset-invalid);}
 .ux-input-group.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
 /* <UxInputGroup> Disabled */
-.ux-input-group.disabled {box-shadow: inset 0 0 0 .1rem var(--light3); background-color: var(--light1);}
+.ux-input-group.disabled {background-color: var(--light1);}
 /* <UxInputGroup> Input */
 .ux-input-group .ux-input {flex-shrink: 0; padding: 0; box-shadow: none; background-color: transparent;}
 .ux-input-group.readonly .ux-input,
@@ -138,7 +142,7 @@
 .ux-input-group .ux-input.last,
 .ux-input-group .ux-password.last {flex-grow: 1; flex-shrink: initial;}
 /* <UxInputGroup> Submit */
-.ux-input-group .ux-button.submit {flex-shrink: 0; padding: 0 0.8rem; width: initial; min-height: initial; height: 2.4rem; border-radius: .8rem; background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
+.ux-input-group .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
 .ux-input-group .ux-button.submit:hover,
 .ux-input-group .ux-button.submit:focus {box-shadow: none;}
 
@@ -187,40 +191,40 @@
 
 
 /* <UxToggle> */
-.ux-toggle {display: flex; height: 4rem;}
-.ux-toggle .ux-toggle-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 1.2rem; width: 100%; height: 100%; cursor: pointer;}
+.ux-toggle {display: flex; height: var(--height-form);}
+.ux-toggle .ux-toggle-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); width: 100%; height: 100%; cursor: pointer;}
 .ux-toggle .ux-toggle-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
 .ux-toggle .ux-toggle-label {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 /* <UxToggle> Checked */
-.ux-toggle.checked .ux-toggle-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: .8rem; border: .2rem solid var(--color1); transform: translate(-50%, -50%);}
+.ux-toggle.checked .ux-toggle-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: var(--radius-form); box-shadow: var(--inset-color-focus); transform: translate(-50%, -50%) translateZ(0);}
 
 
 
 /* <UxToggleGroup> */
-.ux-toggle-group {display: flex; flex-wrap: wrap; gap: .1rem 0; width: 100%; border-radius: .8rem; box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent 4rem, var(--light1) 4rem, var(--light1) 4.1rem); background-color: var(--light0);}
+.ux-toggle-group {display: flex; flex-wrap: wrap; gap: .1rem 0; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
 .ux-toggle-group .ux-toggle {position: relative; flex-grow: 1; flex-shrink: 0; flex-basis: 0;}
-.ux-toggle-group .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: 50%; background-color: var(--light1); transform: translateY(-50%);}
+.ux-toggle-group .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height-form) / 3); background-color: var(--light1); transform: translateY(-50%);}
 .ux-toggle-group .ux-toggle.checked + .ux-toggle::before {display: none;}
 /* <UxToggleGroup> Col */
 .ux-toggle-group[class*=col] .ux-toggle {flex-grow: 0;}
 .ux-toggle-group.col2 .ux-toggle {flex-basis: calc(100% / 2); width: calc(100% / 2);}
 .ux-toggle-group.col3 .ux-toggle {flex-basis: calc(100% / 3); width: calc(100% / 3);}
 .ux-toggle-group.col4 .ux-toggle {flex-basis: calc(100% / 4); width: calc(100% / 4);}
-.ux-toggle-group.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-toggle-group.col2 .ux-toggle:nth-child(2n + 1)::before,
+.ux-toggle-group.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-toggle-group.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
 
 
 
 /* <UxCard> */
-.ux-card {position: relative; border-radius: .8rem;}
-.ux-card-base {position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;}
+.ux-card {position: relative; border-radius: var(--radius-form);}
+.ux-card-base {display: flex; padding: 1.2rem; border-radius: var(--radius-form); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-card-label {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
 .ux-card-input[type=radio],
 .ux-card-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-card-label {display: flex; padding: 1.2rem; border-radius: .8rem; box-shadow: var(--inset); transition: var(--inset-transition);}
 /* <UxCard> Checked */
 .ux-card.checked {box-shadow: var(--shadow);}
-.ux-card.checked .ux-card-label {box-shadow: var(--inset-color-focus);}
+.ux-card.checked .ux-card-base {box-shadow: var(--inset-color-focus);}
 
 
 
@@ -233,22 +237,22 @@
 
 
 /* <UxCollapse> */
-.ux-collapse {display: flex; flex-direction: column; border-radius: .8rem; box-shadow: var(--inset);}
+.ux-collapse {display: flex; flex-direction: column; border-radius: var(--radius-form); box-shadow: var(--inset);}
 .ux-collapse + .ux-collapse {border-top: .1rem solid var(--light2);}
-.ux-collapse-summary {display: flex; align-items: center; min-height: 4rem;}
+.ux-collapse-summary {display: flex; align-items: center; min-height: var(--height-form);}
 .ux-collapse-summary [data-role=summary] {flex-grow: 1; padding-left: 1.2rem;}
-.ux-collapse-button {flex-shrink: 0; display: flex; align-items: center; padding: 0 1.2rem;}
+.ux-collapse-button {flex-shrink: 0; display: flex; align-items: center; padding: 0 var(--radius-form);}
 .ux-collapse-details {overflow: hidden; max-height: 0; box-shadow: var(--index); transition: max-height .15s ease-in-out;}
 .ux-collapse-details [data-role=details] {padding: 1.2rem;}
 /* <UxCollapse> Expanded */
 .ux-collapse.expanded .ux-collapse-details {max-height: auto;}
 /* <UxCollapseGroup> */
-.ux-collapse-group {overflow: hidden; width: 100%; border-radius: .8rem; border: .1rem solid var(--light2); background-color: var(--light0);}
+.ux-collapse-group {overflow: hidden; width: 100%; border-radius: var(--radius-form); border: .1rem solid var(--light2); background-color: var(--light0);}
 .ux-collapse-group .ux-collapse {border-radius: initial; box-shadow: initial;}
 
 
 
-/* UxTab */
+/* <UxTab> */
 .ux-tab {width: 100%; background-color: var(--light0)}
 .ux-tab .ux-tab-base {overflow: hidden}
 .ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1)}
@@ -258,18 +262,14 @@
 .ux-tab .ux-tab-button.active .ux-tab-label {color: var(--color1)}
 .ux-tab .ux-tab-panel {display: none; padding: 1.2rem 1.6rem;}
 .ux-tab .ux-tab-panel.active {display: block}
-/* UxTab Linear */
+/* <UxTab> Linear */
 .ux-tab.linear .ux-tab-button.active {box-shadow: none}
 .ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: .2rem; background-color: var(--color1); transition: all .1s ease-in-out}
-/* UxTab Scroll */
+/* <UxTab> Scroll */
 .ux-tab.scroll .ux-tab-scroll {overflow-x: auto}
 .ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none}
-/* UxTab Full */
+/* <UxTab> Full */
 .ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
-/* UxTab Mobile */
-.ux-container.mobile .ux-tab {width: calc(var(--100vw) - var(--space) * 2)}
-/* UxKeypad in UxCard */
-.ux-card .ux-tab {margin: -1.6rem; width: initial; background-color: transparent}
 
 
 
@@ -314,15 +314,12 @@
 
 
 /* <UxSlider> */
-.ux-slider {display: flex; flex-direction: column; position: relative; width: 100%; height: 2.4rem;}
-.ux-slider-base {position: relative; z-index: 0; top: 50%; left: 0; transform: translateY(-50%);}
-/* <UxSlider> Input */
-.ux-slider-input[type=range] {-webkit-appearance: none; appearance: none; height: .2rem; width: 100%; position: absolute; background-color: transparent; pointer-events: none;}
-.ux-slider-input[type=range]::-webkit-slider-thumb  {-webkit-appearance: none; pointer-events: all; width: 2.4rem; height: 2.4rem; background-color: transparent; box-shadow: none; cursor: pointer;}
-.ux-slider-input[type=range]::-moz-range-thumb {-webkit-appearance: none; pointer-events: all; width: 2.4rem; height: 2.4rem; background-color: transparent; box-shadow: none; cursor: pointer;}
-.ux-slider-input.from {z-index: 1; height: 0;}
-/* <UxSlider> Rail */
-.ux-slider-rail {position: absolute; z-index: 1; top: 50%; left: 0; width: 100%; height: .8rem; border-radius: .4rem; background-color: var(--light1); transform: translateY(-50%); pointer-events: none; opacity: .8;}
-.ux-slider-fill {position: absolute; height: .8rem; border-radius: .4rem; background-color: var(--color1); transform: translateX(1.2rem);}
-.ux-slider-min,
-.ux-slider-max {position: absolute; top: 50%; z-index: 1; width: 2.4rem; height: 2.4rem; border: .4rem solid var(--color1); box-shadow: var(--shadow); border-radius: 100%; background: rgb(255, 255, 255); transform: translateY(-50%) translateZ(0);}
+.ux-slider {--range-height: .6rem; --range-radius: calc(var(--range-height) / 2); --thumb-width: 2.4rem; --thumb-radius: calc(var(--thumb-width) / 2); display: flex; flex-direction: column; position: relative; width: 100%; height: var(--thumb-width);}
+.ux-slider .ux-slider-base {position: relative; z-index: 0; top: 50%; left: 0; transform: translateY(-50%);}
+.ux-slider .ux-slider-input[type=range] {-webkit-appearance: none; appearance: none; position: absolute; top: 50%; width: 100%; height: var(--range-height); border-radius: var(--range-radius); background-color: var(--light1); transform: translateY(-50%) translateZ(0); pointer-events: none;}
+.ux-slider .ux-slider-input[type=range].from {z-index: 1; height: 0;}
+.ux-slider .ux-slider-input[type=range].to {z-index: 0;}
+.ux-slider .ux-slider-input[type=range]::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
+.ux-slider .ux-slider-input[type=range]::-moz-range-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
+/* <UxSlider> Toggle */
+.ux-slider.toggle .ux-slider-input[type=range].to {z-index: 2;}

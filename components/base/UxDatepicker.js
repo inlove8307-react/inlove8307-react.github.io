@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxDatePicker = (props, ref) => {
+const UxDatePicker = ({ ref, ...props }) => {
 	const baseClassName = 'ux-datepicker';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxDatePicker = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxDatePicker);
+export default UxDatePicker;

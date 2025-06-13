@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxThumb = (props, ref) => {
+const UxThumb = ({ ref, ...props }) => {
 	const baseClassName = 'ux-thumb';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxThumb = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxThumb);
+export default UxThumb;

@@ -9,7 +9,7 @@ import UxYearCalendar from "@/components/base/UxYearCalendar";
 /* COMPONENT */
 import UxIcon from "@/components/base/UxIcon";
 
-const UxCalendar = (props, ref) => {
+const UxCalendar = ({ ref, ...props }) => {
 	const originClassName = 'ux-calendar';
 	const mixinClassName = classnames(originClassName, props.className);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
@@ -125,4 +125,4 @@ const UxCalendar = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCalendar);
+export default UxCalendar;

@@ -9,7 +9,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxCheckboxGroup = (props, ref) => {
+const UxCheckboxGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-checkbox-group';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -20,4 +20,4 @@ const UxCheckboxGroup = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCheckboxGroup);
+export default UxCheckboxGroup;

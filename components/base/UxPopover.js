@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxPopover = (props, ref) => {
+const UxPopover = ({ ref, ...props }) => {
 	const baseClassName = 'ux-popover';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxPopover = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxPopover);
+export default UxPopover;

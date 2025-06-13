@@ -12,7 +12,7 @@ import UxIcon from '@/components/base/UxIcon';
  *
  */
 
-const UxCheckbox = (props, ref) => {
+const UxCheckbox = ({ ref, ...props }) => {
 	const baseClassName = 'ux-checkbox';
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
@@ -66,4 +66,4 @@ const UxCheckbox = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCheckbox);
+export default UxCheckbox;

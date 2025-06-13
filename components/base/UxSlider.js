@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
+
 /**
- * <UxSlider>
+ * <UxSlierSingle>
  * [props]
  * min(Number)
  * max(Number)
@@ -9,24 +10,85 @@ import classnames from 'classnames';
  *
  * [event]
  * onChange(Func)
-*/
-const UxSlier = (props, ref) => {
+ */
+
+const UxSlierSingle = ({ ref, ...props }) => {
 	const baseClassName = 'ux-slider';
-	const caseClassName = classnames(baseClassName, props.className);
+	const [value, setValue] = useState(Number(props.value) || 0);
+	const [style, setStyle] = useState({});
+	const inputRef = useRef();
+
+	const setFill = (input) => {
+		const distance = input.max - input.min;
+		const value = input.value - input.min;
+		const slider = 'rgb(238, 238, 238)';
+		const range = 'rgb(217, 13, 88)';
+
+		setStyle({ background: `linear-gradient(
+			to right,
+			${range} 0%,
+			${range} ${value / distance * 100}%,
+			${slider} ${value / distance * 100}%,
+			${slider} 100%)`
+		});
+	};
+
+	const handlerInput = () => {
+		setFill(inputRef.current);
+		setValue(Number(inputRef.current.value));
+	};
+
+	useEffect(() => {
+		props.onChange && props.onChange(value);
+	}, [value]);
+
+	useEffect(() => {
+			setFill(inputRef.current);
+	}, []);
+
+	return (
+		<div className={`${baseClassName}-base`}>
+			<label className={`${baseClassName}-label`}>
+				<input
+					ref={inputRef}
+					type="range"
+					className={`${baseClassName}-input`}
+					value={value}
+					style={style}
+					step={props.step}
+					min={props.min}
+					max={props.max}
+					onInput={handlerInput}
+				/>
+			</label>
+		</div>
+	)
+};
+
+/**
+ * <UxSlierRange>
+ * [props]
+ * min(Number)
+ * max(Number)
+ * step(Number)
+ *
+ * [event]
+ * onChange(Func)
+ */
+
+const UxSlierRange = ({ ref, ...props }) => {
+	const baseClassName = 'ux-slider';
 	const [fromValue, setFromValue] = useState(Number(props.from) || Number(props.min));
 	const [toValue, setToValue] = useState(Number(props.to) || Number(props.max));
 	const [style, setStyle] = useState({});
-	const [zIndex, setZIndex] = useState({});
+	const [isToggle, setIsToggle] = useState(false);
 	const fromRef = useRef();
 	const toRef = useRef();
-	const sliderRef = useRef();
-	const fillRef = useRef();
-	const thumbSize = 24;
 
 	const setFrom = (from, to) => {
 		const [fromValue, toValue] = [Number(from.value), Number(to.value)];
 
-		setFill();
+		setFill(from, to);
 
 		fromValue > toValue
 			? setFromValue(toValue)
@@ -36,7 +98,7 @@ const UxSlier = (props, ref) => {
 	const setTo = (from, to) => {
 		const [fromValue, toValue] = [Number(from.value), Number(to.value)];
 
-		setFill();
+		setFill(from, to);
 		setToggle(to);
 
 		fromValue <= toValue
@@ -44,19 +106,28 @@ const UxSlier = (props, ref) => {
 			: setToValue(fromValue);
 	};
 
-	const setFill = () => {
-		const distance = sliderRef.current.offsetWidth;
-		const thumb = thumbSize / distance * 100;
-		const left = fromValue / props.max * (100 - thumb);
-		const width = toValue / props.max * (100 - thumb) - left;
+	const setFill = (from, to) => {
+		const distance = to.max - to.min;
+		const fromValue = from.value - to.min;
+		const toValue = to.value - to.min;
+		const slider = 'rgb(238, 238, 238)';
+		const range = 'rgb(217, 13, 88)';
 
-		setStyle({ left, width });
+		setStyle({ background: `linear-gradient(
+			to right,
+			${slider} 0%,
+			${slider} ${fromValue / distance * 100}%,
+			${range} ${fromValue / distance * 100}%,
+			${range} ${toValue / distance * 100}%,
+			${slider} ${toValue / distance * 100}%,
+			${slider} 100%)`
+		});
 	};
 
 	const setToggle = (to) => {
 		Number(to.value) <= 0
-			? setZIndex(2)
-			: setZIndex(0);
+			? setIsToggle(true)
+			: setIsToggle(false);
 	};
 
 	const handlerInput = (role) => {
@@ -69,70 +140,94 @@ const UxSlier = (props, ref) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange(fromValue, toValue);
-	}, [fromValue, toValue]);
+		props.onChange && props.onChange({
+			fromValue,
+			toValue,
+			isToggle,
+		});
+	}, [fromValue, toValue, isToggle]);
 
 	useEffect(() => {
-		if (fromRef.current && toRef.current) {
-			setFill();
+			setFill(fromRef.current, toRef.current);
 			setToggle(toRef.current);
-		}
 	}, []);
 
 	return (
-		<div
-			ref={sliderRef}
-			className={caseClassName}
-		>
-			<div className={`${baseClassName}-base`}>
-				<label>
-					<input
-						id="fromSlider"
-						ref={fromRef}
-						type="range"
-						className={`${baseClassName}-input from`}
-						value={fromValue}
-						step={props.step}
-						min={props.min}
-						max={props.max}
-						onInput={() => handlerInput('from')}
-					/>
-				</label>
-				<label>
-					<input
-						id="toSlider"
-						ref={toRef}
-						type="range"
-						className={`${baseClassName}-input to`}
-						style={{ zIndex }}
-						value={toValue}
-						step={props.step}
-						min={props.min}
-						max={props.max}
-						onInput={() => handlerInput('to')}
-					/>
-				</label>
-			</div>
-			<div className={`${baseClassName}-rail`}>
-				<span
-					className={`${baseClassName}-min`}
-					style={{ left: `${style.left}%` }}
+		<div className={`${baseClassName}-base`}>
+			<label className={`${baseClassName}-label`}>
+				<input
+					ref={fromRef}
+					type="range"
+					className={`${baseClassName}-input from`}
+					value={fromValue}
+					step={props.step}
+					min={props.min}
+					max={props.max}
+					onInput={() => handlerInput('from')}
 				/>
-				<span
-					className={`${baseClassName}-max`}
-					style={{ left: `${style.left + style.width}%` }}
+			</label>
+			<label className={`${baseClassName}-label`}>
+				<input
+					ref={toRef}
+					type="range"
+					className={`${baseClassName}-input to`}
+					style={style}
+					value={toValue}
+					step={props.step}
+					min={props.min}
+					max={props.max}
+					onInput={() => handlerInput('to')}
 				/>
-				<span
-					ref={fillRef}
-					className={`${baseClassName}-fill`}
-					style={{
-						left: `${style.left}%`,
-						width: `${style.width}%`,
-					}}
-				/>
-			</div>
+			</label>
 		</div>
 	)
 };
 
-export default React.forwardRef(UxSlier);
+/**
+ * <UxSlider>
+ * [props]
+ * type(String)
+ * min(Number)
+ * max(Number)
+ * step(Number)
+ *
+ * [event]
+ * onChange(Func)
+ */
+
+const UxSlier = ({ ref, ...props }) => {
+	const baseClassName = 'ux-slider';
+	const caseClassName = classnames(baseClassName, props.className);
+	const [toggle, setToggle] = useState();
+	const sliderRef = useRef();
+
+	const handleChange = (data) => {
+		props.type === 'range' && setToggle(data.isToggle);
+		props.onChange && props.onChange(data);
+	};
+
+	return (
+		<div
+			ref={sliderRef}
+			className={classnames(caseClassName, {toggle})}
+			onChange={handleChange}
+		>
+			{
+				(!props.type || props.type === 'single') &&
+				<UxSlierSingle
+					{...props}
+					onChange={handleChange}
+				/>
+			}
+			{
+				props.type === 'range' &&
+				<UxSlierRange
+					{...props}
+					onChange={handleChange}
+				/>
+			}
+		</div>
+	)
+};
+
+export default UxSlier;

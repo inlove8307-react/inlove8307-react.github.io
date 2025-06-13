@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxInfo = (props, ref) => {
+const UxInfo = ({ ref, ...props }) => {
 	const baseClassName = 'ux-info';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxInfo = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxInfo);
+export default UxInfo;

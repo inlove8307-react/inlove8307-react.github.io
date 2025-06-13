@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxPagination = (props, ref) => {
+const UxPagination = ({ ref, ...props }) => {
 	const baseClassName = 'ux-pagination';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxPagination = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxPagination);
+export default UxPagination;

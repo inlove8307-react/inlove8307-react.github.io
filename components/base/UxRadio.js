@@ -11,7 +11,7 @@ import UxIcon from '@/components/base/UxIcon';
  *
  */
 
-const UxRadio = (props, ref) => {
+const UxRadio = ({ ref, ...props }) => {
 	const baseClassName = 'ux-radio';
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
@@ -58,4 +58,4 @@ const UxRadio = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxRadio);
+export default UxRadio;

@@ -79,7 +79,7 @@ const UxCollapseDetails = (props) => {
  *
  */
 
-const UxCollapse = (props, ref) => {
+const UxCollapse = ({ ref, ...props }) => {
 	const baseClassName = 'ux-collapse';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [expanded, setExpanded] = useState(props.expanded || false);
@@ -119,4 +119,4 @@ const UxCollapse = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCollapse);
+export default UxCollapse;

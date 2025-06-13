@@ -11,7 +11,7 @@ import UxIcon from '@/components/base/UxIcon';
  *
  */
 
-const UxToggle = (props, ref) => {
+const UxToggle = ({ ref, ...props }) => {
 	const baseClassName = 'ux-toggle';
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
@@ -54,4 +54,4 @@ const UxToggle = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxToggle);
+export default UxToggle;

@@ -65,7 +65,7 @@ const UxMaskingMask = (props) => {
  *
  */
 
-const UxMasking = (props, ref) => {
+const UxMasking = ({ ref, ...props }) => {
 	const baseClassName = 'ux-masking';
 	const caseClassName = classnames(baseClassName, props.className, {
 		readonly: props.readonly,
@@ -108,4 +108,4 @@ const UxMasking = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxMasking);
+export default UxMasking;

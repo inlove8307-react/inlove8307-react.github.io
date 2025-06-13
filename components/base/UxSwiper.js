@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxSwiper = (props, ref) => {
+const UxSwiper = ({ ref, ...props }) => {
 	const baseClassName = 'ux-swiper';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxSwiper = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxSwiper);
+export default UxSwiper;

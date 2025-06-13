@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { getArray } from '@/utils/core';
 import classnames from 'classnames';
 
-const UxTab = (props, ref) => {
+const UxTab = ({ ref, ...props }) => {
 	const originClassName = "ux-tab";
 	const mixinClassName = classnames(originClassName, props.className, {
 		linear: props.linear,
@@ -103,4 +103,4 @@ const UxTab = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxTab);
+export default UxTab;

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxFieldset = (props, ref) => {
+const UxFieldset = ({ ref, ...props }) => {
 	const baseClassName = 'ux-fieldset';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxFieldset = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxFieldset);
+export default UxFieldset;

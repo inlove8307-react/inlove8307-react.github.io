@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
-const UxTitle = (props, ref) => {
+const UxTitle = ({ ref, ...props }) => {
 	const originClassName = 'ux-subject';
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxTitle = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxTitle);
+export default UxTitle;

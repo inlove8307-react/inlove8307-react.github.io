@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxLink = (props, ref) => {
+const UxLink = ({ ref, ...props }) => {
 	const baseClassName = 'ux-link';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +12,4 @@ const UxLink = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxLink);
+export default UxLink;

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxAlert = (props, ref) => {
+const UxAlert = ({ ref, ...props }) => {
 	const baseClassName = 'ux-alert';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -15,4 +15,4 @@ const UxAlert = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxAlert);
+export default UxAlert;

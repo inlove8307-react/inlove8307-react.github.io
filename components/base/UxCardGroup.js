@@ -10,7 +10,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxCardGroup = (props, ref) => {
+const UxCardGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-card-group';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [selected, setSelected] = useState(props.selected || null);
@@ -48,4 +48,4 @@ const UxCardGroup = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(UxCardGroup);
+export default UxCardGroup;

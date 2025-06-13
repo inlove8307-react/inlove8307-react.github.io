@@ -9,7 +9,7 @@ import classnames from 'classnames';
  *
  */
 
-const UxButton = (props, ref) => {
+const UxButton = ({ ref, ...props }) => {
 	const baseClassName = 'ux-button';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -41,4 +41,4 @@ const UxButton = (props, ref) => {
 	)
 };
 
-export default React.forwardRef(UxButton);
+export default UxButton;
