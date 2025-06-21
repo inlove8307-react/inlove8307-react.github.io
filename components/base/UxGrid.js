@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxTab = ({ ref, ...props }) => {
-	const baseClassName = 'ux-tab-panel';
+const UxGroup = ({ ref, ...props }) => {
+	const baseClassName = 'ux-grid';
 	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
@@ -12,4 +12,4 @@ const UxTab = ({ ref, ...props }) => {
 	)
 };
 
-export default UxTab;
+export default UxGroup;

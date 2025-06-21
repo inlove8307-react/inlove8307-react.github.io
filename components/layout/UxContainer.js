@@ -6,9 +6,9 @@ const UxContainer = ({ ref, ...props }) => {
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<article className={mixinClassName}>
+		<div className={mixinClassName}>
 			{props.children}
-		</article>
+		</div>
 	)
 };
 

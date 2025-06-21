@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { isDesktop } from "react-device-detect";
 import UxHeader from "@/components/layout/UxHeader";
+import UxMain from "@/components/layout/UxMain";
 import UxFooter from "@/components/layout/UxFooter";
 
 

@@ -31,7 +31,7 @@ import UxToggleGroup from "@/components/base/UxToggleGroup";
 import UxCard from "@/components/base/UxCard";
 import UxCardGroup from "@/components/base/UxCardGroup";
 import UxTab from "@/components/base/UxTab";
-import UxTabPanel from "@/components/base/UxTabPanel";
+import UxTabGroup from "@/components/base/UxTabGroup";
 import UxSlider from "@/components/base/UxSlider";
 
 export default function Sample() {
@@ -44,109 +44,16 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4">
 						<UxSubject>
-							<h4>UxSlider</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxSlider Single</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSlider
-										min="0"
-										max="100"
-									/>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxSlider Range</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSlider
-										type="range"
-										min="0"
-										max="100"
-									/>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxDivider />
-
-					<UxArticle className="h4">
-						<UxSubject>
-							<h4>UxTab</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxTab - Default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxTab>
-										<div data-label="label01">
-											content01
-										</div>
-										<div data-label="label02">
-											content02
-										</div>
-										<div data-label="label03">
-											content03
-										</div>
-									</UxTab>
-
-									<UxDivider className="linear" />
-
-									<UxTab>
-										<UxTabPanel>
-											<div data-role="summary">
-												tab01
-											</div>
-											<div data-role="details">
-												content01
-											</div>
-										</UxTabPanel>
-										<UxTabPanel>
-											<div data-role="summary">
-												tab01
-											</div>
-											<div data-role="details">
-												content01
-											</div>
-										</UxTabPanel>
-										<UxTabPanel>
-											<div data-role="summary">
-												tab01
-											</div>
-											<div data-role="details">
-												content01
-											</div>
-										</UxTabPanel>
-									</UxTab>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxDivider />
-
-					<UxArticle className="h4">
-						<UxSubject>
 							<h4>UxButton</h4>
 						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Default</h5>
+									<h5>UxButton - Outline</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton>
-										<span className="label">label</span>
+									<UxButton className="outline h3">
+										<span className="text">label</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -155,11 +62,43 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Disabled</h5>
+									<h5>UxButton - Outline Disabled</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton disabled>
-										<span className="label">label</span>
+									<UxButton
+										className="outline h3"
+										disabled
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Contain</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton className="contain h3">
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Contain Disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="contain h3"
+										disabled
+									>
+										<span className="text">label</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -171,8 +110,8 @@ export default function Sample() {
 									<h5>UxButton - Icon Right</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton>
-										<span className="label">icon</span>
+									<UxButton className="outline h3">
+										<span className="text">icon</span>
 										<UxIcon className="i022" />
 									</UxButton>
 								</UxContent>
@@ -185,9 +124,9 @@ export default function Sample() {
 									<h5>UxButton - Icon Left</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton>
+									<UxButton className="outline h3">
 										<UxIcon className="i022" />
-										<span className="label">icon</span>
+										<span className="text">icon</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -932,11 +871,6 @@ export default function Sample() {
 										>
 											Toggle 02
 										</UxToggle>
-										<UxToggle
-											value="value03"
-										>
-											Toggle 03
-										</UxToggle>
 									</UxToggleGroup>
 								</UxContent>
 							</UxArticle>
@@ -948,7 +882,7 @@ export default function Sample() {
 									<h5>UxToggle - Selected</h5>
 								</UxSubject>
 								<UxContent>
-									<UxToggleGroup selected="value03">
+									<UxToggleGroup selected="value01">
 										<UxToggle
 											value="value01"
 										>
@@ -958,11 +892,6 @@ export default function Sample() {
 											value="value02"
 										>
 											Toggle 02
-										</UxToggle>
-										<UxToggle
-											value="value03"
-										>
-											Toggle 03
 										</UxToggle>
 									</UxToggleGroup>
 								</UxContent>
@@ -1007,6 +936,50 @@ export default function Sample() {
 							<UxArticle className="h5">
 								<UxSubject>
 									<h5>UxToggle - Col3</h5>
+								</UxSubject>
+								<UxContent>
+									<UxToggleGroup
+										className="col3"
+									>
+										<UxToggle
+											value="value01"
+										>
+											Toggle 01
+										</UxToggle>
+										<UxToggle
+											value="value02"
+										>
+											Toggle 02
+										</UxToggle>
+										<UxToggle
+											value="value03"
+										>
+											Toggle 03
+										</UxToggle>
+										<UxToggle
+											value="value04"
+										>
+											Toggle 04
+										</UxToggle>
+										<UxToggle
+											value="value05"
+										>
+											Toggle 05
+										</UxToggle>
+										<UxToggle
+											value="value06"
+										>
+											Toggle 06
+										</UxToggle>
+									</UxToggleGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxToggle - Col4</h5>
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup
@@ -1249,6 +1222,237 @@ export default function Sample() {
 											<div data-role="details">details</div>
 										</UxCollapse>
 									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxTab</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTabGroup>
+										<UxTab>
+											<div data-role="summary">
+												summary01
+											</div>
+											<div data-role="details">
+												details01
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary02
+											</div>
+											<div data-role="details">
+												details02
+											</div>
+										</UxTab>
+									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Linear</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTabGroup linear>
+										<UxTab>
+											<div data-role="summary">
+												summary01
+											</div>
+											<div data-role="details">
+												details01
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary02
+											</div>
+											<div data-role="details">
+												details02
+											</div>
+										</UxTab>
+									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Scroll</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTabGroup
+										linear
+										scroll
+									>
+										<UxTab>
+											<div data-role="summary">
+												summary01
+											</div>
+											<div data-role="details">
+												details01
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary02
+											</div>
+											<div data-role="details">
+												details02
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary03
+											</div>
+											<div data-role="details">
+												details03
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary04
+											</div>
+											<div data-role="details">
+												details04
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary05
+											</div>
+											<div data-role="details">
+												details05
+											</div>
+										</UxTab>
+									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Full</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTabGroup
+										className="full"
+										linear
+									>
+										<UxTab>
+											<div data-role="summary">
+												summary01
+											</div>
+											<div data-role="details">
+												details01
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary02
+											</div>
+											<div data-role="details">
+												details02
+											</div>
+										</UxTab>
+									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTab - Block</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTabGroup
+										className="full block"
+										linear
+									>
+										<UxTab>
+											<div data-role="summary">
+												summary01
+											</div>
+											<div data-role="details">
+												details01
+											</div>
+										</UxTab>
+										<UxTab>
+											<div data-role="summary">
+												summary02
+											</div>
+											<div data-role="details">
+												details02
+											</div>
+										</UxTab>
+									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4">
+						<UxSubject>
+							<h4>UxSlider</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSlider Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSlider
+										min="0"
+										max="100"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSlider Step</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSlider
+										min="0"
+										max="100"
+										step="10"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSlider Range</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSlider
+										type="range"
+										min="0"
+										max="100"
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

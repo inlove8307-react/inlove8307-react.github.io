@@ -13,7 +13,7 @@ const UxHeader = ({ ref, ...props }) => {
 		<header className={mixinClassName}>
 			<UxSection>
 				<UxArticle>
-					<UxContent>
+					<UxContent className="row">
 						<Link href="/">HOME</Link>
 						<Link href="/view/guide">GUIDE</Link>
 						<Link href="/view/icons">ICONS</Link>
