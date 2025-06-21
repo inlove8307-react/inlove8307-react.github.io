@@ -31,7 +31,7 @@ const UxTab = ({ ref, ...props }) => {
 		setTimeout(() => {
 			linearRef.current.style.width = `${tabsRef.current[index].clientWidth}px`;
 			linearRef.current.style.left = `${tabsRef.current[index].offsetLeft}px`;
-		}, 1);
+		}, 10);
 	};
 
 	const setScroll = (index) => {
