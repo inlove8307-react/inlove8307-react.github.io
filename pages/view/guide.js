@@ -33,16 +33,20 @@ import UxCardGroup from "@/components/base/UxCardGroup";
 import UxTab from "@/components/base/UxTab";
 import UxTabGroup from "@/components/base/UxTabGroup";
 import UxSlider from "@/components/base/UxSlider";
+import UxGrid from "@/components/base/UxGrid";
+import UxList from "@/components/base/UxList";
 
 export default function Sample() {
 	return (
 		<UxSection>
 			<UxArticle className="h3">
-				<UxSubject>
-					<h3>Sample</h3>
+				<UxSubject className="space">
+					<h3>
+						<strong>Guide</strong>
+					</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
 						</UxSubject>
@@ -53,22 +57,6 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxButton className="outline h3">
-										<span className="text">label</span>
-									</UxButton>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxButton - Outline Disabled</h5>
-								</UxSubject>
-								<UxContent>
-									<UxButton
-										className="outline h3"
-										disabled
-									>
 										<span className="text">label</span>
 									</UxButton>
 								</UxContent>
@@ -91,13 +79,10 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Contain Disabled</h5>
+									<h5>UxButton - Primary</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton
-										className="contain h3"
-										disabled
-									>
+									<UxButton className="primary h3">
 										<span className="text">label</span>
 									</UxButton>
 								</UxContent>
@@ -107,27 +92,17 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Icon Right</h5>
+									<h5>UxButton - Grid</h5>
 								</UxSubject>
 								<UxContent>
-									<UxButton className="outline h3">
-										<span className="text">icon</span>
-										<UxIcon className="i022" />
-									</UxButton>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxButton - Icon Left</h5>
-								</UxSubject>
-								<UxContent>
-									<UxButton className="outline h3">
-										<UxIcon className="i022" />
-										<span className="text">icon</span>
-									</UxButton>
+									<UxGrid className="gap8">
+										<UxButton className="contain h3 grow small">
+											<span className="text">cancel</span>
+										</UxButton>
+										<UxButton className="primary h3 grow full">
+											<span className="text">submit</span>
+										</UxButton>
+									</UxGrid>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
@@ -135,7 +110,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxInput</h4>
 						</UxSubject>
@@ -278,7 +253,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxPassword</h4>
 						</UxSubject>
@@ -379,7 +354,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxPhone</h4>
 						</UxSubject>
@@ -470,7 +445,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxRrn (주민등록번호)</h4>
 						</UxSubject>
@@ -559,7 +534,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxLrn (운전면허번호)</h4>
 						</UxSubject>
@@ -651,7 +626,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxBrn (사업자등록번호)</h4>
 						</UxSubject>
@@ -739,7 +714,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxCheckbox</h4>
 						</UxSubject>
@@ -790,7 +765,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxRadio</h4>
 						</UxSubject>
@@ -850,7 +825,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxToggle</h4>
 						</UxSubject>
@@ -974,66 +949,12 @@ export default function Sample() {
 									</UxToggleGroup>
 								</UxContent>
 							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxToggle - Col4</h5>
-								</UxSubject>
-								<UxContent>
-									<UxToggleGroup
-										className="col4"
-									>
-										<UxToggle
-											value="value01"
-										>
-											Toggle 01
-										</UxToggle>
-										<UxToggle
-											value="value02"
-										>
-											Toggle 02
-										</UxToggle>
-										<UxToggle
-											value="value03"
-										>
-											Toggle 03
-										</UxToggle>
-										<UxToggle
-											value="value04"
-										>
-											Toggle 04
-										</UxToggle>
-										<UxToggle
-											value="value05"
-										>
-											Toggle 05
-										</UxToggle>
-										<UxToggle
-											value="value06"
-										>
-											Toggle 06
-										</UxToggle>
-										<UxToggle
-											value="value07"
-										>
-											Toggle 07
-										</UxToggle>
-										<UxToggle
-											value="value08"
-										>
-											Toggle 08
-										</UxToggle>
-									</UxToggleGroup>
-								</UxContent>
-							</UxArticle>
 						</UxContent>
 					</UxArticle>
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxCard</h4>
 						</UxSubject>
@@ -1058,17 +979,23 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCard - Column</h5>
+									<h5>UxCard - col2</h5>
 								</UxSubject>
 								<UxContent>
 									<UxCardGroup
-										className="column"
+										className="col2"
 									>
 										<UxCard>
 											CARD 01
 										</UxCard>
 										<UxCard>
 											CARD 02
+										</UxCard>
+										<UxCard>
+											CARD 03
+										</UxCard>
+										<UxCard>
+											CARD 04
 										</UxCard>
 									</UxCardGroup>
 								</UxContent>
@@ -1128,7 +1055,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxCollapse</h4>
 						</UxSubject>
@@ -1229,7 +1156,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxTab</h4>
 						</UxSubject>
@@ -1409,7 +1336,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxSlider</h4>
 						</UxSubject>
@@ -1460,7 +1387,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxCalendar</h4>
 						</UxSubject>
@@ -1513,7 +1440,7 @@ export default function Sample() {
 
 					<UxDivider />
 
-					<UxArticle className="h4">
+					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4></h4>
 						</UxSubject>

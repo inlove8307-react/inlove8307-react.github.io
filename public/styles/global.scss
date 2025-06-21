@@ -6,10 +6,21 @@ body {}
 
 
 
-/* Heading Size */
+/* Heading */
 h3, h4, h5, h6 {font-weight: 600;}
 h3 strong, h4 strong, h5 strong, h6 strong {font-weight: 800;}
 h3 {font-size: 2rem;}
 h4 {font-size: 1.8rem;}
 h5 {font-size: 1.6rem;}
 h6 {font-size: 1.4rem;}
+
+
+
+/* Bullet */
+.bl {display: flex; gap: .6rem;}
+.bl.star::before {content: '⁕';}
+.bl.dash::before {content: '-';}
+.bl.dot::before {content: '•';}
+.bl.mark::before {content: '※';}
+.bl.number {counter-increment: number;}
+.bl.number::before {content: counter(number)'.';}

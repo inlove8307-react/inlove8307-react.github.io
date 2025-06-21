@@ -73,14 +73,13 @@ const UxCard = ({ ref, ...props }) => {
 					/>
 				</label>
 			}
-			<div
-				role="button"
-				tabIndex="0"
+			<button
+				type="button"
 				className={`${baseClassName}-base`}
 				onClick={handleClick}
 			>
 				{props.children}
-			</div>
+			</button>
 		</div>
 	);
 };

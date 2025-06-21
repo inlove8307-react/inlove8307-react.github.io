@@ -1,6 +1,6 @@
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
-import UxTitle from "@/components/layout/UxSubject";
+import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 
 import UxIcon from "@/components/base/UxIcon";
@@ -34,9 +34,11 @@ export default function Page() {
 	return (
 		<UxSection>
 			<UxArticle className="h3">
-				<UxTitle>
-					<h3>ICON</h3>
-				</UxTitle>
+				<UxSubject className="space">
+					<h3>
+						<strong>ICONS</strong>
+					</h3>
+				</UxSubject>
 				<UxContent>
 					<ul
 						style={{

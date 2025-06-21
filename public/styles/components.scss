@@ -1,10 +1,7 @@
 @charset "utf-8";
 
-/* GLOBAL VARIABLES :ROOT */
+/* GLOBAL VARIABLES */
 :root {
-	/* HEADER HEIGHT */
-	--header-height: 6rem;
-
 	/* SPACE */
 	--space: 2rem;
 	--space-minus: calc(var(--space) * -1);
@@ -26,6 +23,7 @@
 	--shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
 
 	/* HEIGHT */
+	--height-header: 6rem;
 	--height-form: 4.8rem;
 	--height-submit: 2.8rem;
 
@@ -46,16 +44,20 @@
 
 
 
+/* <UxContainer> */
+.ux-container {padding-top: var(--height-header);}
+
+
+
 /* <UxHeader> */
-.ux-header {flex-grow: 0; flex-shrink: 0; position: fixed; top: 0; left: 0; right: 0; height: var(--header-height); border-bottom: .1rem solid var(--light1); background-color: var(--light0); box-shadow: var(--shadow);}
-.ux-header .ux-section {justify-content: center; height: 100%;}
-.ux-header .ux-content {display: flex; gap: .8rem;}
+.ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--height-header); border-bottom: .1rem solid var(--light1); background-color: var(--light0); box-shadow: var(--shadow);}
+/* <UxHeader> z-index */
 .ux-header {z-index: 10;}
 
 
 
 /* <UxMain> */
-.ux-main {margin-top: var(--header-height);}
+.ux-main {width: 100%;}
 
 
 
@@ -65,19 +67,20 @@
 
 
 /* <UxSection> */
-.ux-section {display: flex; flex-direction: column;}
-html.desktop .ux-section {align-items: center;}
+.ux-section {display: flex; flex-direction: column; width: 100%;}
+/* <UxSection> Header */
+.ux-header .ux-section {justify-content: center; height: 100%;}
+/* <UxSection> Main */
+.ux-main .ux-section {padding: 3.2rem 0;}
+/* <UxSection> Desktop */
+html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
 
 
 
 /* <UxArticle> */
-.ux-article {display: flex; flex-direction: column; gap: .8rem;}
-/* <UxArticle> Desktop */
-html.desktop .ux-header .ux-section > .ux-article {padding: 0 var(--space); width: 37.5rem;}
-html.desktop .ux-main .ux-section > .ux-article {margin: 3.2rem 0; padding: 3.2rem var(--space); width: 37.5rem; border-radius: 1.6rem; box-shadow: inset 0 0 0 .1rem var(--light1), var(--shadow);}
-/* <UxArticle> Mobile */
-html.mobile .ux-header .ux-section > .ux-article {padding: 3.2rem var(--space);}
-html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
+.ux-article {display: flex; flex-direction: column; gap: .8rem; width: 100%;}
+/* <UxArticle> Space */
+.ux-article.space {padding-left: var(--space); padding-right: var(--space);}
 /* <UxArticle> Gap */
 .ux-article.h3 {gap: 3.2rem;}
 .ux-article.h4 {gap: 2.4rem;}
@@ -87,50 +90,126 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 
 
 /* <UxSubject> */
-.ux-subject {display: flex; flex-direction: column;}
+.ux-subject {display: flex; flex-direction: column; width: 100%;}
+/* <UxSubject> Space */
+.ux-subject.space {padding-left: var(--space); padding-right: var(--space);}
+/* <UxSubject> Row */
 .ux-subject.row {flex-direction: row;}
+.ux-subject.row.center {justify-content: center;}
+.ux-subject.row.left {justify-content: flex-start;}
+.ux-subject.row.right {justify-content: flex-end;}
+/* <UxSubject> Column */
 .ux-subject.column {flex-direction: column;}
+.ux-subject.column.center {flex-direction: center;}
+.ux-subject.column.left {align-items: flex-start;}
+.ux-subject.column.right {align-items: flex-end;}
+/* <UxSubject> Gap */
+.ux-article.h3 > .ux-subject {gap: 3.2rem;}
+.ux-article.h4 > .ux-subject {gap: 2.4rem;}
+.ux-article.h5 > .ux-subject {gap: 1.6rem;}
+.ux-article.h6 > .ux-subject {gap: 1.2rem;}
 
 
 
 /* <UxContent> */
-.ux-content {display: flex; flex-direction: column;}
+.ux-content {display: flex; flex-direction: column; width: 100%;}
+/* <UxContent> Space */
+.ux-content.space {padding-left: var(--space); padding-right: var(--space);}
+/* <UxContent> Row */
 .ux-content.row {flex-direction: row;}
+.ux-content.row.center {justify-content: center;}
+.ux-content.row.left {justify-content: flex-start;}
+.ux-content.row.right {justify-content: flex-end;}
+/* <UxContent> Column */
 .ux-content.column {flex-direction: column;}
+.ux-content.column.center {flex-direction: center;}
+.ux-content.column.left {align-items: flex-start;}
+.ux-content.column.right {align-items: flex-end;}
 /* <UxContent> Gap */
-.ux-article.h3 .ux-content {gap: 3.2rem;}
-.ux-article.h4 .ux-content {gap: 2.4rem;}
-.ux-article.h5 .ux-content {gap: 1.6rem;}
-.ux-article.h6 .ux-content {gap: 1.2rem;}
+.ux-article.h3 > .ux-content {gap: 3.2rem;}
+.ux-article.h4 > .ux-content {gap: 2.4rem;}
+.ux-article.h5 > .ux-content {gap: 1.6rem;}
+.ux-article.h6 > .ux-content {gap: 1.2rem;}
 
 
 
 /* <UxDivider> */
-.ux-divider {display: block; margin: 0 var(--space-minus); border: 0; height: .8rem; background-color: var(--light1);}
-.ux-divider.linear {margin: 0; height: .1rem;}
+.ux-divider {display: block; margin: 0; width: 100%; height: .8rem; border: 0; background-color: var(--light1);}
+.ux-divider.linear {height: .1rem;}
+.ux-divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to right, var(--light2), var(--light2) .1rem, var(--light0) .1rem, var(--light0) .4rem);}
+
+
+
+/* <UxGrid> */
+.ux-grid {display: flex; flex-wrap: wrap; gap: var(--gap);}
+/* <UxGrid> Row */
+.ux-grid.row {flex-direction: row;}
+.ux-grid.row.center {justify-content: center;}
+.ux-grid.row.left {justify-content: flex-start;}
+.ux-grid.row.right {justify-content: flex-end;}
+/* <UxGrid> Column */
+.ux-grid.column {flex-direction: column;}
+.ux-grid.column.center {align-items: center;}
+.ux-grid.column.left {align-items: flex-start;}
+.ux-grid.column.right {align-items: flex-end;}
+/* <UxGrid> Gap */
+.ux-grid.gap16 {--gap: 1.6rem;}
+.ux-grid.gap12 {--gap: 1.2rem;}
+.ux-grid.gap8 {--gap: .8rem;}
+.ux-grid.gap4 {--gap: .4rem;}
+/* <UxGrid> Col */
+.ux-grid.col1 {--col: 1;}
+.ux-grid.col2 {--col: 2;}
+.ux-grid.col3 {--col: 3;}
+.ux-grid.col4 {--col: 4;}
+.ux-grid[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+/* <UxGrid> Grow */
+.ux-grid > .grow {flex-shrink: 0;}
+.ux-grid > .grow.auto {flex-grow: 0;}
+.ux-grid > .grow.full {flex-grow: 1;}
+.ux-grid > .grow.small {flex-basis: calc(100% / 3); width: calc(100% / 3);}
+
+
+
+/* <UxList> */
+.ux-list {--gap: 1.2rem;}
+.ux-list {display: flex; flex-direction: column; gap: var(--gap);}
+/* <UxList> Gap */
+.ux-list.gap16 {--gap: 1.6rem;}
+.ux-list.gap12 {--gap: 1.2rem;}
+.ux-list.gap8 {--gap: .8rem;}
+.ux-list.gap4 {--gap: .4rem;}
+/* <UxList> Outline */
+.ux-list.outline {padding: 1.6rem; border-radius: var(--radius-card); box-shadow: var(--inset);}
+/* <UxList> Contain */
+.ux-list.contain {padding: 1.6rem; border-radius: var(--radius-card); box-shadow: initial; background-color: var(--light1);}
+/* <UxList> Dl */
+.ux-list.dl dl {display: flex;}
+.ux-list.dl dt {margin-right: auto;}
+.ux-list.dl dd {margin-left: auto;}
 
 
 
 /* <UxButton> */
-.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; padding: 0 1.2rem; border-radius: var(--radius-form); transform: translateZ(0);}
-.ux-button-label {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; border-radius: var(--radius-form); transform: translateZ(0);}
+/* <UxButton> Disabled */
+.ux-button.disabled,
+.ux-button:disabled {opacity: 0.5; cursor: default; pointer-events: none;}
 /* <UxButton> Size */
 .ux-button.h3 {height: 4.8rem;}
 .ux-button.h4 {height: 4.4rem;}
 .ux-button.h5 {height: 4rem;}
 .ux-button.h6 {height: 3.6rem;}
 /* <UxButton> Outline */
-.ux-button.outline {box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
-.ux-button.outline.disabled,
-.ux-button.outline:disabled {opacity: 0.5; cursor: default; pointer-events: none;}
+.ux-button.outline {padding: 0 1.2rem; box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
 /* <UxButton> Contain */
-.ux-button.contain {background-color: var(--color1); color: var(--light0);}
-.ux-button.contain.disabled,
-.ux-button.contain:disabled {opacity: 0.5; cursor: default; pointer-events: none;}
-/* <UxButton> Chip */
-.ux-button.chip {width: initial; height: 2.8rem; border-radius: 1.4rem; background-color: var(--color1); color: var(--light0);}
-.ux-button.chip.disabled,
-.ux-button.chip:disabled {opacity: 0.5; cursor: default; pointer-events: none;}
+.ux-button.contain {padding: 0 1.2rem; background-color: var(--light1);}
+/* <UxButton> Primary */
+.ux-button.primary {padding: 0 1.2rem; background-color: var(--color1); color: var(--light0);}
+/* <UxButton> Secondary */
+.ux-button.secondary {}
+/* <UxButton> Tertiary */
+.ux-button.tertiary {}
 
 
 
@@ -300,15 +379,17 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 
 
 /* <UxToggleGroup> */
-.ux-toggle-group {display: flex; flex-wrap: wrap; gap: .1rem 0; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
-.ux-toggle-group .ux-toggle {position: relative; flex-grow: 1; flex-shrink: 0; flex-basis: 0;}
+.ux-toggle-group {--col: 2;}
+.ux-toggle-group {display: flex; flex-wrap: wrap; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
+.ux-toggle-group .ux-toggle {position: relative; flex-shrink: 0; width: calc(100% / var(--col));}
 .ux-toggle-group .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height-form) / 3); background-color: var(--light1); transform: translateY(-50%);}
 .ux-toggle-group .ux-toggle.checked + .ux-toggle::before {display: none;}
 /* <UxToggleGroup> Col */
-.ux-toggle-group[class*=col] .ux-toggle {flex-grow: 0;}
-.ux-toggle-group.col2 .ux-toggle {flex-basis: calc(100% / 2); width: calc(100% / 2);}
-.ux-toggle-group.col3 .ux-toggle {flex-basis: calc(100% / 3); width: calc(100% / 3);}
-.ux-toggle-group.col4 .ux-toggle {flex-basis: calc(100% / 4); width: calc(100% / 4);}
+.ux-toggle-group.col1 {--col: 1;}
+.ux-toggle-group.col2 {--col: 2;}
+.ux-toggle-group.col3 {--col: 3;}
+.ux-toggle-group.col4 {--col: 4;}
+.ux-toggle-group.col1 .ux-toggle:nth-child(1n + 1)::before,
 .ux-toggle-group.col2 .ux-toggle:nth-child(2n + 1)::before,
 .ux-toggle-group.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-toggle-group.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
@@ -317,7 +398,7 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 
 /* <UxCard> */
 .ux-card {position: relative; border-radius: var(--radius-form);}
-.ux-card-base {display: flex; padding: 1.2rem; border-radius: var(--radius-form); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-card-base {display: flex; padding: 1.2rem; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); transition: var(--inset-transition);}
 .ux-card-label {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
 .ux-card-input[type=radio],
 .ux-card-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
@@ -328,10 +409,19 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 
 
 /* <UxCardGroup> */
-.ux-card-group {display: flex; flex-direction: column; gap: .8rem .8rem;}
-/* <UxCardGroup> Column */
-.ux-card-group.column {flex-direction: row;}
-.ux-card-group.column .ux-card {flex-grow: 1; flex-shrink: 0; flex-basis: 0;}
+.ux-card-group {--col: 1; --gap: .8rem;}
+.ux-card-group {display: flex; flex-wrap: wrap; gap: var(--gap);}
+.ux-card-group .ux-card {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+/* <UxCardGroup> Gap */
+.ux-card-group.gap16 {--gap: 1.6rem;}
+.ux-card-group.gap12 {--gap: 1.2rem;}
+.ux-card-group.gap8 {--gap: .8rem;}
+.ux-card-group.gap4 {--gap: .4rem;}
+/* <UxCardGroup> Col */
+.ux-card-group.col1 {--col: 1;}
+.ux-card-group.col2 {--col: 2;}
+.ux-card-group.col3 {--col: 3;}
+.ux-card-group.col4 {--col: 4;}
 
 
 
@@ -355,8 +445,8 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 .ux-tab {width: 100%; background-color: var(--light0)}
 .ux-tab .ux-tab-base {overflow: hidden}
 .ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative;}
-.ux-tab .ux-tab-list {display: flex; position: relative; z-index: 1; box-shadow: inset 0 -.1rem 0 var(--light1);}
-.ux-tab .ux-tab-button {flex-shrink: 0; position: relative; z-index: 1; padding: .8rem 1.6rem; box-shadow: inset 0 -.1rem 0 transparent; color: var(--dark3); transition: box-shadow .1s ease-in-out;}
+.ux-tab .ux-tab-list {display: flex; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1);}
+.ux-tab .ux-tab-button {flex-shrink: 0; position: relative; padding: .8rem 1.6rem; box-shadow: inset 0 -.1rem 0 transparent; color: var(--dark3); transition: box-shadow .1s ease-in-out;}
 .ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--color1); color: var(--color1);}
 .ux-tab .ux-tab-panel {display: none; padding: 1.2rem 1.6rem;}
 .ux-tab .ux-tab-panel.active {display: block}
@@ -372,6 +462,9 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 .ux-tab.block .ux-tab-list {border-radius: 1.2rem; background-color: var(--light1); box-shadow: initial;}
 .ux-tab.block .ux-tab-linear {display: flex; padding: .4rem; height: 100%; background-color: transparent; box-shadow: initial;}
 .ux-tab.block .ux-tab-linear::after {content: ''; width: 100%; height: 100%; border-radius: .8rem; background-color: var(--light0);}
+/* <UxTab> z-index */
+.ux-tab .ux-tab-list {z-index: 1;}
+.ux-tab .ux-tab-button {z-index: 1;}
 
 
 
@@ -417,11 +510,13 @@ html.mobile .ux-main .ux-section > .ux-article {padding: 3.2rem var(--space);}
 
 /* <UxSlider> */
 .ux-slider {--range-height: .6rem; --range-radius: calc(var(--range-height) / 2); --thumb-width: 2.4rem; --thumb-radius: calc(var(--thumb-width) / 2); display: flex; flex-direction: column; position: relative; width: 100%; height: var(--thumb-width);}
-.ux-slider .ux-slider-base {position: relative; z-index: 0; top: 50%; left: 0; transform: translateY(-50%);}
+.ux-slider .ux-slider-base {position: relative; top: 50%; left: 0; transform: translateY(-50%);}
 .ux-slider .ux-slider-input[type=range] {-webkit-appearance: none; appearance: none; position: absolute; top: 50%; width: 100%; height: var(--range-height); border-radius: var(--range-radius); background-color: var(--light1); transform: translateY(-50%) translateZ(0); pointer-events: none;}
-.ux-slider .ux-slider-input[type=range].from {z-index: 1; height: 0;}
-.ux-slider .ux-slider-input[type=range].to {z-index: 0;}
+.ux-slider .ux-slider-input[type=range].from { height: 0;}
 .ux-slider .ux-slider-input[type=range]::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
 .ux-slider .ux-slider-input[type=range]::-moz-range-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
-/* <UxSlider> Toggle */
+/* <UxSlider> z-index */
+.ux-slider .ux-slider-base {z-index: 0;}
+.ux-slider .ux-slider-input[type=range].from {z-index: 1;}
+.ux-slider .ux-slider-input[type=range].to {z-index: 0;}
 .ux-slider.toggle .ux-slider-input[type=range].to {z-index: 2;}
