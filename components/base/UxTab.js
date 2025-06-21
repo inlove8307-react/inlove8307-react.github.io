@@ -10,7 +10,6 @@ const UxTab = ({ ref, ...props }) => {
 	const [details, setDetails] = useState();
 
 	useEffect(() => {
-		props.onSlot(getRole(getArray(props.children), 'summary'));
 		setDetails(getRole(getArray(props.children), 'details'));
 	}, []);
 

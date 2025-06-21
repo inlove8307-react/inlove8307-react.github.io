@@ -10,16 +10,18 @@ const UxTab = ({ ref, ...props }) => {
 	});
 	const [selected, setSelected] = useState(props.selected || 0);
 	const [isChange, setIsChange] = useState(false);
-	const [summary, setSummary] = useState([]);
 	const tabsRef = useRef([]);
 	const linearRef = useRef();
 	const scrollRef = useRef();
-	let slotArray = [];
+	const summary = (() => {
+		let result = [];
 
-	const handleSlot = (slot) => {
-		slotArray.push(slot);
-		setSummary(slotArray);
-	};
+		getArray(props.children).map((item) => {
+			result.push(getRole(getArray(item.props.children), 'summary'));
+		});
+
+		return result;
+	})();
 
 	const handleClick = (event, index) => {
 		setSelected(index);
@@ -43,6 +45,8 @@ const UxTab = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
+		if (!summary.length) return;
+
 		props.linear && setLinear(selected);
 		props.scroll && isChange && setScroll(selected);
 	}, [selected]);
@@ -86,7 +90,6 @@ const UxTab = ({ ref, ...props }) => {
 					return mergeProps(item, {
 						key: index,
 						active,
-						onSlot: handleSlot
 					});
 				})}
 			</div>
