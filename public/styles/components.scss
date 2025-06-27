@@ -164,12 +164,12 @@ html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
 
 
 /* <UxSortList> */
-.ux-sort-list {--radius: 1.2rem; touch-action: none;}
-.ux-sort-list {display: flex; flex-direction: column; gap: .8rem; touch-action: none;}
+.ux-sort-list {--radius: 1.2rem;}
+.ux-sort-list {display: flex; flex-direction: column; gap: .8rem;}
 /* <UxSortItem> */
-.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); transition: var(--inset-transition); touch-action: none;}
-.ux-sort-base {display: flex; justify-content: center; align-items: center; padding-left: 1.2rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition); touch-action: none;}
-.ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 4.8rem; height: 4.8rem; touch-action: none;}
+.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); transition: var(--inset-transition);}
+.ux-sort-base {display: flex; justify-content: center; align-items: center; padding-left: 1.2rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 4.8rem; height: 4.8rem; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;}
 /* <UxSortItem> Active */
 .ux-sort-item.active {box-shadow: var(--shadow); z-index: 1;}
 .ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-color-focus);}

@@ -20,12 +20,12 @@ const UxSortList = ({ ref, ...props }) => {
 	const caseClassName = classnames(baseClassName, props.className);
 	const [items, setItems] = useState(props.items);
 	const [mounted, setMounted] = useState(false);
-	const sensors = useSensors(
-		useSensor(PointerSensor),
-		useSensor(KeyboardSensor, {
-			coordinateGetter: sortableKeyboardCoordinates,
-		})
-	);
+	// const sensors = useSensors(
+	// 	useSensor(PointerSensor),
+	// 	useSensor(KeyboardSensor, {
+	// 		coordinateGetter: sortableKeyboardCoordinates,
+	// 	})
+	// );
 
 	function handleDragEnd(event) {
 		const { active, over } = event;
@@ -49,13 +49,13 @@ const UxSortList = ({ ref, ...props }) => {
 			<div className={`${baseClassName}-list`}>
 				<DndContext
 					modifiers={[restrictToParentElement]}
-					sensors={sensors}
-					collisionDetection={closestCenter}
+					// sensors={sensors}
+					// collisionDetection={closestCenter}
 					onDragEnd={handleDragEnd}
 				>
 					<SortableContext
 						items={items}
-						strategy={verticalListSortingStrategy}
+						// strategy={verticalListSortingStrategy}
 					>
 						{
 							mounted &&
