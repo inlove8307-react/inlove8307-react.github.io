@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { isDesktop, isWindows, isMacOs, isMobile, isIOS, isAndroid, isChrome, isFirefox, isSafari, isEdge } from 'react-device-detect';
 import classnames from 'classnames';
 import $ from 'jquery';
-import Layout from '../components/layout';
+import Layout from '@/components/layout';
 
 // Styles
 import "@/public/styles/base.scss";

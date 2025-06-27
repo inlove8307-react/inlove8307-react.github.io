@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-html {}
-body {}
+html.modal {overflow: hidden; height: 100%;}
 #__next {display: flex; flex-direction: column; height: 100%;}
 
 

@@ -133,6 +133,49 @@ html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
 
 
 
+/* <UxModal> */
+.ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+.ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75); opacity: 0; transition: opacity .25s ease-in-out;}
+.ux-modal-layout {overflow: hidden; position: relative; background-color: var(--light0);}
+.ux-modal-header {display: flex; justify-content: space-between; padding: 1.6rem 1.6rem 0;}
+.ux-modal-main {padding: 1.6rem;}
+.ux-modal-footer {padding: 0 1.6rem 1.6rem;}
+/* <UxModal> Center */
+.ux-modal.center {display: flex; justify-content: center; align-items: center;}
+.ux-modal.center .ux-modal-layout {min-width: calc(100% - var(--space) * 2); border-radius: 1.6rem; opacity: 0; transition: opacity .25s ease-in-out;}
+/* <UxModal> Bottom */
+.ux-modal.bottom {display: flex; align-items: flex-end;}
+.ux-modal.bottom .ux-modal-layout {width: 100%; border-radius: 1.6rem 1.6rem 0 0; transform: translateY(100%); transition: transform .25s ease-in-out;}
+/* <UxModal> Full */
+.ux-modal.full {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.full .ux-modal-layout {display: flex; flex-direction: column; width: 100%; opacity: 0; transition: opacity .25s ease-in-out;}
+.ux-modal.full .ux-modal-main {flex-grow: 1;}
+/* <UxModal> Active */
+.ux-modal.active .ux-modal-backdrop {opacity: 1;}
+.ux-modal.active.center .ux-modal-layout {opacity: 1;}
+.ux-modal.active.bottom .ux-modal-layout {transform: translateY(0);}
+.ux-modal.active.full .ux-modal-layout {opacity: 1;}
+/* <UxModal> z-index */
+.ux-modal {z-index: 10;}
+// .ux-modal-backdrop {z-index: 10;}
+// .ux-modal-layout {z-index: 10;}
+.ux-modals:has(.ux-modal) ~ .ux-container {height: 100%;}
+
+
+
+/* <UxSortList> */
+.ux-sort-list {--radius: 1.2rem;}
+.ux-sort-list {display: flex; flex-direction: column; gap: .8rem; touch-action: none;}
+/* <UxSortItem> */
+.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); touch-action: none; transition: var(--inset-transition);}
+.ux-sort-base {display: flex; justify-content: center; align-items: center; padding: 1.2rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto;}
+/* <UxSortItem> Active */
+.ux-sort-item.active {box-shadow: var(--shadow); z-index: 1;}
+.ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-color-focus);}
+
+
+
 /* <UxDivider> */
 .ux-divider {display: block; margin: 0; width: 100%; height: .8rem; border: 0; background-color: var(--light1);}
 .ux-divider.linear {height: .1rem;}

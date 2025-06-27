@@ -1,6 +1,8 @@
 'use client';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useModal from "@/hook/useModal";
+import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -8,7 +10,6 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxDivider from "@/components/base/UxDivider";
-import UxIcon from "@/components/base/UxIcon";
 import UxButton from "@/components/base/UxButton";
 import UxInput from "@/components/base/UxInput";
 import UxPhone from "@/components/base/UxPhone";
@@ -34,9 +35,11 @@ import UxTab from "@/components/base/UxTab";
 import UxTabGroup from "@/components/base/UxTabGroup";
 import UxSlider from "@/components/base/UxSlider";
 import UxGrid from "@/components/base/UxGrid";
-import UxList from "@/components/base/UxList";
+import UxSortList from "@/components/base/UxSortList";
 
 export default function Sample() {
+	const modal = useModal();
+
 	return (
 		<UxSection>
 			<UxArticle className="h3">
@@ -46,6 +49,74 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
+					{/* <UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxModal</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxModal</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGrid className="gap8 col1">
+										<UxButton className="outline h3">
+											<span className="text">center</span>
+										</UxButton>
+										<UxButton className="outline h3">
+											<span className="text">bottom</span>
+										</UxButton>
+										<UxButton className="outline h3">
+											<span className="text">full</span>
+										</UxButton>
+									</UxGrid>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxAlert</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGrid className="gap8 col1">
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.openAlert('message');
+											}}
+										>
+											<span className="text">alert</span>
+										</UxButton>
+									</UxGrid>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxConfirm</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGrid className="gap8 col1">
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.openConfirm('message');
+											}}
+										>
+											<span className="text">confirm</span>
+										</UxButton>
+									</UxGrid>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider /> */}
+
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
@@ -1433,6 +1504,32 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxYearCalendar />
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxSortList</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSortList - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSortList
+										items={[
+											{ id: '1', label: 'item01' },
+											{ id: '2', label: 'item02' },
+											{ id: '3', label: 'item03' },
+											{ id: '4', label: 'item04' },
+											{ id: '5', label: 'item05' },
+										]}
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

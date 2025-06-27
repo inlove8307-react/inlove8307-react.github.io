@@ -29,6 +29,7 @@ export default function Page() {
 		"i020", /* i020 : backward */
 		"i021", /* i021 : forward */
 		"i022", /* i022 : question */
+		"i023", /* i023 : sort */
 	];
 
 	return (
