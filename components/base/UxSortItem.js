@@ -27,8 +27,8 @@ const UxSortItem = ({ ref, ...props }) => {
 		<div
 			ref={setNodeRef}
 			style={style}
-			{...attributes}
-			{...listeners}
+			// {...attributes}
+			// {...listeners}
 			className={classnames(`${baseClassName}-item`, { active: isDragging })}
 		>
 			<div className={`${baseClassName}-base`}>
@@ -43,6 +43,8 @@ const UxSortItem = ({ ref, ...props }) => {
 				<button
 					type="button"
 					className={`${baseClassName}-button`}
+					{...attributes}
+					{...listeners}
 				>
 					<UxIcon className="i023" size="1.6rem" />
 				</button>

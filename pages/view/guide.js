@@ -61,11 +61,11 @@ export default function Sample() {
 								<UxContent>
 									<UxSortList
 										items={[
-											{ id: '1', name: 'item01', info: 'info' },
-											{ id: '2', name: 'item02', info: 'info' },
-											{ id: '3', name: 'item03', info: 'info' },
-											{ id: '4', name: 'item04', info: 'info' },
-											{ id: '5', name: 'item05', info: 'info' },
+											{ id: '1', name: 'item01', info: 'info01' },
+											{ id: '2', name: 'item02', info: 'info02' },
+											{ id: '3', name: 'item03', info: 'info03' },
+											{ id: '4', name: 'item04', info: 'info04' },
+											{ id: '5', name: 'item05', info: 'info05' },
 										]}
 									/>
 								</UxContent>
