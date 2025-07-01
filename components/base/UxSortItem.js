@@ -16,7 +16,7 @@ import UxIcon from "@/components/base/UxIcon";
 
 const UxSortItem = ({ ref, ...props }) => {
 	const baseClassName = 'ux-sort';
-	const { attributes, listeners, setNodeRef, setActivatorNodeRef, transform, transition, isDragging } = useSortable({ id: props.id });
+	const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: props.id });
 
 	const style = {
 		transform: CSS.Transform.toString(transform),
@@ -32,12 +32,15 @@ const UxSortItem = ({ ref, ...props }) => {
 			className={classnames(`${baseClassName}-item`, { active: isDragging })}
 		>
 			<div className={`${baseClassName}-base`}>
-				<span className={`${baseClassName}-label`}>
-					{props.data.label}
-				</span>
+				<dl>
+					<dt>
+						{props.data.name}
+					</dt>
+					<dd>
+						{props.data.info}
+					</dd>
+				</dl>
 				<button
-					// ref={setActivatorNodeRef}
-					// {...listeners}
 					type="button"
 					className={`${baseClassName}-button`}
 				>

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 /* DND-KIT UxSortList */
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
-import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from '@dnd-kit/sortable';
+import { DndContext } from '@dnd-kit/core';
+import { arrayMove, SortableContext } from '@dnd-kit/sortable';
 import { restrictToParentElement } from '@dnd-kit/modifiers';
 /* COMPONENT */
 import UxSortItem from "@/components/base/UxSortItem";
@@ -20,12 +20,6 @@ const UxSortList = ({ ref, ...props }) => {
 	const caseClassName = classnames(baseClassName, props.className);
 	const [items, setItems] = useState(props.items);
 	const [mounted, setMounted] = useState(false);
-	// const sensors = useSensors(
-	// 	useSensor(PointerSensor),
-	// 	useSensor(KeyboardSensor, {
-	// 		coordinateGetter: sortableKeyboardCoordinates,
-	// 	})
-	// );
 
 	function handleDragEnd(event) {
 		const { active, over } = event;
@@ -49,14 +43,9 @@ const UxSortList = ({ ref, ...props }) => {
 			<div className={`${baseClassName}-list`}>
 				<DndContext
 					modifiers={[restrictToParentElement]}
-					// sensors={sensors}
-					// collisionDetection={closestCenter}
 					onDragEnd={handleDragEnd}
 				>
-					<SortableContext
-						items={items}
-						// strategy={verticalListSortingStrategy}
-					>
+					<SortableContext items={items}>
 						{
 							mounted &&
 							items.map((item) => (

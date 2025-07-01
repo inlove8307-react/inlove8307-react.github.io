@@ -37,24 +37,8 @@ import UxSlider from "@/components/base/UxSlider";
 import UxGrid from "@/components/base/UxGrid";
 import UxSortList from "@/components/base/UxSortList";
 
-import { useSortable } from '@dnd-kit/react/sortable';
-
-function Sortable({id, index}) {
-	const {ref} = useSortable({id, index});
-
-	return (
-		<li ref={ref} className="ux-sort-item">
-			<div className="ux-sort-base">
-				<span>Item {id}</span>
-				<button type="button" className="ux-sort-button"></button>
-			</div>
-		</li>
-	);
-}
-
 export default function Sample() {
 	const modal = useModal();
-	const items = [1, 2, 3, 4];
 
 	return (
 		<UxSection>
@@ -75,28 +59,13 @@ export default function Sample() {
 									<h5>UxSortList - Default</h5>
 								</UxSubject>
 								<UxContent>
-									<ul className="ux-sort-list">
-										{items.map((id, index) =>
-											<Sortable key={id} id={id} index={index} />
-										)}
-									</ul>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxSortList - Default</h5>
-								</UxSubject>
-								<UxContent>
 									<UxSortList
 										items={[
-											{ id: '1', label: 'item01' },
-											{ id: '2', label: 'item02' },
-											{ id: '3', label: 'item03' },
-											{ id: '4', label: 'item04' },
-											{ id: '5', label: 'item05' },
+											{ id: '1', name: 'item01', info: 'info' },
+											{ id: '2', name: 'item02', info: 'info' },
+											{ id: '3', name: 'item03', info: 'info' },
+											{ id: '4', name: 'item04', info: 'info' },
+											{ id: '5', name: 'item05', info: 'info' },
 										]}
 									/>
 								</UxContent>
