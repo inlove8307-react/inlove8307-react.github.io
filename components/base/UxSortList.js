@@ -4,8 +4,56 @@ import classnames from 'classnames';
 import { DndContext } from '@dnd-kit/core';
 import { arrayMove, SortableContext } from '@dnd-kit/sortable';
 import { restrictToParentElement } from '@dnd-kit/modifiers';
+/* DND-KIT UxSortItem */
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 /* COMPONENT */
-import UxSortItem from "@/components/base/UxSortItem";
+import UxIcon from "@/components/base/UxIcon";
+
+/**
+ * <UxSortItem>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const UxSortItem = ({ ref, ...props }) => {
+	const baseClassName = 'ux-sort';
+	const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: props.id });
+
+	const style = {
+		transform: CSS.Transform.toString(transform),
+		transition,
+	};
+
+	return (
+		<div
+			ref={setNodeRef}
+			style={style}
+			className={classnames(`${baseClassName}-item`, { active: isDragging })}
+		>
+			<div className={`${baseClassName}-base`}>
+				<dl>
+					<dt>
+						{props.data.name}
+					</dt>
+					<dd>
+						{props.data.info}
+					</dd>
+				</dl>
+				<button
+					type="button"
+					className={`${baseClassName}-button`}
+					{...attributes}
+					{...listeners}
+				>
+					<UxIcon className="i023" size="1.8rem" />
+				</button>
+			</div>
+		</div>
+	);
+};
 
 /**
  * <UxSortList>
