@@ -27,8 +27,6 @@ const UxSortItem = ({ ref, ...props }) => {
 		<div
 			ref={setNodeRef}
 			style={style}
-			// {...attributes}
-			// {...listeners}
 			className={classnames(`${baseClassName}-item`, { active: isDragging })}
 		>
 			<div className={`${baseClassName}-base`}>
