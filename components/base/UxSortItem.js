@@ -44,7 +44,7 @@ const UxSortItem = ({ ref, ...props }) => {
 					{...attributes}
 					{...listeners}
 				>
-					<UxIcon className="i023" size="1.6rem" />
+					<UxIcon className="i023" size="1.8rem" />
 				</button>
 			</div>
 		</div>
