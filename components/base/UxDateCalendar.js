@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { rawDate } from '@/utils/core';
 import { format, set, add, sub, isEqual, getDay, getDate, getMonth, getYear } from "date-fns";
+/* COMPONENT */
+import UxIcon from "@/components/base/UxIcon";
 
 const UxDateCalendar = ({ ref, ...props }) => {
 	const originClassName = 'ux-calendar';
@@ -92,9 +94,13 @@ const UxDateCalendar = ({ ref, ...props }) => {
 			}
 			{
 				data.map((item, index) => {
-					const disabled = item.month !== getMonth(rawDate(date)) + 1;
-					const selected = isEqual(rawDate(date), new Date(item.year, item.month - 1, item.date));
-					const isToday = isEqual(rawDate(today), new Date(item.year, item.month - 1, item.date));
+					const itemDate = new Date(item.year, item.month - 1, item.date);
+					const disabled =
+						item.month !== getMonth(rawDate(date)) + 1 ||
+						props.disables?.filter(item => isEqual(rawDate(item), itemDate))[0];
+					const selected = isEqual(rawDate(date), itemDate);
+					const isToday = isEqual(rawDate(today), itemDate);
+					const icons = props.icons?.filter(item => isEqual(rawDate(item.date), itemDate))[0]?.icons;
 
 					return (
 						<button
@@ -103,7 +109,8 @@ const UxDateCalendar = ({ ref, ...props }) => {
 							className={classnames(`${originClassName}-button`, {
 								disabled,
 								selected,
-								today: isToday
+								today: isToday,
+								icons: props.icons
 							})}
 							disabled={disabled}
 							onClick={() => handleClick(item)}
@@ -112,6 +119,20 @@ const UxDateCalendar = ({ ref, ...props }) => {
 								className={classnames(`${originClassName}-label`)}
 							>
 								{item.date}
+							</span>
+							<span
+								className={classnames(`${originClassName}-icons`)}
+							>
+								{icons?.map((item, index) => {
+									if (index < 2) {
+										return (
+											<UxIcon
+												key={index}
+												className={item}
+											/>
+										)
+									}
+								})}
 							</span>
 						</button>
 					)

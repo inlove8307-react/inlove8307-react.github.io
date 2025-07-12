@@ -524,23 +524,27 @@ html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
 /* <UxCalendar> Content */
 .ux-calendar-content {position: relative;}
 /* <UxCalendar> DateCalendar */
-.ux-calendar-date {display: grid; grid-template-columns: repeat(7, 1fr); height: 28rem;}
+.ux-calendar-date {display: grid; grid-template-columns: repeat(7, 1fr);}
 .ux-calendar-date > :nth-child(7n),
 .ux-calendar-date > :nth-child(7n + 1) {color: var(--color1);}
-.ux-calendar-date .ux-calendar-week {display: flex; justify-content: center; align-items: center; height: 3.6rem;}
-.ux-calendar-date .ux-calendar-button {display: flex; justify-content: center; align-items: center; height: 4rem;}
-.ux-calendar-date .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 2rem;}
+.ux-calendar-date .ux-calendar-week {display: flex; justify-content: center; align-items: center; height: 4rem;}
+.ux-calendar-date .ux-calendar-button {display: flex; justify-content: center; align-items: center;}
+.ux-calendar-date .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 50%;}
 /* <UxCalendar> DateCalendar Today */
 .ux-calendar-date .ux-calendar-button.today .ux-calendar-label {background-color: var(--light1);}
+/* <UxCalendar> DateCalendar Icons */
+.ux-calendar-date .ux-calendar-button.icons {flex-direction: column; justify-content: flex-start; gap: .4rem; padding-top: .4rem;}
+.ux-calendar-date .ux-calendar-button.icons .ux-calendar-icons {display: flex; gap: .4rem;}
+.ux-calendar-date .ux-calendar-button.icons.selected .ux-calendar-icons .ux-icon {background-color: var(--color1);}
 /* <UxCalendar> DateCalendar Disabled */
-.ux-calendar-date .ux-calendar-button.disabled .ux-calendar-label {opacity: .5;}
+.ux-calendar-date .ux-calendar-button.disabled {opacity: .5;}
 /* <UxCalendar> DateCalendar Selected */
 .ux-calendar-date .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
 /* <UxCalendar> MonthCalendar */
 .ux-calendar-month {display: flex; flex-wrap: wrap; align-items: center; width: 100%; height: 28rem; background-color: var(--light0);}
 .ux-calendar-month .ux-calendar-button {width: calc(100% / 3);}
 .ux-calendar-month .ux-calendar-button {display: flex; justify-content: center; align-items: center; height: 4rem;}
-.ux-calendar-month .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 2rem;}
+.ux-calendar-month .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 50%;}
 /* <UxCalendar> MonthCalendar Selected */
 .ux-calendar-month .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
 /* <UxCalendar> YearCalendar */

@@ -1507,7 +1507,18 @@ export default function Sample() {
 									<h5>UxCalendar - DateCalendar</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDateCalendar />
+									<UxDateCalendar
+										disables={['2025.07.01', '2025.07.02', '2025.07.03']}
+										icons={[
+											{ date: '2025.07.01', icons: ['i904'] },
+											{ date: '2025.07.04', icons: ['i901'] },
+											{ date: '2025.07.07', icons: ['i902', 'i903'] },
+											{ date: '2025.07.16', icons: ['i905'] },
+											{ date: '2025.07.25', icons: ['i906', 'i907'] },
+											{ date: '2025.07.29', icons: ['i908', 'i909', 'i901'] },
+											{ date: '2025.08.07', icons: ['i900'] },
+										]}
+									/>
 								</UxContent>
 							</UxArticle>
 
