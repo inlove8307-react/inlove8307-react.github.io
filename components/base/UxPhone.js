@@ -87,7 +87,7 @@ const UxPhone = ({ ref, ...props }) => {
 				<UxIcon
 					title="initialize"
 					tagName="button"
-					className="i001"
+					className="i110"
 					onClick={handleClear}
 				/>
 			}

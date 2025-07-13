@@ -32,8 +32,8 @@ const UxCollapseSummary = (props) => {
 				<UxIcon
 					className={
 						props.expanded
-						 ? 'i012'
-						 : 'i013'
+						 ? 'i001'
+						 : 'i002'
 					}
 				/>
 			</button>

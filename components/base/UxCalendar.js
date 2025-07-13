@@ -68,7 +68,7 @@ const UxCalendar = ({ ref, ...props }) => {
 						className={classnames(`${originClassName}-prev`)}
 						onClick={handlePrev}
 					>
-						<UxIcon className="i010" />
+						<UxIcon className="i004" />
 					</button>
 					<button
 						type="button"
@@ -76,7 +76,7 @@ const UxCalendar = ({ ref, ...props }) => {
 						onClick={handleYear}
 					>
 						<span>{`${getYear(rawDate(date))}년`}</span>
-						<UxIcon className={ isYear ? 'i012' : 'i013' } />
+						<UxIcon className={ isYear ? 'i001' : 'i002' } />
 					</button>
 					<button
 						type="button"
@@ -84,14 +84,14 @@ const UxCalendar = ({ ref, ...props }) => {
 						onClick={handleMonth}
 					>
 						<span>{`${getMonth(rawDate(date)) + 1}월`}</span>
-						<UxIcon className={ isMonth ? 'i012' : 'i013' } />
+						<UxIcon className={ isMonth ? 'i001' : 'i002' } />
 					</button>
 					<button
 						type="button"
 						className={classnames(`${originClassName}-next`)}
 						onClick={handleNext}
 					>
-						<UxIcon className="i011" />
+						<UxIcon className="i003" />
 					</button>
 				</div>
 				<div className={`${originClassName}-content`}>

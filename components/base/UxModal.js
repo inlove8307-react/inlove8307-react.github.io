@@ -26,7 +26,7 @@ const UxModal = ({ ref, ...props }) => {
 					<h4>타이틀</h4>
 					<UxButton onClick={props.onClose}>
 						<UxIcon
-							className="i001"
+							className="i110"
 							size="2rem"
 							color="#000"
 						/>

@@ -47,7 +47,7 @@ const UxRadio = ({ ref, ...props }) => {
 					onChange={handleChange}
 				/>
 				<UxIcon
-					className="i009"
+					className="i197"
 					size="2.4rem"
 				/>
 				<span className={`${baseClassName}-label`}>
