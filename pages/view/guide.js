@@ -49,32 +49,6 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
-						<UxSubject>
-							<h4>UxSortList</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxSortList - Default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSortList
-										items={[
-											{ id: '1', name: 'youtube', info: 'youtub.com' },
-											{ id: '2', name: 'netflix', info: 'netflix.com' },
-											{ id: '3', name: 'coupangplay', info: 'coupangplay.com' },
-											{ id: '4', name: 'tving', info: 'tving.com' },
-											{ id: '5', name: 'soop', info: 'sooplive.co.kr' },
-										]}
-									/>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxDivider />
-
 					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxModal</h4>
@@ -1541,6 +1515,32 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxYearCalendar />
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxSortList</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSortList - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSortList
+										items={[
+											{ id: '1', name: 'youtube', info: 'youtub.com' },
+											{ id: '2', name: 'netflix', info: 'netflix.com' },
+											{ id: '3', name: 'coupangplay', info: 'coupangplay.com' },
+											{ id: '4', name: 'tving', info: 'tving.com' },
+											{ id: '5', name: 'soop', info: 'sooplive.co.kr' },
+										]}
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
