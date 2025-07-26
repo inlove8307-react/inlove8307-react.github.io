@@ -18,6 +18,7 @@ const UxModal = ({ ref, ...props }) => {
 	const [active, setActive] = useState(false);
 
 	useEffect(() => {
+		console.log(props);
 		props.delay && setTimeout(() => props.onClose(), props.delay);
 	}, []);
 
