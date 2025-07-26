@@ -1,5 +1,49 @@
 @charset "utf-8";
 
+/* GLOBAL VARIABLES */
+:root {
+	/* SPACE */
+	--space: 2rem;
+	--space-minus: calc(var(--space) * -1);
+
+	/* COLOR */
+	--color1: rgb(217, 13, 88);
+	--light0: rgb(255, 255, 255);
+	--light1: rgb(238, 238, 238);
+	--light2: rgb(204, 204, 204);
+	--light3: rgb(170, 170, 170);
+	--dark0: rgb(0, 0, 0);
+	--dark1: rgb(34, 34, 34);
+	--dark2: rgb(68, 68, 68);
+	--dark3: rgb(102, 102, 102);
+	--valid: rgb(28, 87, 248);
+	--invalid: rgb(217, 13, 88);
+
+	/* SHADOW */
+	--shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
+
+	/* HEIGHT */
+	--height-header: 6rem;
+	--height-form: 4.8rem;
+	--height-submit: 2.8rem;
+
+	/* RADIUS */
+	--radius-form: 1.2rem;
+	--radius-card: 1.6rem;
+
+	/* INSET */
+	--inset: inset 0 0 0 .1rem var(--light2);
+	--inset-focus: inset 0 0 0 .2rem var(--light3);
+	--inset-valid: inset 0 0 0 .1rem var(--valid);
+	--inset-valid-focus: inset 0 0 0 .2rem var(--valid);
+	--inset-invalid: inset 0 0 0 .1rem var(--invalid);
+	--inset-invalid-focus: inset 0 0 0 .2rem var(--invalid);
+	--inset-color-focus: inset 0 0 0 .2rem var(--color1);
+	--inset-transition: box-shadow .1s ease-in-out;
+}
+
+
+
 html.modal {overflow: hidden; height: 100%;}
 #__next {display: flex; flex-direction: column; height: 100%;}
 
@@ -12,6 +56,20 @@ h3 {font-size: 2rem;}
 h4 {font-size: 1.8rem;}
 h5 {font-size: 1.6rem;}
 h6 {font-size: 1.4rem;}
+
+
+
+/* Font Size */
+.fs10 {font-size: 1rem;}
+.fs12 {font-size: 1.2rem;}
+.fs14 {font-size: 1.4rem;}
+.fs16 {font-size: 1.6rem;}
+.fs18 {font-size: 1.8rem;}
+.fs20 {font-size: 2rem;}
+/* Font Weight */
+.fw400 {font-weight: 400rem;}
+.fw600 {font-weight: 600rem;}
+.fw800 {font-weight: 800rem;}
 
 
 

@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-/* Sample */
+/* SAMPLE */
 .sample.icon {--col: 5; --gap: .8rem; --radius: .8rem;}
-.sample.icon {display: flex; flex-wrap: wrap; gap: var(--gap); padding: 0 2rem;}
+.sample.icon {display: flex; flex-wrap: wrap; gap: var(--gap);}
 .sample.icon li {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col))); border-radius: var(--radius); box-shadow: var(--shadow);}
 .sample.icon dl {display: flex; flex-direction: column; align-items: center; gap: .8rem; padding: .8rem 0; border-radius: var(--radius); box-shadow: var(--inset); line-height: 1;}
 

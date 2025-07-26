@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
+/**
+ * <UxTextList>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxTextList = ({ ref, ...props }) => {
 	const baseClassName = 'ux-textlist';
 	const caseClassName = classnames(baseClassName, props.className);

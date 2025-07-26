@@ -4,6 +4,14 @@ import classnames from 'classnames';
 import UxButton from '@/components/base/UxButton';
 import UxGrid from '@/components/base/UxGrid';
 
+/**
+ * <UxAlert>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxAlert = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);

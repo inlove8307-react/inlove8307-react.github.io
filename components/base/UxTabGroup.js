@@ -2,6 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { getArray, getRole, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
 
+/**
+ * <UxTab>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxTab = ({ ref, ...props }) => {
 	const originClassName = "ux-tab";
 	const mixinClassName = classnames(originClassName, props.className, {

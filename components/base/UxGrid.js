@@ -1,7 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
-const UxGroup = ({ ref, ...props }) => {
+/**
+ * <UxGrid>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const UxGrid = ({ ref, ...props }) => {
 	const baseClassName = 'ux-grid';
 	const caseClassName = classnames(baseClassName, props.className);
 
@@ -12,4 +20,4 @@ const UxGroup = ({ ref, ...props }) => {
 	)
 };
 
-export default UxGroup;
+export default UxGrid;

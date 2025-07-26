@@ -127,22 +127,26 @@ export default function Page() {
 					</h3>
 				</UxSubject>
 				<UxContent>
-					<ul className="sample icon">
-						{
-							icons.map((icon, index) => (
-								<li key={index}>
-									<dl>
-										<dt>
-											<UxIcon className={icon} />
-										</dt>
-										<dd className="sample-name">
-											{icon}
-										</dd>
-									</dl>
-								</li>
-							))
-						}
-					</ul>
+					<UxArticle className="h4 space">
+						<UxContent>
+							<ul className="sample icon">
+								{
+									icons.map((icon, index) => (
+										<li key={index}>
+											<dl>
+												<dt>
+													<UxIcon className={icon} />
+												</dt>
+												<dd className="sample-name">
+													{icon}
+												</dd>
+											</dl>
+										</li>
+									))
+								}
+							</ul>
+						</UxContent>
+					</UxArticle>
 				</UxContent>
 			</UxArticle>
 		</UxSection>

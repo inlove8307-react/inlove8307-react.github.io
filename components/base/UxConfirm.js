@@ -4,6 +4,14 @@ import classnames from 'classnames';
 import UxButton from '@/components/base/UxButton';
 import UxGrid from '@/components/base/UxGrid';
 
+/**
+ * <UxConfirm>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxConfirm = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);

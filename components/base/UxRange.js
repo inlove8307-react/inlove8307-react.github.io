@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
+/**
+ * <UxRange>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxRange = ({ ref, ...props }) => {
 	const baseClassName = 'ux-range';
 	const caseClassName = classnames(baseClassName, props.className);

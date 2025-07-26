@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
+/**
+ * <UxTooltip>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxTooltip = ({ ref, ...props }) => {
 	const baseClassName = 'ux-tooltip';
 	const caseClassName = classnames(baseClassName, props.className);

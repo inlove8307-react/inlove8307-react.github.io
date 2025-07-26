@@ -2,6 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { getArray, getRole, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
 
+/**
+ * <UxTab>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxTab = ({ ref, ...props }) => {
 	const baseClassName = 'ux-tab-panel';
 	const caseClassName = classnames(baseClassName, props.className , {

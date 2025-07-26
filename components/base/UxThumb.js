@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
+/**
+ * <UxThumb>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxThumb = ({ ref, ...props }) => {
 	const baseClassName = 'ux-thumb';
 	const caseClassName = classnames(baseClassName, props.className);

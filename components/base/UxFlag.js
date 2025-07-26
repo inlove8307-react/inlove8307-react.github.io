@@ -2,15 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
 /**
- * <UxList>
+ * <UxFlag>
  * [props]
  *
  * [event]
  *
  */
 
-const UxList = ({ ref, ...props }) => {
-	const baseClassName = 'ux-list';
+const UxFlag = ({ ref, ...props }) => {
+	const baseClassName = 'ux-flag';
 	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
@@ -20,4 +20,4 @@ const UxList = ({ ref, ...props }) => {
 	)
 };
 
-export default UxList;
+export default UxFlag;

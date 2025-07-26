@@ -5,6 +5,14 @@ import UxButton from '@/components/base/UxButton';
 import UxGrid from '@/components/base/UxGrid';
 import UxIcon from '@/components/base/UxIcon';
 
+/**
+ * <UxModal>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxModal = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);

@@ -9,6 +9,14 @@ import UxYearCalendar from "@/components/base/UxYearCalendar";
 /* COMPONENT */
 import UxIcon from "@/components/base/UxIcon";
 
+/**
+ * <UxCalendar>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxCalendar = ({ ref, ...props }) => {
 	const originClassName = 'ux-calendar';
 	const mixinClassName = classnames(originClassName, props.className);

@@ -5,6 +5,14 @@ import { format, set, add, sub, isEqual, getDay, getDate, getMonth, getYear } fr
 /* COMPONENT */
 import UxIcon from "@/components/base/UxIcon";
 
+/**
+ * <UxDateCalendar>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxDateCalendar = ({ ref, ...props }) => {
 	const originClassName = 'ux-calendar';
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');

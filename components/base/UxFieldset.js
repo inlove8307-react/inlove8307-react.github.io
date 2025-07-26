@@ -1,6 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 
+/**
+ * <UxFieldset>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
 const UxFieldset = ({ ref, ...props }) => {
 	const baseClassName = 'ux-fieldset';
 	const caseClassName = classnames(baseClassName, props.className);

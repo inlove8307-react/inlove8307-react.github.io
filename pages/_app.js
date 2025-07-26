@@ -8,7 +8,8 @@ import Layout from '@/components/layout';
 import "@/public/styles/base.scss";
 import "@/public/styles/icon.scss";
 import "@/public/styles/global.scss";
-import "@/public/styles/components.scss";
+import "@/public/styles/component.scss";
+import "@/public/styles/content.scss";
 
 export default function App({ Component, pageProps }) {
 	useEffect(() => {
