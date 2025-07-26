@@ -82,19 +82,17 @@ const useModal = () => {
 		});
 	};
 
-	const popover = (content, props) => {
-		return createModal(UxPopover, {
+	const popover = (Component, props) => {
+		return createModal(Component, {
 			...props,
 			className: 'popover',
-			content,
 		});
 	};
 
-	const tooltip = (content, props) => {
-		return createModal(UxTooltip, {
+	const tooltip = (Component, props) => {
+		return createModal(Component, {
 			...props,
 			className: 'tooltip',
-			content,
 		});
 	};
 

@@ -11,10 +11,6 @@ const UxModals = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const {rootContext} = useContext(RootContext);
 
-	useEffect(() => {
-		console.log(rootContext.modals);
-	}, [rootContext.modals]);
-
 	return (
 		<div className={`${baseClassName}-group`}>
 			{rootContext.modals.map(({ Component, props, onClose }, index) => (

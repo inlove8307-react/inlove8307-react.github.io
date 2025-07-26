@@ -36,7 +36,8 @@ import UxTabGroup from "@/components/base/UxTabGroup";
 import UxSlider from "@/components/base/UxSlider";
 import UxGrid from "@/components/base/UxGrid";
 import UxSortList from "@/components/base/UxSortList";
-
+import UxPopover from "@/components/base/UxPopover";
+/* POPUP */
 import popup from "@/components/popup/popup.js";
 
 export default function Sample() {
@@ -51,89 +52,6 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
-						<UxSubject>
-							<h4>UxModal</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxModal</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGrid className="gap8 col3">
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.center(popup);
-											}}
-										>
-											<span className="text">center</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.bottom(popup);
-											}}
-										>
-											<span className="text">bottom</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.full(popup);
-											}}
-										>
-											<span className="text">full</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.alert('message');
-											}}
-										>
-											<span className="text">alert</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.confirm('message');
-											}}
-										>
-											<span className="text">confirm</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.toast('message');
-											}}
-										>
-											<span className="text">toast</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.popover('message');
-											}}
-										>
-											<span className="text">popover</span>
-										</UxButton>
-										<UxButton
-											className="outline h3"
-											onClick={() => {
-												modal.tooltip('message');
-											}}
-										>
-											<span className="text">tooltip</span>
-										</UxButton>
-									</UxGrid>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxDivider />
-
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
@@ -1417,6 +1335,76 @@ export default function Sample() {
 											</div>
 										</UxTab>
 									</UxTabGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxModal</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxModal</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGrid className="gap8 col3">
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.center(popup);
+											}}
+										>
+											<span className="text">center</span>
+										</UxButton>
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.bottom(popup);
+											}}
+										>
+											<span className="text">bottom</span>
+										</UxButton>
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.full(popup);
+											}}
+										>
+											<span className="text">full</span>
+										</UxButton>
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.alert('message');
+											}}
+										>
+											<span className="text">alert</span>
+										</UxButton>
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.confirm('message');
+											}}
+										>
+											<span className="text">confirm</span>
+										</UxButton>
+										<UxButton
+											className="outline h3"
+											onClick={() => {
+												modal.toast('message', { delay: 3000 });
+											}}
+										>
+											<span className="text">toast</span>
+										</UxButton>
+										<UxPopover>
+											<p>POPOVER CONTENT</p>
+										</UxPopover>
+									</UxGrid>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

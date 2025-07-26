@@ -15,18 +15,34 @@ import { AnimatePresence, motion } from "motion/react";
 const UxModal = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);
+	const [active, setActive] = useState(false);
+
+	useEffect(() => {
+		props.delay && setTimeout(() => props.onClose(), props.delay);
+	}, []);
 
 	return (
-		<div className={classnames(caseClassName)}>
-			<div
-				role="presentation"
-				className={`${baseClassName}-backdrop`}
-				onClick={props.onClose}
-			/>
-			<div className={`${baseClassName}-base`}>
-				{props.children}
-			</div>
-		</div>
+		<AnimatePresence>
+			<motion.div
+				className={classnames(caseClassName, { active })}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				transition={{ duration: .15 }}
+				onAnimationStart={() => setActive(true)}
+			>
+				<div
+					role="presentation"
+					className={`${baseClassName}-backdrop`}
+					onClick={props.onClose}
+				/>
+				<div
+					className={`${baseClassName}-base`}
+				>
+					{props.children}
+				</div>
+			</motion.div>
+		</AnimatePresence>
 	)
 };
 

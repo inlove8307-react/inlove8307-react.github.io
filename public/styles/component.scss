@@ -96,38 +96,66 @@ html.desktop .ux-section {margin: 0 auto; width: var(--desktop);}
 .ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75);}
 .ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--light0);}
 /* <UxModal> Section */
-.ux-modal .ux-section.header {padding: 1.6rem 1.6rem 0;}
-.ux-modal .ux-section.main {padding: 1.6rem;}
-.ux-modal .ux-section.footer {padding: 0 1.6rem 1.6rem;}
+.ux-modal .ux-section.header {padding: 1.6rem;}
+.ux-modal .ux-section.main {padding: 0 1.6rem;}
+.ux-modal .ux-section.footer {padding: 1.6rem;}
+/* <UxModal> Section Desktop */
 html.desktop .ux-modal .ux-section {width: 100%;}
 /* <UxModal> Content */
 .ux-modal .ux-section.header .ux-content {flex-direction: row; justify-content: space-between; align-items: flex-start;}
 /* <UxModal> Center */
 .ux-modal.center {display: flex; justify-content: center; align-items: center;}
-.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: 1.6rem;}
+.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: 1.6rem; transform: scale(.75); transition: transform .15s ease-in-out;}
+/* <UxModal> Center Desktop */
 html.desktop .ux-modal.center {justify-content: center;}
-html.desktop .ux-modal.center .ux-modal-base {width: var(--desktop);}
+html.desktop .ux-modal.center .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
+/* <UxModal> Center Active */
+.ux-modal.center.active .ux-modal-base {transform: scale(1);}
 /* <UxModal> Bottom */
 .ux-modal.bottom {display: flex; justify-content: center; align-items: flex-end;}
-.ux-modal.bottom .ux-modal-base {width: 100%; border-radius: 1.6rem 1.6rem 0 0;}
+.ux-modal.bottom .ux-modal-base {width: 100%; border-radius: 1.6rem 1.6rem 0 0; transform: translateY(100%); transition: transform .15s ease-in-out;}
+/* <UxModal> Bottom Desktop */
 html.desktop .ux-modal.bottom .ux-modal-base {width: var(--desktop);}
+/* <UxModal> Bottom Active */
+.ux-modal.bottom.active .ux-modal-base {transform: translateY(0);}
 /* <UxModal> Full */
 .ux-modal.full {display: flex; justify-content: stretch; align-items: stretch;}
 .ux-modal.full .ux-modal-base {display: flex; flex-direction: column; width: 100%;}
 .ux-modal.full .ux-section.main {flex-grow: 1;}
+/* <UxModal> Full Desktop */
 html.desktop .ux-modal.full {justify-content: center;}
 html.desktop .ux-modal.full .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Toast */
-.ux-modal.toast {display: flex; justify-content: stretch; align-items: stretch;}
-.ux-modal.toast .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
+.ux-modal.toast {display: flex; justify-content: center; align-items: flex-end; pointer-events: none;}
+.ux-modal.toast .ux-modal-base {padding: 1.6rem 2rem; border-radius: 1.6rem; width: calc(100% - var(--space) * 2); background-color: rgba(0, 0, 0, .75); box-shadow: var(--shadow); color: var(--light0); transform: translateY(100%); transition: transform .15s ease-in-out;}
+.ux-modal.toast .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0); pointer-events: none;}
+/* <UxModal> Toast Desktop */
+html.desktop .ux-modal.toast {justify-content: center;}
+html.desktop .ux-modal.toast .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
+/* <UxModal> Toast Active */
+.ux-modal.toast.active .ux-modal-base {transform: translateY(var(--space-minus));}
 /* <UxModal> Popover */
-.ux-modal.popover {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.popover {display: flex; justify-content: center; align-items: flex-start;}
 .ux-modal.popover .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
+.ux-modal.popover .ux-modal-base {overflow: initial; position: relative; width: calc(100% - var(--space) * 2); background-color: rgba(0, 0, 0, 0);}
+/* <UxModal> Popover Desktop */
+html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
 /* <UxModal> Tooltip */
 .ux-modal.tooltip {display: flex; justify-content: stretch; align-items: stretch;}
 .ux-modal.tooltip .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
 /* <UxModal> z-index */
 .ux-modal {z-index: 10;}
+
+
+
+/* <UxPopover> */
+.ux-popover-base {position: absolute; display: flex; align-items: flex-start; gap: .4rem; padding: .8rem .8rem .8rem 1.2rem; max-width: calc(100% - var(--space) * 2); border-radius: 1.2rem; background-color: rgba(0, 0, 0, .75); color: var(--light0); opacity: 0; transition: opacity .25s ease-in-out;}
+.ux-popover-closer {flex-shrink: 0; padding: .2rem; height: 2.4rem;}
+.ux-popover-closer .ux-icon.i303 {background-color: var(--light0);}
+/* <UxPopover> Desktop */
+.ux-popover-base {max-width: calc(var(--desktop) - var(--space) * 2);}
+/* <UxPopover> Active */
+.ux-modal.popover.active .ux-popover-base {opacity: 1;}
 
 
 
