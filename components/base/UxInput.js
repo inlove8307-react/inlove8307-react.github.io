@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { getRandomChar } from '@/utils/core';
 import classnames from 'classnames';

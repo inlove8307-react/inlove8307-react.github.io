@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import classnames from 'classnames';
+import React, { useState, useRef, useEffect } from "react";
+import classnames from "classnames";
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
@@ -12,23 +12,13 @@ import UxButton from '@/components/base/UxButton';
 import UxGrid from '@/components/base/UxGrid';
 import UxIcon from '@/components/base/UxIcon';
 
-/**
- * <UxAlert>
- * [props]
- *
- * [event]
- *
- */
-
-const UxAlert = ({ ref, ...props }) => {
-	const baseClassName = 'ux-modal';
-
+const Popup = ({ ref, ...props }) => {
 	return (
 		<>
 			<UxSection className="header">
 				<UxArticle>
 					<UxContent>
-						<h4>{props.title || '알림'}</h4>
+						<h4>알림</h4>
 						<UxButton onClick={props.onClose}>
 							<UxIcon className="i303 w28" />
 						</UxButton>
@@ -38,7 +28,7 @@ const UxAlert = ({ ref, ...props }) => {
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
-						{props.message}
+						popup
 					</UxContent>
 				</UxArticle>
 			</UxSection>
@@ -60,4 +50,4 @@ const UxAlert = ({ ref, ...props }) => {
 	)
 };
 
-export default UxAlert;
+export default Popup;

@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 import Link from 'next/link'
 /* LAYOUT */
-import UxSection from "@/components/layout/UxSection";
-import UxArticle from "@/components/layout/UxArticle";
-import UxContent from "@/components/layout/UxContent";
+import UxSection from '@/components/layout/UxSection';
+import UxArticle from '@/components/layout/UxArticle';
+import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxGrid from "@/components/base/UxGrid";
 

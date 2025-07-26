@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from 'react';
 import { getArray, mergeProps } from '@/utils/core';
 import classnames from 'classnames';

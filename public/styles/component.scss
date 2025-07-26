@@ -29,7 +29,9 @@
 /* <UxSection> Main */
 .ux-main .ux-section {padding: 3.2rem 0;}
 /* <UxSection> Desktop */
-html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
+html.desktop .ux-section {margin: 0 auto; width: var(--desktop);}
+/* <UxSection> Modal */
+
 
 
 
@@ -91,31 +93,41 @@ html.desktop .ux-section {margin: 0 auto; width: 37.5rem;}
 
 /* <UxModal> */
 .ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
-.ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75); opacity: 0; transition: opacity .25s ease-in-out;}
-.ux-modal-layout {overflow: hidden; position: relative; background-color: var(--light0);}
-.ux-modal-header {display: flex; justify-content: space-between; padding: 1.6rem 1.6rem 0;}
-.ux-modal-main {padding: 1.6rem;}
-.ux-modal-footer {padding: 0 1.6rem 1.6rem;}
+.ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75);}
+.ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--light0);}
+/* <UxModal> Section */
+.ux-modal .ux-section.header {padding: 1.6rem 1.6rem 0;}
+.ux-modal .ux-section.main {padding: 1.6rem;}
+.ux-modal .ux-section.footer {padding: 0 1.6rem 1.6rem;}
+html.desktop .ux-modal .ux-section {width: 100%;}
+/* <UxModal> Content */
+.ux-modal .ux-section.header .ux-content {flex-direction: row; justify-content: space-between; align-items: flex-start;}
 /* <UxModal> Center */
 .ux-modal.center {display: flex; justify-content: center; align-items: center;}
-.ux-modal.center .ux-modal-layout {min-width: calc(100% - var(--space) * 2); border-radius: 1.6rem; opacity: 0; transition: opacity .25s ease-in-out;}
+.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: 1.6rem;}
+html.desktop .ux-modal.center {justify-content: center;}
+html.desktop .ux-modal.center .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Bottom */
-.ux-modal.bottom {display: flex; align-items: flex-end;}
-.ux-modal.bottom .ux-modal-layout {width: 100%; border-radius: 1.6rem 1.6rem 0 0; transform: translateY(100%); transition: transform .25s ease-in-out;}
+.ux-modal.bottom {display: flex; justify-content: center; align-items: flex-end;}
+.ux-modal.bottom .ux-modal-base {width: 100%; border-radius: 1.6rem 1.6rem 0 0;}
+html.desktop .ux-modal.bottom .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Full */
 .ux-modal.full {display: flex; justify-content: stretch; align-items: stretch;}
-.ux-modal.full .ux-modal-layout {display: flex; flex-direction: column; width: 100%; opacity: 0; transition: opacity .25s ease-in-out;}
-.ux-modal.full .ux-modal-main {flex-grow: 1;}
-/* <UxModal> Active */
-.ux-modal.active .ux-modal-backdrop {opacity: 1;}
-.ux-modal.active.center .ux-modal-layout {opacity: 1;}
-.ux-modal.active.bottom .ux-modal-layout {transform: translateY(0);}
-.ux-modal.active.full .ux-modal-layout {opacity: 1;}
+.ux-modal.full .ux-modal-base {display: flex; flex-direction: column; width: 100%;}
+.ux-modal.full .ux-section.main {flex-grow: 1;}
+html.desktop .ux-modal.full {justify-content: center;}
+html.desktop .ux-modal.full .ux-modal-base {width: var(--desktop);}
+/* <UxModal> Toast */
+.ux-modal.toast {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.toast .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
+/* <UxModal> Popover */
+.ux-modal.popover {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.popover .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
+/* <UxModal> Tooltip */
+.ux-modal.tooltip {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.tooltip .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
 /* <UxModal> z-index */
 .ux-modal {z-index: 10;}
-// .ux-modal-backdrop {z-index: 10;}
-// .ux-modal-layout {z-index: 10;}
-.ux-modals:has(.ux-modal) ~ .ux-container {height: 100%;}
 
 
 

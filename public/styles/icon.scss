@@ -9,6 +9,16 @@
 /* <UxIcon> */
 .ux-icon {--width: 1.6rem; --height: 1.6rem;}
 .ux-icon {flex-shrink: 0; display: inline-flex; width: var(--width); height: var(--height); mask-position: 50% 50%; mask-repeat: no-repeat; mask-size: contain; background-color: var(--dark3); vertical-align: top;}
+/* <UxIcon> Size */
+.ux-icon.w16 {--width: 1.6rem; --height: 1.6rem;}
+.ux-icon.w18 {--width: 1.8rem; --height: 1.8rem;}
+.ux-icon.w20 {--width: 2rem; --height: 2rem;}
+.ux-icon.w22 {--width: 2.2rem; --height: 2.2rem;}
+.ux-icon.w24 {--width: 2.4rem; --height: 2.4rem;}
+.ux-icon.w28 {--width: 2.8rem; --height: 2.8rem;}
+.ux-icon.w32 {--width: 3.2rem; --height: 3.2rem;}
+.ux-icon.w36 {--width: 3.6rem; --height: 3.6rem;}
+.ux-icon.w40 {--width: 4rem; --height: 4rem;}
 /* <UxIcon> Images 000 */
 // .ux-icon.i000 {mask-image: url('');}
 .ux-icon.i001 {mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>');}

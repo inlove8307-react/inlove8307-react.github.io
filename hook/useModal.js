@@ -5,6 +5,9 @@ import { getRandomChar } from '@/utils/core';
 import { RootContext } from '@/context/RootContext';
 import UxAlert from '@/components/base/UxAlert';
 import UxConfirm from '@/components/base/UxConfirm';
+import UxToast from '@/components/base/UxToast';
+import UxPopover from '@/components/base/UxPopover';
+import UxTooltip from '@/components/base/UxTooltip';
 
 const useModal = () => {
 	const {rootContext, setRootContext} = useContext(RootContext);
@@ -36,22 +39,74 @@ const useModal = () => {
 		});
 	};
 
-	const openModal = (Component, props, className) => {
-		return createModal(Component, { ...props, className });
+	const center = (Component, props) => {
+		return createModal(Component, {
+			...props,
+			className: 'center'
+		});
 	};
 
-	const openAlert = (message) => {
-		return createModal(UxAlert, { message, className: 'center' });
+	const bottom = (Component, props) => {
+		return createModal(Component, {
+			...props,
+			className: 'bottom'
+		});
 	};
 
-	const openConfirm = (message) => {
-		return createModal(UxConfirm, { message, className: 'center' });
+	const full = (Component, props) => {
+		return createModal(Component, {
+			...props,
+			className: 'full'
+		});
+	};
+
+	const alert = (message) => {
+		return createModal(UxAlert, {
+			className: 'center',
+			message,
+		});
+	};
+
+	const confirm = (message) => {
+		return createModal(UxConfirm, {
+			className: 'center',
+			message,
+		});
+	};
+
+	const toast = (message, props) => {
+		return createModal(UxToast, {
+			...props,
+			className: 'toast',
+			message,
+		});
+	};
+
+	const popover = (content, props) => {
+		return createModal(UxPopover, {
+			...props,
+			className: 'popover',
+			content,
+		});
+	};
+
+	const tooltip = (content, props) => {
+		return createModal(UxTooltip, {
+			...props,
+			className: 'tooltip',
+			content,
+		});
 	};
 
 	return {
-		openModal,
-		openAlert,
-		openConfirm,
+		center,
+		bottom,
+		full,
+		alert,
+		confirm,
+		toast,
+		popover,
+		tooltip,
 	};
 };
 
