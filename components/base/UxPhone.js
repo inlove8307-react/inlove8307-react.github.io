@@ -57,6 +57,7 @@ const UxPhone = ({ ref, ...props }) => {
 			style={props.style}
 		>
 			<UxInput
+				className="fix"
 				style={{ width: '2.8rem' }}
 				placeholder="010"
 				value={value1}
@@ -66,7 +67,7 @@ const UxPhone = ({ ref, ...props }) => {
 				onChange={(value) => setValue1(value)}
 			/>
 			<UxInput
-				className="dash"
+				className="fix dash"
 				style={{ width: '5rem' }}
 				placeholder="1234"
 				value={value2}

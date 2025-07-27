@@ -76,7 +76,7 @@ const UxInput = ({ ref, ...props }) => {
 	}, [props.value]);
 
 	return (
-		<label
+		<div
 			ref={ref}
 			className={caseClassName}
 			style={props.style}
@@ -140,7 +140,7 @@ const UxInput = ({ ref, ...props }) => {
 				</UxButton>
 			}
 			{props.children}
-		</label>
+		</div>
 	)
 };
 

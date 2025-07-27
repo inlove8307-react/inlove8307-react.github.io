@@ -58,6 +58,7 @@ const UxRrn = ({ ref, ...props }) => {
 			style={props.style}
 		>
 			<UxInput
+				className="fix"
 				style={{ width: '5.2rem'}}
 				placeholder="000000"
 				value={value1}

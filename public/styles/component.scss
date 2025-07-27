@@ -290,6 +290,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-input.disabled .ux-input-prefix,
 .ux-input.disabled .ux-input-suffix,
 .ux-input.disabled .ux-input-timer {color: var(--dark3);}
+/* <UxInput> Fix */
+.ux-input-group .ux-input.fix {flex-shrink: 0;}
 
 
 
@@ -345,7 +347,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxInputGroup> Disabled */
 .ux-input-group.disabled {background-color: var(--light1);}
 /* <UxInputGroup> Input */
-.ux-input-group .ux-input {flex-shrink: 0; padding: 0; box-shadow: none; background-color: transparent;}
+.ux-input-group .ux-input {padding: 0; box-shadow: none; background-color: transparent;}
+.ux-input-group .ux-input:focus-within {box-shadow: none;}
 .ux-input-group.readonly .ux-input,
 .ux-input-group.disabled .ux-input {background-color: transparent;}
 /* <UxInputGroup> Password */
@@ -585,11 +588,11 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-sort-list {--radius: 1.2rem;}
 .ux-sort-list {display: flex; flex-direction: column; gap: .8rem;}
 /* <UxSortItem> */
-.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); transition: var(--inset-transition);}
+.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); transition: var(--inset-transition); touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;}
 .ux-sort-base {display: flex; justify-content: center; align-items: center; padding: 1.2rem 0 1.2rem 1.6rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
 .ux-sort-base dt {font-weight: 600;}
 .ux-sort-base dd {color: var(--dark3);}
-.ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 4.8rem; height: 4.8rem; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;}
+.ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 4.8rem; height: 4.8rem;}
 /* <UxSortItem> Active */
 .ux-sort-item.active {box-shadow: var(--shadow); z-index: 1;}
 .ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-color-focus);}

@@ -61,6 +61,7 @@ const UxLrn = ({ ref, ...props }) => {
 			style={props.style}
 		>
 			<UxInput
+				className="fix"
 				style={{ width: '1.8rem' }}
 				placeholder="00"
 				value={value1}
@@ -70,7 +71,7 @@ const UxLrn = ({ ref, ...props }) => {
 				onChange={(value) => setValue1(value)}
 			/>
 			<UxInput
-				className="dash"
+				className="fix dash"
 				style={{ width: '3.2rem' }}
 				placeholder="00"
 				value={value2}
@@ -80,7 +81,7 @@ const UxLrn = ({ ref, ...props }) => {
 				onChange={(value) => setValue2(value)}
 			/>
 			<UxPassword
-				className="dash"
+				className="fix dash"
 				style={{ width: '8.2rem' }}
 				value={value3}
 				maxLength={6}

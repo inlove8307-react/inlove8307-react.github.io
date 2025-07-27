@@ -58,6 +58,7 @@ const UxBrn = ({ ref, ...props }) => {
 			style={props.style}
 		>
 			<UxInput
+				className="fix"
 				style={{ width: '2.8rem' }}
 				placeholder="000"
 				value={value1}
@@ -67,7 +68,7 @@ const UxBrn = ({ ref, ...props }) => {
 				onChange={(value) => setValue1(value)}
 			/>
 			<UxInput
-				className="dash"
+				className="fix dash"
 				style={{ width: '3.2rem' }}
 				placeholder="00"
 				value={value2}

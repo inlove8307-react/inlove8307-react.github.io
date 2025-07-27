@@ -32,6 +32,10 @@ const UxDatePickerPopup = ({ ref, ...props }) => {
 		props.onClose({ value });
 	};
 
+	useEffect(() => {
+		console.log(props);
+	}, []);
+
 	return (
 		<>
 			<UxSection className="header">
@@ -80,14 +84,56 @@ const UxDatePickerPopup = ({ ref, ...props }) => {
  */
 
 const UxDatePicker = ({ ref, ...props }) => {
-	const baseClassName = 'ux-datepicker';
-	const caseClassName = classnames(baseClassName, props.className);
+	const baseClassName = 'ux-input-group';
+	const caseClassName = classnames(baseClassName, props.className, {
+		valid: props.valid === true,
+		invalid: props.valid === false,
+		readonly: props.readonly,
+		disabled: props.disabled
+	});
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
+	const [fromValue, setFromValue] = useState(props.from?.value || '');
+	const [toValue, setToValue] = useState(props.to?.value || '');
 
-	const handleClick = async () => {
-		const result = await modal.bottom(UxDatePickerPopup, { value });
-		result.value && setValue(result.value);
+	const handleClick = async (role) => {
+		console.log(getProps(role));
+		const result = await modal.bottom(UxDatePickerPopup, {
+			...getProps(role)
+		});
+
+		switch (role) {
+			case 'once':
+				result.value && setValue(result.value);
+				break;
+			case 'from':
+				result.value && setFromValue(result.value);
+				break;
+			case 'to':
+				result.value && setToValue(result.value);
+				break;
+		}
+	};
+
+	const getProps = (role) => {
+		let object = {};
+
+		switch (role) {
+			case 'once':
+				Object.assign(object, props);
+				object.value = value;
+				break;
+			case 'from':
+				Object.assign(object, props.from);
+				object.value = fromValue;
+				break;
+			case 'to':
+				Object.assign(object, props.to);
+				object.value = toValue;
+				break;
+		}
+
+		return object;
 	};
 
 	useEffect(() => {
@@ -95,23 +141,79 @@ const UxDatePicker = ({ ref, ...props }) => {
 	}, [value]);
 
 	useEffect(() => {
+		console.log(fromValue, toValue);
+		props.onChange && props.onChange(fromValue, toValue);
+	}, [fromValue, toValue]);
+
+	useEffect(() => {
 		if (typeof props.value === 'string') {
 			setValue(props.value);
 		}
 	}, [props.value]);
 
+	useEffect(() => {
+		if (typeof props.from?.value === 'string') {
+			setFromValue(props.from?.value);
+		}
+	}, [props.from?.value]);
+
+	useEffect(() => {
+		if (typeof props.to?.value === 'string') {
+			setToValue(props.to?.value);
+		}
+	}, [props.to?.value]);
+
 	return (
 		<div className={caseClassName}>
-			<UxInput
-				placeholder={props.placeholder || 'YYYY.MM.DD'}
-				value={value}
-				valid={props.valid}
-				disabled={props.disabled}
-			>
-				<UxButton onClick={handleClick} disabled={props.disabled}>
-					<UxIcon className="i160" />
-				</UxButton>
-			</UxInput>
+			{
+				!props.from && !props.to &&
+				<UxInput
+					className="last"
+					placeholder={props.placeholder || 'YYYY.MM.DD'}
+					value={value}
+					valid={props.valid}
+					disabled={props.disabled}
+				>
+					<UxButton
+						disabled={props.disabled}
+						onClick={() => handleClick('once')}
+					>
+						<UxIcon className="i160" />
+					</UxButton>
+				</UxInput>
+			}
+			{
+				props.from && props.to &&
+				<>
+					<UxInput
+						placeholder={props.from?.placeholder || 'YYYY.MM.DD'}
+						value={fromValue}
+						valid={props.valid || props.from?.valid}
+						disabled={props.disabled || props.from?.disabled}
+					>
+						<UxButton
+							disabled={props.disabled || props.from?.disabled}
+							onClick={() => handleClick('from')}
+						>
+							<UxIcon className="i160" />
+						</UxButton>
+					</UxInput>
+					<UxInput
+						className="dash last"
+						placeholder={props.to?.placeholder || 'YYYY.MM.DD'}
+						value={toValue}
+						valid={props.valid || props.to?.valid}
+						disabled={props.disabled || props.to?.disabled}
+					>
+						<UxButton
+							disabled={props.disabled || props.to?.disabled}
+							onClick={() => handleClick('to')}
+						>
+							<UxIcon className="i160" />
+						</UxButton>
+					</UxInput>
+				</>
+			}
 		</div>
 	)
 };
