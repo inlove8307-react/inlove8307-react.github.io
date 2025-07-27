@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
+/* COMPONENT */
+import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxButton>
@@ -13,7 +15,14 @@ import classnames from 'classnames';
 
 const UxButton = ({ ref, ...props }) => {
 	const baseClassName = 'ux-button';
-	const caseClassName = classnames(baseClassName, props.className);
+	const caseClassName = classnames(baseClassName, props.className, {
+		valid: props.valid === true,
+		invalid: props.valid === false,
+		disabled: props.disabled,
+		select: props.select,
+		search: props.search,
+	});
+	const [icon, setIcon] = useState('');
 
 	const handleClick = (event) => {
 		props.onClick && props.onClick(event);
@@ -27,6 +36,14 @@ const UxButton = ({ ref, ...props }) => {
 		props.onBlur && props.onBlur(event);
 	}
 
+	useEffect(() => {
+		if (props.select) {
+			props.active
+				? setIcon('i001')
+				: setIcon('i002');
+		}
+	}, [props.active]);
+
 	return (
 		<button
 			ref={ref}
@@ -39,6 +56,8 @@ const UxButton = ({ ref, ...props }) => {
 			onBlur={handleBlur}
 		>
 			{props.children}
+			{props.select && <UxIcon className={classnames(icon, 'right')} />}
+			{props.search && <UxIcon className="i233 right" />}
 		</button>
 	)
 };

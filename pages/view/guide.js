@@ -39,6 +39,7 @@ import UxSortList from "@/components/base/UxSortList";
 import UxPopover from "@/components/base/UxPopover";
 import UxSelect from "@/components/base/UxSelect";
 import UxOption from "@/components/base/UxOption";
+import UxDatePicker from "@/components/base/UxDatePicker";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -54,6 +55,76 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxDatePicker</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxDatePicker - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker value="2025.07.01" />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Valid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										value="2025.07.01"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Invalid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										value="2025.07.01"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										value="2025.07.01"
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
@@ -111,6 +182,86 @@ export default function Sample() {
 											<span className="text">submit</span>
 										</UxButton>
 									</UxGrid>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Select</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										select
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Search</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										search
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Valid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										valid={true}
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Invalid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										valid={false}
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxButton - Disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										disabled
+									>
+										<span className="text">label</span>
+									</UxButton>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
@@ -747,7 +898,10 @@ export default function Sample() {
 									<h5>UxSelect - Value</h5>
 								</UxSubject>
 								<UxContent>
-									<UxSelect placeholder="선택해주세요" value="0">
+									<UxSelect
+										placeholder="선택해주세요"
+										value="0"
+									>
 										<UxOption value="0">OPTION01</UxOption>
 										<UxOption value="1">OPTION02</UxOption>
 										<UxOption value="2">OPTION03</UxOption>
@@ -762,7 +916,11 @@ export default function Sample() {
 									<h5>UxSelect - Valid</h5>
 								</UxSubject>
 								<UxContent>
-									<UxSelect placeholder="선택해주세요" value="0" valid={true}>
+									<UxSelect
+										placeholder="선택해주세요"
+										value="0"
+										valid={true}
+									>
 										<UxOption value="0">OPTION01</UxOption>
 										<UxOption value="1">OPTION02</UxOption>
 										<UxOption value="2">OPTION03</UxOption>
@@ -777,7 +935,11 @@ export default function Sample() {
 									<h5>UxSelect - Invalid</h5>
 								</UxSubject>
 								<UxContent>
-									<UxSelect placeholder="선택해주세요" value="0" valid={false}>
+									<UxSelect
+										placeholder="선택해주세요"
+										value="0"
+										valid={false}
+									>
 										<UxOption value="0">OPTION01</UxOption>
 										<UxOption value="1">OPTION02</UxOption>
 										<UxOption value="2">OPTION03</UxOption>
@@ -792,7 +954,11 @@ export default function Sample() {
 									<h5>UxSelect - Disabled</h5>
 								</UxSubject>
 								<UxContent>
-									<UxSelect placeholder="선택해주세요" value="0" disabled>
+									<UxSelect
+										placeholder="선택해주세요"
+										value="0"
+										disabled
+									>
 										<UxOption value="0">OPTION01</UxOption>
 										<UxOption value="1">OPTION02</UxOption>
 										<UxOption value="2">OPTION03</UxOption>

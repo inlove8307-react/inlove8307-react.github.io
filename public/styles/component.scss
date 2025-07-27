@@ -217,10 +217,12 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxButton> */
-.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; border-radius: var(--radius-form); transform: translateZ(0);}
-/* <UxButton> Disabled */
-.ux-button.disabled,
-.ux-button:disabled {opacity: 0.5; cursor: default; pointer-events: none;}
+.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; border-radius: var(--radius-form); transform: translateZ(0); transition: var(--inset-transition);}
+/* <UxButton> Align */
+.ux-button.left {justify-content: flex-start;}
+.ux-button.right {justify-content: flex-end;}
+.ux-button .left {margin-right: auto;}
+.ux-button .right {margin-left: auto;}
 /* <UxButton> Size */
 .ux-button.h3 {height: 4.8rem;}
 .ux-button.h4 {height: 4.4rem;}
@@ -236,6 +238,17 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-button.secondary {}
 /* <UxButton> Tertiary */
 .ux-button.tertiary {}
+/* <UxButton> Focus */
+.ux-button.outline:focus-within {box-shadow: var(--inset-focus);}
+/* <UxButton> Valid */
+.ux-button.outline.valid {box-shadow: var(--inset-valid);}
+.ux-button.outline.valid:focus-within {box-shadow: var(--inset-valid-focus);}
+/* <UxButton> Invalid */
+.ux-button.outline.invalid {box-shadow: var(--inset-invalid);}
+.ux-button.outline.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
+/* <UxButton> Disabled */
+.ux-button.outline.disabled {background-color: var(--light1); color: var(--dark3);}
+.ux-button:not(.outline).disabled {opacity: .5;}
 
 
 
@@ -354,18 +367,10 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 /* <UxSelect> */
 .ux-select {display: flex;}
-.ux-select .ux-button {flex-grow: 1;}
+.ux-select .ux-button {flex-grow: 1; color: var(--dark3);}
 .ux-select .ux-icon {margin-left: auto;}
-/* <UxSelect> Focus */
-.ux-select:focus-within .ux-button {box-shadow: var(--inset-focus);}
-/* <UxSelect> Valid */
-.ux-select.valid .ux-button {box-shadow: var(--inset-valid);}
-.ux-select.valid:focus-within .ux-button {box-shadow: var(--inset-valid-focus);}
-/* <UxSelect> Invalid */
-.ux-select.invalid .ux-button {box-shadow: var(--inset-invalid);}
-.ux-select.invalid:focus-within .ux-button {box-shadow: var(--inset-invalid-focus);}
-/* <UxSelect> Disabled */
-.ux-select.disabled .ux-button {background-color: var(--light1); color: var(--dark3); opacity: 1;}
+/* <UxSelect> Selected */
+.ux-select.selected .ux-button {color: var(--dark0);}
 /* <UxOptions> */
 .ux-modal .ux-section.options {padding: 1.6rem 0;}
 .ux-options {display: flex; flex-direction: column;}

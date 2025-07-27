@@ -139,6 +139,7 @@ const UxInput = ({ ref, ...props }) => {
 					{props.submit}
 				</UxButton>
 			}
+			{props.children}
 		</label>
 	)
 };

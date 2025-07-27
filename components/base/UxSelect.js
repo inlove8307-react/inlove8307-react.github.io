@@ -10,7 +10,6 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxOptions>
@@ -47,7 +46,7 @@ const UxOptions = ({ ref, ...props }) => {
 				</UxArticle>
 			</UxSection>
 		</>
-	)
+	);
 };
 
 /**
@@ -60,20 +59,16 @@ const UxOptions = ({ ref, ...props }) => {
 
 const UxSelect = ({ ref, ...props }) => {
 	const baseClassName = 'ux-select';
-	const caseClassName = classnames(baseClassName, props.className, {
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		disabled: props.disabled,
-	});
+	const caseClassName = classnames(baseClassName, props.className);
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
 	const [label, setLabel] = useState();
-	const [icon, setIcon] = useState('i002');
+	const [active, setActive] = useState(false);
 
 	const handleClick = async () => {
 		let result = {};
 
-		setIcon('i001');
+		setActive(true);
 
 		result = await modal.bottom(UxOptions, {
 			value,
@@ -83,7 +78,7 @@ const UxSelect = ({ ref, ...props }) => {
 		result.value && setValue(result.value);
 		result.label && setLabel(result.label);
 
-		setIcon('i002');
+		setActive(false);
 	};
 
 	useEffect(() => {
@@ -97,17 +92,21 @@ const UxSelect = ({ ref, ...props }) => {
 	}, [value]);
 
 	return (
-		<div className={caseClassName}>
+		<div className={classnames(caseClassName, { selected: value })}>
 			<UxButton
 				className="outline h3"
+				select
+				active={active}
+				valid={props.valid}
 				disabled={props.disabled}
 				onClick={handleClick}
 			>
-				{label || props.placeholder}
-				<UxIcon className={icon} />
+				<span className="text">
+					{label || props.placeholder}
+				</span>
 			</UxButton>
 		</div>
-	)
+	);
 };
 
 export default UxSelect;
