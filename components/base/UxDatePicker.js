@@ -109,7 +109,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 				disabled={props.disabled}
 			>
 				<UxButton onClick={handleClick} disabled={props.disabled}>
-					<UxIcon className="i237 w20" />
+					<UxIcon className="i160" />
 				</UxButton>
 			</UxInput>
 		</div>

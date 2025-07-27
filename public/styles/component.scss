@@ -217,7 +217,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxButton> */
-.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; border-radius: var(--radius-form); transform: translateZ(0); transition: var(--inset-transition);}
+.ux-button {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; transform: translateZ(0); transition: var(--inset-transition);}
 /* <UxButton> Align */
 .ux-button.left {justify-content: flex-start;}
 .ux-button.right {justify-content: flex-end;}
@@ -229,11 +229,11 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-button.h5 {height: 4rem;}
 .ux-button.h6 {height: 3.6rem;}
 /* <UxButton> Outline */
-.ux-button.outline {padding: 0 1.2rem; box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
+.ux-button.outline {padding: 0 1.2rem; border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
 /* <UxButton> Contain */
-.ux-button.contain {padding: 0 1.2rem; background-color: var(--light1);}
+.ux-button.contain {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--light1);}
 /* <UxButton> Primary */
-.ux-button.primary {padding: 0 1.2rem; background-color: var(--color1); color: var(--light0);}
+.ux-button.primary {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--color1); color: var(--light0);}
 /* <UxButton> Secondary */
 .ux-button.secondary {}
 /* <UxButton> Tertiary */
