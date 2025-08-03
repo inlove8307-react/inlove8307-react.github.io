@@ -32,7 +32,7 @@ import UxToggleGroup from "@/components/base/UxToggleGroup";
 import UxCard from "@/components/base/UxCard";
 import UxCardGroup from "@/components/base/UxCardGroup";
 import UxTab from "@/components/base/UxTab";
-import UxTabGroup from "@/components/base/UxTabGroup";
+import UxPanel from "@/components/base/UxPanel";
 import UxSlider from "@/components/base/UxSlider";
 import UxGrid from "@/components/base/UxGrid";
 import UxSortList from "@/components/base/UxSortList";
@@ -1652,24 +1652,24 @@ export default function Sample() {
 									<h5>UxTab - Default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxTabGroup>
-										<UxTab>
+									<UxTab>
+										<UxPanel>
 											<div data-role="summary">
 												summary01
 											</div>
 											<div data-role="details">
 												details01
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary02
 											</div>
 											<div data-role="details">
 												details02
 											</div>
-										</UxTab>
-									</UxTabGroup>
+										</UxPanel>
+									</UxTab>
 								</UxContent>
 							</UxArticle>
 
@@ -1680,24 +1680,24 @@ export default function Sample() {
 									<h5>UxTab - Linear</h5>
 								</UxSubject>
 								<UxContent>
-									<UxTabGroup linear>
-										<UxTab>
+									<UxTab linear>
+										<UxPanel>
 											<div data-role="summary">
 												summary01
 											</div>
 											<div data-role="details">
 												details01
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary02
 											</div>
 											<div data-role="details">
 												details02
 											</div>
-										</UxTab>
-									</UxTabGroup>
+										</UxPanel>
+									</UxTab>
 								</UxContent>
 							</UxArticle>
 
@@ -1708,51 +1708,51 @@ export default function Sample() {
 									<h5>UxTab - Scroll</h5>
 								</UxSubject>
 								<UxContent>
-									<UxTabGroup
+									<UxTab
 										linear
 										scroll
 									>
-										<UxTab>
+										<UxPanel>
 											<div data-role="summary">
 												summary01
 											</div>
 											<div data-role="details">
 												details01
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary02
 											</div>
 											<div data-role="details">
 												details02
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary03
 											</div>
 											<div data-role="details">
 												details03
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary04
 											</div>
 											<div data-role="details">
 												details04
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary05
 											</div>
 											<div data-role="details">
 												details05
 											</div>
-										</UxTab>
-									</UxTabGroup>
+										</UxPanel>
+									</UxTab>
 								</UxContent>
 							</UxArticle>
 
@@ -1763,27 +1763,27 @@ export default function Sample() {
 									<h5>UxTab - Full</h5>
 								</UxSubject>
 								<UxContent>
-									<UxTabGroup
+									<UxTab
 										className="full"
 										linear
 									>
-										<UxTab>
+										<UxPanel>
 											<div data-role="summary">
 												summary01
 											</div>
 											<div data-role="details">
 												details01
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary02
 											</div>
 											<div data-role="details">
 												details02
 											</div>
-										</UxTab>
-									</UxTabGroup>
+										</UxPanel>
+									</UxTab>
 								</UxContent>
 							</UxArticle>
 
@@ -1794,27 +1794,27 @@ export default function Sample() {
 									<h5>UxTab - Block</h5>
 								</UxSubject>
 								<UxContent>
-									<UxTabGroup
+									<UxTab
 										className="full block"
 										linear
 									>
-										<UxTab>
+										<UxPanel>
 											<div data-role="summary">
 												summary01
 											</div>
 											<div data-role="details">
 												details01
 											</div>
-										</UxTab>
-										<UxTab>
+										</UxPanel>
+										<UxPanel>
 											<div data-role="summary">
 												summary02
 											</div>
 											<div data-role="details">
 												details02
 											</div>
-										</UxTab>
-									</UxTabGroup>
+										</UxPanel>
+									</UxTab>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

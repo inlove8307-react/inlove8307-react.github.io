@@ -21,8 +21,6 @@ import UxIcon from '@/components/base/UxIcon';
  */
 
 const UxConfirm = ({ ref, ...props }) => {
-	const baseClassName = 'ux-modal';
-
 	return (
 		<>
 			<UxSection className="header">
