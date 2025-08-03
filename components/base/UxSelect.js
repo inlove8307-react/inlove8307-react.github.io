@@ -30,16 +30,21 @@ const UxOptions = ({ ref, ...props }) => {
 		<>
 			<UxSection className="options">
 				<UxArticle>
-					<UxContent>
+					<UxContent className="space">
 						<ul className={baseClassName}>
 							{
-								getArray(props.options).map((item, index) => (
-									<li key={index}>
-										{mergeProps(item, {
-											onClick: handleClick
-										})}
-									</li>
-								))
+								getArray(props.options).map((item, index) => {
+									const selected = item.props.value === props.value;
+
+									return (
+										<li key={index}>
+											{mergeProps(item, {
+												selected,
+												onClick: handleClick,
+											})}
+										</li>
+									);
+								})
 							}
 						</ul>
 					</UxContent>

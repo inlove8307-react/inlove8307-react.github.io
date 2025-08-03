@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxButton from '@/components/base/UxButton';
+import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxOption>
@@ -15,7 +15,7 @@ import UxButton from '@/components/base/UxButton';
 
 const UxOption = ({ ref, ...props }) => {
 	const baseClassName = 'ux-option';
-	const caseClassName = classnames(baseClassName, props.className);
+	const caseClassName = classnames(baseClassName, props.className, { selected: props.selected });
 
 	const handleClick = () => {
 		props.onClick && props.onClick(props.value, props.children);
@@ -23,12 +23,14 @@ const UxOption = ({ ref, ...props }) => {
 
 	return (
 		<div className={caseClassName}>
-			<UxButton
+			<button
+				type="button"
 				className={`${baseClassName}-button`}
 				onClick={handleClick}
 			>
 				{props.children}
-			</UxButton>
+			</button>
+			{props.selected && <UxIcon className="i128 right" />}
 		</div>
 	)
 };
