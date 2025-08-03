@@ -10,8 +10,8 @@ import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxInput from '@/components/base/UxInput';
 import UxIcon from '@/components/base/UxIcon';
-import UxCalendar from '@/components/base/UxCalendar';
 import UxButton from '@/components/base/UxButton';
+import UxCalendar from '@/components/base/UxCalendar';
 
 /**
  * <UxDatePickerPopup>
@@ -97,7 +97,6 @@ const UxDatePicker = ({ ref, ...props }) => {
 	const [toValue, setToValue] = useState(props.to?.value || '');
 
 	const handleClick = async (role) => {
-		console.log(getProps(role));
 		const result = await modal.bottom(UxDatePickerPopup, {
 			...getProps(role)
 		});
@@ -141,7 +140,6 @@ const UxDatePicker = ({ ref, ...props }) => {
 	}, [value]);
 
 	useEffect(() => {
-		console.log(fromValue, toValue);
 		props.onChange && props.onChange(fromValue, toValue);
 	}, [fromValue, toValue]);
 
