@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
@@ -18,9 +18,21 @@ const UxRadio = ({ ref, ...props }) => {
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
 	const [name, setName] = useState(props.name || '');
+	const labelRef = useRef();
 
 	const handleChange = () => {
+		setScroll();
 		props.onChange && props.onChange(props.value);
+	};
+
+	const setScroll = () => {
+		if (props.scroll) {
+			labelRef.current.scrollIntoView({
+				block: "nearest",
+				inline: "center",
+				behavior: "smooth"
+			});
+		}
 	};
 
 	useEffect(() => {
@@ -28,6 +40,12 @@ const UxRadio = ({ ref, ...props }) => {
 			setName(props.randomChar);
 		}
 	}, [props.randomChar]);
+
+	useEffect(() => {
+		if (!props.expanded && checked) {
+			setScroll();
+		}
+	}, [props.expanded]);
 
 	useEffect(() => {
 		setChecked(props.value === props.selected);
@@ -38,7 +56,9 @@ const UxRadio = ({ ref, ...props }) => {
 			ref={ref}
 			className={classnames(caseClassName, { checked })}
 		>
-			<label className={`${baseClassName}-base`}>
+			<label
+				ref={labelRef}
+				className={`${baseClassName}-base`}>
 				<input
 					type="radio"
 					className={`${baseClassName}-input`}

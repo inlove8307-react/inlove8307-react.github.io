@@ -1261,22 +1261,10 @@ export default function Sample() {
 									<h5>UxRadio - Default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCheckboxGroup className="column">
-										<UxRadioGroup
-											selected="value01"
-										>
-											<UxRadio
-												value="value01"
-											>
-												RADIO_01
-											</UxRadio>
-											<UxRadio
-												value="value02"
-											>
-												RADIO_02
-											</UxRadio>
-										</UxRadioGroup>
-									</UxCheckboxGroup>
+									<UxRadioGroup selected="0">
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+									</UxRadioGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -1287,23 +1275,76 @@ export default function Sample() {
 									<h5>UxRadio - Column</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCheckboxGroup className="column">
-										<UxRadioGroup
-											className="column"
-											selected="value01"
-										>
-											<UxRadio
-												value="value01"
-											>
-												RADIO_01
-											</UxRadio>
-											<UxRadio
-												value="value02"
-											>
-												RADIO_02
-											</UxRadio>
-										</UxRadioGroup>
-									</UxCheckboxGroup>
+									<UxRadioGroup
+										className="column"
+										selected="0"
+									>
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+									</UxRadioGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxRadio - Chip</h5>
+								</UxSubject>
+								<UxContent>
+									<UxRadioGroup
+										className="chip"
+										selected="0"
+									>
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+										<UxRadio value="2">RADIO_03</UxRadio>
+										<UxRadio value="3">RADIO_04</UxRadio>
+										<UxRadio value="4">RADIO_05</UxRadio>
+									</UxRadioGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxRadio - Scroll</h5>
+								</UxSubject>
+								<UxContent>
+									<UxRadioGroup
+										className="chip"
+										selected="0"
+										scroll
+									>
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+										<UxRadio value="2">RADIO_03</UxRadio>
+										<UxRadio value="3">RADIO_04</UxRadio>
+										<UxRadio value="4">RADIO_05</UxRadio>
+									</UxRadioGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxRadio - expand</h5>
+								</UxSubject>
+								<UxContent>
+									<UxRadioGroup
+										className="chip"
+										selected="0"
+										scroll
+										expand
+									>
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+										<UxRadio value="2">RADIO_03</UxRadio>
+										<UxRadio value="3">RADIO_04</UxRadio>
+										<UxRadio value="4">RADIO_05</UxRadio>
+									</UxRadioGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

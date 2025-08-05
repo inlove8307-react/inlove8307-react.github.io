@@ -422,10 +422,32 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxRadioGroup> */
-.ux-radio-group {display: flex; flex-wrap: wrap; gap: 1.6rem;}
+.ux-radio-group .ux-radio-scroll {display: flex; flex-wrap: wrap; gap: 1.6rem;}
 .ux-radio-group .ux-radio {flex-grow: 1;}
 /* <UxRadioGroup> Column */
-.ux-radio-group.column {flex-direction: column;}
+.ux-radio-group.column .ux-radio-scroll {flex-direction: column;}
+/* <UxRadioGroup> Gap */
+.ux-radio-group.gap8 .ux-radio-scroll {gap: .8rem;}
+.ux-radio-group.gap12 .ux-radio-scroll {gap: 1.2rem;}
+.ux-radio-group.gap16 .ux-radio-scroll {gap: 1.6rem;}
+/* <UxRadioGroup> Chip */
+.ux-radio-group.chip .ux-radio-scroll {gap: .8rem;}
+.ux-radio-group.chip .ux-radio {flex-grow: initial; height: 3.2rem; border-radius: 1.6rem; background-color: var(--light1);}
+.ux-radio-group.chip .ux-radio-base {padding: 0 1.2rem; width: 100%; height: 100%;}
+.ux-radio-group.chip .ux-radio-label {line-height: 1;}
+.ux-radio-group.chip .ux-radio .ux-icon {display: none;}
+/* <UxRadioGroup> Chip Checked */
+.ux-radio-group.chip .ux-radio.checked {background-color: var(--color1); color: var(--light0);}
+/* <UxRadioGroup> Scroll */
+.ux-radio-group.scroll .ux-radio-scroll {flex-wrap: initial; overflow-x: auto;}
+.ux-radio-group.scroll .ux-radio-scroll::-webkit-scrollbar {display: none;}
+/* <UxRadioGroup> Expand */
+.ux-radio-group.scroll.expand {display: flex;}
+.ux-radio-group.scroll.expand .ux-radio-scroll {width: calc(100% - 3.2rem);}
+.ux-radio-group.scroll.expand .ux-radio-expand {flex-shrink: 0;}
+.ux-radio-group.scroll.expand .ux-radio-expand {display: inline-flex; justify-content: center; align-items: center; width: 3.2rem; height: 3.2rem;}
+/* <UxRadioGroup> Expand Expanded */
+.ux-radio-group.scroll.expand.expanded .ux-radio-scroll {flex-wrap: wrap;}
 
 
 

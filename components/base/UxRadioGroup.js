@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { getArray, mergeProps, getRandomChar } from '@/utils/core';
 import classnames from 'classnames';
+/* COMPONENT */
+import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxRadioGroup>
@@ -13,12 +15,17 @@ import classnames from 'classnames';
  */
 
 const UxRadioGroup = ({ ref, ...props }) => {
-	const baseClassName = 'ux-radio-group';
-	const caseClassName = classnames(baseClassName, props.className);
+	const baseClassName = 'ux-radio';
 	const [selected, setSelected] = useState(props.selected || null);
+	const [expanded, setExpanded] = useState(props.expanded || false);
 
 	const handleChange = (value) => {
 		setSelected(value);
+	};
+
+	const handleClick = () => {
+		setExpanded(!expanded);
+		props.onClick && props.onClick();
 	};
 
 	useEffect(() => {
@@ -34,16 +41,34 @@ const UxRadioGroup = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={caseClassName}
+			className={classnames(`${baseClassName}-group`, props.className, {
+				scroll: props.scroll,
+				expand: props.expand,
+				expanded: expanded
+			})}
 		>
+			<div className={`${baseClassName}-scroll`}>
+				{
+					getArray(props.children).map((item, index) => mergeProps(item, {
+						key: index,
+						index,
+						selected,
+						expanded,
+						scroll: props.scroll,
+						randomChar: getRandomChar(),
+						onChange: handleChange
+					}))
+				}
+			</div>
 			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-					index,
-					selected,
-					randomChar: getRandomChar(),
-					onChange: handleChange
-				}))
+				props.expand &&
+				<button
+					type="button"
+					className={`${baseClassName}-expand`}
+					onClick={handleClick}
+				>
+					<UxIcon className={expanded ? 'i001' : 'i002'} />
+				</button>
 			}
 		</div>
 	);
