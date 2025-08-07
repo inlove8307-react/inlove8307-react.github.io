@@ -439,13 +439,25 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxRadioGroup> Chip Checked */
 .ux-radio-group.chip .ux-radio.checked {background-color: var(--color1); color: var(--light0);}
 /* <UxRadioGroup> Scroll */
+.ux-radio-group.scroll {position: relative;}
+.ux-radio-group.scroll::before,
+.ux-radio-group.scroll::after {content: ''; position: absolute; top: 0; z-index: 1; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
+.ux-radio-group.scroll::before {left: 0; background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
+.ux-radio-group.scroll::after {right: 0; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
+.ux-radio-group.scroll:not(.before)::before {opacity: 1;}
+.ux-radio-group.scroll:not(.after)::after {opacity: 1;}
 .ux-radio-group.scroll .ux-radio-scroll {flex-wrap: initial; overflow-x: auto;}
 .ux-radio-group.scroll .ux-radio-scroll::-webkit-scrollbar {display: none;}
+.ux-radio-group.scroll .ux-radio-before,
+.ux-radio-group.scroll .ux-radio-after {flex-shrink: 0; width: .1rem; height: .1rem;}
+.ux-radio-group.scroll .ux-radio-before {margin-right: -.9rem;}
+.ux-radio-group.scroll .ux-radio-after {margin-left: -.9rem;}
 /* <UxRadioGroup> Expand */
 .ux-radio-group.scroll.expand {display: flex;}
 .ux-radio-group.scroll.expand .ux-radio-scroll {width: calc(100% - 3.2rem);}
 .ux-radio-group.scroll.expand .ux-radio-expand {flex-shrink: 0;}
 .ux-radio-group.scroll.expand .ux-radio-expand {display: inline-flex; justify-content: center; align-items: center; width: 3.2rem; height: 3.2rem;}
+.ux-radio-group.scroll.expand:not(.after)::after {right: 3.2rem; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 75%);}
 /* <UxRadioGroup> Expand Expanded */
 .ux-radio-group.scroll.expand.expanded .ux-radio-scroll {flex-wrap: wrap;}
 

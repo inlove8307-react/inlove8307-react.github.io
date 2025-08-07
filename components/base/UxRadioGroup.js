@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, use } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getArray, mergeProps, getRandomChar } from '@/utils/core';
+import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
@@ -18,6 +19,8 @@ const UxRadioGroup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-radio';
 	const [selected, setSelected] = useState(props.selected || null);
 	const [expanded, setExpanded] = useState(props.expanded || false);
+	const [beforeRef, beforeInView] = useInView();
+	const [afterRef, afterInView] = useInView();
 
 	const handleChange = (value) => {
 		setSelected(value);
@@ -43,11 +46,20 @@ const UxRadioGroup = ({ ref, ...props }) => {
 			ref={ref}
 			className={classnames(`${baseClassName}-group`, props.className, {
 				scroll: props.scroll,
+				before: beforeInView,
+				after: afterInView,
 				expand: props.expand,
 				expanded: expanded
 			})}
 		>
 			<div className={`${baseClassName}-scroll`}>
+				{
+					props.scroll &&
+					<span
+						ref={beforeRef}
+						className={`${baseClassName}-before`}
+					/>
+				}
 				{
 					getArray(props.children).map((item, index) => mergeProps(item, {
 						key: index,
@@ -58,6 +70,13 @@ const UxRadioGroup = ({ ref, ...props }) => {
 						randomChar: getRandomChar(),
 						onChange: handleChange
 					}))
+				}
+				{
+					props.scroll &&
+					<span
+						ref={afterRef}
+						className={`${baseClassName}-after`}
+					/>
 				}
 			</div>
 			{
