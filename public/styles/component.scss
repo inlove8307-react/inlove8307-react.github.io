@@ -432,7 +432,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-radio-group.gap16 .ux-radio-scroll {gap: 1.6rem;}
 /* <UxRadioGroup> Chip */
 .ux-radio-group.chip .ux-radio-scroll {gap: .8rem;}
-.ux-radio-group.chip .ux-radio {flex-grow: initial; height: 3.2rem; border-radius: 1.6rem; background-color: var(--light1);}
+.ux-radio-group.chip .ux-radio {flex-grow: initial; height: 3.2rem; border-radius: 1.6rem; background-color: var(--light1); transition: background-color .1s ease-in-out;}
 .ux-radio-group.chip .ux-radio-base {padding: 0 1.2rem; width: 100%; height: 100%;}
 .ux-radio-group.chip .ux-radio-label {line-height: 1;}
 .ux-radio-group.chip .ux-radio .ux-icon {display: none;}
@@ -468,7 +468,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-switch {display: flex; align-items: center; gap: .8rem;}
 .ux-switch .ux-switch-base {display: inline-flex; align-items: center; position: relative; padding: var(--gap); width: calc((var(--size) + var(--gap)) * 2); height: calc(var(--size) + var(--gap) * 2); border-radius: calc((var(--size) + var(--gap) * 2) / 2); background-color: var(--light1); transition: background-color .15s ease-in-out;}
 .ux-switch .ux-switch-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-switch .ux-switch-ball {position: absolute; z-index: 1; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--light0); transition: left .15s ease-in-out;}
+.ux-switch .ux-switch-ball {position: absolute; z-index: 1; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--light0); box-shadow: var(--shadow); transition: left .15s ease-in-out;}
 .ux-switch .ux-switch-base::before,
 .ux-switch .ux-switch-base::after {width: var(--size); font-size: 1.4rem; text-align: center; opacity: 0; transition: opacity .15s ease-in-out;}
 .ux-switch .ux-switch-base::before {content: 'ON'; margin-right: auto; color: var(--light0);}
@@ -482,11 +482,12 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 /* <UxToggle> */
 .ux-toggle {display: flex; height: var(--height-form);}
-.ux-toggle .ux-toggle-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); width: 100%; height: 100%; cursor: pointer;}
+.ux-toggle .ux-toggle-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); width: 100%; height: 100%; cursor: pointer; transition: var(--inset-transition);}
+.ux-toggle .ux-toggle-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: var(--radius-form); transform: translate(-50%, -50%) translateZ(0); transition: var(--inset-transition);}
 .ux-toggle .ux-toggle-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
 .ux-toggle .ux-toggle-label {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 /* <UxToggle> Checked */
-.ux-toggle.checked .ux-toggle-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: var(--radius-form); box-shadow: var(--inset-color-focus); transform: translate(-50%, -50%) translateZ(0);}
+.ux-toggle.checked .ux-toggle-base::before {box-shadow: var(--inset-color-focus);}
 
 
 
@@ -556,8 +557,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxTab> */
 .ux-tab {width: 100%; background-color: var(--light0)}
 .ux-tab .ux-tab-base {overflow: hidden}
-.ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative;}
-.ux-tab .ux-tab-list {display: flex; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1);}
+.ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1);}
+.ux-tab .ux-tab-list {display: flex; position: relative;}
 .ux-tab .ux-tab-button {flex-shrink: 0; position: relative; padding: .8rem 1.6rem; box-shadow: inset 0 -.1rem 0 transparent; color: var(--dark3); transition: box-shadow .1s ease-in-out;}
 .ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--color1); color: var(--color1);}
 /* <UxTab> Linear */
@@ -569,7 +570,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxTab> Full */
 .ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
 /* <UxTab> Block */
-.ux-tab.block .ux-tab-list {border-radius: 1.2rem; background-color: var(--light1); box-shadow: initial;}
+.ux-tab.block .ux-tab-scroll {box-shadow: initial;}
+.ux-tab.block .ux-tab-list {border-radius: 1.2rem; background-color: var(--light1);}
 .ux-tab.block .ux-tab-linear {display: flex; padding: .4rem; height: 100%; background-color: transparent; box-shadow: initial;}
 .ux-tab.block .ux-tab-linear::after {content: ''; width: 100%; height: 100%; border-radius: .8rem; background-color: var(--light0);}
 /* <UxPanel> */
