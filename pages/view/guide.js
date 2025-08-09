@@ -42,6 +42,7 @@ import UxOption from "@/components/base/UxOption";
 import UxDatePicker from "@/components/base/UxDatePicker";
 import UxMonthPicker from "@/components/base/UxMonthPicker";
 import UxYearPicker from "@/components/base/UxYearPicker";
+import UxSwitch from "@/components/base/UxSwitch";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -1244,6 +1245,60 @@ export default function Sample() {
 											CHECKBOX_02
 										</UxCheckbox>
 									</UxCheckboxGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxSwitch</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSwitch - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSwitch />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSwitch - Checked</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSwitch checked />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSwitch - Label Left</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSwitch>
+										<span data-role="left">label</span>
+									</UxSwitch>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxSwitch - Label Right</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSwitch>
+										<span data-role="right">label</span>
+									</UxSwitch>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
