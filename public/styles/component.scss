@@ -599,6 +599,26 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
+/* <UxPagination> */
+.ux-pagination {--size: 2.4rem; --gap: .4rem;}
+.ux-pagination .ux-pagination-base {display: flex; justify-content: center; align-items: center;}
+/* <UxPagination> */
+.ux-pagination .ux-pagination-page {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 calc(var(--gap)); height: var(--size); color: var(--light3);}
+/* <UxPagination> Selected */
+.ux-pagination .ux-pagination-page.selected {font-weight: 800; color: var(--color1); pointer-events: none;}
+/* <UxPagination> Disabled */
+.ux-pagination .ux-pagination-first,
+.ux-pagination .ux-pagination-prev,
+.ux-pagination .ux-pagination-next,
+.ux-pagination .ux-pagination-last {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: 2rem; height: var(--size);}
+/* <UxPagination> Disabled */
+.ux-pagination .ux-pagination-first.disabled,
+.ux-pagination .ux-pagination-prev.disabled,
+.ux-pagination .ux-pagination-next.disabled,
+.ux-pagination .ux-pagination-last.disabled {opacity: 0.5; pointer-events: none;}
+
+
+
 /* <UxCalendar> */
 .ux-calendar {}
 .ux-calendar-base {}

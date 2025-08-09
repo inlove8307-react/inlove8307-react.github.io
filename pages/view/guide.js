@@ -43,6 +43,7 @@ import UxDatePicker from "@/components/base/UxDatePicker";
 import UxMonthPicker from "@/components/base/UxMonthPicker";
 import UxYearPicker from "@/components/base/UxYearPicker";
 import UxSwitch from "@/components/base/UxSwitch";
+import UxPagination from "@/components/base/UxPagination";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -1981,6 +1982,29 @@ export default function Sample() {
 											<p>POPOVER CONTENT</p>
 										</UxPopover>
 									</UxGrid>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxPagination</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxPagination - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPagination
+										page={1}
+										unit={5}
+										total={35}
+										onChange={(page) => {console.log("UxPagination", page);}}
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
