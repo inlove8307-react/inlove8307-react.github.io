@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxArticle = ({ ref, ...props }) => {
-	const originClassName = 'ux-article';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-article';
+	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
-		<article className={mixinClassName}>
+		<article className={caseClassName}>
 			{props.children}
 		</article>
 	)

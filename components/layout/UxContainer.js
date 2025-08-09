@@ -1,15 +1,28 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { useInView } from 'react-intersection-observer';
 import classnames from "classnames";
 
 const UxContainer = ({ ref, ...props }) => {
-	const originClassName = 'ux-container';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-container';
+	const [beforeRef, beforeInView] = useInView();
+	const [afterRef, afterInView] = useInView();
 
 	return (
-		<div className={mixinClassName}>
+		<div className={classnames(baseClassName, props.className, {
+			before: beforeInView,
+			after: afterInView,
+		})}>
+			<span
+				ref={beforeRef}
+				className={`${baseClassName}-before`}
+			/>
 			{props.children}
+			<span
+				ref={afterRef}
+				className={`${baseClassName}-after`}
+			/>
 		</div>
 	)
 };

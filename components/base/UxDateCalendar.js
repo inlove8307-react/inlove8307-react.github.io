@@ -16,7 +16,7 @@ import UxIcon from "@/components/base/UxIcon";
  */
 
 const UxDateCalendar = ({ ref, ...props }) => {
-	const originClassName = 'ux-calendar';
+	const baseClassName = 'ux-calendar';
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
 	const [data, setData] = useState([]);
@@ -88,14 +88,14 @@ const UxDateCalendar = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={`${originClassName}-date`}
+			className={`${baseClassName}-date`}
 		>
 			{
 				weeks.map((item, index) => {
 					return (
 						<span
 							key={index}
-							className={`${originClassName}-week`}
+							className={`${baseClassName}-week`}
 						>
 							{item}
 						</span>
@@ -116,7 +116,7 @@ const UxDateCalendar = ({ ref, ...props }) => {
 						<button
 							key={index}
 							type="button"
-							className={classnames(`${originClassName}-button`, {
+							className={classnames(`${baseClassName}-button`, {
 								disabled,
 								selected,
 								today: isToday,
@@ -126,12 +126,12 @@ const UxDateCalendar = ({ ref, ...props }) => {
 							onClick={() => handleClick(item)}
 						>
 							<span
-								className={classnames(`${originClassName}-label`)}
+								className={classnames(`${baseClassName}-label`)}
 							>
 								{item.date}
 							</span>
 							<span
-								className={classnames(`${originClassName}-icons`)}
+								className={classnames(`${baseClassName}-icons`)}
 							>
 								{icons?.map((item, index) => {
 									if (index < 2) {

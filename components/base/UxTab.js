@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { getArray, getRole, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
 
@@ -13,13 +14,11 @@ import classnames from 'classnames';
  */
 
 const UxTab = ({ ref, ...props }) => {
-	const originClassName = "ux-tab";
-	const mixinClassName = classnames(originClassName, props.className, {
-		linear: props.linear,
-		scroll: props.scroll
-	});
+	const baseClassName = "ux-tab";
 	const [selected, setSelected] = useState(props.selected || 0);
 	const [isChange, setIsChange] = useState(false);
+	const [beforeRef, beforeInView] = useInView();
+	const [afterRef, afterInView] = useInView();
 	const tabsRef = useRef([]);
 	const linearRef = useRef();
 	const scrollRef = useRef();
@@ -64,13 +63,22 @@ const UxTab = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={mixinClassName}>
-			<div className={`${originClassName}-base`}>
+			className={classnames(baseClassName, props.className, {
+				linear: props.linear,
+				scroll: props.scroll,
+				before: beforeInView,
+				after: afterInView,
+			})}>
+			<div className={`${baseClassName}-base`}>
 				<div
 					ref={scrollRef}
-					className={`${originClassName}-scroll`}
+					className={`${baseClassName}-scroll`}
 				>
-					<div className={`${originClassName}-list`}>
+					<div className={`${baseClassName}-list`}>
+						<span
+							ref={beforeRef}
+							className={`${baseClassName}-before`}
+						/>
 						{summary.map((item, index) => {
 							const active = selected === index;
 
@@ -78,7 +86,7 @@ const UxTab = ({ ref, ...props }) => {
 								<button
 									ref={(element) => tabsRef.current[index] = element}
 									key={index}
-									className={classnames(`${originClassName}-button`, {active})}
+									className={classnames(`${baseClassName}-button`, {active})}
 									onClick={(event) => handleClick(event, index)}
 								>
 									{item.props.children}
@@ -89,9 +97,13 @@ const UxTab = ({ ref, ...props }) => {
 							props.linear &&
 							<span
 								ref={linearRef}
-								className={`${originClassName}-linear`}
+								className={`${baseClassName}-linear`}
 							/>
 						}
+						<span
+							ref={afterRef}
+							className={`${baseClassName}-after`}
+						/>
 					</div>
 				</div>
 				{getArray(props.children).map((item, index) => {

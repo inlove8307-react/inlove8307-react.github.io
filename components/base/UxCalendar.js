@@ -20,8 +20,8 @@ import UxIcon from "@/components/base/UxIcon";
  */
 
 const UxCalendar = ({ ref, ...props }) => {
-	const originClassName = 'ux-calendar';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-calendar';
+	const caseClassName = classnames(baseClassName, props.className);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
 	const [isYear, setIsYear] = useState(false);
@@ -69,20 +69,20 @@ const UxCalendar = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={mixinClassName}
+			className={caseClassName}
 		>
-			<div className={`${originClassName}-base`}>
-				<div className={`${originClassName}-header`}>
+			<div className={`${baseClassName}-base`}>
+				<div className={`${baseClassName}-header`}>
 					<button
 						type="button"
-						className={classnames(`${originClassName}-prev`)}
+						className={classnames(`${baseClassName}-prev`)}
 						onClick={handlePrev}
 					>
 						<UxIcon className="i004" />
 					</button>
 					<button
 						type="button"
-						className={classnames(`${originClassName}-select`)}
+						className={classnames(`${baseClassName}-select`)}
 						onClick={handleYear}
 					>
 						<span>{`${getYear(rawDate(date))}년`}</span>
@@ -90,7 +90,7 @@ const UxCalendar = ({ ref, ...props }) => {
 					</button>
 					<button
 						type="button"
-						className={classnames(`${originClassName}-select`)}
+						className={classnames(`${baseClassName}-select`)}
 						onClick={handleMonth}
 					>
 						<span>{`${getMonth(rawDate(date)) + 1}월`}</span>
@@ -98,13 +98,13 @@ const UxCalendar = ({ ref, ...props }) => {
 					</button>
 					<button
 						type="button"
-						className={classnames(`${originClassName}-next`)}
+						className={classnames(`${baseClassName}-next`)}
 						onClick={handleNext}
 					>
 						<UxIcon className="i003" />
 					</button>
 				</div>
-				<div className={`${originClassName}-content`}>
+				<div className={`${baseClassName}-content`}>
 					{
 						!isYear && !isMonth &&
 						<UxDateCalendar

@@ -14,7 +14,7 @@ import { format, set, getMonth } from "date-fns";
  */
 
 const UxMonthCalendar = ({ ref, ...props }) => {
-	const originClassName = 'ux-calendar';
+	const baseClassName = 'ux-calendar';
 	const [data, setData] = useState([]);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
@@ -47,7 +47,7 @@ const UxMonthCalendar = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={`${originClassName}-month`}
+			className={`${baseClassName}-month`}
 		>
 			{
 				data.map((item, index) => {
@@ -57,11 +57,11 @@ const UxMonthCalendar = ({ ref, ...props }) => {
 						<button
 							key={index}
 							type="button"
-							className={classnames(`${originClassName}-button`, {selected})}
+							className={classnames(`${baseClassName}-button`, {selected})}
 							onClick={() => handleClick(item)}
 						>
 							<span
-								className={`${originClassName}-label`}
+								className={`${baseClassName}-label`}
 							>
 								{`${item}월`}
 							</span>

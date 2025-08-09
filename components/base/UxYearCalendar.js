@@ -14,7 +14,7 @@ import { format, set, getYear } from "date-fns";
  */
 
 const UxYearCalendar = ({ ref, ...props }) => {
-	const originClassName = 'ux-calendar';
+	const baseClassName = 'ux-calendar';
 	const [data, setData] = useState([]);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
@@ -72,7 +72,7 @@ const UxYearCalendar = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={`${originClassName}-year`}
+			className={`${baseClassName}-year`}
 		>
 			{
 				data.map((item, index) => {
@@ -87,12 +87,12 @@ const UxYearCalendar = ({ ref, ...props }) => {
 								}
 							}}
 							type="button"
-							className={classnames(`${originClassName}-button`, {selected})}
+							className={classnames(`${baseClassName}-button`, {selected})}
 							style={{width: `${100 / col}%`}}
 							onClick={() => handleClick(item)}
 						>
 							<span
-								className={`${originClassName}-label`}
+								className={`${baseClassName}-label`}
 							>
 								{`${item}년`}
 							</span>

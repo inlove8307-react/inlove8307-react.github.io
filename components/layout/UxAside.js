@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxAside = ({ ref, ...props }) => {
-	const originClassName = 'ux-aside';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-aside';
+	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
-		<aside className={mixinClassName}>
+		<aside className={caseClassName}>
 			{props.children}
 		</aside>
 	)

@@ -8,11 +8,11 @@ import UxArticle from '@/components/layout/UxArticle';
 import UxContent from '@/components/layout/UxContent';
 
 const UxFooter = ({ ref, ...props }) => {
-	const originClassName = 'ux-footer';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-footer';
+	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
-		<footer className={mixinClassName}>
+		<footer className={caseClassName}>
 			<UxSection>
 				<UxArticle>
 					<UxContent>

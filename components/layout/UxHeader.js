@@ -11,11 +11,11 @@ import UxContent from '@/components/layout/UxContent';
 import UxGrid from "@/components/base/UxGrid";
 
 const UxHeader = ({ ref, ...props }) => {
-	const originClassName = 'ux-header';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-header';
+	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
-		<header className={mixinClassName}>
+		<header className={caseClassName}>
 			<UxSection>
 				<UxArticle>
 					<UxContent className="row space">

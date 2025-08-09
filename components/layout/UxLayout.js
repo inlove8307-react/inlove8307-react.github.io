@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import classnames from "classnames";
 
 const UxLayout = ({ ref, ...props }) => {
-	const originClassName = 'ux-layout';
-	const mixinClassName = classnames(originClassName, props.className);
+	const baseClassName = 'ux-layout';
+	const caseClassName = classnames(baseClassName, props.className);
 
 	return (
-		<div className={mixinClassName}>
+		<div className={caseClassName}>
 			{props.children}
 		</div>
 	)
