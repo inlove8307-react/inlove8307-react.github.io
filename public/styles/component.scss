@@ -431,9 +431,9 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-radio-group.gap12 .ux-radio-scroll {gap: 1.2rem;}
 .ux-radio-group.gap16 .ux-radio-scroll {gap: 1.6rem;}
 /* <UxRadioGroup> Chip */
-.ux-radio-group.chip .ux-radio-scroll {gap: .8rem;}
-.ux-radio-group.chip .ux-radio {flex-grow: initial; height: 3.2rem; border-radius: 1.6rem; background-color: var(--light1); transition: background-color .1s ease-in-out;}
-.ux-radio-group.chip .ux-radio-base {padding: 0 1.2rem; width: 100%; height: 100%;}
+.ux-radio-group.chip .ux-radio-scroll {--height: 3.2rem; gap: .8rem;}
+.ux-radio-group.chip .ux-radio {flex-grow: initial; height: var(--height); border-radius: calc(var(--height) / 2); background-color: var(--light1); transition: background-color .1s ease-in-out;}
+.ux-radio-group.chip .ux-radio-base {padding: 0 calc(var(--height) / 3); width: 100%; height: 100%;}
 .ux-radio-group.chip .ux-radio-label {line-height: 1;}
 .ux-radio-group.chip .ux-radio .ux-icon {display: none;}
 /* <UxRadioGroup> Chip Checked */
