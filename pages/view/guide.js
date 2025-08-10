@@ -44,6 +44,7 @@ import UxMonthPicker from "@/components/base/UxMonthPicker";
 import UxYearPicker from "@/components/base/UxYearPicker";
 import UxSwitch from "@/components/base/UxSwitch";
 import UxPagination from "@/components/base/UxPagination";
+import UxTextarea from "@/components/base/UxTextarea";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -438,6 +439,112 @@ export default function Sample() {
 										maxLength={7}
 										value="1234567"
 										clear
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxTextarea</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Fluid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										rows="1"
+										fluid
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - MaxLength</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										maxLength={100}
+										fluid
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Valid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Invalid</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxTextarea - Disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
 										disabled
 									/>
 								</UxContent>
