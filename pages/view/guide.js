@@ -45,6 +45,7 @@ import UxYearPicker from "@/components/base/UxYearPicker";
 import UxSwitch from "@/components/base/UxSwitch";
 import UxPagination from "@/components/base/UxPagination";
 import UxTextarea from "@/components/base/UxTextarea";
+import UxFile from "@/components/base/UxFile";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -547,6 +548,41 @@ export default function Sample() {
 										placeholder="내용을 입력해주세요."
 										disabled
 									/>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxFile</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxFile - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxFile
+										placeholder="내용을 입력해주세요."
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxFile - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxFile>
+										<UxButton>
+											파일첨부
+										</UxButton>
+									</UxFile>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
