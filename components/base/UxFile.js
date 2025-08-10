@@ -14,10 +14,8 @@ import classnames from 'classnames';
 
 const UxFile = ({ ref, ...props }) => {
 	const baseClassName = "ux-file";
-	const caseClassName = classnames(baseClassName, props.className, { default: !props.children });
 	const fileRef = useRef();
 	const [path, setPath] = useState("");
-	const children = useRef();
 
 	const handleClick = (event) => {
 		fileRef.current.click();
@@ -30,14 +28,10 @@ const UxFile = ({ ref, ...props }) => {
 		props.onChange && props.onChange(event);
 	}
 
-	useEffect(() => {
-		if (React.isValidElement(props.children)) {
-			children.current = mergeProps(props.children, { onClick: handleClick });
-		}
-	}, []);
-
 	return (
-		<div className={caseClassName}>
+		<div className={classnames(baseClassName, props.className, {
+			slot: props.children
+		})}>
 			<div className={`${baseClassName}-base`}>
 				<input
 					type="file"
@@ -50,16 +44,21 @@ const UxFile = ({ ref, ...props }) => {
 				</span>
 			</div>
 			{
-				!children.current &&
+				!props.children &&
 				<button
 					type="button"
 					className={`${baseClassName}-button`}
 					onClick={handleClick}
 				>
-					파일
+					<span className="text">파일</span>
 				</button>
 			}
-			{children.current && children.current}
+			{
+				props.children &&
+				mergeProps(props.children, {
+					onClick: handleClick
+				})
+			}
 		</div>
 	);
 };

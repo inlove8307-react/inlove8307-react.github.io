@@ -46,6 +46,7 @@ import UxSwitch from "@/components/base/UxSwitch";
 import UxPagination from "@/components/base/UxPagination";
 import UxTextarea from "@/components/base/UxTextarea";
 import UxFile from "@/components/base/UxFile";
+import UxIcon from "@/components/base/UxIcon";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -566,7 +567,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxFile
-										placeholder="내용을 입력해주세요."
+										placeholder="파일을 선택해주세요."
 									/>
 								</UxContent>
 							</UxArticle>
@@ -575,12 +576,13 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxFile - Default</h5>
+									<h5>UxFile - Slot</h5>
 								</UxSubject>
 								<UxContent>
 									<UxFile>
-										<UxButton>
-											파일첨부
+										<UxButton className="outline h3">
+											<span className="text">파일첨부</span>
+											<UxIcon className="i054" />
 										</UxButton>
 									</UxFile>
 								</UxContent>
