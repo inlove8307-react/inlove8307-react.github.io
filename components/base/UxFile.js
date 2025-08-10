@@ -50,7 +50,7 @@ const UxFile = ({ ref, ...props }) => {
 					className={`${baseClassName}-button`}
 					onClick={handleClick}
 				>
-					<span className="text">파일</span>
+					<span className="text">파일첨부</span>
 				</button>
 			}
 			{
