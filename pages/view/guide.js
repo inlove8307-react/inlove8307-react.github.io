@@ -47,6 +47,7 @@ import UxPagination from "@/components/base/UxPagination";
 import UxTextarea from "@/components/base/UxTextarea";
 import UxFile from "@/components/base/UxFile";
 import UxIcon from "@/components/base/UxIcon";
+import UxProgress from "@/components/base/UxProgress";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -62,6 +63,32 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxProgress</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress
+										min={0}
+										max={100}
+										step={[0, 25, 50, 75, 100]}
+									>
+										{/* <div data-role="flag">플래그</div> */}
+									</UxProgress>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
