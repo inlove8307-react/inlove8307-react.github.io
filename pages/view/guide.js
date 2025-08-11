@@ -53,6 +53,7 @@ import popup from "@/components/popup/popup.js";
 
 export default function Sample() {
 	const modal = useModal();
+	const [value, setValue] = useState(0);
 
 	return (
 		<UxSection>
@@ -76,14 +77,30 @@ export default function Sample() {
 									<UxProgress
 										min={0}
 										max={100}
+										value={value}
 										step={[0, 25, 50, 75, 100]}
 									>
-										{/* <div data-role="flag">플래그</div> */}
+										<div data-role="flag">플래그</div>
 									</UxProgress>
+									<UxGrid className="gap8 col5">
+										<UxButton className="outline h5" onClick={() => setValue(0)}>
+											<span className="text">0</span>
+										</UxButton>
+										<UxButton className="outline h5" onClick={() => setValue(25)}>
+											<span className="text">25</span>
+										</UxButton>
+										<UxButton className="outline h5" onClick={() => setValue(50)}>
+											<span className="text">50</span>
+										</UxButton>
+										<UxButton className="outline h5" onClick={() => setValue(75)}>
+											<span className="text">75</span>
+										</UxButton>
+										<UxButton className="outline h5" onClick={() => setValue(100)}>
+											<span className="text">100</span>
+										</UxButton>
+									</UxGrid>
 								</UxContent>
 							</UxArticle>
-
-							<UxDivider className="linear" />
 						</UxContent>
 					</UxArticle>
 

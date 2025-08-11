@@ -194,6 +194,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-grid.col2 {--col: 2;}
 .ux-grid.col3 {--col: 3;}
 .ux-grid.col4 {--col: 4;}
+.ux-grid.col5 {--col: 5;}
 .ux-grid[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 /* <UxGrid> Grow */
 .ux-grid > .grow {flex-shrink: 0;}

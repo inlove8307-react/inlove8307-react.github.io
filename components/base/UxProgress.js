@@ -18,6 +18,7 @@ const UxProgress = ({ ref, ...props }) => {
 	const [min, setMin] = useState(props.min || 0);
 	const [max, setMax] = useState(props.max || 100);
 	const [value, setValue] = useState(props.value || 0);
+	const [percent, setPercent] = useState(0);
 	const [step, setStep] = useState(props.step || []);
 	const [fill, setFill] = useState({});
 	const [done, setDone] = useState(false);
@@ -41,7 +42,8 @@ const UxProgress = ({ ref, ...props }) => {
 	}, [fill]);
 
 	useEffect(() => {
-		setFill({ transform: `translateX(-${100 - value}%)` });
+		setReverse(false);
+		setFill({ transform: `translateX(-${100 - percent}%)` });
 	}, [value]);
 
 	useEffect(() => {
@@ -57,7 +59,8 @@ const UxProgress = ({ ref, ...props }) => {
 	}, [props.step]);
 
 	useEffect(() => {
-		setValue(props.value / max * 100);
+		setPercent(props.value / max * 100);
+		setValue(props.value);
 	}, [props.value]);
 
 	return (
@@ -76,7 +79,7 @@ const UxProgress = ({ ref, ...props }) => {
 							ref={flagRef}
 							className={`${baseClassName}-text`}
 						>
-							{}
+							{value}
 						</span>
 					</span>
 				</div>
@@ -97,7 +100,7 @@ const UxProgress = ({ ref, ...props }) => {
 								<div
 									key={index}
 									className={`${baseClassName}-label`}
-									style={{ left: `${item}%` }}>
+									style={{ left: `${item / max * 100}%` }}>
 									{item}
 								</div>
 							))
@@ -105,11 +108,6 @@ const UxProgress = ({ ref, ...props }) => {
 					</div>
 				}
 			</div>
-			<button onClick={() => setValue(0)}>0</button>
-			<button onClick={() => setValue(25)}>25</button>
-			<button onClick={() => setValue(50)}>50</button>
-			<button onClick={() => setValue(75)}>75</button>
-			<button onClick={() => setValue(100)}>100</button>
 		</div>
 	)
 };
