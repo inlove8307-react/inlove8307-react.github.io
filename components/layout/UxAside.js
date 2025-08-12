@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from 'next/link'
 import classnames from "classnames";
 
@@ -9,7 +9,7 @@ const UxAside = ({ ref, ...props }) => {
 	const caseClassName = classnames(baseClassName, props.className, {
 		active: props.active
 	});
-
+	const [selected, setSelected] = useState(0);
 	const data = [
 		{ name: 'Button', url: '/view/guide/button' },
 		{ name: 'Input', url: '/view/guide/input' },
@@ -43,9 +43,9 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Icons', url: '/view/guide/icons' },
 	];
 
-	const handleClick = () => {
+	const handleClick = (index) => {
+		setSelected(index);
 		props.onClick(!props.active);
-		console.log('link');
 	}
 
 	return (
@@ -58,9 +58,11 @@ const UxAside = ({ ref, ...props }) => {
 							className={`${baseClassName}-item`}
 						>
 							<Link
-								className={`${baseClassName}-link`}
+								className={classnames(`${baseClassName}-link`, {
+									active: index === selected
+								})}
 								href={item.url}
-								onClick={handleClick}
+								onClick={() => handleClick(index)}
 							>
 								{item.name}
 							</Link>

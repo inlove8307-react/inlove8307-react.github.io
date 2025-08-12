@@ -29,6 +29,7 @@
 .ux-aside-item {width: 100%; padding-bottom: .8rem;}
 .ux-aside-item + .ux-aside-item {padding-top: .8rem; box-shadow: inset 0 .1rem 0 var(--light1);}
 .ux-aside-link {display: block; color: var(--dark1);}
+.ux-aside-link.active {color: var(--color1);}
 /* <UxAside> Desktop */
 html.desktop .ux-aside {--size: 12rem;}
 html.desktop .ux-aside {margin-left: 0; width: 0;}
