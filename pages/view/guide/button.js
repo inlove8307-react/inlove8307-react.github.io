@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,7 +23,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Outline</h5>
+									<h5>.outline</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton className="outline h3">
@@ -38,7 +36,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Contain</h5>
+									<h5>.contain</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton className="contain h3">
@@ -51,7 +49,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Primary</h5>
+									<h5>.primary</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton className="primary h3">
@@ -64,7 +62,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Grid</h5>
+									<h5>grid</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGrid className="gap8">
@@ -82,7 +80,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Select</h5>
+									<h5>:select</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -98,7 +96,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Search</h5>
+									<h5>:search</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -114,7 +112,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Valid</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -130,7 +128,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Invalid</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -146,7 +144,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxButton - Disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton

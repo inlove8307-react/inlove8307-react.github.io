@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,7 +23,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxToggle - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup>
@@ -47,7 +45,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxToggle - Selected</h5>
+									<h5>:selected</h5>
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup selected="value01">
@@ -69,7 +67,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxToggle - Col2</h5>
+									<h5>.col2</h5>
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup
@@ -103,7 +101,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxToggle - Col3</h5>
+									<h5>.col3</h5>
 								</UxSubject>
 								<UxContent>
 									<UxToggleGroup

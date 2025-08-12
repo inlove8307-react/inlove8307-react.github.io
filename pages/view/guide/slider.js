@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSlider Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSlider
@@ -38,7 +36,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSlider Step</h5>
+									<h5>:step</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSlider
@@ -53,7 +51,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSlider Range</h5>
+									<h5>:range</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSlider

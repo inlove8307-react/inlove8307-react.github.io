@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
-import UxSubject from '@/components/layout/UxSubject';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';

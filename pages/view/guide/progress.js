@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress value={50} />
@@ -35,7 +33,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - Suffix</h5>
+									<h5>:suffix</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress
@@ -49,7 +47,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - Step</h5>
+									<h5>:step</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress
@@ -65,7 +63,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - From, To</h5>
+									<h5>:from :to</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress
@@ -80,7 +78,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - Flag</h5>
+									<h5>flag</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress value={50}>
@@ -93,7 +91,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxProgress - Legend</h5>
+									<h5>legend</h5>
 								</UxSubject>
 								<UxContent>
 									<UxProgress value={50}>

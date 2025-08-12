@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,18 +23,14 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCheckbox - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxCheckboxGroup>
-										<UxCheckbox
-											checked={true}
-										>
+										<UxCheckbox checked={true}>
 											CHECKBOX_01
 										</UxCheckbox>
-										<UxCheckbox
-											checked={false}
-										>
+										<UxCheckbox checked={false}>
 											CHECKBOX_02
 										</UxCheckbox>
 									</UxCheckboxGroup>
@@ -47,18 +41,14 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCheckbox - Column</h5>
+									<h5>.column</h5>
 								</UxSubject>
 								<UxContent>
 									<UxCheckboxGroup className="column">
-										<UxCheckbox
-											checked={true}
-										>
+										<UxCheckbox checked={true}>
 											CHECKBOX_01
 										</UxCheckbox>
-										<UxCheckbox
-											checked={false}
-										>
+										<UxCheckbox checked={false}>
 											CHECKBOX_02
 										</UxCheckbox>
 									</UxCheckboxGroup>

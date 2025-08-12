@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRrn - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRrn
@@ -38,7 +36,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRrn - Valid</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRrn
@@ -55,7 +53,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRrn - Invalid</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRrn
@@ -72,7 +70,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRrn - Readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRrn
@@ -89,7 +87,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRrn - Disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRrn

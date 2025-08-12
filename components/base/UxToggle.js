@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
-/* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxToggle>

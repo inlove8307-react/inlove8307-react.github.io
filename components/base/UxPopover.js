@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import useModal from "@/hook/useModal";
 /* COMPONENT */
-import UxButton from '@/components/base/UxButton';
 import UxIcon from '@/components/base/UxIcon';
 
 /**

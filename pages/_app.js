@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import { isDesktop, isWindows, isMacOs, isMobile, isIOS, isAndroid, isChrome, isFirefox, isSafari, isEdge } from 'react-device-detect';
 import classnames from 'classnames';
 import $ from 'jquery';

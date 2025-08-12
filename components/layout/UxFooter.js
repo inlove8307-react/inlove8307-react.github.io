@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import classnames from "classnames";
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';

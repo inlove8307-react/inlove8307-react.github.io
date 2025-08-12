@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
-import classnames from 'classnames';
-import useModal from "@/hook/useModal";
+import React, { useState, useEffect } from 'react';
 import { format, set, getMonth } from "date-fns";
+import useModal from "@/hook/useModal";
+import classnames from 'classnames';
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";

@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker />
@@ -35,7 +33,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - Value</h5>
+									<h5>:value</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker value="2025.07.01" />
@@ -46,7 +44,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - Valid</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -60,7 +58,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - Invalid</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -74,7 +72,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - Disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -88,7 +86,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - From To</h5>
+									<h5>:from :to</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -102,7 +100,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - From To Value</h5>
+									<h5>:from :to :value</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -120,7 +118,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - From To Valid</h5>
+									<h5>:From :to :valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -139,7 +137,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - From To Invalid</h5>
+									<h5>:From :to :valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker
@@ -158,7 +156,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxDatePicker - From To Disabled</h5>
+									<h5>:From :to :disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxDatePicker

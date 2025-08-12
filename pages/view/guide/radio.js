@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,7 +23,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRadio - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRadioGroup selected="0">
@@ -39,7 +37,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRadio - Column</h5>
+									<h5>.column</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRadioGroup
@@ -56,7 +54,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRadio - Chip</h5>
+									<h5>.chip</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRadioGroup
@@ -76,7 +74,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRadio - Scroll</h5>
+									<h5>:scroll</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRadioGroup
@@ -97,7 +95,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxRadio - expand</h5>
+									<h5>:expand</h5>
 								</UxSubject>
 								<UxContent>
 									<UxRadioGroup

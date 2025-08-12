@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,7 +23,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCollapse - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxCollapse>
@@ -39,12 +37,10 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCollapse - Expanded</h5>
+									<h5>:expanded</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapse
-										expanded
-									>
+									<UxCollapse expanded>
 										<div data-role="summary">summary</div>
 										<div data-role="details">details</div>
 									</UxCollapse>
@@ -55,7 +51,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCollapse - Group</h5>
+									<h5>group</h5>
 								</UxSubject>
 								<UxContent>
 									<UxCollapseGroup>
@@ -75,12 +71,10 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCollapse - Group Selected</h5>
+									<h5>:selected</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapseGroup
-										selected={0}
-									>
+									<UxCollapseGroup selected={0}>
 										<UxCollapse>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
@@ -97,12 +91,10 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxCollapse - Group Once</h5>
+									<h5>:once</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapseGroup
-										once
-									>
+									<UxCollapseGroup once>
 										<UxCollapse>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>

@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -25,7 +23,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTab - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTab>
@@ -53,7 +51,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTab - Linear</h5>
+									<h5>:linear</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTab linear>
@@ -81,7 +79,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTab - Scroll</h5>
+									<h5>:scroll</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTab
@@ -136,7 +134,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTab - Full</h5>
+									<h5>.full</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTab
@@ -167,7 +165,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTab - Block</h5>
+									<h5>.block</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTab

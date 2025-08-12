@@ -1,13 +1,11 @@
 'use client';
 
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { getRandomChar } from '@/utils/core';
 import { RootContext } from '@/context/RootContext';
 import UxAlert from '@/components/base/UxAlert';
 import UxConfirm from '@/components/base/UxConfirm';
 import UxToast from '@/components/base/UxToast';
-import UxPopover from '@/components/base/UxPopover';
-import UxTooltip from '@/components/base/UxTooltip';
 
 const useModal = () => {
 	const {rootContext, setRootContext} = useContext(RootContext);

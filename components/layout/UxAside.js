@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Link from 'next/link'
 import classnames from "classnames";
 
@@ -34,6 +34,9 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Slider', url: '/view/guide/slider' },
 		{ name: 'Progress', url: '/view/guide/progress' },
 		{ name: 'Calendar', url: '/view/guide/calendar' },
+		{ name: 'DateCalendar', url: '/view/guide/datecalendar' },
+		{ name: 'MonthCalendar', url: '/view/guide/monthcalendar' },
+		{ name: 'YearCalendar', url: '/view/guide/yearcalendar' },
 		{ name: 'SortList', url: '/view/guide/sortlist' },
 	];
 

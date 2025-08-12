@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import classnames from "classnames";
 import Link from 'next/link'
 /* LAYOUT */

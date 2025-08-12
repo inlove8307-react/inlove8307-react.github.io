@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea placeholder="내용을 입력해주세요." />
@@ -35,7 +33,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Fluid</h5>
+									<h5>:fluid</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
@@ -50,7 +48,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - MaxLength</h5>
+									<h5>:maxLength</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
@@ -65,7 +63,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Valid</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
@@ -79,7 +77,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Invalid</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
@@ -93,7 +91,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
@@ -107,7 +105,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxTextarea - Disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea

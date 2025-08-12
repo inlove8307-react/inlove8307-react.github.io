@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useContext, useEffect } from 'react';
-import classnames from 'classnames';
+import React, { useContext } from 'react';
 import { RootContext } from '@/context/RootContext';
-import $ from 'jquery';
 /* COMPONENT */
 import UxModal from '@/components/base/UxModal';
 

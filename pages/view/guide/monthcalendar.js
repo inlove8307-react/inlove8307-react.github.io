@@ -7,17 +7,14 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
-import UxFile from "@/components/base/UxFile";
-import UxButton from "@/components/base/UxButton";
-import UxIcon from "@/components/base/UxIcon";
-import UxDivider from "@/components/base/UxDivider";
+import UxMonthCalendar from "@/components/base/UxMonthCalendar";
 
 export default function Sample() {
 	return (
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>UxFile</h3>
+					<h3>UxMonthCalendar</h3>
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
@@ -27,25 +24,7 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxFile
-										placeholder="파일을 선택해주세요."
-									/>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>slot</h5>
-								</UxSubject>
-								<UxContent>
-									<UxFile>
-										<UxButton className="outline h3">
-											<span className="text">파일첨부</span>
-											<UxIcon className="i054" />
-										</UxButton>
-									</UxFile>
+									<UxMonthCalendar />
 								</UxContent>
 							</UxArticle>
 						</UxContent>

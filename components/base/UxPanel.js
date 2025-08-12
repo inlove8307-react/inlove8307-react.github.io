@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
-import { getArray, getRole, mergeProps } from '@/utils/core';
+import React, { useState, useEffect } from 'react';
+import { getArray, getRole } from '@/utils/core';
 import classnames from 'classnames';
 
 /**

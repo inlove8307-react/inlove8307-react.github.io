@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -17,14 +15,14 @@ export default function Sample() {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>Input</h3>
+					<h3>UxInput</h3>
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -40,7 +38,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Valid</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -57,7 +55,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Invalid</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -74,7 +72,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -91,7 +89,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -108,7 +106,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Prefix</h5>
+									<h5>:prefix</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -125,7 +123,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Suffix</h5>
+									<h5>:suffix</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput
@@ -142,7 +140,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxInput - Timer</h5>
+									<h5>:timer</h5>
 								</UxSubject>
 								<UxContent>
 									<UxInput

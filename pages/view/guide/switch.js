@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import useModal from "@/hook/useModal";
-import classnames from "classnames";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -24,7 +22,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSwitch - Default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch />
@@ -35,7 +33,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSwitch - Checked</h5>
+									<h5>:checked</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch checked />
@@ -46,7 +44,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSwitch - Label Left</h5>
+									<h5>label left</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>
@@ -59,7 +57,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>UxSwitch - Label Right</h5>
+									<h5>label right</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>

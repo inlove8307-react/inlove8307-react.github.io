@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
-/* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxCard>

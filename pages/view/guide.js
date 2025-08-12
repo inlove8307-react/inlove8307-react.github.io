@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useModal from "@/hook/useModal";
-import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";

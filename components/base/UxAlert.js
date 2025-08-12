@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import classnames from 'classnames';
+import React from 'react';
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
-import UxSubject from '@/components/layout/UxSubject';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -50,7 +48,7 @@ const UxAlert = ({ ref, ...props }) => {
 								className="primary h3 grow full"
 								onClick={props.onClose}
 							>
-								확인
+								<span className="text">확인</span>
 							</UxButton>
 						</UxGrid>
 					</UxContent>
