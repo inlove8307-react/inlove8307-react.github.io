@@ -17,7 +17,7 @@ export default function Sample() {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>Phone</h3>
+					<h3>UxPhone</h3>
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">

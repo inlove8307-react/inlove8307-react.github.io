@@ -17,7 +17,7 @@ export default function Sample() {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>Brn(사업자등록번호)</h3>
+					<h3>UxBrn(사업자등록번호)</h3>
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
