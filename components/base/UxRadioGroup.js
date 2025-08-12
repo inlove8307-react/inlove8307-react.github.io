@@ -36,10 +36,20 @@ const UxRadioGroup = ({ ref, ...props }) => {
 	}, [selected]);
 
 	useEffect(() => {
+		props.onExpand && props.onExpand(expanded);
+	}, [expanded]);
+
+	useEffect(() => {
 		if (typeof props.selected === 'string') {
 			setSelected(props.selected);
 		}
 	}, [props.selected]);
+
+	useEffect(() => {
+		if (typeof props.expanded === 'boolean') {
+			setExpanded(props.expanded);
+		}
+	}, [props.expanded]);
 
 	return (
 		<div

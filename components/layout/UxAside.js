@@ -1,15 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from 'next/link'
+import { useRouter } from 'next/router';
 import classnames from "classnames";
+/* LAYOUT */
+import UxSection from "@/components/layout/UxSection";
+import UxArticle from "@/components/layout/UxArticle";
+/* COMPONENT */
+import UxRadio from "@/components/base/UxRadio";
+import UxRadioGroup from "@/components/base/UxRadioGroup";
 
 const UxAside = ({ ref, ...props }) => {
 	const baseClassName = 'ux-aside';
-	const caseClassName = classnames(baseClassName, props.className, {
-		active: props.active
-	});
-	const [selected, setSelected] = useState(0);
+	const caseClassName = classnames(baseClassName, props.className);
+	const router = useRouter();
+	const [selected, setSelected] = useState('0');
+	const [expanded, setExpanded] = useState(false);
 	const data = [
 		{ name: 'Button', url: '/view/guide/button' },
 		{ name: 'Input', url: '/view/guide/input' },
@@ -43,34 +49,41 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Icons', url: '/view/guide/icons' },
 	];
 
-	const handleClick = (index) => {
+	const handleChange = (index) => {
+		router.push(data[index || 0].url);
 		setSelected(index);
-		props.onClick(!props.active);
+		setExpanded(false);
+	}
+
+	const handleExpand = (value) => {
+		setExpanded(value);
 	}
 
 	return (
-		<aside className={caseClassName}>
-			<ul className={`${baseClassName}-list`}>
-				{
-					data.map((item, index) => (
-						<li
-							key={index}
-							className={`${baseClassName}-item`}
-						>
-							<Link
-								className={classnames(`${baseClassName}-link`, {
-									active: index === selected
-								})}
-								href={item.url}
-								onClick={() => handleClick(index)}
+		<UxSection className={caseClassName}>
+			<UxArticle className="h4 space">
+				<UxRadioGroup
+					className="chip"
+					scroll
+					expand
+					selected={selected}
+					expanded={expanded}
+					onChange={(value) => handleChange(value)}
+					onExpand={(value) => handleExpand(value)}
+				>
+					{
+						data.map((item, index) => (
+							<UxRadio
+								key={index}
+								value={String(index)}
 							>
 								{item.name}
-							</Link>
-						</li>
-					))
-				}
-			</ul>
-		</aside>
+							</UxRadio>
+						))
+					}
+				</UxRadioGroup>
+			</UxArticle>
+		</UxSection>
 	)
 };
 

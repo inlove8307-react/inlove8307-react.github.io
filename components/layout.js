@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import RootContextProvider from '@/context/RootContext';
 /* LAYOUT */
 import UxContainer from "@/components/layout/UxContainer";
@@ -9,24 +9,12 @@ import UxFooter from "@/components/layout/UxFooter";
 import UxModals from "@/components/layout/UxModals";
 
 export default function Layout({ children }) {
-	const [active, setActive] = useState(false);
-
-	const handleClick = (value) => {
-		setActive(value);
-	};
-
 	return (
 		<RootContextProvider>
 			<UxContainer>
-				<UxHeader
-					active={active}
-					onClick={handleClick}
-				/>
+				<UxHeader />
 				<UxMain>
-					<UxAside
-						active={active}
-						onClick={handleClick}
-					/>
+					<UxAside />
 					{children}
 				</UxMain>
 				<UxFooter />

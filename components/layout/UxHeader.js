@@ -14,16 +14,12 @@ const UxHeader = ({ ref, ...props }) => {
 	const baseClassName = 'ux-header';
 	const caseClassName = classnames(baseClassName, props.className);
 
-	const handleClick = () => {
-		props.onClick(!props.active);
-	}
-
 	return (
 		<header className={caseClassName}>
 			<UxSection>
 				<UxArticle>
 					<UxContent className="row space">
-						<UxButton onClick={handleClick}>
+						<UxButton>
 							<UxIcon className="i109" />
 							<span className="text">GUIDE</span>
 						</UxButton>
