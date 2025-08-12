@@ -78,7 +78,7 @@ const UxProgress = ({ ref, ...props }) => {
 							style={flag}
 							className={`${baseClassName}-text`}
 						>
-							{slotFlag ? slotFlag : value}
+							{slotFlag ? slotFlag : props.suffix ? `${value}${props.suffix}` : value}
 						</span>
 					</span>
 				</div>

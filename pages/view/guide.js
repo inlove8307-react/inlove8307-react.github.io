@@ -2227,6 +2227,20 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>UxProgress - Suffix</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress
+										value={50}
+										suffix="원"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>UxProgress - Step</h5>
 								</UxSubject>
 								<UxContent>
