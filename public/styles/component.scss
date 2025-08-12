@@ -24,13 +24,18 @@
 
 
 /* <UxAside> */
-.ux-aside {--size: 12rem;}
-.ux-aside {margin-left: calc(var(--size) * -1); padding-top: 3.2rem; width: var(--size);}
-.ux-aside-list {display: flex; flex-wrap: wrap; gap: .4rem;}
+.ux-aside {overflow: hidden; background-color: var(--light0); transition: all .15s ease;}
+.ux-aside-list {display: flex; flex-wrap: wrap; gap: .4rem; padding-top: 3.2rem;}
 .ux-aside-item {width: 100%;}
 .ux-aside-link {color: var(--dark1);}
+/* <UxAside> Desktop */
+html.desktop .ux-aside {--size: 12rem;}
+html.desktop .ux-aside {margin-left: 0; width: 0;}
+html.desktop .ux-aside.active {margin-left: calc(var(--size) * -1); width: var(--size);}
 /* <UxAside> Mobile */
-html.mobile .ux-aside {display: none;}
+html.mobile .ux-aside {position: relative; z-index: 1; width: 0; margin-right: 0;}
+html.mobile .ux-aside.active {width: 100%; margin-right: -100%;}
+html.mobile .ux-aside-list {padding-left: var(--space); padding-right: var(--space);}
 
 
 

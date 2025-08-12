@@ -7,7 +7,7 @@ export default function Home() {
 	const router = useRouter();
 
 	useEffect(() => {
-		router.push('/view/guide/');
+		router.push('/view/guide/button');
 	}, []);
 
 	return <></>;

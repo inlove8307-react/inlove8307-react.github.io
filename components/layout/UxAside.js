@@ -6,7 +6,9 @@ import classnames from "classnames";
 
 const UxAside = ({ ref, ...props }) => {
 	const baseClassName = 'ux-aside';
-	const caseClassName = classnames(baseClassName, props.className);
+	const caseClassName = classnames(baseClassName, props.className, {
+		active: props.active
+	});
 
 	const data = [
 		{ name: 'Button', url: '/view/guide/button' },
@@ -40,22 +42,30 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'SortList', url: '/view/guide/sortlist' },
 	];
 
+	const handleClick = () => {
+		props.onClick(!props.active);
+		console.log('link');
+	}
+
 	return (
 		<aside className={caseClassName}>
 			<ul className={`${baseClassName}-list`}>
-				{data.map((item, index) => (
-					<li
-						key={index}
-						className={`${baseClassName}-item`}
-					>
-						<Link
-							className={`${baseClassName}-link`}
-							href={item.url}
+				{
+					data.map((item, index) => (
+						<li
+							key={index}
+							className={`${baseClassName}-item`}
 						>
-							{item.name}
-						</Link>
-					</li>
-				))}
+							<Link
+								className={`${baseClassName}-link`}
+								href={item.url}
+								onClick={handleClick}
+							>
+								{item.name}
+							</Link>
+						</li>
+					))
+				}
 			</ul>
 		</aside>
 	)
