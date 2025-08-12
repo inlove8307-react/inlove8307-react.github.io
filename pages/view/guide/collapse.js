@@ -20,6 +20,36 @@ export default function Sample() {
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
+						<UxSubject>
+							<UxCollapseGroup className="sample">
+								<UxCollapse>
+									<div data-role="summary">UxCollapseGroup Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+								<UxCollapse>
+									<div data-role="summary">UxCollapse Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+							</UxCollapseGroup>
+						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>

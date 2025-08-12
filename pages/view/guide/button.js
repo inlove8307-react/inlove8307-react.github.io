@@ -10,6 +10,8 @@ import UxContent from "@/components/layout/UxContent";
 import UxButton from "@/components/base/UxButton";
 import UxDivider from "@/components/base/UxDivider";
 import UxGrid from "@/components/base/UxGrid";
+import UxCollapse from "@/components/base/UxCollapse";
+import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 
 export default function Sample() {
 	return (
@@ -20,6 +22,23 @@ export default function Sample() {
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
+						<UxSubject>
+							<UxCollapseGroup className="sample">
+								<UxCollapse>
+									<div data-role="summary">UxButton Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+							</UxCollapseGroup>
+						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>

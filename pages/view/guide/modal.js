@@ -11,6 +11,8 @@ import UxContent from "@/components/layout/UxContent";
 import UxButton from "@/components/base/UxButton";
 import UxPopover from "@/components/base/UxPopover";
 import UxDivider from "@/components/base/UxDivider";
+import UxCollapse from "@/components/base/UxCollapse";
+import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
@@ -25,6 +27,23 @@ export default function Sample() {
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
+						<UxSubject>
+							<UxCollapseGroup className="sample">
+								<UxCollapse>
+									<div data-role="summary">UxModal Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+							</UxCollapseGroup>
+						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>

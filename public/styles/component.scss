@@ -621,6 +621,10 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxCollapseGroup> */
 .ux-collapse-group {overflow: hidden; width: 100%; border-radius: var(--radius-form); border: .1rem solid var(--light2); background-color: var(--light0);}
 .ux-collapse-group .ux-collapse {border-radius: initial; box-shadow: initial;}
+/* <UxCollapseGroup> Sample */
+.ux-collapse-group.sample {border-radius: initial; border: initial; background-color: var(--light1);}
+.ux-collapse-group.sample .ux-collapse-summary [data-role=summary] {font-weight: 600;}
+.ux-collapse-group.sample .ux-collapse-details [data-role=details] {padding-top: 0;}
 
 
 

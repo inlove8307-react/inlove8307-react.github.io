@@ -10,6 +10,8 @@ import UxContent from "@/components/layout/UxContent";
 import UxTab from "@/components/base/UxTab";
 import UxPanel from "@/components/base/UxPanel";
 import UxDivider from "@/components/base/UxDivider";
+import UxCollapse from "@/components/base/UxCollapse";
+import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 
 export default function Sample() {
 	return (
@@ -20,6 +22,36 @@ export default function Sample() {
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
+						<UxSubject>
+							<UxCollapseGroup className="sample">
+								<UxCollapse>
+									<div data-role="summary">UxTab Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+								<UxCollapse>
+									<div data-role="summary">UxPanel Props</div>
+									<div data-role="details">
+										<p>[props]</p>
+										<ul>
+											<li></li>
+										</ul>
+										<p>[event]</p>
+										<ul>
+											<li></li>
+										</ul>
+									</div>
+								</UxCollapse>
+							</UxCollapseGroup>
+						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
