@@ -19,7 +19,18 @@
 
 
 /* <UxMain> */
-.ux-main {width: 100%;}
+.ux-main {display: flex; justify-content: center;}
+
+
+
+/* <UxAside> */
+.ux-aside {--size: 10rem;}
+.ux-aside {margin-left: calc(var(--size) * -1); padding-top: 3.2rem; width: var(--size);}
+.ux-aside-list {display: flex; flex-wrap: wrap; gap: .4rem;}
+.ux-aside-item {width: 100%;}
+.ux-aside-link {color: var(--dark1);}
+/* <UxAside> Mobile */
+html.mobile .ux-aside {display: none;}
 
 
 
@@ -35,7 +46,8 @@
 /* <UxSection> Main */
 .ux-main .ux-section {padding: 3.2rem 0;}
 /* <UxSection> Desktop */
-html.desktop .ux-section {margin: 0 auto; width: var(--desktop);}
+html.desktop .ux-section {width: var(--desktop);}
+html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; height: 100%;}
 /* <UxSection> Modal */
 
 

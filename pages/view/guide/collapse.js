@@ -1,0 +1,123 @@
+'use client';
+
+import React, { useEffect, useState } from "react";
+import useModal from "@/hook/useModal";
+import classnames from "classnames";
+/* LAYOUT */
+import UxSection from "@/components/layout/UxSection";
+import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
+import UxContent from "@/components/layout/UxContent";
+/* COMPONENT */
+import UxCollapse from "@/components/base/UxCollapse";
+import UxCollapseGroup from "@/components/base/UxCollapseGroup";
+import UxDivider from "@/components/base/UxDivider";
+
+export default function Sample() {
+	return (
+		<UxSection>
+			<UxArticle className="h3">
+				<UxSubject className="space">
+					<h3>UxCollapse</h3>
+				</UxSubject>
+				<UxContent>
+					<UxArticle className="h4 space">
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapse>
+										<div data-role="summary">summary</div>
+										<div data-role="details">details</div>
+									</UxCollapse>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Expanded</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapse
+										expanded
+									>
+										<div data-role="summary">summary</div>
+										<div data-role="details">details</div>
+									</UxCollapse>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group Selected</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup
+										selected={0}
+									>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxCollapse - Group Once</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapseGroup
+										once
+									>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+										<UxCollapse>
+											<div data-role="summary">summary</div>
+											<div data-role="details">details</div>
+										</UxCollapse>
+									</UxCollapseGroup>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+				</UxContent>
+			</UxArticle>
+		</UxSection>
+	)
+};

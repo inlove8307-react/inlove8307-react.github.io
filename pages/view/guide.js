@@ -1398,6 +1398,7 @@ export default function Sample() {
 					</UxArticle>
 
 					<UxDivider />
+
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxSwitch</h4>
