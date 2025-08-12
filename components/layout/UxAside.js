@@ -40,6 +40,7 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'MonthCalendar', url: '/view/guide/monthcalendar' },
 		{ name: 'YearCalendar', url: '/view/guide/yearcalendar' },
 		{ name: 'SortList', url: '/view/guide/sortlist' },
+		{ name: 'Icons', url: '/view/guide/icons' },
 	];
 
 	const handleClick = () => {

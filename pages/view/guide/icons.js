@@ -122,9 +122,7 @@ export default function Page() {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>
-						<strong>ICONS</strong>
-					</h3>
+					<h3>Icons</h3>
 				</UxSubject>
 				<UxContent>
 					<UxArticle className="h4 space">
