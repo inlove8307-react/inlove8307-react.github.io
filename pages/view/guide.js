@@ -53,7 +53,6 @@ import popup from "@/components/popup/popup.js";
 
 export default function Sample() {
 	const modal = useModal();
-	const [value, setValue] = useState(0);
 
 	return (
 		<UxSection>
@@ -64,48 +63,6 @@ export default function Sample() {
 					</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
-						<UxSubject>
-							<h4>UxProgress</h4>
-						</UxSubject>
-						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>UxProgress - Default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress
-										min={0}
-										max={100}
-										value={value}
-										step={[0, 25, 50, 75, 100]}
-									>
-										<div data-role="flag">플래그</div>
-									</UxProgress>
-									<UxGrid className="gap8 col5">
-										<UxButton className="outline h5" onClick={() => setValue(0)}>
-											<span className="text">0</span>
-										</UxButton>
-										<UxButton className="outline h5" onClick={() => setValue(25)}>
-											<span className="text">25</span>
-										</UxButton>
-										<UxButton className="outline h5" onClick={() => setValue(50)}>
-											<span className="text">50</span>
-										</UxButton>
-										<UxButton className="outline h5" onClick={() => setValue(75)}>
-											<span className="text">75</span>
-										</UxButton>
-										<UxButton className="outline h5" onClick={() => setValue(100)}>
-											<span className="text">100</span>
-										</UxButton>
-									</UxGrid>
-								</UxContent>
-							</UxArticle>
-						</UxContent>
-					</UxArticle>
-
-					<UxDivider />
-
 					<UxArticle className="h4 space">
 						<UxSubject>
 							<h4>UxButton</h4>
@@ -2245,6 +2202,81 @@ export default function Sample() {
 										min="0"
 										max="100"
 									/>
+								</UxContent>
+							</UxArticle>
+						</UxContent>
+					</UxArticle>
+
+					<UxDivider />
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>UxProgress</h4>
+						</UxSubject>
+						<UxContent>
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - Default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress value={50} />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - Step</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress
+										min={0}
+										max={100}
+										value={50}
+										step={[0, 25, 50, 75, 100]}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - From, To</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress
+										value={50}
+										from="2025.08.01"
+										to="2025.08.30"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - Flag</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress value={50}>
+										<div data-role="flag">flag</div>
+									</UxProgress>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>UxProgress - Legend</h5>
+								</UxSubject>
+								<UxContent>
+									<UxProgress value={50}>
+										<div data-role="legend">legend</div>
+									</UxProgress>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, use } from 'react';
 import { getArray, getRole } from '@/utils/core';
 import classnames from 'classnames';
 
@@ -18,32 +18,29 @@ const UxProgress = ({ ref, ...props }) => {
 	const [min, setMin] = useState(props.min || 0);
 	const [max, setMax] = useState(props.max || 100);
 	const [value, setValue] = useState(props.value || 0);
-	const [percent, setPercent] = useState(0);
-	const [step, setStep] = useState(props.step || []);
 	const [fill, setFill] = useState({});
+	const [flag, setFlag] = useState({});
 	const [done, setDone] = useState(false);
-	const [reverse, setReverse] = useState(false);
-	const widgetRef = useRef();
-	const flagRef = useRef();
+	const [slotFlag, setSlotFlag] = useState();
+	const [slotLegend, setSlotLegend] = useState();
+	const widgetRef = useRef(null);
+	const flagRef = useRef(null);
 
 	const handleTransitionEnd = () => {
 		const widgetRect = widgetRef.current.getBoundingClientRect();
 		const flagRect = flagRef.current.getBoundingClientRect();
 
-		widgetRect.x > flagRect.x
-			? setReverse(true)
-			: setReverse(false);
+		widgetRect.x - flagRect.x > 0
+			? setFlag({ transform: `translateX(${widgetRect.x - flagRect.x}px)` })
+			: setFlag({});
 
 		setDone(true);
 	};
 
 	useEffect(() => {
+		setFlag({});
 		setDone(false);
-	}, [fill]);
-
-	useEffect(() => {
-		setReverse(false);
-		setFill({ transform: `translateX(-${100 - percent}%)` });
+		setFill({ transform: `translateX(-${100 - (value - min) / (max - min) * 100}%)` });
 	}, [value]);
 
 	useEffect(() => {
@@ -55,13 +52,14 @@ const UxProgress = ({ ref, ...props }) => {
 	}, [props.max]);
 
 	useEffect(() => {
-		setStep(props.step);
-	}, [props.step]);
-
-	useEffect(() => {
-		setPercent(props.value / max * 100);
 		setValue(props.value);
 	}, [props.value]);
+
+	useEffect(() => {
+		setSlotFlag(getRole(getArray(props.children), 'flag')?.props.children);
+		setSlotLegend(getRole(getArray(props.children), 'legend')?.props.children);
+		setTimeout(handleTransitionEnd, 1);
+	}, []);
 
 	return (
 		<div className={caseClassName}>
@@ -71,15 +69,16 @@ const UxProgress = ({ ref, ...props }) => {
 					className={`${baseClassName}-widget`}
 				>
 					<span
-						className={classnames(`${baseClassName}-flag`, { done, reverse })}
+						className={classnames(`${baseClassName}-flag`, { done })}
 						style={fill}
 						onTransitionEnd={handleTransitionEnd}
 					>
 						<span
 							ref={flagRef}
+							style={flag}
 							className={`${baseClassName}-text`}
 						>
-							{value}
+							{slotFlag ? slotFlag : value}
 						</span>
 					</span>
 				</div>
@@ -92,21 +91,31 @@ const UxProgress = ({ ref, ...props }) => {
 						/>
 					</div>
 				</div>
-				{
-					step &&
-					<div className={`${baseClassName}-step`}>
-						{
-							step.map((item, index) => (
-								<div
-									key={index}
-									className={`${baseClassName}-label`}
-									style={{ left: `${item / max * 100}%` }}>
-									{item}
-								</div>
-							))
-						}
-					</div>
-				}
+				<div className={`${baseClassName}-step`}>
+					{
+						props.step?.map((item, index) => (
+							<div
+								key={index}
+								className={`${baseClassName}-label`}
+								style={{ left: `${(item - min) / (max - min) * 100}%` }}>
+								{item}
+							</div>
+						))
+					}
+				</div>
+				<div className={`${baseClassName}-range`}>
+					{
+						props.from &&
+						<span className={`${baseClassName}-from`}>{props.from}</span>
+					}
+					{
+						props.to &&
+						<span className={`${baseClassName}-to`}>{props.to}</span>
+					}
+				</div>
+				<div className={`${baseClassName}-legend`}>
+					{slotLegend}
+				</div>
 			</div>
 		</div>
 	)

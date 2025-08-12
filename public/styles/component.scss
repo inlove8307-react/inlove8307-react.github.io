@@ -738,9 +738,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-progress .ux-progress-fill {background-color: var(--color1); transform: translateX(-100%); transition: var(--trans);}
 /* <UxProgress> Flag */
 .ux-progress .ux-progress-flag {display: flex; justify-content: flex-end; width: 100%; transform: translateX(-100%); transition: var(--trans); opacity: 0;}
-.ux-progress .ux-progress-text {display: inline-flex; padding: .4rem .8rem; border-radius: .8rem; background-color: var(--light1); line-height: 1;}
-/* <UxProgress> Flag Reverse */
-.ux-progress .ux-progress-flag.reverse .ux-progress-text {transform: translateX(100%);}
+.ux-progress .ux-progress-text {display: inline-flex; padding: .4rem .8rem; border-radius: .8rem; background-color: var(--light1); font-size: 1.4rem; color: var(--dark3); line-height: 1;}
 /* <UxProgress> Flag Animation */
 .ux-progress .ux-progress-flag.done {
 	animation-name: ux-progress-flag-fade;
@@ -755,9 +753,18 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 }
 /* <UxProgress> Step */
 .ux-progress .ux-progress-step {--size: 1.2rem;}
+.ux-progress .ux-progress-step:empty {display: none;}
 .ux-progress .ux-progress-step {position: relative; height: calc(var(--size) + var(--gap));}
-.ux-progress .ux-progress-label {position: absolute; padding: calc(var(--gap) / 2) 0; font-size: var(--size); line-height: 1; color: var(--light3); transform: translate(-50%, 0);}
-.ux-progress .ux-progress-label::before {content: ''; position: absolute; top: 0; left: 50%; width: .1rem; height: var(--gap); background-color: var(--light2); transform: translate(-50%, -100%);}
+.ux-progress .ux-progress-label {position: absolute; padding: calc(var(--gap) / 2) 0; font-size: var(--size); line-height: 1; color: var(--light2); transform: translate(-50%, 0);}
+.ux-progress .ux-progress-label::before {content: ''; position: absolute; top: 0; left: 50%; width: .1rem; height: var(--gap); background-color: var(--light1); transform: translate(-50%, -100%);}
+/* <UxProgress> Range */
+.ux-progress .ux-progress-range {display: flex; font-size: 1.4rem; line-height: 1; color: var(--light3);}
+.ux-progress .ux-progress-range:empty {display: none;}
+.ux-progress .ux-progress-from {margin-right: auto;}
+.ux-progress .ux-progress-to {margin-left: auto;}
+/* <UxProgress> Legend */
+.ux-progress .ux-progress-legend {display: flex; font-size: 1.4rem; line-height: 1; color: var(--light3);}
+.ux-progress .ux-progress-legend:empty {display: none;}
 
 
 
