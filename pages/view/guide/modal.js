@@ -13,6 +13,8 @@ import UxGrid from "@/components/base/UxGrid";
 import UxPopover from "@/components/base/UxPopover";
 import UxButton from "@/components/base/UxButton";
 import UxDivider from "@/components/base/UxDivider";
+/* POPUP */
+import popup from "@/components/popup/popup.js";
 
 export default function Sample() {
 	const modal = useModal();
