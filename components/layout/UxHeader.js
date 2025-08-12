@@ -7,7 +7,6 @@ import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
-import UxGrid from "@/components/base/UxGrid";
 import UxButton from "@/components/base/UxButton";
 import UxIcon from "@/components/base/UxIcon";
 
@@ -24,12 +23,10 @@ const UxHeader = ({ ref, ...props }) => {
 			<UxSection>
 				<UxArticle>
 					<UxContent className="row space">
-						<UxGrid className="gap12">
-							<UxButton onClick={handleClick}>
-								<UxIcon className="i109" />
-							</UxButton>
-							<span>GUIDE</span>
-						</UxGrid>
+						<UxButton onClick={handleClick}>
+							<UxIcon className="i109" />
+							<span className="text">GUIDE</span>
+						</UxButton>
 					</UxContent>
 				</UxArticle>
 			</UxSection>
