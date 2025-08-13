@@ -178,35 +178,34 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
-/* <UxGrid> */
-.ux-grid {display: flex; flex-wrap: wrap; gap: var(--gap);}
-/* <UxGrid> Row */
-.ux-grid.row {flex-direction: row;}
-.ux-grid.row.center {justify-content: center;}
-.ux-grid.row.left {justify-content: flex-start;}
-.ux-grid.row.right {justify-content: flex-end;}
-/* <UxGrid> Column */
-.ux-grid.column {flex-direction: column;}
-.ux-grid.column.center {align-items: center;}
-.ux-grid.column.left {align-items: flex-start;}
-.ux-grid.column.right {align-items: flex-end;}
-/* <UxGrid> Gap */
-.ux-grid.gap16 {--gap: 1.6rem;}
-.ux-grid.gap12 {--gap: 1.2rem;}
-.ux-grid.gap8 {--gap: .8rem;}
-.ux-grid.gap4 {--gap: .4rem;}
-/* <UxGrid> Col */
-.ux-grid.col1 {--col: 1;}
-.ux-grid.col2 {--col: 2;}
-.ux-grid.col3 {--col: 3;}
-.ux-grid.col4 {--col: 4;}
-.ux-grid.col5 {--col: 5;}
-.ux-grid[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
-/* <UxGrid> Grow */
-.ux-grid > .grow {flex-shrink: 0;}
-.ux-grid > .grow.auto {flex-grow: 0;}
-.ux-grid > .grow.full {flex-grow: 1;}
-.ux-grid > .grow.small {flex-basis: calc(100% / 3); width: calc(100% / 3);}
+/* <UxGroup> */
+.ux-group.default {display: flex; flex-wrap: wrap; gap: var(--gap);}
+/* <UxGroup> Row */
+.ux-group.default.row {flex-direction: row;}
+.ux-group.default.row.center {justify-content: center;}
+.ux-group.default.row.left {justify-content: flex-start;}
+.ux-group.default.row.right {justify-content: flex-end;}
+/* <UxGroup> Column */
+.ux-group.default.column {flex-direction: column;}
+.ux-group.default.column.center {align-items: center;}
+.ux-group.default.column.left {align-items: flex-start;}
+.ux-group.default.column.right {align-items: flex-end;}
+/* <UxGroup> Gap */
+.ux-group.default.gap16 {--gap: 1.6rem;}
+.ux-group.default.gap12 {--gap: 1.2rem;}
+.ux-group.default.gap8 {--gap: .8rem;}
+.ux-group.default.gap4 {--gap: .4rem;}
+/* <UxGroup> Col */
+.ux-group.default.col1 {--col: 1;}
+.ux-group.default.col2 {--col: 2;}
+.ux-group.default.col3 {--col: 3;}
+.ux-group.default.col4 {--col: 4;}
+.ux-group.default.col5 {--col: 5;}
+.ux-group.default[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+/* <UxGroup> Grow */
+.ux-group.default > * {flex-shrink: 0;}
+.ux-group.default > .small {flex-basis: calc(100% / 3); width: calc(100% / 3);}
+.ux-group.default > *:not(.small) {flex-grow: 1;}
 
 
 

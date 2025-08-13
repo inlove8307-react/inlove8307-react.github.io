@@ -9,9 +9,8 @@ import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxButton from "@/components/base/UxButton";
 import UxDivider from "@/components/base/UxDivider";
-import UxGrid from "@/components/base/UxGrid";
-import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
+import UxCollapse from "@/components/base/UxCollapse";
 
 export default function Sample() {
 	return (
@@ -87,14 +86,14 @@ export default function Sample() {
 									<h5>grid</h5>
 								</UxSubject>
 								<UxContent>
-									<UxGrid className="gap8">
-										<UxButton className="contain h3 grow small">
+									<UxGroup className="gap8">
+										<UxButton className="contain h3 small">
 											<span className="text">cancel</span>
 										</UxButton>
-										<UxButton className="primary h3 grow full">
+										<UxButton className="primary h3">
 											<span className="text">submit</span>
 										</UxButton>
-									</UxGrid>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 

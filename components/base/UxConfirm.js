@@ -7,7 +7,7 @@ import UxArticle from '@/components/layout/UxArticle';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
-import UxGrid from '@/components/base/UxGrid';
+import UxGroup from '@/components/base/UxGroup';
 import UxIcon from '@/components/base/UxIcon';
 
 /**
@@ -41,20 +41,20 @@ const UxConfirm = ({ ref, ...props }) => {
 			<UxSection className="footer">
 				<UxArticle>
 					<UxContent>
-						<UxGrid className="gap8">
+						<UxGroup className="gap8">
 							<UxButton
-								className="contain h3 grow small"
+								className="contain h3 small"
 								onClick={props.onClose}
 							>
 								취소
 							</UxButton>
 							<UxButton
-								className="primary h3 grow full"
+								className="primary h3"
 								onClick={props.onClose}
 							>
 								확인
 							</UxButton>
-						</UxGrid>
+						</UxGroup>
 					</UxContent>
 				</UxArticle>
 			</UxSection>

@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
-// children이 없을 경우 empty 노출
+
 /**
  * <Default>
  * [props]
