@@ -6,9 +6,10 @@ import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
+import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxRadio from "@/components/base/UxRadio";
-import UxRadioGroup from "@/components/base/UxRadioGroup";
+import UxGroup from "@/components/base/UxGroup";
 
 const UxAside = ({ ref, ...props }) => {
 	const baseClassName = 'ux-aside';
@@ -62,26 +63,29 @@ const UxAside = ({ ref, ...props }) => {
 	return (
 		<UxSection className={caseClassName}>
 			<UxArticle className="h4 space">
-				<UxRadioGroup
-					className="chip"
-					scroll
-					expand
-					selected={selected}
-					expanded={expanded}
-					onChange={(value) => handleChange(value)}
-					onExpand={(value) => handleExpand(value)}
-				>
-					{
-						data.map((item, index) => (
-							<UxRadio
-								key={index}
-								value={String(index)}
-							>
-								{item.name}
-							</UxRadio>
-						))
-					}
-				</UxRadioGroup>
+				<UxContent>
+					<UxGroup
+						role="radio"
+						className="chip"
+						scroll
+						expand
+						selected={selected}
+						expanded={expanded}
+						onChange={(value) => handleChange(value)}
+						onExpand={(value) => handleExpand(value)}
+					>
+						{
+							data.map((item, index) => (
+								<UxRadio
+									key={index}
+									value={String(index)}
+								>
+									{item.name}
+								</UxRadio>
+							))
+						}
+					</UxGroup>
+				</UxContent>
 			</UxArticle>
 		</UxSection>
 	)

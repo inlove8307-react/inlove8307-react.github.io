@@ -7,11 +7,10 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
+import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
-import UxCardGroup from "@/components/base/UxCardGroup";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
-import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 
 export default function Sample() {
 	return (
@@ -23,9 +22,12 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxSubject>
-							<UxCollapseGroup className="sample">
+							<UxGroup
+								role="collapse"
+								className="sample"
+							>
 								<UxCollapse>
-									<div data-role="summary">UxCardGroup Props</div>
+									<div data-role="summary">UxGroup Card Props</div>
 									<div data-role="details">
 										<p>[props]</p>
 										<ul>
@@ -50,7 +52,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-							</UxCollapseGroup>
+							</UxGroup>
 						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
@@ -58,14 +60,10 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCardGroup>
-										<UxCard>
-											CARD 01
-										</UxCard>
-										<UxCard>
-											CARD 02
-										</UxCard>
-									</UxCardGroup>
+									<UxGroup role="card">
+										<UxCard>CARD 01</UxCard>
+										<UxCard>CARD 02</UxCard>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -76,20 +74,15 @@ export default function Sample() {
 									<h5>.col2</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCardGroup className="col2">
-										<UxCard>
-											CARD 01
-										</UxCard>
-										<UxCard>
-											CARD 02
-										</UxCard>
-										<UxCard>
-											CARD 03
-										</UxCard>
-										<UxCard>
-											CARD 04
-										</UxCard>
-									</UxCardGroup>
+									<UxGroup
+										role="card"
+										className="col2"
+									>
+										<UxCard>CARD 01</UxCard>
+										<UxCard>CARD 02</UxCard>
+										<UxCard>CARD 03</UxCard>
+										<UxCard>CARD 04</UxCard>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -97,22 +90,21 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:type checkbox</h5>
+									<h5>:role checkbox</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCardGroup type="checkbox">
+									<UxGroup
+										role="card"
+										type="checkbox"
+									>
 										<UxCard
-											value="value01"
+											value="0"
 											checked={true}
 										>
 											CARD 01
 										</UxCard>
-										<UxCard
-											value="value02"
-										>
-											CARD 02
-										</UxCard>
-									</UxCardGroup>
+										<UxCard value="1">CARD 02</UxCard>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -120,24 +112,17 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:type radio</h5>
+									<h5>:role radio</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCardGroup
+									<UxGroup
+										role="card"
 										type="radio"
-										selected="value01"
+										selected="0"
 									>
-										<UxCard
-											value="value01"
-										>
-											CARD 01
-										</UxCard>
-										<UxCard
-											value="value02"
-										>
-											CARD 02
-										</UxCard>
-									</UxCardGroup>
+										<UxCard value="0">CARD 01</UxCard>
+										<UxCard value="1">CARD 02</UxCard>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

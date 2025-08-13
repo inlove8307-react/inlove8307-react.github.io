@@ -11,7 +11,7 @@ import UxButton from "@/components/base/UxButton";
 import UxDivider from "@/components/base/UxDivider";
 import UxGrid from "@/components/base/UxGrid";
 import UxCollapse from "@/components/base/UxCollapse";
-import UxCollapseGroup from "@/components/base/UxCollapseGroup";
+import UxGroup from "@/components/base/UxGroup";
 
 export default function Sample() {
 	return (
@@ -23,7 +23,10 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxSubject>
-							<UxCollapseGroup className="sample">
+							<UxGroup
+								role="collapse"
+								className="sample"
+							>
 								<UxCollapse>
 									<div data-role="summary">UxButton Props</div>
 									<div data-role="details">
@@ -37,7 +40,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-							</UxCollapseGroup>
+							</UxGroup>
 						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">

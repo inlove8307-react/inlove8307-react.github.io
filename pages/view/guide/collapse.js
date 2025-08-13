@@ -7,8 +7,8 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
+import UxGroup from "@/components/base/UxGroup";
 import UxCollapse from "@/components/base/UxCollapse";
-import UxCollapseGroup from "@/components/base/UxCollapseGroup";
 import UxDivider from "@/components/base/UxDivider";
 
 export default function Sample() {
@@ -21,9 +21,12 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxSubject>
-							<UxCollapseGroup className="sample">
+							<UxGroup
+								role="collapse"
+								className="sample"
+							>
 								<UxCollapse>
-									<div data-role="summary">UxCollapseGroup Props</div>
+									<div data-role="summary">UxGroup Collapse Props</div>
 									<div data-role="details">
 										<p>[props]</p>
 										<ul>
@@ -48,7 +51,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-							</UxCollapseGroup>
+							</UxGroup>
 						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
@@ -84,7 +87,7 @@ export default function Sample() {
 									<h5>group</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapseGroup>
+									<UxGroup role="collapse">
 										<UxCollapse>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
@@ -93,7 +96,7 @@ export default function Sample() {
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-									</UxCollapseGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -101,10 +104,13 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:selected</h5>
+									<h5>group :selected</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapseGroup selected={0}>
+									<UxGroup
+										role="collapse"
+										selected={0}
+									>
 										<UxCollapse>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
@@ -113,7 +119,7 @@ export default function Sample() {
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-									</UxCollapseGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -121,10 +127,13 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:once</h5>
+									<h5>group :once</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapseGroup once>
+									<UxGroup
+										role="collapse"
+										once
+									>
 										<UxCollapse>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
@@ -133,7 +142,7 @@ export default function Sample() {
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-									</UxCollapseGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

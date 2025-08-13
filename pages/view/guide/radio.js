@@ -8,10 +8,9 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxRadio from "@/components/base/UxRadio";
-import UxRadioGroup from "@/components/base/UxRadioGroup";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
-import UxCollapseGroup from "@/components/base/UxCollapseGroup";
+import UxGroup from "@/components/base/UxGroup";
 
 export default function Sample() {
 	return (
@@ -23,9 +22,12 @@ export default function Sample() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxSubject>
-							<UxCollapseGroup className="sample">
+							<UxGroup
+								role="collapse"
+								className="sample"
+							>
 								<UxCollapse>
-									<div data-role="summary">UxRadioGroup Props</div>
+									<div data-role="summary">UxGroup Radio Props</div>
 									<div data-role="details">
 										<p>[props]</p>
 										<ul>
@@ -50,7 +52,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-							</UxCollapseGroup>
+							</UxGroup>
 						</UxSubject>
 						<UxContent>
 							<UxArticle className="h5">
@@ -58,10 +60,13 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxRadioGroup selected="0">
+									<UxGroup
+										role="radio"
+										selected="0"
+									>
 										<UxRadio value="0">RADIO_01</UxRadio>
 										<UxRadio value="1">RADIO_02</UxRadio>
-									</UxRadioGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -72,13 +77,14 @@ export default function Sample() {
 									<h5>.column</h5>
 								</UxSubject>
 								<UxContent>
-									<UxRadioGroup
+									<UxGroup
+										role="radio"
 										className="column"
 										selected="0"
 									>
 										<UxRadio value="0">RADIO_01</UxRadio>
 										<UxRadio value="1">RADIO_02</UxRadio>
-									</UxRadioGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -89,7 +95,8 @@ export default function Sample() {
 									<h5>.chip</h5>
 								</UxSubject>
 								<UxContent>
-									<UxRadioGroup
+									<UxGroup
+										role="radio"
 										className="chip"
 										selected="0"
 									>
@@ -98,7 +105,7 @@ export default function Sample() {
 										<UxRadio value="2">RADIO_03</UxRadio>
 										<UxRadio value="3">RADIO_04</UxRadio>
 										<UxRadio value="4">RADIO_05</UxRadio>
-									</UxRadioGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -109,7 +116,8 @@ export default function Sample() {
 									<h5>:scroll</h5>
 								</UxSubject>
 								<UxContent>
-									<UxRadioGroup
+									<UxGroup
+										role="radio"
 										className="chip"
 										selected="0"
 										scroll
@@ -119,7 +127,7 @@ export default function Sample() {
 										<UxRadio value="2">RADIO_03</UxRadio>
 										<UxRadio value="3">RADIO_04</UxRadio>
 										<UxRadio value="4">RADIO_05</UxRadio>
-									</UxRadioGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -130,7 +138,8 @@ export default function Sample() {
 									<h5>:expand</h5>
 								</UxSubject>
 								<UxContent>
-									<UxRadioGroup
+									<UxGroup
+										role="radio"
 										className="chip"
 										selected="0"
 										scroll
@@ -141,7 +150,7 @@ export default function Sample() {
 										<UxRadio value="2">RADIO_03</UxRadio>
 										<UxRadio value="3">RADIO_04</UxRadio>
 										<UxRadio value="4">RADIO_05</UxRadio>
-									</UxRadioGroup>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
