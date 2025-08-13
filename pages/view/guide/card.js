@@ -90,7 +90,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role checkbox</h5>
+									<h5>:type checkbox</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup
@@ -112,7 +112,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role radio</h5>
+									<h5>:type radio</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup
