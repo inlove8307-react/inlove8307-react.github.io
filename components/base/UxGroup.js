@@ -8,26 +8,6 @@ import classnames from 'classnames';
 import UxIcon from '@/components/base/UxIcon';
 
 /**
- * <Default>
- * [props]
- *
- * [event]
- *
- */
-
-const Default = ({ ref, ...props }) => {
-	return (
-		<div className={props.caseClassName}>
-			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-				}))
-			}
-		</div>
-	);
-};
-
-/**
  * <Card>
  * [props]
  *
@@ -264,7 +244,7 @@ const Toggle = ({ ref, ...props }) => {
 };
 
 /**
- * <Toggle>
+ * <Input>
  * [props]
  *
  * [event]
@@ -275,6 +255,26 @@ const Input = ({ ref, ...props }) => {
 	return (
 		<div className={props.caseClassName}>
 			<div className={`${props.baseClassName}-placeholder`}>{props.placeholder}</div>
+			{
+				getArray(props.children).map((item, index) => mergeProps(item, {
+					key: index,
+				}))
+			}
+		</div>
+	);
+};
+
+/**
+ * <Default>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Default = ({ ref, ...props }) => {
+	return (
+		<div className={props.caseClassName}>
 			{
 				getArray(props.children).map((item, index) => mergeProps(item, {
 					key: index,
