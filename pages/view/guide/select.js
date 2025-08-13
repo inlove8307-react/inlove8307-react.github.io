@@ -12,6 +12,7 @@ import UxOption from "@/components/base/UxOption";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
+import UxInput from "@/components/base/UxInput";
 
 export default function Sample() {
 	return (

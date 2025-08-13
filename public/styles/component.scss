@@ -302,8 +302,6 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-input.disabled .ux-input-prefix,
 .ux-input.disabled .ux-input-suffix,
 .ux-input.disabled .ux-input-timer {color: var(--dark3);}
-/* <UxInput> Fix */
-.ux-input-group .ux-input.fix {flex-shrink: 0;}
 
 
 
@@ -388,40 +386,6 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
-/* <UxInputGroup> */
-.ux-input-group {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-/* <UxInputGroup> Focus */
-.ux-input-group:focus-within {box-shadow: var(--inset-focus);}
-/* <UxInputGroup> Valid */
-.ux-input-group.valid {box-shadow: var(--inset-valid);}
-.ux-input-group.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxInputGroup> Invalid */
-.ux-input-group.invalid {box-shadow: var(--inset-invalid);}
-.ux-input-group.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxInputGroup> Disabled */
-.ux-input-group.disabled {background-color: var(--light1);}
-/* <UxInputGroup> Input */
-.ux-input-group .ux-input {padding: 0; box-shadow: none; background-color: transparent;}
-.ux-input-group .ux-input:focus-within {box-shadow: none;}
-.ux-input-group.readonly .ux-input,
-.ux-input-group.disabled .ux-input {background-color: transparent;}
-/* <UxInputGroup> Password */
-.ux-input-group .ux-password {flex-shrink: 0; padding: 0; box-shadow: none; background-color: transparent;}
-.ux-input-group.readonly .ux-password,
-.ux-input-group.disabled .ux-password {background-color: transparent;}
-/* <UxInputGroup> Dash */
-.ux-input-group .ux-input.dash::before,
-.ux-input-group .ux-password.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
-/* <UxInputGroup> Last */
-.ux-input-group .ux-input.last,
-.ux-input-group .ux-password.last {flex-grow: 1; flex-shrink: initial;}
-/* <UxInputGroup> Submit */
-.ux-input-group .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
-.ux-input-group .ux-button.submit:hover,
-.ux-input-group .ux-button.submit:focus {box-shadow: none;}
-
-
-
 /* <UxSelect> */
 .ux-select {display: flex;}
 .ux-select .ux-button {flex-grow: 1; color: var(--dark3);}
@@ -438,6 +402,51 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxOption> Selected */
 .ux-option.selected .ux-option-button {color: var(--color1);}
 .ux-option.selected .ux-icon {background-color: var(--color1);}
+
+
+
+/* <UxGroup> Input */
+.ux-group.input {display: flex; align-items: center; gap: .8rem; position: relative; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+/* <UxGroup> Focus */
+.ux-group.input:focus-within {box-shadow: var(--inset-focus);}
+/* <UxGroup> Valid */
+.ux-group.input.valid {box-shadow: var(--inset-valid);}
+.ux-group.input.valid:focus-within {box-shadow: var(--inset-valid-focus);}
+/* <UxGroup> Invalid */
+.ux-group.input.invalid {box-shadow: var(--inset-invalid);}
+.ux-group.input.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
+/* <UxGroup> Disabled */
+.ux-group.input.disabled {background-color: var(--light1);}
+/* <UxGroup> Placeholder */
+.ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; top: 50%; left: 50%; padding: 0 1.2rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: var(--radius-form); background-color: var(--light0); color: var(--dark3); transform: translate(-50%, -50%); pointer-events: none;}
+.ux-group.input .ux-group-placeholder:empty,
+.ux-group.input:focus-within .ux-group-placeholder {display: none;}
+.ux-group.input .ux-group-placeholder {z-index: 1;}
+/* <UxGroup> Input */
+.ux-group.input .ux-input {padding: 0; box-shadow: none; background-color: transparent;}
+.ux-group.input .ux-input:focus-within {box-shadow: none;}
+.ux-group.input.readonly .ux-input,
+.ux-group.input.disabled .ux-input {background-color: transparent;}
+.ux-group.input .ux-input.fix {flex-shrink: 0;}
+/* <UxGroup> Password */
+.ux-group.input .ux-password {flex-shrink: 0; padding: 0; box-shadow: none; background-color: transparent;}
+.ux-group.input.readonly .ux-password,
+.ux-group.input.disabled .ux-password {background-color: transparent;}
+/* <UxGroup> Select */
+.ux-group.input .ux-select {align-items: center; gap: .8rem;}
+.ux-group.input .ux-select .ux-button.select {padding: initial; border-radius: initial; box-shadow: initial; background-color: transparent;}
+/* <UxGroup> Dash */
+.ux-group.input .ux-input.dash::before,
+.ux-group.input .ux-password.dash::before,
+.ux-group.input .ux-select.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
+/* <UxGroup> Last */
+.ux-group.input .ux-input.last,
+.ux-group.input .ux-password.last,
+.ux-group.input .ux-select.last {flex-grow: 1; flex-shrink: initial;}
+/* <UxGroup> Submit */
+.ux-group.input .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
+.ux-group.input .ux-button.submit:hover,
+.ux-group.input .ux-button.submit:focus {box-shadow: none;}
 
 
 

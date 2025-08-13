@@ -47,7 +47,11 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxBrn clear />
+									<UxBrn
+										placeholder="입력해주세요"
+										submit="submit"
+										clear
+									/>
 								</UxContent>
 							</UxArticle>
 
@@ -59,6 +63,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxBrn
+										placeholder="입력해주세요"
 										value1="123"
 										value2="45"
 										value3="12345"
@@ -77,6 +82,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxBrn
+										placeholder="입력해주세요"
 										value1="123"
 										value2="45"
 										value3="12345"
@@ -95,9 +101,11 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxBrn
+										placeholder="입력해주세요"
 										value1="123"
 										value2="45"
 										value3="12345"
+										submit="submit"
 										clear
 										readonly
 									/>
@@ -112,9 +120,11 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxBrn
+										placeholder="입력해주세요"
 										value1="123"
 										value2="45"
 										value3="12345"
+										submit="submit"
 										clear
 										disabled
 									/>

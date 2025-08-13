@@ -21,7 +21,6 @@ const Default = ({ ref, ...props }) => {
 			{
 				getArray(props.children).map((item, index) => mergeProps(item, {
 					key: index,
-					index: index,
 				}))
 			}
 		</div>
@@ -83,7 +82,6 @@ const Checkbox = ({ ref, ...props }) => {
 			{
 				getArray(props.children).map((item, index) => mergeProps(item, {
 					key: index,
-					index: index,
 				}))
 			}
 		</div>
@@ -266,6 +264,27 @@ const Toggle = ({ ref, ...props }) => {
 };
 
 /**
+ * <Toggle>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Input = ({ ref, ...props }) => {
+	return (
+		<div className={props.caseClassName}>
+			<div className={`${props.baseClassName}-placeholder`}>{props.placeholder}</div>
+			{
+				getArray(props.children).map((item, index) => mergeProps(item, {
+					key: index,
+				}))
+			}
+		</div>
+	);
+};
+
+/**
  * <UxGroup>
  * [props]
  *
@@ -297,6 +316,8 @@ const UxGroup = ({ ref, ...props }) => {
 				return <Radio {...props} />;
 			case 'toggle':
 				return <Toggle {...props}/>;
+			case 'input':
+				return <Input {...props}/>;
 			default:
 				return <Default {...props} />;
 		};

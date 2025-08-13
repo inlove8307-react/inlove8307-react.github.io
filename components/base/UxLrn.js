@@ -7,6 +7,7 @@ import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
 import UxPassword from '@/components/base/UxPassword';
+import UxGroup from '@/components/base/UxGroup';
 
 /**
  * <UxLrn> (운전면허번호)
@@ -17,13 +18,6 @@ import UxPassword from '@/components/base/UxPassword';
  */
 
 const UxLrn = ({ ref, ...props }) => {
-	const baseClassName = 'ux-input-group';
-	const caseClassName = classnames(baseClassName, props.className, {
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-		disabled: props.disabled
-	});
 	const [value1, setValue1] = useState(props.value1 || '');
 	const [value2, setValue2] = useState(props.value2 || '');
 	const [value3, setValue3] = useState(props.value3 || '');
@@ -55,10 +49,15 @@ const UxLrn = ({ ref, ...props }) => {
 	}, [props.value1, props.value2, props.value3]);
 
 	return (
-		<div
-			ref={ref}
-			className={caseClassName}
-			style={props.style}
+		<UxGroup
+			role="input"
+			className={classnames({
+				valid: props.valid === true,
+				invalid: props.valid === false,
+				readonly: props.readonly,
+				disabled: props.disabled
+			})}
+			placeholder={(!value1 && !value2 && !value3 && !value4) && props.placeholder}
 		>
 			<UxInput
 				className="fix"
@@ -116,7 +115,7 @@ const UxLrn = ({ ref, ...props }) => {
 					{props.submit}
 				</UxButton>
 			}
-		</div>
+		</UxGroup>
 	)
 };
 

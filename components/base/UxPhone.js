@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxInput from '@/components/base/UxInput';
+import UxGroup from '@/components/base/UxGroup';
 
 /**
  * <UxPhone>
@@ -51,10 +52,15 @@ const UxPhone = ({ ref, ...props }) => {
 	}, [props.value1, props.value2, props.value3]);
 
 	return (
-		<div
-			ref={ref}
-			className={caseClassName}
-			style={props.style}
+		<UxGroup
+			role="input"
+			className={classnames(baseClassName, props.className, {
+				valid: props.valid === true,
+				invalid: props.valid === false,
+				readonly: props.readonly,
+				disabled: props.disabled
+			})}
+			placeholder={(!value1 && !value2 && !value2) && props.placeholder}
 		>
 			<UxInput
 				className="fix"
@@ -103,7 +109,7 @@ const UxPhone = ({ ref, ...props }) => {
 					{props.submit}
 				</UxButton>
 			}
-		</div>
+		</UxGroup>
 	)
 };
 

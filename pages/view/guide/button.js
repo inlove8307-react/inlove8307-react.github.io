@@ -83,7 +83,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>grid</h5>
+									<h5>group</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup className="gap8">
@@ -107,6 +107,23 @@ export default function Sample() {
 									<UxButton
 										className="outline h3"
 										select
+									>
+										<span className="text">label</span>
+									</UxButton>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:select :active</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										className="outline h3"
+										select
+										active
 									>
 										<span className="text">label</span>
 									</UxButton>

@@ -48,8 +48,9 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxPhone
-										clear
+										placeholder="입력해주세요"
 										submit="submit"
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -62,6 +63,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxPhone
+										placeholder="입력해주세요"
 										value1="010"
 										value2="1234"
 										value3="5678"
@@ -80,6 +82,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxPhone
+										placeholder="입력해주세요"
 										value1="010"
 										value2="1234"
 										value3="5678"
@@ -98,9 +101,11 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxPhone
+										placeholder="입력해주세요"
 										value1="010"
 										value2="1234"
 										value3="5678"
+										submit="submit"
 										clear
 										readonly
 									/>
@@ -115,9 +120,11 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxPhone
+										placeholder="입력해주세요"
 										value1="010"
 										value2="1234"
 										value3="5678"
+										submit="submit"
 										clear
 										disabled
 									/>

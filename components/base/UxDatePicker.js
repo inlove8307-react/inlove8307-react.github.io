@@ -11,6 +11,7 @@ import UxContent from "@/components/layout/UxContent";
 import UxInput from '@/components/base/UxInput';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
+import UxGroup from '@/components/base/UxGroup';
 import UxCalendar from '@/components/base/UxCalendar';
 
 /**
@@ -80,13 +81,6 @@ const UxDatePickerPopup = ({ ref, ...props }) => {
  */
 
 const UxDatePicker = ({ ref, ...props }) => {
-	const baseClassName = 'ux-input-group';
-	const caseClassName = classnames(baseClassName, props.className, {
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-		disabled: props.disabled
-	});
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
 	const [fromValue, setFromValue] = useState(props.from?.value || '');
@@ -158,7 +152,15 @@ const UxDatePicker = ({ ref, ...props }) => {
 	}, [props.to?.value]);
 
 	return (
-		<div className={caseClassName}>
+		<UxGroup
+			role="input"
+			className={classnames({
+				valid: props.valid === true,
+				invalid: props.valid === false,
+				readonly: props.readonly,
+				disabled: props.disabled
+			})}
+		>
 			{
 				!props.from && !props.to &&
 				<UxInput
@@ -208,7 +210,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 					</UxInput>
 				</>
 			}
-		</div>
+		</UxGroup>
 	)
 };
 

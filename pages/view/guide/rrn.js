@@ -48,8 +48,9 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxRrn
-										clear
+										placeholder="입력해주세요"
 										submit="submit"
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -62,11 +63,12 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxRrn
+										placeholder="입력해주세요"
 										value1="987654"
 										value2="9876543"
+										submit="submit"
 										clear
 										valid={true}
-										submit="submit"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -79,11 +81,12 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxRrn
+										placeholder="입력해주세요"
 										value1="987654"
 										value2="9876543"
+										submit="submit"
 										clear
 										valid={false}
-										submit="submit"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -96,11 +99,12 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxRrn
+										placeholder="입력해주세요"
 										value1="987654"
 										value2="9876543"
+										submit="submit"
 										clear
 										readonly
-										submit="submit"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -113,11 +117,12 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxRrn
+										placeholder="입력해주세요"
 										value1="987654"
 										value2="9876543"
+										submit="submit"
 										clear
 										disabled
-										submit="submit"
 									/>
 								</UxContent>
 							</UxArticle>

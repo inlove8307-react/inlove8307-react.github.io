@@ -12,6 +12,7 @@ import UxContent from "@/components/layout/UxContent";
 import UxInput from '@/components/base/UxInput';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
+import UxGroup from '@/components/base/UxGroup';
 import UxYearCalendar from '@/components/base/UxYearCalendar';
 
 
@@ -84,13 +85,6 @@ const UxYearPickerPopup = ({ ref, ...props }) => {
  */
 
 const UxYearPicker = ({ ref, ...props }) => {
-	const baseClassName = 'ux-input-group';
-	const caseClassName = classnames(baseClassName, props.className, {
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-		disabled: props.disabled
-	});
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
 
@@ -110,7 +104,15 @@ const UxYearPicker = ({ ref, ...props }) => {
 	}, [props.value]);
 
 	return (
-		<div className={caseClassName}>
+		<UxGroup
+			role="input"
+			className={classnames({
+				valid: props.valid === true,
+				invalid: props.valid === false,
+				readonly: props.readonly,
+				disabled: props.disabled
+			})}
+		>
 			<UxInput
 				className="last"
 				placeholder={props.placeholder || '선택'}
@@ -125,7 +127,7 @@ const UxYearPicker = ({ ref, ...props }) => {
 					<UxIcon className="i160" />
 				</UxButton>
 			</UxInput>
-		</div>
+		</UxGroup>
 	)
 };
 
