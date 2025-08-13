@@ -57,7 +57,7 @@ export default function Sample() {
 								<UxContent>
 									<UxProgress
 										value={50}
-										suffix="원"
+										suffix="%"
 									/>
 								</UxContent>
 							</UxArticle>

@@ -32,10 +32,6 @@ const UxDatePickerPopup = ({ ref, ...props }) => {
 		props.onClose({ value });
 	};
 
-	useEffect(() => {
-		console.log(props);
-	}, []);
-
 	return (
 		<>
 			<UxSection className="header">

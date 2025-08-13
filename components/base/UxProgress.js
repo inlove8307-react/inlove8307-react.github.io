@@ -17,7 +17,7 @@ const UxProgress = ({ ref, ...props }) => {
 	const caseClassName = classnames(baseClassName, props.className);
 	const [min, setMin] = useState(props.min || 0);
 	const [max, setMax] = useState(props.max || 100);
-	const [value, setValue] = useState(props.value || 0);
+	const [value, setValue] = useState(props.value || min);
 	const [fill, setFill] = useState({});
 	const [flag, setFlag] = useState({});
 	const [done, setDone] = useState(false);
@@ -58,7 +58,9 @@ const UxProgress = ({ ref, ...props }) => {
 	useEffect(() => {
 		setSlotFlag(getRole(getArray(props.children), 'flag')?.props.children);
 		setSlotLegend(getRole(getArray(props.children), 'legend')?.props.children);
-		setTimeout(handleTransitionEnd, 1);
+		if (min === value) {
+			setTimeout(handleTransitionEnd, 1);
+		}
 	}, []);
 
 	return (

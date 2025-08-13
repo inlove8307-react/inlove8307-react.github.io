@@ -156,7 +156,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-modal.tooltip {display: flex; justify-content: stretch; align-items: stretch;}
 .ux-modal.tooltip .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
 /* <UxModal> z-index */
-.ux-modal {z-index: 10;}
+.ux-modal {z-index: 30;}
 
 
 
@@ -496,7 +496,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxRadioGroup> Scroll */
 .ux-radio-group.scroll {position: relative;}
 .ux-radio-group.scroll::before,
-.ux-radio-group.scroll::after {content: ''; position: absolute; top: 0; z-index: 1; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
+.ux-radio-group.scroll::after {content: ''; position: absolute; top: 0; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
 .ux-radio-group.scroll::before {left: 0; background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
 .ux-radio-group.scroll::after {right: 0; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
 .ux-radio-group.scroll:not(.before)::before {opacity: 1;}
@@ -515,6 +515,9 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-radio-group.scroll.expand:not(.after)::after {right: 3.2rem; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 75%);}
 /* <UxRadioGroup> Expand Expanded */
 .ux-radio-group.scroll.expand.expanded .ux-radio-scroll {flex-wrap: wrap;}
+/* <UxRadioGroup> z-index */
+.ux-radio-group.scroll::before,
+.ux-radio-group.scroll::after {z-index: 1;}
 
 
 
@@ -523,7 +526,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-switch {display: flex; align-items: center; gap: .8rem;}
 .ux-switch .ux-switch-base {display: inline-flex; align-items: center; position: relative; padding: var(--gap); width: calc((var(--size) + var(--gap)) * 2); height: calc(var(--size) + var(--gap) * 2); border-radius: calc((var(--size) + var(--gap) * 2) / 2); background-color: var(--light1); transition: background-color .15s ease-in-out;}
 .ux-switch .ux-switch-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-switch .ux-switch-ball {position: absolute; z-index: 1; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--light0); box-shadow: var(--shadow); transition: left .15s ease-in-out;}
+.ux-switch .ux-switch-ball {position: absolute; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--light0); box-shadow: var(--shadow); transition: left .15s ease-in-out;}
 .ux-switch .ux-switch-base::before,
 .ux-switch .ux-switch-base::after {width: var(--size); font-size: 1.4rem; text-align: center; opacity: 0; transition: opacity .15s ease-in-out;}
 .ux-switch .ux-switch-base::before {content: 'ON'; margin-right: auto; color: var(--light0);}
@@ -533,6 +536,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-switch.checked .ux-switch-ball {top: var(--gap); left: calc(100% - var(--size) - var(--gap));}
 .ux-switch.checked .ux-switch-base::before {opacity: 1;}
 .ux-switch.checked .ux-switch-base::after {opacity: 0;}
+/* <UxSwitch> z-index */
+.ux-switch .ux-switch-ball {z-index: 1;}
 
 
 

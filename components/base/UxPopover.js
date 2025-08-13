@@ -19,7 +19,6 @@ const UxPopoverBase = ({ ref, ...props }) => {
 	const [style, setStyle] = useState({});
 
 	useEffect(() => {
-		console.log(props);
 		setStyle({
 			top: `${props.rect.top + props.rect.height}px`,
 			left: `0`,
