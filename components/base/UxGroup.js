@@ -8,14 +8,14 @@ import classnames from 'classnames';
 import UxIcon from '@/components/base/UxIcon';
 // children이 없을 경우 empty 노출
 /**
- * <UxDefault>
+ * <Default>
  * [props]
  *
  * [event]
  *
  */
 
-const UxDefault = ({ ref, ...props }) => {
+const Default = ({ ref, ...props }) => {
 	return (
 		<div className={props.caseClassName}>
 			{
@@ -29,14 +29,14 @@ const UxDefault = ({ ref, ...props }) => {
 };
 
 /**
- * <UxCard>
+ * <Card>
  * [props]
  *
  * [event]
  *
  */
 
-const UxCard = ({ ref, ...props }) => {
+const Card = ({ ref, ...props }) => {
 	const [selected, setSelected] = useState(props.selected || null);
 
 	const handleChange = (value) => {
@@ -70,14 +70,14 @@ const UxCard = ({ ref, ...props }) => {
 };
 
 /**
- * <UxCheckbox>
+ * <Checkbox>
  * [props]
  *
  * [event]
  *
  */
 
-const UxCheckbox = ({ ref, ...props }) => {
+const Checkbox = ({ ref, ...props }) => {
 	return (
 		<div className={props.caseClassName}>
 			{
@@ -91,14 +91,14 @@ const UxCheckbox = ({ ref, ...props }) => {
 };
 
 /**
- * <UxCollapse>
+ * <Collapse>
  * [props]
  *
  * [event]
  *
  */
 
-const UxCollapse = ({ ref, ...props }) => {
+const Collapse = ({ ref, ...props }) => {
 	const [selected, setSelected] = useState(props.selected);
 
 	const handleChange = (value) => {
@@ -132,14 +132,14 @@ const UxCollapse = ({ ref, ...props }) => {
 };
 
 /**
- * <UxRadio>
+ * <Radio>
  * [props]
  *
  * [event]
  *
  */
 
-const UxRadio = ({ ref, ...props }) => {
+const Radio = ({ ref, ...props }) => {
 	const [selected, setSelected] = useState(props.selected || null);
 	const [expanded, setExpanded] = useState(props.expanded || false);
 	const [beforeRef, beforeInView] = useInView();
@@ -226,14 +226,14 @@ const UxRadio = ({ ref, ...props }) => {
 };
 
 /**
- * <UxToggle>
+ * <Toggle>
  * [props]
  *
  * [event]
  *
  */
 
-const UxToggle = ({ ref, ...props }) => {
+const Toggle = ({ ref, ...props }) => {
 	const [selected, setSelected] = useState(props.selected || null);
 
 	const handleChange = (value) => {
@@ -288,17 +288,17 @@ const UxGroup = ({ ref, ...props }) => {
 
 		switch (role) {
 			case 'card':
-				return <UxCard {...props} />;
+				return <Card {...props} />;
 			case 'checkbox':
-				return <UxCheckbox {...props} />;
+				return <Checkbox {...props} />;
 			case 'collapse':
-				return <UxCollapse {...props} />;
+				return <Collapse {...props} />;
 			case 'radio':
-				return <UxRadio {...props} />;
+				return <Radio {...props} />;
 			case 'toggle':
-				return <UxToggle {...props}/>;
+				return <Toggle {...props}/>;
 			default:
-				return <UxDefault {...props} />;
+				return <Default {...props} />;
 		};
 	};
 
