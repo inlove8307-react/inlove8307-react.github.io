@@ -12,9 +12,19 @@ import UxGroup from '@/components/base/UxGroup';
 /**
  * <UxRrn> (주민등록번호)
  * [props]
- *
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value1(String): 첫번째 값
+ * value2(String): 두번째 값
+ * value3(String): 세번째 값
+ * gender(Boolean): 성별 값 마스킹 여부
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onClear(Func): 값 초기화 이벤트 콜백
+ * onSubmit(Func): 확인 버튼 이벤트 콜백
  */
 
 const UxRrn = ({ ref, ...props }) => {
@@ -66,14 +76,30 @@ const UxRrn = ({ ref, ...props }) => {
 				disabled={props.disabled}
 				onChange={(value) => setValue1(value)}
 			/>
+			{
+				props.gender &&
+				<UxInput
+					className="fix dash"
+					style={{ width: '2.25rem'}}
+					placeholder="0"
+					value={value2}
+					maxLength={1}
+					readonly={props.readonly}
+					disabled={props.disabled}
+					onChange={(value) => setValue2(value)}
+				/>
+			}
 			<UxPassword
-				className="dash last"
-				placeholder="0000000"
-				value={value2}
-				maxLength={7}
+				className={classnames('last', { dash: !props.gender })}
+				value={props.gender ? value3 : value2}
+				maxLength={props.gender ? 6 : 7}
 				readonly={props.readonly}
 				disabled={props.disabled}
-				onChange={(value) => setValue2(value)}
+				onChange={(value) => {
+					props.gender
+						? setValue3(value)
+						: setValue2(value)
+				}}
 			/>
 			{
 				props.clear && (value1 || value2) && !props.readonly && !props.disabled &&

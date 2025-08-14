@@ -29,13 +29,21 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxLrn Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>value1(String): 첫번째 값</li>
+											<li>value2(String): 두번째 값</li>
+											<li>value3(String): 세번째 값</li>
+											<li>value4(String): 네번째 값</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
+											<li>onClear(Func): 값 초기화 이벤트 콜백</li>
+											<li>onSubmit(Func): 확인 버튼 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -49,7 +57,7 @@ export default function Sample() {
 								<UxContent>
 									<UxLrn
 										placeholder="입력해주세요"
-										submit="submit"
+										submit="인증"
 										clear
 									/>
 								</UxContent>
@@ -68,7 +76,7 @@ export default function Sample() {
 										value2="34"
 										value3="567890"
 										value4="89"
-										submit="submit"
+										submit="인증"
 										clear
 										valid={true}
 									/>
@@ -88,7 +96,7 @@ export default function Sample() {
 										value2="34"
 										value3="567890"
 										value4="89"
-										submit="submit"
+										submit="인증"
 										clear
 										valid={false}
 									/>
@@ -108,7 +116,7 @@ export default function Sample() {
 										value2="34"
 										value3="567890"
 										value4="89"
-										submit="submit"
+										submit="인증"
 										clear
 										readonly
 									/>
@@ -128,7 +136,7 @@ export default function Sample() {
 										value2="34"
 										value3="567890"
 										value4="89"
-										submit="submit"
+										submit="인증"
 										clear
 										disabled
 									/>

@@ -9,9 +9,19 @@ import UxMasking from '@/components/base/UxMasking';
 /**
  * <UxPassword>
  * [props]
- *
+ * style(Object): 인라인 스타일
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * maxLength(String): 글자 수 제한
+ * scrollIntoView(Boolean): 값 입력 시 스크롤 여부
+ * clear(Boolean): 값 초기화 버튼 활성화 여부
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onClear(Func): 값 초기화 이벤트 콜백
  */
 
 const UxPassword = ({ ref, ...props }) => {
@@ -30,6 +40,7 @@ const UxPassword = ({ ref, ...props }) => {
 
 	const handleClear = (event) => {
 		setValue('');
+		props.onClear && props.onClear(event);
 	};
 
 	useEffect(() => {

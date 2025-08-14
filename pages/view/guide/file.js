@@ -31,13 +31,17 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxFile Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>value(String): 값</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onClick(Func): 클릭 이벤트 콜백</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -49,8 +53,66 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
+									<UxFile placeholder="파일을 선택해주세요." />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
 									<UxFile
 										placeholder="파일을 선택해주세요."
+										value="file.pdf"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxFile
+										placeholder="파일을 선택해주세요."
+										value="file.pdf"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxFile
+										placeholder="파일을 선택해주세요."
+										value="file.pdf"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxFile
+										placeholder="파일을 선택해주세요."
+										value="file.pdf"
+										disabled
 									/>
 								</UxContent>
 							</UxArticle>

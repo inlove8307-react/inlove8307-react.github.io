@@ -11,19 +11,21 @@ import UxGroup from '@/components/base/UxGroup';
 /**
  * <UxPhone>
  * [props]
- *
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value1(String): 첫번째 값
+ * value2(String): 두번째 값
+ * value3(String): 세번째 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onClear(Func): 값 초기화 이벤트 콜백
+ * onSubmit(Func): 확인 버튼 이벤트 콜백
  */
 
 const UxPhone = ({ ref, ...props }) => {
-	const baseClassName = 'ux-input-group';
-	const caseClassName = classnames(baseClassName, props.className, {
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-		disabled: props.disabled
-	});
 	const [value1, setValue1] = useState(props.value1 || '');
 	const [value2, setValue2] = useState(props.value2 || '');
 	const [value3, setValue3] = useState(props.value3 || '');
@@ -54,7 +56,7 @@ const UxPhone = ({ ref, ...props }) => {
 	return (
 		<UxGroup
 			role="input"
-			className={classnames(baseClassName, props.className, {
+			className={classnames(props.className, {
 				valid: props.valid === true,
 				invalid: props.valid === false,
 				readonly: props.readonly,
@@ -75,7 +77,7 @@ const UxPhone = ({ ref, ...props }) => {
 			<UxInput
 				className="fix dash"
 				style={{ width: '5rem' }}
-				placeholder="1234"
+				placeholder="0000"
 				value={value2}
 				maxLength={4}
 				readonly={props.readonly}
@@ -84,7 +86,7 @@ const UxPhone = ({ ref, ...props }) => {
 			/>
 			<UxInput
 				className="dash last"
-				placeholder="5678"
+				placeholder="0000"
 				value={value3}
 				maxLength={4}
 				readonly={props.readonly}

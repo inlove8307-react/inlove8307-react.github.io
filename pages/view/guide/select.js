@@ -31,26 +31,30 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxSelect Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>value(String): 값</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onClick(Func): 클릭 이벤트 콜백</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 								<UxCollapse>
 									<div data-role="summary">UxOption Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>value(String): 값</li>
+											<li>selected(Boolean): 선택 여부</li>
+											<li>[event]</li>
+											<li>onClick(Func): 클릭 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -118,6 +122,25 @@ export default function Sample() {
 										placeholder="선택해주세요"
 										value="0"
 										valid={false}
+									>
+										<UxOption value="0">OPTION01</UxOption>
+										<UxOption value="1">OPTION02</UxOption>
+										<UxOption value="2">OPTION03</UxOption>
+									</UxSelect>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxSelect
+										placeholder="선택해주세요"
+										value="0"
+										readonly
 									>
 										<UxOption value="0">OPTION01</UxOption>
 										<UxOption value="1">OPTION02</UxOption>

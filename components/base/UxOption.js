@@ -8,9 +8,11 @@ import UxIcon from '@/components/base/UxIcon';
 /**
  * <UxOption>
  * [props]
- *
+ * className(String): 추가 클래스
+ * value(String): 값
+ * selected(Boolean): 선택 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
  */
 
 const UxOption = ({ ref, ...props }) => {

@@ -12,9 +12,18 @@ import UxGroup from '@/components/base/UxGroup';
 /**
  * <UxBrn> (사업자등록번호)
  * [props]
- *
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value1(String): 첫번째 값
+ * value2(String): 두번째 값
+ * value3(String): 세번째 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onClear(Func): 값 초기화 이벤트 콜백
+ * onSubmit(Func): 확인 버튼 이벤트 콜백
  */
 
 const UxBrn = ({ ref, ...props }) => {

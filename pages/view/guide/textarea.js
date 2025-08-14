@@ -29,13 +29,22 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxTextarea Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>rows(String): 라인 수 (기본 '2')</li>
+											<li>value(String): 값</li>
+											<li>maxLength(String): 글자 수 제한</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onFocus(Func): 포커스 활성화 이벤트 콜백</li>
+											<li>onBlur(Func): 포커스 비활성화 이벤트 콜백</li>
+											<li>onKeyDown(Func): 키 입력 이벤트 콜백</li>
+											<li>onKeyUp(Func): 키 입력 후 이벤트 콜백</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>

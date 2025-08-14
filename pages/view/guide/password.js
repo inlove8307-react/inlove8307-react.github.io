@@ -29,13 +29,21 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxPassword Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>style(Object): 인라인 스타일</li>
+											<li>className(String): 추가 클래스</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>value(String): 값</li>
+											<li>maxLength(String): 글자 수 제한</li>
+											<li>scrollIntoView(Boolean): 값 입력 시 스크롤 여부</li>
+											<li>clear(Boolean): 값 초기화 버튼 활성화 여부</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
+											<li>onClear(Func): 값 초기화 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>

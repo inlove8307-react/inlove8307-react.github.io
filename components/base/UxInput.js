@@ -10,9 +10,28 @@ import UxButton from '@/components/base/UxButton';
 /**
  * <UxInput>
  * [props]
- *
+ * type(String): 입력 타입 (기본 'text')
+ * style(Object): 인라인 스타일
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * prefix(String): 앞 표시 문구
+ * suffix(String): 뒤 표시 문구
+ * value(String): 값
+ * maxLength(String): 글자 수 제한
+ * clear(Boolean): 값 초기화 버튼 활성화 여부
+ * submit(String): 확인 버튼 문구
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onInput(Func): 값 입력 이벤트 콜백
+ * onFocus(Func): 포커스 활성화 이벤트 콜백
+ * onBlur(Func): 포커스 비활성화 이벤트 콜백
+ * onKeyDown(Func): 키 입력 이벤트 콜백
+ * onKeyUp(Func): 키 입력 후 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onClear(Func): 값 초기화 이벤트 콜백
+ * onSubmit(Func): 확인 버튼 이벤트 콜백
  */
 
 const UxInput = ({ ref, ...props }) => {
@@ -24,7 +43,6 @@ const UxInput = ({ ref, ...props }) => {
 		disabled: props.disabled
 	});
 	const [value, setValue] = useState(props.value || '');
-	const [name, setName] = useState(props.name || '');
 
 	const handleInput = (event) => {
 		props.onInput && props.onInput(event);
@@ -60,12 +78,6 @@ const UxInput = ({ ref, ...props }) => {
 	}
 
 	useEffect(() => {
-		if (!name) {
-			setName(getRandomChar());
-		}
-	}, []);
-
-	useEffect(() => {
 		props.onChange && props.onChange(value);
 	}, [value]);
 
@@ -81,19 +93,13 @@ const UxInput = ({ ref, ...props }) => {
 			className={caseClassName}
 			style={props.style}
 		>
-			{
-				props.prefix &&
-				<span
-					className={`${baseClassName}-prefix`}
-				>
-					{props.prefix}
-				</span>
-			}
+			<span className={`${baseClassName}-prefix`}>
+				{props.prefix}
+			</span>
 			<input
 				type={props.type || 'text'}
 				className={`${baseClassName}-base`}
 				placeholder={props.placeholder}
-				name={name}
 				value={value}
 				maxLength={props.maxLength}
 				readOnly={props.readonly}
@@ -105,6 +111,7 @@ const UxInput = ({ ref, ...props }) => {
 				onKeyDown={handleKeyDown}
 				onKeyUp={handleKeyUp}
 			/>
+			{props.children}
 			{
 				props.clear && value && !props.readonly && !props.disabled &&
 				<UxIcon
@@ -114,22 +121,12 @@ const UxInput = ({ ref, ...props }) => {
 					onClick={handleClear}
 				/>
 			}
-			{
-				props.suffix &&
-				<span
-					className={`${baseClassName}-suffix`}
-				>
-					{props.suffix}
-				</span>
-			}
-			{
-				props.timer &&
-				<span
-					className={`${baseClassName}-timer`}
-				>
-					{props.timer}
-				</span>
-			}
+			<span className={`${baseClassName}-suffix`}>
+				{props.suffix}
+			</span>
+			<span className={`${baseClassName}-timer`}>
+				{props.timer}
+			</span>
 			{
 				props.submit && !props.readonly && !props.disabled &&
 				<UxButton
@@ -139,7 +136,6 @@ const UxInput = ({ ref, ...props }) => {
 					{props.submit}
 				</UxButton>
 			}
-			{props.children}
 		</div>
 	)
 };

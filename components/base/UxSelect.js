@@ -12,14 +12,12 @@ import UxContent from "@/components/layout/UxContent";
 import UxButton from '@/components/base/UxButton';
 
 /**
- * <UxOptions>
+ * <Options>
  * [props]
- *
  * [event]
- *
  */
 
-const UxOptions = ({ ref, ...props }) => {
+const Options = ({ ref, ...props }) => {
 	const baseClassName = 'ux-options';
 
 	const handleClick = (value, label) => {
@@ -27,39 +25,43 @@ const UxOptions = ({ ref, ...props }) => {
 	};
 
 	return (
-		<>
-			<UxSection className="options">
-				<UxArticle>
-					<UxContent className="space">
-						<ul className={baseClassName}>
-							{
-								getArray(props.options).map((item, index) => {
-									const selected = item.props.value === props.value;
+		<UxSection className="options">
+			<UxArticle>
+				<UxContent className="space">
+					<ul className={baseClassName}>
+						{
+							getArray(props.options).map((item, index) => {
+								const selected = item.props.value === props.value;
 
-									return (
-										<li key={index}>
-											{mergeProps(item, {
-												selected,
-												onClick: handleClick,
-											})}
-										</li>
-									);
-								})
-							}
-						</ul>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-		</>
+								return (
+									<li key={index}>
+										{mergeProps(item, {
+											selected,
+											onClick: handleClick,
+										})}
+									</li>
+								);
+							})
+						}
+					</ul>
+				</UxContent>
+			</UxArticle>
+		</UxSection>
 	);
 };
 
 /**
  * <UxSelect>
  * [props]
- *
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxSelect = ({ ref, ...props }) => {
@@ -70,12 +72,13 @@ const UxSelect = ({ ref, ...props }) => {
 	const [label, setLabel] = useState();
 	const [active, setActive] = useState(false);
 
-	const handleClick = async () => {
+	const handleClick = async (event) => {
 		let result = {};
 
 		setActive(true);
+		props.onClick && props.onClick(event);
 
-		result = await modal.bottom(UxOptions, {
+		result = await modal.bottom(Options, {
 			value,
 			options: props.children,
 		});
@@ -93,22 +96,26 @@ const UxSelect = ({ ref, ...props }) => {
 			setLabel(filter?.props.children);
 		}
 
-		props.onchange && props.onChange(value, label);
+		props.onChange && props.onChange(value, label);
 	}, [value]);
 
 	return (
 		<div className={classnames(caseClassName, { selected: value })}>
 			<UxButton
-				className="outline h3"
-				select
+				role="select"
+				placeholder={props.placeholder}
 				active={active}
 				valid={props.valid}
+				readonly={props.readonly}
 				disabled={props.disabled}
 				onClick={handleClick}
 			>
-				<span className="text">
-					{label || props.placeholder}
-				</span>
+				{
+					label &&
+					<span className="text">
+						{label}
+					</span>
+				}
 			</UxButton>
 		</div>
 	);
