@@ -466,7 +466,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxGroup> Disabled */
 .ux-group.input.disabled {background-color: var(--light1);}
 /* <UxGroup> Placeholder */
-.ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; top: 50%; left: 50%; padding: 0 1.2rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: var(--radius-form); background-color: var(--light0); color: var(--dark3); transform: translate(-50%, -50%); pointer-events: none;}
+.ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; top: 50%; left: 50%; padding: 0 1.2rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: var(--radius-form); background-color: var(--light0); color: var(--light3); transform: translate(-50%, -50%); pointer-events: none;}
 .ux-group.input .ux-group-placeholder:empty,
 .ux-group.input:focus-within .ux-group-placeholder {display: none;}
 .ux-group.input .ux-group-placeholder {z-index: 1;}
