@@ -1,34 +1,29 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { getRandomChar, getRole, getArray } from '@/utils/core';
+import { getRole, getArray } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
  * <UxSwitch>
  * [props]
- *
+ * className(String): 추가 클래스
+ * checked(Boolean): 체크 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxSwitch = ({ ref, ...props }) => {
 	const baseClassName = 'ux-switch';
 	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
 	const [checked, setChecked] = useState(props.checked || false);
-	const [name, setName] = useState(props.name || '');
-	const [labelLeft, setLabelLeft] = useState('');
-	const [labelRight, setLabelRight] = useState('');
+	const [labelLeft, setLabelLeft] = useState();
+	const [labelRight, setLabelRight] = useState();
 
 	const handleChange = (event) => {
 		setChecked(event.target.checked);
 	};
-
-	useEffect(() => {
-		if (!name) {
-			setName(getRandomChar());
-		}
-	}, []);
 
 	useEffect(() => {
 		props.onChange && props.onChange(checked);
@@ -62,7 +57,6 @@ const UxSwitch = ({ ref, ...props }) => {
 				<input
 					type="checkbox"
 					className={`${baseClassName}-input`}
-					name={name}
 					checked={checked}
 					disabled={props.disabled}
 					onChange={handleChange}

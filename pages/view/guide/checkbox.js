@@ -27,28 +27,15 @@ export default function Sample() {
 								className="sample"
 							>
 								<UxCollapse>
-									<div data-role="summary">UxGroup Checkbox Props</div>
-									<div data-role="details">
-										<p>[props]</p>
-										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
-										</ul>
-									</div>
-								</UxCollapse>
-								<UxCollapse>
 									<div data-role="summary">UxCheckbox Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>checked(Boolean): 체크 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -60,14 +47,9 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxGroup role="checkbox">
-										<UxCheckbox checked={true}>
-											CHECKBOX_01
-										</UxCheckbox>
-										<UxCheckbox checked={false}>
-											CHECKBOX_02
-										</UxCheckbox>
-									</UxGroup>
+									<UxCheckbox>
+										label
+									</UxCheckbox>
 								</UxContent>
 							</UxArticle>
 
@@ -75,20 +57,31 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>.column</h5>
+									<h5>:checked</h5>
 								</UxSubject>
 								<UxContent>
-									<UxGroup
-										role="checkbox"
-										className="column"
+									<UxCheckbox checked>
+										label
+									</UxCheckbox>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCheckbox disabled>
+										label
+									</UxCheckbox>
+									<UxCheckbox
+										checked
+										disabled
 									>
-										<UxCheckbox checked={true}>
-											CHECKBOX_01
-										</UxCheckbox>
-										<UxCheckbox checked={false}>
-											CHECKBOX_02
-										</UxCheckbox>
-									</UxGroup>
+										label
+									</UxCheckbox>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

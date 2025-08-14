@@ -29,26 +29,27 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxGroup Toggle Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>selected(String): 선택 값</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>handleChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 								<UxCollapse>
 									<div data-role="summary">UxToggle Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>value(String): 값</li>
+											<li>selected(String): 선택 값</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -77,6 +78,24 @@ export default function Sample() {
 									<UxGroup
 										role="toggle"
 										selected="0"
+									>
+										<UxToggle value="0">Toggle 01</UxToggle>
+										<UxToggle value="1">Toggle 02</UxToggle>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="toggle"
+										selected="0"
+										disabled
 									>
 										<UxToggle value="0">Toggle 01</UxToggle>
 										<UxToggle value="1">Toggle 02</UxToggle>

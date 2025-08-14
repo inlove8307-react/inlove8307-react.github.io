@@ -6,9 +6,12 @@ import classnames from 'classnames';
 /**
  * <UxToggle>
  * [props]
- *
+ * className(String): 추가 클래스
+ * value(String): 값
+ * selected(String): 선택 값
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const UxToggle = ({ ref, ...props }) => {

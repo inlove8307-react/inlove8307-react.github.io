@@ -29,26 +29,34 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxGroup Radio Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>selected(String): 선택 값</li>
+											<li>scroll(Boolean): 스크롤 여부</li>
+											<li>expand(Boolean): 확장 가능 여부</li>
+											<li>expanded(Boolean): 확장 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onClick(Func): 클릭 이벤트 콜백</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
+											<li>onExpand(Func): 확장 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 								<UxCollapse>
 									<div data-role="summary">UxRadio Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>value(String): 값</li>
+											<li>selected(String): 선택 값</li>
+											<li>scroll(Boolean): 스크롤 여부</li>
+											<li>expanded(Boolean): 확장 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -58,6 +66,22 @@ export default function Sample() {
 							<UxArticle className="h5">
 								<UxSubject>
 									<h5>default</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="radio"
+									>
+										<UxRadio value="0">RADIO_01</UxRadio>
+										<UxRadio value="1">RADIO_02</UxRadio>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:selected</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup
@@ -74,13 +98,13 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>.column</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup
 										role="radio"
-										className="column"
 										selected="0"
+										disabled
 									>
 										<UxRadio value="0">RADIO_01</UxRadio>
 										<UxRadio value="1">RADIO_02</UxRadio>

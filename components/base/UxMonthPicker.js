@@ -18,9 +18,7 @@ import UxMonthCalendar from '@/components/base/UxMonthCalendar';
 /**
  * <UxMonthPickerPopup>
  * [props]
- *
  * [event]
- *
  */
 
 const UxMonthPickerPopup = ({ ref, ...props }) => {
@@ -77,9 +75,14 @@ const UxMonthPickerPopup = ({ ref, ...props }) => {
 /**
  * <UxMonthPicker>
  * [props]
- *
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxMonthPicker = ({ ref, ...props }) => {
@@ -87,12 +90,14 @@ const UxMonthPicker = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 
 	const handleClick = async () => {
+		props.onClick && props.onClick();
+
 		const result = await modal.bottom(UxMonthPickerPopup, { value: Number(value) });
 		result.value && setValue(String(result.value));
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange();
+		props.onChange && props.onChange(value);
 	}, [value]);
 
 	useEffect(() => {

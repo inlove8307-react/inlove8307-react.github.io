@@ -17,9 +17,7 @@ import UxCalendar from '@/components/base/UxCalendar';
 /**
  * <UxDatePickerPopup>
  * [props]
- *
  * [event]
- *
  */
 
 const UxDatePickerPopup = ({ ref, ...props }) => {
@@ -75,9 +73,16 @@ const UxDatePickerPopup = ({ ref, ...props }) => {
 /**
  * <UxDatePicker>
  * [props]
- *
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * from(Object): 시작일
+ * to(Object): 종료일
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxDatePicker = ({ ref, ...props }) => {
@@ -87,6 +92,8 @@ const UxDatePicker = ({ ref, ...props }) => {
 	const [toValue, setToValue] = useState(props.to?.value || '');
 
 	const handleClick = async (role) => {
+		props.onClick && props.onClick();
+
 		const result = await modal.bottom(UxDatePickerPopup, {
 			...getProps(role)
 		});

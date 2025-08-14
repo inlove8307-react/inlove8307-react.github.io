@@ -201,11 +201,11 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.default.col3 {--col: 3;}
 .ux-group.default.col4 {--col: 4;}
 .ux-group.default.col5 {--col: 5;}
-.ux-group.default[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+.ux-group.default[class*=col] > * {flex-grow: initial; width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 /* <UxGroup> Grow */
 .ux-group.default > * {flex-shrink: 0;}
 .ux-group.default > .small {flex-basis: calc(100% / 3); width: calc(100% / 3);}
-.ux-group.default > *:not(.small) {flex-grow: 1;}
+.ux-group.default:not([class*=col]) > *:not(.small) {flex-grow: 1;}
 
 
 
@@ -507,7 +507,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxCheckbox> Checked */
 .ux-checkbox.checked .ux-icon {background-color: var(--color1);}
 /* <UxCheckbox> Disabled */
-.ux-checkbox.disabled .ux-icon {background-color: var(--light2);}
+.ux-checkbox.disabled .ux-checkbox-label {color: var(--dark3);}
+.ux-checkbox.disabled .ux-icon {opacity: .5;}
 
 
 
@@ -528,7 +529,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxRadio> Checked */
 .ux-radio.checked .ux-icon {background-color: var(--color1);}
 /* <UxRadio> Disabled */
-.ux-radio.disabled .ux-icon {background-color: var(--light2);}
+.ux-radio.disabled .ux-radio-label {color: var(--dark3);}
+.ux-radio.disabled .ux-icon {opacity: .5;}
 
 
 
@@ -623,6 +625,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.toggle.col2 .ux-toggle:nth-child(2n + 1)::before,
 .ux-group.toggle.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-group.toggle.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
+/* <UxGroup> Toggle Disabled */
+.ux-group.toggle.disabled {opacity: .5;}
 
 
 

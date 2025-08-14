@@ -10,9 +10,11 @@ import UxIcon from '@/components/base/UxIcon';
 /**
  * <Card>
  * [props]
- *
+ * className(String): 추가 클래스
+ * type(String): 유형('radio' || 'checkbox')
+ * selected(String): 선택 값
  * [event]
- *
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const Card = ({ ref, ...props }) => {
@@ -40,6 +42,7 @@ const Card = ({ ref, ...props }) => {
 					index,
 					selected,
 					type: props.type,
+					disabled: props.disabled,
 					randomChar: getRandomChar(),
 					onChange: handleChange
 				}))
@@ -51,9 +54,8 @@ const Card = ({ ref, ...props }) => {
 /**
  * <Checkbox>
  * [props]
- *
+ * className(String): 추가 클래스
  * [event]
- *
  */
 
 const Checkbox = ({ ref, ...props }) => {
@@ -71,9 +73,11 @@ const Checkbox = ({ ref, ...props }) => {
 /**
  * <Collapse>
  * [props]
- *
+ * className(String): 추가 클래스
+ * selected(String): 선택 값
+ * once(Boolean): 단일 확장 여부
  * [event]
- *
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const Collapse = ({ ref, ...props }) => {
@@ -112,9 +116,14 @@ const Collapse = ({ ref, ...props }) => {
 /**
  * <Radio>
  * [props]
- *
+ * selected(String): 선택 값
+ * scroll(Boolean): 스크롤 여부
+ * expand(Boolean): 확장 가능 여부
+ * expanded(Boolean): 확장 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 선택 변경 이벤트 콜백
+ * onExpand(Func): 확장 이벤트 콜백
  */
 
 const Radio = ({ ref, ...props }) => {
@@ -159,7 +168,8 @@ const Radio = ({ ref, ...props }) => {
 				before: beforeInView,
 				after: afterInView,
 				expand: props.expand,
-				expanded: expanded
+				expanded: expanded,
+				disabled: props.disabled,
 			})}
 		>
 			<div className={`${props.baseClassName}-scroll`}>
@@ -177,6 +187,7 @@ const Radio = ({ ref, ...props }) => {
 						selected,
 						expanded,
 						scroll: props.scroll,
+						disabled: props.disabled,
 						randomChar: getRandomChar(),
 						onChange: handleChange
 					}))
@@ -206,9 +217,10 @@ const Radio = ({ ref, ...props }) => {
 /**
  * <Toggle>
  * [props]
- *
+ * className(String): 추가 클래스
+ * selected(String): 선택 값
  * [event]
- *
+ * handleChange(Func): 선택 변경 이벤트 콜백
  */
 
 const Toggle = ({ ref, ...props }) => {
@@ -229,12 +241,15 @@ const Toggle = ({ ref, ...props }) => {
 	}, [props.selected]);
 
 	return (
-		<div className={props.caseClassName}>
+		<div className={classnames(props.caseClassName, {
+			disabled: props.disabled,
+		})}>
 			{
 				getArray(props.children).map((item, index) => mergeProps(item, {
 					key: index,
 					index,
 					selected,
+					disabled: props.disabled,
 					randomChar: getRandomChar(),
 					onChange: handleChange
 				}))
@@ -246,9 +261,9 @@ const Toggle = ({ ref, ...props }) => {
 /**
  * <Input>
  * [props]
- *
+ * className(String): 추가 클래스
+ * placeholder(String): 값 없을 경우 표시 문구
  * [event]
- *
  */
 
 const Input = ({ ref, ...props }) => {
@@ -267,9 +282,8 @@ const Input = ({ ref, ...props }) => {
 /**
  * <Default>
  * [props]
- *
+ * className(String): 추가 클래스
  * [event]
- *
  */
 
 const Default = ({ ref, ...props }) => {
@@ -287,9 +301,9 @@ const Default = ({ ref, ...props }) => {
 /**
  * <UxGroup>
  * [props]
- *
+ * className(String): 추가 클래스
+ * role(String): 유형('card' || 'checkbox' || 'collapse' || 'radio' || 'toggle' || 'input' || 'default')
  * [event]
- *
  */
 
 const UxGroup = ({ ref, ...props }) => {
@@ -299,13 +313,13 @@ const UxGroup = ({ ref, ...props }) => {
 		[`${props.role}`]: props.role,
 	});
 
-	const getSlot = (role) => {
+	const getSlot = () => {
 		Object.assign(props, {
 			baseClassName,
 			caseClassName,
 		});
 
-		switch (role) {
+		switch (props.role) {
 			case 'card':
 				return <Card {...props} />;
 			case 'checkbox':

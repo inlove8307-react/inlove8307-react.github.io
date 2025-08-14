@@ -19,9 +19,7 @@ import UxYearCalendar from '@/components/base/UxYearCalendar';
 /**
  * <UxYearPickerPopup>
  * [props]
- *
  * [event]
- *
  */
 
 const UxYearPickerPopup = ({ ref, ...props }) => {
@@ -79,9 +77,14 @@ const UxYearPickerPopup = ({ ref, ...props }) => {
 /**
  * <UxYearPicker>
  * [props]
- *
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxYearPicker = ({ ref, ...props }) => {
@@ -89,6 +92,8 @@ const UxYearPicker = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 
 	const handleClick = async () => {
+		props.onClick && props.onClick();
+
 		const result = await modal.bottom(UxYearPickerPopup, { value: Number(value) });
 		result.value && setValue(String(result.value));
 	};

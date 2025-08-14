@@ -29,13 +29,12 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxSwitch Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>checked(Boolean): 체크 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -66,7 +65,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>label left</h5>
+									<h5>data-role left</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>
@@ -79,7 +78,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>label right</h5>
+									<h5>data-role right</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>
