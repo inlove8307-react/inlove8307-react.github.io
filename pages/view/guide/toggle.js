@@ -35,7 +35,7 @@ export default function Sample() {
 											<li>selected(String): 선택 값</li>
 											<li>disabled(Boolean): 비활성화 여부</li>
 											<li>[event]</li>
-											<li>handleChange(Func): 선택 변경 이벤트 콜백</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>

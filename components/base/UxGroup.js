@@ -11,7 +11,7 @@ import UxIcon from '@/components/base/UxIcon';
  * <Card>
  * [props]
  * className(String): 추가 클래스
- * type(String): 유형('radio' || 'checkbox')
+ * type(String): 유형('radio', 'checkbox')
  * selected(String): 선택 값
  * [event]
  * onChange(Func): 선택 변경 이벤트 콜백
@@ -220,7 +220,7 @@ const Radio = ({ ref, ...props }) => {
  * className(String): 추가 클래스
  * selected(String): 선택 값
  * [event]
- * handleChange(Func): 선택 변경 이벤트 콜백
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const Toggle = ({ ref, ...props }) => {
@@ -302,7 +302,7 @@ const Default = ({ ref, ...props }) => {
  * <UxGroup>
  * [props]
  * className(String): 추가 클래스
- * role(String): 유형('card' || 'checkbox' || 'collapse' || 'radio' || 'toggle' || 'input' || 'default')
+ * role(String): 유형('card', 'checkbox', 'collapse', 'radio', 'toggle', 'input', 'default')
  * [event]
  */
 

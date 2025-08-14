@@ -181,7 +181,7 @@ const Default = ({ ref, ...props }) => {
  * [props]
  * className(String): 추가 클래스
  * title(String): 접근성 타이틀
- * role: 버튼 유형 ('select' || 'search' || 'input')
+ * role: 버튼 유형 ('select', 'search', 'input')
  * active(Boolean): 아이콘 유형 (role select)
  * placeholder(String): 표시 문구 (role 공통)
  * valid(Boolean): 유효성 여부 (role 공통)

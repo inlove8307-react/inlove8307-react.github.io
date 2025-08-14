@@ -6,9 +6,14 @@ import classnames from 'classnames';
 /**
  * <UxCard>
  * [props]
- *
+ * className(String): 추가 클래스
+ * type: 유형 ('checkbox', 'radio', 'button')
+ * checked(Boolean): 체크 여부
+ * selected(String): 선택 값
+ * disabled(Boolean): 비활성화 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const UxCard = ({ ref, ...props }) => {

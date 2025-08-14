@@ -33,10 +33,13 @@ export default function Sample() {
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
 											<li>title(String): 접근성 타이틀</li>
-											<li>active(Boolean): 아이콘 유형</li>
-											<li>placeholder(String): 표시 문구</li>
-											<li>valid(Boolean): 유효성 여부</li>
-											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>role: 버튼 유형 ('select', 'search', 'input')</li>
+											<li>active(Boolean): 아이콘 유형 (role select)</li>
+											<li>placeholder(String): 표시 문구 (role 공통)</li>
+											<li>valid(Boolean): 유효성 여부 (role 공통)</li>
+											<li>suffix(String): 앞 표시 문구 (role input)</li>
+											<li>prefix(String): 뒤 표시 문구 (role input)</li>
+											<li>readonly(Boolean): 읽기전용 여부 (role 공통)</li>
 											<li>disabled(Boolean): 비활성화 여부</li>
 											<li>[event]</li>
 											<li>onClick(Func): 클릭 이벤트 콜백</li>
