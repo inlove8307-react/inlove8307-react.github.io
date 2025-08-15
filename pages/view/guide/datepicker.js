@@ -99,6 +99,20 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										value="2025.07.01"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
@@ -109,7 +123,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>

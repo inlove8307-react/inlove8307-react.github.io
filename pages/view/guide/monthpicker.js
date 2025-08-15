@@ -58,6 +58,17 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxMonthPicker value={8} />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
@@ -78,6 +89,20 @@ export default function Sample() {
 									<UxMonthPicker
 										value={8}
 										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxMonthPicker
+										value={8}
+										readonly
 									/>
 								</UxContent>
 							</UxArticle>

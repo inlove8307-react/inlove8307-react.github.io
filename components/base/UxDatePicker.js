@@ -176,10 +176,11 @@ const UxDatePicker = ({ ref, ...props }) => {
 					placeholder={props.placeholder || 'YYYY.MM.DD'}
 					value={value}
 					valid={props.valid}
+					readonly={props.readonly}
 					disabled={props.disabled}
 				>
 					<UxButton
-						disabled={props.disabled}
+						disabled={props.readonly || props.disabled}
 						onClick={() => handleClick('once')}
 					>
 						<UxIcon className="i160" />
@@ -193,10 +194,11 @@ const UxDatePicker = ({ ref, ...props }) => {
 						placeholder={props.from?.placeholder || 'YYYY.MM.DD'}
 						value={fromValue}
 						valid={props.valid || props.from?.valid}
+						readonly={props.readonly || props.from?.readonly}
 						disabled={props.disabled || props.from?.disabled}
 					>
 						<UxButton
-							disabled={props.disabled || props.from?.disabled}
+							disabled={props.readonly || props.disabled || props.from?.readonly || props.from?.disabled}
 							onClick={() => handleClick('from')}
 						>
 							<UxIcon className="i160" />
@@ -207,10 +209,11 @@ const UxDatePicker = ({ ref, ...props }) => {
 						placeholder={props.to?.placeholder || 'YYYY.MM.DD'}
 						value={toValue}
 						valid={props.valid || props.to?.valid}
+						readonly={props.readonly || props.to?.readonly}
 						disabled={props.disabled || props.to?.disabled}
 					>
 						<UxButton
-							disabled={props.disabled || props.to?.disabled}
+							disabled={props.readonly || props.disabled || props.to?.readonly || props.to?.disabled}
 							onClick={() => handleClick('to')}
 						>
 							<UxIcon className="i160" />

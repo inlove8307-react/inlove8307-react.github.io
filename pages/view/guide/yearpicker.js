@@ -58,6 +58,17 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxYearPicker value={2025} />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
@@ -78,6 +89,20 @@ export default function Sample() {
 									<UxYearPicker
 										value={2025}
 										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxYearPicker
+										value={2025}
+										readonly
 									/>
 								</UxContent>
 							</UxArticle>

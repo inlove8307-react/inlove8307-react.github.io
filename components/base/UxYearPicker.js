@@ -123,10 +123,11 @@ const UxYearPicker = ({ ref, ...props }) => {
 				placeholder={props.placeholder || '선택'}
 				value={value && `${value}년`}
 				valid={props.valid}
+				readonly={props.readonly}
 				disabled={props.disabled}
 			>
 				<UxButton
-					disabled={props.disabled}
+					disabled={props.readonly || props.disabled}
 					onClick={handleClick}
 				>
 					<UxIcon className="i160" />

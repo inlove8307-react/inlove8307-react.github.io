@@ -121,10 +121,11 @@ const UxMonthPicker = ({ ref, ...props }) => {
 				placeholder={props.placeholder || '선택'}
 				value={value && `${value}월`}
 				valid={props.valid}
+				readonly={props.readonly}
 				disabled={props.disabled}
 			>
 				<UxButton
-					disabled={props.disabled}
+					disabled={props.readonly || props.disabled}
 					onClick={handleClick}
 				>
 					<UxIcon className="i160" />
