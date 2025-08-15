@@ -11,6 +11,8 @@ import UxInput from "@/components/base/UxInput";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
+import UxSelect from "@/components/base/UxSelect";
+import UxOption from "@/components/base/UxOption";
 
 export default function Sample() {
 	return (
@@ -65,9 +67,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="default"
-										placeholder="placeholder"
+										placeholder="입력해주세요."
 										clear
 									/>
 								</UxContent>
@@ -81,9 +81,8 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="valid"
-										placeholder="placeholder"
+										placeholder="입력해주세요"
+										value="유효성 여부"
 										clear
 										valid={true}
 									/>
@@ -98,11 +97,10 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="invalid"
-										placeholder="placeholder"
-										clear
+										placeholder="입력해주세요"
+										value="유효성 여부"
 										valid={false}
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -115,11 +113,10 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="readonly"
-										placeholder="placeholder"
-										clear
+										placeholder="입력해주세요"
+										value="읽기전용 여부"
 										readonly
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -132,11 +129,10 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="disabled"
-										placeholder="placeholder"
-										clear
+										placeholder="입력해주세요"
+										value="비활성화 여부"
 										disabled
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -149,11 +145,9 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="value"
-										placeholder="placeholder"
+										placeholder="입력해주세요"
+										prefix="금액"
 										clear
-										prefix="prefix"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -166,11 +160,27 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="value"
-										placeholder="placeholder"
+										className="right"
+										value="10,000"
+										placeholder="입력해주세요"
+										suffix="원"
 										clear
-										suffix="suffix"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:submit</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										placeholder="입력해주세요"
+										value="9876"
+										submit="인증"
+										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -183,13 +193,47 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										type="text"
-										value="value"
-										placeholder="placeholder"
-										clear
+										placeholder="입력해주세요"
+										value="9876"
 										timer="03:00"
-										submit="submit"
+										submit="인증"
+										clear
 									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>group</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+									>
+										<UxSelect placeholder="선택">
+											<UxOption value="0">010</UxOption>
+											<UxOption value="1">011</UxOption>
+										</UxSelect>
+										<UxInput
+											className="last"
+											placeholder="입력"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxInput
+											placeholder="이메일"
+											suffix="@"
+										/>
+										<UxSelect placeholder="도메인">
+											<UxOption value="0">gmail.com</UxOption>
+											<UxOption value="1">naver.com</UxOption>
+										</UxSelect>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

@@ -26,17 +26,10 @@ const Select = ({ ref, ...props }) => {
 		invalid: props.valid === false,
 		readonly: props.readonly,
 	});
-	const [icon, setIcon] = useState('i002');
 
 	const handleClick = () => {
 		!props.readonly && props.onClick && props.onClick();
 	};
-
-	useEffect(() => {
-		props.active
-			? setIcon('i001')
-			: setIcon('i002');
-	}, [props.active]);
 
 	return (
 		<button
@@ -48,7 +41,10 @@ const Select = ({ ref, ...props }) => {
 			onClick={handleClick}
 		>
 			{props.children ? props.children : props.placeholder}
-			<UxIcon className={classnames(icon, 'right')} />
+			<UxIcon className={classnames('right', {
+				i001: props.active,
+				i002: !props.active,
+			})} />
 		</button>
 	);
 };
@@ -157,6 +153,57 @@ const Input = ({ ref, ...props }) => {
  * onClick(Func): 클릭 이벤트 콜백
  */
 
+const Progress = ({ ref, ...props }) => {
+	const [step, setStep] = useState(props.step || 0);
+	const [fill, setFill] = useState({});
+
+	const handleClick = () => {
+
+		props.onClick && props.onClick();
+	};
+
+	useEffect(() => {
+		setFill({ transform: `translate(-${100 - step / props.max * 100}%, 0) translateZ(0)` });
+	}, [step]);
+
+	useEffect(() => {
+		setStep(props.step);
+	}, [props.step]);
+
+	return (
+		<button
+			ref={ref}
+			type="button"
+			className={props.caseClassName}
+			title={props.title}
+			disabled={props.disabled}
+			onClick={handleClick}
+		>
+			<span className={`${props.baseClassName}-track`} >
+				<span className={`${props.baseClassName}-gauge`}>
+					<span
+						className={`${props.baseClassName}-fill`}
+						style={fill}
+					/>
+				</span>
+				<span className={`${props.baseClassName}-stack`} >
+					{props.children}
+				</span>
+			</span>
+		</button>
+	);
+};
+
+/**
+ * <Default>
+ * [props]
+ * className(String): 추가 클래스
+ * title(String): 접근성 타이틀
+ * disabled(Boolean): 비활성화 여부
+ * [event]
+ * onClick(Func): 클릭 이벤트 콜백
+ */
+
 const Default = ({ ref, ...props }) => {
 	const handleClick = () => {
 		props.onClick && props.onClick();
@@ -181,14 +228,14 @@ const Default = ({ ref, ...props }) => {
  * [props]
  * className(String): 추가 클래스
  * title(String): 접근성 타이틀
- * role: 버튼 유형 ('select', 'search', 'input')
- * active(Boolean): 아이콘 유형 (role select)
+ * role: 버튼 유형 ('select', 'search', 'input', 'progress')
  * placeholder(String): 표시 문구 (role 공통)
  * valid(Boolean): 유효성 여부 (role 공통)
- * suffix(String): 앞 표시 문구 (role input)
- * prefix(String): 뒤 표시 문구 (role input)
  * readonly(Boolean): 읽기전용 여부 (role 공통)
  * disabled(Boolean): 비활성화 여부
+ * prefix(String): 앞 표시 문구 (role input)
+ * suffix(String): 뒤 표시 문구 (role input)
+ * active(Boolean): 아이콘 유형 (role select)
  * [event]
  * onClick(Func): 클릭 이벤트 콜백
  */
@@ -214,6 +261,8 @@ const UxButton = ({ ref, ...props }) => {
 				return <Search {...props} />;
 			case 'input':
 				return <Input {...props} />;
+			case 'progress':
+				return <Progress {...props} />;
 			default:
 				return <Default {...props} />;
 		}

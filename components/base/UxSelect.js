@@ -100,7 +100,10 @@ const UxSelect = ({ ref, ...props }) => {
 	}, [value]);
 
 	return (
-		<div className={classnames(caseClassName, { selected: value })}>
+		<div
+			className={classnames(caseClassName, { selected: value })}
+			style={props.style}
+		>
 			<UxButton
 				role="select"
 				placeholder={props.placeholder}

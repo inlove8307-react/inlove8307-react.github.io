@@ -179,6 +179,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxGroup> */
+.ux-group.default {--gap: .8rem;}
 .ux-group.default {display: flex; flex-wrap: wrap; gap: var(--gap);}
 /* <UxGroup> Row */
 .ux-group.default.row {flex-direction: row;}
@@ -201,11 +202,12 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.default.col3 {--col: 3;}
 .ux-group.default.col4 {--col: 4;}
 .ux-group.default.col5 {--col: 5;}
-.ux-group.default[class*=col] > * {flex-grow: initial; width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+.ux-group.default[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 /* <UxGroup> Grow */
 .ux-group.default > * {flex-shrink: 0;}
-.ux-group.default > .small {flex-basis: calc(100% / 3); width: calc(100% / 3);}
-.ux-group.default:not([class*=col]) > *:not(.small) {flex-grow: 1;}
+.ux-group.default > .small {width: calc(100% / 3);}
+.ux-group.default:not([class*=col]) > :not(.small) {flex-grow: 1;}
+.ux-group.default.auto:not([class*=col]) > :not(.small) {flex-grow: initial;}
 
 
 
@@ -250,6 +252,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-button.default.secondary {}
 /* <UxButton> Tertiary */
 .ux-button.default.tertiary {}
+/* <UxButton> Focus */
+.ux-button.default.outline:focus-within {box-shadow: var(--inset-focus);}
 /* <UxButton> Disabled */
 .ux-button.default.disabled {opacity: .5;}
 /* <UxButton> Role */
@@ -298,6 +302,15 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-button.input.disabled {background-color: var(--light1); color: var(--dark3);}
 .ux-button.input.disabled .ux-button-prefix,
 .ux-button.input.disabled .ux-button-suffix {color: var(--dark3);}
+/* <UxButton> Role Progress */
+.ux-button.progress {display: flex; height: var(--height-form); border-radius: var(--radius-form);}
+.ux-button.progress .ux-button-track,
+.ux-button.progress .ux-button-gauge,
+.ux-button.progress .ux-button-fill {display: flex; width: 100%; height: 100%; border-radius: var(--radius-form);}
+.ux-button.progress .ux-button-track {position: relative;}
+.ux-button.progress .ux-button-gauge {overflow: hidden; background-color: var(--light1);}
+.ux-button.progress .ux-button-fill {background-color: var(--color1); transform: translate(-100%, 0) translateZ(0); transition: transform .25s ease-in-out;}
+.ux-button.progress .ux-button-stack {display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
 
 
@@ -454,7 +467,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxGroup> Input */
-.ux-group.input {display: flex; align-items: center; gap: .8rem; position: relative; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-group.input {--gap: .8rem;}
+.ux-group.input {display: flex; align-items: center; gap: var(--gap); position: relative; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
 /* <UxGroup> Focus */
 .ux-group.input:focus-within {box-shadow: var(--inset-focus);}
 /* <UxGroup> Valid */
@@ -495,7 +509,16 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.input .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
 .ux-group.input .ux-button.submit:hover,
 .ux-group.input .ux-button.submit:focus {box-shadow: none;}
-
+/* <UxGroup> Input Gap */
+.ux-group.input.gap4 {--gap: .4rem;}
+.ux-group.input.gap8 {--gap: .8rem;}
+.ux-group.input.gap12 {--gap: 1.2rem;}
+.ux-group.input.gap16 {--gap: 1.6rem;}
+/* <UxGroup> Input Col */
+.ux-group.input.col1 {--col: 1;}
+.ux-group.input.col2 {--col: 2;}
+.ux-group.input.col3 {--col: 3;}
+.ux-group.input[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 
 
 /* <UxCheckbox> */

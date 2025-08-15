@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -13,6 +13,9 @@ import UxGroup from "@/components/base/UxGroup";
 import UxCollapse from "@/components/base/UxCollapse";
 
 export default function Sample() {
+	const [step, setStep] = useState(3);
+	const [max] = useState(10);
+
 	return (
 		<UxSection>
 			<UxArticle className="h3">
@@ -33,14 +36,14 @@ export default function Sample() {
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
 											<li>title(String): 접근성 타이틀</li>
-											<li>role: 버튼 유형 ('select', 'search', 'input')</li>
-											<li>active(Boolean): 아이콘 유형 (role select)</li>
+											<li>role: 버튼 유형 ('select', 'search', 'input', 'progress')</li>
 											<li>placeholder(String): 표시 문구 (role 공통)</li>
 											<li>valid(Boolean): 유효성 여부 (role 공통)</li>
-											<li>suffix(String): 앞 표시 문구 (role input)</li>
-											<li>prefix(String): 뒤 표시 문구 (role input)</li>
 											<li>readonly(Boolean): 읽기전용 여부 (role 공통)</li>
 											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>prefix(String): 앞 표시 문구 (role input)</li>
+											<li>suffix(String): 뒤 표시 문구 (role input)</li>
+											<li>active(Boolean): 아이콘 유형 (role select)</li>
 											<li>[event]</li>
 											<li>onClick(Func): 클릭 이벤트 콜백</li>
 										</ul>
@@ -55,7 +58,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxButton className="outline h3">
-										<span className="text">label</span>
+										<span className="text">버튼</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -68,7 +71,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxButton className="contain h3">
-										<span className="text">label</span>
+										<span className="text">버튼</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -81,7 +84,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxButton className="primary h3">
-										<span className="text">label</span>
+										<span className="text">버튼</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -97,7 +100,7 @@ export default function Sample() {
 										className="outline h3"
 										disabled
 									>
-										<span className="text">label</span>
+										<span className="text">버튼</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -109,14 +112,44 @@ export default function Sample() {
 									<h5>group</h5>
 								</UxSubject>
 								<UxContent>
-									<UxGroup className="gap8">
-										<UxButton className="contain h3 small">
-											<span className="text">cancel</span>
+									<UxGroup>
+										<UxButton className="outline h3">
+											<span className="text">취소</span>
 										</UxButton>
-										<UxButton className="primary h3">
-											<span className="text">submit</span>
+										<UxButton className="outline h3">
+											<span className="text">확인</span>
 										</UxButton>
 									</UxGroup>
+									<UxGroup>
+										<UxButton className="contain h3 small">
+											<span className="text">취소</span>
+										</UxButton>
+										<UxButton className="primary h3">
+											<span className="text">확인</span>
+										</UxButton>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role progress</h5>
+								</UxSubject>
+								<UxContent>
+									<UxButton
+										role="progress"
+										max={max}
+										step={step}
+										onClick={() => {
+											step < max
+												? setStep(step + 1)
+												: setStep(0);
+										}}
+									>
+										<span className="text">버튼</span>
+									</UxButton>
 								</UxContent>
 							</UxArticle>
 
@@ -129,7 +162,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -143,7 +176,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 										active
 									/>
 								</UxContent>
@@ -158,10 +191,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 										valid={true}
 									>
-										<span className="text">label</span>
+										<span className="text">옵션</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -175,10 +208,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 										valid={false}
 									>
-										<span className="text">label</span>
+										<span className="text">옵션</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -192,10 +225,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 										readonly
 									>
-										<span className="text">label</span>
+										<span className="text">옵션</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -209,10 +242,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택해주세요"
+										placeholder="선택"
 										disabled
 									>
-										<span className="text">label</span>
+										<span className="text">옵션</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -226,7 +259,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="입력해주세요"
+										placeholder="검색"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -240,10 +273,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="입력해주세요"
+										placeholder="검색"
 										valid={true}
 									>
-										<span className="text">label</span>
+										<span className="text">검색어</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -257,10 +290,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="입력해주세요"
+										placeholder="검색"
 										valid={false}
 									>
-										<span className="text">label</span>
+										<span className="text">검색어</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -274,10 +307,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="입력해주세요"
+										placeholder="검색"
 										readonly
 									>
-										<span className="text">label</span>
+										<span className="text">검색어</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -291,10 +324,10 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="입력해주세요"
+										placeholder="검색"
 										disabled
 									>
-										<span className="text">label</span>
+										<span className="text">검색어</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -309,7 +342,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력해주세요"
+										placeholder="입력"
 										prefix="금액"
 										suffix="원"
 									/>
@@ -326,12 +359,12 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력해주세요"
+										placeholder="입력"
 										prefix="금액"
 										suffix="원"
 										valid={true}
 									>
-										<span className="text">label</span>
+										<span className="text">10,000</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -346,12 +379,12 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력해주세요"
+										placeholder="입력"
 										prefix="금액"
 										suffix="원"
 										valid={false}
 									>
-										<span className="text">label</span>
+										<span className="text">10,000</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -366,12 +399,12 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력해주세요"
+										placeholder="입력"
 										prefix="금액"
 										suffix="원"
 										readonly
 									>
-										<span className="text">label</span>
+										<span className="text">10,000</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
@@ -386,12 +419,12 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력해주세요"
+										placeholder="입력"
 										prefix="금액"
 										suffix="원"
 										disabled
 									>
-										<span className="text">label</span>
+										<span className="text">10,000</span>
 									</UxButton>
 								</UxContent>
 							</UxArticle>
