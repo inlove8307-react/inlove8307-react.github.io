@@ -165,7 +165,8 @@ const UxDatePicker = ({ ref, ...props }) => {
 				valid: props.valid === true,
 				invalid: props.valid === false,
 				readonly: props.readonly,
-				disabled: props.disabled
+				disabled: props.disabled,
+				col2: props.from && props.to
 			})}
 		>
 			{
