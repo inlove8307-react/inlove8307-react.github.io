@@ -251,6 +251,9 @@ input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {display: none;}
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
 input::-webkit-calendar-picker-indicator {-webkit-appearance: none;}
+input::-webkit-autofill,
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {display: none !important; visibility: hidden; position: absolute; right: 0; pointer-events: none;}
 
 /* Media Query for Mobile Devices */
 @media (max-width: 280px) {
