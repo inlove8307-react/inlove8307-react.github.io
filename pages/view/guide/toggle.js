@@ -107,38 +107,18 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>.col2</h5>
+									<h5>.split</h5>
 								</UxSubject>
 								<UxContent>
 									<UxGroup
 										role="toggle"
-										className="col2"
+										className="split"
+										selected="0"
 									>
 										<UxToggle value="0">Toggle 01</UxToggle>
 										<UxToggle value="1">Toggle 02</UxToggle>
 										<UxToggle value="2">Toggle 03</UxToggle>
 										<UxToggle value="3">Toggle 04</UxToggle>
-									</UxGroup>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>.col3</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGroup
-										role="toggle"
-										className="col3"
-									>
-										<UxToggle value="0">Toggle 01</UxToggle>
-										<UxToggle value="1">Toggle 02</UxToggle>
-										<UxToggle value="2">Toggle 03</UxToggle>
-										<UxToggle value="3">Toggle 04</UxToggle>
-										<UxToggle value="4">Toggle 05</UxToggle>
-										<UxToggle value="5">Toggle 06</UxToggle>
 									</UxGroup>
 								</UxContent>
 							</UxArticle>

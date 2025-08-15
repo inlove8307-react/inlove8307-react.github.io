@@ -634,9 +634,9 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxGroup> Toggle */
-.ux-group.toggle {--col: 2;}
-.ux-group.toggle {display: flex; flex-wrap: wrap; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
-.ux-group.toggle .ux-toggle {position: relative; flex-shrink: 0; width: calc(100% / var(--col));}
+.ux-group.toggle {--col: 2; --gap: 0rem;}
+.ux-group.toggle {display: flex; flex-wrap: wrap; gap: var(--gap); width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
+.ux-group.toggle .ux-toggle {position: relative; flex-shrink: 0; width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 .ux-group.toggle .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height-form) / 3); background-color: var(--light1); transform: translateY(-50%);}
 .ux-group.toggle .ux-toggle.checked + .ux-toggle::before {display: none;}
 /* <UxGroup> Toggle Col */
@@ -649,7 +649,13 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.toggle.col3 .ux-toggle:nth-child(3n + 1)::before,
 .ux-group.toggle.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
 /* <UxGroup> Toggle Disabled */
-.ux-group.toggle.disabled {opacity: .5;}
+.ux-group.toggle.disabled .ux-toggle .ux-toggle-base {color: var(--light3);}
+.ux-group.toggle.disabled .ux-toggle.checked .ux-toggle-base::before {box-shadow: var(--inset-focus);}
+/* <UxGroup> Toggle Split */
+.ux-group.toggle.split {--gap: .8rem;}
+.ux-group.toggle.split {gap: var(--gap); background-image: initial; box-shadow: initial;}
+.ux-group.toggle.split .ux-toggle {border-radius: var(--radius-form); box-shadow: var(--inset);}
+.ux-group.toggle.split .ux-toggle::before {display: none;}
 
 
 
