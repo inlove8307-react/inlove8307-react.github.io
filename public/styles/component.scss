@@ -469,6 +469,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxGroup> Input */
 .ux-group.input {--gap: .8rem;}
 .ux-group.input {display: flex; align-items: center; gap: var(--gap); position: relative; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-group.input > * {flex-shrink: 0;}
 /* <UxGroup> Focus */
 .ux-group.input:focus-within {box-shadow: var(--inset-focus);}
 /* <UxGroup> Valid */

@@ -102,6 +102,18 @@ export default function Sample() {
 									>
 										<span className="text">버튼</span>
 									</UxButton>
+									<UxButton
+										className="contain h3"
+										disabled
+									>
+										<span className="text">버튼</span>
+									</UxButton>
+									<UxButton
+										className="primary h3"
+										disabled
+									>
+										<span className="text">버튼</span>
+									</UxButton>
 								</UxContent>
 							</UxArticle>
 
@@ -131,7 +143,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
@@ -153,7 +165,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
@@ -162,7 +174,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -176,7 +188,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 										active
 									/>
 								</UxContent>
@@ -191,7 +203,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 										valid={true}
 									>
 										<span className="text">옵션</span>
@@ -208,7 +220,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 										valid={false}
 									>
 										<span className="text">옵션</span>
@@ -225,7 +237,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 										readonly
 									>
 										<span className="text">옵션</span>
@@ -242,7 +254,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="select"
-										placeholder="선택"
+										placeholder="선택해주세요"
 										disabled
 									>
 										<span className="text">옵션</span>
@@ -250,7 +262,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
@@ -259,7 +271,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="검색"
+										placeholder="검색어를 입력해주세요"
 									/>
 								</UxContent>
 							</UxArticle>
@@ -273,7 +285,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="검색"
+										placeholder="검색어를 입력해주세요"
 										valid={true}
 									>
 										<span className="text">검색어</span>
@@ -290,7 +302,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="검색"
+										placeholder="검색어를 입력해주세요"
 										valid={false}
 									>
 										<span className="text">검색어</span>
@@ -307,7 +319,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="검색"
+										placeholder="검색어를 입력해주세요"
 										readonly
 									>
 										<span className="text">검색어</span>
@@ -324,7 +336,7 @@ export default function Sample() {
 								<UxContent>
 									<UxButton
 										role="search"
-										placeholder="검색"
+										placeholder="검색어를 입력해주세요"
 										disabled
 									>
 										<span className="text">검색어</span>
@@ -332,7 +344,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
@@ -342,7 +354,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력"
+										placeholder="입력해주세요"
 										prefix="금액"
 										suffix="원"
 									/>
@@ -359,7 +371,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력"
+										placeholder="입력해주세요"
 										prefix="금액"
 										suffix="원"
 										valid={true}
@@ -379,7 +391,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력"
+										placeholder="입력해주세요"
 										prefix="금액"
 										suffix="원"
 										valid={false}
@@ -399,7 +411,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력"
+										placeholder="입력해주세요"
 										prefix="금액"
 										suffix="원"
 										readonly
@@ -419,7 +431,7 @@ export default function Sample() {
 									<UxButton
 										role="input"
 										className="right"
-										placeholder="입력"
+										placeholder="입력해주세요"
 										prefix="금액"
 										suffix="원"
 										disabled

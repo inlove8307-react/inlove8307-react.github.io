@@ -67,7 +67,7 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxInput
-										placeholder="입력해주세요."
+										placeholder="입력해주세요"
 										clear
 									/>
 								</UxContent>
@@ -146,6 +146,7 @@ export default function Sample() {
 								<UxContent>
 									<UxInput
 										placeholder="입력해주세요"
+										value="10,000"
 										prefix="금액"
 										clear
 									/>
@@ -161,10 +162,10 @@ export default function Sample() {
 								<UxContent>
 									<UxInput
 										className="right"
-										value="10,000"
 										placeholder="입력해주세요"
+										value="10,000"
+										prefix="금액"
 										suffix="원"
-										clear
 									/>
 								</UxContent>
 							</UxArticle>
@@ -212,13 +213,16 @@ export default function Sample() {
 									<UxGroup
 										role="input"
 									>
-										<UxSelect placeholder="선택">
+										<UxSelect
+											style={{ width: '6rem' }}
+											placeholder="국번"
+										>
 											<UxOption value="0">010</UxOption>
 											<UxOption value="1">011</UxOption>
 										</UxSelect>
 										<UxInput
 											className="last"
-											placeholder="입력"
+											placeholder="입력해주세요"
 										/>
 									</UxGroup>
 									<UxGroup
