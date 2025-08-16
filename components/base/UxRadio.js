@@ -73,10 +73,7 @@ const UxRadio = ({ ref, ...props }) => {
 					disabled={props.disabled}
 					onChange={handleChange}
 				/>
-				<UxIcon
-					className="i197"
-					size="2.4rem"
-				/>
+				<UxIcon className="i197 w24" />
 				<span className={`${baseClassName}-label`}>
 					{props.children}
 				</span>

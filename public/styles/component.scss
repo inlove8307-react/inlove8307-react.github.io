@@ -178,32 +178,32 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
-/* <UxGroup> */
+/* <UxGroup> Default */
 .ux-group.default {--gap: .8rem;}
 .ux-group.default {display: flex; flex-wrap: wrap; gap: var(--gap);}
-/* <UxGroup> Row */
+/* <UxGroup> Default Row */
 .ux-group.default.row {flex-direction: row;}
 .ux-group.default.row.center {justify-content: center;}
 .ux-group.default.row.left {justify-content: flex-start;}
 .ux-group.default.row.right {justify-content: flex-end;}
-/* <UxGroup> Column */
+/* <UxGroup> Default Column */
 .ux-group.default.column {flex-direction: column;}
 .ux-group.default.column.center {align-items: center;}
 .ux-group.default.column.left {align-items: flex-start;}
 .ux-group.default.column.right {align-items: flex-end;}
-/* <UxGroup> Gap */
+/* <UxGroup> Default Gap */
 .ux-group.default.gap16 {--gap: 1.6rem;}
 .ux-group.default.gap12 {--gap: 1.2rem;}
 .ux-group.default.gap8 {--gap: .8rem;}
 .ux-group.default.gap4 {--gap: .4rem;}
-/* <UxGroup> Col */
+/* <UxGroup> Default Col */
 .ux-group.default.col1 {--col: 1;}
 .ux-group.default.col2 {--col: 2;}
 .ux-group.default.col3 {--col: 3;}
 .ux-group.default.col4 {--col: 4;}
 .ux-group.default.col5 {--col: 5;}
 .ux-group.default[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
-/* <UxGroup> Grow */
+/* <UxGroup> Default Grow */
 .ux-group.default > * {flex-shrink: 0;}
 .ux-group.default > .small {width: calc(100% / 3);}
 .ux-group.default:not([class*=col]) > :not(.small) {flex-grow: 1;}
@@ -215,10 +215,10 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-list {--gap: 1.2rem;}
 .ux-list {display: flex; flex-direction: column; gap: var(--gap);}
 /* <UxList> Gap */
-.ux-list.gap16 {--gap: 1.6rem;}
-.ux-list.gap12 {--gap: 1.2rem;}
-.ux-list.gap8 {--gap: .8rem;}
 .ux-list.gap4 {--gap: .4rem;}
+.ux-list.gap8 {--gap: .8rem;}
+.ux-list.gap12 {--gap: 1.2rem;}
+.ux-list.gap16 {--gap: 1.6rem;}
 /* <UxList> Outline */
 .ux-list.outline {padding: 1.6rem; border-radius: var(--radius-card); box-shadow: var(--inset);}
 /* <UxList> Contain */
@@ -230,31 +230,31 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
-/* <UxButton> */
+/* <UxButton> Default */
 .ux-button.default {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; transform: translateZ(0); transition: var(--inset-transition);}
-/* <UxButton> Align */
+/* <UxButton> Default Align */
 .ux-button.default.left {justify-content: flex-start;}
 .ux-button.default.right {justify-content: flex-end;}
 .ux-button.default > .left {margin-right: auto;}
 .ux-button.default > .right {margin-left: auto;}
-/* <UxButton> Size */
+/* <UxButton> Default Size */
 .ux-button.default.h3 {height: 4.8rem;}
 .ux-button.default.h4 {height: 4.4rem;}
 .ux-button.default.h5 {height: 4rem;}
 .ux-button.default.h6 {height: 3.6rem;}
-/* <UxButton> Outline */
+/* <UxButton> Default Outline */
 .ux-button.default.outline {padding: 0 1.2rem; border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
-/* <UxButton> Contain */
+/* <UxButton> Default Contain */
 .ux-button.default.contain {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--light1);}
-/* <UxButton> Primary */
+/* <UxButton> Default Primary */
 .ux-button.default.primary {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--color1); color: var(--light0);}
-/* <UxButton> Secondary */
+/* <UxButton> Default Secondary */
 .ux-button.default.secondary {}
-/* <UxButton> Tertiary */
+/* <UxButton> Default Tertiary */
 .ux-button.default.tertiary {}
-/* <UxButton> Focus */
+/* <UxButton> Default Focus */
 .ux-button.default.outline:focus-within {box-shadow: var(--inset-focus);}
-/* <UxButton> Disabled */
+/* <UxButton> Default Disabled */
 .ux-button.default.disabled {opacity: .5;}
 /* <UxButton> Role */
 .ux-button.select,
@@ -558,24 +558,24 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
-/* <UxRadioGroup> */
+/* <UxGroup> Radio */
 .ux-group.radio .ux-group-scroll {display: flex; flex-wrap: wrap; gap: 1.6rem;}
 .ux-group.radio .ux-radio {flex-grow: 1;}
-/* <UxRadioGroup> Column */
+/* <UxGroup> Radio Column */
 .ux-group.radio.column .ux-radio-scroll {flex-direction: column;}
-/* <UxRadioGroup> Gap */
+/* <UxGroup> Radio Gap */
 .ux-group.radio.gap8 .ux-group-scroll {gap: .8rem;}
 .ux-group.radio.gap12 .ux-group-scroll {gap: 1.2rem;}
 .ux-group.radio.gap16 .ux-group-scroll {gap: 1.6rem;}
-/* <UxRadioGroup> Chip */
+/* <UxGroup> Radio Chip */
 .ux-group.radio.chip .ux-group-scroll {--height: 3.6rem; gap: .8rem;}
 .ux-group.radio.chip .ux-radio {flex-grow: initial; height: var(--height); border-radius: calc(var(--height) / 2); background-color: var(--light1); transition: background-color .1s ease-in-out;}
 .ux-group.radio.chip .ux-radio-base {padding: 0 calc(var(--height) / 3); width: 100%; height: 100%;}
 .ux-group.radio.chip .ux-radio-label {line-height: 1;}
 .ux-group.radio.chip .ux-radio .ux-icon {display: none;}
-/* <UxRadioGroup> Chip Checked */
+/* <UxGroup> Radio Chip Checked */
 .ux-group.radio.chip .ux-radio.checked {background-color: var(--color1); color: var(--light0);}
-/* <UxRadioGroup> Scroll */
+/* <UxGroup> Radio Scroll */
 .ux-group.radio.scroll {position: relative;}
 .ux-group.radio.scroll::before,
 .ux-group.radio.scroll::after {content: ''; position: absolute; top: 0; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
@@ -589,15 +589,15 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.radio.scroll .ux-group-after {flex-shrink: 0; width: .1rem; height: .1rem;}
 .ux-group.radio.scroll .ux-group-before {margin-right: -.9rem;}
 .ux-group.radio.scroll .ux-group-after {margin-left: -.9rem;}
-/* <UxRadioGroup> Expand */
+/* <UxGroup> Radio Expand */
 .ux-group.radio.scroll.expand {display: flex;}
 .ux-group.radio.scroll.expand .ux-group-scroll {width: calc(100% - 3.2rem);}
 .ux-group.radio.scroll.expand .ux-group-expand {flex-shrink: 0;}
 .ux-group.radio.scroll.expand .ux-group-expand {display: inline-flex; justify-content: center; align-items: center; width: 3.2rem; height: 3.2rem;}
 .ux-group.radio.scroll.expand:not(.after)::after {right: 3.2rem; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 75%);}
-/* <UxRadioGroup> Expand Expanded */
+/* <UxGroup> Radio Expand Expanded */
 .ux-group.radio.scroll.expand.expanded .ux-group-scroll {flex-wrap: wrap;}
-/* <UxRadioGroup> z-index */
+/* <UxGroup> Radio z-index */
 .ux-group.radio.scroll::before,
 .ux-group.radio.scroll::after {z-index: 1;}
 

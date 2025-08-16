@@ -74,25 +74,6 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>.col2</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGroup
-										role="card"
-										className="col2"
-									>
-										<UxCard>CARD 01</UxCard>
-										<UxCard>CARD 02</UxCard>
-										<UxCard>CARD 03</UxCard>
-										<UxCard>CARD 04</UxCard>
-									</UxGroup>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
 									<h5>:type checkbox</h5>
 								</UxSubject>
 								<UxContent>

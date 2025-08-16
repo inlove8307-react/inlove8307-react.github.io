@@ -49,10 +49,7 @@ const UxCheckbox = ({ ref, ...props }) => {
 					disabled={props.disabled}
 					onChange={handleChange}
 				/>
-				<UxIcon
-					className="i132"
-					size="2.4rem"
-				/>
+				<UxIcon className="i132 w24" />
 				<span className={`${baseClassName}-label`}>
 					{props.children}
 				</span>
