@@ -33,9 +33,10 @@ export default function Sample() {
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
 											<li>placeholder(String): 값 없을 경우 표시 문구</li>
-											<li>rows(String): 라인 수 (기본 '2')</li>
 											<li>value(String): 값</li>
 											<li>maxLength(String): 글자 수 제한</li>
+											<li>rows(String): 라인 수 (기본 '2')</li>
+											<li>fluid(Boolean): 높이값 자동 조정 여부</li>
 											<li>valid(Boolean): 유효성 여부</li>
 											<li>readonly(Boolean): 읽기전용 여부</li>
 											<li>disabled(Boolean): 비활성화 여부</li>
@@ -64,11 +65,41 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										value="입력 값"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:rows</h5>
+								</UxSubject>
+								<UxContent>
+									<UxTextarea
+										placeholder="내용을 입력해주세요."
+										value="라인 수"
+										rows="1"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:fluid</h5>
 								</UxSubject>
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="높이 값 자동 조정 여부"
 										rows="1"
 										fluid
 									/>
@@ -84,6 +115,7 @@ export default function Sample() {
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="글자 수 제한"
 										maxLength={100}
 										fluid
 									/>
@@ -99,6 +131,7 @@ export default function Sample() {
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="유효성 여부"
 										valid={true}
 									/>
 								</UxContent>
@@ -113,6 +146,7 @@ export default function Sample() {
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="유효성 여부"
 										valid={false}
 									/>
 								</UxContent>
@@ -127,6 +161,7 @@ export default function Sample() {
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="읽기전용 여부"
 										readonly
 									/>
 								</UxContent>
@@ -141,6 +176,7 @@ export default function Sample() {
 								<UxContent>
 									<UxTextarea
 										placeholder="내용을 입력해주세요."
+										value="비활성화 여부"
 										disabled
 									/>
 								</UxContent>

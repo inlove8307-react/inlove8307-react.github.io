@@ -67,6 +67,25 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxLrn
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>

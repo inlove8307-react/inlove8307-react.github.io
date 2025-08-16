@@ -67,6 +67,21 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPassword
+										placeholder="비밀번호를 입력해주세요."
+										value="1234567"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:maxLength</h5>
 								</UxSubject>
 								<UxContent>
