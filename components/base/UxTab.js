@@ -8,9 +8,12 @@ import classnames from 'classnames';
 /**
  * <UxTab>
  * [props]
- *
+ * className(String): 추가 클래스
+ * selected(Number): 선택 값
+ * linear(Boolean): 선택 변경 시 라인 효과 여부
+ * scroll(Boolean): 스크롤 여부
  * [event]
- *
+ * onChange(Func): 선택 변경 이벤트 콜백
  */
 
 const UxTab = ({ ref, ...props }) => {
@@ -32,10 +35,10 @@ const UxTab = ({ ref, ...props }) => {
 		return result;
 	})();
 
-	const handleClick = (event, index) => {
+	const handleClick = (index) => {
 		setSelected(index);
 		setIsChange(true);
-		props.onChange && props.onChange(event, index);
+		props.onChange && props.onChange(index);
 	};
 
 	const setLinear = (index) => {
@@ -87,7 +90,7 @@ const UxTab = ({ ref, ...props }) => {
 									ref={(element) => tabsRef.current[index] = element}
 									key={index}
 									className={classnames(`${baseClassName}-button`, {active})}
-									onClick={(event) => handleClick(event, index)}
+									onClick={() => handleClick(index)}
 								>
 									{item.props.children}
 								</button>

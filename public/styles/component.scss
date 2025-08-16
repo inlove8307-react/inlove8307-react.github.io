@@ -691,24 +691,31 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 /* <UxCollapse> */
 .ux-collapse {display: flex; flex-direction: column; border-radius: var(--radius-form); box-shadow: var(--inset);}
-.ux-collapse + .ux-collapse {border-top: .1rem solid var(--light2);}
-.ux-collapse-summary {display: flex; align-items: center; min-height: var(--height-form);}
-.ux-collapse-summary [data-role=summary] {flex-grow: 1; padding-left: 1.2rem;}
-.ux-collapse-button {flex-shrink: 0; display: flex; align-items: center; padding: 0 var(--radius-form);}
+/* <UxCollapse> Summary */
+.ux-collapse-summary {display: flex; align-items: center; padding-left: var(--radius-form); min-height: var(--height-form);}
+.ux-collapse-summary .ux-collapse-content {margin-right: auto;}
+.ux-collapse-summary .ux-collapse-button {flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); height: var(--height-form);}
+/* <UxCollapse> Details */
 .ux-collapse-details {overflow: hidden; max-height: 0; box-shadow: var(--index); transition: max-height .15s ease-in-out;}
-.ux-collapse-details [data-role=details] {padding: 1.2rem;}
+.ux-collapse-details .ux-collapse-content {padding: 0 1.2rem 1.2rem 1.2rem;}
 /* <UxCollapse> Expanded */
 .ux-collapse.expanded .ux-collapse-details {max-height: auto;}
+/* <UxCollapse> Entire */
+.ux-collapse-summary.entire {padding-left: initial;}
+.ux-collapse-summary.entire .ux-collapse-button {justify-content: flex-start; padding: 0 var(--radius-form); width: 100%; min-height: var(--height-form); height: initial;}
+.ux-collapse-summary.entire .ux-collapse-content {text-align: left;}
+.ux-collapse-summary.entire .ux-icon {margin-left: var(--radius-form);}
 
 
 
 /* <UxGroup> Collapse */
 .ux-group.collapse {overflow: hidden; width: 100%; border-radius: var(--radius-form); border: .1rem solid var(--light2); background-color: var(--light0);}
 .ux-group.collapse .ux-collapse {border-radius: initial; box-shadow: initial;}
+.ux-group.collapse .ux-collapse + .ux-collapse {border-top: .1rem solid var(--light2);}
 /* <UxGroup> Collapse Sample */
 .ux-group.collapse.sample {border-radius: initial; border: initial; background-color: var(--light1);}
-.ux-group.collapse.sample .ux-collapse-summary [data-role=summary] {font-weight: 600;}
-.ux-group.collapse.sample .ux-collapse-details [data-role=details] {padding-top: 0; font-size: 1.4rem;}
+.ux-group.collapse.sample .ux-collapse-summary .ux-collapse-content {font-weight: 600;}
+.ux-group.collapse.sample .ux-collapse-details .ux-collapse-content {font-size: 1.4rem;}
 
 
 

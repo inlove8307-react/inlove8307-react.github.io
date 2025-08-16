@@ -45,7 +45,7 @@ export default function Sample() {
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
-											<li>type(String): 유형 ('checkbox', 'radio', 'button')</li>
+											<li>type(String): 유형 ('checkbox', 'radio')</li>
 											<li>checked(Boolean): 체크 여부</li>
 											<li>selected(String): 선택 값</li>
 											<li>disabled(Boolean): 비활성화 여부</li>

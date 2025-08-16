@@ -9,9 +9,11 @@ import UxIcon from '@/components/base/UxIcon';
 /**
  * <UxCollapseSummary>
  * [props]
- *
+ * index(Number): 그룹일 경우 식별값
+ * entire(Boolean): summary 전체 클릭 이벤트 여부
+ * expanded(Boolean): 확장 여부
  * [event]
- *
+ * onClick(Func): 클릭 이벤트 콜백
  */
 
 const UxCollapseSummary = (props) => {
@@ -21,23 +23,24 @@ const UxCollapseSummary = (props) => {
 		props.onClick && props.onClick(props.index);
 	};
 
+	const Content = () => {
+		return (
+			<div className={`${baseClassName}-content`}>
+				{props.children}
+			</div>
+		);
+	};
+
 	return (
-		<div
-			className={`${baseClassName}-summary`}
-		>
-			{props.children}
+		<div className={classnames(`${baseClassName}-summary`, { entire: props.entire })}>
+			{!props.entire && <Content />}
 			<button
 				type="button"
 				className={`${baseClassName}-button`}
 				onClick={handleClick}
 			>
-				<UxIcon
-					className={
-						props.expanded
-						 ? 'i001'
-						 : 'i002'
-					}
-				/>
+				{props.entire && <Content />}
+				<UxIcon className={props.expanded ? 'i001' : 'i002'} />
 			</button>
 		</div>
 	);
@@ -46,9 +49,7 @@ const UxCollapseSummary = (props) => {
 /**
  * <UxCollapseDetails>
  * [props]
- *
- * [event]
- *
+ * expanded(Boolean): 확장 여부
  */
 
 const UxCollapseDetails = (props) => {
@@ -68,7 +69,9 @@ const UxCollapseDetails = (props) => {
 			ref={detailsRef}
 			className={`${baseClassName}-details`}
 		>
-			{props.children}
+			<div className={`${baseClassName}-content`}>
+				{props.children}
+			</div>
 		</div>
 	);
 };
@@ -76,9 +79,12 @@ const UxCollapseDetails = (props) => {
 /**
  * <UxCollapse>
  * [props]
- *
+ * className(String): 추가 클래스
+ * index(Number): 그룹일 경우 식별값
+ * entire(Boolean): summary 전체 클릭 이벤트 여부
+ * expanded(Boolean): 확장 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const UxCollapse = ({ ref, ...props }) => {
@@ -88,7 +94,6 @@ const UxCollapse = ({ ref, ...props }) => {
 
 	const handleClick = (index) => {
 		setExpanded(!expanded);
-
 		props.onChange && props.onChange(index);
 	};
 
@@ -103,19 +108,20 @@ const UxCollapse = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={classnames(caseClassName, {expanded})}
+			className={classnames(caseClassName, { expanded })}
 		>
 			<UxCollapseSummary
 				index={props.index}
+				entire={props.entire}
 				expanded={expanded}
 				onClick={handleClick}
 			>
-				{getRole(getArray(props.children), 'summary')}
+				{getRole(getArray(props.children), 'summary')?.props.children}
 			</UxCollapseSummary>
 			<UxCollapseDetails
 				expanded={expanded}
 			>
-				{getRole(getArray(props.children), 'details')}
+				{getRole(getArray(props.children), 'details')?.props.children}
 			</UxCollapseDetails>
 		</div>
 	);

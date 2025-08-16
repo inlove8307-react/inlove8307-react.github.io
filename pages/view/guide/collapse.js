@@ -28,26 +28,27 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxGroup Collapse Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>selected(String): 선택 값</li>
+											<li>once(Boolean): 단일 확장 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 								<UxCollapse>
 									<div data-role="summary">UxCollapse Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>index(Number): 그룹일 경우 식별값</li>
+											<li>entire(Boolean): summary 전체 클릭 이벤트 여부</li>
+											<li>expanded(Boolean): 확장 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -60,6 +61,20 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxCollapse>
+										<div data-role="summary">summary</div>
+										<div data-role="details">details</div>
+									</UxCollapse>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:entire</h5>
+								</UxSubject>
+								<UxContent>
+									<UxCollapse entire>
 										<div data-role="summary">summary</div>
 										<div data-role="details">details</div>
 									</UxCollapse>

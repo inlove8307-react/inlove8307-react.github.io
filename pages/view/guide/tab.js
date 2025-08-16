@@ -30,26 +30,24 @@ export default function Sample() {
 								<UxCollapse>
 									<div data-role="summary">UxTab Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>selected(Number): 선택 값</li>
+											<li>linear(Boolean): 선택 변경 시 라인 효과 여부</li>
+											<li>scroll(Boolean): 스크롤 여부</li>
+											<li>[event]</li>
+											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 								<UxCollapse>
 									<div data-role="summary">UxPanel Props</div>
 									<div data-role="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
+											<li>active(Boolean): 활성화 여부</li>
 										</ul>
 									</div>
 								</UxCollapse>

@@ -7,9 +7,8 @@ import classnames from 'classnames';
 /**
  * <UxTab>
  * [props]
- *
- * [event]
- *
+ * className(String): 추가 클래스
+ * active(Boolean): 활성화 여부
  */
 
 const UxTab = ({ ref, ...props }) => {
