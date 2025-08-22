@@ -28,6 +28,7 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Lrn', url: '/view/guide/lrn' },
 		{ name: 'Brn', url: '/view/guide/brn' },
 		{ name: 'Select', url: '/view/guide/select' },
+		{ name: 'Picker', url: '/view/guide/picker' },
 		{ name: 'DatePicker', url: '/view/guide/datepicker' },
 		{ name: 'MonthPicker', url: '/view/guide/monthpicker' },
 		{ name: 'YearPicker', url: '/view/guide/yearpicker' },

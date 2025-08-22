@@ -52,7 +52,7 @@ const UxTab = ({ ref, ...props }) => {
 		tabsRef.current[index].scrollIntoView({
 			block: "nearest",
 			inline: "center",
-			behavior: "smooth"
+			behavior: "smooth",
 		});
 	};
 

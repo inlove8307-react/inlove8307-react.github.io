@@ -263,16 +263,33 @@ const Toggle = ({ ref, ...props }) => {
  * [props]
  * className(String): 추가 클래스
  * placeholder(String): 값 없을 경우 표시 문구
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
  * [event]
  */
 
 const Input = ({ ref, ...props }) => {
+	const [options, setOptions] = useState({});
+
+	useEffect(() => {
+		props.valid && setOptions({ ...options, valid: props.valid });
+		props.readonly && setOptions({ ...options, readonly: props.readonly });
+		props.disabled && setOptions({ ...options, disabled: props.disabled });
+	}, []);
+
 	return (
-		<div className={props.caseClassName}>
+		<div className={classnames(props.caseClassName, {
+			valid: props.valid === true,
+			invalid: props.valid === false,
+			readonly: props.readonly,
+			disabled: props.disabled,
+		})}>
 			<div className={`${props.baseClassName}-placeholder`}>{props.placeholder}</div>
 			{
 				getArray(props.children).map((item, index) => mergeProps(item, {
 					key: index,
+					...options,
 				}))
 			}
 		</div>

@@ -127,13 +127,17 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:from :to</h5>
+									<h5>group</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDatePicker
-										from
-										to
-									/>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker />
+										<UxDatePicker className="dash" />
+									</UxGroup>
+
 								</UxContent>
 							</UxArticle>
 
@@ -141,17 +145,19 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:from :to :value</h5>
+									<h5>:value</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01'
-										}}
-										to={{
-											value: '2025.07.07'
-										}}
-									/>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -159,18 +165,20 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:From :to :valid true</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01'
-										}}
-										to={{
-											value: '2025.07.07'
-										}}
+									<UxGroup
+										role="input"
+										className="col2"
 										valid={true}
-									/>
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -178,18 +186,20 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:From :to :valid false</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01'
-										}}
-										to={{
-											value: '2025.07.07'
-										}}
+									<UxGroup
+										role="input"
+										className="col2"
 										valid={false}
-									/>
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -197,36 +207,89 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:From :to :disabled</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01'
-										}}
-										to={{
-											value: '2025.07.07'
-										}}
+									<UxGroup
+										role="input"
+										className="col2"
+										readonly
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker
+											value="2025.08.01"
+											readonly
+										/>
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+											readonly
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
 										disabled
-									/>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01',
-											disabled: true
-										}}
-										to={{
-											value: '2025.07.07',
-										}}
-									/>
-									<UxDatePicker
-										from={{
-											value: '2025.07.01',
-										}}
-										to={{
-											value: '2025.07.07',
-											disabled: true
-										}}
-									/>
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker
+											value="2025.08.01"
+											disabled
+										/>
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxDatePicker value="2025.08.01" />
+										<UxDatePicker
+											className="dash"
+											value="2025.08.31"
+											disabled
+										/>
+									</UxGroup>
 								</UxContent>
 							</UxArticle>
 						</UxContent>
