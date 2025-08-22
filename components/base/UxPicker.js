@@ -114,7 +114,7 @@ const Date = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange({ year, month, date });
+		props.onChange && props.onChange([year, month, date]);
 	}, [year, month, date]);
 
 	return (
@@ -171,7 +171,7 @@ const Time = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange({ hour, minute, second });
+		props.onChange && props.onChange([hour, minute, second]);
 	}, [hour, minute, second]);
 
 	return (
