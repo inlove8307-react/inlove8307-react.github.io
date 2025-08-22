@@ -76,7 +76,7 @@ const Picker = ({ ref, ...props }) => {
 							onClick={handleClick}
 						>
 							<span className="text">
-								{item}
+								{String(item).padStart(props.pad, '0')}
 								{props.suffix && props.suffix}
 							</span>
 						</button>
@@ -114,7 +114,11 @@ const Date = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange([year, month, date]);
+		props.onChange && props.onChange([
+			String(year).padStart(4, '0'),
+			String(month).padStart(2, '0'),
+			String(date).padStart(2, '0'),
+		].join('.'));
 	}, [year, month, date]);
 
 	return (
@@ -130,6 +134,7 @@ const Date = ({ ref, ...props }) => {
 				{...props}
 				min={1}
 				max={12}
+				pad={2}
 				suffix="월"
 				onChange={handleMonth}
 			/>
@@ -137,6 +142,7 @@ const Date = ({ ref, ...props }) => {
 				{...props}
 				min={1}
 				max={31}
+				pad={2}
 				suffix="일"
 				onChange={handleDate}
 			/>
@@ -171,7 +177,11 @@ const Time = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange([hour, minute, second]);
+		props.onChange && props.onChange([
+			String(hour).padStart(2, '0'),
+			String(minute).padStart(2, '0'),
+			String(second).padStart(2, '0'),
+		].join(':'));
 	}, [hour, minute, second]);
 
 	return (
@@ -180,20 +190,23 @@ const Time = ({ ref, ...props }) => {
 				{...props}
 				min={0}
 				max={24}
+				pad={2}
 				suffix="시"
 				onChange={handleHour}
 			/>
 			<Picker
 				{...props}
 				min={0}
-				max={60}
+				max={59}
+				pad={2}
 				suffix="분"
 				onChange={handleMinute}
 			/>
 			<Picker
 				{...props}
 				min={0}
-				max={60}
+				max={59}
+				pad={2}
 				suffix="초"
 				onChange={handleSecond}
 			/>
