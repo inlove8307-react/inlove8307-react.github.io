@@ -50,7 +50,7 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
@@ -59,14 +59,14 @@ export default function Sample() {
 								<UxContent>
 									<UxPicker
 										role="date"
-										min="2020"
+										min="2010"
 										max="2025"
 										onChange={(value) => console.log(value)}
 									/>
 								</UxContent>
 							</UxArticle>
 
-							<UxDivider className="linear" />
+							<UxDivider />
 
 							<UxArticle className="h5">
 								<UxSubject>
