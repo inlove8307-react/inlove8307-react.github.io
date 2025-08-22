@@ -884,7 +884,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxPicker> */
-.ux-picker {padding: var(--radius-card); border-radius: var(--radius-card); box-shadow: var(--inset);}
+.ux-picker {padding: 0 var(--radius-card); border-radius: var(--radius-card); box-shadow: var(--inset);}
 .ux-picker-list {display: flex; flex-direction: column; overflow-y: auto; height: calc(var(--height-form) * 5); scroll-snap-type: y mandatory;}
 .ux-picker-list::-webkit-scrollbar {display: none;}
 .ux-picker-list::before,
@@ -896,7 +896,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-picker-item.active .ux-picker-button {color: var(--color1);}
 /* <UxPicker> Role */
 .ux-picker-date,
-.ux-picker-time {overflow: hidden; display: flex; gap: 1.6rem; padding: var(--radius-card); border-radius: var(--radius-card); box-shadow: var(--inset);}
+.ux-picker-time {overflow: hidden; display: flex; gap: 1.6rem; padding: 0 var(--radius-card); border-radius: var(--radius-card); box-shadow: var(--inset);}
 .ux-picker-date .ux-picker,
 .ux-picker-time .ux-picker {flex-shrink: 0; flex-grow: 1; padding: initial; border-radius: initial; box-shadow: initial;}
 
