@@ -326,9 +326,11 @@ const UxPicker = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 	const [icon, setIcon] = useState('');
 	const [placeholder, setPlaceholder] = useState('');
+	const [active, setActive] = useState(false);
 
 	const handleClick = async () => {
 		props.onClick && props.onClick();
+		setActive(true);
 
 		const result = await modal.bottom(Popup, {
 			...props,
@@ -336,6 +338,7 @@ const UxPicker = ({ ref, ...props }) => {
 		});
 
 		result.value && setValue(result.value);
+		setActive(false);
 	};
 
 	useEffect(() => {
@@ -359,28 +362,44 @@ const UxPicker = ({ ref, ...props }) => {
 				setIcon('i219');
 				break;
 			default:
-				setPlaceholder('선택');
+				setPlaceholder('선택해주세요');
 				setIcon('i002');
 				break;
 		}
 	}, [props.role]);
 
 	return (
-		<UxInput
-			className={props.className}
-			placeholder={props.placeholder || placeholder}
-			value={value}
-			valid={props.valid}
-			readonly={props.readonly}
-			disabled={props.disabled}
-		>
-			<UxButton
-				disabled={props.readonly || props.disabled}
-				onClick={handleClick}
-			>
-				{icon && <UxIcon className={icon} />}
-			</UxButton>
-		</UxInput>
+		<>
+			{
+				props.role &&
+				<UxInput
+					className={props.className}
+					placeholder={props.placeholder || placeholder}
+					value={value}
+					valid={props.valid}
+					readonly={props.readonly}
+					disabled={props.disabled}
+				>
+					<UxButton
+						disabled={props.readonly || props.disabled}
+						onClick={handleClick}
+					>
+						{icon && <UxIcon className={icon} />}
+					</UxButton>
+				</UxInput>
+			}
+			{
+				!props.role &&
+				<UxButton
+					role="select"
+					placeholder={placeholder}
+					active={active}
+					onClick={handleClick}
+				>
+					{value}
+				</UxButton>
+			}
+		</>
 	)
 };
 
