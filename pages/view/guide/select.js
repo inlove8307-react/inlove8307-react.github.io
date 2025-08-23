@@ -28,7 +28,7 @@ export default function Sample() {
 								role="collapse"
 								className="sample"
 							>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxSelect Props</div>
 									<div data-role="details">
 										<ul>
@@ -45,7 +45,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxOption Props</div>
 									<div data-role="details">
 										<ul>

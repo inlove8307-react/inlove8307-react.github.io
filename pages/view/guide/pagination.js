@@ -25,7 +25,7 @@ export default function Sample() {
 								role="collapse"
 								className="sample"
 							>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxPagination Props</div>
 									<div data-role="details">
 										<p>[props]</p>

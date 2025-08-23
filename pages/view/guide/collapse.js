@@ -25,7 +25,7 @@ export default function Sample() {
 								role="collapse"
 								className="sample"
 							>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxGroup Collapse Props</div>
 									<div data-role="details">
 										<ul>
@@ -38,7 +38,7 @@ export default function Sample() {
 										</ul>
 									</div>
 								</UxCollapse>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxCollapse Props</div>
 									<div data-role="details">
 										<ul>
@@ -60,7 +60,7 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapse>
+									<UxCollapse entire>
 										<div data-role="summary">summary</div>
 										<div data-role="details">details</div>
 									</UxCollapse>
@@ -103,11 +103,11 @@ export default function Sample() {
 								</UxSubject>
 								<UxContent>
 									<UxGroup role="collapse">
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
@@ -126,11 +126,11 @@ export default function Sample() {
 										role="collapse"
 										selected={0}
 									>
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
@@ -149,11 +149,11 @@ export default function Sample() {
 										role="collapse"
 										once
 									>
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>
-										<UxCollapse>
+										<UxCollapse entire>
 											<div data-role="summary">summary</div>
 											<div data-role="details">details</div>
 										</UxCollapse>

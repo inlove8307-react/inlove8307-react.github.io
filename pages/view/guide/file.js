@@ -28,7 +28,7 @@ export default function Sample() {
 								role="collapse"
 								className="sample"
 							>
-								<UxCollapse>
+								<UxCollapse entire>
 									<div data-role="summary">UxFile Props</div>
 									<div data-role="details">
 										<ul>
