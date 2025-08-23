@@ -45,7 +45,6 @@ export default function Sample() {
 									<UxPicker
 										min="0"
 										max="10"
-										onChange={(value) => console.log(value)}
 									/>
 								</UxContent>
 							</UxArticle>
@@ -61,7 +60,6 @@ export default function Sample() {
 										role="date"
 										min="2010"
 										max="2025"
-										onChange={(value) => console.log(value)}
 									/>
 								</UxContent>
 							</UxArticle>
@@ -75,7 +73,6 @@ export default function Sample() {
 								<UxContent>
 									<UxPicker
 										role="time"
-										onChange={(value) => console.log(value)}
 									/>
 								</UxContent>
 							</UxArticle>
