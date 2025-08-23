@@ -39,12 +39,40 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>default</h5>
+									<h5>:min :max</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPicker
-										min="0"
-										max="10"
+										min="2010"
+										max="2025"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:data</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										data={['2000', '2005', '2010', '2015', '2020', '2025']}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:suffix</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										suffix="년"
 									/>
 								</UxContent>
 							</UxArticle>

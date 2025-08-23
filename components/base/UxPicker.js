@@ -18,9 +18,7 @@ import UxGroup from "@/components/base/UxGroup";
 /**
  * <DateRole>
  * [props]
- *
  * [event]
- *
  */
 
 const DateRole = ({ ref, ...props }) => {
@@ -84,9 +82,7 @@ const DateRole = ({ ref, ...props }) => {
 /**
  * <TimeRole>
  * [props]
- *
  * [event]
- *
  */
 
 const TimeRole = ({ ref, ...props }) => {
@@ -147,9 +143,7 @@ const TimeRole = ({ ref, ...props }) => {
 /**
  * <Picker>
  * [props]
- *
  * [event]
- *
  */
 
 const Picker = ({ ref, ...props }) => {
@@ -160,6 +154,17 @@ const Picker = ({ ref, ...props }) => {
 	const [data, setData] = useState([]);
 	const [value, setValue] = useState(0);
 	const listRef = useRef();
+
+	const getData = () => {
+		let result = [min];
+
+		do {
+			result.push(result[result.length - 1] + 1);
+		}
+		while (result[result.length - 1] < max);
+
+		return result;
+	};
 
 	const handleClick = (event) => {
 		event.target.scrollIntoView({
@@ -172,7 +177,7 @@ const Picker = ({ ref, ...props }) => {
 	const handleChange = (inView, entry) => {
 		if (inView) {
 			entry.target.classList.add('active');
-			setValue(Number(entry.target.dataset.value));
+			setValue(entry.target.dataset.value);
 		}
 		else {
 			entry.target.classList.remove('active');
@@ -180,14 +185,11 @@ const Picker = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		let data = [min];
+		min && max && setData(getData());
+	}, [min, max]);
 
-		do {
-			data.push(data[data.length - 1] + 1);
-		}
-		while (data[data.length - 1] < max);
-
-		setData(data);
+	useEffect(() => {
+		setData(getData());
 	}, [min, max]);
 
 	useEffect(() => {
@@ -199,7 +201,11 @@ const Picker = ({ ref, ...props }) => {
 	}, [props.max]);
 
 	useEffect(() => {
-		props.onChange && props.onChange(value);
+		props.data && setData(props.data);
+	}, [props.data]);
+
+	useEffect(() => {
+		props.onChange && props.onChange(String(value));
 	}, [value]);
 
 	return (
@@ -208,7 +214,7 @@ const Picker = ({ ref, ...props }) => {
 				ref={listRef}
 				className={`${baseClassName}-list`}
 			>
-				{data.map((item, index) => (
+				{data?.map((item, index) => (
 					<InView
 						key={index}
 						root={listRef.current}
