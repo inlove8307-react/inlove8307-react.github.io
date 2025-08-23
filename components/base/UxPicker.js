@@ -398,7 +398,7 @@ const UxPicker = ({ ref, ...props }) => {
 					disabled={props.disabled}
 					onClick={handleClick}
 				>
-					{value}
+					{value && props.suffix ? `${value}${props.suffix}` : value}
 				</UxButton>
 			}
 		</>
