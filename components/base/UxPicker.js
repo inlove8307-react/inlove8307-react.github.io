@@ -361,10 +361,6 @@ const UxPicker = ({ ref, ...props }) => {
 				setPlaceholder('HH:MM:SS');
 				setIcon('i219');
 				break;
-			default:
-				setPlaceholder('선택해주세요');
-				setIcon('i002');
-				break;
 		}
 	}, [props.role]);
 
@@ -394,6 +390,9 @@ const UxPicker = ({ ref, ...props }) => {
 					role="select"
 					placeholder={placeholder}
 					active={active}
+					valid={props.valid}
+					readonly={props.readonly}
+					disabled={props.disabled}
 					onClick={handleClick}
 				>
 					{value}
