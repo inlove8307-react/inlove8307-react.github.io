@@ -60,7 +60,7 @@ export default function Sample() {
 									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapse entire>
+									<UxCollapse>
 										<div data-role="summary">summary</div>
 										<div data-role="details">details</div>
 									</UxCollapse>
@@ -88,7 +88,10 @@ export default function Sample() {
 									<h5>:expanded</h5>
 								</UxSubject>
 								<UxContent>
-									<UxCollapse expanded>
+									<UxCollapse
+										entire
+										expanded
+									>
 										<div data-role="summary">summary</div>
 										<div data-role="details">details</div>
 									</UxCollapse>
