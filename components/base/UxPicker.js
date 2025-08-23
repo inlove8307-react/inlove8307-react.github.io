@@ -4,18 +4,26 @@ import React, { useEffect, useState, useRef } from 'react';
 import { InView } from 'react-intersection-observer';
 import { getDate, endOfMonth } from 'date-fns';
 import classnames from 'classnames';
+import useModal from "@/hook/useModal";
+/* LAYOUT */
+import UxSection from "@/components/layout/UxSection";
+import UxArticle from "@/components/layout/UxArticle";
+import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
+import UxInput from '@/components/base/UxInput';
+import UxIcon from '@/components/base/UxIcon';
+import UxButton from '@/components/base/UxButton';
 import UxGroup from "@/components/base/UxGroup";
 
 /**
- * <RoleDate>
+ * <DateRole>
  * [props]
  *
  * [event]
  *
  */
 
-const RoleDate = ({ ref, ...props }) => {
+const DateRole = ({ ref, ...props }) => {
 	const [year, setYear] = useState(0);
 	const [month, setMonth] = useState(0);
 	const [date, setDate] = useState(0);
@@ -74,14 +82,14 @@ const RoleDate = ({ ref, ...props }) => {
 };
 
 /**
- * <RoleTime>
+ * <TimeRole>
  * [props]
  *
  * [event]
  *
  */
 
-const RoleTime = ({ ref, ...props }) => {
+const TimeRole = ({ ref, ...props }) => {
 	const [hour, setHour] = useState(0);
 	const [minute, setMinute] = useState(0);
 	const [second, setSecond] = useState(0);
@@ -111,7 +119,7 @@ const RoleTime = ({ ref, ...props }) => {
 			<Picker
 				{...props}
 				min={0}
-				max={24}
+				max={23}
 				pad={2}
 				suffix="시"
 				onChange={handleHour}
@@ -145,8 +153,8 @@ const RoleTime = ({ ref, ...props }) => {
  */
 
 const Picker = ({ ref, ...props }) => {
-	const baseClassName = props.baseClassName;
-	const caseClassName = props.caseClassName;
+	const baseClassName = 'ux-picker';
+	const caseClassName = classnames(baseClassName, props.className);
 	const [min, setMin] = useState(Number(props.min));
 	const [max, setMax] = useState(Number(props.max));
 	const [data, setData] = useState([]);
@@ -228,35 +236,146 @@ const Picker = ({ ref, ...props }) => {
 };
 
 /**
- * <UxPicker>
+ * <Popup>
  * [props]
- *
  * [event]
- *
  */
 
-const UxPicker = ({ ref, ...props }) => {
-	const baseClassName = 'ux-picker';
-	const caseClassName = classnames(baseClassName, props.className);
+const Popup = ({ ref, ...props }) => {
+	const [value, setValue] = useState(props.value || '');
+
+	const handleChange = (value) => {
+		setValue(value);
+	};
+
+	const handleClose = () => {
+		props.onClose({ value });
+	};
 
 	const getSlot = () => {
 		Object.assign(props, {
-			baseClassName,
-			caseClassName,
-			onChange: props.onChange,
+			onChange: handleChange,
 		});
 
 		switch (props.role) {
 			case 'date':
-				return <RoleDate {...props} />;
+				return <DateRole {...props} />;
 			case 'time':
-				return <RoleTime {...props} />;
+				return <TimeRole {...props} />;
 			default:
 				return <Picker {...props} />;
 		};
 	};
 
-	return getSlot(props.role);
+	return (
+		<>
+			<UxSection className="header">
+				<UxArticle>
+					<UxContent>
+						<h4>{props.title || '선택'}</h4>
+						<UxButton onClick={props.onClose}>
+							<UxIcon className="i303 w28" />
+						</UxButton>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="main">
+				<UxArticle>
+					<UxContent>
+						{getSlot(props.role)}
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="footer">
+				<UxArticle>
+					<UxContent>
+						<UxButton
+							className="primary h3"
+							onClick={handleClose}
+						>
+							<span className="text">확인</span>
+						</UxButton>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+		</>
+	);
+};
+
+/**
+ * <UxPicker>
+ * [props]
+ * placeholder(String): 값 없을 경우 표시 문구
+ * value(String): 값
+ * valid(Boolean): 유효성 여부
+ * readonly(Boolean): 읽기전용 여부
+ * disabled(Boolean): 비활성화 여부
+ * [event]
+ * onClick(Func): 클릭 이벤트 콜백
+ * onChange(Func): 값 변경 이벤트 콜백
+ */
+
+const UxPicker = ({ ref, ...props }) => {
+	const modal = useModal();
+	const [value, setValue] = useState(props.value || '');
+	const [icon, setIcon] = useState('');
+	const [placeholder, setPlaceholder] = useState('');
+
+	const handleClick = async () => {
+		props.onClick && props.onClick();
+
+		const result = await modal.bottom(Popup, {
+			...props,
+			value,
+		});
+
+		result.value && setValue(result.value);
+	};
+
+	useEffect(() => {
+		props.onChange && props.onChange(value);
+	}, [value]);
+
+	useEffect(() => {
+		if (typeof props.value === 'string') {
+			setValue(props.value);
+		}
+	}, [props.value]);
+
+	useEffect(() => {
+		switch (props.role) {
+			case 'date':
+				setPlaceholder('YYYY.MM.DD');
+				setIcon('i160');
+				break;
+			case 'time':
+				setPlaceholder('HH:MM:SS');
+				setIcon('i219');
+				break;
+			default:
+				setPlaceholder('선택');
+				setIcon('i002');
+				break;
+		}
+	}, [props.role]);
+
+	return (
+		<UxInput
+			className={props.className}
+			placeholder={props.placeholder || placeholder}
+			value={value}
+			valid={props.valid}
+			readonly={props.readonly}
+			disabled={props.disabled}
+		>
+			<UxButton
+				disabled={props.readonly || props.disabled}
+				onClick={handleClick}
+			>
+				{icon && <UxIcon className={icon} />}
+			</UxButton>
+		</UxInput>
+	)
 };
 
 export default UxPicker;
