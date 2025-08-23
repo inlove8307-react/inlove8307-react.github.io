@@ -104,6 +104,29 @@ export default function Sample() {
 									/>
 								</UxContent>
 							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>group</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+										/>
+										<UxPicker
+											role="time"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
 						</UxContent>
 					</UxArticle>
 				</UxContent>
