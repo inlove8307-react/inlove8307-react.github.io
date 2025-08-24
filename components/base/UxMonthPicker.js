@@ -16,12 +16,12 @@ import UxGroup from '@/components/base/UxGroup';
 import UxMonthCalendar from '@/components/base/UxMonthCalendar';
 
 /**
- * <UxMonthPickerPopup>
+ * <Popup>
  * [props]
  * [event]
  */
 
-const UxMonthPickerPopup = ({ ref, ...props }) => {
+const Popup = ({ ref, ...props }) => {
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [month, setMonth] = useState(props.value || getMonth(new Date()) + 1);
 	const [date] = useState(format(set(new Date(), { month: month - 1 }), dateFormat));
@@ -92,7 +92,7 @@ const UxMonthPicker = ({ ref, ...props }) => {
 	const handleClick = async () => {
 		props.onClick && props.onClick();
 
-		const result = await modal.bottom(UxMonthPickerPopup, { value: Number(value) });
+		const result = await modal.bottom(Popup, { value: Number(value) });
 		result.value && setValue(String(result.value));
 	};
 

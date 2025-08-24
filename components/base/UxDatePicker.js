@@ -13,12 +13,12 @@ import UxButton from '@/components/base/UxButton';
 import UxCalendar from '@/components/base/UxCalendar';
 
 /**
- * <UxDatePickerPopup>
+ * <Popup>
  * [props]
  * [event]
  */
 
-const UxDatePickerPopup = ({ ref, ...props }) => {
+const Popup = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 
 	const handleChange = (value) => {
@@ -88,7 +88,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 	const handleClick = async () => {
 		props.onClick && props.onClick();
 
-		const result = await modal.bottom(UxDatePickerPopup, {
+		const result = await modal.bottom(Popup, {
 			...props,
 			value,
 		});

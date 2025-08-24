@@ -17,12 +17,12 @@ import UxYearCalendar from '@/components/base/UxYearCalendar';
 
 
 /**
- * <UxYearPickerPopup>
+ * <Popup>
  * [props]
  * [event]
  */
 
-const UxYearPickerPopup = ({ ref, ...props }) => {
+const Popup = ({ ref, ...props }) => {
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [year, setYear] = useState(props.value || getYear(new Date()));
 	const [date] = useState(format(set(new Date(), { year: year }), dateFormat));
@@ -94,7 +94,7 @@ const UxYearPicker = ({ ref, ...props }) => {
 	const handleClick = async () => {
 		props.onClick && props.onClick();
 
-		const result = await modal.bottom(UxYearPickerPopup, { value: Number(value) });
+		const result = await modal.bottom(Popup, { value: Number(value) });
 		result.value && setValue(String(result.value));
 	};
 

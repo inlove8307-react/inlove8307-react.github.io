@@ -33,8 +33,6 @@ export default function Sample() {
 											<li>[props]</li>
 											<li>placeholder(String): 값 없을 경우 표시 문구</li>
 											<li>value(String): 값</li>
-											<li>from(Object): 시작일</li>
-											<li>to(Object): 종료일</li>
 											<li>valid(Boolean): 유효성 여부</li>
 											<li>readonly(Boolean): 읽기전용 여부</li>
 											<li>disabled(Boolean): 비활성화 여부</li>

@@ -12,12 +12,12 @@ import UxContent from "@/components/layout/UxContent";
 import UxButton from '@/components/base/UxButton';
 
 /**
- * <Options>
+ * <Popup>
  * [props]
  * [event]
  */
 
-const Options = ({ ref, ...props }) => {
+const Popup = ({ ref, ...props }) => {
 	const baseClassName = 'ux-options';
 
 	const handleClick = (value, label) => {
@@ -78,7 +78,7 @@ const UxSelect = ({ ref, ...props }) => {
 		setActive(true);
 		props.onClick && props.onClick(event);
 
-		result = await modal.bottom(Options, {
+		result = await modal.bottom(Popup, {
 			value,
 			options: props.children,
 		});
