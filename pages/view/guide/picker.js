@@ -30,7 +30,20 @@ export default function Sample() {
 									<div data-role="summary">UxPicker Props</div>
 									<div data-role="details">
 										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>role(String): 유형('date', 'time')</li>
+											<li>min(String): 선택 항목 최소값(data 있을 경우 사용 불가)</li>
+											<li>max(String): 선택 항목 최대값(data 있을 경우 사용 불가)</li>
+											<li>data(Array): 선택 항목 배열(min, max 있을 경우 사용 불가)</li>
+											<li>suffix(String): 선택 항목 뒤 문구</li>
+											<li>placeholder(String): 값 없을 경우 표시 문구</li>
+											<li>value(String): 값</li>
+											<li>valid(Boolean): 유효성 여부</li>
+											<li>readonly(Boolean): 읽기전용 여부</li>
+											<li>disabled(Boolean): 비활성화 여부</li>
+											<li>[event]</li>
+											<li>onClick(Func): 클릭 이벤트 콜백</li>
+											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>

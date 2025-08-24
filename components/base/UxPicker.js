@@ -311,6 +311,11 @@ const Popup = ({ ref, ...props }) => {
 /**
  * <UxPicker>
  * [props]
+ * role(String): 유형('date', 'time')
+ * min(String): 선택 항목 최소값(data 있을 경우 사용 불가)
+ * max(String): 선택 항목 최대값(data 있을 경우 사용 불가)
+ * data(Array): 선택 항목 배열(min, max 있을 경우 사용 불가)
+ * suffix(String): 선택 항목 뒤 문구
  * placeholder(String): 값 없을 경우 표시 문구
  * value(String): 값
  * valid(Boolean): 유효성 여부
