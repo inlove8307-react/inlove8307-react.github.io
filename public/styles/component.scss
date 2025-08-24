@@ -647,6 +647,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.radio.scroll.expand:not(.after)::after {right: 3.2rem; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 75%);}
 /* <UxGroup> Radio Expand Expanded */
 .ux-group.radio.scroll.expand.expanded .ux-group-scroll {flex-wrap: wrap;}
+.ux-group.radio.scroll.expand.expanded::before,
+.ux-group.radio.scroll.expand.expanded::after {display: none;}
 /* <UxGroup> Radio z-index */
 .ux-group.radio.scroll::before,
 .ux-group.radio.scroll::after {z-index: 1;}
