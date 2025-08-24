@@ -158,6 +158,8 @@ const Picker = ({ ref, ...props }) => {
 	const getData = () => {
 		let result = [min];
 
+		if (isNaN(min) || isNaN(max)) return [];
+
 		do {
 			result.push(result[result.length - 1] + 1);
 		}

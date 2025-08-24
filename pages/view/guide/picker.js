@@ -52,13 +52,10 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:min :max</h5>
+									<h5>:default</h5>
 								</UxSubject>
 								<UxContent>
-									<UxPicker
-										min="2010"
-										max="2025"
-									/>
+									<UxPicker />
 								</UxContent>
 							</UxArticle>
 
@@ -79,13 +76,111 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:min :max</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										value="2025"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:suffix</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPicker
 										min="2010"
 										max="2025"
+										value="2025"
 										suffix="년"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										value="2025"
+										suffix="년"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										value="2025"
+										suffix="년"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										value="2025"
+										suffix="년"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										min="2010"
+										max="2025"
+										value="2025"
+										suffix="년"
+										disabled
 									/>
 								</UxContent>
 							</UxArticle>
@@ -105,6 +200,90 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
 							<UxDivider />
 
 							<UxArticle className="h5">
@@ -114,6 +293,80 @@ export default function Sample() {
 								<UxContent>
 									<UxPicker
 										role="time"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										value="12:34:56"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										value="12:34:56"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										value="12:34:56"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										value="12:34:56"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										value="12:34:56"
+										disabled
 									/>
 								</UxContent>
 							</UxArticle>
