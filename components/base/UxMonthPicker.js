@@ -9,10 +9,8 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
-import UxInput from '@/components/base/UxInput';
 import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
-import UxGroup from '@/components/base/UxGroup';
 import UxMonthCalendar from '@/components/base/UxMonthCalendar';
 
 /**
