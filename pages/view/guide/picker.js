@@ -205,24 +205,24 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:optional</h5>
+									<h5>:opts</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPicker
 										role="date"
-										optional={['year']}
+										opts={['year']}
 										min="2010"
 										max="2025"
 									/>
 									<UxPicker
 										role="date"
-										optional={['year', 'month']}
+										opts={['year', 'month']}
 										min="2010"
 										max="2025"
 									/>
 									<UxPicker
 										role="date"
-										optional={['year', 'month', 'date']}
+										opts={['year', 'month', 'date']}
 										min="2010"
 										max="2025"
 									/>
@@ -330,24 +330,24 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:optional</h5>
+									<h5>:opts</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPicker
 										role="time"
-										optional={['hour']}
+										opts={['hour']}
 									/>
 									<UxPicker
 										role="time"
-										optional={['hour', 'minute']}
+										opts={['hour', 'minute']}
 									/>
 									<UxPicker
 										role="time"
-										optional={['hour', 'minute', 'second']}
+										opts={['hour', 'minute', 'second']}
 									/>
 									<UxPicker
 										role="time"
-										optional={['half', 'hour', 'minute', 'second']}
+										opts={['half', 'hour', 'minute', 'second']}
 									/>
 								</UxContent>
 							</UxArticle>
