@@ -277,10 +277,6 @@ const Picker = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		min && max && setData(getData());
-	}, [min, max]);
-
-	useEffect(() => {
 		setData(getData());
 	}, [min, max]);
 
