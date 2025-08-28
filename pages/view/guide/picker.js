@@ -204,6 +204,34 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:optional</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="date"
+										optional={['year']}
+										min="2010"
+										max="2025"
+									/>
+									<UxPicker
+										role="date"
+										optional={['year', 'month']}
+										min="2010"
+										max="2025"
+									/>
+									<UxPicker
+										role="date"
+										optional={['year', 'month', 'date']}
+										min="2010"
+										max="2025"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:value</h5>
 								</UxSubject>
 								<UxContent>
@@ -301,6 +329,32 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:optional</h5>
+								</UxSubject>
+								<UxContent>
+									<UxPicker
+										role="time"
+										optional={['hour']}
+									/>
+									<UxPicker
+										role="time"
+										optional={['hour', 'minute']}
+									/>
+									<UxPicker
+										role="time"
+										optional={['hour', 'minute', 'second']}
+									/>
+									<UxPicker
+										role="time"
+										optional={['half', 'hour', 'minute', 'second']}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:value</h5>
 								</UxSubject>
 								<UxContent>
@@ -389,6 +443,106 @@ export default function Sample() {
 										/>
 										<UxPicker
 											role="time"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+										valid={true}
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+										/>
+										<UxPicker
+											role="time"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+										valid={false}
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+										/>
+										<UxPicker
+											role="time"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+										readonly
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+											value="2025.08.01"
+										/>
+										<UxPicker
+											role="time"
+											value="00.00.00"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+										disabled
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+											value="2025.08.01"
+										/>
+										<UxPicker
+											role="time"
+											value="00.00.00"
 										/>
 									</UxGroup>
 								</UxContent>

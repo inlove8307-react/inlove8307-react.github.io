@@ -183,7 +183,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role select :active</h5>
+									<h5>:active</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -198,7 +198,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role select :valid true</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -215,7 +215,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role select :valid false</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -232,7 +232,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role select :readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -249,7 +249,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role select :disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -280,7 +280,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role search :valid true</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -297,7 +297,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role search :valid false</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -314,7 +314,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role search :readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -331,7 +331,7 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role search :disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
@@ -365,19 +365,18 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role input :valid true</h5>
+									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
 										role="input"
 										className="right"
 										placeholder="입력해주세요"
+										value="10,000"
 										prefix="금액"
 										suffix="원"
 										valid={true}
-									>
-										<span className="text">10,000</span>
-									</UxButton>
+									/>
 								</UxContent>
 							</UxArticle>
 
@@ -385,19 +384,18 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role input :valid false</h5>
+									<h5>:valid false</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
 										role="input"
 										className="right"
 										placeholder="입력해주세요"
+										value="10,000"
 										prefix="금액"
 										suffix="원"
 										valid={false}
-									>
-										<span className="text">10,000</span>
-									</UxButton>
+									/>
 								</UxContent>
 							</UxArticle>
 
@@ -405,19 +403,18 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role input :readonly</h5>
+									<h5>:readonly</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
 										role="input"
 										className="right"
 										placeholder="입력해주세요"
+										value="10,000"
 										prefix="금액"
 										suffix="원"
 										readonly
-									>
-										<span className="text">10,000</span>
-									</UxButton>
+									/>
 								</UxContent>
 							</UxArticle>
 
@@ -425,19 +422,18 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:role input :disabled</h5>
+									<h5>:disabled</h5>
 								</UxSubject>
 								<UxContent>
 									<UxButton
 										role="input"
 										className="right"
 										placeholder="입력해주세요"
+										value="10,000"
 										prefix="금액"
 										suffix="원"
 										disabled
-									>
-										<span className="text">10,000</span>
-									</UxButton>
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

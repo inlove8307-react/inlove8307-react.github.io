@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { InView } from 'react-intersection-observer';
-import { getDate, endOfMonth } from 'date-fns';
+import { getDate, endOfMonth, add } from 'date-fns';
 import classnames from 'classnames';
 import useModal from "@/hook/useModal";
 /* LAYOUT */
@@ -25,56 +25,101 @@ const DateRole = ({ ref, ...props }) => {
 	const [year, setYear] = useState(0);
 	const [month, setMonth] = useState(0);
 	const [date, setDate] = useState(0);
-	const [last, setLast] = useState(0);
+	const [isYear, setIsYear] = useState(false);
+	const [isMonth, setIsMonth] = useState(false);
+	const [isDate, setIsDate] = useState(false);
+	const [data, setData] = useState([]);
+
+	const getData = () => {
+		let date = new Date(year, month - 1, 1);
+		let last = getDate(endOfMonth(date));
+		let result = [];
+
+		do {
+			result.push(getDate(date));
+			date = add(date, { days: 1 });
+		}
+		while (result[result.length - 1] < last);
+
+		return result;
+	};
 
 	const handleYear = (value) => {
 		setYear(value);
-		setLast(getDate(endOfMonth(new Date(value, month - 1, date))));
 	};
 
 	const handleMonth = (value) => {
 		setMonth(value);
-		setLast(getDate(endOfMonth(new Date(year, value - 1, date))));
 	};
 
 	const handleDate = (value) => {
 		setDate(value);
-		setLast(getDate(endOfMonth(new Date(year, month - 1, value))));
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange([
-			String(year).padStart(4, '0'),
-			String(month).padStart(2, '0'),
-			String(date).padStart(2, '0'),
-		].join('.'));
+		setData(getData());
+	}, [year, month]);
+
+	useEffect(() => {
+		let result = [];
+
+		if (props.optional) {
+			isYear && result.push(`${String(year).padStart(2, '0')}년`);
+			isMonth && result.push(`${String(month).padStart(2, '0')}월`);
+			isDate && result.push(`${String(date).padStart(2, '0')}일`);
+			props.onChange && props.onChange(result.join(' '));
+		}
+		else {
+			result.push(String(year).padStart(4, '0'));
+			result.push(String(month).padStart(2, '0'));
+			result.push(String(date).padStart(2, '0'));
+			props.onChange && props.onChange(result.join('.'));
+		}
 	}, [year, month, date]);
 
+	useEffect(() => {
+		(!props.optional || props.optional?.includes('year')) && setIsYear(true);
+		(!props.optional || props.optional?.includes('month')) && setIsMonth(true);
+		(!props.optional || props.optional?.includes('date')) && setIsDate(true);
+	}, [props.optional]);
+
+
 	return (
-		<UxGroup className="gap16 col3">
-			<Picker
-				{...props}
-				min={props.min}
-				max={props.max}
-				suffix="년"
-				onChange={handleYear}
-			/>
-			<Picker
-				{...props}
-				min={1}
-				max={12}
-				pad={2}
-				suffix="월"
-				onChange={handleMonth}
-			/>
-			<Picker
-				{...props}
-				min={1}
-				max={last}
-				pad={2}
-				suffix="일"
-				onChange={handleDate}
-			/>
+		<UxGroup className={classnames('gap16', {
+			col3: !props.optional,
+			[`col${props.optional?.length}`]: props.optional,
+		})}>
+			{
+				isYear &&
+				<Picker
+					{...props}
+					min={props.min}
+					max={props.max}
+					suffix="년"
+					onChange={handleYear}
+				/>
+			}
+			{
+				isMonth &&
+				<Picker
+					{...props}
+					min={1}
+					max={12}
+					pad={2}
+					suffix="월"
+					onChange={handleMonth}
+				/>
+			}
+			{
+				isDate &&
+				<Picker
+					{...props}
+					data={data}
+					pad={2}
+					suffix="일"
+					onChange={handleDate}
+				/>
+			}
 		</UxGroup>
 	);
 };
@@ -86,9 +131,18 @@ const DateRole = ({ ref, ...props }) => {
  */
 
 const TimeRole = ({ ref, ...props }) => {
+	const [half, setHalf] = useState('');
 	const [hour, setHour] = useState(0);
 	const [minute, setMinute] = useState(0);
 	const [second, setSecond] = useState(0);
+	const [isHalf, setIsHalf] = useState(false);
+	const [isHour, setIsHour] = useState(false);
+	const [isMinute, setIsMinute] = useState(false);
+	const [isSecond, setIsSecond] = useState(false);
+
+	const handleHalf = (value) => {
+		setHalf(value);
+	};
 
 	const handleHour = (value) => {
 		setHour(value);
@@ -103,39 +157,76 @@ const TimeRole = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange([
-			String(hour).padStart(2, '0'),
-			String(minute).padStart(2, '0'),
-			String(second).padStart(2, '0'),
-		].join(':'));
-	}, [hour, minute, second]);
+		let result = [];
+
+		if (props.optional) {
+			isHalf && result.push(half);
+			isHour && result.push(`${String(hour).padStart(2, '0')}시`);
+			isMinute && result.push(`${String(minute).padStart(2, '0')}분`);
+			isSecond && result.push(`${String(second).padStart(2, '0')}초`);
+			props.onChange && props.onChange(result.join(' '));
+		}
+		else {
+			result.push(String(hour).padStart(2, '0'));
+			result.push(String(minute).padStart(2, '0'));
+			result.push(String(second).padStart(2, '0'));
+			props.onChange && props.onChange(result.join(':'));
+		}
+	}, [half, hour, minute, second]);
+
+	useEffect(() => {
+		props.optional?.includes('half') && setIsHalf(true);
+		(!props.optional || props.optional?.includes('hour')) && setIsHour(true);
+		(!props.optional || props.optional?.includes('minute')) && setIsMinute(true);
+		(!props.optional || props.optional?.includes('second')) && setIsSecond(true);
+	}, [props.optional]);
 
 	return (
-		<UxGroup className="gap16 col3">
-			<Picker
-				{...props}
-				min={0}
-				max={23}
-				pad={2}
-				suffix="시"
-				onChange={handleHour}
-			/>
-			<Picker
-				{...props}
-				min={0}
-				max={59}
-				pad={2}
-				suffix="분"
-				onChange={handleMinute}
-			/>
-			<Picker
-				{...props}
-				min={0}
-				max={59}
-				pad={2}
-				suffix="초"
-				onChange={handleSecond}
-			/>
+		<UxGroup className={classnames('gap16', {
+			col3: !props.optional,
+			[`col${props.optional?.length}`]: props.optional,
+		})}>
+			{
+				isHalf &&
+				<Picker
+					{...props}
+					data={['AM', 'PM']}
+					onChange={handleHalf}
+				/>
+			}
+			{
+				isHour &&
+				<Picker
+					{...props}
+					min={0}
+					max={half ? 12: 23}
+					pad={2}
+					suffix="시"
+					onChange={handleHour}
+				/>
+			}
+			{
+				isMinute &&
+				<Picker
+					{...props}
+					min={0}
+					max={59}
+					pad={2}
+					suffix="분"
+					onChange={handleMinute}
+				/>
+			}
+			{
+				isSecond &&
+				<Picker
+					{...props}
+					min={0}
+					max={59}
+					pad={2}
+					suffix="초"
+					onChange={handleSecond}
+				/>
+			}
 		</UxGroup>
 	);
 };
@@ -332,7 +423,6 @@ const UxPicker = ({ ref, ...props }) => {
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
 	const [icon, setIcon] = useState('');
-	const [placeholder, setPlaceholder] = useState('');
 	const [active, setActive] = useState(false);
 
 	const handleClick = async () => {
@@ -359,56 +449,34 @@ const UxPicker = ({ ref, ...props }) => {
 	}, [props.value]);
 
 	useEffect(() => {
+		if (!props.role) {
+			active ? setIcon('i001') : setIcon('i002');
+		}
+	}, [active]);
+
+	useEffect(() => {
 		switch (props.role) {
 			case 'date':
-				setPlaceholder('YYYY.MM.DD');
 				setIcon('i160');
 				break;
 			case 'time':
-				setPlaceholder('HH:MM:SS');
 				setIcon('i219');
-				break;
-			default:
-				setPlaceholder('선택해주세요');
 				break;
 		}
 	}, [props.role]);
 
 	return (
-		<>
-			{
-				props.role &&
-				<UxInput
-					className={props.className}
-					placeholder={props.placeholder || placeholder}
-					value={value}
-					valid={props.valid}
-					readonly={props.readonly}
-					disabled={props.disabled}
-				>
-					<UxButton
-						disabled={props.readonly || props.disabled}
-						onClick={handleClick}
-					>
-						{icon && <UxIcon className={icon} />}
-					</UxButton>
-				</UxInput>
-			}
-			{
-				!props.role &&
-				<UxButton
-					role="select"
-					placeholder={props.placeholder || placeholder}
-					active={active}
-					valid={props.valid}
-					readonly={props.readonly}
-					disabled={props.disabled}
-					onClick={handleClick}
-				>
-					{value && props.suffix ? `${value}${props.suffix}` : value}
-				</UxButton>
-			}
-		</>
+		<UxButton
+			role="input"
+			placeholder={props.placeholder || '선택해주세요'}
+			value={value && props.suffix ? `${value}${props.suffix}` : value}
+			valid={props.valid}
+			readonly={props.readonly}
+			disabled={props.disabled}
+			onClick={handleClick}
+		>
+			<UxIcon className={classnames('right', icon)} />
+		</UxButton>
 	)
 };
 

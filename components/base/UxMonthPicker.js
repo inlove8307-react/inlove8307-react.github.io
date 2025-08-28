@@ -107,31 +107,17 @@ const UxMonthPicker = ({ ref, ...props }) => {
 	}, [props.value]);
 
 	return (
-		<UxGroup
+		<UxButton
 			role="input"
-			className={classnames({
-				valid: props.valid === true,
-				invalid: props.valid === false,
-				readonly: props.readonly,
-				disabled: props.disabled
-			})}
+			placeholder={props.placeholder || '선택해주세요'}
+			value={value && `${value}월`}
+			valid={props.valid}
+			readonly={props.readonly}
+			disabled={props.disabled}
+			onClick={handleClick}
 		>
-			<UxInput
-				className="last"
-				placeholder={props.placeholder || '선택'}
-				value={value && `${value}월`}
-				valid={props.valid}
-				readonly={props.readonly}
-				disabled={props.disabled}
-			>
-				<UxButton
-					disabled={props.readonly || props.disabled}
-					onClick={handleClick}
-				>
-					<UxIcon className="i160" />
-				</UxButton>
-			</UxInput>
-		</UxGroup>
+			<UxIcon className={classnames('right', 'i160')} />
+		</UxButton>
 	)
 };
 

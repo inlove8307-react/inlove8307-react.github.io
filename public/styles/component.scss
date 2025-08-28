@@ -323,12 +323,18 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-button.input.readonly {color: var(--dark3);}
 .ux-button.input.readonly .ux-button-prefix,
 .ux-button.input.readonly .ux-button-suffix {color: var(--dark3);}
+.ux-button.select.readonly .ux-icon,
+.ux-button.search.readonly .ux-icon,
+.ux-button.input.readonly .ux-icon {opacity: .5;}
 /* <UxButton> Role Disabled */
 .ux-button.select.disabled,
 .ux-button.search.disabled,
 .ux-button.input.disabled {background-color: var(--light1); color: var(--dark3);}
 .ux-button.input.disabled .ux-button-prefix,
 .ux-button.input.disabled .ux-button-suffix {color: var(--dark3);}
+.ux-button.select.disabled .ux-icon,
+.ux-button.search.disabled .ux-icon,
+.ux-button.input.disabled .ux-icon {opacity: .5;}
 /* <UxButton> Role Progress */
 .ux-button.progress {display: flex; height: var(--height-form); border-radius: var(--radius-form);}
 .ux-button.progress .ux-button-track,
@@ -539,6 +545,8 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxGroup> Select */
 .ux-group.input .ux-select {align-items: center; gap: .8rem;}
 .ux-group.input .ux-select .ux-button.select {padding: initial; border-radius: initial; box-shadow: initial; background-color: transparent;}
+/* <UxGroup> Button */
+.ux-group.input .ux-button.input {padding: initial; border-radius: initial; box-shadow: initial; background-color: transparent;}
 /* <UxGroup> Dash */
 .ux-group.input .ux-input.dash::before,
 .ux-group.input .ux-password.dash::before,

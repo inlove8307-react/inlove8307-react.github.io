@@ -107,7 +107,7 @@ const Search = ({ ref, ...props }) => {
 const Input = ({ ref, ...props }) => {
 	const baseClassName = props.baseClassName;
 	const caseClassName = classnames(props.caseClassName, {
-		placeholder: !props.children,
+		placeholder: !props.value,
 		valid: props.valid === true,
 		invalid: props.valid === false,
 		readonly: props.readonly,
@@ -132,13 +132,14 @@ const Input = ({ ref, ...props }) => {
 					{props.prefix}
 				</span>
 			}
-			{props.children ? props.children : props.placeholder}
+			{props.value || props.placeholder}
 			{
 				props.suffix &&
 				<span className={`${baseClassName}-suffix`}>
 					{props.suffix}
 				</span>
 			}
+			{props.children}
 		</button>
 	);
 };
