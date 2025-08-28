@@ -62,7 +62,7 @@ const DateRole = ({ ref, ...props }) => {
 	useEffect(() => {
 		let result = [];
 
-		if (props.optional) {
+		if (props.opts) {
 			isYear && result.push(`${String(year).padStart(2, '0')}년`);
 			isMonth && result.push(`${String(month).padStart(2, '0')}월`);
 			isDate && result.push(`${String(date).padStart(2, '0')}일`);
@@ -77,16 +77,16 @@ const DateRole = ({ ref, ...props }) => {
 	}, [year, month, date]);
 
 	useEffect(() => {
-		(!props.optional || props.optional?.includes('year')) && setIsYear(true);
-		(!props.optional || props.optional?.includes('month')) && setIsMonth(true);
-		(!props.optional || props.optional?.includes('date')) && setIsDate(true);
-	}, [props.optional]);
+		(!props.opts || props.opts?.includes('year')) && setIsYear(true);
+		(!props.opts || props.opts?.includes('month')) && setIsMonth(true);
+		(!props.opts || props.opts?.includes('date')) && setIsDate(true);
+	}, [props.opts]);
 
 
 	return (
 		<UxGroup className={classnames('gap16', {
-			col3: !props.optional,
-			[`col${props.optional?.length}`]: props.optional,
+			col3: !props.opts,
+			[`col${props.opts?.length}`]: props.opts,
 		})}>
 			{
 				isYear &&
@@ -158,7 +158,7 @@ const TimeRole = ({ ref, ...props }) => {
 	useEffect(() => {
 		let result = [];
 
-		if (props.optional) {
+		if (props.opts) {
 			isHalf && result.push(half);
 			isHour && result.push(`${String(hour).padStart(2, '0')}시`);
 			isMinute && result.push(`${String(minute).padStart(2, '0')}분`);
@@ -174,16 +174,16 @@ const TimeRole = ({ ref, ...props }) => {
 	}, [half, hour, minute, second]);
 
 	useEffect(() => {
-		props.optional?.includes('half') && setIsHalf(true);
-		(!props.optional || props.optional?.includes('hour')) && setIsHour(true);
-		(!props.optional || props.optional?.includes('minute')) && setIsMinute(true);
-		(!props.optional || props.optional?.includes('second')) && setIsSecond(true);
-	}, [props.optional]);
+		props.opts?.includes('half') && setIsHalf(true);
+		(!props.opts || props.opts?.includes('hour')) && setIsHour(true);
+		(!props.opts || props.opts?.includes('minute')) && setIsMinute(true);
+		(!props.opts || props.opts?.includes('second')) && setIsSecond(true);
+	}, [props.opts]);
 
 	return (
 		<UxGroup className={classnames('gap16', {
-			col3: !props.optional,
-			[`col${props.optional?.length}`]: props.optional,
+			col3: !props.opts,
+			[`col${props.opts?.length}`]: props.opts,
 		})}>
 			{
 				isHalf &&

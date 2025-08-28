@@ -32,6 +32,7 @@ export default function Sample() {
 										<ul>
 											<li>[props]</li>
 											<li>role(String): 유형('date', 'time')</li>
+											<li>opts(Array): date일 경우(['year', 'month', 'date']), time일 경우(['half', 'hour', 'minute', 'second'])</li>
 											<li>min(String): 선택 항목 최소값(data 있을 경우 사용 불가)</li>
 											<li>max(String): 선택 항목 최대값(data 있을 경우 사용 불가)</li>
 											<li>data(Array): 선택 항목 배열(min, max 있을 경우 사용 불가)</li>
