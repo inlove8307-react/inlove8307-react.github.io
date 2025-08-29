@@ -20,7 +20,7 @@ import UxGroup from "@/components/base/UxGroup";
  * [event]
  */
 
-const DateRole = ({ ref, ...props }) => {
+const DatePicker = ({ ref, ...props }) => {
 	const [year, setYear] = useState(0);
 	const [month, setMonth] = useState(0);
 	const [date, setDate] = useState(0);
@@ -129,7 +129,7 @@ const DateRole = ({ ref, ...props }) => {
  * [event]
  */
 
-const TimeRole = ({ ref, ...props }) => {
+const TimePicker = ({ ref, ...props }) => {
 	const [half, setHalf] = useState('');
 	const [hour, setHour] = useState(0);
 	const [minute, setMinute] = useState(0);
@@ -353,9 +353,9 @@ const Popup = ({ ref, ...props }) => {
 
 		switch (props.role) {
 			case 'date':
-				return <DateRole {...props} />;
+				return <DatePicker {...props} />;
 			case 'time':
-				return <TimeRole {...props} />;
+				return <TimePicker {...props} />;
 			default:
 				return <Picker {...props} />;
 		};
@@ -463,6 +463,7 @@ const UxPicker = ({ ref, ...props }) => {
 	return (
 		<UxButton
 			role="input"
+			className={props.className}
 			placeholder={props.placeholder || '선택해주세요'}
 			value={value && props.suffix ? `${value}${props.suffix}` : value}
 			valid={props.valid}

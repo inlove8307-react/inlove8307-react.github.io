@@ -10,9 +10,12 @@ import UxIcon from "@/components/base/UxIcon";
 /**
  * <YearCalendar>
  * [props]
- *
+ * format(String): 날짜 형식
+ * date(String): 날짜
+ * year(Number): 연도
+ * scrollIntoView(Boolean): 자동 스크롤 여부
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const YearCalendar = ({ ref, ...props }) => {
@@ -67,7 +70,7 @@ const YearCalendar = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		if (typeof props.date === 'string') {
-			setDate(props.date);
+			props.date && setDate(props.date);
 		}
 	}, [props.date]);
 
@@ -109,9 +112,10 @@ const YearCalendar = ({ ref, ...props }) => {
 /**
  * <MonthCalendar>
  * [props]
- *
+ * format(String): 날짜 형식
+ * date(String): 날짜
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const MonthCalendar = ({ ref, ...props }) => {
@@ -141,7 +145,7 @@ const MonthCalendar = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		if (typeof props.date === 'string') {
-			setDate(props.date);
+			props.date && setDate(props.date);
 		}
 	}, [props.date]);
 
@@ -177,9 +181,12 @@ const MonthCalendar = ({ ref, ...props }) => {
 /**
  * <DateCalendar>
  * [props]
- *
+ * format(String): 날짜 형식
+ * date(String): 날짜
+ * disables(Array): 비활성화 날짜 배열
+ * icons(Array): 아이콘 추가 배열
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
  */
 
 const DateCalendar = ({ ref, ...props }) => {
@@ -248,7 +255,7 @@ const DateCalendar = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		if (typeof props.date === 'string') {
-			setDate(props.date);
+			props.date && setDate(props.date);
 		}
 	}, [props.date]);
 
@@ -322,9 +329,17 @@ const DateCalendar = ({ ref, ...props }) => {
 /**
  * <Calendar>
  * [props]
- *
+ * format(String): 날짜 형식
+ * date(String): 날짜
+ * year(Number): 연도
+ * scrollIntoView(Boolean): 자동 스크롤 여부
+ * disables(Array): 비활성화 날짜 배열
+ * icons(Array): 아이콘 추가 배열
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onDateChange(Func): 날짜 변경 이벤트 콜백
+ * onMonthChange(Func): 월 변경 이벤트 콜백
+ * onYearChange(Func): 연도 변경 이벤트 콜백
  */
 
 const Calendar = ({ ref, ...props }) => {
@@ -373,6 +388,12 @@ const Calendar = ({ ref, ...props }) => {
 		setIsMonth(false);
 		props.onChange && props.onChange(format(rawDate(date), dateFormat));
 	}, [date]);
+
+	useEffect(() => {
+		if (typeof props.date === 'string') {
+			props.date && setDate(props.date);
+		}
+	}, [props.date]);
 
 	return (
 		<div
@@ -444,11 +465,21 @@ const Calendar = ({ ref, ...props }) => {
 };
 
 /**
- * <Calendar>
+ * <UxCalendar>
  * [props]
- *
+ * className(String): 추가 클래스
+ * role(String): 유형 ('date', 'month', 'year')
+ * format(String): 날짜 형식
+ * date(String): 날짜
+ * year(Number): 연도
+ * scrollIntoView(Boolean): 자동 스크롤 여부
+ * disables(Array): 비활성화 날짜 배열
+ * icons(Array): 아이콘 추가 배열
  * [event]
- *
+ * onChange(Func): 값 변경 이벤트 콜백
+ * onDateChange(Func): 날짜 변경 이벤트 콜백
+ * onMonthChange(Func): 월 변경 이벤트 콜백
+ * onYearChange(Func): 연도 변경 이벤트 콜백
  */
 
 const UxCalendar = ({ ref, ...props }) => {

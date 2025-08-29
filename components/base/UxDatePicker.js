@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { format, set, getMonth, getYear } from "date-fns";
+import { format, set, getDate, getMonth, getYear } from "date-fns";
 import useModal from "@/hook/useModal";
 import classnames from 'classnames';
 /* LAYOUT */
@@ -22,8 +22,8 @@ import UxCalendar from '@/components/base/UxCalendar';
 
 const Popup = ({ ref, ...props }) => {
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
-	const [date, setDate] = useState();
-	const [value, setValue] = useState(props.value);
+	const [date, setDate] = useState('');
+	const [value, setValue] = useState('');
 
 	const handleClose = () => {
 		props.onClose({ value });
@@ -31,6 +31,9 @@ const Popup = ({ ref, ...props }) => {
 
 	const handleChange = (value) => {
 		switch (props.role) {
+			case 'date':
+				setValue(value);
+				break;
 			case 'month':
 				setValue(value + 1);
 				break;
@@ -43,28 +46,27 @@ const Popup = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		switch (props.role) {
-			case 'month':
-				setDate(format(set(new Date(), { month: value - 1 }), dateFormat));
-				break;
-			case 'year':
-				setDate(format(set(new Date(), { year: value }), dateFormat));
-				break;
-			default:
-				setDate(value);
-		}
-	}, [value]);
+		const rawDate = new Date();
+		const date = props.value || getDate(rawDate);
+		const month = props.value || getMonth(rawDate) + 1;
+		const year = props.value || getYear(rawDate);
 
-	useEffect(() => {
 		switch (props.role) {
+			case 'date':
+				setValue(date);
+				setDate(format(set(rawDate, { date: date }), dateFormat));
+				break;
 			case 'month':
-				setValue(value || getMonth(new Date()) + 1);
+				setValue(month);
+				setDate(format(set(rawDate, { month: month - 1 }), dateFormat));
 				break;
 			case 'year':
-				setValue(value || getYear(new Date()));
+				setValue(year);
+				setDate(format(set(rawDate, { year: year }), dateFormat));
 				break;
 			default:
-				setValue(value || format(new Date(), dateFormat));
+				setValue(props.value || format(rawDate, dateFormat));
+				setDate(props.value || format(rawDate, dateFormat));
 		}
 	}, []);
 
@@ -84,7 +86,7 @@ const Popup = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxContent>
 						<UxCalendar
-							role={props.role}
+							{...props}
 							date={date}
 							scrollIntoView
 							onChange={handleChange}
@@ -111,15 +113,24 @@ const Popup = ({ ref, ...props }) => {
 /**
  * <UxDatePicker>
  * [props]
- * role(String): 유형 ('month', 'year')
+ * className(String): 추가 클래스
+ * role(String): 유형 ('date', 'month', 'year')
  * placeholder(String): 값 없을 경우 표시 문구
+ * format(String): 날짜 형식
  * value(String): 값
+ * year(Number): 연도
+ * scrollIntoView(Boolean): 자동 스크롤 여부
+ * disables(Array): 비활성화 날짜 배열
+ * icons(Object): 아이콘 추가 배열
  * valid(Boolean): 유효성 여부
  * readonly(Boolean): 읽기전용 여부
  * disabled(Boolean): 비활성화 여부
  * [event]
  * onClick(Func): 클릭 이벤트 콜백
  * onChange(Func): 값 변경 이벤트 콜백
+ * onDateChange(Func): 날짜 변경 이벤트 콜백
+ * onMonthChange(Func): 월 변경 이벤트 콜백
+ * onYearChange(Func): 연도 변경 이벤트 콜백
  */
 
 const UxDatePicker = ({ ref, ...props }) => {
@@ -151,12 +162,16 @@ const UxDatePicker = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		switch (props.role) {
+			case 'date':
+				setPlaceholder(placeholder || '선택해주세요');
+				setSuffix('일');
+				break;
 			case 'month':
-				setPlaceholder(placeholder || '선택하세요');
+				setPlaceholder(placeholder || '선택해주세요');
 				setSuffix('월');
 				break;
 			case 'year':
-				setPlaceholder(placeholder || '선택하세요');
+				setPlaceholder(placeholder || '선택해주세요');
 				setSuffix('년');
 				break;
 			default:
@@ -188,6 +203,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 				props.role &&
 				<UxButton
 					role="input"
+					className={props.className}
 					placeholder={placeholder}
 					value={value && `${value}${suffix}`}
 					valid={props.valid}

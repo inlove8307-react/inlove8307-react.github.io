@@ -31,6 +31,7 @@ export default function Sample() {
 									<div data-role="details">
 										<ul>
 											<li>[props]</li>
+											<li>className(String): 추가 클래스</li>
 											<li>role(String): 유형('date', 'time')</li>
 											<li>opts(Array): date일 경우(['year', 'month', 'date']), time일 경우(['half', 'hour', 'minute', 'second'])</li>
 											<li>min(String): 선택 항목 최소값(data 있을 경우 사용 불가)</li>
@@ -53,7 +54,7 @@ export default function Sample() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPicker />
