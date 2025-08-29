@@ -31,6 +31,7 @@ export default function Sample() {
 									<div data-role="details">
 										<ul>
 											<li>[props]</li>
+											<li>role(String): 유형 ('month', 'year')</li>
 											<li>placeholder(String): 값 없을 경우 표시 문구</li>
 											<li>value(String): 값</li>
 											<li>valid(Boolean): 유효성 여부</li>
@@ -116,6 +117,175 @@ export default function Sample() {
 								<UxContent>
 									<UxDatePicker
 										value="2025.07.01"
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role month</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker role="month" />
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="month"
+										value="8"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="month"
+										value="8"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="month"
+										value="8"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="month"
+										value="8"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="month"
+										value="8"
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role year</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker role="year" />
+								</UxContent>
+							</UxArticle>
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="year"
+										value="2025"
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="year"
+										value="2025"
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="year"
+										value="2025"
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="year"
+										value="2025"
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxDatePicker
+										role="year"
+										value="2025"
 										disabled
 									/>
 								</UxContent>
@@ -219,30 +389,6 @@ export default function Sample() {
 											value="2025.08.31"
 										/>
 									</UxGroup>
-									<UxGroup
-										role="input"
-										className="col2"
-									>
-										<UxDatePicker
-											value="2025.08.01"
-											readonly
-										/>
-										<UxDatePicker
-											className="dash"
-											value="2025.08.31"
-										/>
-									</UxGroup>
-									<UxGroup
-										role="input"
-										className="col2"
-									>
-										<UxDatePicker value="2025.08.01" />
-										<UxDatePicker
-											className="dash"
-											value="2025.08.31"
-											readonly
-										/>
-									</UxGroup>
 								</UxContent>
 							</UxArticle>
 
@@ -262,30 +408,6 @@ export default function Sample() {
 										<UxDatePicker
 											className="dash"
 											value="2025.08.31"
-										/>
-									</UxGroup>
-									<UxGroup
-										role="input"
-										className="col2"
-									>
-										<UxDatePicker
-											value="2025.08.01"
-											disabled
-										/>
-										<UxDatePicker
-											className="dash"
-											value="2025.08.31"
-										/>
-									</UxGroup>
-									<UxGroup
-										role="input"
-										className="col2"
-									>
-										<UxDatePicker value="2025.08.01" />
-										<UxDatePicker
-											className="dash"
-											value="2025.08.31"
-											disabled
 										/>
 									</UxGroup>
 								</UxContent>

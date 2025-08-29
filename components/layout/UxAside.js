@@ -30,8 +30,6 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Select', url: '/view/guide/select' },
 		{ name: 'Picker', url: '/view/guide/picker' },
 		{ name: 'DatePicker', url: '/view/guide/datepicker' },
-		{ name: 'MonthPicker', url: '/view/guide/monthpicker' },
-		{ name: 'YearPicker', url: '/view/guide/yearpicker' },
 		{ name: 'Checkbox', url: '/view/guide/checkbox' },
 		{ name: 'Switch', url: '/view/guide/switch' },
 		{ name: 'Radio', url: '/view/guide/radio' },
@@ -44,9 +42,6 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Slider', url: '/view/guide/slider' },
 		{ name: 'Progress', url: '/view/guide/progress' },
 		{ name: 'Calendar', url: '/view/guide/calendar' },
-		{ name: 'DateCalendar', url: '/view/guide/datecalendar' },
-		{ name: 'MonthCalendar', url: '/view/guide/monthcalendar' },
-		{ name: 'YearCalendar', url: '/view/guide/yearcalendar' },
 		{ name: 'SortList', url: '/view/guide/sortlist' },
 		{ name: 'Icons', url: '/view/guide/icons' },
 	];
