@@ -20,13 +20,8 @@ const UxAside = ({ ref, ...props }) => {
 	const data = [
 		{ name: 'Button', url: '/view/guide/button' },
 		{ name: 'Input', url: '/view/guide/input' },
-		{ name: 'Password', url: '/view/guide/password' },
 		{ name: 'Textarea', url: '/view/guide/textarea' },
 		{ name: 'File', url: '/view/guide/file' },
-		{ name: 'Phone', url: '/view/guide/phone' },
-		{ name: 'Rrn', url: '/view/guide/rrn' },
-		{ name: 'Lrn', url: '/view/guide/lrn' },
-		{ name: 'Brn', url: '/view/guide/brn' },
 		{ name: 'Select', url: '/view/guide/select' },
 		{ name: 'Picker', url: '/view/guide/picker' },
 		{ name: 'DatePicker', url: '/view/guide/datepicker' },

@@ -11,8 +11,6 @@ import UxInput from "@/components/base/UxInput";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
-import UxSelect from "@/components/base/UxSelect";
-import UxOption from "@/components/base/UxOption";
 
 export default function Sample() {
 	return (
@@ -218,41 +216,598 @@ export default function Sample() {
 								</UxContent>
 							</UxArticle>
 
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role password</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										placeholder="입력해주세요"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
 							<UxDivider className="linear" />
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>group</h5>
+									<h5>:value</h5>
 								</UxSubject>
 								<UxContent>
-									<UxGroup
-										role="input"
-									>
-										<UxSelect
-											style={{ width: '6rem' }}
-											placeholder="국번"
-										>
-											<UxOption value="0">010</UxOption>
-											<UxOption value="1">011</UxOption>
-										</UxSelect>
-										<UxInput
-											className="last"
-											placeholder="입력해주세요"
-										/>
-									</UxGroup>
-									<UxGroup
-										role="input"
-										className="col2"
-									>
-										<UxInput
-											placeholder="이메일"
-											suffix="@"
-										/>
-										<UxSelect placeholder="도메인">
-											<UxOption value="0">gmail.com</UxOption>
-											<UxOption value="1">naver.com</UxOption>
-										</UxSelect>
-									</UxGroup>
+									<UxInput
+										role="password"
+										placeholder="입력해주세요"
+										value="1234567"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:maxLength</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										placeholder="입력해주세요"
+										maxLength={7}
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										maxLength={7}
+										value="1234567"
+										clear
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										maxLength={7}
+										value="1234567"
+										clear
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										maxLength={7}
+										value="1234567"
+										clear
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="password"
+										maxLength={7}
+										value="1234567"
+										clear
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role phone</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										value1="010"
+										value2="1234"
+										value3="5678"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										value1="010"
+										value2="1234"
+										value3="5678"
+										submit="인증"
+										clear
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										value1="010"
+										value2="1234"
+										value3="5678"
+										submit="인증"
+										clear
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										value1="010"
+										value2="1234"
+										value3="5678"
+										submit="인증"
+										clear
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="phone"
+										placeholder="입력해주세요"
+										value1="010"
+										value2="1234"
+										value3="5678"
+										submit="인증"
+										clear
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role resident</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="9876543"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:gender</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="1"
+										value3="876543"
+										gender
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="9876543"
+										submit="인증"
+										clear
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="9876543"
+										submit="인증"
+										clear
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="9876543"
+										submit="인증"
+										clear
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="resident"
+										placeholder="입력해주세요"
+										value1="987654"
+										value2="9876543"
+										submit="인증"
+										clear
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role license</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="license"
+										placeholder="입력해주세요"
+										value1="12"
+										value2="34"
+										value3="567890"
+										value4="89"
+										submit="인증"
+										clear
+										disabled
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:role business</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										value1="123"
+										value2="45"
+										value3="12345"
+										submit="인증"
+										clear
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid true</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										value1="123"
+										value2="45"
+										value3="12345"
+										submit="인증"
+										clear
+										valid={true}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:valid false</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										value1="123"
+										value2="45"
+										value3="12345"
+										submit="인증"
+										clear
+										valid={false}
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:readonly</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										value1="123"
+										value2="45"
+										value3="12345"
+										submit="인증"
+										clear
+										readonly
+									/>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>:disabled</h5>
+								</UxSubject>
+								<UxContent>
+									<UxInput
+										role="business"
+										placeholder="입력해주세요"
+										value1="123"
+										value2="45"
+										value3="12345"
+										submit="인증"
+										clear
+										disabled
+									/>
 								</UxContent>
 							</UxArticle>
 						</UxContent>

@@ -167,6 +167,44 @@ export default function Sample() {
 									</UxSelect>
 								</UxContent>
 							</UxArticle>
+
+							<UxDivider />
+
+							<UxArticle className="h5">
+								<UxSubject>
+									<h5>group</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+									>
+										<UxSelect
+											style={{ width: '6rem' }}
+											placeholder="국번"
+										>
+											<UxOption value="0">010</UxOption>
+											<UxOption value="1">011</UxOption>
+										</UxSelect>
+										<UxInput
+											className="last"
+											placeholder="입력해주세요"
+										/>
+									</UxGroup>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxInput
+											placeholder="이메일"
+											suffix="@"
+										/>
+										<UxSelect placeholder="도메인">
+											<UxOption value="0">gmail.com</UxOption>
+											<UxOption value="1">naver.com</UxOption>
+										</UxSelect>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
 						</UxContent>
 					</UxArticle>
 				</UxContent>
