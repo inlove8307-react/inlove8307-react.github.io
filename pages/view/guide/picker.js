@@ -454,6 +454,31 @@ export default function Sample() {
 
 							<UxArticle className="h5">
 								<UxSubject>
+									<h5>:value</h5>
+								</UxSubject>
+								<UxContent>
+									<UxGroup
+										role="input"
+										className="col2"
+									>
+										<UxPicker
+											role="date"
+											min="2010"
+											max="2025"
+											value="2025.08.01"
+										/>
+										<UxPicker
+											role="time"
+											value="00.00.00"
+										/>
+									</UxGroup>
+								</UxContent>
+							</UxArticle>
+
+							<UxDivider className="linear" />
+
+							<UxArticle className="h5">
+								<UxSubject>
 									<h5>:valid true</h5>
 								</UxSubject>
 								<UxContent>
@@ -466,9 +491,11 @@ export default function Sample() {
 											role="date"
 											min="2010"
 											max="2025"
+											value="2025.08.01"
 										/>
 										<UxPicker
 											role="time"
+											value="00.00.00"
 										/>
 									</UxGroup>
 								</UxContent>
@@ -490,9 +517,11 @@ export default function Sample() {
 											role="date"
 											min="2010"
 											max="2025"
+											value="2025.08.01"
 										/>
 										<UxPicker
 											role="time"
+											value="00.00.00"
 										/>
 									</UxGroup>
 								</UxContent>

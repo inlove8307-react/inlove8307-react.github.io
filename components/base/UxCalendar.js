@@ -23,7 +23,7 @@ const YearCalendar = ({ ref, ...props }) => {
 	const [data, setData] = useState([]);
 	const [dateFormat] = useState(props.format || 'yyyy.MM.dd');
 	const [date, setDate] = useState(props.date || format(new Date(), dateFormat));
-	const [year] = useState(getYear(rawDate(date)));
+	const [year, setYear] = useState(getYear(rawDate(date)));
 	const [row, col] = [5, 3];
 	const focusRef = useRef();
 
@@ -49,24 +49,22 @@ const YearCalendar = ({ ref, ...props }) => {
 			focusRef.current.scrollIntoView({
 				block: "center",
 				inline: "nearest",
-				behavior: "smooth"
+				// behavior: "smooth"
 			});
 		}
 	};
-
-	useEffect(() => {
-		setData(getData(year));
-	}, [year]);
 
 	useEffect(() => {
 		props.scrollIntoView && setScroll();
 	}, [data]);
 
 	useEffect(() => {
-		if (typeof props.year === 'number') {
-			setData(getData(props.year));
-		}
-	}, [props.year]);
+		setData(getData(year));
+	}, [year]);
+
+	useEffect(() => {
+		setYear(getYear(rawDate(date)));
+	}, [date]);
 
 	useEffect(() => {
 		if (typeof props.date === 'string') {

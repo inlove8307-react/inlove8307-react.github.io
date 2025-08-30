@@ -867,7 +867,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-calendar-header .ux-calendar-prev,
 .ux-calendar-header .ux-calendar-next {display: flex; align-items: center; gap: .8rem; padding: 0;}
 /* <UxCalendar> Content */
-.ux-calendar-content {position: relative;}
+.ux-calendar-content {position: relative; min-height: 28rem;}
 /* <UxCalendar> DateCalendar */
 .ux-calendar-date {display: grid; grid-template-columns: repeat(7, 1fr);}
 .ux-calendar-date > :nth-child(7n),
