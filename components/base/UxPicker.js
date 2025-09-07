@@ -21,9 +21,9 @@ import UxGroup from "@/components/base/UxGroup";
  */
 
 const DatePicker = ({ ref, ...props }) => {
-	const [year, setYear] = useState(0);
-	const [month, setMonth] = useState(0);
-	const [date, setDate] = useState(0);
+	const [year, setYear] = useState(isNaN(props.year) ? 0 : props.year);
+	const [month, setMonth] = useState(isNaN(props.month) ? 0 : props.month);
+	const [date, setDate] = useState(isNaN(props.date) ? 0 : props.date);
 	const [isYear, setIsYear] = useState(false);
 	const [isMonth, setIsMonth] = useState(false);
 	const [isDate, setIsDate] = useState(false);
@@ -82,7 +82,6 @@ const DatePicker = ({ ref, ...props }) => {
 		(!props.opts || props.opts?.includes('date')) && setIsDate(true);
 	}, [props.opts]);
 
-
 	return (
 		<UxGroup className={classnames('gap16', {
 			col3: !props.opts,
@@ -94,6 +93,7 @@ const DatePicker = ({ ref, ...props }) => {
 					{...props}
 					min={props.min}
 					max={props.max}
+					value={year}
 					suffix="년"
 					onChange={handleYear}
 				/>
@@ -104,6 +104,7 @@ const DatePicker = ({ ref, ...props }) => {
 					{...props}
 					min={1}
 					max={12}
+					value={month}
 					pad={2}
 					suffix="월"
 					onChange={handleMonth}
@@ -114,6 +115,7 @@ const DatePicker = ({ ref, ...props }) => {
 				<Picker
 					{...props}
 					data={data}
+					value={date}
 					pad={2}
 					suffix="일"
 					onChange={handleDate}
@@ -130,10 +132,10 @@ const DatePicker = ({ ref, ...props }) => {
  */
 
 const TimePicker = ({ ref, ...props }) => {
-	const [half, setHalf] = useState('');
-	const [hour, setHour] = useState(0);
-	const [minute, setMinute] = useState(0);
-	const [second, setSecond] = useState(0);
+	const [half, setHalf] = useState(props.half || '');
+	const [hour, setHour] = useState(isNaN(props.hour) ? 0 : props.hour);
+	const [minute, setMinute] = useState(isNaN(props.minute) ? 0 : props.minute);
+	const [second, setSecond] = useState(isNaN(props.second) ? 0 : props.second);
 	const [isHalf, setIsHalf] = useState(false);
 	const [isHour, setIsHour] = useState(false);
 	const [isMinute, setIsMinute] = useState(false);
@@ -190,6 +192,7 @@ const TimePicker = ({ ref, ...props }) => {
 				<Picker
 					{...props}
 					data={['AM', 'PM']}
+					value={half}
 					onChange={handleHalf}
 				/>
 			}
@@ -199,6 +202,7 @@ const TimePicker = ({ ref, ...props }) => {
 					{...props}
 					min={0}
 					max={half ? 12: 23}
+					value={hour}
 					pad={2}
 					suffix="시"
 					onChange={handleHour}
@@ -210,6 +214,7 @@ const TimePicker = ({ ref, ...props }) => {
 					{...props}
 					min={0}
 					max={59}
+					value={minute}
 					pad={2}
 					suffix="분"
 					onChange={handleMinute}
@@ -221,6 +226,7 @@ const TimePicker = ({ ref, ...props }) => {
 					{...props}
 					min={0}
 					max={59}
+					value={second}
 					pad={2}
 					suffix="초"
 					onChange={handleSecond}
@@ -242,7 +248,8 @@ const Picker = ({ ref, ...props }) => {
 	const [min, setMin] = useState(Number(props.min));
 	const [max, setMax] = useState(Number(props.max));
 	const [data, setData] = useState([]);
-	const [value, setValue] = useState(0);
+	const [value, setValue] = useState(props.value);
+	const [init, setInit] = useState(false);
 	const listRef = useRef();
 
 	const getData = () => {
@@ -276,6 +283,20 @@ const Picker = ({ ref, ...props }) => {
 		}
 	};
 
+	const handleRef = (el) => {
+		if (init) return;
+
+		if (String(value) === el?.node.dataset.value) {
+			el.node.scrollIntoView({
+				block: 'center',
+				inline: 'nearest',
+				// behavior: 'smooth',
+			});
+
+			setInit(true);
+		}
+	};
+
 	useEffect(() => {
 		setData(getData());
 	}, [min, max]);
@@ -305,11 +326,12 @@ const Picker = ({ ref, ...props }) => {
 				{data?.map((item, index) => (
 					<InView
 						key={index}
+						ref={(el) => handleRef(el)}
 						root={listRef.current}
 						rootMargin="-120px 0px"
 						as="li"
 						className={`${baseClassName}-item`}
-						data-value={item}
+						data-value={`${item}`}
 						onChange={handleChange}
 					>
 						<button

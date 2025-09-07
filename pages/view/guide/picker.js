@@ -241,7 +241,10 @@ export default function Sample() {
 										role="date"
 										min="2010"
 										max="2025"
-										value="2025.08.01"
+										value="2025.08.15"
+										year="2025"
+										month="8"
+										date="15"
 									/>
 								</UxContent>
 							</UxArticle>
