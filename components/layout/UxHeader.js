@@ -26,6 +26,10 @@ const UxHeader = ({ ref, ...props }) => {
 							<UxButton>
 								<UxIcon className="i109" />
 							</UxButton>
+							<UxButton onClick={() => router.push('/')}>
+								{/* <UxIcon className="i109" /> */}
+								<span className="text">HOME</span>
+							</UxButton>
 							<UxButton onClick={() => router.push('/view/guide/button')}>
 								<span className="text">GUIDE</span>
 							</UxButton>
