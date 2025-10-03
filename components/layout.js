@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import classnames from 'classnames';
 import RootContextProvider from '@/context/RootContext';
 /* LAYOUT */
@@ -12,21 +13,22 @@ import UxFooter from "@/components/layout/UxFooter";
 import UxModals from "@/components/layout/UxModals";
 
 export default function Layout({ children }) {
-	const name = children.type.name;
-	const caseClassName = classnames({
-		guide: name === 'Guide'
-	});
+	const router = useRouter();
+	const { pathname } = router;
+	const [path, setPath] = useState([]);
 
 	useEffect(() => {
-		console.log(children);
-	}, []);
+		setPath(pathname.split('/'));
+	}, [pathname]);
 
 	return (
 		<RootContextProvider>
-			<UxContainer className={caseClassName}>
+			<UxContainer className={classnames({
+				guide: path.includes('guide')
+			})}>
 				<UxHeader />
 				<UxMain>
-					{name === 'Guide' && <UxAside />}
+					{path.includes('guide') && <UxAside />}
 					{children}
 				</UxMain>
 				<UxFooter />
