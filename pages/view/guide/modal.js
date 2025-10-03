@@ -16,7 +16,7 @@ import UxGroup from "@/components/base/UxGroup";
 /* POPUP */
 import popup from "@/components/popup/popup.js";
 
-export default function Sample() {
+export default function Guide() {
 	const modal = useModal();
 
 	return (

@@ -12,7 +12,7 @@ import UxCard from "@/components/base/UxCard";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 
-export default function Sample() {
+export default function Guide() {
 	return (
 		<UxSection>
 			<UxArticle className="h3">

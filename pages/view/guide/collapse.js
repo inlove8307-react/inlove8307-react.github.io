@@ -11,7 +11,7 @@ import UxGroup from "@/components/base/UxGroup";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxDivider from "@/components/base/UxDivider";
 
-export default function Sample() {
+export default function Guide() {
 	return (
 		<UxSection>
 			<UxArticle className="h3">

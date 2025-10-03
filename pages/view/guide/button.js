@@ -12,7 +12,7 @@ import UxDivider from "@/components/base/UxDivider";
 import UxGroup from "@/components/base/UxGroup";
 import UxCollapse from "@/components/base/UxCollapse";
 
-export default function Sample() {
+export default function Guide() {
 	const [step, setStep] = useState(3);
 	const [max] = useState(10);
 

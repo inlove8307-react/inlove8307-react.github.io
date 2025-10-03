@@ -15,7 +15,7 @@ import UxButton from '@/components/base/UxButton';
 import UxGroup from "@/components/base/UxGroup";
 
 /**
- * <DateRole>
+ * <DatePicker>
  * [props]
  * [event]
  */
@@ -126,7 +126,7 @@ const DatePicker = ({ ref, ...props }) => {
 };
 
 /**
- * <TimeRole>
+ * <TimePicker>
  * [props]
  * [event]
  */

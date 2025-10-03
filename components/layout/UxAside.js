@@ -38,7 +38,6 @@ const UxAside = ({ ref, ...props }) => {
 		{ name: 'Progress', url: '/view/guide/progress' },
 		{ name: 'Calendar', url: '/view/guide/calendar' },
 		{ name: 'SortList', url: '/view/guide/sortlist' },
-		{ name: 'Icons', url: '/view/guide/icons' },
 	];
 
 	const handleChange = (index) => {

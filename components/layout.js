@@ -1,4 +1,7 @@
+'use client';
+
 import React from "react";
+import classnames from 'classnames';
 import RootContextProvider from '@/context/RootContext';
 /* LAYOUT */
 import UxContainer from "@/components/layout/UxContainer";
@@ -9,12 +12,17 @@ import UxFooter from "@/components/layout/UxFooter";
 import UxModals from "@/components/layout/UxModals";
 
 export default function Layout({ children }) {
+	const name = children.type.name;
+	const caseClassName = classnames({
+		guide: name === 'Guide'
+	});
+
 	return (
 		<RootContextProvider>
-			<UxContainer>
+			<UxContainer className={caseClassName}>
 				<UxHeader />
 				<UxMain>
-					<UxAside />
+					{name === 'Guide' && <UxAside />}
 					{children}
 				</UxMain>
 				<UxFooter />
