@@ -6,6 +6,10 @@ import classnames from 'classnames';
 /**
  * <UxSkeleton>
  * [props]
+ * width(String): 넓이 값
+ * height(String): 높이 값
+ * radius(String): 테두리 굴곡 값
+ * loaded(Boolean): 데이터 로드 완료 여부
  *
  * [event]
  *
@@ -27,7 +31,7 @@ const UxSkeleton = ({ ref, ...props }) => {
 			height: props.height,
 			borderRadius: props.radius,
 		});
-	}, [props.width, props.height]);
+	}, [props.width, props.height, props.radius]);
 
 	useEffect(() => {
 		if (typeof props.loaded === 'boolean') {
