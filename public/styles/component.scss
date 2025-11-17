@@ -999,3 +999,20 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-color-focus);}
 
 
+
+
+
+/* <UxSkeleton> */
+.ux-skeleton {overflow: hidden; position: relative;}
+.ux-skeleton-gradient {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+/* <UxSkeleton> Gradient */
+.ux-skeleton-gradient {background-image: linear-gradient(90deg, var(--light1) 35%, var(--light0) 50%, var(--light1) 65%); background-size: 300% auto;}
+/* <UxSkeleton> Animation */
+.ux-skeleton-gradient {animation: skeleton infinite linear 3s;}
+/* <UxSkeleton> Keyframes */
+@keyframes skeleton {
+	0% { background-position: 100% 0% }
+	100% { background-position: 0% 0% }
+}
+/* <UxSkeleton> Loaded */
+.ux-skeleton.loaded {overflow: initial;}
