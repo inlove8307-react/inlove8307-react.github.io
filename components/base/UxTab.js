@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { getArray, getRole, mergeProps } from '@/utils/core';
+import { getArray, getSlot, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
@@ -29,7 +29,7 @@ const UxTab = ({ ref, ...props }) => {
 		let result = [];
 
 		getArray(props.children).map((item) => {
-			result.push(getRole(getArray(item.props.children), 'summary'));
+			result.push(getSlot(getArray(item.props.children), 'summary'));
 		});
 
 		return result;

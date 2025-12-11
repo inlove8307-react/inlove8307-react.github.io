@@ -28,8 +28,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxTab Props</div>
-									<div data-role="details">
+									<div slot="summary">UxTab Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -42,8 +42,8 @@ export default function Guide() {
 									</div>
 								</UxCollapse>
 								<UxCollapse entire>
-									<div data-role="summary">UxPanel Props</div>
-									<div data-role="details">
+									<div slot="summary">UxPanel Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -61,18 +61,18 @@ export default function Guide() {
 								<UxContent>
 									<UxTab>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary01
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details01
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary02
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details02
 											</div>
 										</UxPanel>
@@ -89,18 +89,18 @@ export default function Guide() {
 								<UxContent>
 									<UxTab linear>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary01
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details01
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary02
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details02
 											</div>
 										</UxPanel>
@@ -120,42 +120,42 @@ export default function Guide() {
 										scroll
 									>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary01
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details01
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary02
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details02
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary03
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details03
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary04
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details04
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary05
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details05
 											</div>
 										</UxPanel>
@@ -175,18 +175,18 @@ export default function Guide() {
 										linear
 									>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary01
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details01
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary02
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details02
 											</div>
 										</UxPanel>
@@ -206,18 +206,18 @@ export default function Guide() {
 										linear
 									>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary01
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details01
 											</div>
 										</UxPanel>
 										<UxPanel>
-											<div data-role="summary">
+											<div slot="summary">
 												summary02
 											</div>
-											<div data-role="details">
+											<div slot="details">
 												details02
 											</div>
 										</UxPanel>

@@ -21,8 +21,8 @@ export const mergeProps = (element, object) => {
 	}
 };
 
-export const getRole = (array, role) => {
-	return array.filter(item => item?.props["data-role"] === role)[0];
+export const getSlot = (array, slot) => {
+	return array.filter(item => item?.props.slot === slot)[0];
 }
 
 export const rawDate = (date) => {

@@ -33,8 +33,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxModal Props</div>
-									<div data-role="details">
+									<div slot="summary">UxModal Props</div>
+									<div slot="details">
 										<p>[props]</p>
 										<ul>
 											<li></li>

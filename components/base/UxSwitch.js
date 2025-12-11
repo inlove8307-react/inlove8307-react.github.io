@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { getRole, getArray } from '@/utils/core';
+import { getSlot, getArray } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
@@ -36,8 +36,8 @@ const UxSwitch = ({ ref, ...props }) => {
 	}, [props.checked]);
 
 	useEffect(() => {
-		setLabelLeft(getRole(getArray(props.children), 'left')?.props.children);
-		setLabelRight(getRole(getArray(props.children), 'right')?.props.children);
+		setLabelLeft(getSlot(getArray(props.children), 'left')?.props.children);
+		setLabelRight(getSlot(getArray(props.children), 'right')?.props.children);
 	}, []);
 
 	return (

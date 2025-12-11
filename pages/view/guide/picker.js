@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxPicker Props</div>
-									<div data-role="details">
+									<div slot="summary">UxPicker Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getArray, getRole } from '@/utils/core';
+import { getArray, getSlot } from '@/utils/core';
 import classnames from 'classnames';
 /* COMPONENT */
 import UxIcon from '@/components/base/UxIcon';
@@ -116,12 +116,12 @@ const UxCollapse = ({ ref, ...props }) => {
 				expanded={expanded}
 				onClick={handleClick}
 			>
-				{getRole(getArray(props.children), 'summary')?.props.children}
+				{getSlot(getArray(props.children), 'summary')?.props.children}
 			</UxCollapseSummary>
 			<UxCollapseDetails
 				expanded={expanded}
 			>
-				{getRole(getArray(props.children), 'details')?.props.children}
+				{getSlot(getArray(props.children), 'details')?.props.children}
 			</UxCollapseDetails>
 		</div>
 	);

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { getArray, getRole } from '@/utils/core';
+import { getArray, getSlot } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
@@ -19,7 +19,7 @@ const UxTab = ({ ref, ...props }) => {
 	const [details, setDetails] = useState();
 
 	useEffect(() => {
-		setDetails(getRole(getArray(props.children), 'details'));
+		setDetails(getSlot(getArray(props.children), 'details'));
 	}, []);
 
 	return (

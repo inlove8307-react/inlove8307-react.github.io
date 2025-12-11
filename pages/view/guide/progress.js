@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxProgress Props</div>
-									<div data-role="details">
+									<div slot="summary">UxProgress Props</div>
+									<div slot="details">
 										<p>[props]</p>
 										<ul>
 											<li></li>
@@ -104,7 +104,7 @@ export default function Guide() {
 								</UxSubject>
 								<UxContent>
 									<UxProgress value={50}>
-										<div data-role="flag">flag</div>
+										<div slot="flag">flag</div>
 									</UxProgress>
 								</UxContent>
 							</UxArticle>
@@ -117,7 +117,7 @@ export default function Guide() {
 								</UxSubject>
 								<UxContent>
 									<UxProgress value={50}>
-										<div data-role="legend">legend</div>
+										<div slot="legend">legend</div>
 									</UxProgress>
 								</UxContent>
 							</UxArticle>

@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxInput Props</div>
-									<div data-role="details">
+									<div slot="summary">UxInput Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>type(String): 입력 타입 (기본 'text')</li>

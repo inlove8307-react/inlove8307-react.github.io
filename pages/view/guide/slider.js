@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxSlider Props</div>
-									<div data-role="details">
+									<div slot="summary">UxSlider Props</div>
+									<div slot="details">
 										<p>[props]</p>
 										<ul>
 											<li></li>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { getArray, getRole } from '@/utils/core';
+import { getArray, getSlot } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
@@ -56,8 +56,8 @@ const UxProgress = ({ ref, ...props }) => {
 	}, [props.value]);
 
 	useEffect(() => {
-		setSlotFlag(getRole(getArray(props.children), 'flag')?.props.children);
-		setSlotLegend(getRole(getArray(props.children), 'legend')?.props.children);
+		setSlotFlag(getSlot(getArray(props.children), 'flag')?.props.children);
+		setSlotLegend(getSlot(getArray(props.children), 'legend')?.props.children);
 		if (min === value) {
 			setTimeout(handleTransitionEnd, 1);
 		}

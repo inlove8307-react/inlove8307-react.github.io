@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxGroup Toggle Props</div>
-									<div data-role="details">
+									<div slot="summary">UxGroup Toggle Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -40,8 +40,8 @@ export default function Guide() {
 									</div>
 								</UxCollapse>
 								<UxCollapse entire>
-									<div data-role="summary">UxToggle Props</div>
-									<div data-role="details">
+									<div slot="summary">UxToggle Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>

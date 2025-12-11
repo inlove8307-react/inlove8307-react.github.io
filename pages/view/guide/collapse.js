@@ -26,8 +26,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxGroup Collapse Props</div>
-									<div data-role="details">
+									<div slot="summary">UxGroup Collapse Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -39,8 +39,8 @@ export default function Guide() {
 									</div>
 								</UxCollapse>
 								<UxCollapse entire>
-									<div data-role="summary">UxCollapse Props</div>
-									<div data-role="details">
+									<div slot="summary">UxCollapse Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -61,8 +61,8 @@ export default function Guide() {
 								</UxSubject>
 								<UxContent>
 									<UxCollapse>
-										<div data-role="summary">summary</div>
-										<div data-role="details">details</div>
+										<div slot="summary">summary</div>
+										<div slot="details">details</div>
 									</UxCollapse>
 								</UxContent>
 							</UxArticle>
@@ -75,8 +75,8 @@ export default function Guide() {
 								</UxSubject>
 								<UxContent>
 									<UxCollapse entire>
-										<div data-role="summary">summary</div>
-										<div data-role="details">details</div>
+										<div slot="summary">summary</div>
+										<div slot="details">details</div>
 									</UxCollapse>
 								</UxContent>
 							</UxArticle>
@@ -92,8 +92,8 @@ export default function Guide() {
 										entire
 										expanded
 									>
-										<div data-role="summary">summary</div>
-										<div data-role="details">details</div>
+										<div slot="summary">summary</div>
+										<div slot="details">details</div>
 									</UxCollapse>
 								</UxContent>
 							</UxArticle>
@@ -107,12 +107,12 @@ export default function Guide() {
 								<UxContent>
 									<UxGroup role="collapse">
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 									</UxGroup>
 								</UxContent>
@@ -130,12 +130,12 @@ export default function Guide() {
 										selected={0}
 									>
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 									</UxGroup>
 								</UxContent>
@@ -153,12 +153,12 @@ export default function Guide() {
 										once
 									>
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 										<UxCollapse entire>
-											<div data-role="summary">summary</div>
-											<div data-role="details">details</div>
+											<div slot="summary">summary</div>
+											<div slot="details">details</div>
 										</UxCollapse>
 									</UxGroup>
 								</UxContent>

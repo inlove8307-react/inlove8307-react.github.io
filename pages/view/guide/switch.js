@@ -27,8 +27,8 @@ export default function Guide() {
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div data-role="summary">UxSwitch Props</div>
-									<div data-role="details">
+									<div slot="summary">UxSwitch Props</div>
+									<div slot="details">
 										<ul>
 											<li>[props]</li>
 											<li>className(String): 추가 클래스</li>
@@ -65,11 +65,11 @@ export default function Guide() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>data-role left</h5>
+									<h5>slot left</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>
-										<span data-role="left">label</span>
+										<span slot="left">label</span>
 									</UxSwitch>
 								</UxContent>
 							</UxArticle>
@@ -78,11 +78,11 @@ export default function Guide() {
 
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>data-role right</h5>
+									<h5>slot right</h5>
 								</UxSubject>
 								<UxContent>
 									<UxSwitch>
-										<span data-role="right">label</span>
+										<span slot="right">label</span>
 									</UxSwitch>
 								</UxContent>
 							</UxArticle>
