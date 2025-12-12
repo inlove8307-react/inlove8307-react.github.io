@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/**
+ * <ux-field>
+ */
+/* .ux-field {} */
+.ux-field::part(base) {display: flex; flex-direction: column; gap: .4rem; padding: 1.6rem; border-radius: .8rem; box-shadow: var(--inset);}
+/* .ux-field::part(label) {} */
+/* .ux-field::part(input) {} */
+.ux-field::part(message) {color: var(--dark2);}
+.ux-field::part(valid) {color: var(--valid);}
+.ux-field::part(invalid) {color: var(--invalid);}
+.ux-field::part(buttons) {display: flex; gap: .8rem;}
+.ux-field::part(button) {flex-grow: 1; flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; height: 3.2rem; border: 0; border-radius: .8rem; background-color: transparent; box-shadow: var(--inset);}
+/* .ux-field::part(cancel) {} */
+/* .ux-field::part(submit) {} */
+.ux-field::part(valid),
+.ux-field::part(invalid) {display: none;}
+.ux-field[valid=true]::part(valid) {display: block;}
+.ux-field[valid=false]::part(invalid) {display: block;}
