@@ -88,10 +88,10 @@ h6 {font-size: 1.4rem;}
 
 
 /* Layout */
-.container {display: flex; flex-direction: column; gap: 1.6rem; padding: 1.6rem;}
+.container {display: flex; flex-direction: column; gap: 1.2rem; padding: 1.6rem;}
 .header {}
 .main {}
-.section {}
+.section {display: flex; flex-direction: column; gap: 1.2rem;}
 .article {display: flex; flex-direction: column; gap: .8rem;}
 .subject {}
 .content {}
