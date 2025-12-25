@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Component</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../styles/style.css">
+	<!-- Layout Component -->
+	<script type="module" src="../components/layout/UxContainer.js"></script>
+	<script type="module" src="../components/layout/UxHeader.js"></script>
+	<script type="module" src="../components/layout/UxMain.js"></script>
+	<script type="module" src="../components/layout/UxFooter.js"></script>
+	<script type="module" src="../components/layout/UxSection.js"></script>
+	<script type="module" src="../components/layout/UxArticle.js"></script>
+	<script type="module" src="../components/layout/UxSubject.js"></script>
+	<script type="module" src="../components/layout/UxContent.js"></script>
+	<!-- Base Component -->
+	<script type="module" src="../components/base/UxInput.js"></script>
+</head>
+<body>
+	<ux-container>
+		<ux-header>
+			<h1>Web Component</h1>
+		</ux-header>
+		<ux-main>
+			<ux-section>
+				<ux-article>
+					<ux-subject>
+						<h2>&lt;ux-input&gt;</h2>
+					</ux-subject>
+					<ux-content>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>Basic</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="Text input">
+									<span slot="label">Name:</span>
+								</ux-input>
+								<ux-input type="number" value="123" placeholder="Number input">
+									<span slot="label">Age:</span>
+								</ux-input>
+								<ux-input type="password" placeholder="Password input">
+									<span slot="label">Password:</span>
+								</ux-input>
+								<ux-input disabled value="Disabled value">
+									<span slot="label">Disabled Input:</span>
+								</ux-input>
+								<ux-input readonly value="Readonly value">
+									<span slot="label">Readonly Input:</span>
+								</ux-input>
+							</ux-content>
+						</ux-article>
+					</ux-content>
+				</ux-article>
+			</ux-section>
+		</ux-main>
+		<ux-footer></ux-footer>
+	</ux-container>
+
+	<script>
+		(() => {
+			Array.from(document.querySelectorAll('ux-input')).map((input) => {
+				input.addEventListener('input', (event) => {
+					console.log('Input value:', event.detail.value);
+				});
+				input.addEventListener('change', (event) => {
+					console.log('Input changed:', event.detail.value);
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

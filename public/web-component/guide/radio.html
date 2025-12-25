@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Component</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../styles/style.css">
+	<!-- Layout Component -->
+	<script type="module" src="../components/layout/UxContainer.js"></script>
+	<script type="module" src="../components/layout/UxHeader.js"></script>
+	<script type="module" src="../components/layout/UxMain.js"></script>
+	<script type="module" src="../components/layout/UxFooter.js"></script>
+	<script type="module" src="../components/layout/UxSection.js"></script>
+	<script type="module" src="../components/layout/UxArticle.js"></script>
+	<script type="module" src="../components/layout/UxSubject.js"></script>
+	<script type="module" src="../components/layout/UxContent.js"></script>
+	<!-- Base Component -->
+	<script type="module" src="../components/base/UxRadio.js"></script>
+</head>
+<body>
+	<ux-container>
+		<ux-header>
+			<h1>Web Component</h1>
+		</ux-header>
+		<ux-main>
+			<ux-section>
+				<ux-article>
+					<ux-subject>
+						<h2>&lt;ux-radio&gt;</h2>
+					</ux-subject>
+					<ux-content>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>group1</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-radio name="group1" value="option1">
+									<span slot="label">Option 1</span>
+								</ux-radio>
+								<ux-radio name="group1" value="option2" checked>
+									<span slot="label">Option 2 (checked)</span>
+								</ux-radio>
+								<ux-radio name="group1" value="option3" disabled>
+									<span slot="label">Option 3 (disabled)</span>
+								</ux-radio>
+							</ux-content>
+						</ux-article>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>group2</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-radio name="group2" value="alpha">
+									<span slot="label">Alpha</span>
+								</ux-radio>
+								<ux-radio name="group2" value="beta" checked>
+									<span slot="label">Beta (checked)</span>
+								</ux-radio>
+							</ux-content>
+						</ux-article>
+					</ux-content>
+				</ux-article>
+			</ux-section>
+		</ux-main>
+		<ux-footer></ux-footer>
+	</ux-container>
+
+	<script>
+		(() => {
+			Array.from(document.querySelectorAll('ux-radio')).map((radio) => {
+				radio.addEventListener('change', (event) => {
+					console.log('Radio changed:', event.detail.value, 'checked:', event.detail.checked);
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

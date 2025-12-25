@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Component</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../styles/style.css">
+	<!-- Layout Component -->
+	<script type="module" src="../components/layout/UxContainer.js"></script>
+	<script type="module" src="../components/layout/UxHeader.js"></script>
+	<script type="module" src="../components/layout/UxMain.js"></script>
+	<script type="module" src="../components/layout/UxFooter.js"></script>
+	<script type="module" src="../components/layout/UxSection.js"></script>
+	<script type="module" src="../components/layout/UxArticle.js"></script>
+	<script type="module" src="../components/layout/UxSubject.js"></script>
+	<script type="module" src="../components/layout/UxContent.js"></script>
+	<!-- Base Component -->
+	<script type="module" src="../components/base/UxCheckbox.js"></script>
+</head>
+<body>
+	<ux-container>
+		<ux-header>
+			<h1>Web Component</h1>
+		</ux-header>
+		<ux-main>
+			<ux-section>
+				<ux-article>
+					<ux-subject>
+						<h2>&lt;ux-checkbox&gt;</h2>
+					</ux-subject>
+					<ux-content>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>Basic</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-checkbox>
+									<span slot="label">Basic checkbox</span>
+								</ux-checkbox>
+								<ux-checkbox checked>
+									<span slot="label">Checked checkbox</span>
+								</ux-checkbox>
+								<ux-checkbox disabled>
+									<span slot="label">Disabled checkbox</span>
+								</ux-checkbox>
+								<ux-checkbox>
+									<span slot="label">Checkbox with input in label: <input type="text" placeholder="Type here"></span>
+								</ux-checkbox>
+							</ux-subject>
+						</ux-article>
+					</ux-content>
+				</ux-article>
+			</ux-section>
+		</ux-main>
+		<ux-footer></ux-footer>
+	</ux-container>
+
+	<script>
+		(() => {
+			Array.from(document.querySelectorAll('ux-checkbox')).map((checkbox) => {
+				checkbox.addEventListener('change', (event) => {
+					console.log('Checkbox changed:', event.detail.checked);
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

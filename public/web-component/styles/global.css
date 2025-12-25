@@ -88,10 +88,10 @@ h6 {font-size: 1.4rem;}
 
 
 /* Layout */
-.container {display: flex; flex-direction: column; gap: 1.2rem; padding: 1.6rem;}
-.header {}
-.main {}
-.section {display: flex; flex-direction: column; gap: 1.2rem;}
-.article {display: flex; flex-direction: column; gap: .8rem;}
-.subject {}
-.content {}
+.ux-container {display: flex; flex-direction: column; gap: 1.2rem; padding: 1.6rem;}
+.ux-header {}
+.ux-main {}
+.ux-section {display: flex; flex-direction: column; gap: 1.2rem;}
+.ux-article {display: flex; flex-direction: column; gap: .8rem;}
+.ux-subject {}
+.ux-content {}
