@@ -7,144 +7,170 @@ class UxInput extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return [
-			'value',
-			'placeholder',
-			'type',
-			'disabled',
-			'readonly',
-			'maxlength',
-			'minlength',
-			'size',
-			'pattern'
-		];
-	}
-
-	get value() {
-		return this.getAttribute('value') || '';
-	}
-	set value(val) {
-		this.setAttribute('value', val);
-	}
-
-	get placeholder() {
-		return this.getAttribute('placeholder') || '';
-	}
-	set placeholder(val) {
-		this.setAttribute('placeholder', val);
+		return ['type', 'placeholder', 'value', 'minlength', 'maxlength', 'size', 'pattern', 'readonly', 'disabled', 'prefix', 'suffix', 'clear', 'submit'];
 	}
 
 	get type() {
 		return this.getAttribute('type') || 'text';
 	}
-	set type(val) {
-		this.setAttribute('type', val);
+
+	set type(value) {
+		this.setAttribute('type', value);
 	}
 
-	get disabled() {
-		return this.hasAttribute('disabled');
-	}
-	set disabled(val) {
-		if (val) {
-			this.setAttribute('disabled', '');
-		} else {
-			this.removeAttribute('disabled');
-		}
+	get placeholder() {
+		return this.getAttribute('placeholder') || '';
 	}
 
-	get readonly() {
-		return this.hasAttribute('readonly');
-	}
-	set readonly(val) {
-		if (val) {
-			this.setAttribute('readonly', '');
-		} else {
-			this.removeAttribute('readonly');
-		}
+	set placeholder(value) {
+		this.setAttribute('placeholder', value);
 	}
 
-	get maxlength() {
-		return this.getAttribute('maxlength');
+	get value() {
+		return this.getAttribute('value') || '';
 	}
-	set maxlength(val) {
-		this.setAttribute('maxlength', val);
+
+	set value(value) {
+		this.setAttribute('value', value);
 	}
 
 	get minlength() {
 		return this.getAttribute('minlength');
 	}
-	set minlength(val) {
-		this.setAttribute('minlength', val);
+
+	set minlength(value) {
+		this.setAttribute('minlength', value);
+	}
+
+	get maxlength() {
+		return this.getAttribute('maxlength');
+	}
+
+	set maxlength(value) {
+		this.setAttribute('maxlength', value);
 	}
 
 	get size() {
 		return this.getAttribute('size');
 	}
-	set size(val) {
-		this.setAttribute('size', val);
+
+	set size(value) {
+		this.setAttribute('size', value);
 	}
 
 	get pattern() {
 		return this.getAttribute('pattern');
 	}
-	set pattern(val) {
-		this.setAttribute('pattern', val);
+
+	set pattern(value) {
+		this.setAttribute('pattern', value);
+	}
+
+	get readonly() {
+		return this.hasAttribute('readonly');
+	}
+
+	set readonly(value) {
+		value
+			? this.setAttribute('readonly', '')
+			: this.removeAttribute('readonly');
+	}
+
+	get disabled() {
+		return this.hasAttribute('disabled');
+	}
+
+	set disabled(value) {
+		value
+			? this.setAttribute('disabled', '')
+			: this.removeAttribute('disabled');
+	}
+
+	get prefix() {
+		return this.getAttribute('prefix') || '';
+	}
+
+	get suffix() {
+		return this.getAttribute('suffix') || '';
+	}
+
+	get clear() {
+		return this.getAttribute('clear') || '';
+	}
+
+	get submit() {
+		return this.getAttribute('submit') || '';
 	}
 
 	connectedCallback() {
 		this.render();
+
 		const input = this.shadowRoot.querySelector('input');
-		if (input) {
-			input.addEventListener('input', this._handleInput.bind(this));
-			input.addEventListener('change', this._handleChange.bind(this));
-		}
+
+		input.addEventListener('input', this.handleInput.bind(this));
+		input.addEventListener('change', this.handleChange.bind(this));
+		input.addEventListener('keydown', this.handleKeydown.bind(this));
+		input.addEventListener('keyup', this.handleKeyup.bind(this));
+		input.addEventListener('focus', this.handleFocus.bind(this));
+		input.addEventListener('blur', this.handleBlur.bind(this));
+
+		this.shadowRoot.querySelector('button[part="clear"]').addEventListener('click', this.handleClear.bind(this));
+		this.shadowRoot.querySelector('button[part="submit"]').addEventListener('click', this.handleSubmit.bind(this));
 	}
 
 	disconnectedCallback() {
 		const input = this.shadowRoot.querySelector('input');
-		if (input) {
-			input.removeEventListener('input', this._handleInput.bind(this));
-			input.removeEventListener('change', this._handleChange.bind(this));
-		}
+
+		input.removeEventListener('input', this.handleInput.bind(this));
+		input.removeEventListener('change', this.handleChange.bind(this));
+		input.removeEventListener('keydown', this.handleKeydown.bind(this));
+		input.removeEventListener('keyup', this.handleKeyup.bind(this));
+		input.removeEventListener('focus', this.handleFocus.bind(this));
+		input.removeEventListener('blur', this.handleBlur.bind(this));
+
+		this.shadowRoot.querySelector('button[part="clear"]').removeEventListener('click', this.handleClear.bind(this));
+		this.shadowRoot.querySelector('button[part="submit"]').removeEventListener('click', this.handleSubmit.bind(this));
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
 		const input = this.shadowRoot.querySelector('input');
+
 		if (!input) return;
 
 		switch (name) {
-			case 'value':
-				input.value = newValue;
+			case 'type':
+				input.type = this.type;
 				break;
 			case 'placeholder':
-				input.placeholder = newValue;
+				input.placeholder = this.placeholder;
 				break;
-			case 'type':
-				input.type = newValue;
-				break;
-			case 'disabled':
-				newValue === null ? input.removeAttribute('disabled') : input.setAttribute('disabled', '');
-				break;
-			case 'readonly':
-				newValue === null ? input.removeAttribute('readonly') : input.setAttribute('readonly', '');
-				break;
-			case 'maxlength':
-				input.maxLength = newValue;
+			case 'value':
+				input.value = this.value;
 				break;
 			case 'minlength':
-				input.minLength = newValue;
+				input.minLength = this.minlength;
+				break;
+			case 'maxlength':
+				input.maxLength = this.maxlength;
 				break;
 			case 'size':
-				input.size = newValue;
+				input.size = this.size;
 				break;
 			case 'pattern':
-				input.pattern = newValue;
+				input.pattern = this.pattern;
+				break;
+			case 'readonly':
+				input.readonly = this.readonly;
+				break;
+			case 'disabled':
+				input.disabled = this.disabled;
 				break;
 		}
 	}
 
-	_handleInput(event) {
+	handleInput(event) {
 		this.value = event.target.value;
+
 		this.dispatchEvent(new CustomEvent('input', {
 			detail: { value: this.value },
 			bubbles: true,
@@ -152,10 +178,57 @@ class UxInput extends HTMLElement {
 		}));
 	}
 
-	_handleChange(event) {
+	handleChange(event) {
 		this.value = event.target.value;
+
 		this.dispatchEvent(new CustomEvent('change', {
 			detail: { value: this.value },
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleKeydown(event) {
+		this.dispatchEvent(new CustomEvent('keydown', {
+			detail: { key: event.key },
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleKeyup(event) {
+		this.dispatchEvent(new CustomEvent('keyup', {
+			detail: { key: event.key },
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleFocus(event) {
+		this.dispatchEvent(new CustomEvent('focus', {
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleBlur(event) {
+		this.dispatchEvent(new CustomEvent('blur', {
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleClear(event) {
+		this.value = '';
+
+		this.dispatchEvent(new CustomEvent('clear', {
+			bubbles: true,
+			composed: true
+		}));
+	}
+
+	handleSubmit(event) {
+		this.dispatchEvent(new CustomEvent('submit', {
 			bubbles: true,
 			composed: true
 		}));
@@ -171,67 +244,36 @@ class UxInput extends HTMLElement {
 	style() {
 		return `
 			<style>
-				:host {
-					display: inline-block;
-					font-family: sans-serif;
-					margin-bottom: 10px;
-				}
-				.input-wrapper {
-					display: flex;
-					flex-direction: column;
-				}
-				::slotted(label) {
-					margin-bottom: 5px;
-					color: #333;
-				}
-				input {
-					padding: 8px 12px;
-					border: 1px solid #ccc;
-					border-radius: 4px;
-					font-size: 16px;
-					transition: border-color 0.2s ease-in-out;
-				}
-				input:focus {
-					outline: none;
-					border-color: #007bff;
-				}
-				input[disabled] {
-					background-color: #e9ecef;
-					cursor: not-allowed;
-				}
-				input[readonly] {
-					background-color: #f8f9fa;
-					cursor: default;
-				}
 			</style>
 		`;
 	}
 
 	template() {
-		const disabledAttr = this.disabled ? 'disabled' : '';
-		const readonlyAttr = this.readonly ? 'readonly' : '';
-		const placeholderAttr = this.placeholder ? `placeholder="${this.placeholder}"` : '';
-		const valueAttr = this.value ? `value="${this.value}"` : '';
-		const typeAttr = `type="${this.type}"`;
-		const maxlengthAttr = this.maxlength ? `maxlength="${this.maxlength}"` : '';
-		const minlengthAttr = this.minlength ? `minlength="${this.minlength}"` : '';
-		const sizeAttr = this.size ? `size="${this.size}"` : '';
-		const patternAttr = this.pattern ? `pattern="${this.pattern}"` : '';
+		const type = `type="${this.type}"`;
+		const placeholder = this.placeholder ? `placeholder="${this.placeholder}"` : '';
+		const value = this.value ? `value="${this.value}"` : '';
+		const minlength = this.minlength ? `minlength="${this.minlength}"` : '';
+		const maxlength = this.maxlength ? `maxlength="${this.maxlength}"` : '';
+		const size = this.size ? `size="${this.size}"` : '';
+		const pattern = this.pattern ? `pattern="${this.pattern}"` : '';
+		const readonly = this.readonly ? 'readonly' : '';
+		const disabled = this.disabled ? 'disabled' : '';
 
 		return `
-			<div class="input-wrapper">
-				<slot name="label"></slot>
-				<input
-					${typeAttr}
-					${valueAttr}
-					${placeholderAttr}
-					${disabledAttr}
-					${readonlyAttr}
-					${maxlengthAttr}
-					${minlengthAttr}
-					${sizeAttr}
-					${patternAttr}
-				/>
+			<div part="base">
+				<span part="prefix">
+					${this.prefix}
+				</span>
+				<input part="input" ${type} ${value} ${placeholder} ${disabled} ${readonly} ${maxlength} ${minlength} ${size} ${pattern} />
+				<span part="suffix">
+					${this.suffix}
+				</span>
+				<button part="clear" type="button">
+					clear
+				</button>
+				<button part="submit" type="button">
+					${this.submit}
+				</button>
 			</div>
 		`;
 	}

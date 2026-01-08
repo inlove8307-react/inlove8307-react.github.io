@@ -10,6 +10,22 @@ class UxRadio extends HTMLElement {
 		return ['checked', 'disabled', 'name', 'value'];
 	}
 
+	get name() {
+		return this.getAttribute('name');
+	}
+
+	set name(value) {
+		this.setAttribute('name', value);
+	}
+
+	get value() {
+		return this.getAttribute('value');
+	}
+
+	set value(value) {
+		this.setAttribute('value', value);
+	}
+
 	get checked() {
 		return this.hasAttribute('checked');
 	}
@@ -30,22 +46,6 @@ class UxRadio extends HTMLElement {
 			: this.removeAttribute('disabled');
 	}
 
-	get name() {
-		return this.getAttribute('name');
-	}
-
-	set name(value) {
-		this.setAttribute('name', value);
-	}
-
-	get value() {
-		return this.getAttribute('value');
-	}
-
-	set value(value) {
-		this.setAttribute('value', value);
-	}
-
 	connectedCallback() {
 		this.render();
 		this.shadowRoot.querySelector('input').addEventListener('change', this.handleChange.bind(this));
@@ -63,17 +63,17 @@ class UxRadio extends HTMLElement {
 		if (!input) return;
 
 		switch (name) {
-			case 'checked':
-				input.checked = this.checked;
-				break;
-			case 'disabled':
-				input.disabled = this.disabled;
-				break;
 			case 'name':
 				input.name = this.name;
 				break;
 			case 'value':
 				input.value = this.value;
+				break;
+			case 'checked':
+				input.checked = this.checked;
+				break;
+			case 'disabled':
+				input.disabled = this.disabled;
 				break;
 		}
 	}

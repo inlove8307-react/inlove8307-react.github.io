@@ -39,52 +39,66 @@
 					<ux-content>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>default</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input placeholder="Text input">
-									<span slot="label">Name:</span>
-								</ux-input>
+								<ux-input placeholder="placeholder"></ux-input>
 							</ux-content>
 						</ux-article>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>:value</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input type="number" value="123" placeholder="Number input">
-									<span slot="label">Age:</span>
-								</ux-input>
+								<ux-input placeholder="placeholder" value="value"></ux-input>
 							</ux-content>
 						</ux-article>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>:readonly</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input type="password" placeholder="Password input">
-									<span slot="label">Password:</span>
-								</ux-input>
+								<ux-input placeholder="placeholder" value="value" readonly></ux-input>
 							</ux-content>
 						</ux-article>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>:disabled</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input disabled value="Disabled value">
-									<span slot="label">Disabled Input:</span>
-								</ux-input>
+								<ux-input placeholder="placeholder" value="value" disabled></ux-input>
 							</ux-content>
 						</ux-article>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>:prefix</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input readonly value="Readonly value">
-									<span slot="label">Readonly Input:</span>
-								</ux-input>
+								<ux-input placeholder="placeholder" prefix="prefix"></ux-input>
+							</ux-content>
+						</ux-article>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>:suffix</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="placeholder" suffix="suffix"></ux-input>
+							</ux-content>
+						</ux-article>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>:clear</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="placeholder" clear></ux-input>
+							</ux-content>
+						</ux-article>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>:submit</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="placeholder" submit="submit"></ux-input>
 							</ux-content>
 						</ux-article>
 					</ux-content>
@@ -104,6 +118,24 @@
 				});
 				input.addEventListener('change', (event) => {
 					console.log('Input changed:', event.detail.value);
+				});
+				input.addEventListener('keydown', (event) => {
+					console.log('Input keydown', event.detail.key);
+				});
+				input.addEventListener('keyup', (event) => {
+					console.log('Input keyup', event.detail.key);
+				});
+				input.addEventListener('focus', (event) => {
+					console.log('Input focus');
+				});
+				input.addEventListener('blur', (event) => {
+					console.log('Input blur');
+				});
+				input.addEventListener('clear', (event) => {
+					console.log('Input clear');
+				});
+				input.addEventListener('submit', (event) => {
+					console.log('Input submit');
 				});
 			});
 		})();
