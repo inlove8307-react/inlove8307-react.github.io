@@ -7,16 +7,19 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="../styles/style.css">
-	<!-- Layout Component -->
+
+	<!-- LAYOUT COMPONENTS -->
 	<script type="module" src="../components/layout/UxContainer.js"></script>
 	<script type="module" src="../components/layout/UxHeader.js"></script>
+	<script type="module" src="../components/layout/UxAside.js"></script>
 	<script type="module" src="../components/layout/UxMain.js"></script>
 	<script type="module" src="../components/layout/UxFooter.js"></script>
 	<script type="module" src="../components/layout/UxSection.js"></script>
 	<script type="module" src="../components/layout/UxArticle.js"></script>
 	<script type="module" src="../components/layout/UxSubject.js"></script>
 	<script type="module" src="../components/layout/UxContent.js"></script>
-	<!-- Base Component -->
+
+	<!-- BASE COMPONENTS -->
 	<script type="module" src="../components/base/UxCheckbox.js"></script>
 </head>
 <body>
@@ -24,6 +27,9 @@
 		<ux-header>
 			<h1>Web Component</h1>
 		</ux-header>
+		<ux-aside>
+			<p>aside</p>
+		</ux-aside>
 		<ux-main>
 			<ux-section>
 				<ux-article>
@@ -33,35 +39,56 @@
 					<ux-content>
 						<ux-article class="h3">
 							<ux-subject>
-								<h3>Basic</h3>
+								<h3>default</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-checkbox>
-									<span slot="label">Basic checkbox</span>
+								<ux-checkbox onChange="">
+									<span slot="label">default</span>
 								</ux-checkbox>
 								<ux-checkbox checked>
-									<span slot="label">Checked checkbox</span>
+									<span slot="label">checked</span>
 								</ux-checkbox>
 								<ux-checkbox disabled>
-									<span slot="label">Disabled checkbox</span>
+									<span slot="label">disabled</span>
 								</ux-checkbox>
-								<ux-checkbox>
-									<span slot="label">Checkbox with input in label: <input type="text" placeholder="Type here"></span>
+								<ux-checkbox class="reverse">
+									<span slot="label">reverse</span>
 								</ux-checkbox>
+							</ux-content>
+						</ux-article>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>.circle</h3>
 							</ux-subject>
+							<ux-content>
+								<ux-checkbox class="circle">
+									<span slot="label">default</span>
+								</ux-checkbox>
+								<ux-checkbox class="circle" checked>
+									<span slot="label">checked</span>
+								</ux-checkbox>
+								<ux-checkbox class="circle" disabled>
+									<span slot="label">disabled</span>
+								</ux-checkbox>
+								<ux-checkbox class="circle reverse">
+									<span slot="label">reverse</span>
+								</ux-checkbox>
+							</ux-content>
 						</ux-article>
 					</ux-content>
 				</ux-article>
 			</ux-section>
 		</ux-main>
-		<ux-footer></ux-footer>
+		<ux-footer>
+			<p>footer</p>
+		</ux-footer>
 	</ux-container>
 
 	<script>
 		(() => {
 			Array.from(document.querySelectorAll('ux-checkbox')).map((checkbox) => {
 				checkbox.addEventListener('change', (event) => {
-					console.log('Checkbox changed:', event.detail.checked);
+					console.log(`checkbox checked: ${event.detail.checked}`);
 				});
 			});
 		})();

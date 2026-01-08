@@ -1,20 +1,53 @@
 @charset "utf-8";
 
-/**
- * <ux-field>
- */
-/* .ux-field {} */
-.ux-field::part(base) {display: flex; flex-direction: column; gap: .4rem; padding: 1.6rem; border-radius: .8rem; box-shadow: var(--inset);}
-/* .ux-field::part(label) {} */
-/* .ux-field::part(input) {} */
-.ux-field::part(message) {color: var(--dark2);}
-.ux-field::part(valid) {color: var(--valid);}
-.ux-field::part(invalid) {color: var(--invalid);}
-.ux-field::part(buttons) {display: flex; gap: .8rem;}
-.ux-field::part(button) {flex-grow: 1; flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; height: 3.2rem; border: 0; border-radius: .8rem; background-color: transparent; box-shadow: var(--inset);}
-/* .ux-field::part(cancel) {} */
-/* .ux-field::part(submit) {} */
-.ux-field::part(valid),
-.ux-field::part(invalid) {display: none;}
-.ux-field[valid=true]::part(valid) {display: block;}
-.ux-field[valid=false]::part(invalid) {display: block;}
+/* GLOBAL VARIABLES */
+:root {}
+
+
+
+
+
+/* <UxCheckbox> */
+.ux-checkbox {display: inline-flex; vertical-align: top;}
+.ux-checkbox::part(base) {display: inline-flex; position: relative; align-items: center; gap: .8rem; cursor: pointer;}
+.ux-checkbox::part(input) {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0;}
+.ux-checkbox::part(icon) {--width: 1.6rem; --height: 1.6rem;}
+.ux-checkbox::part(icon) {flex-shrink: 0; display: inline-flex; width: var(--width); height: var(--height); mask-position: 50% 50%; mask-repeat: no-repeat; mask-size: contain; background-color: var(--dark3); vertical-align: top;}
+.ux-checkbox::part(label) {flex-shrink: 0;}
+/* <UxCheckbox> icon */
+.ux-checkbox::part(icon) {mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');}
+.ux-checkbox.circle::part(icon) {mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>');}
+/* <UxCheckbox> reverse */
+.ux-checkbox.reverse::part(base) {flex-direction: row-reverse;}
+/* <UxCheckbox> checked */
+.ux-checkbox[checked]::part(icon) {background-color: var(--color1);}
+/* <UxCheckbox> disabled */
+.ux-checkbox[disabled]::part(label) {color: var(--dark3);}
+.ux-checkbox[disabled]::part(icon) {opacity: .5;}
+
+
+
+
+
+/* <UxRadio> */
+.ux-radio {display: inline-flex; vertical-align: top;}
+.ux-radio::part(base) {display: inline-flex; position: relative; align-items: center; gap: .8rem; cursor: pointer;}
+.ux-radio::part(input) {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0;}
+.ux-radio::part(icon) {--width: 1.6rem; --height: 1.6rem;}
+.ux-radio::part(icon) {flex-shrink: 0; display: inline-flex; width: var(--width); height: var(--height); mask-position: 50% 50%; mask-repeat: no-repeat; mask-size: contain; background-color: var(--dark3); vertical-align: top;}
+.ux-radio::part(label) {flex-shrink: 0;}
+/* <UxRadio> icon */
+.ux-radio::part(icon) {mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>');}
+/* <UxRadio> reverse */
+.ux-radio.reverse::part(base) {flex-direction: row-reverse;}
+/* <UxRadio> checked */
+.ux-radio[checked]::part(icon) {background-color: var(--color1);}
+/* <UxRadio> disabled */
+.ux-radio[disabled]::part(label) {color: var(--dark3);}
+.ux-radio[disabled]::part(icon) {opacity: .5;}
+
+
+
+
+
+/* <UxInput> */
