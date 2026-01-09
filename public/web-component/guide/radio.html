@@ -20,6 +20,9 @@
 	<script type="module" src="../components/layout/UxContent.js"></script>
 
 	<!-- BASE COMPONENTS -->
+	<script type="module" src="../components/base/UxDivider.js"></script>
+	<script type="module" src="../components/base/UxInput.js"></script>
+	<script type="module" src="../components/base/UxCheckbox.js"></script>
 	<script type="module" src="../components/base/UxRadio.js"></script>
 </head>
 <body>
@@ -32,7 +35,7 @@
 		</ux-aside>
 		<ux-main>
 			<ux-section>
-				<ux-article>
+				<ux-article class="space">
 					<ux-subject>
 						<h2>&lt;ux-radio&gt;</h2>
 					</ux-subject>
@@ -70,7 +73,7 @@
 			Array.from(document.querySelectorAll('ux-radio')).map((radio) => {
 				radio.addEventListener('change', (event) => {
 					const { name, value, checked } = event.detail;
-					console.log(`name: ${name}, value: ${value}, checked: ${checked}`);
+					console.log(`radio change: ${name} ${value} ${checked}`);
 				});
 			});
 		})();

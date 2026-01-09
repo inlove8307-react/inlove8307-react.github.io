@@ -57,14 +57,14 @@ html.modal {overflow: hidden; height: 100%;}
 
 
 /* Heading */
-h1, h2, h3, h4, h5, h6 {font-weight: 600;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600; font-size: 1.6rem;}
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {font-weight: 800;}
-h1 {font-size: 2.4rem;}
+/* h1 {font-size: 2.4rem;}
 h2 {font-size: 2.2rem;}
 h3 {font-size: 2rem;}
 h4 {font-size: 1.8rem;}
 h5 {font-size: 1.6rem;}
-h6 {font-size: 1.4rem;}
+h6 {font-size: 1.4rem;} */
 
 
 
@@ -96,18 +96,3 @@ h6 {font-size: 1.4rem;}
 .bl.mark::before {content: '※';}
 .bl.number {counter-increment: number;}
 .bl.number::before {content: counter(number)'.';}
-
-
-
-
-
-/* Layout */
-.ux-container {display: flex; flex-direction: column; gap: 1.2rem; padding: 1.6rem;}
-.ux-header {}
-.ux-main {}
-.ux-section {display: flex; flex-direction: column; gap: 1.2rem;}
-.ux-article {display: flex; flex-direction: column; gap: .8rem;}
-.ux-subject {}
-.ux-content {}
-.ux-aside {display: none;}
-.ux-footer {display: none;}

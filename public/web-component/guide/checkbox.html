@@ -20,7 +20,10 @@
 	<script type="module" src="../components/layout/UxContent.js"></script>
 
 	<!-- BASE COMPONENTS -->
+	<script type="module" src="../components/base/UxDivider.js"></script>
+	<script type="module" src="../components/base/UxInput.js"></script>
 	<script type="module" src="../components/base/UxCheckbox.js"></script>
+	<script type="module" src="../components/base/UxRadio.js"></script>
 </head>
 <body>
 	<ux-container>
@@ -32,7 +35,7 @@
 		</ux-aside>
 		<ux-main>
 			<ux-section>
-				<ux-article>
+				<ux-article class="space">
 					<ux-subject>
 						<h2>&lt;ux-checkbox&gt;</h2>
 					</ux-subject>
@@ -56,6 +59,7 @@
 								</ux-checkbox>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>.circle</h3>
@@ -88,7 +92,7 @@
 		(() => {
 			Array.from(document.querySelectorAll('ux-checkbox')).map((checkbox) => {
 				checkbox.addEventListener('change', (event) => {
-					console.log(`checkbox checked: ${event.detail.checked}`);
+					console.log(`checkbox change: ${event.detail.checked}`);
 				});
 			});
 		})();

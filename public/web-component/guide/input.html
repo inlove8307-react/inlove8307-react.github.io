@@ -20,7 +20,10 @@
 	<script type="module" src="../components/layout/UxContent.js"></script>
 
 	<!-- BASE COMPONENTS -->
+	<script type="module" src="../components/base/UxDivider.js"></script>
 	<script type="module" src="../components/base/UxInput.js"></script>
+	<script type="module" src="../components/base/UxCheckbox.js"></script>
+	<script type="module" src="../components/base/UxRadio.js"></script>
 </head>
 <body>
 	<ux-container>
@@ -32,7 +35,7 @@
 		</ux-aside>
 		<ux-main>
 			<ux-section>
-				<ux-article>
+				<ux-article class="space">
 					<ux-subject>
 						<h2>&lt;ux-input&gt;</h2>
 					</ux-subject>
@@ -45,6 +48,7 @@
 								<ux-input placeholder="placeholder"></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:value</h3>
@@ -53,22 +57,43 @@
 								<ux-input placeholder="placeholder" value="value"></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>:valid</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="placeholder" value="value" valid></ux-input>
+							</ux-content>
+						</ux-article>
+						<ux-divider class="linear"></ux-divider>
+						<ux-article class="h3">
+							<ux-subject>
+								<h3>:invalid</h3>
+							</ux-subject>
+							<ux-content>
+								<ux-input placeholder="placeholder" value="value" invalid></ux-input>
+							</ux-content>
+						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:readonly</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input placeholder="placeholder" value="value" readonly></ux-input>
+								<ux-input placeholder="placeholder" value="readonly" readonly></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:disabled</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-input placeholder="placeholder" value="value" disabled></ux-input>
+								<ux-input placeholder="placeholder" value="disabled" disabled></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:prefix</h3>
@@ -77,6 +102,7 @@
 								<ux-input placeholder="placeholder" prefix="prefix"></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:suffix</h3>
@@ -85,6 +111,7 @@
 								<ux-input placeholder="placeholder" suffix="suffix"></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:clear</h3>
@@ -93,6 +120,7 @@
 								<ux-input placeholder="placeholder" clear></ux-input>
 							</ux-content>
 						</ux-article>
+						<ux-divider class="linear"></ux-divider>
 						<ux-article class="h3">
 							<ux-subject>
 								<h3>:submit</h3>
@@ -114,28 +142,28 @@
 		(() => {
 			Array.from(document.querySelectorAll('ux-input')).map((input) => {
 				input.addEventListener('input', (event) => {
-					console.log('Input value:', event.detail.value);
+					console.log(`input value ${event.detail.value}`);
 				});
 				input.addEventListener('change', (event) => {
-					console.log('Input changed:', event.detail.value);
+					console.log(`input change ${event.detail.value}`);
 				});
 				input.addEventListener('keydown', (event) => {
-					console.log('Input keydown', event.detail.key);
+					console.log(`input keydown ${event.detail.key}`);
 				});
 				input.addEventListener('keyup', (event) => {
-					console.log('Input keyup', event.detail.key);
+					console.log(`input keyup ${event.detail.key}`);
 				});
 				input.addEventListener('focus', (event) => {
-					console.log('Input focus');
+					console.log(`input focus`);
 				});
 				input.addEventListener('blur', (event) => {
-					console.log('Input blur');
+					console.log(`input blur`);
 				});
 				input.addEventListener('clear', (event) => {
-					console.log('Input clear');
+					console.log(`input clear`);
 				});
 				input.addEventListener('submit', (event) => {
-					console.log('Input submit');
+					console.log(`input submit`);
 				});
 			});
 		})();

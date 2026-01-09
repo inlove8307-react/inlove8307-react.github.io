@@ -172,7 +172,10 @@ class UxInput extends HTMLElement {
 		this.value = event.target.value;
 
 		this.dispatchEvent(new CustomEvent('input', {
-			detail: { value: this.value },
+			detail: {
+				target: event.target,
+				value: this.value
+			},
 			bubbles: true,
 			composed: true
 		}));
@@ -182,7 +185,10 @@ class UxInput extends HTMLElement {
 		this.value = event.target.value;
 
 		this.dispatchEvent(new CustomEvent('change', {
-			detail: { value: this.value },
+			detail: {
+				target: event.target,
+				value: this.value
+			},
 			bubbles: true,
 			composed: true
 		}));
@@ -190,7 +196,10 @@ class UxInput extends HTMLElement {
 
 	handleKeydown(event) {
 		this.dispatchEvent(new CustomEvent('keydown', {
-			detail: { key: event.key },
+			detail: {
+				target: event.target,
+				key: event.key
+			},
 			bubbles: true,
 			composed: true
 		}));
@@ -198,7 +207,10 @@ class UxInput extends HTMLElement {
 
 	handleKeyup(event) {
 		this.dispatchEvent(new CustomEvent('keyup', {
-			detail: { key: event.key },
+			detail: {
+				target: event.target,
+				key: event.key
+			},
 			bubbles: true,
 			composed: true
 		}));
@@ -206,6 +218,7 @@ class UxInput extends HTMLElement {
 
 	handleFocus(event) {
 		this.dispatchEvent(new CustomEvent('focus', {
+			detail: { target: event.target },
 			bubbles: true,
 			composed: true
 		}));
@@ -213,6 +226,7 @@ class UxInput extends HTMLElement {
 
 	handleBlur(event) {
 		this.dispatchEvent(new CustomEvent('blur', {
+			detail: { target: event.target },
 			bubbles: true,
 			composed: true
 		}));
@@ -222,6 +236,7 @@ class UxInput extends HTMLElement {
 		this.value = '';
 
 		this.dispatchEvent(new CustomEvent('clear', {
+			detail: { target: event.target },
 			bubbles: true,
 			composed: true
 		}));
@@ -229,6 +244,7 @@ class UxInput extends HTMLElement {
 
 	handleSubmit(event) {
 		this.dispatchEvent(new CustomEvent('submit', {
+			detail: { target: event.target },
 			bubbles: true,
 			composed: true
 		}));
