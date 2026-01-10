@@ -20,6 +20,7 @@
 	<script type="module" src="../components/layout/UxContent.js"></script>
 
 	<!-- BASE COMPONENTS -->
+	<script type="module" src="../components/base/UxGroup.js"></script>
 	<script type="module" src="../components/base/UxDivider.js"></script>
 	<script type="module" src="../components/base/UxInput.js"></script>
 	<script type="module" src="../components/base/UxCheckbox.js"></script>
@@ -45,18 +46,20 @@
 								<h3>default</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-radio name="GROUP1" value="1">
-									<span slot="label">default</span>
-								</ux-radio>
-								<ux-radio name="GROUP1" value="2" checked>
-									<span slot="label">checked</span>
-								</ux-radio>
-								<ux-radio name="GROUP1" value="3" disabled>
-									<span slot="label">disabled</span>
-								</ux-radio>
-								<ux-radio name="GROUP1" value="4" class="reverse">
-									<span slot="label">reverse</span>
-								</ux-radio>
+								<ux-group class="col2">
+									<ux-radio name="GROUP1" value="1">
+										<span slot="label">default</span>
+									</ux-radio>
+									<ux-radio name="GROUP1" value="2" checked>
+										<span slot="label">checked</span>
+									</ux-radio>
+									<ux-radio name="GROUP1" value="3" disabled>
+										<span slot="label">disabled</span>
+									</ux-radio>
+									<ux-radio name="GROUP1" value="4" class="reverse">
+										<span slot="label">reverse</span>
+									</ux-radio>
+								</ux-group>
 							</ux-content>
 						</ux-article>
 					</ux-content>

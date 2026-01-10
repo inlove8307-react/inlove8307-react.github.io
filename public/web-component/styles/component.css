@@ -8,24 +8,55 @@
 
 
 /* <UxContainer> */
-.ux-container {display: flex; flex-direction: column; gap: 1.6rem;}
+.ux-container {display: flex; flex-direction: column; min-height: 100%;}
 /* <UxHeader> */
-.ux-header {display: flex; flex-direction: column; padding-top: var(--space); padding-left: var(--space); padding-right: var(--space);}
-/* <UxAside> */
-.ux-main {display: flex; flex-direction: column; gap: 1.6rem; padding-bottom: var(--space);}
+.ux-header {display: flex; flex-direction: column; padding: var(--space);}
 /* <UxMain> */
-.ux-section {display: flex; flex-direction: column; gap: 1.6rem;}
+.ux-main {display: flex; flex-direction: column; gap: 1.6rem; padding-bottom: calc(var(--space) * 2);}
+.ux-main {flex-grow: 1;}
 /* <UxSection> */
+.ux-section {display: flex; flex-direction: column; gap: 1.6rem;}
+/* <UxArticle> */
 .ux-article {display: flex; flex-direction: column; gap: 1.6rem;}
 .ux-article.space {padding-left: var(--space); padding-right: var(--space);}
-/* <UxArticle> */
-.ux-subject {display: flex; flex-direction: column;}
 /* <UxSubject> */
-.ux-content {display: flex; flex-direction: column; gap: 1.6rem;}
+.ux-subject {display: flex; flex-direction: column;}
 /* <UxContent> */
+.ux-content {display: flex; flex-direction: column; gap: 1.6rem;}
+/* <UxAside> */
 .ux-aside {display: none;}
 /* <UxFooter> */
 .ux-footer {display: none;}
+
+
+
+
+
+/* <UxGroup> */
+.ux-group {--gap: .8rem;}
+.ux-group {display: flex; flex-wrap: wrap; gap: var(--gap);}
+/* <UxGroup> row */
+.ux-group.row {flex-direction: row;}
+.ux-group.row.center {justify-content: center;}
+.ux-group.row.left {justify-content: flex-start;}
+.ux-group.row.right {justify-content: flex-end;}
+/* <UxGroup> column */
+.ux-group.column {flex-direction: column;}
+.ux-group.column.center {align-items: center;}
+.ux-group.column.left {align-items: flex-start;}
+.ux-group.column.right {align-items: flex-end;}
+/* <UxGroup> gap */
+.ux-group.gap16 {--gap: 1.6rem;}
+.ux-group.gap12 {--gap: 1.2rem;}
+.ux-group.gap8 {--gap: .8rem;}
+.ux-group.gap4 {--gap: .4rem;}
+/* <UxGroup> col */
+.ux-group.col1 {--col: 1;}
+.ux-group.col2 {--col: 2;}
+.ux-group.col3 {--col: 3;}
+.ux-group.col4 {--col: 4;}
+.ux-group.col5 {--col: 5;}
+.ux-group[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 
 
 

@@ -7,7 +7,23 @@ class UxInput extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return ['type', 'placeholder', 'value', 'minlength', 'maxlength', 'size', 'pattern', 'readonly', 'disabled', 'prefix', 'suffix', 'clear', 'submit'];
+		return [
+			'type',
+			'placeholder',
+			'value',
+			'valid',
+			'invalid',
+			'minlength',
+			'maxlength',
+			'size',
+			'pattern',
+			'readonly',
+			'disabled',
+			'prefix',
+			'suffix',
+			'clear',
+			'submit'
+		];
 	}
 
 	get type() {
@@ -32,6 +48,26 @@ class UxInput extends HTMLElement {
 
 	set value(value) {
 		this.setAttribute('value', value);
+	}
+
+	get valid() {
+		return this.hasAttribute('valid');
+	}
+
+	set valid(value) {
+		value
+			? this.setAttribute('valid', '')
+			: this.removeAttribute('valid');
+	}
+
+	get invalid() {
+		return this.hasAttribute('invalid');
+	}
+
+	set invalid(value) {
+		value
+			? this.setAttribute('invalid', '')
+			: this.removeAttribute('invalid');
 	}
 
 	get minlength() {
@@ -90,12 +126,26 @@ class UxInput extends HTMLElement {
 		return this.getAttribute('prefix') || '';
 	}
 
+	set prefix(value) {
+		this.setAttribute('prefix', value);
+	}
+
 	get suffix() {
 		return this.getAttribute('suffix') || '';
 	}
 
+	set suffix(value) {
+		this.setAttribute('suffix', value);
+	}
+
 	get clear() {
-		return this.getAttribute('clear') || '';
+		return this.hasAttribute('clear');
+	}
+
+	set clear(value) {
+		value
+			? this.setAttribute('clear', '')
+			: this.removeAttribute('clear');
 	}
 
 	get submit() {
@@ -280,13 +330,22 @@ class UxInput extends HTMLElement {
 				<span part="prefix">
 					${this.prefix}
 				</span>
-				<input part="input" ${type} ${value} ${placeholder} ${disabled} ${readonly} ${maxlength} ${minlength} ${size} ${pattern} />
+				<input
+					part="input"
+					${type}
+					${value}
+					${placeholder}
+					${disabled}
+					${readonly}
+					${maxlength}
+					${minlength}
+					${size}
+					${pattern}
+				/>
 				<span part="suffix">
 					${this.suffix}
 				</span>
-				<button part="clear" type="button">
-					clear
-				</button>
+				<button part="clear" type="button"></button>
 				<button part="submit" type="button">
 					${this.submit}
 				</button>

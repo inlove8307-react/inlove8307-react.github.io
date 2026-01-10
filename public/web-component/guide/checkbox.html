@@ -20,6 +20,7 @@
 	<script type="module" src="../components/layout/UxContent.js"></script>
 
 	<!-- BASE COMPONENTS -->
+	<script type="module" src="../components/base/UxGroup.js"></script>
 	<script type="module" src="../components/base/UxDivider.js"></script>
 	<script type="module" src="../components/base/UxInput.js"></script>
 	<script type="module" src="../components/base/UxCheckbox.js"></script>
@@ -45,18 +46,20 @@
 								<h3>default</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-checkbox onChange="">
-									<span slot="label">default</span>
-								</ux-checkbox>
-								<ux-checkbox checked>
-									<span slot="label">checked</span>
-								</ux-checkbox>
-								<ux-checkbox disabled>
-									<span slot="label">disabled</span>
-								</ux-checkbox>
-								<ux-checkbox class="reverse">
-									<span slot="label">reverse</span>
-								</ux-checkbox>
+								<ux-group class="col2">
+									<ux-checkbox>
+										<span slot="label">default</span>
+									</ux-checkbox>
+									<ux-checkbox checked>
+										<span slot="label">checked</span>
+									</ux-checkbox>
+									<ux-checkbox disabled>
+										<span slot="label">disabled</span>
+									</ux-checkbox>
+									<ux-checkbox class="reverse">
+										<span slot="label">reverse</span>
+									</ux-checkbox>
+								</ux-group>
 							</ux-content>
 						</ux-article>
 						<ux-divider class="linear"></ux-divider>
@@ -65,18 +68,20 @@
 								<h3>.circle</h3>
 							</ux-subject>
 							<ux-content>
-								<ux-checkbox class="circle">
-									<span slot="label">default</span>
-								</ux-checkbox>
-								<ux-checkbox class="circle" checked>
-									<span slot="label">checked</span>
-								</ux-checkbox>
-								<ux-checkbox class="circle" disabled>
-									<span slot="label">disabled</span>
-								</ux-checkbox>
-								<ux-checkbox class="circle reverse">
-									<span slot="label">reverse</span>
-								</ux-checkbox>
+								<ux-group class="col2">
+									<ux-checkbox class="circle">
+										<span slot="label">default</span>
+									</ux-checkbox>
+									<ux-checkbox class="circle" checked>
+										<span slot="label">checked</span>
+									</ux-checkbox>
+									<ux-checkbox class="circle" disabled>
+										<span slot="label">disabled</span>
+									</ux-checkbox>
+									<ux-checkbox class="circle reverse">
+										<span slot="label">reverse</span>
+									</ux-checkbox>
+								</ux-group>
 							</ux-content>
 						</ux-article>
 					</ux-content>
