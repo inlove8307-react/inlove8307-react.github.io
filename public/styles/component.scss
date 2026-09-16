@@ -1,7 +1,428 @@
 @charset "utf-8";
 
+:root {
+	/* GRAY */
+	--gray-100: #000000;
+	--gray-90: #121619;
+	--gray-80: #21272A;
+	--gray-70: #343A3F;
+	--gray-60: #565C63;
+	--gray-50: #808892;
+	--gray-40: #B9C1C9;
+	--gray-30: #D6DBE1;
+	--gray-20: #EBEFF5;
+	--gray-10: #F3F6FB;
+	--gray-5: #F8F9FC;
+	--gray-0: #FFFFFF;
+	/* PRIMARY */
+	--primary-90: #004C9D;
+	--primary-80: #046ADB;
+	--primary-70: #2B87ED;
+	--primary-60: #529EF2;
+	--primary-50: #7BB4F5;
+	--primary-40: #9EC8F7;
+	--primary-30: #BEDAFA;
+	--primary-20: #D5E7FB;
+	--primary-10: #E5F0FC;
+	/* SKYBLUE */
+	--skyblue-90: #005C87;
+	--skyblue-80: #007BB5;
+	--skyblue-70: #0092D7;
+	--skyblue-60: #29ABE9;
+	--skyblue-50: #5EBEEB;
+	--skyblue-40: #94D6F4;
+	--skyblue-30: #B3E3F9;
+	--skyblue-20: #C6EAFA;
+	--skyblue-10: #D8EEF8;
+	/* ORANGE */
+	--orange-90: #8E3300;
+	--orange-80: #C44600;
+	--orange-70: #EA5705;
+	--orange-60: #EE712B;
+	--orange-50: #F4925A;
+	--orange-40: #F6A87C;
+	--orange-30: #FCBF9B;
+	--orange-20: #FFD5BD;
+	--orange-10: #FFEBE0;
+	/* RED */
+	--red-90: #B80013;
+	--red-80: #D10D21;
+	--red-70: #DE2337;
+	--red-60: #EB3D4F;
+	--red-50: #F25565;
+	--red-40: #F4707E;
+	--red-30: #F88995;
+	--red-20: #FFB2BA;
+	--red-10: #FFD7DC;
+	/* BRAND */
+	--brand-blue: var(--primary-90);
+	--brand-skyblue: var(--skyblue-70);
+	--brand-orange: var(--orange-70);
+	/* ALPHA */
+	--black-70: rgba(0, 0, 0, .7);
+	--black-50: rgba(0, 0, 0, .5);
+	--black-30: rgba(0, 0, 0, .3);
+	--black-10: rgba(0, 0, 0, .1);
+	--black-0: rgba(0, 0, 0, 0);
+	--white-70: rgba(255, 255, 255, .7);
+	--white-50: rgba(255, 255, 255, .5);
+	--white-30: rgba(255, 255, 255, .3);
+	--white-10: rgba(255, 255, 255, .1);
+	--white-0: rgba(255, 255, 255, 0);
+	/* TEXT */
+	--text-default: var(--gray-90);
+	--text-subtle: var(--gray-70);
+	--text-pressed: var(--gray-70);
+	--text-muted: var(--gray-60);
+	--text-disabled: var(--gray-40);
+	--text-inverse: var(--gray-0);
+	--text-blue: var(--primary-90);
+	--text-skyblue: var(--skyblue-70);
+	--text-orange: var(--orange-70);
+	--text-red: var(--red-70);
+	/* BACKGROUND */
+	--background-default: var(--gray-0);
+	--background-subtle: var(--gray-10);
+	--background-muted: var(--gray-5);
+	--background-primary: var(--primary-90);
+	--background-dim: var(--black-70);
+	--background-info: var(--gray-10);
+	--background-etc: var(--gray-90);
+	/* STATUS */
+	--status-success: var(--primary-90);
+	--status-error: var(--red-90);
+	--status-warning: var(--red-70);
+	--status-push: var(--orange-70);
+	--status-info: var(--skyblue-70);
+	/* ICON */
+	--icon-default: var(--gray-90);
+	--icon-inverse: var(--gray-0);
+	--icon-disabled: var(--gray-40);
+	--icon-primary: var(--primary-90);
+	/* BORDER */
+	--border-default: var(--gray-30);
+	--border-inverse: var(--gray-0);
+	--border-active: var(--gray-90);
+	--border-primary: var(--primary-90);
+	/* FILL */
+	--fill-primary-enable: var(--primary-90);
+	--fill-primary-pressed: #003B7C;
+	--fill-secondary-enable: #DCE0E9;
+	--fill-secondary-pressed: #BBC4D1;
+	--fill-disabled: var(--gray-20);
+	/* STROKE */
+	--stroke-enable: #C4C8D1;
+	--stroke-pressed: #8A949E;
+	--stroke-disabled: #C4C8D1;
+	/* TABLE */
+	--table-top: #BDC2CB;
+	--table-middle: #E6EAEE;
+	--table-bg: #F4F5FA;
+	/* DIVIDER */
+	--divider-default: #DCE0E9;
+	--divider-gray: #E6E9EE;
+	/* SELECT */
+	--select-default: var(--gray-10);
+	--select-default-selected: var(--gray-30);
+	--select-primary: var(--primary-70);
+	--select-primary-selected: var(--skyblue-10);
+	/* INSET */
+	--inset: inset 0 0 0 .1rem var(--border-default);
+	--inset-focus: inset 0 0 0 .2rem var(--border-active);
+	--inset-valid: inset 0 0 0 .2rem var(--primary-80);
+	--inset-invalid: inset 0 0 0 .2rem var(--red-50);
+	--inset-primary: inset 0 0 0 .1rem var(--border-primary);
+	--inset-transition: box-shadow .1s ease-in-out;
+	/* FONT */
+	--font-family: "Pretendard", "AppleGothicNeoSD", "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", "Droid sans", "Malgun Gothic", "맑은 고딕", "Helvetica", "Dotum", "돋움", "sans-serif";
+	/* SPACE */
+	--space: 2rem;
+	--space-minus: calc(var(--space) * -1);
+	/* Header */
+	--header: 5.6rem;
+	/* Desktop */
+	--desktop: 37.5rem;
+	/* SHADOW */
+	--shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
+	/* COLOR */
+	--light0: rgb(255, 255, 255);
+	--light1: rgb(238, 238, 238);
+	--light2: rgb(204, 204, 204);
+	--light3: rgb(170, 170, 170);
+	--dark0: rgb(0, 0, 0);
+	--dark1: rgb(34, 34, 34);
+	--dark2: rgb(68, 68, 68);
+	--dark3: rgb(102, 102, 102);
+}
+
+
+
+
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'),
+		url("/fonts/Pretendard-Black.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Black.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Black.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard Extrabold'),
+		url("/fonts/Pretendard-ExtraBold.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-ExtraBold.subset.woff") format("woff"),
+		url("/fonts/Pretendard-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'),
+		url("/fonts/Pretendard-Bold.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Bold.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'),
+		url("/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-SemiBold.subset.woff") format("woff"),
+		url("/fonts/Pretendard-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'),
+		url("/fonts/Pretendard-Medium.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Medium.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'),
+		url("/fonts/Pretendard-Regular.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Regular.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'),
+		url("/fonts/Pretendard-Light.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Light.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'),
+		url("/fonts/Pretendard-ExtraLight.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-ExtraLight.subset.woff") format("woff"),
+		url("/fonts/Pretendard-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'),
+		url("/fonts/Pretendard-Thin.subset.woff2") format("woff2"),
+		url("/fonts/Pretendard-Thin.subset.woff") format("woff"),
+		url("/fonts/Pretendard-Thin.otf") format("opentype");
+}
+
+
+
+
+
+/* BASE */
+html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tfoot, tr, th, td, caption, address, article, aside,
+canvas, details, figure, figcaption, footer, header, menu, nav, section, main,
+label, button, select, textarea, input, fieldset, legend, a, span, strong, em, address, dfn, small, i, b {margin: 0; padding: 0; border: 0; list-style: none; font-style: inherit; font-weight: inherit; font-size: inherit; font-family: inherit; line-height: inherit; letter-spacing: inherit; word-break: inherit; word-wrap: inherit; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
+:before, :after {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
+article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section, main {display: block;}
+a, area, button, input, label, select, summary, textarea, [tabindex] {touch-action: manipulation;}
+html {height: 100%; font-family: var(--font-family); font-size: 10px; line-height: 1.5; -webkit-tap-highlight-color: transparent;}
+body {height: 100%; margin: 0; font-size: 1.6rem; font-style: normal; font-weight: normal; line-height: inherit; word-break: keep-all; word-wrap: word-break; letter-spacing: -.1rem; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+[hidden], hr {display: none;}
+img {vertical-align: middle;}
+fieldset, iframe {width: 100%;}
+button, img, a, frame, iframe, fieldset {border: 0;}
+a {text-decoration: none;}
+table {width: 100%; border-spacing: 0; border-collapse: collapse;}
+caption {overflow: hidden; height: 0;}
+legend {overflow: hidden; height: 0;}
+button {overflow: hidden; background-color: transparent; cursor: pointer; color: rgb(0, 0, 0);}
+button::-moz-focus-inner {border: 0px; padding: 0px;}
+select {appearance: none; -webkit-appearance: none; -moz-appearance: none; -o-appearance: none;}
+select::-ms-expand {display: none;}
+input::-ms-clear,
+input::-ms-reveal {display: none; width: 0; height: 0;}
+input::search-decoration,
+input::search-cancel-button,
+input::search-results-button,
+input::search-results-decoration {display: none;}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {display: none;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+input::-webkit-calendar-picker-indicator {-webkit-appearance: none;}
+input::-webkit-autofill,
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {display: none !important; visibility: hidden; position: absolute; right: 0; pointer-events: none;}
+
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 280px) {
+	html {font-size: 7.7px}
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 281px) and (max-width: 320px) {
+	html {font-size: 8.8px}
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 321px) and (max-width: 480px) {
+	html {}
+}
+
+/* Media Query for low resolution Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	html {}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+	html {}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+	html {}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+	html {}
+}
+
+
+
+
+
+html.modal {overflow: hidden; height: 100%;}
+#__next {display: flex; flex-direction: column; height: 100%;}
+
+
+
+
+
+/* Font Weight */
+.fw400 {font-weight: 400rem;}
+.fw500 {font-weight: 500rem;}
+.fw600 {font-weight: 600rem;}
+.fw700 {font-weight: 700rem;}
+.fw800 {font-weight: 800rem;}
+/* Font Size */
+.fs10 {font-size: 1rem;}
+.fs12 {font-size: 1.2rem;}
+.fs14 {font-size: 1.4rem;}
+.fs16 {font-size: 1.6rem;}
+.fs18 {font-size: 1.8rem;}
+.fs20 {font-size: 2rem;}
+.fs22 {font-size: 2.2rem;}
+.fs24 {font-size: 2.4rem;}
+.fs26 {font-size: 2.6rem;}
+.fs28 {font-size: 2.8rem;}
+.fs30 {font-size: 3rem;}
+.fs32 {font-size: 3.2rem;}
+.fs34 {font-size: 3.4rem;}
+.fs36 {font-size: 3.6rem;}
+.fs38 {font-size: 3.8rem;}
+.fs40 {font-size: 4rem;}
+.fs42 {font-size: 4.2rem;}
+.fs44 {font-size: 4.4rem;}
+.fs46 {font-size: 4.6rem;}
+.fs48 {font-size: 4.8rem;}
+
+
+
+
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+h3 {font-size: 2.8rem;}
+h4 {font-size: 2.4rem;}
+h5 {font-size: 1.8rem;}
+h6 {font-size: 1.4rem;}
+
+
+
+
+
+/* Bullet */
+@counter-style number-circle {
+	system: cyclic;
+	symbols: "①" "②" "③" "④" "⑤" "⑥" "⑦" "⑧" "⑨";
+}
+@counter-style number-paren {
+	system: cyclic;
+	symbols: "⑴" "⑵" "⑶" "⑷" "⑸" "⑹" "⑺" "⑻" "⑼" "⑽" "⑾" "⑾" "⑿" "⒀" "⒁" "⒂" "⒃" "⒄" "⒅";
+}
+@counter-style roman-lower {
+	system: cyclic;
+	symbols: "ⅰ" "ⅱ" "ⅲ" "ⅳ" "ⅴ" "ⅵ" "ⅶ" "ⅷ" "ⅸ" "ⅹ" "ⅺ" "ⅻ";
+}
+@counter-style roman-upper {
+	system: cyclic;
+	symbols: "Ⅰ" "Ⅱ" "Ⅲ" "Ⅳ" "Ⅴ" "Ⅵ" "Ⅶ" "Ⅷ" "Ⅸ" "Ⅹ" "Ⅺ" "Ⅻ";
+}
+.bl {display: flex; gap: .4rem;}
+.bl::before {flex-shrink: 0;}
+.bl.star::before {content: '⁕';}
+.bl.dash::before {content: '-';}
+.bl.dot::before {content: '•';}
+.bl.mark::before {content: '※';}
+.bl.number {counter-increment: bullet-number;}
+.bl.number::before {content: counter(bullet-number)'.';}
+.bl.number.circle {counter-increment: bullet-circle;}
+.bl.number.circle::before {content: counter(bullet-circle, number-circle);}
+.bl.number.paren {counter-increment: bullet-paren;}
+.bl.number.paren::before {content: counter(bullet-paren, number-paren);}
+.bl.roman {counter-increment: bullet-lower;}
+.bl.roman::before {content: counter(bullet-lower, roman-lower);}
+.bl.roman.upper {counter-increment: bullet-upper;}
+.bl.roman.upper::before {content: counter(bullet-upper, roman-upper);}
+
+
+
+
+
 /* <UxContainer> */
-.ux-container {position: relative; padding-top: var(--height-header);}
+.ux-container {position: relative; padding-top: var(--header);}
 .ux-container-before,
 .ux-container-after {position: absolute; left: 0; width: 100%;}
 .ux-container-before {top: 0;}
@@ -12,7 +433,7 @@
 
 
 /* <UxHeader> */
-.ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--height-header); border-bottom: .1rem solid var(--light1); background-color: var(--light0); transition: all .25s ease-in-out;}
+.ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--header); border-bottom: .1rem solid var(--divider-gray); background-color: var(--background-default); transition: all .25s ease-in-out;}
 /* <UxHeader> InView */
 .ux-container:not(.before) .ux-header {box-shadow: var(--shadow);}
 /* <UxHeader> z-index */
@@ -123,7 +544,7 @@ html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; he
 /* <UxModal> */
 .ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
 .ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75);}
-.ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--light0);}
+.ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--background-default);}
 /* <UxModal> Section */
 .ux-modal .ux-section.header {padding: 1.6rem;}
 .ux-modal .ux-section.main {padding: 0 1.6rem;}
@@ -193,44 +614,44 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxDivider> */
-.ux-divider {display: block; margin: 0; width: 100%; height: .8rem; border: 0; background-color: var(--light1);}
-.ux-divider.linear {height: .1rem;}
-.ux-divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to right, var(--light2), var(--light2) .1rem, var(--light0) .1rem, var(--light0) .4rem);}
+hr.divider {display: block; margin: 0; width: 100%; height: .8rem; border: 0; background-color: var(--divider-gray);}
+hr.divider.linear {height: .1rem;}
+hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to right, var(--light2), var(--light2) .1rem, var(--light0) .1rem, var(--light0) .4rem);}
 
 
 
 
 
 /* <UxGroup> Default */
-.ux-group.default {--gap: .8rem;}
-.ux-group.default {display: flex; flex-wrap: wrap; gap: var(--gap);}
+.ux-group {--gap: 1.6rem;}
+.ux-group {display: flex; flex-wrap: wrap; gap: var(--gap);}
 /* <UxGroup> Default Row */
-.ux-group.default.row {flex-direction: row;}
-.ux-group.default.row.center {justify-content: center;}
-.ux-group.default.row.left {justify-content: flex-start;}
-.ux-group.default.row.right {justify-content: flex-end;}
+.ux-group.row {flex-direction: row;}
+.ux-group.row.center {justify-content: center;}
+.ux-group.row.left {justify-content: flex-start;}
+.ux-group.row.right {justify-content: flex-end;}
 /* <UxGroup> Default Column */
-.ux-group.default.column {flex-direction: column;}
-.ux-group.default.column.center {align-items: center;}
-.ux-group.default.column.left {align-items: flex-start;}
-.ux-group.default.column.right {align-items: flex-end;}
+.ux-group.column {flex-direction: column;}
+.ux-group.column.center {align-items: center;}
+.ux-group.column.left {align-items: flex-start;}
+.ux-group.column.right {align-items: flex-end;}
 /* <UxGroup> Default Gap */
-.ux-group.default.gap16 {--gap: 1.6rem;}
-.ux-group.default.gap12 {--gap: 1.2rem;}
-.ux-group.default.gap8 {--gap: .8rem;}
-.ux-group.default.gap4 {--gap: .4rem;}
+.ux-group.gap16 {--gap: 1.6rem;}
+.ux-group.gap12 {--gap: 1.2rem;}
+.ux-group.gap8 {--gap: .8rem;}
+.ux-group.gap4 {--gap: .4rem;}
 /* <UxGroup> Default Col */
-.ux-group.default.col1 {--col: 1;}
-.ux-group.default.col2 {--col: 2;}
-.ux-group.default.col3 {--col: 3;}
-.ux-group.default.col4 {--col: 4;}
-.ux-group.default.col5 {--col: 5;}
-.ux-group.default[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+.ux-group.col1 {--col: 1;}
+.ux-group.col2 {--col: 2;}
+.ux-group.col3 {--col: 3;}
+.ux-group.col4 {--col: 4;}
+.ux-group.col5 {--col: 5;}
+.ux-group[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 /* <UxGroup> Default Grow */
-.ux-group.default > * {flex-shrink: 0;}
-.ux-group.default > .small {width: calc(100% / 3);}
-.ux-group.default:not([class*=col]) > :not(.small) {flex-grow: 1;}
-.ux-group.default.auto:not([class*=col]) > :not(.small) {flex-grow: initial;}
+// .ux-group.default > * {flex-shrink: 0;}
+// .ux-group.default > .small {width: calc(100% / 3);}
+// .ux-group.default:not([class*=col]) > :not(.small) {flex-grow: 1;}
+// .ux-group.default.auto:not([class*=col]) > :not(.small) {flex-grow: initial;}
 
 
 
@@ -258,313 +679,179 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 /* <UxButton> Default */
-.ux-button.default {display: inline-flex; justify-content: center; align-items: center; gap: .8rem; transform: translateZ(0); transition: var(--inset-transition);}
-/* <UxButton> Default Align */
-.ux-button.default.left {justify-content: flex-start;}
-.ux-button.default.right {justify-content: flex-end;}
-.ux-button.default > .left {margin-right: auto;}
-.ux-button.default > .right {margin-left: auto;}
-/* <UxButton> Default Size */
-.ux-button.default.h3 {height: 4.8rem;}
-.ux-button.default.h4 {height: 4.4rem;}
-.ux-button.default.h5 {height: 4rem;}
-.ux-button.default.h6 {height: 3.6rem;}
-/* <UxButton> Default Outline */
-.ux-button.default.outline {padding: 0 1.2rem; border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); color: var(--dark1); transition: var(--inset-transition);}
-/* <UxButton> Default Contain */
-.ux-button.default.contain {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--light1);}
+.ux-button.default {--gap: .2rem;}
+.ux-button.default {display: inline-flex; justify-content: center; align-items: center; gap: var(--gap); height: var(--height); border-radius: var(--radius); transform: translateZ(0); transition: var(--inset-transition);}
 /* <UxButton> Default Primary */
-.ux-button.default.primary {padding: 0 1.2rem; border-radius: var(--radius-form); background-color: var(--color1); color: var(--light0);}
+.ux-button.default.primary {background-color: var(--fill-primary-enable); color: var(--text-inverse);}
+.ux-button.default.primary:active {background-color: var(--fill-primary-pressed);}
+.ux-button.default.primary:disabled {background-color: var(--fill-disabled); color: var(--text-disabled);}
 /* <UxButton> Default Secondary */
-.ux-button.default.secondary {}
+.ux-button.default.secondary {background-color: var(--fill-secondary-enable); color: var(--text-default);}
+.ux-button.default.secondary:active {background-color: var(--fill-secondary-pressed);}
+.ux-button.default.secondary:disabled {background-color: var(--fill-disabled ); color: var(--text-disabled);}
 /* <UxButton> Default Tertiary */
-.ux-button.default.tertiary {}
-/* <UxButton> Default Focus */
-.ux-button.default.outline:focus-within {box-shadow: var(--inset-focus);}
-/* <UxButton> Default Disabled */
-.ux-button.default.disabled {opacity: .5;}
+.ux-button.default.tertiary {box-shadow: var(--inset); background-color: var(--background-default); color: var(--text-default);}
+.ux-button.default.tertiary:active {background-color: var(--fill-secondary-pressed);}
+.ux-button.default.tertiary:disabled {background-color: var(--fill-disabled); color: var(--text-disabled);}
+/* <UxButton> Default Tertiary Capsule */
+.ux-button.default.tertiary.capsule {padding: 0 calc(var(--height) / 2); border-radius: calc(var(--height) / 2); box-shadow: var(--inset-primary); color: var(--text-blue);}
+/* <UxButton> Default Size */
+.ux-button.default.h3 {--gap: .8rem; --radius: 1.6rem; --height: 6rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h4 {--gap: .8rem; --radius: 1.6rem; --height: 5.2rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h5 {--gap: .8rem; --radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h3 {--gap: .8rem; --radius: 1.2rem; --height: 4.8rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h4 {--gap: .8rem; --radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h5 {--gap: .2rem; --radius: .8rem; --height: 2.8rem; padding: 0 .8rem; font-weight: 700; font-size: 1.4rem;}
+.ux-button.default.tertiary.capsule.h4 {--gap: .6rem; --height: 4rem; font-weight: 700; font-size: 1.4rem;}
+/* <UxButton> Default Outline */
+.ux-button.default.outline {--radius: 1.6rem; box-shadow: var(--inset); background-color: var(--background-default); color: var(--text-default);}
+.ux-button.default.outline:active {background-color: var(--fill-secondary-pressed);}
+.ux-button.default.outline:disabled {background-color: var(--fill-disabled); color: var(--text-muted);}
+/* <UxButton> Default Contain */
+.ux-button.default.contain {--radius: 1.6rem; background-color: var(--fill-secondary-enable);}
+.ux-button.default.contain:active {background-color: var(--fill-secondary-pressed);}
+.ux-button.default.contain:disabled {--radius: 1.6rem; background-color: var(--fill-disabled); color: var(--text-muted);}
+/* <UxGroup> Role(Input) Button Solid */
+.ux-button.default.solid {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem;  background-color: var(--gray-60); font-weight: 500; font-size: 1.4rem; color: var(--text-inverse);}
+.ux-button.default.solid:active {background-color: var(--gray-70);}
+.ux-button.default.solid:disabled {background-color: var(--gray-40);}
+/* <UxGroup> Role(Input) Button Line */
+.ux-button.default.line {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem; box-shadow: inset 0 0 0 .1rem var(--stroke-enable); background-color: var(--background-default); font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
+.ux-button.default.line:active {box-shadow: 0 0 0 .1rem var(--stroke-pressed); background-color: var(--fill-secondary-pressed);}
+.ux-button.default.line:disabled {box-shadow: 0 0 0 .1rem var(--stroke-disabled); background-color: var(--fill-disabled); color: var(--text-disabled);}
 /* <UxButton> Role */
 .ux-button.select,
 .ux-button.search,
-.ux-button.input {display: inline-flex; justify-content: flex-start; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-/* <UxButton> Role Placeholder */
-.ux-button.select.placeholder,
-.ux-button.search.placeholder,
-.ux-button.input.placeholder {color: var(--light3);}
-/* <UxButton> Role Prefix */
-.ux-button.input .ux-button-prefix {color: var(--dark0);}
-/* <UxButton> Role Suffix */
-.ux-button.input .ux-button-suffix {margin-left: auto; color: var(--dark0);}
+.ux-button.input {flex-grow: 1; display: flex; justify-content: flex-start; align-items: center; gap: .8rem; font-weight: 700; font-size: 1.8rem; color: var(--text-default);}
 /* <UxButton> Role Align */
 .ux-button.input.right {justify-content: flex-end;}
 .ux-button.input.right .ux-button-prefix {margin-right: auto;}
 .ux-button.input.right .ux-button-suffix {margin-left: initial;}
-/* <UxButton> Role Focus */
-.ux-button.select:focus-within,
-.ux-button.search:focus-within,
-.ux-button.input:focus-within {box-shadow: var(--inset-focus);}
-/* <UxButton> Role Valid */
-.ux-button.select.valid,
-.ux-button.search.valid,
-.ux-button.input.valid {box-shadow: var(--inset-valid);}
-.ux-button.select.valid:focus-within,
-.ux-button.search.valid:focus-within,
-.ux-button.input.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxButton> Role Invalid */
-.ux-button.select.invalid,
-.ux-button.search.invalid,
-.ux-button.input.invalid {box-shadow: var(--inset-invalid);}
-.ux-button.select.invalid:focus-within,
-.ux-button.search.invalid:focus-within,
-.ux-button.input.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxButton> Role Readonly */
-.ux-button.select.readonly,
-.ux-button.search.readonly,
-.ux-button.input.readonly {color: var(--dark3);}
-.ux-button.input.readonly .ux-button-prefix,
-.ux-button.input.readonly .ux-button-suffix {color: var(--dark3);}
-.ux-button.select.readonly .ux-icon,
-.ux-button.search.readonly .ux-icon,
-.ux-button.input.readonly .ux-icon {opacity: .5;}
-/* <UxButton> Role Disabled */
-.ux-button.select.disabled,
-.ux-button.search.disabled,
-.ux-button.input.disabled {background-color: var(--light1); color: var(--dark3);}
-.ux-button.input.disabled .ux-button-prefix,
-.ux-button.input.disabled .ux-button-suffix {color: var(--dark3);}
-.ux-button.select.disabled .ux-icon,
-.ux-button.search.disabled .ux-icon,
-.ux-button.input.disabled .ux-icon {opacity: .5;}
 /* <UxButton> Role Progress */
-.ux-button.progress {display: flex; height: var(--height-form); border-radius: var(--radius-form);}
-.ux-button.progress .ux-button-track,
-.ux-button.progress .ux-button-gauge,
-.ux-button.progress .ux-button-fill {display: flex; width: 100%; height: 100%; border-radius: var(--radius-form);}
-.ux-button.progress .ux-button-track {position: relative;}
-.ux-button.progress .ux-button-gauge {overflow: hidden; background-color: var(--light1);}
-.ux-button.progress .ux-button-fill {background-color: var(--color1); transform: translate(-100%, 0) translateZ(0); transition: transform .25s ease-in-out;}
-.ux-button.progress .ux-button-stack {display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.ux-button.progress {position: relative; height: 6rem; background-color: var(--fill-disabled); border-radius: 1.6rem;}
+.ux-button.progress .ux-button-base {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 700; font-size: 1.8rem;}
+.ux-button.progress .ux-button-base:not(.inverse) {color: var(--text-default);}
+.ux-button.progress .ux-button-track {overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 1.6rem;}
+.ux-button.progress .ux-button-gauge {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--fill-primary-enable); transition: clip-path 0.25s ease-in-out;}
+.ux-button.progress .ux-button-base.inverse {color: var(--text-inverse);}
+
+
+
+
+/* <UxForm> */
+.ux-form {display: flex; flex-direction: column; gap: 1.6rem;}
 
 
 
 
 
-/* <UxInput> */
-.ux-input {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-.ux-input .ux-input-base {flex-grow: 1; flex-shrink: 0; flex-basis: 0; width: 100%; border: 0; background-color: transparent; caret-color: var(--dark3);}
-.ux-input .ux-input-base:focus,
-.ux-input .ux-input-base:focus-visible {outline: none;}
-/* <UxInput> Align */
-.ux-input.left .ux-input-base {text-align: left;}
-.ux-input.right .ux-input-base {text-align: right;}
-.ux-input.center .ux-input-base {text-align: center;}
-/* <UxInput> Prefix */
-.ux-input .ux-input-prefix {flex-shrink: 0;}
-.ux-input .ux-input-prefix:empty {display: none;}
-/* <UxInput> Suffix */
-.ux-input .ux-input-suffix {flex-shrink: 0;}
-.ux-input .ux-input-suffix:empty {display: none;}
-/* <UxInput> Timer */
-.ux-input .ux-input-timer {flex-shrink: 0; color: var(--invalid);}
-.ux-input .ux-input-timer:empty {display: none;}
-/* <UxInput> Submit */
-.ux-input .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
-.ux-input .ux-button.submit:hover,
-.ux-input .ux-button.submit:focus {box-shadow: none;}
-/* <UxInput> Focus */
-.ux-input:focus-within {box-shadow: var(--inset-focus);}
-/* <UxInput> Valid */
-.ux-input.valid {box-shadow: var(--inset-valid);}
-.ux-input.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxInput> Invalid */
-.ux-input.invalid {box-shadow: var(--inset-invalid);}
-.ux-input.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxInput> Readonly */
-.ux-input.readonly .ux-input-base,
-.ux-input.readonly .ux-input-prefix,
-.ux-input.readonly .ux-input-suffix,
-.ux-input.readonly .ux-input-timer {color: var(--dark3);}
-/* <UxInput> Disabled */
-.ux-input.disabled {background-color: var(--light1);}
-.ux-input.disabled .ux-input-base,
-.ux-input.disabled .ux-input-prefix,
-.ux-input.disabled .ux-input-suffix,
-.ux-input.disabled .ux-input-timer {color: var(--dark3);}
+/* <UxField> */
+.ux-field {display: flex; flex-direction: column; gap: .4rem;}
+.ux-field .ux-field-message {font-size: 1.4rem; color: var(--text-muted);}
+.ux-field .ux-field-valid {display: none; gap: .2rem; font-size: 1.4rem;}
+.ux-field.valid .ux-field-valid {color: var(--status-success);}
+.ux-field.invalid .ux-field-valid {color: var(--status-error);}
+.ux-field.valid .ux-field-valid,
+.ux-field.invalid .ux-field-valid {display: flex;}
 
 
 
 
 
-/* <UxMasking> */
-.ux-masking {overflow-x: auto; display: flex; align-items: center; position: relative;}
-.ux-masking::-webkit-scrollbar {display: none;}
-/* <UxMasking> Mask */
-.ux-masking .ux-masking-mask {display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
-.ux-masking .ux-masking-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--light2);}
-/* <UxMasking> Input */
-.ux-masking .ux-masking-input {padding: 0; width: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
-.ux-masking .ux-masking-input:focus,
-.ux-masking .ux-masking-input:focus-visible {outline: none;}
-.ux-masking .ux-masking-input::selection {background-color: transparent; /* WebKit/Blink Browsers */}
-.ux-masking .ux-masking-input::-moz-selection {background-color: transparent; /* Gecko Browsers */}
-/* <UxMasking> Enable */
-.ux-masking .ux-masking-item.enabled {background-color: var(--dark2);}
-/* <UxMasking> Readonly, Disabled */
-.ux-masking.readonly .ux-masking-item,
-.ux-masking.disabled .ux-masking-item {background-color: var(--dark3);}
-/* <UxMasking> z-index */
-.ux-masking .ux-masking-mask {z-index: 1;}
-
-
-
-
-
-/* <UxPassword> */
-.ux-password {display: flex; align-items: center; gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-/* <UxPassword> Focus */
-.ux-password:focus-within {box-shadow: var(--inset-focus);}
-/* <UxPassword> Valid */
-.ux-password.valid {box-shadow: var(--inset-valid);}
-.ux-password.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxPassword> Invalid */
-.ux-password.invalid {box-shadow: var(--inset-invalid);}
-.ux-password.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxPassword> Disabled */
-.ux-password.disabled {background-color: var(--light1);}
-/* <UxPassword> Masking */
-.ux-password .ux-masking {flex-grow: 1; height: 100%;}
-
-
-
-
-
-/* <UxTextarea> */
-.ux-textarea {display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem var(--radius-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-.ux-textarea .ux-textarea-base {display: flex; flex-direction: column;}
-.ux-textarea .ux-textarea-input {overflow: hidden; width: 100%; border: 0; background-color: transparent; line-height: 2.4rem; caret-color: var(--dark3); white-space: normal; word-break: break-all; resize: none;}
-.ux-textarea .ux-textarea-input:focus,
-.ux-textarea .ux-textarea-input:focus-visible {outline: none;}
-/* <UxTextarea> Count */
-.ux-textarea .ux-textarea-count {text-align: right; font-size: 1.4rem; line-height: 1; color: var(--light3);}
-/* <UxTextarea> Focus */
-.ux-textarea:focus-within {box-shadow: var(--inset-focus);}
-/* <UxTextarea> Valid */
-.ux-textarea.valid {box-shadow: var(--inset-valid);}
-.ux-textarea.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxTextarea> Invalid */
-.ux-textarea.invalid {box-shadow: var(--inset-invalid);}
-.ux-textarea.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxTextarea> Readonly */
-.ux-textarea.readonly .ux-textarea-base {color: var(--dark3);}
-/* <UxTextarea> Disabled */
-.ux-textarea.disabled {background-color: var(--light1);}
-
-
-
-
-
-/* <UxFile> */
-.ux-file {display: flex; align-items: center;}
-.ux-file .ux-file-base {position: relative;}
-.ux-file .ux-file-input {overflow: hidden; visibility: visible; position: absolute; top: 0; left: 0; width: 0; height: 0;}
-/* <UxFile> Default */
-.ux-file.default {gap: .8rem; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition);}
-.ux-file.default .ux-file-base {display: flex; align-items: center; flex-grow: 1; flex-shrink: 0; flex-basis: 0; width: 100%; border: 0;}
-.ux-file.default .ux-file-base:focus,
-.ux-file.default .ux-file-base:focus-visible {outline: none;}
-.ux-file.default .ux-file-label {color: var(--light3);}
-.ux-file.default .ux-file-label.path {color: var(--dark0);}
-.ux-file.default .ux-file-button {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
-/* <UxFile> Focus */
-.ux-file.default:focus-within {box-shadow: var(--inset-focus);}
-/* <UxFile> Valid */
-.ux-file.default.valid {box-shadow: var(--inset-valid);}
-.ux-file.default.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxFile> Invalid */
-.ux-file.default.invalid {box-shadow: var(--inset-invalid);}
-.ux-file.default.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxFile> Readonly */
-.ux-file.default.readonly .ux-file-label {color: var(--dark3);}
-/* <UxFile> Disabled */
-.ux-file.default.disabled {background-color: var(--light1);}
-.ux-file.default.disabled .ux-file-label {color: var(--dark3);}
-/* <UxFile> Slot */
-.ux-file.slot .ux-button {flex-grow: 1;}
-
-
-
-
-
-/* <UxSelect> */
-.ux-select {display: flex;}
-.ux-select .ux-button {flex-grow: 1;}
-/* <UxOptions> */
-.ux-modal .ux-section.options {padding: 1.6rem 0;}
-.ux-options {display: flex; flex-direction: column;}
-.ux-options li + li {border-top: .1rem solid var(--light1);}
-/* <UxOption> */
-.ux-option {display: flex; align-items: center; padding: 1.2rem 0;}
-.ux-option-button {flex-grow: 1; text-align: left;}
-/* <UxOption> Selected */
-.ux-option.selected .ux-option-button {color: var(--color1);}
-.ux-option.selected .ux-icon {background-color: var(--color1);}
-
-
-
-
-
-/* <UxGroup> Input */
-.ux-group.input {--gap: .8rem;}
-.ux-group.input {display: flex; align-items: center; gap: var(--gap); position: relative; padding: 0 var(--radius-form); height: var(--height-form); border-radius: var(--radius-form); box-shadow: var(--inset); background-color: var(--light0); transition: var(--inset-transition); transform: translateZ(0);}
-.ux-group.input > * {flex-shrink: 0;}
-/* <UxGroup> Focus */
+/* <UxGroup> Role(Input) Default */
+.ux-group.input {--gap: 0rem;}
+.ux-group.input {display: flex; flex-direction: column; justify-content: center; position: relative; padding: 1.2rem 2rem; min-height: 8rem; border-radius: 1.6rem; box-shadow: var(--inset); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; z-index: 2; top: 50%; left: 50%; padding: 1rem 1.8rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: 1.6rem; background-color: var(--background-default); font-weight: 700; font-size: 1.8rem; color: var(--text-disabled); transform: translate(-50%, -50%);}
+.ux-group.input .ux-group-label {display: flex; align-items: center; height: 2.4rem; font-weight: 500; font-size: 1.4rem; color: var(--text-muted);}
+.ux-group.input .ux-group-blend {display: flex; align-items: center; gap: .8rem; min-height: 3.2rem;}
+.ux-group.input .ux-group-blend > * {flex-shrink: 0;}
+/* <UxGroup> Role(Input) Placeholder Motion */
+.ux-group.input.focused .ux-group-placeholder {animation-name: input-placeholder-hidden; animation-duration: .1s; animation-direction: alternate; animation-fill-mode: forwards; animation-iteration-count: 1; animation-timing-function: linear; background-color: transparent;}
+@keyframes input-placeholder-hidden {
+	0% {
+		top: 1.2rem;
+		height: calc(100% - .8rem);
+		font-weight: 700;
+		font-size: 1.8rem;
+		color: var(--color-text-disabled);
+		transform: translate(-50%, 0);
+		opacity: 1;
+	}
+	99% {
+		top: 1.2rem;
+		height: 2.4rem;
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: var(--color-gray-60);
+		transform: translate(-50%, 0);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+.ux-group.input.focused .ux-group-label {
+	animation-name: input-label-create; animation-duration: .1s; animation-direction: alternate; animation-fill-mode: forwards; animation-iteration-count: 1; animation-timing-function: linear;
+}
+@keyframes input-label-create {
+	0% { opacity: 0; }
+	99% { opacity: 0; }
+	100% { opacity: 1; }
+}
+/* <UxGroup> Role(Input) Focus */
 .ux-group.input:focus-within {box-shadow: var(--inset-focus);}
-/* <UxGroup> Valid */
+/* <UxGroup> Role(Input) Valid */
 .ux-group.input.valid {box-shadow: var(--inset-valid);}
-.ux-group.input.valid:focus-within {box-shadow: var(--inset-valid-focus);}
-/* <UxGroup> Invalid */
+/* <UxGroup> Role(Input) Invalid */
 .ux-group.input.invalid {box-shadow: var(--inset-invalid);}
-.ux-group.input.invalid:focus-within {box-shadow: var(--inset-invalid-focus);}
-/* <UxGroup> Disabled */
-.ux-group.input.disabled {background-color: var(--light1);}
-/* <UxGroup> Placeholder */
-.ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; top: 50%; left: 50%; padding: 0 1.2rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: var(--radius-form); background-color: var(--light0); color: var(--light3); transform: translate(-50%, -50%); pointer-events: none;}
-.ux-group.input .ux-group-placeholder:empty,
-.ux-group.input:focus-within .ux-group-placeholder {display: none;}
-.ux-group.input .ux-group-placeholder {z-index: 1;}
-/* <UxGroup> Input */
-.ux-group.input .ux-input {padding: 0; box-shadow: none; background-color: transparent;}
-.ux-group.input .ux-input:focus-within {box-shadow: none;}
-.ux-group.input.readonly .ux-input,
-.ux-group.input.disabled .ux-input {background-color: transparent;}
-.ux-group.input .ux-input.fix {flex-shrink: 0;}
-/* <UxGroup> Password */
-.ux-group.input .ux-password {flex-shrink: 0; padding: 0; box-shadow: none; background-color: transparent;}
-.ux-group.input.readonly .ux-password,
-.ux-group.input.disabled .ux-password {background-color: transparent;}
-/* <UxGroup> Select */
-.ux-group.input .ux-select {align-items: center; gap: .8rem;}
-.ux-group.input .ux-select .ux-button.select {padding: initial; border-radius: initial; box-shadow: initial; background-color: transparent;}
-/* <UxGroup> Button */
-.ux-group.input .ux-button.input {padding: initial; border-radius: initial; box-shadow: initial; background-color: transparent;}
-/* <UxGroup> Dash */
+/*<UxGroup> Role(Input) Readonly */
+.ux-group.input.readonly {background-color: var(--gray-20);}
+.ux-group.input.readonly .ux-group-placeholder {display: none;}
+/*<UxGroup> Role(Input) Disabled */
+.ux-group.input.disabled {background-color: var(--gray-30);}
+.ux-group.input.disabled .ux-group-placeholder {display: none;}
+.ux-group.input.disabled .ux-input-base {color: var(--text-muted)!important;}
+/* <UxGroup> Role(Input) Input */
+.ux-group.input .ux-input {display: flex; align-items: center; gap: .8rem;}
+.ux-group.input .ux-input .ux-input-base {flex-grow: 1; flex-shrink: 0; flex-basis: 0; width: 100%; border: 0; background-color: transparent; font-weight: 700; font-size: 1.8rem; color: var(--text-default);}
+.ux-group.input .ux-input-base::placeholder {font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-group.input .ux-input .ux-input-base:focus,
+.ux-group.input .ux-input .ux-input-base:focus-visible {outline: none;}
+/* <UxGroup> Role(Input) Select */
+.ux-group.input .ux-select {display: flex; align-items: center; gap: .8rem; font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-group.input .ux-select.selected {color: var(--text-default);}
+.ux-group.input.disabled .ux-select.selected {color: var(--text-muted);}
+/* <UxGroup> Role(Input) Textarea */
+.ux-group.input textarea.ux-input-base {overflow: hidden; width: 100%; border: 0; background-color: transparent; font-weight: 700; font-size: 1.8rem; color: var(--text-default); line-height: 3.2rem; white-space: normal; word-break: break-all; resize: none;}
+.ux-group.input textarea.ux-input-base:focus,
+.ux-group.input textarea.ux-input-base:focus-visible {outline: none;}
+/* <UxGroup> Role(Input) Address */
+.ux-group.input.address .ux-button {flex-shrink: initial; font-weight: 700; font-size: 1.8rem; color: var(--text-disabled); text-align: left;}
+.ux-group.input.address.selected .ux-button {color: var(--text-default);}
+.ux-group.input.address.disabled .ux-button {color: var(--text-muted);}
+/* <UxGroup> Role(Input) File */
+.ux-group.input .ux-file-base {overflow: hidden; visibility: visible; position: absolute; top: 0; left: 0; width: 0; height: 0;}
+.ux-group.input .ux-file-label {flex-grow: 1; font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-group.input.selected .ux-file-label {color: var(--text-default);}
+/* <UxFile> Disabled */
+.ux-group.input.disabled .ux-file-label {color: var(--text-muted);}
+/* <UxGroup> Role(Input) Dash */
 .ux-group.input .ux-input.dash::before,
-.ux-group.input .ux-password.dash::before,
+.ux-group.input .ux-masking.dash::before,
 .ux-group.input .ux-select.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
-/* <UxGroup> Last */
-.ux-group.input .ux-input.last,
-.ux-group.input .ux-password.last,
-.ux-group.input .ux-select.last {flex-grow: 1; flex-shrink: initial;}
-/* <UxGroup> Submit */
-.ux-group.input .ux-button.submit {flex-shrink: 0; padding: 0 calc(var(--height-submit) / 2.75); width: initial; min-height: initial; height: var(--height-submit); border-radius: calc(var(--height-submit) / 2); background-color: var(--light1); font-size: 1.4rem; box-shadow: none;}
-.ux-group.input .ux-button.submit:hover,
-.ux-group.input .ux-button.submit:focus {box-shadow: none;}
-/* <UxGroup> Input Gap */
+/* <UxGroup> Role(Input) Fill */
+.ux-group.input .ux-input.fill,
+.ux-group.input .ux-masking.fill,
+.ux-group.input .ux-select.fill {flex-grow: 1; flex-shrink: initial;}
+/* <UxGroup> Role(Input) Inside */
+.ux-group.input.inside {display: flex; flex-direction: column; justify-content: center; position: relative; padding: initial; min-height: initial; border-radius: initial; box-shadow: initial; transition: var(--inset-transition);}
+/* <UxGroup> Role(Input) Gap */
 .ux-group.input.gap4 {--gap: .4rem;}
 .ux-group.input.gap8 {--gap: .8rem;}
 .ux-group.input.gap12 {--gap: 1.2rem;}
 .ux-group.input.gap16 {--gap: 1.6rem;}
-/* <UxGroup> Input Col */
+/* <UxGroup> Role(Input) Col */
 .ux-group.input.col1 {--col: 1;}
 .ux-group.input.col2 {--col: 2;}
 .ux-group.input.col3 {--col: 3;}
@@ -574,66 +861,94 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 
 
 
+/* <UxMasking> */
+.ux-masking {overflow-x: auto; display: flex; align-items: center; gap: .8rem;}
+.ux-masking::-webkit-scrollbar {display: none;}
+/* <UxMasking> Wrap */
+.ux-masking .ux-masking-wrap {position: relative;}
+/* <UxMasking> Mask */
+.ux-masking .ux-masking-mask {display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
+.ux-masking .ux-masking-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--gray-50);}
+/* <UxMasking> Input */
+.ux-masking .ux-masking-base {padding: 0; width: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
+.ux-masking .ux-masking-base::placeholder {font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-masking .ux-masking-base:focus,
+.ux-masking .ux-masking-base:focus-visible {outline: none;}
+.ux-masking .ux-masking-base::selection {background-color: transparent; /* WebKit/Blink Browsers */}
+.ux-masking .ux-masking-base::-moz-selection {background-color: transparent; /* Gecko Browsers */}
+/* <UxMasking> Enable */
+.ux-masking .ux-masking-item.enabled {background-color: var(--text-subtle);}
+/* <UxMasking> Readonly, Disabled */
+.ux-masking.readonly .ux-masking-item,
+.ux-masking.disabled .ux-masking-item {background-color: var(--gray-60);}
+/* <UxMasking> z-index */
+.ux-masking .ux-masking-mask {z-index: 1;}
+
+
+
+
+
+
+
+
+
+
+
+/* <UxOptions> */
+.ux-modal .ux-section.options {padding: 1.6rem 0;}
+.ux-options {display: flex; flex-direction: column;}
+.ux-options li + li {border-top: .1rem solid var(--light1);}
+/* <UxOption> */
+.ux-option {display: flex; align-items: center; padding: 1.2rem 0;}
+.ux-option-button {flex-grow: 1; text-align: left;}
+/* <UxOption> Selected */
+.ux-option.selected .ux-option-button {color: var(--brand-blue);}
+.ux-option.selected .ux-icon {background-color: var(--brand-blue);}
+
+
+
+
+
 /* <UxCheckbox> */
 .ux-checkbox {display: inline-flex;}
 .ux-checkbox .ux-checkbox-base {display: inline-flex; position: relative; align-items: center; gap: .8rem; cursor: pointer;}
 .ux-checkbox .ux-checkbox-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0;}
-.ux-checkbox .ux-checkbox-label {flex-shrink: 0;}
-.ux-checkbox .ux-icon {flex-shrink: 0; pointer-events: none;}
-/* <UxCheckbox> Checked */
-.ux-checkbox.checked .ux-icon {background-color: var(--color1);}
+.ux-checkbox .ux-checkbox-label {font-weight: 500; font-size: 1.8rem; color: var(--text-subtle);}
 /* <UxCheckbox> Disabled */
-.ux-checkbox.disabled .ux-checkbox-label {color: var(--dark3);}
-.ux-checkbox.disabled .ux-icon {opacity: .5;}
+.ux-checkbox.disabled .ux-checkbox-label {color: var(--text-muted);}
+/* <UxCheckbox> Switch */
+.ux-checkbox.switch {--size: 2rem; --gap: .3rem;}
+.ux-checkbox.switch {display: flex; align-items: center; gap: .8rem;}
+.ux-checkbox.switch .ux-checkbox-base {display: inline-flex; align-items: center; position: relative; padding: var(--gap); width: calc((var(--size) + var(--gap)) * 2); height: calc(var(--size) + var(--gap) * 2); border-radius: calc((var(--size) + var(--gap) * 2) / 2); background-color: var(--gray-50); transition: background-color .15s ease-in-out;}
+.ux-checkbox.switch .ux-checkbox-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
+.ux-checkbox.switch .ux-checkbox-ball {position: absolute; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--background-default); box-shadow: 0 .2rem .8rem 0 rgba(0, 0, 0, .16); transition: left .15s ease-in-out;}
+/* <UxCheckbox> Switch Checked */
+.ux-checkbox.switch.checked .ux-checkbox-base {background-color: var(--primary-80);}
+.ux-checkbox.switch.checked .ux-checkbox-ball {top: var(--gap); left: calc(100% - var(--size) - var(--gap));}
+/* <UxCheckbox> Switch z-index */
+.ux-checkbox.switch .ux-checkbox-ball {z-index: 1;}
 
 
 
 
 
-/* <UxGroup> Checkbox */
-.ux-group.checkbox {display: flex;flex-wrap: wrap;gap: 1.6rem;}
-.ux-group.checkbox .ux-checkbox {flex-grow: 1;}
-/* <UxGroup> Checkbox Column */
-.ux-group.checkbox.column {flex-direction: column;}
-
-
-
-
-
-/* <UxRadio> */
-.ux-radio {display: inline-flex;}
-.ux-radio .ux-radio-base {display: inline-flex; position: relative; align-items: center; gap: .8rem; cursor: pointer;}
-.ux-radio .ux-radio-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-radio .ux-radio-label {flex-shrink: 0;}
-.ux-radio .ux-icon {flex-shrink: 0;}
-/* <UxRadio> Checked */
-.ux-radio.checked .ux-icon {background-color: var(--color1);}
-/* <UxRadio> Disabled */
-.ux-radio.disabled .ux-radio-label {color: var(--dark3);}
-.ux-radio.disabled .ux-icon {opacity: .5;}
-
-
-
-
-
-/* <UxGroup> Radio */
-.ux-group.radio .ux-group-scroll {display: flex; flex-wrap: wrap; gap: 1.6rem;}
-.ux-group.radio .ux-radio {flex-grow: 1;}
-/* <UxGroup> Radio Column */
-.ux-group.radio.column .ux-radio-scroll {flex-direction: column;}
-/* <UxGroup> Radio Gap */
-.ux-group.radio.gap8 .ux-group-scroll {gap: .8rem;}
-.ux-group.radio.gap12 .ux-group-scroll {gap: 1.2rem;}
-.ux-group.radio.gap16 .ux-group-scroll {gap: 1.6rem;}
-/* <UxGroup> Radio Chip */
-.ux-group.radio.chip .ux-group-scroll {--height: 3.6rem; gap: .8rem;}
-.ux-group.radio.chip .ux-radio {flex-grow: initial; height: var(--height); border-radius: calc(var(--height) / 2); background-color: var(--light1); transition: background-color .1s ease-in-out;}
-.ux-group.radio.chip .ux-radio-base {padding: 0 calc(var(--height) / 3); width: 100%; height: 100%;}
-.ux-group.radio.chip .ux-radio-label {line-height: 1;}
-.ux-group.radio.chip .ux-radio .ux-icon {display: none;}
-/* <UxGroup> Radio Chip Checked */
-.ux-group.radio.chip .ux-radio.checked {background-color: var(--color1); color: var(--light0);}
-/* <UxGroup> Radio Scroll */
+/* <UxGroup> Rol(Radio) */
+.ux-group.radio .ux-radio {display: inline-flex;}
+.ux-group.radio .ux-radio .ux-radio-base {display: inline-flex; position: relative; align-items: center; gap: .8rem; cursor: pointer;}
+.ux-group.radio .ux-radio .ux-radio-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
+.ux-group.radio .ux-radio .ux-radio-label {font-weight: 500; font-size: 1.8rem; color: var(--text-subtle);}
+/* <UxGroup> Rol(Radio) Disabled */
+.ux-group.radio .ux-radio.disabled .ux-radio-label {color: var(--text-muted);}
+/* <UxGroup> Rol(Radio) Chip */
+.ux-group.radio.chip {--height: 4.8rem; gap: .8rem;}
+.ux-group.radio.chip .ux-radio {flex-grow: initial; height: var(--height); border-radius: calc(var(--height) / 2); background-color: var(--background-subtle); transition: background-color .1s ease-in-out;}
+.ux-group.radio.chip .ux-radio-base {padding: 0 calc(var(--height) / 2); width: 100%; height: 100%;}
+.ux-group.radio.chip .ux-radio-label {color: var(--text-muted);}
+.ux-group.radio.chip .ux-radio i.icons.radio {display: none;}
+/* <UxGroup> Rol(Radio) Chip Checked */
+.ux-group.radio.chip .ux-radio.checked {background-color: var(--primary-80);}
+.ux-group.radio.chip .ux-radio.checked .ux-radio-label {color: var(--text-inverse);}
+/* <UxGroup> Rol(Radio) Scroll */
 .ux-group.radio.scroll {position: relative;}
 .ux-group.radio.scroll::before,
 .ux-group.radio.scroll::after {content: ''; position: absolute; top: 0; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
@@ -641,88 +956,55 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-group.radio.scroll::after {right: 0; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
 .ux-group.radio.scroll:not(.before)::before {opacity: 1;}
 .ux-group.radio.scroll:not(.after)::after {opacity: 1;}
-.ux-group.radio.scroll .ux-group-scroll {flex-wrap: initial; overflow-x: auto;}
+.ux-group.radio.scroll .ux-group-scroll {display: flex; gap: .8rem; overflow-x: auto;}
 .ux-group.radio.scroll .ux-group-scroll::-webkit-scrollbar {display: none;}
 .ux-group.radio.scroll .ux-group-before,
 .ux-group.radio.scroll .ux-group-after {flex-shrink: 0; width: .1rem; height: .1rem;}
 .ux-group.radio.scroll .ux-group-before {margin-right: -.9rem;}
 .ux-group.radio.scroll .ux-group-after {margin-left: -.9rem;}
-/* <UxGroup> Radio Expand */
-.ux-group.radio.scroll.expand {display: flex;}
+/* <UxGroup> Rol(Radio) Scroll Expand */
+.ux-group.radio.scroll.expand {display: flex; flex-wrap: initial;}
 .ux-group.radio.scroll.expand .ux-group-scroll {width: calc(100% - 3.2rem);}
-.ux-group.radio.scroll.expand .ux-group-expand {flex-shrink: 0;}
-.ux-group.radio.scroll.expand .ux-group-expand {display: inline-flex; justify-content: center; align-items: center; width: 3.2rem; height: 3.2rem;}
+.ux-group.radio.scroll.expand .ux-group-expand {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: 3.2rem; height: var(--height);}
 .ux-group.radio.scroll.expand:not(.after)::after {right: 3.2rem; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 75%);}
-/* <UxGroup> Radio Expand Expanded */
+/* <UxGroup> Rol(Radio) Scroll Expand Expanded */
 .ux-group.radio.scroll.expand.expanded .ux-group-scroll {flex-wrap: wrap;}
 .ux-group.radio.scroll.expand.expanded::before,
 .ux-group.radio.scroll.expand.expanded::after {display: none;}
-/* <UxGroup> Radio z-index */
+/* <UxGroup> Rol(Radio) Scroll z-index */
 .ux-group.radio.scroll::before,
 .ux-group.radio.scroll::after {z-index: 1;}
-
-
-
-
-
-/* <UxSwitch> */
-.ux-switch {--size: 3rem; --gap: .4rem;}
-.ux-switch {display: flex; align-items: center; gap: .8rem;}
-.ux-switch .ux-switch-base {display: inline-flex; align-items: center; position: relative; padding: var(--gap); width: calc((var(--size) + var(--gap)) * 2); height: calc(var(--size) + var(--gap) * 2); border-radius: calc((var(--size) + var(--gap) * 2) / 2); background-color: var(--light1); transition: background-color .15s ease-in-out;}
-.ux-switch .ux-switch-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-switch .ux-switch-ball {position: absolute; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--light0); box-shadow: var(--shadow); transition: left .15s ease-in-out;}
-.ux-switch .ux-switch-base::before,
-.ux-switch .ux-switch-base::after {width: var(--size); font-size: 1.4rem; text-align: center; opacity: 0; transition: opacity .15s ease-in-out;}
-.ux-switch .ux-switch-base::before {content: 'ON'; margin-right: auto; color: var(--light0);}
-.ux-switch .ux-switch-base::after {content: 'OFF'; margin-left: auto; color: var(--dark3); opacity: 1;}
-/* <UxSwitch> Checked */
-.ux-switch.checked .ux-switch-base {background-color: var(--color1);}
-.ux-switch.checked .ux-switch-ball {top: var(--gap); left: calc(100% - var(--size) - var(--gap));}
-.ux-switch.checked .ux-switch-base::before {opacity: 1;}
-.ux-switch.checked .ux-switch-base::after {opacity: 0;}
-/* <UxSwitch> z-index */
-.ux-switch .ux-switch-ball {z-index: 1;}
-
-
-
-
-
-/* <UxToggle> */
-.ux-toggle {display: flex; height: var(--height-form);}
-.ux-toggle .ux-toggle-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); width: 100%; height: 100%; cursor: pointer; transition: var(--inset-transition);}
-.ux-toggle .ux-toggle-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: var(--radius-form); transform: translate(-50%, -50%) translateZ(0); transition: var(--inset-transition);}
-.ux-toggle .ux-toggle-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-toggle .ux-toggle-label {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-/* <UxToggle> Checked */
-.ux-toggle.checked .ux-toggle-base::before {box-shadow: var(--inset-color-focus);}
-
-
-
-
-
-/* <UxGroup> Toggle */
-.ux-group.toggle {--col: 2; --gap: 0rem;}
-.ux-group.toggle {display: flex; flex-wrap: wrap; gap: var(--gap); width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to left, var(--light0), var(--light0) var(--radius-form), transparent var(--radius-form), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height-form), var(--light1) var(--height-form), var(--light1) calc(var(--height-form) + .1rem)); background-color: var(--light0);}
-.ux-group.toggle .ux-toggle {position: relative; flex-shrink: 0; width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
-.ux-group.toggle .ux-toggle:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height-form) / 3); background-color: var(--light1); transform: translateY(-50%);}
-.ux-group.toggle .ux-toggle.checked + .ux-toggle::before {display: none;}
-/* <UxGroup> Toggle Col */
-.ux-group.toggle.col1 {--col: 1;}
-.ux-group.toggle.col2 {--col: 2;}
-.ux-group.toggle.col3 {--col: 3;}
-.ux-group.toggle.col4 {--col: 4;}
-.ux-group.toggle.col1 .ux-toggle:nth-child(1n + 1)::before,
-.ux-group.toggle.col2 .ux-toggle:nth-child(2n + 1)::before,
-.ux-group.toggle.col3 .ux-toggle:nth-child(3n + 1)::before,
-.ux-group.toggle.col4 .ux-toggle:nth-child(4n + 1)::before {display: none;}
-/* <UxGroup> Toggle Disabled */
-.ux-group.toggle.disabled .ux-toggle .ux-toggle-base {color: var(--light3);}
-.ux-group.toggle.disabled .ux-toggle.checked .ux-toggle-base::before {box-shadow: var(--inset-focus);}
-/* <UxGroup> Toggle Split */
-.ux-group.toggle.split {--gap: .8rem;}
-.ux-group.toggle.split {gap: var(--gap); background-image: initial; box-shadow: initial;}
-.ux-group.toggle.split .ux-toggle {border-radius: var(--radius-form); box-shadow: var(--inset);}
-.ux-group.toggle.split .ux-toggle::before {display: none;}
+/* <UxGroup> Role(Radio) Block */
+.ux-group.radio.block {--col: 2; --gap: 0rem; --radius: 1.2rem; --height: 4.8rem;}
+.ux-group.radio.block {display: flex; flex-wrap: wrap; gap: var(--gap); width: 100%; border-radius: var(--radius); box-shadow: var(--inset); background-image: repeating-linear-gradient(to right, var(--background-default), var(--background-default) var(--radius), transparent var(--radius), transparent calc(100%)), repeating-linear-gradient(to left, var(--background-default), var(--background-default) var(--radius), transparent var(--radius), transparent calc(100%)), repeating-linear-gradient(to bottom, transparent, transparent var(--height), var(--border-default) var(--height), var(--border-default) calc(var(--height) + .1rem)); background-color: var(--background-default);}
+.ux-group.radio.block .ux-radio {flex-shrink: 0; flex-grow: initial; justify-content: center; position: relative; height: var(--height);}
+.ux-group.radio.block .ux-radio:not(:first-of-type):not(.checked)::before {content: ""; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height) / 3); background-color: var(--border-default); transform: translateY(-50%);}
+.ux-group.radio.block .ux-radio.checked + .ux-radio::before {display: none;}
+.ux-group.radio.block .ux-radio-base {position: relative; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius); width: 100%; height: 100%; cursor: pointer; transition: var(--inset-transition);}
+.ux-group.radio.block .ux-radio-base::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: var(--radius); transform: translate(-50%, -50%) translateZ(0); transition: var(--inset-transition);}
+.ux-group.radio.block .ux-radio-base i.icons.radio {display: none;}
+.ux-group.radio.block .ux-radio-input[type=radio] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
+.ux-group.radio.block .ux-radio-label {color: var(--text-muted);}
+/* <UxGroup> Role(Radio) Block Checked */
+.ux-group.radio.block .ux-radio.checked .ux-radio-label {color: var(--text-default);}
+.ux-group.radio.block .ux-radio.checked .ux-radio-base::before {box-shadow: var(--inset-focus);}
+/* <UxGroup> Role(Radio) Block Col */
+.ux-group.radio.block.col1 {--col: 1;}
+.ux-group.radio.block.col2 {--col: 2;}
+.ux-group.radio.block.col3 {--col: 3;}
+.ux-group.radio.block.col4 {--col: 4;}
+.ux-group.radio.block.col1 .ux-radio:nth-child(1n + 1)::before,
+.ux-group.radio.block.col2 .ux-radio:nth-child(2n + 1)::before,
+.ux-group.radio.block.col3 .ux-radio:nth-child(3n + 1)::before,
+.ux-group.radio.block.col4 .ux-radio:nth-child(4n + 1)::before {display: none;}
+/* <UxGroup> Role(Radio) Block Disabled */
+.ux-group.radio.block.disabled .ux-radio .ux-radio-base {color: var(--text-disabled);}
+.ux-group.radio.block.disabled .ux-radio.checked .ux-radio-base::before {box-shadow: var(--inset-focus);}
+/* <UxGroup> Role(Radio) Block Split */
+.ux-group.radio.block.split {--gap: .8rem;}
+.ux-group.radio.block.split {gap: var(--gap); background-image: initial; box-shadow: initial;}
+.ux-group.radio.block.split .ux-radio {border-radius: var(--radius); box-shadow: var(--inset);}
+.ux-group.radio.block.split .ux-radio::before {display: none;}
 
 
 
@@ -745,87 +1027,99 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxGroup> Card */
 .ux-group.card {--col: 1; --gap: .8rem;}
 .ux-group.card {display: flex; flex-wrap: wrap; gap: var(--gap);}
-.ux-group.card .ux-card {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
-/* <UxGroup> Card Gap */
-.ux-group.card.gap16 {--gap: 1.6rem;}
-.ux-group.card.gap12 {--gap: 1.2rem;}
-.ux-group.card.gap8 {--gap: .8rem;}
-.ux-group.card.gap4 {--gap: .4rem;}
-/* <UxGroup> Card Col */
-.ux-group.card.col1 {--col: 1;}
-.ux-group.card.col2 {--col: 2;}
-.ux-group.card.col3 {--col: 3;}
-.ux-group.card.col4 {--col: 4;}
 
 
 
 
 
 /* <UxCollapse> */
-.ux-collapse {display: flex; flex-direction: column; border-radius: var(--radius-form); box-shadow: var(--inset);}
+.ux-collapse {display: flex; flex-direction: column;}
 /* <UxCollapse> Summary */
-.ux-collapse-summary {display: flex; align-items: center; padding-left: var(--radius-form); min-height: var(--height-form);}
+.ux-collapse-summary {display: flex; align-items: center;}
 .ux-collapse-summary .ux-collapse-content {margin-right: auto;}
-.ux-collapse-summary .ux-collapse-button {flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); height: var(--height-form);}
+.ux-collapse-summary .ux-collapse-button {flex-shrink: 0; display: flex; justify-content: center; align-items: center;}
 /* <UxCollapse> Details */
-.ux-collapse-details {overflow: hidden; max-height: 0; box-shadow: var(--index); transition: max-height .15s ease-in-out;}
-.ux-collapse-details .ux-collapse-content {padding: 0 1.2rem 1.2rem 1.2rem;}
+.ux-collapse-details {overflow: hidden; max-height: 0; transition: max-height .15s ease-in-out;}
+.ux-collapse.calc-size .ux-collapse-details {max-height: none!important; height: 0; transition: height .2s ease-in-out;}
 /* <UxCollapse> Expanded */
 .ux-collapse.expanded .ux-collapse-details {max-height: auto;}
+.ux-collapse.calc-size.expanded .ux-collapse-details {height: auto; height: calc-size(auto, size);}
 /* <UxCollapse> Entire */
 .ux-collapse-summary.entire {padding-left: initial;}
-.ux-collapse-summary.entire .ux-collapse-button {justify-content: flex-start; padding: 0 var(--radius-form); width: 100%; min-height: var(--height-form); height: initial;}
+.ux-collapse-summary.entire .ux-collapse-button {justify-content: flex-start; width: 100%; height: initial;}
 .ux-collapse-summary.entire .ux-collapse-content {text-align: left;}
-.ux-collapse-summary.entire .ux-icon {margin-left: var(--radius-form);}
 
 
 
 
 
 /* <UxGroup> Collapse */
-.ux-group.collapse {overflow: hidden; width: 100%; border-radius: var(--radius-form); border: .1rem solid var(--light2); background-color: var(--light0);}
-.ux-group.collapse .ux-collapse {border-radius: initial; box-shadow: initial;}
-.ux-group.collapse .ux-collapse + .ux-collapse {border-top: .1rem solid var(--light2);}
-/* <UxGroup> Collapse Sample */
-.ux-group.collapse.sample {border-radius: initial; border: initial; background-color: var(--light1);}
-.ux-group.collapse.sample .ux-collapse-summary .ux-collapse-content {font-weight: 600;}
-.ux-group.collapse.sample .ux-collapse-details .ux-collapse-content {font-size: 1.4rem;}
+.ux-group.collapse {--gap: 0; flex-direction: column;}
 
 
 
 
 
 /* <UxTab> */
-.ux-tab {--height: 4rem;}
-.ux-tab {width: 100%; background-color: var(--light0)}
-.ux-tab .ux-tab-base {overflow: hidden}
-.ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1);}
-.ux-tab .ux-tab-list {display: flex; position: relative;}
-.ux-tab .ux-tab-button {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center;padding: 0 1.6rem; height: var(--height); box-shadow: inset 0 -.1rem 0 transparent; color: var(--dark3); transition: box-shadow .1s ease-in-out;}
-.ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--color1); color: var(--color1);}
+.ux-tab {--gap: .8rem; --height: 4rem; --radius: 0}
+.ux-tab {width: 100%; background-color: var(--background-default);}
+.ux-tab .ux-tab-list {display: flex; gap: var(--gap); position: relative;}
+.ux-tab .ux-tab-before,
+.ux-tab .ux-tab-after {display: none;}
+.ux-tab .ux-tab-button {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 .8rem; height: var(--height); border-radius: var(--radius); font-weight: 600; color: var(--text-muted); transition: all .15s ease-in-out;}
+.ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--primary-80); color: var(--text-default);}
+/* <UxTab> Panel */
+.ux-tab .ux-panel {display: none;}
+.ux-tab .ux-panel.active {display: block}
+/* <UxTab> Full */
+.ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
 /* <UxTab> Linear */
+.ux-tab.linear {--linear: .2rem;}
 .ux-tab.linear .ux-tab-button.active {box-shadow: none}
-.ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: .2rem; background-color: var(--color1); transition: all .1s ease-in-out}
+.ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: var(--linear); background-color: var(--primary-80); transition: all .15s ease-in-out}
+/* <UxTab> Chip */
+.ux-tab.chip {--gap: .8rem; --height: 4.8rem; --radius: calc(var(--height) / 2);}
+.ux-tab.chip .ux-tab-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--background-default);}
+.ux-tab.chip.subtle .ux-tab-button {background-color: var(--background-subtle);}
+.ux-tab.chip .ux-tab-button.active {background-color: var(--primary-80); color: var(--text-inverse);}
+/* <UxTab> Atomic */
+.ux-tab.atomic {--height: 4rem; --radius: .8rem;}
+.ux-tab.atomic .ux-tab-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--white-0); color: var(--text-muted);}
+.ux-tab.atomic .ux-tab-button.active {box-shadow: 0 .3rem .1rem 0 rgba(0, 0, 0, .04); background-color: var(--background-default); color: var(--text-default);}
+/* <UxTab> Block */
+.ux-tab.block {--gap: 0; --height: 4.8rem; --radius: .8rem; --padding: .4rem;}
+.ux-tab.block .ux-tab-list {border-radius: calc(var(--radius) + var(--radius) / 3); background-color: var(--gray-20);}
+.ux-tab.block .ux-tab-button {flex-grow: 1; flex-basis: 0; position: relative;}
+.ux-tab.block .ux-tab-button::before {content: ''; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height) / 2); background-color: var(--border-default); transform: translateY(-50%); opacity: 1; transition: all .15s ease-in-out;}
+.ux-tab.block .ux-tab-button.active::before,
+.ux-tab.block .ux-tab-button.active + .ux-tab-button::before,
+.ux-tab.block .ux-tab-button:first-of-type::before {opacity: 0;}
+.ux-tab.block .ux-tab-linear {display: flex; padding: var(--padding); height: 100%; background-color: transparent; box-shadow: initial;}
+.ux-tab.block .ux-tab-linear::after {content: ''; width: 100%; height: 100%; border-radius: var(--radius); box-shadow: 0 .3rem .1rem 0 rgba(0, 0, 0, .04); background-color: var(--background-default);}
 /* <UxTab> Scroll */
 .ux-tab.scroll {position: relative;}
 .ux-tab.scroll .ux-tab-scroll {overflow-x: auto;}
 .ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none}
+.ux-tab.scroll .ux-tab-before {display: initial; margin-right: calc(var(--gap) * -1); width: .1rem; height: .1rem;}
+.ux-tab.scroll .ux-tab-after {display: initial; margin-left: calc(var(--gap) * -1); width: .1rem; height: .1rem;}
 .ux-tab.scroll::before,
 .ux-tab.scroll::after {content: ''; position: absolute; top: 0; width: 3.2rem; height: var(--height); pointer-events: none; opacity: 0;}
 .ux-tab.scroll::before {left: 0; background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
 .ux-tab.scroll::after {right: 0; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
 .ux-tab.scroll:not(.before)::before,
 .ux-tab.scroll:not(.after)::after {opacity: 1;}
-/* <UxTab> Full */
-.ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
-/* <UxTab> Block */
-.ux-tab.block .ux-tab-scroll {box-shadow: initial;}
-.ux-tab.block .ux-tab-list {border-radius: 1.2rem; background-color: var(--light1);}
-.ux-tab.block .ux-tab-linear {display: flex; padding: .4rem; height: 100%; background-color: transparent; box-shadow: initial;}
-.ux-tab.block .ux-tab-linear::after {content: ''; width: 100%; height: 100%; border-radius: .8rem; background-color: var(--light0);}
-/* <UxPanel> */
-.ux-tab .ux-panel {display: none; padding: 1.2rem 1.6rem;}
-.ux-tab .ux-panel.active {display: block}
+/* <UxTab> Synced */
+.ux-tab.synced::before,
+.ux-tab.synced::after {display: none;}
+.ux-tab.synced .ux-tab-scroll {position: sticky; top: var(--header); left: 0; z-index: 1; background-color: var(--background-default);}
+.ux-tab.synced .ux-panel {display: block; height: 50vh;}
+/* <UxTab> Synced Example */
+.ux-tab.synced .ux-panel {height: 50vh;}
+.ux-tab.synced .ux-panel[data-index='0'] {background-color: var(--gray-5);}
+.ux-tab.synced .ux-panel[data-index='1'] {background-color: var(--gray-10);}
+.ux-tab.synced .ux-panel[data-index='2'] {background-color: var(--gray-5);}
+.ux-tab.synced .ux-panel[data-index='3'] {background-color: var(--gray-10);}
+.ux-tab.synced .ux-panel[data-index='4'] {background-color: var(--gray-5);}
 /* <UxTab> z-index */
 .ux-tab .ux-tab-list {z-index: 1;}
 .ux-tab .ux-tab-button {z-index: 1;}
@@ -842,17 +1136,17 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxPagination> */
 .ux-pagination .ux-pagination-page {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 calc(var(--gap)); height: var(--size); color: var(--light3);}
 /* <UxPagination> Selected */
-.ux-pagination .ux-pagination-page.selected {font-weight: 800; color: var(--color1); pointer-events: none;}
+.ux-pagination .ux-pagination-page.selected {font-weight: 800; color: var(--brand-blue); pointer-events: none;}
 /* <UxPagination> Disabled */
 .ux-pagination .ux-pagination-first,
 .ux-pagination .ux-pagination-prev,
 .ux-pagination .ux-pagination-next,
-.ux-pagination .ux-pagination-last {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: 2rem; height: var(--size);}
+.ux-pagination .ux-pagination-last {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: var(--size); height: var(--size);}
 /* <UxPagination> Disabled */
 .ux-pagination .ux-pagination-first.disabled,
 .ux-pagination .ux-pagination-prev.disabled,
 .ux-pagination .ux-pagination-next.disabled,
-.ux-pagination .ux-pagination-last.disabled {opacity: 0.5; pointer-events: none;}
+.ux-pagination .ux-pagination-last.disabled {pointer-events: none;}
 
 
 
@@ -871,7 +1165,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxCalendar> DateCalendar */
 .ux-calendar-date {display: grid; grid-template-columns: repeat(7, 1fr);}
 .ux-calendar-date > :nth-child(7n),
-.ux-calendar-date > :nth-child(7n + 1) {color: var(--color1);}
+.ux-calendar-date > :nth-child(7n + 1) {color: var(--brand-blue);}
 .ux-calendar-date .ux-calendar-week {display: flex; justify-content: center; align-items: center; height: 4rem;}
 .ux-calendar-date .ux-calendar-button {display: flex; justify-content: center; align-items: center;}
 .ux-calendar-date .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 50%;}
@@ -880,25 +1174,25 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 /* <UxCalendar> DateCalendar Icons */
 .ux-calendar-date .ux-calendar-button.icons {flex-direction: column; justify-content: flex-start; gap: .4rem; padding-top: .4rem;}
 .ux-calendar-date .ux-calendar-button.icons .ux-calendar-icons {display: flex; gap: .4rem;}
-.ux-calendar-date .ux-calendar-button.icons.selected .ux-calendar-icons .ux-icon {background-color: var(--color1);}
+.ux-calendar-date .ux-calendar-button.icons.selected .ux-calendar-icons .ux-icon {background-color: var(--brand-blue);}
 /* <UxCalendar> DateCalendar Disabled */
 .ux-calendar-date .ux-calendar-button.disabled {opacity: .5;}
 /* <UxCalendar> DateCalendar Selected */
-.ux-calendar-date .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
+.ux-calendar-date .ux-calendar-button.selected .ux-calendar-label {background-color: var(--brand-blue); font-weight: 600; color: var(--light0);}
 /* <UxCalendar> MonthCalendar */
 .ux-calendar-month {display: flex; flex-wrap: wrap; align-items: center; width: 100%; height: 28rem; background-color: var(--light0);}
 .ux-calendar-month .ux-calendar-button {width: calc(100% / 3);}
 .ux-calendar-month .ux-calendar-button {display: flex; justify-content: center; align-items: center; height: 4rem;}
 .ux-calendar-month .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 4rem; height: 4rem; border-radius: 50%;}
 /* <UxCalendar> MonthCalendar Selected */
-.ux-calendar-month .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
+.ux-calendar-month .ux-calendar-button.selected .ux-calendar-label {background-color: var(--brand-blue); font-weight: 600; color: var(--light0);}
 /* <UxCalendar> YearCalendar */
 .ux-calendar-year {overflow-y: auto; display: flex; flex-wrap: wrap; align-items: center; width: 100%; height: 28rem; background-color: var(--light0);}
 .ux-calendar-year .ux-calendar-button.direction {width: 100%;}
 .ux-calendar-year .ux-calendar-button {display: flex; justify-content: center; align-items: center; height: 4rem;}
 .ux-calendar-year .ux-calendar-button .ux-calendar-label {display: flex; justify-content: center; align-items: center; width: 100%; height: 4rem; border-radius: 2rem;}
 /* <UxCalendar> YearCalendar Selected */
-.ux-calendar-year .ux-calendar-button.selected .ux-calendar-label {background-color: var(--color1); font-weight: 600; color: var(--light0);}
+.ux-calendar-year .ux-calendar-button.selected .ux-calendar-label {background-color: var(--brand-blue); font-weight: 600; color: var(--light0);}
 
 
 
@@ -934,7 +1228,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-progress .ux-progress-gauge {position: absolute; top: 0; left: 0;}
 .ux-progress .ux-progress-stack {width: 100%; background-color: var(--light1);}
 .ux-progress .ux-progress-gauge {overflow: hidden; width: 100%;}
-.ux-progress .ux-progress-fill {background-color: var(--color1); transform: translateX(-100%); transition: var(--trans);}
+.ux-progress .ux-progress-fill {background-color: var(--brand-blue); transform: translateX(-100%); transition: var(--trans);}
 /* <UxProgress> Flag */
 .ux-progress .ux-progress-flag {display: flex; justify-content: flex-end; width: 100%; transform: translateX(-100%); transition: var(--trans); opacity: 0;}
 .ux-progress .ux-progress-text {display: inline-flex; padding: .4rem .8rem; border-radius: .8rem; background-color: var(--light1); font-size: 1.4rem; color: var(--dark3); line-height: 1;}
@@ -979,7 +1273,7 @@ html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(
 .ux-picker-item {flex-shrink: 0; height: var(--height-form); scroll-snap-align: center;}
 .ux-picker-button {display: flex; justify-content: center; align-items: center; padding: 0 var(--radius-form); width: 100%; height: 100%;}
 /* <UxPicker> Active */
-.ux-picker-item.active .ux-picker-button {color: var(--color1);}
+.ux-picker-item.active .ux-picker-button {color: var(--brand-blue);}
 
 
 

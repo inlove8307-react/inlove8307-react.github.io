@@ -9,7 +9,6 @@ import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxFile from "@/components/base/UxFile";
 import UxButton from "@/components/base/UxButton";
-import UxIcon from "@/components/base/UxIcon";
 import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
@@ -141,7 +140,7 @@ export default function Guide() {
 									<UxFile>
 										<UxButton className="outline h3">
 											<span className="text">파일첨부</span>
-											<UxIcon className="i054" />
+											<i className="icon right clip" />
 										</UxButton>
 									</UxFile>
 								</UxContent>

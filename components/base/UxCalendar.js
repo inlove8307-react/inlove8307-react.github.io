@@ -5,7 +5,6 @@ import classnames from 'classnames';
 import { rawDate } from '@/utils/core';
 import { format, set, add, sub, isEqual, getDay, getDate,getMonth, getYear } from "date-fns";
 /* COMPONENT */
-import UxIcon from "@/components/base/UxIcon";
 
 /**
  * <YearCalendar>
@@ -308,9 +307,9 @@ const DateCalendar = ({ ref, ...props }) => {
 								{icons?.map((item, index) => {
 									if (index < 2) {
 										return (
-											<UxIcon
+											<i
 												key={index}
-												className={item}
+												className={`icon mask ${item}`}
 											/>
 										)
 									}
@@ -405,7 +404,7 @@ const Calendar = ({ ref, ...props }) => {
 						className={classnames(`${baseClassName}-prev`)}
 						onClick={handlePrev}
 					>
-						<UxIcon className="i004" />
+						<i className="icon arrow-left x20" />
 					</button>
 					<button
 						type="button"
@@ -413,7 +412,7 @@ const Calendar = ({ ref, ...props }) => {
 						onClick={handleYear}
 					>
 						<span>{`${getYear(rawDate(date))}년`}</span>
-						<UxIcon className={ isYear ? 'i001' : 'i002' } />
+						<i className={classnames('icon arrow-down x20', { vertical: isYear })} />
 					</button>
 					<button
 						type="button"
@@ -421,14 +420,14 @@ const Calendar = ({ ref, ...props }) => {
 						onClick={handleMonth}
 					>
 						<span>{`${getMonth(rawDate(date)) + 1}월`}</span>
-						<UxIcon className={ isMonth ? 'i001' : 'i002' } />
+						<i className={classnames('icon arrow-down x20', { vertical: isMonth })} />
 					</button>
 					<button
 						type="button"
 						className={classnames(`${baseClassName}-next`)}
 						onClick={handleNext}
 					>
-						<UxIcon className="i003" />
+						<i className="icon arrow-right x20" />
 					</button>
 				</div>
 				<div className={`${baseClassName}-content`}>

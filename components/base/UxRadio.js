@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxRadio>
@@ -73,7 +72,10 @@ const UxRadio = ({ ref, ...props }) => {
 					disabled={props.disabled}
 					onChange={handleChange}
 				/>
-				<UxIcon className="i197 w24" />
+				<i className={classnames('icons radio', {
+					selected: checked,
+					disabled: props.disabled,
+				})} />
 				<span className={`${baseClassName}-label`}>
 					{props.children}
 				</span>

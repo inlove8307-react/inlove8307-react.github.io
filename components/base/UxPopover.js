@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import useModal from "@/hook/useModal";
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxPopoverBase>
@@ -37,7 +36,7 @@ const UxPopoverBase = ({ ref, ...props }) => {
 				className={`${baseClassName}-closer`}
 				onClick={props.onClose}
 			>
-				<UxIcon className="i303 w20" />
+				<i className="icon clear x20" />
 			</button>
 		</div>
 	);
@@ -71,7 +70,7 @@ const UxPopover = ({ ref, ...props }) => {
 				className={`${baseClassName}-opener`}
 				onClick={handleClick}
 			>
-				<UxIcon className="i344 w24" />
+				<i className="icon tooltip" />
 			</button>
 		</div>
 	);

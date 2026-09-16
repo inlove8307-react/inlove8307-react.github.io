@@ -10,7 +10,6 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxInput from '@/components/base/UxInput';
-import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxCalendar from '@/components/base/UxCalendar';
 
@@ -77,7 +76,7 @@ const Popup = ({ ref, ...props }) => {
 					<UxContent>
 						<h4>{props.title || '선택'}</h4>
 						<UxButton onClick={props.onClose}>
-							<UxIcon className="i303 w28" />
+							<i className="icon close" />
 						</UxButton>
 					</UxContent>
 				</UxArticle>
@@ -195,7 +194,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 						disabled={props.readonly || props.disabled}
 						onClick={handleClick}
 					>
-						<UxIcon className="i160" />
+						<i className="icon calendar right" />
 					</UxButton>
 				</UxInput>
 			}
@@ -211,7 +210,7 @@ const UxDatePicker = ({ ref, ...props }) => {
 					disabled={props.disabled}
 					onClick={handleClick}
 				>
-					<UxIcon className={classnames('right', 'i160')} />
+					<i className="icon calendar right" />
 				</UxButton>
 			}
 		</>

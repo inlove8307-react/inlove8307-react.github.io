@@ -10,7 +10,6 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 import UxButton from '@/components/base/UxButton';
 import UxGroup from "@/components/base/UxGroup";
 
@@ -390,7 +389,7 @@ const Popup = ({ ref, ...props }) => {
 					<UxContent>
 						<h4>{props.title || '선택'}</h4>
 						<UxButton onClick={props.onClose}>
-							<UxIcon className="i303 w28" />
+							<i className="icon close" />
 						</UxButton>
 					</UxContent>
 				</UxArticle>
@@ -439,7 +438,6 @@ const Popup = ({ ref, ...props }) => {
 const UxPicker = ({ ref, ...props }) => {
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
-	const [icon, setIcon] = useState('');
 	const [active, setActive] = useState(false);
 
 	const handleClick = async () => {
@@ -465,23 +463,6 @@ const UxPicker = ({ ref, ...props }) => {
 		}
 	}, [props.value]);
 
-	useEffect(() => {
-		if (!props.role) {
-			active ? setIcon('i001') : setIcon('i002');
-		}
-	}, [active]);
-
-	useEffect(() => {
-		switch (props.role) {
-			case 'date':
-				setIcon('i160');
-				break;
-			case 'time':
-				setIcon('i219');
-				break;
-		}
-	}, [props.role]);
-
 	return (
 		<UxButton
 			role="input"
@@ -493,7 +474,11 @@ const UxPicker = ({ ref, ...props }) => {
 			disabled={props.disabled}
 			onClick={handleClick}
 		>
-			<UxIcon className={classnames('right', icon)} />
+			<i className={classnames('icon right arrow-down x20', {
+				vertical: !props.role && active,
+				calendar: props.role === 'date',
+				time: props.role === 'time',
+			})} />
 		</UxButton>
 	)
 };

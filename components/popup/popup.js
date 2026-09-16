@@ -8,7 +8,6 @@ import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
 import UxGroup from '@/components/base/UxGroup';
-import UxIcon from '@/components/base/UxIcon';
 
 const Popup = ({ ref, ...props }) => {
 	return (
@@ -18,7 +17,7 @@ const Popup = ({ ref, ...props }) => {
 					<UxContent>
 						<h4>알림</h4>
 						<UxButton onClick={props.onClose}>
-							<UxIcon className="i303 w28" />
+							<i className="icon close" />
 						</UxButton>
 					</UxContent>
 				</UxArticle>

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { getArray, getSlot, mergeProps } from '@/utils/core';
+import { useInView, InView } from 'react-intersection-observer';
+import { getArray, getSlot, mergeProps, sleep } from '@/utils/core';
 import classnames from 'classnames';
 
 /**
@@ -18,11 +18,16 @@ import classnames from 'classnames';
 
 const UxTab = ({ ref, ...props }) => {
 	const baseClassName = "ux-tab";
-	const [selected, setSelected] = useState(props.selected || 0);
+	const [selected, setSelected] = useState(props.selected);
 	const [isChange, setIsChange] = useState(false);
+	const [isLinear, setIsLinear] = useState(false);
+	const [isScroll, setIsScroll] = useState(false);
+	const [isSynced, setIsSynced] = useState(false);
+	const [inViewState, setInViewState] = useState([]);
 	const [beforeRef, beforeInView] = useInView();
 	const [afterRef, afterInView] = useInView();
-	const tabsRef = useRef([]);
+	const summaryRef = useRef([]);
+	const detailsRef = useRef([]);
 	const linearRef = useRef();
 	const scrollRef = useRef();
 	const summary = (() => {
@@ -36,39 +41,93 @@ const UxTab = ({ ref, ...props }) => {
 	})();
 
 	const handleClick = (index) => {
-		setSelected(index);
+		isSynced
+			?	detailsScroll(index)
+			: setSelected(index);
+
 		setIsChange(true);
 		props.onChange && props.onChange(index);
 	};
 
 	const setLinear = (index) => {
-		setTimeout(() => {
-			linearRef.current.style.width = `${tabsRef.current[index].clientWidth}px`;
-			linearRef.current.style.left = `${tabsRef.current[index].offsetLeft}px`;
-		}, 10);
+		linearRef.current.style.width = `${summaryRef.current[index].clientWidth}px`;
+		linearRef.current.style.left = `${summaryRef.current[index].offsetLeft}px`;
 	};
 
-	const setScroll = (index) => {
-		tabsRef.current[index].scrollIntoView({
+	const summaryScroll = (index) => {
+		summaryRef.current[index].scrollIntoView({
 			block: "nearest",
 			inline: "center",
 			behavior: "smooth",
 		});
 	};
 
+	const detailsScroll = (index) => {
+		detailsRef.current[index].node.scrollIntoView({
+			block: 'start',
+			inline: 'nearest',
+			behavior: 'smooth',
+		});
+	};
+
+	const handleInView = (inView, entry) => {
+		const index = Number(entry.target.dataset.index);
+
+		setInViewState((prev) => {
+			const array = [...prev];
+
+			array[index] = inView;
+
+			return array;
+		});
+	};
+
+	useEffect(() => {
+		let isChange = false;
+
+		inViewState.map((inView, index) => {
+			if (inView) {
+				if (!isChange) {
+					isChange = true;
+					setSelected(index);
+					setIsChange(true);
+				}
+			}
+		});
+	}, [inViewState]);
+
+	useEffect(() => {
+		if (!props.className) return;
+
+		props.className.includes('linear') && setIsLinear(true);
+		props.className.includes('block') && setIsLinear(true);
+		props.className.includes('scroll') && setIsScroll(true);
+		props.className.includes('synced') && setIsScroll(true);
+		props.className.includes('synced') && setIsSynced(true);
+	}, [props.className]);
+
 	useEffect(() => {
 		if (!summary.length) return;
 
-		props.linear && setLinear(selected);
-		props.scroll && isChange && setScroll(selected);
+		isLinear &&	setLinear(selected);
+		isScroll && isChange && summaryScroll(selected);
 	}, [selected]);
+
+	useEffect(() => {
+		!isSynced && setSelected(parseInt(props.selected));
+	}, [props.selected]);
+
+	useEffect(() => {
+		!selected && setSelected(0);
+	}, []);
 
 	return (
 		<div
 			ref={ref}
 			className={classnames(baseClassName, props.className, {
-				linear: props.linear,
-				scroll: props.scroll,
+				linear: isLinear,
+				scroll: isScroll,
+				synced: isSynced,
 				before: beforeInView,
 				after: afterInView,
 			})}>
@@ -87,17 +146,18 @@ const UxTab = ({ ref, ...props }) => {
 
 							return (
 								<button
-									ref={(element) => tabsRef.current[index] = element}
+									ref={(element) => summaryRef.current[index] = element}
 									key={index}
+									type="button"
 									className={classnames(`${baseClassName}-button`, {active})}
 									onClick={() => handleClick(index)}
 								>
 									{item.props.children}
-								</button>
+							</button>
 							)
 						})}
 						{
-							props.linear &&
+							isLinear &&
 							<span
 								ref={linearRef}
 								className={`${baseClassName}-linear`}
@@ -109,14 +169,38 @@ const UxTab = ({ ref, ...props }) => {
 						/>
 					</div>
 				</div>
-				{getArray(props.children).map((item, index) => {
-					const active = selected === index;
+				{
+					!isSynced &&
+					getArray(props.children).map((item, index) => {
+						const active = selected === index;
 
-					return mergeProps(item, {
-						key: index,
-						active,
-					});
-				})}
+						return mergeProps(item, {
+							key: index,
+							active,
+						});
+					})
+				}
+				{
+					isSynced &&
+					getArray(props.children).map((item, index) => (
+						<InView
+							key={index}
+							ref={(inView) => (detailsRef.current[index] = inView)}
+							rootMargin={`-${props.rootMargin}px`}
+							threshold={.1}
+							onChange={handleInView}
+						>
+							{({ inView, ref }) => (
+								mergeProps(item, {
+									key: index,
+									ref: ref,
+									style: { scrollMargin: `${props.rootMargin}px` },
+									index,
+								})
+							)}
+						</InView>
+					))
+				}
 			</div>
 		</div>
 	);

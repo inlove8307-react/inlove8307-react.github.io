@@ -8,7 +8,6 @@ import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
 import UxGroup from '@/components/base/UxGroup';
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxConfirm>
@@ -26,7 +25,7 @@ const UxConfirm = ({ ref, ...props }) => {
 					<UxContent>
 						<h4>{props.title || '알림'}</h4>
 						<UxButton onClick={props.onClose}>
-							<UxIcon className="i303 w28" />
+							<i className="icon close"></i>
 						</UxButton>
 					</UxContent>
 				</UxArticle>

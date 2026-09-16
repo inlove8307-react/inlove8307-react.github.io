@@ -10,7 +10,6 @@ import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxGroup from "@/components/base/UxGroup";
 import UxButton from "@/components/base/UxButton";
-import UxIcon from "@/components/base/UxIcon";
 
 const UxHeader = ({ ref, ...props }) => {
 	const baseClassName = 'ux-header';
@@ -24,10 +23,9 @@ const UxHeader = ({ ref, ...props }) => {
 					<UxContent className="row space">
 						<UxGroup className="gap8">
 							<UxButton>
-								<UxIcon className="i109" />
+								<i className="icon menu" />
 							</UxButton>
 							<UxButton onClick={() => router.push('/')}>
-								{/* <UxIcon className="i109" /> */}
 								<span className="text">HOME</span>
 							</UxButton>
 							<UxButton onClick={() => router.push('/view/guide/button')}>

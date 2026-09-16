@@ -23,7 +23,12 @@ const UxTab = ({ ref, ...props }) => {
 	}, []);
 
 	return (
-		<div className={caseClassName}>
+		<div
+			ref={ref}
+			data-index={props.index}
+			className={caseClassName}
+			style={props.style}
+		>
 			{details && details.props.children}
 		</div>
 	)

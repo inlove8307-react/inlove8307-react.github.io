@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxPagination>
@@ -77,14 +76,14 @@ const UxPagination = ({ ref, ...props }) => {
 					className={classnames(`${baseClassName}-first`, { disabled: page === 1 })}
 					onClick={handleFirst}
 				>
-					<UxIcon className="i071" />
+					<i className={classnames('icons pagination first', { disabled: page === 1 })} />
 				</button>
 				<button
 					type="button"
 					className={classnames(`${baseClassName}-prev`, { disabled: !hasPrev })}
 					onClick={handlePrev}
 				>
-					<UxIcon className="i012 w20" />
+					<i className={classnames('icons pagination prev', { disabled: !hasPrev })} />
 				</button>
 				{
 					data.map((item, index) => (
@@ -103,7 +102,7 @@ const UxPagination = ({ ref, ...props }) => {
 					className={classnames(`${baseClassName}-next`, { disabled: !hasNext })}
 					onClick={handleNext}
 				>
-					<UxIcon className="i011 w20" />
+					<i className={classnames('icons pagination next', { disabled: !hasNext })} />
 				</button>
 
 				<button
@@ -111,7 +110,7 @@ const UxPagination = ({ ref, ...props }) => {
 					className={classnames(`${baseClassName}-last`, { disabled: page === props.total })}
 					onClick={handleLast}
 				>
-					<UxIcon className="i070" />
+					<i className={classnames('icons pagination last', { disabled: page === props.total })} />
 				</button>
 			</div>
 			{props.children}

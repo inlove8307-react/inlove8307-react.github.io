@@ -3,7 +3,6 @@
 import React from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxOption>
@@ -32,7 +31,7 @@ const UxOption = ({ ref, ...props }) => {
 			>
 				{props.children}
 			</button>
-			{props.selected && <UxIcon className="i128 right" />}
+			<i className={classnames('icons check', { selected: props.selected })} />
 		</div>
 	)
 };

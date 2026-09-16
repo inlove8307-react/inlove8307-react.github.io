@@ -5,7 +5,6 @@ import { getArray, mergeProps, getRandomChar } from '@/utils/core';
 import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <Card>
@@ -45,25 +44,6 @@ const Card = ({ ref, ...props }) => {
 					disabled: props.disabled,
 					randomChar: getRandomChar(),
 					onChange: handleChange
-				}))
-			}
-		</div>
-	);
-};
-
-/**
- * <Checkbox>
- * [props]
- * className(String): 추가 클래스
- * [event]
- */
-
-const Checkbox = ({ ref, ...props }) => {
-	return (
-		<div className={props.caseClassName}>
-			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
 				}))
 			}
 		</div>
@@ -127,13 +107,13 @@ const Collapse = ({ ref, ...props }) => {
  */
 
 const Radio = ({ ref, ...props }) => {
-	const [selected, setSelected] = useState(props.selected || null);
+	const [value, setValue] = useState(props.value || '');
 	const [expanded, setExpanded] = useState(props.expanded || false);
 	const [beforeRef, beforeInView] = useInView();
 	const [afterRef, afterInView] = useInView();
 
 	const handleChange = (value) => {
-		setSelected(value);
+		setValue(value);
 	};
 
 	const handleClick = () => {
@@ -142,24 +122,46 @@ const Radio = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange(selected);
-	}, [selected]);
+		props.onChange && props.onChange(value);
+	}, [value]);
 
 	useEffect(() => {
 		props.onExpand && props.onExpand(expanded);
 	}, [expanded]);
 
 	useEffect(() => {
-		if (typeof props.selected === 'string') {
-			setSelected(props.selected);
+		if (typeof props.value === 'string') {
+			setValue(props.value);
 		}
-	}, [props.selected]);
+	}, [props.value]);
 
 	useEffect(() => {
 		if (typeof props.expanded === 'boolean') {
 			setExpanded(props.expanded);
 		}
 	}, [props.expanded]);
+
+	const Elements = ({ ref, ...props }) => {
+		return (
+			getArray(props.children).map((item, index) => {
+				const object = {
+					key: index,
+					index,
+					selected: value,
+					scroll: props.scroll,
+					expanded,
+					randomChar: getRandomChar(),
+					onChange: handleChange
+				};
+
+				if (props.disabled !== undefined) {
+					object.disabled = props.disabled;
+				}
+
+				return mergeProps(item, object);
+			})
+		);
+	};
 
 	return (
 		<div
@@ -172,87 +174,35 @@ const Radio = ({ ref, ...props }) => {
 				disabled: props.disabled,
 			})}
 		>
-			<div className={`${props.baseClassName}-scroll`}>
-				{
-					props.scroll &&
-					<span
-						ref={beforeRef}
-						className={`${props.baseClassName}-before`}
-					/>
-				}
-				{
-					getArray(props.children).map((item, index) => mergeProps(item, {
-						key: index,
-						index,
-						selected,
-						expanded,
-						scroll: props.scroll,
-						disabled: props.disabled,
-						randomChar: getRandomChar(),
-						onChange: handleChange
-					}))
-				}
-				{
-					props.scroll &&
-					<span
-						ref={afterRef}
-						className={`${props.baseClassName}-after`}
-					/>
-				}
-			</div>
 			{
-				props.expand &&
-				<button
-					type="button"
-					className={`${props.baseClassName}-expand`}
-					onClick={handleClick}
-				>
-					<UxIcon className={expanded ? 'i001' : 'i002'} />
-				</button>
+				props.scroll &&
+				<>
+					<div className={`${props.baseClassName}-scroll`}>
+						<span
+							ref={beforeRef}
+							className={`${props.baseClassName}-before`}
+						/>
+						<Elements {...props} />
+						<span
+							ref={afterRef}
+							className={`${props.baseClassName}-after`}
+						/>
+					</div>
+					{
+						props.expand &&
+						<button
+							type="button"
+							className={`${props.baseClassName}-expand`}
+							onClick={handleClick}
+						>
+							<i className={classnames('icon arrow-down x20', { vertical: expanded })} />
+						</button>
+					}
+				</>
 			}
-		</div>
-	);
-};
-
-/**
- * <Toggle>
- * [props]
- * className(String): 추가 클래스
- * selected(String): 선택 값
- * [event]
- * onChange(Func): 선택 변경 이벤트 콜백
- */
-
-const Toggle = ({ ref, ...props }) => {
-	const [selected, setSelected] = useState(props.selected || null);
-
-	const handleChange = (value) => {
-		setSelected(value);
-	};
-
-	useEffect(() => {
-		props.onChange && props.onChange(selected);
-	}, [selected]);
-
-	useEffect(() => {
-		if (typeof props.selected === 'string') {
-			setSelected(props.selected);
-		}
-	}, [props.selected]);
-
-	return (
-		<div className={classnames(props.caseClassName, {
-			disabled: props.disabled,
-		})}>
 			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-					index,
-					selected,
-					disabled: props.disabled,
-					randomChar: getRandomChar(),
-					onChange: handleChange
-				}))
+				!props.scroll &&
+				<Elements {...props} />
 			}
 		</div>
 	);
@@ -271,6 +221,12 @@ const Toggle = ({ ref, ...props }) => {
 
 const Input = ({ ref, ...props }) => {
 	const [options, setOptions] = useState({});
+	const [focused, setFocused] = useState(false);
+	const Tag = props.tag || 'div';
+
+	const handleFocus = () => {
+		setFocused(true);
+	};
 
 	useEffect(() => {
 		props.valid && setOptions({ ...options, valid: props.valid });
@@ -279,20 +235,48 @@ const Input = ({ ref, ...props }) => {
 	}, []);
 
 	return (
-		<div className={classnames(props.caseClassName, {
-			valid: props.valid === true,
-			invalid: props.valid === false,
-			readonly: props.readonly,
-			disabled: props.disabled,
-		})}>
-			<div className={`${props.baseClassName}-placeholder`}>{props.placeholder}</div>
+		<Tag
+			ref={ref}
+			className={classnames(props.caseClassName, {
+				valid: props.valid === true,
+				invalid: props.valid === false,
+				readonly: props.readonly,
+				disabled: props.disabled,
+				focused: focused || props.focused,
+			})}
+			onFocus={handleFocus}
+		>
 			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-					...options,
-				}))
+				props.label1 &&
+				<span className={`${props.baseClassName}-placeholder`}>
+					{props.label1}{props.label2}
+				</span>
 			}
-		</div>
+			{
+				props.label1 &&
+				<span className={`${props.baseClassName}-label`}>
+					{props.label1}
+				</span>
+			}
+			<div className={`${props.baseClassName}-blend`}>
+				{
+					getArray(props.children).map((element, index) => {
+						if (typeof element?.type === 'function') {
+							const options = { key: index };
+
+							if (props.valid !== undefined) {
+								options.valid = props.valid;
+							}
+
+							return mergeProps(element, options);
+						}
+						else {
+							return element;
+						}
+					})
+				}
+			</div>
+		</Tag>
 	);
 };
 
@@ -339,14 +323,10 @@ const UxGroup = ({ ref, ...props }) => {
 		switch (props.role) {
 			case 'card':
 				return <Card {...props} />;
-			case 'checkbox':
-				return <Checkbox {...props} />;
 			case 'collapse':
 				return <Collapse {...props} />;
 			case 'radio':
 				return <Radio {...props} />;
-			case 'toggle':
-				return <Toggle {...props}/>;
 			case 'input':
 				return <Input {...props}/>;
 			default:

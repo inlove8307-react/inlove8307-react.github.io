@@ -10,7 +10,6 @@ import { restrictToParentElement } from '@dnd-kit/modifiers';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 /* COMPONENT */
-import UxIcon from "@/components/base/UxIcon";
 
 /**
  * <UxSortItem>
@@ -50,7 +49,7 @@ const UxSortItem = ({ ref, ...props }) => {
 					{...attributes}
 					{...listeners}
 				>
-					<UxIcon className="i041 w18" />
+					<i className="icon mask i041 x16" />
 				</button>
 			</div>
 		</div>

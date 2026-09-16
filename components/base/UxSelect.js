@@ -9,7 +9,7 @@ import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
-import UxButton from '@/components/base/UxButton';
+import UxGroup from '@/components/base/UxGroup';
 
 /**
  * <Popup>
@@ -100,27 +100,31 @@ const UxSelect = ({ ref, ...props }) => {
 	}, [value]);
 
 	return (
-		<div
-			className={classnames(caseClassName, { selected: value })}
-			style={props.style}
+		<UxGroup
+			{...props}
+			role="input"
+			tag={!props.inside && 'label'}
+			className={classnames('select', { inside: props.inside })}
+			focused={value}
 		>
-			<UxButton
-				role="select"
-				placeholder={props.placeholder}
-				active={active}
-				valid={props.valid}
-				readonly={props.readonly}
-				disabled={props.disabled}
+			<button
+				className={classnames(caseClassName, 'fill', { selected: label })}
+				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>
+				{ !label && props.placeholder }
 				{
 					label &&
 					<span className="text">
 						{label}
 					</span>
 				}
-			</UxButton>
-		</div>
+				<i className={classnames('icon mask arrow-down right x20', {
+					vertical: active,
+					disabled: props.readonly || props.disabled
+				})} />
+			</button>
+		</UxGroup>
 	);
 };
 

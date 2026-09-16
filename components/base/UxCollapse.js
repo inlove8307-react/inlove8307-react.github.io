@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { getArray, getSlot } from '@/utils/core';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
 
 /**
  * <UxCollapseSummary>
@@ -40,7 +39,7 @@ const UxCollapseSummary = (props) => {
 				onClick={handleClick}
 			>
 				{props.entire && <Content />}
-				<UxIcon className={props.expanded ? 'i001' : 'i002'} />
+				<i className={classnames('icon arrow-down x20', { vertical: props.expanded })} />
 			</button>
 		</div>
 	);
@@ -91,11 +90,16 @@ const UxCollapse = ({ ref, ...props }) => {
 	const baseClassName = 'ux-collapse';
 	const caseClassName = classnames(baseClassName, props.className);
 	const [expanded, setExpanded] = useState(props.expanded || false);
+	const [calcSize, setCalcSize] = useState(false);
 
 	const handleClick = (index) => {
 		setExpanded(!expanded);
 		props.onChange && props.onChange(index);
 	};
+
+	useEffect(() => {
+		setCalcSize(CSS.supports('width', 'calc-size(auto, size)'));
+	}, []);
 
 	useEffect(() => {
 		if (!props.once) return;
@@ -108,7 +112,10 @@ const UxCollapse = ({ ref, ...props }) => {
 	return (
 		<div
 			ref={ref}
-			className={classnames(caseClassName, { expanded })}
+			className={classnames(caseClassName, {
+				expanded,
+				'calc-size': calcSize,
+			})}
 		>
 			<UxCollapseSummary
 				index={props.index}

@@ -3,20 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
-import UxIcon from '@/components/base/UxIcon';
+import UxGroup from '@/components/base/UxGroup';
 
 /**
  * <Select>
  * [props]
- * className(String): 추가 클래스
- * title(String): 접근성 타이틀
- * active(Boolean): 아이콘 유형
- * placeholder(String): 표시 문구
- * valid(Boolean): 유효성 여부
- * readonly(Boolean): 읽기전용 여부
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
+ *
  */
 
 const Select = ({ ref, ...props }) => {
@@ -32,34 +26,32 @@ const Select = ({ ref, ...props }) => {
 	};
 
 	return (
-		<button
-			ref={ref}
-			type="button"
-			className={caseClassName}
-			disabled={props.disabled}
-			title={props.title}
-			onClick={handleClick}
+		<UxGroup
+			{...props}
+			role="input"
+			tag="label"
 		>
-			{props.children ? props.children : props.placeholder}
-			<UxIcon className={classnames('right', {
-				i001: props.active,
-				i002: !props.active,
-			})} />
-		</button>
+			<button
+				ref={ref}
+				type="button"
+				className={caseClassName}
+				disabled={props.disabled}
+				title={props.title}
+				onClick={handleClick}
+			>
+				{props.children ? props.children : props.placeholder}
+				<i className={classnames('icon arrow-down x20 right', { vertical: props.active })} />
+			</button>
+		</UxGroup>
 	);
 };
 
 /**
  * <Search>
  * [props]
- * className(String): 추가 클래스
- * title(String): 접근성 타이틀
- * placeholder(String): 표시 문구
- * valid(Boolean): 유효성 여부
- * readonly(Boolean): 읽기전용 여부
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
+ *
  */
 
 const Search = ({ ref, ...props }) => {
@@ -75,33 +67,32 @@ const Search = ({ ref, ...props }) => {
 	};
 
 	return (
-		<button
-			ref={ref}
-			type="button"
-			className={caseClassName}
-			disabled={props.disabled}
-			title={props.title}
-			onClick={handleClick}
+		<UxGroup
+			{...props}
+			role="input"
+			tag="label"
 		>
-			{props.children ? props.children : props.placeholder}
-			<UxIcon className="i233 right" />
-		</button>
+			<button
+				ref={ref}
+				type="button"
+				className={caseClassName}
+				disabled={props.disabled}
+				title={props.title}
+				onClick={handleClick}
+			>
+				{props.children ? props.children : props.placeholder}
+				<i className="icon search right x20" />
+			</button>
+		</UxGroup>
 	);
 };
 
 /**
  * <Input>
  * [props]
- * className(String): 추가 클래스
- * title(String): 접근성 타이틀
- * placeholder(String): 표시 문구
- * prefix(String): 앞 표시 문구
- * suffix(String): 뒤 표시 문구
- * valid(Boolean): 유효성 여부
- * readonly(Boolean): 읽기전용 여부
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
+ *
  */
 
 const Input = ({ ref, ...props }) => {
@@ -118,58 +109,56 @@ const Input = ({ ref, ...props }) => {
 	};
 
 	return (
-		<button
-			ref={ref}
-			type="button"
-			className={caseClassName}
-			title={props.title}
-			disabled={props.disabled}
-			onClick={handleClick}
+		<UxGroup
+			{...props}
+			role="input"
+			tag="label"
 		>
-			{
-				props.prefix &&
-				<span className={`${baseClassName}-prefix`}>
-					{props.prefix}
-				</span>
-			}
-			{props.value || props.placeholder}
-			{
-				props.suffix &&
-				<span className={`${baseClassName}-suffix`}>
-					{props.suffix}
-				</span>
-			}
-			{props.children}
-		</button>
+			<button
+				ref={ref}
+				type="button"
+				className={caseClassName}
+				title={props.title}
+				disabled={props.disabled}
+				onClick={handleClick}
+			>
+				{
+					props.prefix &&
+					<span className={`${baseClassName}-prefix`}>
+						{props.prefix}
+					</span>
+				}
+				{props.value || props.placeholder}
+				{
+					props.suffix &&
+					<span className={`${baseClassName}-suffix`}>
+						{props.suffix}
+					</span>
+				}
+				{props.children}
+			</button>
+		</UxGroup>
 	);
 };
 
 /**
- * <Default>
+ * <Progress>
  * [props]
- * className(String): 추가 클래스
- * title(String): 접근성 타이틀
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
+ *
  */
 
 const Progress = ({ ref, ...props }) => {
-	const [step, setStep] = useState(props.step || 0);
-	const [fill, setFill] = useState({});
+	const [progress, setProgress] = useState(props.progress || 0);
 
 	const handleClick = () => {
-
 		props.onClick && props.onClick();
 	};
 
 	useEffect(() => {
-		setFill({ transform: `translate(-${100 - step / props.max * 100}%, 0) translateZ(0)` });
-	}, [step]);
-
-	useEffect(() => {
-		setStep(props.step);
-	}, [props.step]);
+		setProgress(props.progress);
+	}, [props.progress]);
 
 	return (
 		<button
@@ -180,15 +169,17 @@ const Progress = ({ ref, ...props }) => {
 			disabled={props.disabled}
 			onClick={handleClick}
 		>
+			<span className={`${props.baseClassName}-base`}>
+				{props.children}
+			</span>
 			<span className={`${props.baseClassName}-track`} >
-				<span className={`${props.baseClassName}-gauge`}>
-					<span
-						className={`${props.baseClassName}-fill`}
-						style={fill}
-					/>
-				</span>
-				<span className={`${props.baseClassName}-stack`} >
-					{props.children}
+				<span
+					className={`${props.baseClassName}-gauge`}
+					style={{ clipPath: `inset(0 ${100 - progress}% 0 0 round 1.6rem)` }}
+				>
+					<span className={`${props.baseClassName}-base inverse`} >
+						{props.children}
+					</span>
 				</span>
 			</span>
 		</button>
