@@ -32,14 +32,8 @@ export default function Home() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxContent>
-							<UxSelect
-								role="bank"
-								placeholder="은행을 선택하세요"
-								label1="은행"
-								label2="을 선택하세요"
-							/>
 							{/* CONTENTS */}
-							{/* <UxTab
+							<UxTab
 								className="synced"
 								rootMargin="96"
 							>
@@ -1691,6 +1685,78 @@ export default function Home() {
 									<p slot="valid">유효성</p>
 								</UxField>
 								<UxField>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+										sector="bank"
+										code="000"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={true}>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+										sector="bank"
+										code="000"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={false}>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+										sector="bank"
+										code="000"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+										sector="bank"
+										code="000"
+										readonly
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="bank"
+										placeholder="선택하세요"
+										label1="은행"
+										label2="을 선택하세요"
+										sector="bank"
+										code="000"
+										disabled
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
 									<UxInput
 										role="file"
 										placeholder="파일을 선택하세요"
@@ -1762,89 +1828,6 @@ export default function Home() {
 									<p slot="valid">유효성</p>
 								</UxField>
 							</UxForm>
-							<ul>
-								<li className="bl dot">UxButton(Role)</li>
-								<li className="bl dot">UxInput(Role)</li>
-								<li className="bl dot">UxCheckbox(Role)</li>
-								<li className="bl dot">UxRadio</li>
-								<li className="bl dot">UxSelect(Role)</li>
-								<li className="bl dot">UxOption</li>
-								<li className="bl dot">UxAccordion</li>
-								<li className="bl dot">UxPanel</li>
-								<li className="bl dot">UxTab</li>
-								<li className="bl dot">UxGroup(Role)</li>
-								<li className="bl dot">UxCard(Role)</li>
-								<li className="bl dot">UxForm</li>
-								<li className="bl dot">UxField</li>
-								<li className="bl dot">UxTable</li>
-								<li className="bl dot">UxCalendar</li>
-								<li className="bl dot">UxAlert</li>
-								<li className="bl dot">UxConfirm</li>
-								<li className="bl dot">UxToast</li>
-								<li className="bl dot">UxTooltip</li>
-								<li className="bl dot">UxProgress</li>
-								<li className="bl dot">UxPagination</li>
-								<li className="bl dot">UxBbs</li>
-								<li className="bl dot">UxLottie</li>
-							</ul>
-							<dl>
-								<dt>UxInput</dt>
-								<dd>
-									<ul>
-										<li className="bl dash">Default</li>
-										<li className="bl dash">Password</li>
-										<li className="bl dash">Textarea</li>
-										<li className="bl dash">Search</li>
-										<li className="bl dash">Address</li>
-										<li className="bl dash">Phone</li>
-										<li className="bl dash">Resident</li>
-										<li className="bl dash">Business</li>
-										<li className="bl dash">License</li>
-										<li className="bl dash">DatePicker</li>
-										<li className="bl dash">DateRange</li>
-									</ul>
-								</dd>
-							</dl>
-							<dl>
-								<dt>UxGroup</dt>
-								<dd>
-									<ul>
-										<li className="bl dash">Default</li>
-										<li className="bl dash">Input</li>
-										<li className="bl dash">Radio</li>
-										<li className="bl dash">Accordion</li>
-									</ul>
-								</dd>
-							</dl>
-							<dl>
-								<dt>UxCard</dt>
-								<dd>
-									<ul>
-										<li className="bl dash">Default</li>
-										<li className="bl dash">Button</li>
-										<li className="bl dash">Checkbox</li>
-									</ul>
-								</dd>
-							</dl>
-							<dl>
-								<dt>UxSelect</dt>
-								<dd>
-									<ul>
-										<li className="bl dash">Default</li>
-										<li className="bl dash">Dropdown</li>
-										<li className="bl dash">Bank</li>
-									</ul>
-								</dd>
-							</dl>
-							<dl>
-								<dt>UxCheckbox</dt>
-								<dd>
-									<ul>
-										<li className="bl dash">Default</li>
-										<li className="bl dash">Switch</li>
-									</ul>
-								</dd>
-							</dl> */}
 						</UxContent>
 					</UxArticle>
 				</UxContent>

@@ -23,12 +23,12 @@ import data from '@/public/data/code';
 
 const Popup = ({ ref, ...props }) => {
 	const handleClose = () => {
-		props.onClose({ value });
-	};
+		props.onClose();
+	}
 
-	useEffect(() => {
-		console.log(data);
-	}, []);
+	const handleClick = (sector, code) => {
+		props.onClose({ sector, code });
+	}
 
 	return (
 		<>
@@ -36,7 +36,7 @@ const Popup = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxContent>
 						<h4>{props.title || '선택'}</h4>
-						<UxButton onClick={props.onClose}>
+						<UxButton onClick={handleClose}>
 							<i className="icon close" />
 						</UxButton>
 					</UxContent>
@@ -54,12 +54,17 @@ const Popup = ({ ref, ...props }) => {
 									<UxGroup className="col3">
 										{
 											data.filter((item) => item.sector === 'bank').map((item, index) => (
-												<dl key={index}>
-													<dt>
-														<i className={`icons bank-${item.code}`} />
-													</dt>
-													<dd>{item.name}</dd>
-												</dl>
+												<UxButton
+													key={index}
+													onClick={() => handleClick(item.sector, item.code)}
+												>
+													<dl>
+														<dt>
+															<i className={`icons bank-${item.code}`} />
+														</dt>
+														<dd>{item.name}</dd>
+													</dl>
+												</UxButton>
 											))
 										}
 									</UxGroup>
@@ -71,30 +76,23 @@ const Popup = ({ ref, ...props }) => {
 									<UxGroup className="col3">
 										{
 											data.filter((item) => item.sector === 'stock').map((item, index) => (
-												<dl key={index}>
-													<dt>
-														<i className={`icons stock-${item.code}`} />
-													</dt>
-													<dd>{item.name}</dd>
-												</dl>
+												<UxButton
+													key={index}
+													onClick={() => handleClick(item.sector, item.code)}
+												>
+													<dl>
+														<dt>
+															<i className={`icons stock-${item.code}`} />
+														</dt>
+														<dd>{item.name}</dd>
+													</dl>
+												</UxButton>
 											))
 										}
 									</UxGroup>
 								</div>
 							</UxPanel>
 						</UxTab>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="footer">
-				<UxArticle>
-					<UxContent>
-						<UxButton
-							className="primary h3"
-							onClick={handleClose}
-						>
-							<span className="text">확인</span>
-						</UxButton>
 					</UxContent>
 				</UxArticle>
 			</UxSection>

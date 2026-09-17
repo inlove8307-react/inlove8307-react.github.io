@@ -5,7 +5,7 @@ i.icon {--w: 2.4rem; --h: 2.4rem;}
 i.icon {flex-shrink: 0; display: inline-flex; width: var(--w); height: var(--h); background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
 i.icon:not(.mask) {mask-image: initial!important;}
 i.icon.mask {mask-repeat: no-repeat; mask-position: 50% 50%; mask-size: contain; background-color: var(--gray-90); background-image: initial!important;}
-i.icons {flex-shrink: 0; display: inline-flex; width: var(--w); height: var(--h); background-size: calc(var(--w) * var(--c)) calc(var(--h) * var(--r)); background-position: calc(var(--w) * var(--x)) calc(var(--h) * var(--y));}
+i.icons {flex-shrink: 0; display: inline-flex; width: var(--w); height: var(--h); background-size: calc(var(--w) * var(--c)) calc(var(--h) * var(--r)); background-position: calc(var(--w) * var(--x)) calc(var(--h) * var(--y)); vertical-align: top;}
 
 /* Align */
 i.icon.left,

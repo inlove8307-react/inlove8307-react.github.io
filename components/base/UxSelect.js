@@ -6,9 +6,12 @@ import useModal from "@/hook/useModal";
 import classnames from 'classnames';
 /* COMPONENT */
 import UxGroup from '@/components/base/UxGroup';
+import UxButton from '@/components/base/UxButton';
 /* POPUP */
 import Select from '@/components/popup/Select';
 import SelectBank from '@/components/popup/SelectBank';
+/* DATA */
+import data from '@/public/data/code';
 
 /**
  * <Bank>
@@ -25,11 +28,10 @@ import SelectBank from '@/components/popup/SelectBank';
  */
 
 const Bank = ({ ref, ...props }) => {
-	const baseClassName = 'ux-select';
-	const caseClassName = classnames(baseClassName, props.className);
 	const modal = useModal();
-	const [value, setValue] = useState(props.value || '');
-	const [label, setLabel] = useState();
+	const [sector, setSector] = useState(props.sector);
+	const [code, setCode] = useState(props.code);
+	const [name, setName] = useState();
 	const [active, setActive] = useState(false);
 
 	const handleClick = async (event) => {
@@ -39,17 +41,27 @@ const Bank = ({ ref, ...props }) => {
 		props.onClick && props.onClick(event);
 
 		result = await modal.bottom(SelectBank, {
-
+			sector,
+			code
 		});
 
-		console.log(result);
+		if (result.sector && result.code) {
+			setSector(result.sector);
+			setCode(result.code);
+		}
 
 		setActive(false);
 	};
 
 	useEffect(() => {
+		const filtered = data.filter(item => {
+			return item.sector === sector && item.code === code;
+		})[0];
 
-	}, [value]);
+		if (filtered) {
+			setName(filtered.name);
+		}
+	}, [sector, code]);
 
 	return (
 		<UxGroup
@@ -57,25 +69,26 @@ const Bank = ({ ref, ...props }) => {
 			role="input"
 			tag={!props.inside && 'label'}
 			className={classnames('select', { inside: props.inside })}
-			focused={value}
+			focused={name}
 		>
-			<button
-				className={classnames(caseClassName, 'fill', { selected: label })}
+			<UxButton
+				className={classnames({ selected: name })}
 				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>
-				{ !label && props.placeholder }
+				{ !name && props.placeholder }
 				{
-					label &&
-					<span className="text">
-						{label}
-					</span>
+					name &&
+					<>
+						<i className={`icons ${sector}-${code}`} />
+						<span>{ name }</span>
+					</>
 				}
 				<i className={classnames('icon mask arrow-down right x20', {
 					vertical: active,
 					disabled: props.readonly || props.disabled
 				})} />
-			</button>
+			</UxButton>
 		</UxGroup>
 	);
 };
@@ -95,8 +108,6 @@ const Bank = ({ ref, ...props }) => {
  */
 
 const Default = ({ ref, ...props }) => {
-	const baseClassName = 'ux-select';
-	const caseClassName = classnames(baseClassName, props.className);
 	const modal = useModal();
 	const [value, setValue] = useState(props.value || '');
 	const [label, setLabel] = useState();
@@ -137,8 +148,8 @@ const Default = ({ ref, ...props }) => {
 			className={classnames('select', { inside: props.inside })}
 			focused={value}
 		>
-			<button
-				className={classnames(caseClassName, 'fill', { selected: label })}
+			<UxButton
+				className={classnames({ selected: label })}
 				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>
@@ -153,7 +164,7 @@ const Default = ({ ref, ...props }) => {
 					vertical: active,
 					disabled: props.readonly || props.disabled
 				})} />
-			</button>
+			</UxButton>
 		</UxGroup>
 	);
 };
