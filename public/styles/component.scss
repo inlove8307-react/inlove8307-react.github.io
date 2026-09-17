@@ -1100,8 +1100,10 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab.scroll {position: relative;}
 .ux-tab.scroll .ux-tab-scroll {overflow-x: auto;}
 .ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none}
-.ux-tab.scroll .ux-tab-before {display: initial; margin-right: calc(var(--gap) * -1); width: .1rem; height: .1rem;}
-.ux-tab.scroll .ux-tab-after {display: initial; margin-left: calc(var(--gap) * -1); width: .1rem; height: .1rem;}
+.ux-tab.scroll .ux-tab-before,
+.ux-tab.scroll .ux-tab-after {display: initial;}
+.ux-tab.scroll .ux-tab-before {margin-right: calc(var(--gap) * -1);}
+.ux-tab.scroll .ux-tab-after {margin-left: calc((var(--gap) + .1rem) * -1);}
 .ux-tab.scroll::before,
 .ux-tab.scroll::after {content: ''; position: absolute; top: 0; width: 3.2rem; height: var(--height); pointer-events: none; opacity: 0;}
 .ux-tab.scroll::before {left: 0; background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
