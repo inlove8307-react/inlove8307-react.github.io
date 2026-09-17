@@ -4,6 +4,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useInView, InView } from 'react-intersection-observer';
 import { getArray, getSlot, mergeProps } from '@/utils/core';
 import classnames from 'classnames';
+/* COMPONENT */
+import UxButton from '@/components/base/UxButton';
 
 /**
  * <Summary>
@@ -15,39 +17,39 @@ import classnames from 'classnames';
 
 const Summary = ({ ref, ...props }) => {
 	const baseClassName = props.baseClassName;
-	const [isActive, setIsActive] = useState(false);
+	const [summary, setSummary] = useState([]);
 	const [beforeRef, beforeInView] = useInView();
 	const [afterRef, afterInView] = useInView();
 	const summaryRef = useRef([]);
 	const linearRef = useRef();
 	const scrollRef = useRef();
-	const summary = (() => {
-		let result = [];
-
-		getArray(props.children).map((item) => {
-			result.push(getSlot(getArray(item.props.children), 'summary'));
-		});
-
-		return result;
-	})();
 
 	const handleClick = (index) => {
-		setIsActive(true);
 		props.onClick && props.onClick(index);
 	};
 
-	const setLinear = (index) => {
-		linearRef.current.style.width = `${summaryRef.current[index]?.clientWidth}px`;
-		linearRef.current.style.left = `${summaryRef.current[index]?.offsetLeft}px`;
+	const handleLinear = (index) => {
+		linearRef.current.style.width = `${summaryRef.current[index].clientWidth}px`;
+		linearRef.current.style.left = `${summaryRef.current[index].offsetLeft}px`;
 	};
 
-	const summaryScroll = (index) => {
+	const handleScroll = (index) => {
 		summaryRef.current[index]?.scrollIntoView({
 			block: "nearest",
 			inline: "center",
 			behavior: "smooth",
 		});
 	};
+
+	useEffect(() => {
+		const array = [];
+
+		getArray(props.children).map((item) => {
+			array.push(getSlot(getArray(item.props.children), 'summary'));
+		});
+
+		setSummary(array);
+	}, []);
 
 	useEffect(() => {
 		props.onScroll && props.onScroll({
@@ -58,40 +60,42 @@ const Summary = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		if (props.isSynced) return;
-
-		props.isLinear && setLinear(props.selected);
-		props.isScroll && isActive && summaryScroll(props.selected);
+		props.isLinear && handleLinear(props.selected);
+		props.isScroll && props.isActive && handleScroll(props.selected);
 	}, [props.selected]);
 
 	useEffect(() => {
-		if (!props.isSynced) return;
-
-		summaryScroll(props.scrolled);
-	}, [props.scrolled]);
+		props.isActive &&	handleScroll(props.selectedSynced);
+	}, [props.selectedSynced]);
 
 	return (
 		<div
 			ref={scrollRef}
-			className={`${baseClassName}-scroll`}
+			className={`${baseClassName}-summary`}
 		>
 			<div className={`${baseClassName}-list`}>
 				<span
 					ref={beforeRef}
 					className={`${baseClassName}-before`}
 				/>
-				{summary.map((item, index) => (
-					<button
-						ref={(element) => summaryRef.current[index] = element}
-						key={index}
-						type="button"
-						className={classnames(`${baseClassName}-button`, {
-							active: props.selected === index
-						})}
-						onClick={() => handleClick(index)}
-					>
-						{item.props.children}
-					</button>
-				))}
+				{summary.map((item, index) => {
+					let active = props.selected === index;
+
+					if (props.isSynced) {
+						active = props.selectedSynced === index;
+					}
+
+					return (
+						<UxButton
+							ref={(element) => summaryRef.current[index] = element}
+							key={index}
+							className={active && 'active'}
+							onClick={() => handleClick(index)}
+						>
+							{item.props.children}
+						</UxButton>
+					)}
+				)}
 				{
 					props.isLinear &&
 					<span
@@ -117,10 +121,11 @@ const Summary = ({ ref, ...props }) => {
  */
 
 const Details = ({ ref, ...props }) => {
+	const baseClassName = props.baseClassName;
 	const [state, setState] = useState([]);
 	const detailsRef = useRef([]);
 
-	const detailsScroll = (index) => {
+	const handleScroll = (index) => {
 		detailsRef.current[index]?.node.scrollIntoView({
 			block: 'start',
 			inline: 'nearest',
@@ -142,17 +147,17 @@ const Details = ({ ref, ...props }) => {
 		state.map((inView, index) => {
 			if (inView && !updated) {
 				updated = true;
-				props.onChange && props.onChange(index);
+				props.onSynced && props.onSynced(index);
 			}
 		});
 	}, [state]);
 
 	useEffect(() => {
-		detailsScroll(props.scrolled);
-	}, [props.scrolled]);
+		props.isActive && handleScroll(props.selected);
+	}, [props.selected]);
 
 	return (
-		<>
+		<div className={`${baseClassName}-details`}>
 			{
 				!props.isSynced &&
 				getArray(props.children).map((item, index) => (
@@ -183,7 +188,7 @@ const Details = ({ ref, ...props }) => {
 					</InView>
 				))
 			}
-		</>
+		</div>
 	);
 };
 
@@ -198,23 +203,23 @@ const Details = ({ ref, ...props }) => {
 const UxTab = ({ ref, ...props }) => {
 	const baseClassName = "ux-tab";
 	const [selected, setSelected] = useState(props.selected);
-	const [scrolled, setScrolled] = useState(0);
+	const [selectedSynced, setSelectedSynced] = useState(0);
 	const [isLinear, setIsLinear] = useState(false);
 	const [isScroll, setIsScroll] = useState(false);
 	const [isSynced, setIsSynced] = useState(false);
+	const [isActive, setIsActive] = useState(false);
 	const [beforeInView, setBeforeInView] = useState();
 	const [afterInView, setAfterInView] = useState();
 
 	const handleClick = (index) => {
-		isSynced
-			? setScrolled(index)
-			: setSelected(index);
-
+		setIsActive(true);
+		setSelected(index);
 		props.onChange && props.onChange(index);
 	};
 
-	const handleChange = (index) => {
-		setSelected(index);
+	const handleSynced = (index) => {
+		setIsActive(true);
+		setSelectedSynced(index);
 	};
 
 	const handleScroll = ({beforeInView, afterInView}) => {
@@ -250,20 +255,22 @@ const UxTab = ({ ref, ...props }) => {
 				<Summary
 					{...props}
 					baseClassName={baseClassName}
+					selected={selected}
+					selectedSynced={selectedSynced}
 					isLinear={isLinear}
 					isScroll={isScroll}
 					isSynced={isSynced}
-					selected={selected}
-					scrolled={scrolled}
+					isActive={isActive}
 					onClick={handleClick}
 					onScroll={handleScroll}
 				/>
 				<Details
 					{...props}
-					isSynced={isSynced}
+					baseClassName={baseClassName}
 					selected={selected}
-					scrolled={scrolled}
-					onChange={handleChange}
+					isSynced={isSynced}
+					isActive={isActive}
+					onSynced={handleSynced}
 				/>
 			</div>
 		</div>

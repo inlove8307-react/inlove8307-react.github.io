@@ -14,7 +14,7 @@ import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
 /* POPUP */
-import popup from "@/components/popup/popup.js";
+import popup from "@/components/popup/popup";
 
 export default function Guide() {
 	const modal = useModal();

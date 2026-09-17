@@ -19,7 +19,6 @@ import UxButton from "@/components/base/UxButton";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxTab from "@/components/base/UxTab";
 import UxPanel from "@/components/base/UxPanel";
-import UxCard from "@/components/base/UxCard";
 
 export default function Home() {
 	const [progress, setProgress] = useState(25);
@@ -33,8 +32,14 @@ export default function Home() {
 				<UxContent>
 					<UxArticle className="h4 space">
 						<UxContent>
+							<UxSelect
+								role="bank"
+								placeholder="은행을 선택하세요"
+								label1="은행"
+								label2="을 선택하세요"
+							/>
 							{/* CONTENTS */}
-							<UxTab
+							{/* <UxTab
 								className="synced"
 								rootMargin="96"
 							>
@@ -59,7 +64,7 @@ export default function Home() {
 									<div slot="details">details5</div>
 								</UxPanel>
 							</UxTab>
-							<UxTab>
+							<UxTab className="linear scroll">
 								<UxPanel>
 									<div slot="summary">summary1</div>
 									<div slot="details">details1</div>
@@ -68,35 +73,17 @@ export default function Home() {
 									<div slot="summary">summary2</div>
 									<div slot="details">details2</div>
 								</UxPanel>
-							</UxTab>
-							<UxTab className="linear">
 								<UxPanel>
-									<div slot="summary">summary1</div>
-									<div slot="details">details1</div>
+									<div slot="summary">summary3</div>
+									<div slot="details">details3</div>
 								</UxPanel>
 								<UxPanel>
-									<div slot="summary">summary2</div>
-									<div slot="details">details2</div>
-								</UxPanel>
-							</UxTab>
-							<UxTab className="chip">
-								<UxPanel>
-									<div slot="summary">summary1</div>
-									<div slot="details">details1</div>
+									<div slot="summary">summary4</div>
+									<div slot="details">details4</div>
 								</UxPanel>
 								<UxPanel>
-									<div slot="summary">summary2</div>
-									<div slot="details">details2</div>
-								</UxPanel>
-							</UxTab>
-							<UxTab className="chip subtle">
-								<UxPanel>
-									<div slot="summary">summary1</div>
-									<div slot="details">details1</div>
-								</UxPanel>
-								<UxPanel>
-									<div slot="summary">summary2</div>
-									<div slot="details">details2</div>
+									<div slot="summary">summary5</div>
+									<div slot="details">details5</div>
 								</UxPanel>
 							</UxTab>
 							<UxTab className="chip subtle scroll">
@@ -119,16 +106,6 @@ export default function Home() {
 								<UxPanel>
 									<div slot="summary">summary5</div>
 									<div slot="details">details5</div>
-								</UxPanel>
-							</UxTab>
-							<UxTab className="atomic">
-								<UxPanel>
-									<div slot="summary">summary1</div>
-									<div slot="details">details1</div>
-								</UxPanel>
-								<UxPanel>
-									<div slot="summary">summary2</div>
-									<div slot="details">details2</div>
 								</UxPanel>
 							</UxTab>
 							<UxTab className="block">
@@ -1867,7 +1844,7 @@ export default function Home() {
 										<li className="bl dash">Switch</li>
 									</ul>
 								</dd>
-							</dl>
+							</dl> */}
 						</UxContent>
 					</UxArticle>
 				</UxContent>

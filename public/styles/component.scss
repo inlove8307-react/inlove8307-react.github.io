@@ -1066,40 +1066,42 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab .ux-tab-list {display: flex; gap: var(--gap); position: relative;}
 .ux-tab .ux-tab-before,
 .ux-tab .ux-tab-after {display: none;}
-.ux-tab .ux-tab-button {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 .8rem; height: var(--height); border-radius: var(--radius); font-weight: 600; color: var(--text-muted); transition: all .15s ease-in-out;}
-.ux-tab .ux-tab-button.active {box-shadow: inset 0 -.2rem 0 var(--primary-80); color: var(--text-default);}
+.ux-tab .ux-button {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 .8rem; height: var(--height); border-radius: var(--radius); font-weight: 600; color: var(--text-muted); transition: all .15s ease-in-out;}
+.ux-tab .ux-button.active {box-shadow: inset 0 -.2rem 0 var(--primary-80); color: var(--text-default);}
+/* <UxTab> Empty */
+.ux-tab.empty .ux-tab-details {display: none;}
 /* <UxTab> Panel */
 .ux-tab .ux-panel {display: none;}
 .ux-tab .ux-panel.active {display: block}
 /* <UxTab> Full */
-.ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0}
+.ux-tab.full .ux-button {flex-grow: 1; flex-basis: 0}
 /* <UxTab> Linear */
 .ux-tab.linear {--linear: .2rem;}
-.ux-tab.linear .ux-tab-button.active {box-shadow: none}
+.ux-tab.linear .ux-button.active {box-shadow: none}
 .ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: var(--linear); background-color: var(--primary-80); transition: all .15s ease-in-out}
 /* <UxTab> Chip */
 .ux-tab.chip {--gap: .8rem; --height: 4.8rem; --radius: calc(var(--height) / 2);}
-.ux-tab.chip .ux-tab-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--background-default);}
-.ux-tab.chip.subtle .ux-tab-button {background-color: var(--background-subtle);}
-.ux-tab.chip .ux-tab-button.active {background-color: var(--primary-80); color: var(--text-inverse);}
+.ux-tab.chip .ux-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--background-default);}
+.ux-tab.chip.subtle .ux-button {background-color: var(--background-subtle);}
+.ux-tab.chip .ux-button.active {background-color: var(--primary-80); color: var(--text-inverse);}
 /* <UxTab> Atomic */
 .ux-tab.atomic {--height: 4rem; --radius: .8rem;}
-.ux-tab.atomic .ux-tab-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--white-0); color: var(--text-muted);}
-.ux-tab.atomic .ux-tab-button.active {box-shadow: 0 .3rem .1rem 0 rgba(0, 0, 0, .04); background-color: var(--background-default); color: var(--text-default);}
+.ux-tab.atomic .ux-button {padding: 0 var(--radius); box-shadow: initial; background-color: var(--white-0); color: var(--text-muted);}
+.ux-tab.atomic .ux-button.active {box-shadow: 0 .3rem .1rem 0 rgba(0, 0, 0, .04); background-color: var(--background-default); color: var(--text-default);}
 /* <UxTab> Block */
 .ux-tab.block {--gap: 0; --height: 4.8rem; --radius: .8rem; --padding: .4rem;}
 .ux-tab.block .ux-tab-list {border-radius: calc(var(--radius) + var(--radius) / 3); background-color: var(--gray-20);}
-.ux-tab.block .ux-tab-button {flex-grow: 1; flex-basis: 0; position: relative;}
-.ux-tab.block .ux-tab-button::before {content: ''; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height) / 2); background-color: var(--border-default); transform: translateY(-50%); opacity: 1; transition: all .15s ease-in-out;}
-.ux-tab.block .ux-tab-button.active::before,
-.ux-tab.block .ux-tab-button.active + .ux-tab-button::before,
-.ux-tab.block .ux-tab-button:first-of-type::before {opacity: 0;}
+.ux-tab.block .ux-button {flex-grow: 1; flex-basis: 0; position: relative;}
+.ux-tab.block .ux-button::before {content: ''; position: absolute; top: 50%; left: 0; width: .1rem; height: calc(var(--height) / 2); background-color: var(--border-default); transform: translateY(-50%); opacity: 1; transition: all .15s ease-in-out;}
+.ux-tab.block .ux-button.active::before,
+.ux-tab.block .ux-button.active + .ux-button::before,
+.ux-tab.block .ux-button:first-of-type::before {opacity: 0;}
 .ux-tab.block .ux-tab-linear {display: flex; padding: var(--padding); height: 100%; background-color: transparent; box-shadow: initial;}
 .ux-tab.block .ux-tab-linear::after {content: ''; width: 100%; height: 100%; border-radius: var(--radius); box-shadow: 0 .3rem .1rem 0 rgba(0, 0, 0, .04); background-color: var(--background-default);}
 /* <UxTab> Scroll */
 .ux-tab.scroll {position: relative;}
-.ux-tab.scroll .ux-tab-scroll {overflow-x: auto;}
-.ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none}
+.ux-tab.scroll .ux-tab-summary {overflow-x: auto;}
+.ux-tab.scroll .ux-tab-summary::-webkit-scrollbar {display: none}
 .ux-tab.scroll .ux-tab-before,
 .ux-tab.scroll .ux-tab-after {display: initial;}
 .ux-tab.scroll .ux-tab-before {margin-right: calc(var(--gap) * -1);}
@@ -1113,7 +1115,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* <UxTab> Synced */
 .ux-tab.synced::before,
 .ux-tab.synced::after {display: none;}
-.ux-tab.synced .ux-tab-scroll {position: sticky; top: var(--header); left: 0; z-index: 1; background-color: var(--background-default);}
+.ux-tab.synced .ux-tab-summary {position: sticky; top: var(--header); left: 0; z-index: 1; background-color: var(--background-default);}
 .ux-tab.synced .ux-panel {display: block; height: 50vh;}
 /* <UxTab> Synced Example */
 .ux-tab.synced .ux-panel {height: 50vh;}
@@ -1124,9 +1126,18 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab.synced .ux-panel[data-index='4'] {background-color: var(--gray-5);}
 /* <UxTab> z-index */
 .ux-tab .ux-tab-list {z-index: 1;}
-.ux-tab .ux-tab-button {z-index: 1;}
+.ux-tab .ux-button {z-index: 1;}
 .ux-tab.scroll::before,
 .ux-tab.scroll::after {z-index: 2;}
+
+/* <UxTab> Bank */
+.ux-tab.bank {}
+.ux-tab.bank .ux-tab-details {padding: 1.6rem 0 0;}
+.ux-tab.bank .ux-panel {overflow-x: hidden; overflow-y: auto; max-height: 50vh;}
+.ux-tab.bank .ux-group {}
+.ux-tab.bank dl {}
+.ux-tab.bank dt {}
+.ux-tab.bank dd {}
 
 
 

@@ -248,15 +248,15 @@ const UxButton = ({ ref, ...props }) => {
 
 		switch (props.role) {
 			case 'select':
-				return <Select {...props} />;
+				return <Select ref={ref} {...props} />;
 			case 'search':
-				return <Search {...props} />;
+				return <Search ref={ref} {...props} />;
 			case 'input':
-				return <Input {...props} />;
+				return <Input ref={ref} {...props} />;
 			case 'progress':
-				return <Progress {...props} />;
+				return <Progress ref={ref} {...props} />;
 			default:
-				return <Default {...props} />;
+				return <Default ref={ref} {...props} />;
 		}
 	};
 
