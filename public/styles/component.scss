@@ -1129,15 +1129,13 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab .ux-button {z-index: 1;}
 .ux-tab.scroll::before,
 .ux-tab.scroll::after {z-index: 2;}
-
 /* <UxTab> Bank */
-.ux-tab.bank {}
 .ux-tab.bank .ux-tab-details {padding: 1.6rem 0 0;}
-.ux-tab.bank .ux-panel {overflow-x: hidden; overflow-y: auto; max-height: 50vh;}
-.ux-tab.bank .ux-group {}
-.ux-tab.bank dl {}
-.ux-tab.bank dt {}
-.ux-tab.bank dd {}
+.ux-tab.bank .ux-panel {overflow-x: hidden; overflow-y: auto; max-height: 30rem;}
+.ux-tab.bank .ux-group {--gap: .8rem;}
+.ux-tab.bank dl {display: flex; flex-direction: column; align-items: center; gap: .6rem; padding: 1.2rem 2rem; min-height: 8.3rem; border-radius: 1.6rem; background-color: var(--select-default);}
+.ux-tab.bank dt i.icons {--w: 3.2rem; --h: 3.2rem;}
+.ux-tab.bank dd {font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
 
 
 
