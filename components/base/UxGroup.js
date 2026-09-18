@@ -228,6 +228,10 @@ const Input = ({ ref, ...props }) => {
 		setFocused(true);
 	};
 
+	const handleClick = () => {
+		setFocused(true);
+	};
+
 	useEffect(() => {
 		props.valid && setOptions({ ...options, valid: props.valid });
 		props.readonly && setOptions({ ...options, readonly: props.readonly });
@@ -245,6 +249,7 @@ const Input = ({ ref, ...props }) => {
 				focused: focused || props.focused,
 			})}
 			onFocus={handleFocus}
+			onClick={handleClick}
 		>
 			{
 				props.label1 &&
