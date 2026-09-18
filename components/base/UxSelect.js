@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { isBrowser, isMobile } from 'react-device-detect';
 import { getArray } from '@/utils/core';
 import useModal from "@/hook/useModal";
 import classnames from 'classnames';
@@ -8,23 +9,92 @@ import classnames from 'classnames';
 import UxGroup from '@/components/base/UxGroup';
 import UxButton from '@/components/base/UxButton';
 /* POPUP */
-import Select from '@/components/popup/Select';
-import SelectBank from '@/components/popup/SelectBank';
+import PopupSelect from '@/components/popup/Select';
+import PopupDropdown from '@/components/popup/Dropdown';
+import PopupBank from '@/components/popup/SelectBank';
 /* DATA */
 import data from '@/public/data/code';
 
 /**
+ * <Dropdown>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Dropdown = ({ ref, ...props }) => {
+	const modal = useModal();
+	const [value, setValue] = useState(props.value || '');
+	const [label, setLabel] = useState();
+	const [active, setActive] = useState(false);
+	const openerRef = useRef();
+
+	const handleClick = async (event) => {
+		let result = {};
+
+		setActive(true);
+		props.onClick && props.onClick(event);
+
+		result = await modal.dropdown(PopupDropdown, {
+			title: props.label1,
+			value,
+			options: props.children,
+			openerRef,
+		});
+
+		result.value && setValue(result.value);
+		result.label && setLabel(result.label);
+
+		setActive(false);
+	};
+
+	useEffect(() => {
+		const filter = getArray(props.children).filter(item => value === item.props.value)[0];
+
+		if (filter) {
+			setLabel(filter?.props.children);
+		}
+
+		props.onChange && props.onChange(value, label);
+	}, [value]);
+
+	return (
+		<UxGroup
+			{...props}
+			ref={openerRef}
+			role="input"
+			tag={!props.inside && 'label'}
+			className={classnames('select', { inside: props.inside })}
+			focused={value}
+		>
+			<UxButton
+				className={classnames({ selected: label })}
+				disabled={props.readonly || props.disabled}
+				onClick={handleClick}
+			>
+				{ !label && props.placeholder }
+				{
+					label &&
+					<span className="text">
+						{label}
+					</span>
+				}
+				<i className={classnames('icon mask arrow-down right x20', {
+					vertical: active,
+					disabled: props.readonly || props.disabled
+				})} />
+			</UxButton>
+		</UxGroup>
+	);
+};
+
+/**
  * <Bank>
  * [props]
- * className(String): 추가 클래스
- * placeholder(String): 값 없을 경우 표시 문구
- * value(String): 값
- * valid(Boolean): 유효성 여부
- * readonly(Boolean): 읽기전용 여부
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
- * onChange(Func): 값 변경 이벤트 콜백
+ *
  */
 
 const Bank = ({ ref, ...props }) => {
@@ -40,7 +110,8 @@ const Bank = ({ ref, ...props }) => {
 		setActive(true);
 		props.onClick && props.onClick(event);
 
-		result = await modal.bottom(SelectBank, {
+		result = await modal.bottom(PopupBank, {
+			title: props.label1,
 			sector,
 			code
 		});
@@ -119,7 +190,8 @@ const Default = ({ ref, ...props }) => {
 		setActive(true);
 		props.onClick && props.onClick(event);
 
-		result = await modal.bottom(Select, {
+		result = await modal.bottom(PopupSelect, {
+			title: props.label1,
 			value,
 			options: props.children,
 		});
@@ -183,10 +255,12 @@ const UxSelect = ({ ref, ...props }) => {
 		});
 
 		switch (props.role) {
+			case 'dropdown':
+				return <Dropdown {...props} />;
 			case 'bank':
 				return <Bank {...props} />;
 			default:
-				return <Default {...props} />;
+				return isMobile ? <Default {...props} /> : <Dropdown {...props} />;
 		};
 	};
 

@@ -5,6 +5,7 @@ import { format, set, getDate, getMonth, getYear } from "date-fns";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -72,12 +73,12 @@ const Popup = ({ ref, ...props }) => {
 		<>
 			<UxSection className="header">
 				<UxArticle>
-					<UxContent>
-						<h4>{props.title || '선택'}</h4>
+					<UxSubject>
+						<h3>{props.title || '선택'}</h3>
 						<UxButton onClick={props.onClose}>
 							<i className="icon close" />
 						</UxButton>
-					</UxContent>
+					</UxSubject>
 				</UxArticle>
 			</UxSection>
 			<UxSection className="main">

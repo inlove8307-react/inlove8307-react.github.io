@@ -1,11 +1,15 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { getArray, mergeProps } from '@/utils/core';
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
+/* COMPONENT */
+import UxButton from "@/components/base/UxButton";
+import UxGroup from "@/components/base/UxGroup";
 
 /**
  * <Popup>
@@ -14,35 +18,42 @@ import UxContent from "@/components/layout/UxContent";
  */
 
 const Popup = ({ ref, ...props }) => {
-	const baseClassName = 'ux-options';
-
-	const handleClick = (value, label) => {
-		props.onClose({ value, label })
+	const handleClick = (value) => {
+		props.onClose({ value });
 	};
 
 	return (
-		<UxSection className="options">
-			<UxArticle>
-				<UxContent className="space">
-					<ul className={baseClassName}>
-						{
-							getArray(props.options).map((item, index) => {
-								const selected = item.props.value === props.value;
+		<>
+			<UxSection className="header">
+				<UxArticle>
+					<UxSubject>
+						<h3>{props.title || '선택'}</h3>
+						<UxButton onClick={props.onClose}>
+							<i className="icon close" />
+						</UxButton>
+					</UxSubject>
+				</UxArticle>
+			</UxSection>
+			<UxSection>
+				<UxArticle>
+					<UxContent>
+						<UxGroup className="col1 gap0">
+							{
+								getArray(props.options).map((item, index) => {
+									const selected = item.props.value === props.value;
 
-								return (
-									<li key={index}>
-										{mergeProps(item, {
-											selected,
-											onClick: handleClick,
-										})}
-									</li>
-								);
-							})
-						}
-					</ul>
-				</UxContent>
-			</UxArticle>
-		</UxSection>
+									return mergeProps(item, {
+										key: index,
+										selected,
+										onClick: handleClick,
+									});
+								})
+							}
+						</UxGroup>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+		</>
 	);
 };
 

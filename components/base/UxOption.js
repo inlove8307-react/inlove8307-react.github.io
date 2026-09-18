@@ -3,6 +3,7 @@
 import React from 'react';
 import classnames from 'classnames';
 /* COMPONENT */
+import UxButton from "@/components/base/UxButton";
 
 /**
  * <UxOption>
@@ -24,14 +25,12 @@ const UxOption = ({ ref, ...props }) => {
 
 	return (
 		<div className={caseClassName}>
-			<button
-				type="button"
-				className={`${baseClassName}-button`}
+			<UxButton
 				onClick={handleClick}
 			>
 				{props.children}
-			</button>
-			<i className={classnames('icons check', { selected: props.selected })} />
+				<i className={classnames('icons check right', { selected: props.selected })} />
+			</UxButton>
 		</div>
 	)
 };

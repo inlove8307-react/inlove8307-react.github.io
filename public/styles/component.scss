@@ -333,7 +333,7 @@ input::-webkit-credentials-auto-fill-button {display: none !important; visibilit
 
 
 
-html.modal {overflow: hidden; height: 100%;}
+html.modal {overflow: hidden; height: 100%; padding-right: var(--scrollbar-width);}
 #__next {display: flex; flex-direction: column; height: 100%;}
 
 
@@ -427,15 +427,19 @@ h6 {font-size: 1.4rem;}
 .ux-container-after {position: absolute; left: 0; width: 100%;}
 .ux-container-before {top: 0;}
 .ux-container-after {bottom: 0;}
+/* <UxContainer> Desktop */
+html.desktop .ux-container {--space: 0;}
 
 
 
 
 
 /* <UxHeader> */
-.ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--header); border-bottom: .1rem solid var(--divider-gray); background-color: var(--background-default); transition: all .25s ease-in-out;}
+.ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--header); border-bottom: .1rem solid var(--divider-gray); background-color: var(--background-default); transition: box-shadow .25s ease-in-out;}
 /* <UxHeader> InView */
 .ux-container:not(.before) .ux-header {box-shadow: var(--shadow);}
+/* <UxHeader> Desktop Modal */
+html.desktop.modal .ux-header {padding-right: var(--scrollbar-width);}
 /* <UxHeader> z-index */
 .ux-header {z-index: 20;}
 
@@ -473,7 +477,6 @@ h6 {font-size: 1.4rem;}
 /* <UxSection> Desktop */
 html.desktop .ux-section {width: var(--desktop);}
 html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; height: 100%;}
-/* <UxSection> Modal */
 
 
 
@@ -543,6 +546,7 @@ html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; he
 
 /* <UxModal> */
 .ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+html.desktop.modal .ux-modal {padding-right: var(--scrollbar-width);}
 .ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75);}
 .ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--background-default);}
 /* <UxModal> Section */
@@ -551,8 +555,11 @@ html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; he
 .ux-modal .ux-section.footer {padding: 1.6rem;}
 /* <UxModal> Section Desktop */
 html.desktop .ux-modal .ux-section {width: 100%;}
-/* <UxModal> Content */
-.ux-modal .ux-section.header .ux-content {flex-direction: row; justify-content: space-between; align-items: flex-start;}
+/* <UxModal> Header */
+.ux-modal .ux-section.header {}
+/* <UxModal> Header Subject */
+.ux-modal .ux-section.header .ux-subject {flex-direction: row; justify-content: space-between; align-items: center;}
+.ux-modal .ux-section.header .ux-subject h3 {font-size: 1.8rem;}
 /* <UxModal> Center */
 .ux-modal.center {display: flex; justify-content: center; align-items: center;}
 .ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: 1.6rem; transform: scale(.75); transition: transform .15s ease-in-out;}
@@ -578,7 +585,7 @@ html.desktop .ux-modal.full .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Toast */
 .ux-modal.toast {display: flex; justify-content: center; align-items: flex-end; pointer-events: none;}
 .ux-modal.toast .ux-modal-base {padding: 1.6rem 2rem; border-radius: 1.6rem; width: calc(100% - var(--space) * 2); background-color: rgba(0, 0, 0, .75); box-shadow: var(--shadow); color: var(--light0); transform: translateY(100%); transition: transform .15s ease-in-out;}
-.ux-modal.toast .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0); pointer-events: none;}
+.ux-modal.toast .ux-modal-backdrop {background-color: var(--black-0); pointer-events: none;}
 /* <UxModal> Toast Desktop */
 html.desktop .ux-modal.toast {justify-content: center;}
 html.desktop .ux-modal.toast .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
@@ -586,15 +593,20 @@ html.desktop .ux-modal.toast .ux-modal-base {width: calc(var(--desktop) - var(--
 .ux-modal.toast.active .ux-modal-base {transform: translateY(var(--space-minus));}
 /* <UxModal> Popover */
 .ux-modal.popover {display: flex; justify-content: center; align-items: flex-start;}
-.ux-modal.popover .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
-.ux-modal.popover .ux-modal-base {overflow: initial; position: relative; width: calc(100% - var(--space) * 2); background-color: rgba(0, 0, 0, 0);}
+.ux-modal.popover .ux-modal-backdrop {background-color: var(--black-0);}
+.ux-modal.popover .ux-modal-base {overflow: initial; position: relative; width: calc(100% - var(--space) * 2); background-color: var(--black-0);}
 /* <UxModal> Popover Desktop */
 html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
+/* <UxModal> Dropdown */
+.ux-modal.dropdown {display: block;}
+.ux-modal.dropdown .ux-modal-backdrop {background-color: var(--black-0);}
+.ux-modal.dropdown .ux-modal-base {overflow: hidden; display: inline-flex; border-radius: 1.6rem; box-shadow: var(--inset); box-shadow: 0 0 .2rem 0 var(--black-10), 0 1.6rem 2.4rem 0 var(--black-10); background-color: var(--background-default);}
 /* <UxModal> Tooltip */
 .ux-modal.tooltip {display: flex; justify-content: stretch; align-items: stretch;}
-.ux-modal.tooltip .ux-modal-backdrop {background-color: rgba(0, 0, 0, 0);}
+.ux-modal.tooltip .ux-modal-backdrop {background-color: var(--black-0);}
 /* <UxModal> z-index */
 .ux-modal {z-index: 30;}
+
 
 
 
@@ -640,6 +652,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.gap12 {--gap: 1.2rem;}
 .ux-group.gap8 {--gap: .8rem;}
 .ux-group.gap4 {--gap: .4rem;}
+.ux-group.gap0 {--gap: 0rem;}
 /* <UxGroup> Default Col */
 .ux-group.col1 {--col: 1;}
 .ux-group.col2 {--col: 2;}
@@ -894,16 +907,12 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
-/* <UxOptions> */
-.ux-modal .ux-section.options {padding: 1.6rem 0;}
-.ux-options {display: flex; flex-direction: column;}
-.ux-options li + li {border-top: .1rem solid var(--light1);}
 /* <UxOption> */
-.ux-option {display: flex; align-items: center; padding: 1.2rem 0;}
-.ux-option-button {flex-grow: 1; text-align: left;}
+.ux-option {display: flex;}
+.ux-option .ux-button {flex-grow: 1; justify-content: flex-start;}
+.ux-option .ux-button {padding: 0 2rem; min-height: 5.6rem; font-weight: 600; font-size: 1.8rem; color: var(--text-muted);}
 /* <UxOption> Selected */
-.ux-option.selected .ux-option-button {color: var(--brand-blue);}
-.ux-option.selected .ux-icon {background-color: var(--brand-blue);}
+.ux-option.selected .ux-button {background-color: var(--background-muted); color: var(--text-default);}
 
 
 

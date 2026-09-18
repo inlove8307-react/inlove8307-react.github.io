@@ -322,15 +322,15 @@ const UxGroup = ({ ref, ...props }) => {
 
 		switch (props.role) {
 			case 'card':
-				return <Card {...props} />;
+				return <Card ref={ref} {...props} />;
 			case 'collapse':
-				return <Collapse {...props} />;
+				return <Collapse ref={ref} {...props} />;
 			case 'radio':
-				return <Radio {...props} />;
+				return <Radio ref={ref} {...props} />;
 			case 'input':
-				return <Input {...props}/>;
+				return <Input ref={ref} {...props}/>;
 			default:
-				return <Default {...props} />;
+				return <Default ref={ref} {...props} />;
 		};
 	};
 

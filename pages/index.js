@@ -1686,6 +1686,97 @@ export default function Home() {
 								</UxField>
 								<UxField>
 									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+										value="0"
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={true}>
+									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+										value="0"
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={false}>
+									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+										value="0"
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+										value="0"
+										readonly
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
+										role="dropdown"
+										placeholder="통신사를 선택하세요"
+										label1="통신사"
+										label2="를 선택하세요"
+										value="0"
+										disabled
+									>
+										<UxOption value="0">SKT</UxOption>
+										<UxOption value="1">KT</UxOption>
+										<UxOption value="2">LGU+</UxOption>
+									</UxSelect>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxSelect
 										role="bank"
 										placeholder="선택하세요"
 										label1="은행"

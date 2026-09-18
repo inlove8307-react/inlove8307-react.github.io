@@ -40,34 +40,34 @@ const useModal = () => {
 	const center = (Component, props) => {
 		return createModal(Component, {
 			...props,
-			className: 'center'
+			baseClassName: 'center'
 		});
 	};
 
 	const bottom = (Component, props) => {
 		return createModal(Component, {
 			...props,
-			className: 'bottom'
+			baseClassName: 'bottom'
 		});
 	};
 
 	const full = (Component, props) => {
 		return createModal(Component, {
 			...props,
-			className: 'full'
+			baseClassName: 'full'
 		});
 	};
 
 	const alert = (message) => {
 		return createModal(UxAlert, {
-			className: 'center',
+			baseClassName: 'center',
 			message,
 		});
 	};
 
 	const confirm = (message) => {
 		return createModal(UxConfirm, {
-			className: 'center',
+			baseClassName: 'center',
 			message,
 		});
 	};
@@ -75,7 +75,7 @@ const useModal = () => {
 	const toast = (message, props) => {
 		return createModal(UxToast, {
 			...props,
-			className: 'toast',
+			baseClassName: 'toast',
 			message,
 		});
 	};
@@ -83,14 +83,21 @@ const useModal = () => {
 	const popover = (Component, props) => {
 		return createModal(Component, {
 			...props,
-			className: 'popover',
+			baseClassName: 'popover',
 		});
 	};
 
 	const tooltip = (Component, props) => {
 		return createModal(Component, {
 			...props,
-			className: 'tooltip',
+			baseClassName: 'tooltip',
+		});
+	};
+
+	const dropdown = (Component, props) => {
+		return createModal(Component, {
+			...props,
+			baseClassName: 'dropdown',
 		});
 	};
 
@@ -103,6 +110,7 @@ const useModal = () => {
 		toast,
 		popover,
 		tooltip,
+		dropdown,
 	};
 };
 

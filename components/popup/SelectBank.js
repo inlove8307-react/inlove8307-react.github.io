@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -34,12 +35,12 @@ const Popup = ({ ref, ...props }) => {
 		<>
 			<UxSection className="header">
 				<UxArticle>
-					<UxContent>
-						<h4>{props.title || '선택'}</h4>
-						<UxButton onClick={handleClose}>
+					<UxSubject>
+						<h3>{props.title || '선택'}</h3>
+						<UxButton onClick={props.onClose}>
 							<i className="icon close" />
 						</UxButton>
-					</UxContent>
+					</UxSubject>
 				</UxArticle>
 			</UxSection>
 			<UxSection className="main">
