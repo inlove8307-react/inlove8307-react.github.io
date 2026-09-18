@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -19,8 +20,11 @@ import UxButton from "@/components/base/UxButton";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxTab from "@/components/base/UxTab";
 import UxPanel from "@/components/base/UxPanel";
+/* POPUP */
+import Popup from "@/components/popup/Popup";
 
 export default function Home() {
+	const modal = useModal();
 	const [progress, setProgress] = useState(25);
 
 	return (
@@ -33,6 +37,57 @@ export default function Home() {
 					<UxArticle className="h4 space">
 						<UxContent>
 							{/* CONTENTS */}
+							<UxGroup className="col2 gap16">
+								<UxButton
+									className="tertiary h3"
+									onClick={() => {
+										modal.alert('message');
+									}}
+								>
+									<span>alert</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									onClick={() => {
+										modal.confirm('message');
+									}}
+								>
+									<span>confirm</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									onClick={() => {
+										modal.center(Popup);
+									}}
+								>
+									<span>center</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									onClick={() => {
+										modal.bottom(Popup);
+									}}
+								>
+									<span>bottom</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									onClick={() => {
+										modal.full(Popup);
+									}}
+								>
+									<span>full</span>
+								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
+								<UxButton role="tooltip">
+									<ul>
+										<li className="bl dot">list dot</li>
+										<li className="bl dot">list dot</li>
+										<li className="bl dot">list dot</li>
+									</ul>
+								</UxButton>
+							</UxGroup>
 							<UxTab
 								className="synced"
 								rootMargin="96"
@@ -137,75 +192,83 @@ export default function Home() {
 									<div slot="details">details</div>
 								</UxCollapse>
 							</UxGroup>
-							<UxButton
-								className="primary h3"
-								onClick={() => console.log('click')}
-							>
-								<span>primary h3</span>
-							</UxButton>
-							<UxButton
-								className="secondary h3"
-								onClick={() => console.log('click')}
-							>
-								<span>secondary h3</span>
-							</UxButton>
-							<UxButton
-								className="tertiary h3"
-								onClick={() => console.log('click')}
-							>
-								<span>tertiary h3</span>
-							</UxButton>
-							<UxButton
-								className="primary h4"
-								onClick={() => console.log('click')}
-							>
-								<span>primary h4</span>
-							</UxButton>
-							<UxButton
-								className="secondary h4"
-								onClick={() => console.log('click')}
-							>
-								<span>secondary h4</span>
-							</UxButton>
-							<UxButton
-								className="tertiary h4"
-								onClick={() => console.log('click')}
-							>
-								<span>tertiary h4</span>
-							</UxButton>
-							<UxButton
-								className="primary h5"
-								onClick={() => console.log('click')}
-							>
-								<span>primary h5</span>
-							</UxButton>
-							<UxButton
-								className="secondary h5"
-								onClick={() => console.log('click')}
-							>
-								<span>secondary h5</span>
-							</UxButton>
-							<UxButton
-								className="primary h3"
-								disabled
-								onClick={() => console.log('click')}
-							>
-								<span>primary h3 disabled</span>
-							</UxButton>
-							<UxButton
-								className="secondary h3"
-								disabled
-								onClick={() => console.log('click')}
-							>
-								<span>secondary h3 disabled</span>
-							</UxButton>
-							<UxButton
-								className="tertiary h3"
-								disabled
-								onClick={() => console.log('click')}
-							>
-								<span>tertiary h3 disabled</span>
-							</UxButton>
+							<UxGroup className="col1">
+								<UxButton
+									className="primary h3"
+									onClick={() => console.log('click')}
+								>
+									<span>primary h3</span>
+								</UxButton>
+								<UxButton
+									className="secondary h3"
+									onClick={() => console.log('click')}
+								>
+									<span>secondary h3</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									onClick={() => console.log('click')}
+								>
+									<span>tertiary h3</span>
+								</UxButton>
+							</UxGroup>
+							<UxGroup className="col1">
+								<UxButton
+									className="primary h4"
+									onClick={() => console.log('click')}
+								>
+									<span>primary h4</span>
+								</UxButton>
+								<UxButton
+									className="secondary h4"
+									onClick={() => console.log('click')}
+								>
+									<span>secondary h4</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h4"
+									onClick={() => console.log('click')}
+								>
+									<span>tertiary h4</span>
+								</UxButton>
+							</UxGroup>
+							<UxGroup className="col1">
+								<UxButton
+									className="primary h5"
+									onClick={() => console.log('click')}
+								>
+									<span>primary h5</span>
+								</UxButton>
+								<UxButton
+									className="secondary h5"
+									onClick={() => console.log('click')}
+								>
+									<span>secondary h5</span>
+								</UxButton>
+							</UxGroup>
+							<UxGroup className="col1">
+								<UxButton
+									className="primary h3"
+									disabled
+									onClick={() => console.log('click')}
+								>
+									<span>primary h3 disabled</span>
+								</UxButton>
+								<UxButton
+									className="secondary h3"
+									disabled
+									onClick={() => console.log('click')}
+								>
+									<span>secondary h3 disabled</span>
+								</UxButton>
+								<UxButton
+									className="tertiary h3"
+									disabled
+									onClick={() => console.log('click')}
+								>
+									<span>tertiary h3 disabled</span>
+								</UxButton>
+							</UxGroup>
 							<UxGroup className="auto">
 								<UxButton
 									className="tertiary h5"
@@ -213,6 +276,8 @@ export default function Home() {
 								>
 									<span>tertiary h5</span>
 								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
 								<UxButton
 									className="tertiary h3 capsule"
 									onClick={() => console.log('click')}
@@ -220,6 +285,8 @@ export default function Home() {
 									<i className="icon mask clip primary" />
 									<span>tertiary h3 capsule</span>
 								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
 								<UxButton
 									className="tertiary h4 capsule"
 									onClick={() => console.log('click')}
@@ -227,18 +294,24 @@ export default function Home() {
 									<i className="icon mask clip primary" />
 									<span>tertiary h4 capsule</span>
 								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
 								<UxButton
 									className="solid"
 									onClick={() => console.log('click')}
 								>
 									<span>solid</span>
 								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
 								<UxButton
 									className="line"
 									onClick={() => console.log('click')}
 								>
 									<span>line</span>
 								</UxButton>
+							</UxGroup>
+							<UxGroup className="auto">
 								<UxButton
 									onClick={() => console.log('click')}
 								>
@@ -384,7 +457,7 @@ export default function Home() {
 									<UxGroup
 										role="radio"
 										className="chip"
-										value="1"
+										value="0"
 										scroll
 										// expand
 										onChange={(value) => console.log(value)}
@@ -415,7 +488,7 @@ export default function Home() {
 									<UxGroup
 										role="radio"
 										className="block col2"
-										value="1"
+										value="0"
 										onChange={(value) => console.log(value)}
 									>
 										<UxRadio value="0">
@@ -438,7 +511,7 @@ export default function Home() {
 									<UxGroup
 										role="radio"
 										className="block split col2"
-										value="1"
+										value="0"
 										onChange={(value) => console.log(value)}
 									>
 										<UxRadio value="0">

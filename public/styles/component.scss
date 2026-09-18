@@ -428,7 +428,7 @@ h6 {font-size: 1.4rem;}
 .ux-container-before {top: 0;}
 .ux-container-after {bottom: 0;}
 /* <UxContainer> Desktop */
-html.desktop .ux-container {--space: 0;}
+html.desktop .ux-container {--space: 0rem;}
 
 
 
@@ -545,14 +545,17 @@ html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; he
 
 
 /* <UxModal> */
+.ux-modal {--radius: 2.4rem;}
 .ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
-html.desktop.modal .ux-modal {padding-right: var(--scrollbar-width);}
-.ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .75);}
+.ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--black-70);}
 .ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--background-default);}
+/* <UxModal> Desktop */
+html.desktop .ux-modal {--radius: 3.2rem;}
+html.desktop.modal .ux-modal {padding-right: var(--scrollbar-width);}
 /* <UxModal> Section */
-.ux-modal .ux-section.header {padding: 1.6rem;}
-.ux-modal .ux-section.main {padding: 0 1.6rem;}
-.ux-modal .ux-section.footer {padding: 1.6rem;}
+.ux-modal .ux-section.header {padding: 2.4rem 2rem 1.6rem;}
+.ux-modal .ux-section.main {padding: 0 2rem;}
+.ux-modal .ux-section.footer {padding: 1.6rem 2rem 2.4rem;}
 /* <UxModal> Section Desktop */
 html.desktop .ux-modal .ux-section {width: 100%;}
 /* <UxModal> Header */
@@ -560,17 +563,22 @@ html.desktop .ux-modal .ux-section {width: 100%;}
 /* <UxModal> Header Subject */
 .ux-modal .ux-section.header .ux-subject {flex-direction: row; justify-content: space-between; align-items: center;}
 .ux-modal .ux-section.header .ux-subject h3 {font-size: 1.8rem;}
+/* <UxModal> Footer */
+.ux-modal .ux-section.footer {}
+.ux-modal .ux-section.footer .ux-group {--col: 1;}
+.ux-modal .ux-section.footer .ux-group .ux-button {flex-grow: 1;}
+.ux-modal .ux-section.footer .ux-group .ux-button.secondary {flex-grow: .5;}
 /* <UxModal> Center */
 .ux-modal.center {display: flex; justify-content: center; align-items: center;}
-.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: 1.6rem; transform: scale(.75); transition: transform .15s ease-in-out;}
-/* <UxModal> Center Desktop */
-html.desktop .ux-modal.center {justify-content: center;}
-html.desktop .ux-modal.center .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
+.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: var(--radius); transform: scale(.75); transition: transform .15s ease-in-out;}
 /* <UxModal> Center Active */
 .ux-modal.center.active .ux-modal-base {transform: scale(1);}
+/* <UxModal> Center Desktop */
+html.desktop .ux-modal.center {justify-content: center;}
+html.desktop .ux-modal.center .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Bottom */
 .ux-modal.bottom {display: flex; justify-content: center; align-items: flex-end;}
-.ux-modal.bottom .ux-modal-base {width: 100%; border-radius: 1.6rem 1.6rem 0 0; transform: translateY(100%); transition: transform .15s ease-in-out;}
+.ux-modal.bottom .ux-modal-base {width: 100%; border-radius: var(--radius) var(--radius) 0 0; transform: translateY(100%); transition: transform .15s ease-in-out;}
 /* <UxModal> Bottom Desktop */
 html.desktop .ux-modal.bottom .ux-modal-base {width: var(--desktop);}
 /* <UxModal> Bottom Active */
@@ -591,19 +599,20 @@ html.desktop .ux-modal.toast {justify-content: center;}
 html.desktop .ux-modal.toast .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
 /* <UxModal> Toast Active */
 .ux-modal.toast.active .ux-modal-base {transform: translateY(var(--space-minus));}
-/* <UxModal> Popover */
-.ux-modal.popover {display: flex; justify-content: center; align-items: flex-start;}
-.ux-modal.popover .ux-modal-backdrop {background-color: var(--black-0);}
-.ux-modal.popover .ux-modal-base {overflow: initial; position: relative; width: calc(100% - var(--space) * 2); background-color: var(--black-0);}
-/* <UxModal> Popover Desktop */
-html.desktop .ux-modal.popover .ux-modal-base {width: calc(var(--desktop) - var(--space) * 2);}
 /* <UxModal> Dropdown */
 .ux-modal.dropdown {display: block;}
 .ux-modal.dropdown .ux-modal-backdrop {background-color: var(--black-0);}
 .ux-modal.dropdown .ux-modal-base {overflow: hidden; display: inline-flex; border-radius: 1.6rem; box-shadow: var(--inset); box-shadow: 0 0 .2rem 0 var(--black-10), 0 1.6rem 2.4rem 0 var(--black-10); background-color: var(--background-default);}
 /* <UxModal> Tooltip */
-.ux-modal.tooltip {display: flex; justify-content: stretch; align-items: stretch;}
+.ux-modal.tooltip {display: block;}
 .ux-modal.tooltip .ux-modal-backdrop {background-color: var(--black-0);}
+.ux-modal.tooltip .ux-modal-base {display: inline-flex; padding: .8rem; max-width: 100%; border-radius: 1.2rem; background-color: var(--gray-100);}
+.ux-modal.tooltip .ux-group {--gap: .8rem; align-items: flex-start;}
+.ux-modal.tooltip .ux-group .content {flex-grow: 1; padding: .4rem; font-weight: 400; font-size: 1.4rem; color: var(--text-inverse);}
+.ux-modal.tooltip .ux-group .ux-button {}
+.ux-modal.tooltip .ux-group .ux-button i.icon.close {background-color: var(--icon-inverse);}
+/* <UxModal> Tooltip Desktop */
+html.desktop .ux-modal.tooltip .ux-modal-base {max-width: var(--desktop);}
 /* <UxModal> z-index */
 .ux-modal {z-index: 30;}
 
@@ -693,7 +702,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 /* <UxButton> Default */
 .ux-button.default {}
-.ux-button.default {display: inline-flex; justify-content: center; align-items: center; gap: var(--gap); min-height: var(--height); border-radius: var(--radius); transform: translateZ(0); transition: var(--inset-transition);}
+.ux-button.default {display: inline-flex; justify-content: center; align-items: center; min-height: var(--height); border-radius: var(--radius); transform: translateZ(0); transition: var(--inset-transition);}
 /* <UxButton> Default Primary */
 .ux-button.default.primary {background-color: var(--fill-primary-enable); color: var(--text-inverse);}
 .ux-button.default.primary:active {background-color: var(--fill-primary-pressed);}
@@ -709,13 +718,13 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* <UxButton> Default Tertiary Capsule */
 .ux-button.default.tertiary.capsule {padding: 0 calc(var(--height) / 2); border-radius: calc(var(--height) / 2); box-shadow: var(--inset-primary); color: var(--text-blue);}
 /* <UxButton> Default Size */
-.ux-button.default.h3 {--gap: .8rem; --radius: 1.6rem; --height: 6rem; font-weight: 700; font-size: 1.8rem;}
-.ux-button.default.h4 {--gap: .8rem; --radius: 1.6rem; --height: 5.2rem; font-weight: 700; font-size: 1.8rem;}
-.ux-button.default.h5 {--gap: .8rem; --radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h3 {--gap: .8rem; --radius: 1.2rem; --height: 4.8rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h4 {--gap: .8rem; --radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h5 {--gap: .2rem; --radius: .8rem; --height: 2.8rem; padding: 0 .8rem; font-weight: 700; font-size: 1.4rem;}
-.ux-button.default.tertiary.capsule.h4 {--gap: .6rem; --height: 4rem; font-weight: 700; font-size: 1.4rem;}
+.ux-button.default.h3 {--radius: 1.6rem; --height: 6rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h4 {--radius: 1.6rem; --height: 5.2rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h5 {--radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h3 {--radius: 1.2rem; --height: 4.8rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h4 {--radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h5 {--radius: .8rem; --height: 2.8rem; padding: 0 .8rem; font-weight: 700; font-size: 1.4rem;}
+.ux-button.default.tertiary.capsule.h4 {--height: 4rem; font-weight: 700; font-size: 1.4rem;}
 /* <UxButton> Default Outline */
 .ux-button.default.outline {--radius: 1.6rem; box-shadow: var(--inset); background-color: var(--background-default); color: var(--text-default);}
 .ux-button.default.outline:active {background-color: var(--fill-secondary-pressed);}
@@ -724,11 +733,11 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-button.default.contain {--radius: 1.6rem; background-color: var(--fill-secondary-enable);}
 .ux-button.default.contain:active {background-color: var(--fill-secondary-pressed);}
 .ux-button.default.contain:disabled {--radius: 1.6rem; background-color: var(--fill-disabled); color: var(--text-muted);}
-/* <UxGroup> Role(Input) Button Solid */
+/* <UxButton> Role(Input) Button Solid */
 .ux-button.default.solid {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem;  background-color: var(--gray-60); font-weight: 500; font-size: 1.4rem; color: var(--text-inverse);}
 .ux-button.default.solid:active {background-color: var(--gray-70);}
 .ux-button.default.solid:disabled {background-color: var(--gray-40);}
-/* <UxGroup> Role(Input) Button Line */
+/* <UxButton> Role(Input) Button Line */
 .ux-button.default.line {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem; box-shadow: inset 0 0 0 .1rem var(--stroke-enable); background-color: var(--background-default); font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
 .ux-button.default.line:active {box-shadow: 0 0 0 .1rem var(--stroke-pressed); background-color: var(--fill-secondary-pressed);}
 .ux-button.default.line:disabled {box-shadow: 0 0 0 .1rem var(--stroke-disabled); background-color: var(--fill-disabled); color: var(--text-disabled);}

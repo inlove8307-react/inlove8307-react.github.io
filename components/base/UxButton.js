@@ -1,9 +1,46 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import useModal from "@/hook/useModal";
 import classnames from 'classnames';
 /* COMPONENT */
 import UxGroup from '@/components/base/UxGroup';
+/* POPUP */
+import PopupTooltip from '@/components/popup/Tooltip';
+
+/**
+ * <Tooltip>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Tooltip = ({ ref, ...props }) => {
+	const caseClassName = classnames(props.caseClassName);
+	const modal = useModal();
+	const openerRef = useRef();
+
+	const handleClick = async () => {
+		await modal.tooltip(PopupTooltip, {
+			content: props.children,
+			openerRef,
+		});
+	};
+
+	return (
+		<button
+			ref={openerRef}
+			type="button"
+			className={caseClassName}
+			disabled={props.disabled}
+			title={props.title}
+			onClick={handleClick}
+		>
+			<i className="icon tooltip" />
+		</button>
+	);
+};
 
 /**
  * <Select>
@@ -247,6 +284,8 @@ const UxButton = ({ ref, ...props }) => {
 		});
 
 		switch (props.role) {
+			case 'tooltip':
+				return <Tooltip ref={ref} {...props} />;
 			case 'select':
 				return <Select ref={ref} {...props} />;
 			case 'search':

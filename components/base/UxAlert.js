@@ -4,6 +4,7 @@ import React from 'react';
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
+import UxSubject from '@/components/layout/UxSubject';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -22,12 +23,12 @@ const UxAlert = ({ ref, ...props }) => {
 		<>
 			<UxSection className="header">
 				<UxArticle>
-					<UxContent>
-						<h4>{props.title || '알림'}</h4>
+					<UxSubject>
+						<h3>{props.title || '알림'}</h3>
 						<UxButton onClick={props.onClose}>
-							<i className="icon close x28" />
+							<i className="icon close" />
 						</UxButton>
-					</UxContent>
+					</UxSubject>
 				</UxArticle>
 			</UxSection>
 			<UxSection className="main">
@@ -40,7 +41,7 @@ const UxAlert = ({ ref, ...props }) => {
 			<UxSection className="footer">
 				<UxArticle>
 					<UxContent>
-						<UxGroup className="gap8">
+						<UxGroup>
 							<UxButton
 								className="primary h3"
 								onClick={props.onClose}

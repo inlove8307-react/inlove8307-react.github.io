@@ -4,6 +4,7 @@ import React from "react";
 /* LAYOUT */
 import UxSection from '@/components/layout/UxSection';
 import UxArticle from '@/components/layout/UxArticle';
+import UxSubject from '@/components/layout/UxSubject';
 import UxContent from '@/components/layout/UxContent';
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -14,18 +15,18 @@ const Popup = ({ ref, ...props }) => {
 		<>
 			<UxSection className="header">
 				<UxArticle>
-					<UxContent>
-						<h4>알림</h4>
+					<UxSubject>
+						<h3>{props.title || '알림'}</h3>
 						<UxButton onClick={props.onClose}>
 							<i className="icon close" />
 						</UxButton>
-					</UxContent>
+					</UxSubject>
 				</UxArticle>
 			</UxSection>
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
-						popup
+						<p className="bl dot">content</p>
 					</UxContent>
 				</UxArticle>
 			</UxSection>
