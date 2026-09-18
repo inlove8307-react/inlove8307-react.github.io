@@ -14,7 +14,7 @@ import UxDivider from "@/components/base/UxDivider";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxGroup from "@/components/base/UxGroup";
 /* POPUP */
-import popup from "@/components/popup/popup";
+import Popup from "@/components/popup/PopupNew";
 
 export default function Guide() {
 	const modal = useModal();
@@ -56,7 +56,7 @@ export default function Guide() {
 									<UxButton
 										className="outline h3"
 										onClick={() => {
-											modal.center(popup);
+											modal.center(Popup);
 										}}
 									>
 										<span className="text">center</span>
@@ -74,7 +74,7 @@ export default function Guide() {
 									<UxButton
 										className="outline h3"
 										onClick={() => {
-											modal.bottom(popup);
+											modal.bottom(Popup);
 										}}
 									>
 										<span className="text">bottom</span>
@@ -92,7 +92,7 @@ export default function Guide() {
 									<UxButton
 										className="outline h3"
 										onClick={() => {
-											modal.full(popup);
+											modal.full(Popup);
 										}}
 									>
 										<span className="text">full</span>
