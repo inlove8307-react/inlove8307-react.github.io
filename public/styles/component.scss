@@ -702,7 +702,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 /* <UxButton> Default */
 .ux-button.default {}
-.ux-button.default {display: inline-flex; justify-content: center; align-items: center; min-height: var(--height); border-radius: var(--radius); transform: translateZ(0); transition: var(--inset-transition);}
+.ux-button.default {display: inline-flex; justify-content: center; align-items: center; min-height: var(--height); transform: translateZ(0); transition: var(--inset-transition);}
 /* <UxButton> Default Primary */
 .ux-button.default.primary {background-color: var(--fill-primary-enable); color: var(--text-inverse);}
 .ux-button.default.primary:active {background-color: var(--fill-primary-pressed);}
@@ -718,27 +718,27 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* <UxButton> Default Tertiary Capsule */
 .ux-button.default.tertiary.capsule {padding: 0 calc(var(--height) / 2); border-radius: calc(var(--height) / 2); box-shadow: var(--inset-primary); color: var(--text-blue);}
 /* <UxButton> Default Size */
-.ux-button.default.h3 {--radius: 1.6rem; --height: 6rem; font-weight: 700; font-size: 1.8rem;}
-.ux-button.default.h4 {--radius: 1.6rem; --height: 5.2rem; font-weight: 700; font-size: 1.8rem;}
-.ux-button.default.h5 {--radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h3 {--radius: 1.2rem; --height: 4.8rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h4 {--radius: 1.2rem; --height: 4.4rem; font-weight: 700; font-size: 1.6rem;}
-.ux-button.default.tertiary.h5 {--radius: .8rem; --height: 2.8rem; padding: 0 .8rem; font-weight: 700; font-size: 1.4rem;}
+.ux-button.default.h3 {--height: 6rem; border-radius: 1.6rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h4 {--height: 5.2rem; border-radius: 1.6rem; font-weight: 700; font-size: 1.8rem;}
+.ux-button.default.h5 {--height: 4.4rem; border-radius: 1.2rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h3 {--height: 4.8rem; border-radius: 1.2rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h4 {--height: 4.4rem; border-radius: 1.2rem; font-weight: 700; font-size: 1.6rem;}
+.ux-button.default.tertiary.h5 {--height: 2.8rem; border-radius: .8rem; padding: 0 .8rem; font-weight: 700; font-size: 1.4rem;}
 .ux-button.default.tertiary.capsule.h4 {--height: 4rem; font-weight: 700; font-size: 1.4rem;}
 /* <UxButton> Default Outline */
-.ux-button.default.outline {--radius: 1.6rem; box-shadow: var(--inset); background-color: var(--background-default); color: var(--text-default);}
+.ux-button.default.outline {border-radius: 1.6rem; box-shadow: var(--inset); background-color: var(--background-default); color: var(--text-default);}
 .ux-button.default.outline:active {background-color: var(--fill-secondary-pressed);}
 .ux-button.default.outline:disabled {background-color: var(--fill-disabled); color: var(--text-muted);}
 /* <UxButton> Default Contain */
-.ux-button.default.contain {--radius: 1.6rem; background-color: var(--fill-secondary-enable);}
+.ux-button.default.contain {border-radius: 1.6rem; background-color: var(--fill-secondary-enable);}
 .ux-button.default.contain:active {background-color: var(--fill-secondary-pressed);}
-.ux-button.default.contain:disabled {--radius: 1.6rem; background-color: var(--fill-disabled); color: var(--text-muted);}
+.ux-button.default.contain:disabled {border-radius: 1.6rem; background-color: var(--fill-disabled); color: var(--text-muted);}
 /* <UxButton> Role(Input) Button Solid */
-.ux-button.default.solid {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem;  background-color: var(--gray-60); font-weight: 500; font-size: 1.4rem; color: var(--text-inverse);}
+.ux-button.default.solid {--height: 3rem; gap: .4rem; border-radius: .8rem; padding: 0 .8rem;  background-color: var(--gray-60); font-weight: 500; font-size: 1.4rem; color: var(--text-inverse);}
 .ux-button.default.solid:active {background-color: var(--gray-70);}
 .ux-button.default.solid:disabled {background-color: var(--gray-40);}
 /* <UxButton> Role(Input) Button Line */
-.ux-button.default.line {--gap: .4rem; --radius: .8rem; --height: 3rem; padding: 0 .8rem; box-shadow: inset 0 0 0 .1rem var(--stroke-enable); background-color: var(--background-default); font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
+.ux-button.default.line {--height: 3rem; gap: .4rem; border-radius: .8rem; padding: 0 .8rem; box-shadow: inset 0 0 0 .1rem var(--stroke-enable); background-color: var(--background-default); font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
 .ux-button.default.line:active {box-shadow: 0 0 0 .1rem var(--stroke-pressed); background-color: var(--fill-secondary-pressed);}
 .ux-button.default.line:disabled {box-shadow: 0 0 0 .1rem var(--stroke-disabled); background-color: var(--fill-disabled); color: var(--text-disabled);}
 /* <UxButton> Role */
