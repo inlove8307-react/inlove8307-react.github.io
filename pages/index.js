@@ -20,8 +20,6 @@ import UxButton from "@/components/base/UxButton";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxTab from "@/components/base/UxTab";
 import UxPanel from "@/components/base/UxPanel";
-/* POPUP */
-import Popup from "@/components/popup/Popup";
 
 export default function Home() {
 	const modal = useModal();
