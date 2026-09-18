@@ -10,8 +10,8 @@ import UxContainer from "@/components/layout/UxContainer";
 const UxModal = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
 	const caseClassName = classnames(baseClassName, props.className);
-	const [active, setActive] = useState(false);
 	const {rootContext} = useContext(RootContext);
+	const [active, setActive] = useState(false);
 
 	useEffect(() => {
 		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -22,6 +22,7 @@ const UxModal = ({ ref, ...props }) => {
 		}
 		else {
 			document.documentElement.classList.remove('modal');
+			setActive(false);
 		}
 	}, [rootContext.modals]);
 
