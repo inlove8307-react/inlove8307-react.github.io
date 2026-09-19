@@ -1365,9 +1365,8 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor dl {flex-grow: 1;}
 .ux-card.actor dt {display: flex; flex-direction: column; gap: .4rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
 .ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
-.ux-card.actor dd {display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; padding-top: 1.6rem;}
-.ux-card.actor .actor-meta {justify-content: flex-start; font-weight: 500; font-size: 1.6rem; color: var(--text-muted); text-align: left;}
-.ux-card.actor .actor-link {justify-content: flex-start; font-weight: 500; font-size: 1.6rem; color: var(--text-default); text-align: left;}
+.ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
+.ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor .actor-name {font-size: 2rem;}
