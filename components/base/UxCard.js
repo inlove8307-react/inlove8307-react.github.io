@@ -78,13 +78,13 @@ const UxCard = ({ ref, ...props }) => {
 					/>
 				</label>
 			}
-			<button
-				type="button"
+			<div
+				// type="button"
 				className={`${baseClassName}-base`}
 				onClick={handleClick}
 			>
 				{props.children}
-			</button>
+			</div>
 		</div>
 	);
 };

@@ -49,6 +49,14 @@ i.icons.x72 {--w: 7.2rem; --h: 7.2rem;}
 i.icon.inverse {background-color: var(--icon-inverse);}
 i.icon.disabled {background-color: var(--icon-disabled);}
 i.icon.primary {background-color: var(--icon-primary);}
+i.icon.default {background-color: var(--text-default);}
+i.icon.subtle {background-color: var(--text-subtle);}
+i.icon.muted {background-color: var(--text-muted);}
+i.icon.pressed {background-color: var(--text-pressed);}
+i.icon.blue {background-color: var(--text-blue);}
+i.icon.skyblue {background-color: var(--text-skyblue);}
+i.icon.orange {background-color: var(--text-orange);}
+i.icon.red {background-color: var(--text-red);}
 
 /* Image */
 i.icon.arrow-up {background-image: url("/images/common/icon_arrow_up.svg"); mask-image: url("/images/common/icon_arrow_up.svg")}

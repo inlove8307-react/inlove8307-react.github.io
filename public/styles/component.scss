@@ -141,7 +141,8 @@
 	/* Header */
 	--header: 5.6rem;
 	/* Desktop */
-	--desktop: 37.5rem;
+	// --desktop: 37.5rem;
+	--desktop: 120rem;
 	/* SHADOW */
 	--shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
 	/* COLOR */
@@ -378,6 +379,22 @@ h3 {font-size: 2.8rem;}
 h4 {font-size: 2.4rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
+
+
+
+
+
+/* Color */
+em.default {color: var(--text-default);}
+em.subtle {color: var(--text-subtle);}
+em.muted {color: var(--text-muted);}
+em.inverse {color: var(--text-inverse);}
+em.pressed {color: var(--text-pressed);}
+em.disabled {color: var(--text-disabled);}
+em.blue {color: var(--text-blue);}
+em.skyblue {color: var(--text-skyblue);}
+em.orange {color: var(--text-orange);}
+em.red {color: var(--text-red);}
 
 
 
@@ -701,8 +718,8 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* <UxButton> Default */
-.ux-button.default {}
-.ux-button.default {display: inline-flex; justify-content: center; align-items: center; min-height: var(--height); transform: translateZ(0); transition: var(--inset-transition);}
+.ux-button.default {display: inline-flex; justify-content: center; align-items: center; gap: .4rem; min-height: var(--height); transform: translateZ(0); transition: var(--inset-transition);}
+.ux-button.default.left {justify-content: flex-start;}
 /* <UxButton> Default Primary */
 .ux-button.default.primary {background-color: var(--fill-primary-enable); color: var(--text-inverse);}
 .ux-button.default.primary:active {background-color: var(--fill-primary-pressed);}
@@ -1023,22 +1040,23 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* <UxCard> */
-.ux-card {position: relative; border-radius: var(--radius-form);}
-.ux-card-base {display: flex; padding: 1.2rem; width: 100%; border-radius: var(--radius-form); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-card {--radius: 2.4rem;}
+.ux-card {position: relative; border-radius: var(--radius); box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.08);}
+.ux-card-base {display: flex; height: 100%; padding: 1.2rem; width: 100%; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
 .ux-card-label {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
 .ux-card-input[type=radio],
 .ux-card-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
 /* <UxCard> Checked */
 .ux-card.checked {box-shadow: var(--shadow);}
-.ux-card.checked .ux-card-base {box-shadow: var(--inset-color-focus);}
+.ux-card.checked .u x-card-base {box-shadow: var(--inset-color-focus);}
 
 
 
 
 
 /* <UxGroup> Card */
-.ux-group.card {--col: 1; --gap: .8rem;}
-.ux-group.card {display: flex; flex-wrap: wrap; gap: var(--gap);}
+// .ux-group.card {--col: 1; --gap: .8rem;}
+// .ux-group.card {display: flex; flex-wrap: wrap; gap: var(--gap);}
 
 
 
@@ -1336,3 +1354,22 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 }
 /* <UxSkeleton> Loaded */
 .ux-skeleton.loaded {overflow: initial;}
+
+
+
+
+
+/* Actor */
+.ux-card.actor {overflow: hidden;}
+.ux-card.actor .ux-card-base {padding: 2rem;}
+.ux-card.actor dl {flex-grow: 1;}
+.ux-card.actor dt {display: flex; flex-direction: column; gap: .4rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
+.ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem;}
+.ux-card.actor dd {display: flex; flex-direction: column; gap: .8rem; padding-top: 1.6rem;}
+.ux-card.actor .actor-meta {justify-content: flex-start; font-weight: 500; font-size: 1.6rem; color: var(--text-muted); text-align: left;}
+.ux-card.actor .actor-link {justify-content: flex-start; font-weight: 500; font-size: 1.6rem; color: var(--text-default); text-align: left;}
+/* Actor (Mobile) */
+html.mobile .ux-group.actor.col3 {--col: 1;}
+html.mobile .ux-card.actor .actor-name {font-size: 2rem;}
+html.mobile .ux-card.actor .ux-card.actor .actor-meta {font-size: 1.4rem;}
+html.mobile .ux-card.actor .ux-card.actor .actor-link {font-size: 1.4rem;}

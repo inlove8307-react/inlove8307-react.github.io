@@ -27,6 +27,13 @@ export default function Home() {
 	const modal = useModal();
 	const [progress, setProgress] = useState(25);
 
+	const handleClick = ({name, link}) => {
+		modal.center(Popup, {
+			title: name,
+			link,
+		});
+	};
+
 	return (
 		<UxSection>
 			<UxArticle className="h3">

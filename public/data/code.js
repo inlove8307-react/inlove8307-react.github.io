@@ -1,4 +1,4 @@
-const bankCode = [
+const code = [
 	{ sector: 'bank', code: '000', name: '오픈은행' },
 	{ sector: 'bank', code: '002', name: '산업은행' },
 	{ sector: 'bank', code: '003', name: 'IBK기업은행' },
@@ -222,4 +222,4 @@ const bankCode = [
 	{ sector: 'sb', code: '658', name: '진주' },
 ];
 
-export default bankCode;
+export default code;
