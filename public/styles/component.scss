@@ -379,7 +379,11 @@ h3 {font-size: 2.8rem;}
 h4 {font-size: 2.4rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
-
+/* Heading (Mobile) */
+html.mobile h3 {font-size: 2.4rem;}
+html.mobile h4 {font-size: 2rem;}
+html.mobile h5 {font-size: 1.8rem;}
+html.mobile h6 {font-size: 1.4rem;}
 
 
 
@@ -466,6 +470,8 @@ html.desktop.modal .ux-header {padding-right: var(--scrollbar-width);}
 
 /* <UxMain> */
 .ux-main {display: flex; flex-direction: column; align-items: center; gap: 3.2rem; padding: 3.2rem 0;}
+/* <UxMain> (Mobile) */
+html.mobile .ux-main {gap: 2.4rem; padding: 2.4rem 0;}
 
 
 
@@ -508,6 +514,11 @@ html.desktop .ux-header .ux-section {justify-content: center; margin: 0 auto; he
 .ux-article.h4 {gap: 2.4rem;}
 .ux-article.h5 {gap: 1.6rem;}
 .ux-article.h6 {gap: 1.2rem;}
+/* <UxArticle> Gap (Mobile)*/
+html.mobile .ux-article.h3 {gap: 2.4rem;}
+html.mobile .ux-article.h4 {gap: 2rem;}
+html.mobile .ux-article.h5 {gap: 1.6rem;}
+html.mobile .ux-article.h6 {gap: 1.2rem;}
 
 
 
@@ -1363,8 +1374,10 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor {overflow: hidden;}
 .ux-card.actor .ux-card-base {padding: 2rem;}
 .ux-card.actor dl {flex-grow: 1;}
-.ux-card.actor dt {display: flex; flex-direction: column; gap: .4rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
+.ux-card.actor dt {display: flex; flex-wrap: wrap; gap: 0 .8rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
 .ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
+.ux-card.actor .actor-name::after {content: ',';}
+.ux-card.actor .actor-name:last-of-type::after {display: none;}
 .ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
 .ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 /* Actor (Mobile) */

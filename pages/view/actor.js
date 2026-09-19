@@ -83,38 +83,46 @@ export default function Home() {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>Links</h3>
+					<h3>Actor</h3>
 				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
 						<UxGroup className="actor col3">
 							{
 								data.map((item, index) => (
-									<UxCard className="actor">
+									<UxCard
+										key={index}
+										className="actor"
+									>
 										<dl>
 											<dt>
-												<a
-													href={item.list}
-													className="actor-name">{item.name}</a>
+												{
+													item.actor.map((item, index) => (
+														<a
+															key={index}
+															href={item.link}
+															className="actor-name"
+															target="_blank"
+														>
+															{item.name}
+														</a>
+													))
+												}
 											</dt>
 											<dd>
 												{
-													item.link.map((link, index) => {
-														const code = link.split('/').pop().toUpperCase();
-
-														return (
-															<a
-																key={index}
-																href={link}
-																className="actor-link"
-																target="_blank"
-															>
-																{code}
-															</a>
-														)
-													})
+													item.link.map((link, index) => (
+														<a
+															key={index}
+															href={link}
+															className="actor-link"
+															target="_blank"
+														>
+															{link.split('/').pop().toUpperCase()}
+														</a>
+													))
 												}
-												</dd>
+											</dd>
 										</dl>
 									</UxCard>
 								))
