@@ -93,52 +93,26 @@ export default function Home() {
 									<UxCard className="actor">
 										<dl>
 											<dt>
-												<p className="actor-name">{item.name}</p>
-												{
-													item.info.map((link, index) => (
-														// <UxButton
-														// 	key={index}
-														// 	className="actor-meta"
-														// 	onClick={() => handleClick({
-														// 		name: item.name,
-														// 		link,
-														// 	})}
-														// >
-														// 	<em>{link}</em>
-														// </UxButton>
-														<a
-															key={index}
-															href={link}
-															className="actor-meta"
-															target="_blank"
-														>
-															{link}
-														</a>
-													))
-												}
+												<a
+													href={item.list}
+													className="actor-name">{item.name}</a>
 											</dt>
 											<dd>
 												{
-													item.link.map((link, index) => (
-														// <UxButton
-														// 	key={index}
-														// 	className="actor-link"
-														// 	onClick={() => handleClick({
-														// 		name: item.name,
-														// 		link,
-														// 	})}
-														// >
-														// 	<em>{link}</em>
-														// </UxButton>
-														<a
-															key={index}
-															href={link}
-															className="actor-link"
-															target="_blank"
-														>
-															{link}
-														</a>
-													))
+													item.link.map((link, index) => {
+														const code = link.split('/').pop().toUpperCase();
+
+														return (
+															<a
+																key={index}
+																href={link}
+																className="actor-link"
+																target="_blank"
+															>
+																{code}
+															</a>
+														)
+													})
 												}
 												</dd>
 										</dl>
