@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import useModal from "@/hook/useModal";
+import React from "react";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -43,7 +42,7 @@ export default function Home() {
 														</a>
 													))
 												}
-												<p className="actor-info">{item.link.length}</p>
+												<span className="actor-info">{item.link.length}</span>
 											</dt>
 											<dd>
 												{
