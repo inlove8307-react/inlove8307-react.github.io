@@ -5,7 +5,7 @@ const data = [
 				name: 'Karen Yuzuriha',
 				link: 'https://123av.com/ko/actresses/karen-yuzuriha',
 				avdbs: {
-					name: 'Yuzuriha Karen',
+					name: 'Karen Yuzuriha',
 					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6823',
 				}
 			},

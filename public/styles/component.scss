@@ -380,9 +380,18 @@ h4 {font-size: 2.4rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
 /* Heading */
-h3.row {display: flex; align-items: center;}
-h3.row.between {justify-content: space-between;}
-h3.column {display: flex;}
+h3.row,
+h4.row,
+h5.row,
+h6.row {display: flex; align-items: center;}
+h3.row.between,
+h4.row.between,
+h5.row.between,
+h6.row.between {justify-content: space-between;}
+h3.column,
+h4.column,
+h5.column,
+h6.column {display: flex;}
 /* Heading (Mobile) */
 html.mobile h3 {font-size: 2.4rem;}
 html.mobile h4 {font-size: 2rem;}
@@ -965,10 +974,10 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-checkbox.switch {display: flex; align-items: center; gap: .8rem;}
 .ux-checkbox.switch .ux-checkbox-base {display: inline-flex; align-items: center; position: relative; padding: var(--gap); width: calc((var(--size) + var(--gap)) * 2); height: calc(var(--size) + var(--gap) * 2); border-radius: calc((var(--size) + var(--gap) * 2) / 2); background-color: var(--gray-50); transition: background-color .15s ease-in-out;}
 .ux-checkbox.switch .ux-checkbox-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
-.ux-checkbox.switch .ux-checkbox-ball {position: absolute; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--background-default); box-shadow: 0 .2rem .8rem 0 rgba(0, 0, 0, .16); transition: left .15s ease-in-out;}
+.ux-checkbox.switch .ux-checkbox-ball {position: absolute; top: var(--gap); left: var(--gap); width: var(--size); height: var(--size); border-radius: calc(var(--size) / 2); background-color: var(--background-default); box-shadow: 0 .2rem .8rem 0 rgba(0, 0, 0, .16); transition: transform .15s ease-in-out;}
 /* <UxCheckbox> Switch Checked */
 .ux-checkbox.switch.checked .ux-checkbox-base {background-color: var(--primary-80);}
-.ux-checkbox.switch.checked .ux-checkbox-ball {top: var(--gap); left: calc(100% - var(--size) - var(--gap));}
+.ux-checkbox.switch.checked .ux-checkbox-ball {transform: translate(var(--size));}
 /* <UxCheckbox> Switch z-index */
 .ux-checkbox.switch .ux-checkbox-ball {z-index: 1;}
 
