@@ -1406,10 +1406,30 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor .actor-name {overflow: hidden;}
 .ux-card.actor .actor-av123 {position: absolute; top: 0; left: 0; transform: translateY(0%); transition: transform 0.5s ease-in-out;}
 .ux-card.actor .actor-avdbs {position: absolute; top: 0; left: 0; transform: translateY(100%); transition: transform 0.5s ease-in-out;}
-.ux-card.actor .actor-trans i.icon.reset {transform: rotate(0deg); transition: all 0.5s ease-in-out;}
 .ux-card.actor.avdbs .actor-av123 {transform: translateY(-100%);}
 .ux-card.actor.avdbs .actor-avdbs {transform: translateY(0%);}
-.ux-card.actor.avdbs .actor-trans i.icon.reset {background-color: var(--text-red); transform: rotate(360deg);}
+/* Actor Animation */
+.ux-card.actor .actor-trans i.icon.reset {
+	animation-name: actor-trans;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.ux-card.actor.avdbs .actor-trans i.icon.reset {
+	animation-name: actor-trans-redo;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+@keyframes actor-trans {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@keyframes actor-trans-redo {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+.ux-card.actor.preload i.icon.reset {animation-duration: 0s !important;}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor dt {padding-right: 3rem;}

@@ -15,10 +15,11 @@ import UxButton from "@/components/base/UxButton";
 import data from '@/public/data/actor';
 
 export default function Home() {
-	const [isAvdbs, setIsAvdbs] = useState(false);
+	const [preload, setPreload] = useState(true);
 	const [status, setStatus] = useState([]);
 
 	const handleClick = (target) => {
+		setPreload(false);
 		setStatus(status.map((item, index) => index === target ? !item : item));
 	};
 
@@ -42,7 +43,10 @@ export default function Home() {
 								data.map((item, index) => (
 									<UxCard
 										key={index}
-										className={classnames('actor', { avdbs: status[index] })}
+										className={classnames('actor', {
+											preload,
+											avdbs: status[index],
+										})}
 									>
 										<dl>
 											<dt>

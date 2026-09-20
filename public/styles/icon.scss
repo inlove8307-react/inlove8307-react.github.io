@@ -59,26 +59,26 @@ i.icon.orange {background-color: var(--text-orange);}
 i.icon.red {background-color: var(--text-red);}
 
 /* Image */
-i.icon.arrow-up {background-image: url("/images/common/icon_arrow_up.svg"); mask-image: url("/images/common/icon_arrow_up.svg")}
-i.icon.arrow-down {background-image: url("/images/common/icon_arrow_down.svg"); mask-image: url("/images/common/icon_arrow_down.svg")}
-i.icon.arrow-left {background-image: url("/images/common/icon_arrow_left.svg"); mask-image: url("/images/common/icon_arrow_left.svg")}
-i.icon.arrow-right {background-image: url("/images/common/icon_arrow_right.svg"); mask-image: url("/images/common/icon_arrow_right.svg")}
-i.icon.home {background-image: url("/images/common/icon_home.svg"); mask-image: url("/images/common/icon_home.svg")}
-i.icon.menu {background-image: url("/images/common/icon_menu.svg"); mask-image: url("/images/common/icon_menu.svg")}
-i.icon.more {background-image: url("/images/common/icon_more.svg"); mask-image: url("/images/common/icon_more.svg")}
-i.icon.close {background-image: url("/images/common/icon_close.svg"); mask-image: url("/images/common/icon_close.svg")}
-i.icon.search {background-image: url("/images/common/icon_search.svg"); mask-image: url("/images/common/icon_search.svg")}
-i.icon.tooltip {background-image: url("/images/common/icon_tooltip.svg"); mask-image: url("/images/common/icon_tooltip.svg")}
-i.icon.info {background-image: url("/images/common/icon_info.svg"); mask-image: url("/images/common/icon_info.svg")}
-i.icon.danger {background-image: url("/images/common/icon_danger.svg"); mask-image: url("/images/common/icon_danger.svg")}
-i.icon.calendar {background-image: url("/images/common/icon_calendar.svg"); mask-image: url("/images/common/icon_calendar.svg")}
-i.icon.time {background-image: url("/images/common/icon_time.svg"); mask-image: url("/images/common/icon_clear.svg")}
-i.icon.clear {background-image: url("/images/common/icon_clear.svg"); mask-image: url("/images/common/icon_time.svg")}
-i.icon.download {background-image: url("/images/common/icon_download.svg"); mask-image: url("/images/common/icon_download.svg")}
-i.icon.clip {background-image: url("/images/common/icon_clip.svg"); mask-image: url("/images/common/icon_clip.svg")}
-i.icon.share {background-image: url("/images/common/icon_share.svg"); mask-image: url("/images/common/icon_share.svg")}
-i.icon.filter {background-image: url("/images/common/icon_filter.svg"); mask-image: url("/images/common/icon_filter.svg")}
-i.icon.reset {background-image: url("/images/common/icon_reset.svg"); mask-image: url("/images/common/icon_reset.svg")}
+i.icon.arrow-up {background-image: url("/images/common/icon_arrow_up.svg"); mask-image: url("/images/common/icon_arrow_up.svg"); -webkit-mask-image: url("/images/common/icon_arrow_up.svg");}
+i.icon.arrow-down {background-image: url("/images/common/icon_arrow_down.svg"); mask-image: url("/images/common/icon_arrow_down.svg"); -webkit-mask-image: url("/images/common/icon_arrow_down.svg");}
+i.icon.arrow-left {background-image: url("/images/common/icon_arrow_left.svg"); mask-image: url("/images/common/icon_arrow_left.svg"); -webkit-mask-image: url("/images/common/icon_arrow_left.svg");}
+i.icon.arrow-right {background-image: url("/images/common/icon_arrow_right.svg"); mask-image: url("/images/common/icon_arrow_right.svg"); -webkit-mask-image: url("/images/common/icon_arrow_right.svg");}
+i.icon.home {background-image: url("/images/common/icon_home.svg"); mask-image: url("/images/common/icon_home.svg"); -webkit-mask-image: url("/images/common/icon_home.svg");}
+i.icon.menu {background-image: url("/images/common/icon_menu.svg"); mask-image: url("/images/common/icon_menu.svg"); -webkit-mask-image: url("/images/common/icon_menu.svg");}
+i.icon.more {background-image: url("/images/common/icon_more.svg"); mask-image: url("/images/common/icon_more.svg"); -webkit-mask-image: url("/images/common/icon_more.svg");}
+i.icon.close {background-image: url("/images/common/icon_close.svg"); mask-image: url("/images/common/icon_close.svg"); -webkit-mask-image: url("/images/common/icon_close.svg");}
+i.icon.search {background-image: url("/images/common/icon_search.svg"); mask-image: url("/images/common/icon_search.svg"); -webkit-mask-image: url("/images/common/icon_search.svg");}
+i.icon.tooltip {background-image: url("/images/common/icon_tooltip.svg"); mask-image: url("/images/common/icon_tooltip.svg"); -webkit-mask-image: url("/images/common/icon_tooltip.svg");}
+i.icon.info {background-image: url("/images/common/icon_info.svg"); mask-image: url("/images/common/icon_info.svg"); -webkit-mask-image: url("/images/common/icon_info.svg");}
+i.icon.danger {background-image: url("/images/common/icon_danger.svg"); mask-image: url("/images/common/icon_danger.svg"); -webkit-mask-image: url("/images/common/icon_danger.svg");}
+i.icon.calendar {background-image: url("/images/common/icon_calendar.svg"); mask-image: url("/images/common/icon_calendar.svg"); -webkit-mask-image: url("/images/common/icon_calendar.svg");}
+i.icon.time {background-image: url("/images/common/icon_time.svg"); mask-image: url("/images/common/icon_clear.svg"); -webkit-mask-image: url("/images/common/icon_clear.svg");}
+i.icon.clear {background-image: url("/images/common/icon_clear.svg"); mask-image: url("/images/common/icon_time.svg"); -webkit-mask-image: url("/images/common/icon_time.svg");}
+i.icon.download {background-image: url("/images/common/icon_download.svg"); mask-image: url("/images/common/icon_download.svg"); -webkit-mask-image: url("/images/common/icon_download.svg");}
+i.icon.clip {background-image: url("/images/common/icon_clip.svg"); mask-image: url("/images/common/icon_clip.svg"); -webkit-mask-image: url("/images/common/icon_clip.svg");}
+i.icon.share {background-image: url("/images/common/icon_share.svg"); mask-image: url("/images/common/icon_share.svg"); -webkit-mask-image: url("/images/common/icon_share.svg");}
+i.icon.filter {background-image: url("/images/common/icon_filter.svg"); mask-image: url("/images/common/icon_filter.svg"); -webkit-mask-image: url("/images/common/icon_filter.svg");}
+i.icon.reset {background-image: url("/images/common/icon_reset.svg"); mask-image: url("/images/common/icon_reset.svg"); -webkit-mask-image: url("/images/common/icon_reset.svg");}
 
 /* Sprite Check */
 i.icons.check {
