@@ -1374,13 +1374,15 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor {overflow: hidden;}
 .ux-card.actor .ux-card-base {padding: 2rem;}
 .ux-card.actor dl {flex-grow: 1;}
-.ux-card.actor dt {display: flex; flex-wrap: wrap; gap: 0 .8rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
+.ux-card.actor dt {display: flex; flex-wrap: wrap; align-items: center; gap: 0 .8rem; padding-bottom: 1.6rem; box-shadow: 0 .1rem 0 0 var(--border-default);}
 .ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
 .ux-card.actor .actor-name::after {content: ',';}
 .ux-card.actor .actor-name:last-of-type::after {display: none;}
+.ux-card.actor .actor-info {display: inline-flex; justify-content: center; align-items: center; margin-left: auto; width: 3.6rem; height: 3.6rem; border-radius: 1.8rem; background-color: var(--background-muted); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 .ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
 .ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor .actor-name {font-size: 2rem;}
 html.mobile .ux-card.actor .actor-link {padding: 0 1.6rem; height: 3.2rem; border-radius: 1.6rem; font-size: 1.4rem;}
+html.mobile .ux-card.actor .actor-info {width: 3rem; height: 3rem; border-radius: 1.5rem; font-size: 1.4rem;}

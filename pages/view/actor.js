@@ -43,6 +43,7 @@ export default function Home() {
 														</a>
 													))
 												}
+												<p className="actor-info">{item.link.length}</p>
 											</dt>
 											<dd>
 												{
