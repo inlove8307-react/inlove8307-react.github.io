@@ -35,6 +35,7 @@ export default function Page() {
 				'download',
 				'clip',
 				'clear',
+				'reset',
 			]
 		},
 		{

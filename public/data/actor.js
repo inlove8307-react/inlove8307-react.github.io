@@ -181,6 +181,10 @@ const data = [
 			{
 				name: 'Nanatsumori Riri',
 				link: 'https://123av.com/ko/actresses/nanatsumori-riri',
+				avdbs: {
+					name: 'Riri Nanatsumori',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6453',
+				},
 			},
 		],
 		link: [
@@ -198,6 +202,10 @@ const data = [
 			{
 				name: 'Tsubaki Sannomiya',
 				link: 'https://123av.com/ko/actresses/tsubaki-sannomiya',
+				avdbs: {
+					name: 'Tsubaki Sannomiya',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6421',
+				},
 			},
 		],
 		link: [
@@ -223,6 +231,10 @@ const data = [
 			{
 				name: 'Tsukasa Aoi',
 				link: 'https://123av.com/ko/actresses/tsukasa-aoi',
+				avdbs: {
+					name: 'Tsukasa Aoi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=777',
+				},
 			},
 		],
 		link: [
@@ -242,6 +254,10 @@ const data = [
 			{
 				name: 'Tsubasa Amami',
 				link: 'https://123av.com/ko/actresses/tsubasa-amami',
+				avdbs: {
+					name: 'Tsubasa Amami',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=684',
+				},
 			},
 		],
 		link: [
@@ -260,6 +276,10 @@ const data = [
 			{
 				name: 'Momo Sakurazora',
 				link: 'https://123av.com/ko/actresses/momo-sakurazora',
+				avdbs: {
+					name: 'Momo Sakura',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2611',
+				},
 			},
 		],
 		link: [
@@ -276,6 +296,10 @@ const data = [
 			{
 				name: 'Tsumugi Akari',
 				link: 'https://123av.com/ko/actresses/tsumugi-akari',
+				avdbs: {
+					name: 'Tsumugi Akari',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2583',
+				},
 			},
 		],
 		link: [
@@ -306,6 +330,10 @@ const data = [
 			{
 				name: 'Waka Natsuki',
 				link: 'https://123av.com/ko/actresses/waka-natsuki',
+				avdbs: {
+					name: 'Natsuki Waka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11149',
+				},
 			},
 		],
 		link: [
@@ -319,6 +347,10 @@ const data = [
 			{
 				name: 'Angel Moe',
 				link: 'https://123av.com/ko/actresses/angel-moe',
+				avdbs: {
+					name: 'Moe Amatsuka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=176',
+				},
 			},
 		],
 		link: [
@@ -336,6 +368,10 @@ const data = [
 			{
 				name: 'Hikari Azusa',
 				link: 'https://123av.com/ko/actresses/hikari-azusa',
+				avdbs: {
+					name: 'Hikari Azusa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6158',
+				},
 			},
 		],
 		link: [
@@ -354,6 +390,10 @@ const data = [
 			{
 				name: 'Kaede Karen',
 				link: 'https://123av.com/ko/actresses/kaede-karen',
+				avdbs: {
+					name: 'Karen Kaede',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=4981',
+				},
 			},
 		],
 		link: [
@@ -374,6 +414,10 @@ const data = [
 			{
 				name: 'Hanesaki Miharu',
 				link: 'https://123av.com/ko/actresses/hanesaki-miharu',
+				avdbs: {
+					name: 'Miharu Usa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2357',
+				},
 			},
 		],
 		link: [
@@ -393,6 +437,10 @@ const data = [
 			{
 				name: 'Hikaru Miyanishi',
 				link: 'https://123av.com/ko/actresses/hikaru-miyanishi',
+				avdbs: {
+					name: 'Hikaru Miyanishi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8439',
+				},
 			},
 		],
 		link: [
@@ -417,6 +465,10 @@ const data = [
 			{
 				name: 'Iyona Fujii',
 				link: 'https://123av.com/ko/actresses/iyona-fujii',
+				avdbs: {
+					name: 'Iyona Fujii',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6643',
+				},
 			},
 		],
 		link: [
@@ -437,6 +489,10 @@ const data = [
 			{
 				name: 'Mitsuri Nagahama',
 				link: 'https://123av.com/ko/actresses/mitsuri-nagahama',
+				avdbs: {
+					name: 'Mitsuri Nagahama',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10308',
+				},
 			},
 		],
 		link: [
@@ -449,6 +505,10 @@ const data = [
 			{
 				name: 'Aisai Ria',
 				link: 'https://123av.com/ko/actresses/aisai-ria',
+				avdbs: {
+					name: 'Ria Aise',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11066',
+				},
 			},
 		],
 		link: [
@@ -464,6 +524,10 @@ const data = [
 			{
 				name: 'Eren Sora',
 				link: 'https://123av.com/ko/actresses/eren-sora',
+				avdbs: {
+					name: 'Sora Eren',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9598',
+				},
 			},
 		],
 		link: [
@@ -477,6 +541,10 @@ const data = [
 			{
 				name: 'Nagisa Airi',
 				link: 'https://123av.com/ko/actresses/nagisa-airi',
+				avdbs: {
+					name: 'Airi Nagisa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10492',
+				},
 			},
 		],
 		link: [
@@ -492,6 +560,10 @@ const data = [
 			{
 				name: 'Saki Sasaki',
 				link: 'https://123av.com/ko/actresses/saki-sasaki',
+				avdbs: {
+					name: 'Saki Sasaki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10135',
+				},
 			},
 		],
 		link: [
@@ -509,6 +581,10 @@ const data = [
 			{
 				name: 'Sakurano Rino',
 				link: 'https://123av.com/ko/actresses/sakurano-rino',
+				avdbs: {
+					name: 'Rino Sakurano',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11171',
+				},
 			},
 		],
 		link: [
@@ -522,6 +598,10 @@ const data = [
 			{
 				name: 'Miru',
 				link: 'https://123av.com/ko/actresses/miru',
+				avdbs: {
+					name: 'Miru Sakamichi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=4428',
+				},
 			},
 		],
 		link: [
@@ -535,6 +615,10 @@ const data = [
 			{
 				name: 'Yukimura Izumi',
 				link: 'https://123av.com/ko/actresses/yukimura-izumi',
+				avdbs: {
+					name: 'Itsuki Yukimura',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11507',
+				},
 			},
 		],
 		link: [
@@ -552,6 +636,10 @@ const data = [
 			{
 				name: 'Kuroshima Rei',
 				link: 'https://123av.com/ko/actresses/kuroshima-rei',
+				avdbs: {
+					name: 'Rei Kuroshima',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9948',
+				},
 			},
 		],
 		link: [
@@ -569,6 +657,10 @@ const data = [
 			{
 				name: 'Hibikiren',
 				link: 'https://123av.com/ko/actresses/hibikiren',
+				avdbs: {
+					name: 'Ren Hibiki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9616',
+				},
 			},
 		],
 		link: [
@@ -585,6 +677,10 @@ const data = [
 			{
 				name: 'Junpaku Ayana',
 				link: 'https://123av.com/ko/actresses/junpaku-ayana',
+				avdbs: {
+					name: 'Mashiro Sana',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11352',
+				},
 			},
 		],
 		link: [
@@ -597,6 +693,10 @@ const data = [
 			{
 				name: 'Miu Shiramine',
 				link: 'https://123av.com/ko/actresses/miu-shiramine',
+				avdbs: {
+					name: 'Miu Shiromine',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6755',
+				},
 			},
 		],
 		link: [
@@ -623,6 +723,10 @@ const data = [
 			{
 				name: 'Kamiki Mia',
 				link: 'https://123av.com/ko/actresses/kamiki-mia',
+				avdbs: {
+					name: 'Mia Kouki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11669',
+				},
 			},
 		],
 		link: [
@@ -638,6 +742,10 @@ const data = [
 			{
 				name: 'Rio Kuriyama',
 				link: 'https://123av.com/ko/actresses/rio-kuriyama',
+				avdbs: {
+					name: 'Rio Kuriyama',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6580',
+				},
 			},
 		],
 		link: [
@@ -672,6 +780,10 @@ const data = [
 			{
 				name: 'Karin Kitaoka',
 				link: 'https://123av.com/ko/actresses/karin-kitaoka',
+				avdbs: {
+					name: 'Karin Kitaoka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10495',
+				},
 			},
 		],
 		link: [
@@ -700,6 +812,10 @@ const data = [
 			{
 				name: 'Meguri Minoshima',
 				link: 'https://123av.com/ko/actresses/meguri-minoshima',
+				avdbs: {
+					name: 'Meguri Minoshima',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=7051',
+				},
 			},
 		],
 		link: [
@@ -724,6 +840,10 @@ const data = [
 			{
 				name: 'Hamabe Yayoi',
 				link: 'https://123av.com/ko/actresses/hamabe-yayoi',
+				avdbs: {
+					name: 'Yayoi Hamabe',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11234',
+				},
 			},
 		],
 		link: [
@@ -739,6 +859,10 @@ const data = [
 			{
 				name: 'Hanamori Kaho',
 				link: 'https://123av.com/ko/actresses/hanamori-kaho',
+				avdbs: {
+					name: 'Kaho Hanamori',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11139',
+				},
 			},
 		],
 		link: [
@@ -758,6 +882,10 @@ const data = [
 			{
 				name: 'Kawagoe Niko',
 				link: 'https://123av.com/ko/actresses/kawagoe-niko',
+				avdbs: {
+					name: 'Niko Kawagoe',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10375',
+				},
 			},
 		],
 		link: [
@@ -772,6 +900,10 @@ const data = [
 			{
 				name: 'Miyu Kohinata (Miyu Kiyohara)',
 				link: 'https://123av.com/ko/actresses/miyu-kohinata-miyu-kiyohara',
+				avdbs: {
+					name: 'Miyu Kohinata',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9772',
+				},
 			},
 		],
 		link: [
@@ -789,6 +921,10 @@ const data = [
 			{
 				name: 'Aizawa Miyu',
 				link: 'https://123av.com/ko/actresses/aizawa-miyu',
+				avdbs: {
+					name: 'Miyu Aizawa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10215',
+				},
 			},
 		],
 		link: [
@@ -812,6 +948,10 @@ const data = [
 			{
 				name: 'Akari Minase',
 				link: 'https://123av.com/ko/actresses/akari-minase',
+				avdbs: {
+					name: 'Akari Minase',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8633',
+				},
 			},
 		],
 		link: [
@@ -829,6 +969,10 @@ const data = [
 			{
 				name: 'Ichikawa Riku',
 				link: 'https://123av.com/ko/actresses/ichikawa-riku',
+				avdbs: {
+					name: 'Riku Ichikawa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9038',
+				},
 			},
 		],
 		link: [
@@ -843,6 +987,10 @@ const data = [
 			{
 				name: 'Nami Suzuna',
 				link: 'https://123av.com/ko/actresses/nami-suzuna',
+				avdbs: {
+					name: 'Nami Suzuna',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11652',
+				},
 			},
 		],
 		link: [
@@ -854,6 +1002,10 @@ const data = [
 			{
 				name: 'Nishimoto Meisa',
 				link: 'https://123av.com/ko/actresses/nishimoto-meisa',
+				avdbs: {
+					name: 'Meisa Nishimoto',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8175',
+				},
 			},
 		],
 		link: [
@@ -869,6 +1021,10 @@ const data = [
 			{
 				name: 'Nagisa Tanimura',
 				link: 'https://123av.com/ko/actresses/nagisa-tanimura',
+				avdbs: {
+					name: 'Nagisa Tanumura',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11557',
+				},
 			},
 		],
 		link: [
@@ -881,6 +1037,10 @@ const data = [
 			{
 				name: 'Anzu',
 				link: 'https://123av.com/ko/actresses/anzu-1',
+				avdbs: {
+					name: 'An Anzu',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11057',
+				},
 			},
 		],
 		link: [
@@ -895,6 +1055,10 @@ const data = [
 			{
 				name: 'Tsubaki Rika',
 				link: 'https://123av.com/ko/actresses/tsubaki-rika',
+				avdbs: {
+					name: 'Rika Tsubaki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6342',
+				},
 			},
 		],
 		link: [
@@ -911,6 +1075,10 @@ const data = [
 			{
 				name: 'Goba',
 				link: 'https://123av.com/ko/actresses/goba',
+				avdbs: {
+					name: 'Itsuha',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9257',
+				},
 			},
 		],
 		link: [
@@ -936,6 +1104,10 @@ const data = [
 			{
 				name: 'Shiori Kuraki',
 				link: 'https://123av.com/ko/actresses/shiori-kuraki',
+				avdbs: {
+					name: 'Shiori Kuraki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=3899',
+				},
 			},
 		],
 		link: [
@@ -950,6 +1122,10 @@ const data = [
 			{
 				name: 'Tsubomi Mochizuki',
 				link: 'https://123av.com/ko/actresses/tsubomi-mochizuki',
+				avdbs: {
+					name: 'Tsubomi Mochizuki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9692',
+				},
 			},
 		],
 		link: [
@@ -967,6 +1143,10 @@ const data = [
 			{
 				name: 'Urakami Hinori',
 				link: 'https://123av.com/ko/actresses/urakami-hinori',
+				avdbs: {
+					name: 'Hinori Uragami',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11023',
+				},
 			},
 		],
 		link: [
@@ -978,6 +1158,10 @@ const data = [
 			{
 				name: 'Riho Fujimori',
 				link: 'https://123av.com/ko/actresses/riho-fujimori',
+				avdbs: {
+					name: 'Riho Fujimori',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6115',
+				},
 			},
 		],
 		link: [
@@ -1004,6 +1188,10 @@ const data = [
 			{
 				name: 'Kanan Amamiya',
 				link: 'https://123av.com/ko/actresses/kanan-amamiya',
+				avdbs: {
+					name: 'Kanan Amamiya',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=7373',
+				},
 			},
 		],
 		link: [
@@ -1021,6 +1209,10 @@ const data = [
 			{
 				name: 'Maru Sairea',
 				link: 'https://123av.com/ko/actresses/maru-sairea',
+				avdbs: {
+					name: 'Rea Maruishi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10498',
+				},
 			},
 		],
 		link: [
@@ -1036,6 +1228,10 @@ const data = [
 			{
 				name: 'Shizuka',
 				link: 'https://123av.com/ko/actresses/shizuka',
+				avdbs: {
+					name: 'Shizuka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10688',
+				},
 			},
 		],
 		link: [
@@ -1058,6 +1254,10 @@ const data = [
 			{
 				name: 'Nomiya Ann',
 				link: 'https://123av.com/ko/actresses/nomiya-ann',
+				avdbs: {
+					name: 'An Nomiya',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10908',
+				},
 			},
 		],
 		link: [
@@ -1075,6 +1275,10 @@ const data = [
 			{
 				name: 'Ishihara Ao',
 				link: 'https://123av.com/ko/actresses/ishihara-ao',
+				avdbs: {
+					name: 'Ao Ishihara',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11053',
+				},
 			},
 		],
 		link: [
@@ -1094,6 +1298,10 @@ const data = [
 			{
 				name: 'Mina Kitano',
 				link: 'https://123av.com/ko/actresses/mina-kitano',
+				avdbs: {
+					name: 'Mina Kitano',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6907',
+				},
 			},
 		],
 		link: [
@@ -1135,6 +1343,10 @@ const data = [
 			{
 				name: 'Tsukigumo Yoru',
 				link: 'https://123av.com/ko/actresses/tsukigumo-yoru',
+				avdbs: {
+					name: 'Aya Kamiki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9676',
+				},
 			},
 		],
 		link: [
@@ -1155,6 +1367,10 @@ const data = [
 			{
 				name: 'Momose Himari',
 				link: 'https://123av.com/ko/v/bdst-082',
+				avdbs: {
+					name: 'Himari Momose',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10843',
+				},
 			},
 		],
 		link: [
@@ -1172,6 +1388,10 @@ const data = [
 			{
 				name: 'Minazuki Hikaru',
 				link: 'https://123av.com/ko/actresses/minazuki-hikaru',
+				avdbs: {
+					name: 'Hikaru Minazuki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=4487',
+				},
 			},
 		],
 		link: [
@@ -1200,14 +1420,26 @@ const data = [
 			{
 				name: 'Nagisa Shiraishi',
 				link: 'https://123av.com/ko/actresses/nagisa-shiraishi',
+				avdbs: {
+					name: 'Nagisa Shiraishi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10432',
+				},
 			},
 			{
 				name: 'Ichii Yuka',
 				link: 'https://123av.com/ko/actresses/ichii-yuka',
+				avdbs: {
+					name: 'Yuka Ichii',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9057',
+				},
 			},
 			{
 				name: 'Akari Minase',
 				link: 'https://123av.com/ko/actresses/akari-minase',
+				avdbs: {
+					name: 'Akari Minase',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8633',
+				},
 			},
 		],
 		link: [
@@ -1219,6 +1451,10 @@ const data = [
 			{
 				name: 'Miura Sakura',
 				link: 'https://123av.com/ko/actresses/miura-sakura',
+				avdbs: {
+					name: 'Sakura Miura',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2604',
+				},
 			},
 		],
 		link: [
@@ -1241,6 +1477,10 @@ const data = [
 			{
 				name: 'Mio Ishikawa',
 				link: 'https://123av.com/ko/actresses/mio-ishikawa',
+				avdbs: {
+					name: 'Mio Ishikawa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8130',
+				},
 			},
 		],
 		link: [
@@ -1261,6 +1501,10 @@ const data = [
 			{
 				name: 'Rokka Ono',
 				link: 'https://123av.com/ko/actresses/rokka-ono',
+				avdbs: {
+					name: 'Rikka Ono',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6298',
+				},
 			},
 		],
 		link: [
@@ -1282,6 +1526,10 @@ const data = [
 			{
 				name: 'Aoi Ibuki',
 				link: 'https://123av.com/ko/actresses/aoi-ibuki',
+				avdbs: {
+					name: 'Ibuki Aoi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6368',
+				},
 			},
 		],
 		link: [
@@ -1298,6 +1546,10 @@ const data = [
 			{
 				name: 'Eimi Fukada',
 				link: 'https://123av.com/ko/actresses/eimi-fukada',
+				avdbs: {
+					name: 'Eimi Fukada',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=4795',
+				},
 			},
 		],
 		link: [
@@ -1329,6 +1581,10 @@ const data = [
 			{
 				name: 'Kinoshita Himari (Hanazawa Himari)',
 				link: 'https://123av.com/ko/actresses/kinoshita-himari-hanazawa-himari',
+				avdbs: {
+					name: 'Himari Kinoshita',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6249',
+				},
 			},
 		],
 		link: [
@@ -1366,6 +1622,10 @@ const data = [
 			{
 				name: 'Ru Totsuka',
 				link: 'https://123av.com/ko/actresses/ru-totsuka',
+				avdbs: {
+					name: 'Ru Totsuka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8495',
+				},
 			},
 		],
 		link: [
@@ -1385,6 +1645,10 @@ const data = [
 			{
 				name: 'Kashiwagi Konatsu',
 				link: 'https://123av.com/ko/actresses/kashiwagi-konatsu',
+				avdbs: {
+					name: 'Konatsu Kashiwagi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8339',
+				},
 			},
 		],
 		link: [
@@ -1413,6 +1677,10 @@ const data = [
 			{
 				name: 'Satsuki Ena',
 				link: 'https://123av.com/ko/actresses/satsuki-ena',
+				avdbs: {
+					name: 'Ena Satsuki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6608',
+				},
 			},
 		],
 		link: [
@@ -1443,6 +1711,10 @@ const data = [
 			{
 				name: 'Shen Mu Ran',
 				link: 'https://123av.com/ko/actresses/shen-mu-ran',
+				avdbs: {
+					name: 'Ran Kamiki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9130',
+				},
 			},
 		],
 		link: [
@@ -1458,6 +1730,10 @@ const data = [
 			{
 				name: 'Rin Natsuki',
 				link: 'https://123av.com/ko/actresses/rin-natsuki',
+				avdbs: {
+					name: 'Rin Natsuki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=7006',
+				},
 			},
 		],
 		link: [],
@@ -1467,6 +1743,10 @@ const data = [
 			{
 				name: 'Nene Yoshitaka',
 				link: 'https://123av.com/ko/actresses/nene-yoshitaka',
+				avdbs: {
+					name: 'Nene Yoshitaka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=3596',
+				},
 			},
 		],
 		link: [],
@@ -1476,6 +1756,10 @@ const data = [
 			{
 				name: 'Tsukinoe Sui',
 				link: 'https://123av.com/ko/actresses/tsukinoe-sui',
+				avdbs: {
+					name: 'Sui Tsukinoe',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10161',
+				},
 			},
 		],
 		link: [],
@@ -1485,6 +1769,10 @@ const data = [
 			{
 				name: 'Takeuchi Sakina',
 				link: 'https://123av.com/ko/actresses/takeuchi-sakina',
+				avdbs: {
+					name: 'Sakuna Takeuchi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=12467',
+				},
 			},
 		],
 		link: [],
@@ -1494,6 +1782,10 @@ const data = [
 			{
 				name: 'Yoda Rin',
 				link: 'https://123av.com/ko/actresses/yoda-rin-1',
+				avdbs: {
+					name: 'Rin Yoda',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10737',
+				},
 			},
 		],
 		link: [],
@@ -1503,6 +1795,10 @@ const data = [
 			{
 				name: 'Mikan Kosuzu',
 				link: 'https://123av.com/ko/actresses/mikan-kosuzu',
+				avdbs: {
+					name: 'Mikan Kosuzu',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11150',
+				},
 			},
 		],
 		link: [],
@@ -1512,6 +1808,10 @@ const data = [
 			{
 				name: 'Misao Oguri',
 				link: 'https://123av.com/ko/actresses/misao-oguri',
+				avdbs: {
+					name: 'Misao Oguri',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11430',
+				},
 			},
 		],
 		link: [],
@@ -1521,6 +1821,10 @@ const data = [
 			{
 				name: 'Zenba Mami (Mami Mashiro)',
 				link: 'https://123av.com/ko/actresses/zenba-mami-mami-mashiro',
+				avdbs: {
+					name: 'Mami Zenba',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9759',
+				},
 			},
 		],
 		link: [],
@@ -1530,6 +1834,10 @@ const data = [
 			{
 				name: 'Itoi Ruka',
 				link: 'https://123av.com/ko/actresses/itoi-ruka',
+				avdbs: {
+					name: 'Ruka Itoi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10993',
+				},
 			},
 		],
 		link: [],
@@ -1539,6 +1847,10 @@ const data = [
 			{
 				name: 'Yuika Onozaka',
 				link: 'https://123av.com/ko/actresses/yuika-onozaka',
+				avdbs: {
+					name: 'Yuika Onosaka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=10628',
+				},
 			},
 		],
 		link: [],
@@ -1548,6 +1860,10 @@ const data = [
 			{
 				name: 'Otori Miyu',
 				link: 'https://123av.com/ko/actresses/otori-miyu',
+				avdbs: {
+					name: 'Miyu Otori',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6756',
+				},
 			},
 		],
 		link: [],
@@ -1557,6 +1873,10 @@ const data = [
 			{
 				name: 'Inoue Momo',
 				link: 'https://123av.com/ko/actresses/inoue-momo',
+				avdbs: {
+					name: 'Momo Inoue',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11715',
+				},
 			},
 		],
 		link: [],
@@ -1566,6 +1886,10 @@ const data = [
 			{
 				name: 'Mei Uesaka',
 				link: 'https://123av.com/ko/actresses/mei-uesaka',
+				avdbs: {
+					name: 'Mei Kamisaka',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=8352',
+				},
 			},
 		],
 		link: [],
@@ -1575,6 +1899,10 @@ const data = [
 			{
 				name: 'Miura Sakura',
 				link: 'https://123av.com/ko/actresses/miura-sakura',
+				avdbs: {
+					name: 'Sakura Miura',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2604',
+				},
 			},
 		],
 		link: [],
@@ -1584,6 +1912,10 @@ const data = [
 			{
 				name: 'Hanamiya Shiina',
 				link: 'https://123av.com/ko/actresses/hanamiya-shiina',
+				avdbs: {
+					name: 'Shiina Kamiya',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=12502',
+				},
 			},
 		],
 		link: [
