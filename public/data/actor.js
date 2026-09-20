@@ -7,7 +7,7 @@ const data = [
 				avdbs: {
 					name: 'Karen Yuzuriha',
 					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6823',
-				}
+				},
 			},
 		],
 		link: [
@@ -32,6 +32,10 @@ const data = [
 			{
 				name: 'Himesaki Hana',
 				link: 'https://123av.com/ko/actresses/himesaki-hana',
+				avdbs: {
+					name: 'Hana Himesaki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=6385',
+				},
 			},
 		],
 		link: [
@@ -56,6 +60,10 @@ const data = [
 			{
 				name: 'Hinano Kuno',
 				link: 'https://123av.com/ko/actresses/hinano-kuno',
+				avdbs: {
+					name: 'Hinano Kuno',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9174',
+				},
 			},
 		],
 		link: [
@@ -74,6 +82,10 @@ const data = [
 			{
 				name: 'Yuka Miyoshi',
 				link: 'https://123av.com/ko/actresses/yuka-miyoshi',
+				avdbs: {
+					name: 'Yuka Miyoshi',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=11328',
+				},
 			},
 		],
 		link: [
@@ -87,6 +99,10 @@ const data = [
 			{
 				name: 'Minami Aizawa',
 				link: 'https://123av.com/ko/actresses/minami-aizawa',
+				avdbs: {
+					name: 'Minami Aizawa',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2426',
+				},
 			},
 		],
 		link: [
@@ -106,6 +122,10 @@ const data = [
 			{
 				name: 'Rena Taoyuan',
 				link: 'https://123av.com/ko/actresses/rena-taoyuan',
+				avdbs: {
+					name: 'Rena Momozono',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=2303',
+				},
 			},
 		],
 		link: [
@@ -122,6 +142,10 @@ const data = [
 			{
 				name: 'Ran Kikuno',
 				link: 'https://123av.com/ko/actresses/ran-kikuno',
+				avdbs: {
+					name: 'Ran Kikuno',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=9596',
+				},
 			},
 		],
 		link: [
@@ -136,6 +160,10 @@ const data = [
 			{
 				name: 'Misaki Nanami',
 				link: 'https://123av.com/ko/actresses/misaki-nanami',
+				avdbs: {
+					name: 'Nanami Misaki',
+					link: 'https://www.avdbs.com/menu/actor.php?actor_idx=3662',
+				},
 			},
 		],
 		link: [
