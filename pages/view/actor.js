@@ -49,9 +49,8 @@ export default function Home() {
 															className="actor-name"
 															target="_blank"
 														>
-															<span>{item.name}</span>
-															<span className="actor-av123">{item.name}</span>
-															<span className="actor-avdbs">{item.avdbs?.name || item.name}</span>
+															<span className="actor-av123 ellipsis">{item.name}</span>
+															<span className="actor-avdbs ellipsis">{item.avdbs?.name || item.name}</span>
 														</a>
 													))
 												}
