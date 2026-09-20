@@ -379,6 +379,10 @@ h3 {font-size: 2.8rem;}
 h4 {font-size: 2.4rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
+/* Heading */
+h3.row {display: flex; align-items: center;}
+h3.row.between {justify-content: space-between;}
+h3.column {display: flex;}
 /* Heading (Mobile) */
 html.mobile h3 {font-size: 2.4rem;}
 html.mobile h4 {font-size: 2rem;}
@@ -1375,12 +1379,19 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor .ux-card-base {padding: 2rem;}
 .ux-card.actor dl {flex-grow: 1;}
 .ux-card.actor dt {display: flex; flex-wrap: wrap; align-items: center; gap: 0 .8rem; position: relative; padding: 0 3.6rem 1.6rem 0; box-shadow: 0 .1rem 0 0 var(--border-default);}
-.ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
+.ux-card.actor .actor-name {position: relative; font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
 .ux-card.actor .actor-name::after {content: ',';}
 .ux-card.actor .actor-name:last-of-type::after {display: none;}
 .ux-card.actor .actor-info {display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0; width: 3.6rem; height: 3.6rem; border-radius: 1.8rem; background-color: var(--background-info); font-weight: 700; font-size: 1.6rem; color: var(--text-blue);}
 .ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
 .ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
+/* Actor Transition */
+.ux-card.actor .actor-name {overflow: hidden;}
+.ux-card.actor .actor-name span:not([class]) {opacity: 0;}
+.ux-card.actor .actor-av123 {	position: absolute; top: 0; left: 0; transform: translateY(0%); transition: transform 0.5s ease-in-out;}
+.ux-card.actor .actor-avdbs {	position: absolute; top: 0; left: 0; transform: translateY(100%); transition: transform 0.5s ease-in-out;}
+.ux-card.actor.avdbs .actor-av123 {	transform: translateY(-100%);}
+.ux-card.actor.avdbs .actor-avdbs {	transform: translateY(0%);}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor dt {padding-right: 3rem;}
