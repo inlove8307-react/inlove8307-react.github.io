@@ -67,9 +67,8 @@ export default function Home() {
 													className="actor-trans"
 													onClick={() => handleClick(index)}
 												>
-													<i className="icon mask reset" />
+													<i className="icon reset" />
 												</UxButton>
-												{/* <span className="actor-info" onClick={() => handleClick(index)}>{item.link.length}</span> */}
 											</dt>
 											<dd>
 												{
