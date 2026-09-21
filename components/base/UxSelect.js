@@ -41,6 +41,7 @@ const Dropdown = ({ ref, ...props }) => {
 			value,
 			options: props.children,
 			openerRef,
+			caseClassName: classnames({ inside: props.inside })
 		});
 
 		result.value && setValue(result.value);

@@ -27,7 +27,7 @@ const Popup = ({ ref, ...props }) => {
 		const gap = 4;
 		const offset = {
 			width: openerRect.width,
-			x: openerRect.left,
+			x: modalRect.width / 2 - openerRect.left,
 			y: openerRect.top + openerRect.height + gap,
 		};
 
@@ -37,7 +37,7 @@ const Popup = ({ ref, ...props }) => {
 
 		Object.assign(props.baseRef.current.style, {
 			minWidth: `${offset.width}px`,
-			transform: `translate(${offset.x}px, ${offset.y}px)`
+			transform: `translate(-${offset.x}px, ${offset.y}px)`
 		});
 	}, []);
 

@@ -33,14 +33,14 @@ const UxModal = ({ ref, ...props }) => {
 
 	const variants = {
 		center: {
-			initial: { scale: .75 },
-			animate: { scale: 1 },
-			exit: { scale: .75 },
+			initial: { opacity: 0, scale: .85 },
+			animate: { opacity: 1, scale: 1 },
+			exit: { opacity: 0, scale: .85 },
 		},
 		bottom: {
-			initial: { translateY: '100%' },
-			animate: { translateY: '0%' },
-			exit: { translateY: '100%' },
+			initial: { opacity: 0, translateY: '100%' },
+			animate: { opacity: 1, translateY: '0%' },
+			exit: { opacity: 0, translateY: '100%' },
 		},
 		default: {
 			initial: { opacity: 0 },
@@ -54,10 +54,12 @@ const UxModal = ({ ref, ...props }) => {
 			<AnimatePresence mode="sync">
 				{rootContext.modals.map(({id, Component, props, onClose}) => {
 					const caseClassName = classnames(baseClassName, props.baseClassName, props.caseClassName);
+					const transition = { duration: .15, ease: 'easeInOut' };
 					let current = variants['default'];
 
 					if (props.baseClassName.includes('center')) current = variants['center'];
 					if (props.baseClassName.includes('bottom')) current = variants['bottom'];
+					if (props.baseClassName.includes('dropdown')) transition.duration = 0;
 
 					return (
 						<div
@@ -73,7 +75,7 @@ const UxModal = ({ ref, ...props }) => {
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}
-								transition={{ duration: .25, ease: 'easeInOut' }}
+								transition={transition}
 								onClick={onClose}
 							/>
 							<motion.div
@@ -84,7 +86,7 @@ const UxModal = ({ ref, ...props }) => {
 								initial="initial"
 								animate="animate"
 								exit="exit"
-								transition={{ duration: .25, ease: 'easeInOut' }}
+								transition={transition}
 							>
 								<Component
 									{...props}
