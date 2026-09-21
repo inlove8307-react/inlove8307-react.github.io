@@ -3,6 +3,7 @@ import { isDesktop, isWindows, isMacOs, isMobile, isIOS, isAndroid, isChrome, is
 import classnames from 'classnames';
 import $ from 'jquery';
 import Layout from '@/components/layout';
+import RootContextProvider from '@/context/RootContext';
 
 // Styles
 import "@/public/styles/icon.scss";
@@ -25,8 +26,10 @@ export default function App({ Component, pageProps }) {
 	}, []);
 
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<RootContextProvider>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</RootContextProvider>
 	)
 }

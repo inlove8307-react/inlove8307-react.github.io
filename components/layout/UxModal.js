@@ -9,20 +9,21 @@ import UxContainer from "@/components/layout/UxContainer";
 
 const UxModal = ({ ref, ...props }) => {
 	const baseClassName = 'ux-modal';
-	const caseClassName = classnames(baseClassName, props.className);
+	const modalRef = useRef();
+	const baseRef = useRef();
+	const backdropRef = useRef();
 	const {rootContext} = useContext(RootContext);
-	const [active, setActive] = useState(false);
 
 	useEffect(() => {
-		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+		const html = document.documentElement;
+		const scrollbarWidth = window.innerWidth - html.clientWidth;
 
 		if (rootContext.modals.length) {
-			document.documentElement.classList.add('modal');
-			document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+			html.classList.add('modal');
+			html.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
 		}
 		else {
-			document.documentElement.classList.remove('modal');
-			setActive(false);
+			html.classList.remove('modal');
 		}
 	}, [rootContext.modals]);
 
@@ -30,46 +31,73 @@ const UxModal = ({ ref, ...props }) => {
 		props.delay && setTimeout(() => props.onClose(), props.delay);
 	}, []);
 
-	const modalRef = useRef();
-	const baseRef = useRef();
-	const backdropRef = useRef();
+	const variants = {
+		center: {
+			initial: { scale: .75 },
+			animate: { scale: 1 },
+			exit: { scale: .75 },
+		},
+		bottom: {
+			initial: { translateY: '100%' },
+			animate: { translateY: '0%' },
+			exit: { translateY: '100%' },
+		},
+		default: {
+			initial: { opacity: 0 },
+			animate: { opacity: 1 },
+			exit: { opacity: 0 },
+		},
+	};
 
 	return (
 		<UxContainer className="modal">
-			{rootContext.modals.map(({Component, props, onClose}, index) => (
-				<AnimatePresence
-					key={index}
-				>
-					<motion.div
-						ref={modalRef}
-						className={classnames(caseClassName, props.baseClassName, props.caseClassName, { active })}
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: .15 }}
-						onAnimationStart={() => setActive(true)}
-					>
+			<AnimatePresence mode="sync">
+				{rootContext.modals.map(({id, Component, props, onClose}) => {
+					const caseClassName = classnames(baseClassName, props.baseClassName, props.caseClassName);
+					let current = variants['default'];
+
+					if (props.baseClassName.includes('center')) current = variants['center'];
+					if (props.baseClassName.includes('bottom')) current = variants['bottom'];
+
+					return (
 						<div
-							ref={backdropRef}
-							role="presentation"
-							className={`${baseClassName}-backdrop`}
-							onClick={onClose}
-						/>
-						<div
-							ref={baseRef}
-							className={`${baseClassName}-base`}
+							key={id}
+							ref={modalRef}
+							className={caseClassName}
 						>
-							<Component
-								{...props}
-								modalRef={modalRef}
-								baseRef={baseRef}
-								backdropRef={backdropRef}
-								onClose={onClose}
+							<motion.div
+								ref={backdropRef}
+								role="presentation"
+								className={`${baseClassName}-backdrop`}
+								style={{ willChange: 'opacity' }}
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: .25, ease: 'easeInOut' }}
+								onClick={onClose}
 							/>
+							<motion.div
+								ref={baseRef}
+								className={`${baseClassName}-base`}
+								style={{ willChange: 'transform, opacity' }}
+								variants={current}
+								initial="initial"
+								animate="animate"
+								exit="exit"
+								transition={{ duration: .25, ease: 'easeInOut' }}
+							>
+								<Component
+									{...props}
+									modalRef={modalRef}
+									baseRef={baseRef}
+									backdropRef={backdropRef}
+									onClose={onClose}
+								/>
+							</motion.div>
 						</div>
-					</motion.div>
-				</AnimatePresence>
-			))}
+					);
+				})}
+			</AnimatePresence>
 		</UxContainer>
 	)
 };

@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import { useRouter } from 'next/router';
 import classnames from 'classnames';
-import RootContextProvider from '@/context/RootContext';
 /* LAYOUT */
 import UxContainer from "@/components/layout/UxContainer";
 import UxHeader from "@/components/layout/UxHeader";
@@ -15,14 +14,13 @@ import UxModal from "@/components/layout/UxModal";
 export default function Layout({ children }) {
 	const router = useRouter();
 	const { pathname } = router;
-	const [path, setPath] = useState([]);
 
-	useEffect(() => {
-		setPath(pathname.split('/'));
+	const path = useMemo(() => {
+		return pathname.split('/');
 	}, [pathname]);
 
 	return (
-		<RootContextProvider>
+		<>
 			<UxContainer className={classnames({
 				guide: path.includes('guide')
 			})}>
@@ -34,6 +32,6 @@ export default function Layout({ children }) {
 				<UxFooter />
 			</UxContainer>
 			<UxModal />
-		</RootContextProvider>
+		</>
 	)
 }
