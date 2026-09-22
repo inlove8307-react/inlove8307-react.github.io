@@ -567,13 +567,13 @@ const Password = ({ ref, ...props }) => {
 const Search = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 
-	const handleClear = (event) => {
+	const handleClear = () => {
 		setValue('');
-		props.onClear && props.onClear(event);
+		props.onClear && props.onClear('');
 	};
 
-	const handleSearch = (event) => {
-		props.onSearch && props.onSearch(event);
+	const handleSearch = () => {
+		props.onSearch && props.onSearch(value);
 	}
 
 	useEffect(() => {

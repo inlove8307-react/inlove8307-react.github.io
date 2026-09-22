@@ -246,6 +246,7 @@ const Input = ({ ref, ...props }) => {
 				invalid: props.valid === false,
 				readonly: props.readonly,
 				disabled: props.disabled,
+				label: props.label1,
 				focused: focused || props.focused,
 			})}
 			onFocus={handleFocus}

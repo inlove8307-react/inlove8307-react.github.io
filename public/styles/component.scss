@@ -834,7 +834,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 /* <UxGroup> Role(Input) Default */
 .ux-group.input {--gap: 0rem;}
-.ux-group.input {display: flex; flex-direction: column; justify-content: center; position: relative; padding: 1.2rem 2rem; min-height: 8rem; border-radius: 1.6rem; box-shadow: var(--inset); transition: var(--inset-transition); transform: translateZ(0);}
+.ux-group.input {display: flex; flex-direction: column; justify-content: center; position: relative; padding: 1.2rem 2rem; border-radius: 1.6rem; box-shadow: var(--inset); transition: var(--inset-transition); transform: translateZ(0);}
 .ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; z-index: 2; top: 50%; left: 50%; padding: 1rem 1.8rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: 1.6rem; background-color: var(--background-default); font-weight: 700; font-size: 1.8rem; color: var(--text-disabled); transform: translate(-50%, -50%);}
 .ux-group.input .ux-group-label {display: flex; align-items: center; height: 2.4rem; font-weight: 500; font-size: 1.4rem; color: var(--text-muted);}
 .ux-group.input .ux-group-blend {display: flex; align-items: center; gap: .8rem; min-height: 3.2rem;}

@@ -8,6 +8,7 @@ import UxArticle from "@/components/layout/UxArticle";
 import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
+import UxInput from "@/components/base/UxInput";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
 import UxButton from "@/components/base/UxButton";
@@ -16,31 +17,57 @@ import data from '@/public/data/actor';
 
 export default function Home() {
 	const [preload, setPreload] = useState(true);
+	const [actorData, setActorData] = useState([]);
 	const [status, setStatus] = useState([]);
+	const [search, setSearch] = useState('');
 
 	const handleClick = (target) => {
 		setPreload(false);
 		setStatus(status.map((item, index) => index === target ? !item : item));
 	};
 
+	const handleSearch = (value) => {
+		setSearch(value);
+	};
+
 	useEffect(() => {
-		const initialStatus = new Array(data.length).fill(false);
-		setStatus(initialStatus);
+		const array = data.filter((item) => {
+			const actor = item.actor.filter((item) => {
+				return item.name.toLowerCase().includes(search.toLowerCase());
+			});
+
+			return actor.length && actor;
+		});
+
+		setActorData(array);
+	}, [search]);
+
+	useEffect(() => {
+		const status = new Array(actorData.length).fill(false);
+		setStatus(status);
+	}, [actorData]);
+
+	useEffect(() => {
+		setActorData(data);
 	}, []);
 
 	return (
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<h3>
-						<span>Actor</span>
-					</h3>
+					<UxInput
+						role="search"
+						placeholder="검색어를 입력하세요"
+						clear
+						onClear={handleSearch}
+						onSearch={handleSearch}
+					/>
 				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
 						<UxGroup className="actor col3">
 							{
-								data.map((item, index) => (
+								actorData.map((item, index) => (
 									<UxCard
 										key={index}
 										className={classnames('actor', {
