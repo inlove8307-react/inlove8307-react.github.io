@@ -110,14 +110,14 @@ export default function Home() {
 												</dt>
 												<dd>
 													{
-														item.link.map((link, linkIndex) => (
+														item.movie.map((movie, linkIndex) => (
 															<a
 																key={linkIndex}
-																href={link}
+																href={movie}
 																className="actor-link"
 																target="_blank"
 															>
-																{link.split('/').pop().toUpperCase()}
+																{movie.split('/').pop().toUpperCase()}
 															</a>
 														))
 													}
