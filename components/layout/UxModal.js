@@ -71,7 +71,6 @@ const UxModal = ({ ref, ...props }) => {
 								ref={backdropRef}
 								role="presentation"
 								className={`${baseClassName}-backdrop`}
-								style={{ willChange: 'opacity' }}
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}
@@ -81,7 +80,6 @@ const UxModal = ({ ref, ...props }) => {
 							<motion.div
 								ref={baseRef}
 								className={`${baseClassName}-base`}
-								style={{ willChange: 'transform, opacity' }}
 								variants={current}
 								initial="initial"
 								animate="animate"
