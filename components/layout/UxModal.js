@@ -43,9 +43,9 @@ const UxModal = ({ ref, ...props }) => {
 			exit: { opacity: 0, translateY: '100%' },
 		},
 		default: {
-			initial: { opacity: 0 },
-			animate: { opacity: 1 },
-			exit: { opacity: 0 },
+			initial: { opacity: 0, scale: .99 },
+			animate: { opacity: 1, scale: 1 },
+			exit: { opacity: 0, scale: .99 },
 		},
 	};
 
