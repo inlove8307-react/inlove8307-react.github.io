@@ -32,6 +32,11 @@ const UxModal = ({ ref, ...props }) => {
 	}, []);
 
 	const variants = {
+		backdrop: {
+			initial: { backgroundColor: 'rgba(0, 0, 0, 0)' },
+			animate: { backgroundColor: 'rgba(0, 0, 0, .7)' },
+			exit: { backgroundColor: 'rgba(0, 0, 0, 0)' },
+		},
 		center: {
 			initial: { opacity: 0, scale: .85 },
 			animate: { opacity: 1, scale: 1 },
@@ -43,9 +48,9 @@ const UxModal = ({ ref, ...props }) => {
 			exit: { opacity: 0, translateY: '100%' },
 		},
 		default: {
-			initial: { opacity: 0, scale: .99 },
-			animate: { opacity: 1, scale: 1 },
-			exit: { opacity: 0, scale: .99 },
+			initial: { opacity: 0, filter: 'opacity(0%)' },
+			animate: { opacity: 1, filter: 'opacity(100%)' },
+			exit: { opacity: 0, filter: 'opacity(0%)' },
 		},
 	};
 
@@ -54,12 +59,14 @@ const UxModal = ({ ref, ...props }) => {
 			<AnimatePresence mode="sync">
 				{rootContext.modals.map(({id, Component, props, onClose}) => {
 					const caseClassName = classnames(baseClassName, props.baseClassName, props.caseClassName);
-					const transition = { duration: .15, ease: 'easeInOut' };
+					const transition = { duration: .25, ease: 'easeInOut' };
 					let current = variants['default'];
 
-					if (props.baseClassName.includes('center')) current = variants['center'];
-					if (props.baseClassName.includes('bottom')) current = variants['bottom'];
-					if (props.baseClassName.includes('dropdown')) transition.duration = 0;
+					switch (props.baseClassName) {
+						case 'center': current = variants['center']; break;
+						case 'bottom': current = variants['bottom']; break;
+						case 'dropdown': transition.duration = 0; break;
+					}
 
 					return (
 						<div
@@ -71,9 +78,10 @@ const UxModal = ({ ref, ...props }) => {
 								ref={backdropRef}
 								role="presentation"
 								className={`${baseClassName}-backdrop`}
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								exit={{ opacity: 0 }}
+								variants={variants['backdrop']}
+								initial="initial"
+								animate="animate"
+								exit="exit"
 								transition={transition}
 								onClick={onClose}
 							/>
