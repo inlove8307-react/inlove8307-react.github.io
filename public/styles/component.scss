@@ -379,6 +379,11 @@ h3 {font-size: 2.8rem;}
 h4 {font-size: 2.4rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
+/* Heading Size (Mobile) */
+html.mobile h3 {font-size: 2.4rem;}
+html.mobile h4 {font-size: 2rem;}
+html.mobile h5 {font-size: 1.8rem;}
+html.mobile h6 {font-size: 1.4rem;}
 /* Heading Flex */
 h3.row,
 h4.row,
@@ -392,11 +397,6 @@ h3.column,
 h4.column,
 h5.column,
 h6.column {display: flex;}
-/* Heading (Mobile) */
-html.mobile h3 {font-size: 2.4rem;}
-html.mobile h4 {font-size: 2rem;}
-html.mobile h5 {font-size: 1.8rem;}
-html.mobile h6 {font-size: 1.4rem;}
 
 
 
@@ -1394,48 +1394,21 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
+/* Count */
+.ux-group.count p {font-size: 1.8rem;}
+.ux-group.count em {font-weight: 700;}
+/* Count (Mobile) */
+html.mobile .ux-group.count {display: none;}
 /* Actor */
 .ux-card.actor {overflow: hidden;}
 .ux-card.actor .ux-card-base {padding: 2rem;}
 .ux-card.actor dl {width: 100%;}
 .ux-card.actor dt {display: flex; flex-wrap: wrap; align-items: center; gap: 0 .8rem; position: relative; padding: 0 3.6rem 1.6rem 0; width: 100%; box-shadow: 0 .1rem 0 0 var(--border-default);}
-.ux-card.actor .actor-name {position: relative; width: 100%; min-height: 3.6rem; font-weight: 700; font-size: 2.4rem;}
-.ux-card.actor .actor-av123 {width: 100%; color: var(--text-default);}
-.ux-card.actor .actor-avdbs {width: 100%; color: var(--text-red);}
-.ux-card.actor .actor-trans {position: absolute; top: 0; right: 0; width: 3.6rem; height: 3.6rem;}
+.ux-card.actor .actor-name {position: relative; width: 100%; min-height: 3.6rem; font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
 .ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
 .ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
-/* Actor Transition */
-.ux-card.actor .actor-name {overflow: hidden;}
-.ux-card.actor .actor-av123 {position: absolute; top: 0; left: 0; transform: translateY(0%); transition: transform 0.5s ease-in-out;}
-.ux-card.actor .actor-avdbs {position: absolute; top: 0; left: 0; transform: translateY(100%); transition: transform 0.5s ease-in-out;}
-.ux-card.actor.swap .actor-av123 {transform: translateY(-100%);}
-.ux-card.actor.swap .actor-avdbs {transform: translateY(0%);}
-/* Actor Animation */
-.ux-card.actor .actor-trans i.icon.reset {
-	animation-name: actor-trans;
-	animation-duration: .5s;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in-out;
-}
-.ux-card.actor.swap .actor-trans i.icon.reset {
-	animation-name: actor-trans-redo;
-	animation-duration: .5s;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in-out;
-}
-@keyframes actor-trans {
-	0% {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
-}
-@keyframes actor-trans-redo {
-	0% {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
-}
-.ux-card.actor.preload * {animation-duration: 0s!important; transition: none!important;}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor dt {padding-right: 3rem;}
 html.mobile .ux-card.actor .actor-name {min-height: 3rem; font-size: 2rem;}
-html.mobile .ux-card.actor .actor-trans {width: 3rem; height: 3rem;}
 html.mobile .ux-card.actor .actor-link {padding: 0 1.6rem; height: 3.2rem; border-radius: 1.6rem; font-size: 1.4rem;}

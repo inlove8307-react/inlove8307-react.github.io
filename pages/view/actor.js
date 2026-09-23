@@ -17,19 +17,11 @@ import UxButton from "@/components/base/UxButton";
 import data from '@/public/data/actor';
 
 export default function Home() {
-	const [preload, setPreload] = useState(true);
 	const [actorData, setActorData] = useState([]);
 	const [filterData, setFilterData] = useState([]);
-	const [statusData, setStatusData] = useState([]);
 	const [search, setSearch] = useState('');
 
-	const handleClick = ({id, swap}) => {
-		setPreload(false);
-		setStatusData(statusData.map(item => item.id === id ? { ...item, swap: !swap } : item))
-	};
-
 	const handleSearch = (value) => {
-		setPreload(true);
 		setSearch(value);
 	};
 
@@ -55,10 +47,6 @@ export default function Home() {
 		}
 	}, [actorData]);
 
-	useEffect(() => {
-		setStatusData(filterData.map(item => ({ id: item.id, swap: false })));
-	}, [filterData]);
-
 	return (
 		<UxSection>
 			<UxArticle className="h3">
@@ -66,66 +54,55 @@ export default function Home() {
 					<UxInput
 						role="search"
 						placeholder="검색어를 입력하세요"
+						value={search}
 						clear
-						onClear={handleSearch}
-						onSearch={handleSearch}
+						onChange={handleSearch}
 					/>
 				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
+						<UxGroup className="count">
+							<p>총 <em>{filterData.length}</em> 건</p>
+						</UxGroup>
 						<UxGroup className="actor col3">
 							{
-								filterData.map((item) => {
-									const status = statusData.filter(status => status.id === item.id)[0];
-
-									return (
-										<UxCard
-											key={item.id}
-											className={classnames('actor', {
-												preload,
-												swap: status?.swap,
-											})}
-										>
-											<dl>
-												<dt>
-													{
-														item.actor.map((actor, index) => (
-															<a
-																key={index}
-																href={status?.swap ? actor.avdbs.link : actor.link}
-																className="actor-name"
-																target="_blank"
-															>
-																<span className="actor-av123 ellipsis">{actor.name}</span>
-																<span className="actor-avdbs ellipsis">{actor.avdbs.name}</span>
-															</a>
-														))
-													}
-													<UxButton
-														className="actor-trans"
-														onClick={() => handleClick(status)}
-													>
-														<i className="icon reset" />
-													</UxButton>
-												</dt>
-												<dd>
-													{
-														item.movie.map((movie, linkIndex) => (
-															<a
-																key={linkIndex}
-																href={movie}
-																className="actor-link"
-																target="_blank"
-															>
-																{movie.split('/').pop().toUpperCase()}
-															</a>
-														))
-													}
-												</dd>
-											</dl>
-										</UxCard>
-									)
-								})
+								filterData.map((item) => (
+									<UxCard
+										key={item.id}
+										className="actor"
+									>
+										<dl>
+											<dt>
+												{
+													item.actor.map((actor, index) => (
+														<a
+															key={index}
+															href={actor.link}
+															className="actor-name"
+															target="_blank"
+														>
+															<span className="ellipsis">{actor.name}</span>
+														</a>
+													))
+												}
+											</dt>
+											<dd>
+												{
+													item.movie.map((movie, linkIndex) => (
+														<a
+															key={linkIndex}
+															href={movie}
+															className="actor-link"
+															target="_blank"
+														>
+															{movie.split('/').pop().toUpperCase()}
+														</a>
+													))
+												}
+											</dd>
+										</dl>
+									</UxCard>
+								))
 							}
 						</UxGroup>
 					</UxContent>

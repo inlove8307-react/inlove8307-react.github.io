@@ -574,7 +574,7 @@ const Search = ({ ref, ...props }) => {
 
 	const handleSearch = () => {
 		props.onSearch && props.onSearch(value);
-	}
+	};
 
 	useEffect(() => {
 		props.onChange && props.onChange(value);
@@ -601,6 +601,7 @@ const Search = ({ ref, ...props }) => {
 				readonly={props.readonly}
 				disabled={props.disabled}
 				onChange={(event) => setValue(event.target.value)}
+				onKeyDown={handleSearch}
 			/>
 			{
 				props.clear && value && !props.readonly && !props.disabled &&
