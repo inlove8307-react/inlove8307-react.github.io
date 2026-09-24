@@ -253,7 +253,7 @@ const data = [
 			'https://missav123.com/ko/adn-366',
 			'https://missav123.com/ko/atid-456',
 			'https://missav123.com/ko/adn-298',
-			'https://missav123.com/ko/shkd-924-reducing-mosaic',
+			'https://missav123.com/ko/shkd-924',
 			'https://missav123.com/ko/adn-277',
 			'https://missav123.com/ko/adn-251',
 			'https://missav123.com/ko/rbd-960',
@@ -2145,14 +2145,25 @@ const data = [
 	{
 		actor: [
 			{
-				name: '',
-				link: '',
+				name: 'Yui Tenma',
+				link: 'https://www.avdbs.com/menu/actor.php?actor_idx=3830',
 			},
 		],
 		movie: [
 			'',
 		],
 	},
+	// {
+	// 	actor: [
+	// 		{
+	// 			name: '',
+	// 			link: '',
+	// 		},
+	// 	],
+	// 	movie: [
+	// 		'',
+	// 	],
+	// },
 ];
 
 export default data;
