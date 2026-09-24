@@ -7,50 +7,6 @@ import classnames from 'classnames';
 /* COMPONENT */
 
 /**
- * <Card>
- * [props]
- * className(String): 추가 클래스
- * type(String): 유형('radio', 'checkbox')
- * selected(String): 선택 값
- * [event]
- * onChange(Func): 선택 변경 이벤트 콜백
- */
-
-const Card = ({ ref, ...props }) => {
-	const [selected, setSelected] = useState(props.selected || null);
-
-	const handleChange = (value) => {
-		setSelected(value);
-	};
-
-	useEffect(() => {
-		props.onChange && props.onChange(selected);
-	}, [selected]);
-
-	useEffect(() => {
-		if (typeof props.selected === 'string') {
-			setSelected(props.selected);
-		}
-	}, [props.selected]);
-
-	return (
-		<div className={props.caseClassName}>
-			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-					index,
-					selected,
-					type: props.type,
-					disabled: props.disabled,
-					randomChar: getRandomChar(),
-					onChange: handleChange
-				}))
-			}
-		</div>
-	);
-};
-
-/**
  * <Collapse>
  * [props]
  * className(String): 추가 클래스
@@ -327,8 +283,6 @@ const UxGroup = ({ ref, ...props }) => {
 		});
 
 		switch (props.role) {
-			case 'card':
-				return <Card ref={ref} {...props} />;
 			case 'collapse':
 				return <Collapse ref={ref} {...props} />;
 			case 'radio':

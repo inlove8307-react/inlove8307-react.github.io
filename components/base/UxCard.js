@@ -4,39 +4,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 
 /**
- * <UxCard>
+ * <Radio>
  * [props]
- * className(String): 추가 클래스
- * type: 유형 ('checkbox', 'radio', 'button')
- * checked(Boolean): 체크 여부
- * selected(String): 선택 값
- * disabled(Boolean): 비활성화 여부
+ *
  * [event]
- * onClick(Func): 클릭 이벤트 콜백
- * onChange(Func): 선택 변경 이벤트 콜백
+ *
  */
 
-const UxCard = ({ ref, ...props }) => {
-	const baseClassName = 'ux-card';
-	const caseClassName = classnames(baseClassName, props.className, { disabled: props.disabled });
-	const [checked, setChecked] = useState(props.checked || false);
+const Radio = ({ ref, ...props }) => {
 	const [name, setName] = useState(props.name || '');
-	const labelRef = useRef();
+	const [checked, setChecked] = useState(props.checked || false);
 
-	const handleChange = (event) => {
-		switch (props.type) {
-			case 'checkbox':
-				return setChecked(event.target.checked);
-			case 'radio':
-				return props.onChange && props.onChange(props.value);
-		}
-	};
-
-	const handleClick = () => {
-		if (!props.type) return;
-
-		labelRef.current?.click();
-		props.onClick && props.onClick();
+	const handleChange = () => {
+		props.onChange && props.onChange(props.value);
 	};
 
 	useEffect(() => {
@@ -46,47 +26,166 @@ const UxCard = ({ ref, ...props }) => {
 	}, [props.randomChar]);
 
 	useEffect(() => {
-		if (props.type === 'radio') {
-			setChecked(props.value === props.selected);
-		}
+		setChecked(props.value === props.selected);
 	}, [props.selected]);
 
+	return (
+		<label
+			ref={ref}
+			className={classnames(props.caseClassName, {
+				checked: checked,
+				disabled: props.disabled,
+			})}
+			style={props.style}
+		>
+			<input
+				type="radio"
+				className={`${props.baseClassName}-input`}
+				name={name}
+				value={props.value}
+				checked={checked}
+				disabled={props.disabled}
+				onChange={handleChange}
+			/>
+			<div className={`${props.baseClassName}-base`}>
+				{props.children}
+			</div>
+		</label>
+	);
+};
+
+/**
+ * <Checkbox>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Checkbox = ({ ref, ...props }) => {
+	const [checked, setChecked] = useState(props.checked || false);
+
+	const handleChange = (event) => {
+		setChecked(event.target.checked);
+	};
+
 	useEffect(() => {
-		if (props.type === 'checkbox') {
-			props.onChange && props.onChange(checked);
-		}
+		props.onChange && props.onChange(checked);
 	}, [checked]);
+
+	useEffect(() => {
+		if (typeof props.checked === 'boolean') {
+			setChecked(props.checked);
+		}
+	}, [props.checked]);
+
+	return (
+		<label
+			ref={ref}
+			className={classnames(props.caseClassName, {
+				checked: checked,
+				disabled: props.disabled,
+			})}
+			style={props.style}
+		>
+			<input
+				type="checkbox"
+				className={`${props.baseClassName}-input`}
+				checked={checked}
+				disabled={props.disabled}
+				onChange={handleChange}
+			/>
+			<div className={`${props.baseClassName}-base`}>
+				{props.children}
+			</div>
+		</label>
+	);
+};
+
+/**
+ * <Button>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Button = ({ ref, ...props }) => {
+	const handleClick = (event) => {
+		props.onClick && props.onClick();
+	};
+
+	const handleKeyDown = (event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			handleClick();
+		}
+	};
 
 	return (
 		<div
 			ref={ref}
-			className={classnames(caseClassName, { checked })}
+			role="button"
+			tabIndex="0"
+			className={props.caseClassName}
+			style={props.style}
+			onClick={handleClick}
+			onKeyDown={handleKeyDown}
 		>
-			{(props.type === 'radio' || props.type === 'checkbox') &&
-				<label
-					ref={labelRef}
-					className={`${baseClassName}-label`}
-				>
-					<input
-						type={props.type}
-						className={`${baseClassName}-input`}
-						name={name}
-						value={props.value}
-						checked={checked}
-						disabled={props.disabled}
-						onChange={handleChange}
-					/>
-				</label>
-			}
-			<div
-				// type="button"
-				className={`${baseClassName}-base`}
-				onClick={handleClick}
-			>
+			<div className={`${props.baseClassName}-base`}>
 				{props.children}
 			</div>
 		</div>
 	);
+};
+
+/**
+ * <Default>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Default = ({ ref, ...props }) => {
+	return (
+		<div
+			ref={ref}
+			className={props.caseClassName}
+			style={props.style}
+		>
+			<div className={`${props.baseClassName}-base`}>
+				{props.children}
+			</div>
+		</div>
+	);
+};
+
+const UxCard = ({ ref, ...props }) => {
+	const baseClassName = 'ux-card';
+	const caseClassName = classnames(baseClassName, props.className, {
+		default: !props.role,
+		[`${props.role}`]: props.role,
+	});
+
+	const getSlot = () => {
+		Object.assign(props, {
+			baseClassName,
+			caseClassName,
+		});
+
+		switch (props.role) {
+			case 'radio':
+				return <Radio ref={ref} {...props} />;
+			case 'checkbox':
+				return <Checkbox ref={ref} {...props} />;
+			case 'button':
+				return <Button ref={ref} {...props} />;
+			default:
+				return <Default ref={ref} {...props} />;
+		};
+	};
+
+	return getSlot(props.role);
 };
 
 export default UxCard;

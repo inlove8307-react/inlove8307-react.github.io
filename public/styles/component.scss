@@ -160,6 +160,7 @@
 
 
 
+/* Web Font */
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 900;
@@ -169,7 +170,6 @@
 		url("/fonts/Pretendard-Black.subset.woff") format("woff"),
 		url("/fonts/Pretendard-Black.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 800;
@@ -179,7 +179,6 @@
 		url("/fonts/Pretendard-ExtraBold.subset.woff") format("woff"),
 		url("/fonts/Pretendard-ExtraBold.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 700;
@@ -189,7 +188,6 @@
 		url("/fonts/Pretendard-Bold.subset.woff") format("woff"),
 		url("/fonts/Pretendard-Bold.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 600;
@@ -199,7 +197,6 @@
 		url("/fonts/Pretendard-SemiBold.subset.woff") format("woff"),
 		url("/fonts/Pretendard-SemiBold.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 500;
@@ -209,7 +206,6 @@
 		url("/fonts/Pretendard-Medium.subset.woff") format("woff"),
 		url("/fonts/Pretendard-Medium.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 400;
@@ -219,7 +215,6 @@
 		url("/fonts/Pretendard-Regular.subset.woff") format("woff"),
 		url("/fonts/Pretendard-Regular.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 300;
@@ -229,7 +224,6 @@
 		url("/fonts/Pretendard-Light.subset.woff") format("woff"),
 		url("/fonts/Pretendard-Light.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 200;
@@ -239,7 +233,6 @@
 		url("/fonts/Pretendard-ExtraLight.subset.woff") format("woff"),
 		url("/fonts/Pretendard-ExtraLight.otf") format("opentype");
 }
-
 @font-face {
 	font-family: "Pretendard";
 	font-weight: 100;
@@ -299,32 +292,26 @@ input::-webkit-credentials-auto-fill-button {display: none !important; visibilit
 @media (max-width: 280px) {
 	html {font-size: 7.7px}
 }
-
 /* Media Query for Mobile Devices */
 @media (min-width: 281px) and (max-width: 320px) {
 	html {font-size: 8.8px}
 }
-
 /* Media Query for Mobile Devices */
 @media (min-width: 321px) and (max-width: 480px) {
 	html {}
 }
-
 /* Media Query for low resolution Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
 	html {}
 }
-
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
 	html {}
 }
-
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px){
 	html {}
 }
-
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
 	html {}
@@ -334,6 +321,7 @@ input::-webkit-credentials-auto-fill-button {display: none !important; visibilit
 
 
 
+/* Html, Next */
 html.modal {overflow: hidden; height: 100%; padding-right: var(--scrollbar-width);}
 #__next {display: flex; flex-direction: column; height: 100%;}
 
@@ -347,6 +335,11 @@ html.modal {overflow: hidden; height: 100%; padding-right: var(--scrollbar-width
 .fw600 {font-weight: 600rem;}
 .fw700 {font-weight: 700rem;}
 .fw800 {font-weight: 800rem;}
+
+
+
+
+
 /* Font Size */
 .fs10 {font-size: 1rem;}
 .fs12 {font-size: 1.2rem;}
@@ -384,6 +377,11 @@ html.mobile h3 {font-size: 2.4rem;}
 html.mobile h4 {font-size: 2rem;}
 html.mobile h5 {font-size: 1.8rem;}
 html.mobile h6 {font-size: 1.4rem;}
+
+
+
+
+
 /* Heading Flex */
 h3.row,
 h4.row,
@@ -397,6 +395,7 @@ h3.column,
 h4.column,
 h5.column,
 h6.column {display: flex;}
+
 
 
 
@@ -418,7 +417,7 @@ em.red {color: var(--text-red);}
 
 
 /* Ellipsis */
-.ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.ellipsis {overflow: hidden; display: inline-block; max-width: 100%; white-space: nowrap; text-overflow: ellipsis;}
 
 
 
@@ -563,6 +562,11 @@ html.mobile .ux-article.h6 {gap: 1.2rem;}
 .ux-article.h4 > .ux-subject {gap: 2.4rem;}
 .ux-article.h5 > .ux-subject {gap: 1.6rem;}
 .ux-article.h6 > .ux-subject {gap: 1.2rem;}
+/* <UxSubject> Gap (Mobile) */
+.ux-article.h3 > .ux-subject {gap: 2.4rem;}
+.ux-article.h4 > .ux-subject {gap: 2rem;}
+.ux-article.h5 > .ux-subject {gap: 1.6rem;}
+.ux-article.h6 > .ux-subject {gap: 1.2rem;}
 
 
 
@@ -585,6 +589,11 @@ html.mobile .ux-article.h6 {gap: 1.2rem;}
 /* <UxContent> Gap */
 .ux-article.h3 > .ux-content {gap: 3.2rem;}
 .ux-article.h4 > .ux-content {gap: 2.4rem;}
+.ux-article.h5 > .ux-content {gap: 1.6rem;}
+.ux-article.h6 > .ux-content {gap: 1.2rem;}
+/* <UxContent> Gap (Mobile) */
+.ux-article.h3 > .ux-content {gap: 2.4rem;}
+.ux-article.h4 > .ux-content {gap: 2rem;}
 .ux-article.h5 > .ux-content {gap: 1.6rem;}
 .ux-article.h6 > .ux-content {gap: 1.2rem;}
 
@@ -721,11 +730,6 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.col4 {--col: 4;}
 .ux-group.col5 {--col: 5;}
 .ux-group[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
-/* <UxGroup> Default Grow */
-// .ux-group.default > * {flex-shrink: 0;}
-// .ux-group.default > .small {width: calc(100% / 3);}
-// .ux-group.default:not([class*=col]) > :not(.small) {flex-grow: 1;}
-// .ux-group.default.auto:not([class*=col]) > :not(.small) {flex-grow: initial;}
 
 
 
@@ -1076,22 +1080,12 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 /* <UxCard> */
 .ux-card {--radius: 2.4rem;}
-.ux-card {position: relative; border-radius: var(--radius); box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.08);}
-.ux-card-base {display: flex; height: 100%; padding: 1.2rem; width: 100%; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
-.ux-card-label {position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
+.ux-card-base {position: relative; padding: 2rem; width: 100%; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-card-base::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: var(--radius); box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.08); pointer-events: none;}
 .ux-card-input[type=radio],
 .ux-card-input[type=checkbox] {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background-color: transparent; opacity: 0; z-index: -1;}
 /* <UxCard> Checked */
-.ux-card.checked {box-shadow: var(--shadow);}
-.ux-card.checked .u x-card-base {box-shadow: var(--inset-color-focus);}
-
-
-
-
-
-/* <UxGroup> Card */
-// .ux-group.card {--col: 1; --gap: .8rem;}
-// .ux-group.card {display: flex; flex-wrap: wrap; gap: var(--gap);}
+.ux-card.checked .ux-card-base {box-shadow: var(--inset-focus);}
 
 
 
@@ -1400,15 +1394,16 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* Count (Mobile) */
 html.mobile .ux-group.count {display: none;}
 /* Actor */
-.ux-card.actor {overflow: hidden;}
-.ux-card.actor .ux-card-base {padding: 2rem;}
-.ux-card.actor dl {width: 100%;}
-.ux-card.actor dt {display: flex; flex-wrap: wrap; align-items: center; gap: 0 .8rem; position: relative; padding: 0 3.6rem 1.6rem 0; width: 100%; box-shadow: 0 .1rem 0 0 var(--border-default);}
-.ux-card.actor .actor-name {position: relative; width: 100%; min-height: 3.6rem; font-weight: 700; font-size: 2.4rem; color: var(--text-default);}
-.ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 1.6rem;}
+.ux-card.actor dl {overflow: hidden;}
+.ux-card.actor dt {padding-bottom: 2rem;}
+.ux-card.actor .actor-name {font-weight: 700; font-size: 2.4rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor dd {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 2rem; box-shadow: 0 -.1rem 0 0 var(--border-default);}
 .ux-card.actor .actor-link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor.col3 {--col: 1;}
-html.mobile .ux-card.actor dt {padding-right: 3rem;}
-html.mobile .ux-card.actor .actor-name {min-height: 3rem; font-size: 2rem;}
+html.mobile .ux-card.actor {--radius: 1.6rem;}
+html.mobile .ux-card.actor .ux-card-base {padding: 1.6rem;}
+html.mobile .ux-card.actor dt {padding-bottom: 1.6rem;}
+html.mobile .ux-card.actor .actor-name {font-size: 2rem;}
+html.mobile .ux-card.actor dd {padding-top: 1.6rem;}
 html.mobile .ux-card.actor .actor-link {padding: 0 1.6rem; height: 3.2rem; border-radius: 1.6rem; font-size: 1.4rem;}
