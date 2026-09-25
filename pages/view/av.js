@@ -13,7 +13,7 @@ import UxInput from "@/components/base/UxInput";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
 /* DATA */
-import data from '@/public/data/actor';
+import data from '@/public/data/av';
 
 export default function Home() {
 	const [actorData, setActorData] = useState([]);
@@ -26,7 +26,11 @@ export default function Home() {
 
 	useEffect(() => {
 		const array = actorData.filter((item) => {
-			return item.name.en.toLowerCase().includes(search.toLowerCase());
+			const actor = item.actor.filter((item) => {
+				return item.name.toLowerCase().includes(search.toLowerCase());
+			});
+
+			return actor.length && actor;
 		});
 
 		setFilterData(array);
@@ -34,7 +38,7 @@ export default function Home() {
 
 	useEffect(() => {
 		if (!actorData.length) {
-			setActorData(data);
+			setActorData(data.map(item => ({ ...item, id: getRandomChar() })));
 		}
 
 		if (actorData.length) {
@@ -59,56 +63,41 @@ export default function Home() {
 						<UxGroup className="count">
 							<p>총 <em>{filterData.length}</em> 건</p>
 						</UxGroup>
-						<UxGroup className="actor col3">
+						<UxGroup className="av col3">
 							{
 								filterData.map((item) => (
 									<UxCard
 										key={item.id}
-										className="actor"
+										className="av"
 									>
 										<dl>
-											<dt className="subject">
-												<a
-													className="name"
-													href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-													target="_blank"
-												>
-													{item.name.en}
-												</a>
+											<dt>
+												{
+													item.actor.map((actor, index) => (
+														<a
+															key={index}
+															href={actor.link}
+															className="actor-name"
+															target="_blank"
+														>
+															<span className="ellipsis">{actor.name}</span>
+														</a>
+													))
+												}
 											</dt>
-											<dd className="details">
-												<dl className="define">
-													<dt>id</dt>
-													<dd>{item.id}</dd>
-												</dl>
-												<dl className="define">
-													<dt>name</dt>
-													<dd>
-														<p>{item.name.kr}</p>
-														<p>{item.name.en}</p>
-														<p>{item.name.cn}</p>
-													</dd>
-												</dl>
-												<dl className="define">
-													<dt>birth</dt>
-													<dd>{item.birth}</dd>
-												</dl>
-												<dl className="define">
-													<dt>height</dt>
-													<dd>{item.height}</dd>
-												</dl>
-												<dl className="define">
-													<dt>size</dt>
-													<dd>{item.size.bust} / {item.size.waist} / {item.size.hips}</dd>
-												</dl>
-												<dl className="define">
-													<dt>bra</dt>
-													<dd>{item.bra}</dd>
-												</dl>
-												<dl className="define">
-													<dt>debut</dt>
-													<dd>{item.debut}</dd>
-												</dl>
+											<dd>
+												{
+													item.movie.map((movie, linkIndex) => (
+														<a
+															key={linkIndex}
+															href={movie}
+															className="actor-link"
+															target="_blank"
+														>
+															{movie.split('/').pop().toUpperCase()}
+														</a>
+													))
+												}
 											</dd>
 										</dl>
 									</UxCard>
