@@ -1417,7 +1417,7 @@ html.mobile .ux-card.av dd.details .link {padding: 0 1.6rem; height: 3.2rem; bor
 .ux-card.actor dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 .ux-card.actor dl.define:has(dd:empty) {display: none;}
 .ux-card.actor dl.define.name dd {display: flex; flex-direction: column;}
-.ux-card.actor dl.define.size dd span:empty {display: none;}
+.ux-card.actor dl.define.birth dd span + span::before {content: '/';}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor {row-gap: 2rem;}

@@ -22,6 +22,22 @@ export default function Home() {
 		setSearch(value);
 	};
 
+	const getAge = (date) => {
+		const today = new Date();
+		const birth = new Date(date.replace(/\./g, '-'));
+		const todayYear = today.getFullYear();
+		const birthYear = birth.getFullYear();
+		const korean = todayYear - birthYear + 1;
+		const diff = today.getMonth() - birth.getMonth();
+		let age = todayYear - birthYear;
+
+		if (diff < 0 || (diff === 0 && today.getDate() < birth.getDate())) {
+			age--;
+		}
+
+		return { age, korean };
+	};
+
 	useEffect(() => {
 		const array = actorData.filter((item) => {
 			return item.name.en.toLowerCase().includes(search.toLowerCase());
@@ -59,75 +75,83 @@ export default function Home() {
 						</UxGroup>
 						<UxGroup className="actor col3">
 							{
-								filterData.map((item) => (
-									<UxCard
-										key={item.id}
-										className="actor"
-									>
-										<dl>
-											<dt className="subject">
-												<a
-													className="name"
-													href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-													target="_blank"
-												>
-													{item.name.en}
-												</a>
-											</dt>
-											<dd className="details">
-												<dl className="define column">
-													<dt>title</dt>
-													<dd className="ellipsis">
-														{item.title}
-													</dd>
-												</dl>
-												<dl className="define column">
-													<dt>description</dt>
-													<dd className="ellipsis">
-														{item.desc}
-													</dd>
-												</dl>
-												{/* <dl className="define">
-													<dt>id</dt>
-													<dd>{item.id}</dd>
-												</dl> */}
-												<dl className="define name">
-													<dt>name</dt>
-													<dd>
-														<span>{item.name.kr}</span>
-														<span>{item.name.en}</span>
-														<span>{item.name.cn}</span>
-														<span>{item.name.other}</span>
-													</dd>
-												</dl>
-												<dl className="define">
-													<dt>birth</dt>
-													<dd>{item.birth}</dd>
-												</dl>
-												<dl className="define">
-													<dt>height</dt>
-													<dd>{item.height}</dd>
-												</dl>
-												<dl className="define size">
-													<dt>size</dt>
-													<dd>
-														{item.size.bust && <span>{item.size.bust}</span>}
-														{item.size.waist && <span>{item.size.waist}</span>}
-														{item.size.hips && <span>{item.size.hips}</span>}
-													</dd>
-												</dl>
-												<dl className="define">
-													<dt>bra</dt>
-													<dd>{item.bra}</dd>
-												</dl>
-												<dl className="define">
-													<dt>debut</dt>
-													<dd>{item.debut}</dd>
-												</dl>
-											</dd>
-										</dl>
-									</UxCard>
-								))
+								filterData.map((item) => {
+									const { age, korean } = getAge(item.birth);
+
+									return (
+										<UxCard
+											key={item.id}
+											className="actor"
+										>
+											<dl>
+												<dt className="subject">
+													<a
+														className="name"
+														href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
+														target="_blank"
+													>
+														{item.name.en}
+													</a>
+												</dt>
+												<dd className="details">
+													<dl className="define column">
+														<dt>title</dt>
+														<dd className="ellipsis">
+															{item.title}
+														</dd>
+													</dl>
+													<dl className="define column">
+														<dt>description</dt>
+														<dd className="ellipsis">
+															{item.desc}
+														</dd>
+													</dl>
+													{/* <dl className="define">
+														<dt>id</dt>
+														<dd>{item.id}</dd>
+													</dl> */}
+													<dl className="define name">
+														<dt>name</dt>
+														<dd>
+															<span>{item.name.kr}</span>
+															<span>{item.name.en}</span>
+															<span>{item.name.cn}</span>
+															<span>{item.name.other}</span>
+														</dd>
+													</dl>
+													<dl className="define birth">
+														<dt>birth</dt>
+														<dd>
+															{item.birth && <span>{item.birth}</span>}
+															{item.birth && <span>{korean}</span>}
+															{item.birth && <span>{age}</span>}
+														</dd>
+													</dl>
+													<dl className="define">
+														<dt>height</dt>
+														<dd>{item.height}</dd>
+													</dl>
+													<dl className="define size">
+														<dt>size</dt>
+														<dd>
+															{item.size.bust && <span>{item.size.bust}</span>}
+															{item.size.waist && <span>{item.size.waist}</span>}
+															{item.size.hips && <span>{item.size.hips}</span>}
+														</dd>
+													</dl>
+													<dl className="define">
+														<dt>bra</dt>
+														<dd>{item.bra}</dd>
+													</dl>
+													<dl className="define">
+														<dt>debut</dt>
+														<dd>{item.debut}</dd>
+													</dl>
+												</dd>
+											</dl>
+										</UxCard>
+									);
+								})
 							}
 						</UxGroup>
 					</UxContent>
