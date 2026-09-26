@@ -136,7 +136,7 @@
 	/* FONT */
 	--font-family: "Pretendard", "AppleGothicNeoSD", "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", "Droid sans", "Malgun Gothic", "맑은 고딕", "Helvetica", "Dotum", "돋움", "sans-serif";
 	/* SPACE */
-	--space: 2rem;
+	--space: 1.6rem;
 	--space-minus: calc(var(--space) * -1);
 	/* Header */
 	--header: 5.6rem;
@@ -1400,8 +1400,11 @@ html.mobile .ux-group.count {display: none;}
 .ux-card.av dd.details {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 2.4rem; box-shadow: 0 -.1rem 0 0 var(--border-default);}
 .ux-card.av dd.details .link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 /* Av (Mobile) */
+html.mobile .ux-group.av {row-gap: 2rem;}
 html.mobile .ux-group.av.col3 {--col: 1;}
+html.mobile .ux-card.av dt.subject {padding-bottom: 1.6rem;}
 html.mobile .ux-card.av dt.subject .name {font-size: 2rem;}
+html.mobile .ux-card.av dd.details {padding-top: 2rem;}
 html.mobile .ux-card.av dd.details .link {padding: 0 1.6rem; height: 3.2rem; border-radius: 1.6rem; font-size: 1.4rem;}
 /* Actor */
 .ux-card.actor dt.subject {padding-bottom: 2rem;}
@@ -1417,6 +1420,7 @@ html.mobile .ux-card.av dd.details .link {padding: 0 1.6rem; height: 3.2rem; bor
 .ux-card.actor dl.define.size dd span:empty {display: none;}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
 /* Actor (Mobile) */
+html.mobile .ux-group.actor {row-gap: 2rem;}
 html.mobile .ux-group.actor.col3 {--col: 1;}
 html.mobile .ux-card.actor dt.subject {padding-bottom: 1.6rem;}
 html.mobile .ux-card.actor dt.subject a.name {font-size: 2rem;}
@@ -1436,6 +1440,7 @@ html.mobile .ux-card.actor dd.details {padding-top: 2rem;}
 .ux-card.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
 .ux-card.movie a.category {font-size: 1.6rem; color: var(--text-blue);}
 /* Movie (Mobile) */
+html.mobile .ux-group.movie {row-gap: 2rem;}
 html.mobile .ux-group.movie.col3 {--col: 1;}
 html.mobile .ux-card.movie dt.subject {padding-bottom: 1.6rem;}
 html.mobile .ux-card.movie dt.subject a.name {font-size: 2rem;}
