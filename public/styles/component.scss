@@ -1436,8 +1436,10 @@ html.mobile .ux-card.actor dd.details {padding-top: 2rem;}
 .ux-card.movie dl.define.column {flex-direction: column; gap: .2rem;}
 .ux-card.movie dl.define.column dd {text-align: left;}
 .ux-card.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.movie ul.cast li.bl.pound {color: var(--text-muted);}
 .ux-card.movie a.cast {font-size: 1.6rem; color: var(--text-red);}
 .ux-card.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.movie ul.category li.bl.pound {color: var(--text-muted);}
 .ux-card.movie a.category {font-size: 1.6rem; color: var(--text-blue);}
 /* Movie (Mobile) */
 html.mobile .ux-group.movie {row-gap: 2rem;}

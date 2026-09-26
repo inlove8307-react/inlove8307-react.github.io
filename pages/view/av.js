@@ -79,7 +79,7 @@ export default function Home() {
 															className="name"
 															target="_blank"
 														>
-															<span className="ellipsis">{actor.name}</span>
+															{actor.name}
 														</a>
 													))
 												}
