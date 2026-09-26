@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getRandomChar } from "@/utils/core";
-import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -77,16 +75,29 @@ export default function Home() {
 												</a>
 											</dt>
 											<dd className="details">
-												<dl className="define">
+												<dl className="define column">
+													<dt>title</dt>
+													<dd className="ellipsis">
+														{item.title}
+													</dd>
+												</dl>
+												<dl className="define column">
+													<dt>description</dt>
+													<dd className="ellipsis">
+														{item.desc}
+													</dd>
+												</dl>
+												{/* <dl className="define">
 													<dt>id</dt>
 													<dd>{item.id}</dd>
-												</dl>
-												<dl className="define">
+												</dl> */}
+												<dl className="define name">
 													<dt>name</dt>
 													<dd>
-														<p>{item.name.kr}</p>
-														<p>{item.name.en}</p>
-														<p>{item.name.cn}</p>
+														<span>{item.name.kr}</span>
+														<span>{item.name.en}</span>
+														<span>{item.name.cn}</span>
+														<span>{item.name.other}</span>
 													</dd>
 												</dl>
 												<dl className="define">
@@ -97,9 +108,13 @@ export default function Home() {
 													<dt>height</dt>
 													<dd>{item.height}</dd>
 												</dl>
-												<dl className="define">
+												<dl className="define size">
 													<dt>size</dt>
-													<dd>{item.size.bust} / {item.size.waist} / {item.size.hips}</dd>
+													<dd>
+														{item.size.bust && <span>{item.size.bust}</span>}
+														{item.size.waist && <span>{item.size.waist}</span>}
+														{item.size.hips && <span>{item.size.hips}</span>}
+													</dd>
 												</dl>
 												<dl className="define">
 													<dt>bra</dt>

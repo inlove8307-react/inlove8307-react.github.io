@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getRandomChar } from "@/utils/core";
-import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -85,22 +83,22 @@ export default function Home() {
 													<dt>story</dt>
 													<dd className="ellipsis">{item.story}</dd>
 												</dl>
-												<dl className="define column">
+												{/* <dl className="define column">
 													<dt>producer</dt>
 													<dd className="ellipsis">{item.producer}</dd>
-												</dl>
-												<dl className="define column">
+												</dl> */}
+												{/* <dl className="define column">
 													<dt>publisher</dt>
 													<dd className="ellipsis">{item.publisher}</dd>
-												</dl>
-												<dl className="define column">
+												</dl> */}
+												{/* <dl className="define column">
 													<dt>series</dt>
 													<dd className="ellipsis">{item.series}</dd>
-												</dl>
-												<dl className="define column">
+												</dl> */}
+												{/* <dl className="define column">
 													<dt>director</dt>
 													<dd className="ellipsis">{item.director}</dd>
-												</dl>
+												</dl> */}
 												<dl className="define">
 													<dt>runtime</dt>
 													<dd>{item.runtime}</dd>
@@ -109,10 +107,10 @@ export default function Home() {
 													<dt>release</dt>
 													<dd>{item.release}</dd>
 												</dl>
-												<dl className="define">
+												{/* <dl className="define">
 													<dt>id</dt>
 													<dd>{item.id}</dd>
-												</dl>
+												</dl> */}
 												<ul className="list cast">
 													{
 														item.cast.map((item, index) => (
@@ -125,7 +123,7 @@ export default function Home() {
 																	href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
 																	target="_blank"
 																>
-																	<em className="red">{item.name}</em>
+																	{item.name}
 																</a>
 															</li>
 														))
@@ -143,7 +141,7 @@ export default function Home() {
 																	href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
 																	target="_blank"
 																>
-																	<em className="blue">{item.name}</em>
+																	{item.name}
 																</a>
 															</li>
 														))

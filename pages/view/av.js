@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { getRandomChar } from "@/utils/core";
-import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -71,13 +70,13 @@ export default function Home() {
 										className="av"
 									>
 										<dl>
-											<dt>
+											<dt className="subject">
 												{
 													item.actor.map((actor, index) => (
 														<a
 															key={index}
 															href={actor.link}
-															className="actor-name"
+															className="name"
 															target="_blank"
 														>
 															<span className="ellipsis">{actor.name}</span>
@@ -85,13 +84,13 @@ export default function Home() {
 													))
 												}
 											</dt>
-											<dd>
+											<dd className="details">
 												{
 													item.movie.map((movie, linkIndex) => (
 														<a
 															key={linkIndex}
 															href={movie}
-															className="actor-link"
+															className="link"
 															target="_blank"
 														>
 															{movie.split('/').pop().toUpperCase()}
