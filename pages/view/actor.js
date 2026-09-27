@@ -94,6 +94,7 @@ export default function Home() {
 														target="_blank"
 													>
 														<span>{item.name.en}</span>
+														<span className="count">{item.movie.length}</span>
 													</a>
 												</div>
 												<div slot="details">
@@ -115,7 +116,9 @@ export default function Home() {
 															<span>{item.name.kr}</span>
 															<span>{item.name.en}</span>
 															<span>{item.name.cn}</span>
-															<span>{item.name.other}</span>
+															{item.name.other.map((item, index) => (
+																<span key={index}>{item}</span>
+															))}
 														</dd>
 													</dl>
 													<dl className="define birth">
