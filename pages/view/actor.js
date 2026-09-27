@@ -95,7 +95,7 @@ export default function Home() {
 														target="_blank"
 													>
 														<span>{item.name.en}</span>
-														<i className="icon mask link orange x18" />
+														<i className="icon mask muted link x18" />
 													</a>
 													<span className="count">{item.movie.length}</span>
 												</div>
@@ -165,7 +165,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>{item.name}</span>
-															<i className="icon mask link orange x18" />
+															<i className="icon mask muted link x18" />
 														</a>
 														<a
 															className="name"
@@ -173,7 +173,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>123AV</span>
-															<i className="icon mask link orange x18" />
+															<i className="icon mask muted link x18" />
 														</a>
 														<a
 															className="name"
@@ -181,7 +181,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>MISSAV</span>
-															<i className="icon mask link orange x18" />
+															<i className="icon mask muted link x18" />
 														</a>
 													</div>
 													<div slot="details">

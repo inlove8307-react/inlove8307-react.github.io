@@ -1402,11 +1402,12 @@ html.mobile .ux-group.count {display: none;}
 /* Card Actor Collapse Actor */
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-content {flex-grow: 1;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary a.name {display: flex; align-items: center; gap: .2rem; font-weight: 700; font-size: 2rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.actor .ux-collapse.actor .ux-collapse-summary .count {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 2.8rem; height: 2.8rem; border-radius: 1.4rem; background-color: var(--background-subtle); font-weight: 500; font-size: 1.6rem; color: var(--text-red);}
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary .count {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 2.8rem; height: 2.8rem; border-radius: 1.4rem; background-color: var(--background-subtle); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-button {display: none;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Collapse Movie */
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {gap: 1.2rem;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary {gap: 3.2rem;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {flex-grow: 1; justify-content: space-between;}
 .ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .2rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
 .ux-card.actor .ux-collapse.movie .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Define */
