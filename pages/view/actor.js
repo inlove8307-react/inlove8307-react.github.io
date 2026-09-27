@@ -86,6 +86,7 @@ export default function Home() {
 										>
 											<UxCollapse
 												className="actor"
+												expanded
 											>
 												<div slot="summary">
 													<a

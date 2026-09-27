@@ -1399,6 +1399,7 @@ html.mobile .ux-group.count {display: none;}
 .ux-card.actor .ux-collapse .ux-collapse-details .ux-collapse-content {margin-top: 1.6rem; padding: 1.6rem; border-radius: 1.6rem; background-color: var(--background-muted);}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary a.name {display: flex; align-items: center; gap: .8rem; font-weight: 700; font-size: 2rem; line-height: 1; vertical-align: top; color: var(--text-default);}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary .count {display: flex; justify-content: center; align-items: center; font-weight: 600; font-size: 2rem; color: var(--text-muted);}
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-button {display: none;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 .ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {display: flex; align-items: center; gap: .4rem;}
 .ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .4rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
