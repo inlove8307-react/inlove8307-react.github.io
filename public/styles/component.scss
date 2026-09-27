@@ -1394,32 +1394,46 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.count em {font-weight: 700;}
 /* Count (Mobile) */
 html.mobile .ux-group.count {display: none;}
-/* Actor */
+/* Card Actor */
 .ux-card.actor .ux-card-base {display: flex; flex-direction: column; gap: 1.6rem; padding: 2rem;}
+/* Card Actor Collapse */
+.ux-card.actor .ux-collapse .ux-collapse-summary .ux-collapse-content {display: flex; align-items: center;}
 .ux-card.actor .ux-collapse .ux-collapse-details .ux-collapse-content {margin-top: 1.6rem; padding: 1.6rem; border-radius: 1.6rem; background-color: var(--background-muted);}
-.ux-card.actor .ux-collapse.actor .ux-collapse-summary a.name {display: flex; align-items: center; gap: .8rem; font-weight: 700; font-size: 2rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.actor .ux-collapse.actor .ux-collapse-summary .count {display: flex; justify-content: center; align-items: center; font-weight: 600; font-size: 2rem; color: var(--text-muted);}
+/* Card Actor Collapse Actor */
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-content {flex-grow: 1;}
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary a.name {display: flex; align-items: center; gap: .2rem; font-weight: 700; font-size: 2rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary .count {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 2.8rem; height: 2.8rem; border-radius: 1.4rem; background-color: var(--background-subtle); font-weight: 500; font-size: 1.6rem; color: var(--text-red);}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-button {display: none;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {display: flex; align-items: center; gap: .4rem;}
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .4rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name + a.name::before {content: '/';}
+/* Card Actor Collapse Movie */
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {gap: 1.2rem;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .2rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
 .ux-card.actor .ux-collapse.movie .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
+/* Card Actor Define */
 .ux-card.actor dl.define {display: flex; justify-content: space-between; gap: .8rem;}
 .ux-card.actor dl.define.column {flex-direction: column; gap: .2rem;}
 .ux-card.actor dl.define.column dd {text-align: left;}
 .ux-card.actor dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
 .ux-card.actor dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 .ux-card.actor dl.define:has(dd:empty) {display: none;}
+/* Card Actor Define Name */
 .ux-card.actor dl.define.name dd {display: flex; flex-direction: column;}
+/* Card Actor Define Birth */
+.ux-card.actor dl.define.birth dd {display: flex; gap: .4rem;}
+.ux-card.actor dl.define.birth dd span {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.birth dd span + span::before {content: '/';}
+/* Card Actor Define Size */
+.ux-card.actor dl.define.size dd {display: flex; gap: .4rem;}
+.ux-card.actor dl.define.size dd span {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
+/* Card Actor Cast */
 .ux-card.actor ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
 .ux-card.actor ul.cast li.bl.pound {color: var(--text-muted);}
 .ux-card.actor a.cast {font-size: 1.6rem; color: var(--text-red);}
+/* Card Actor Category */
 .ux-card.actor ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
 .ux-card.actor ul.category li.bl.pound {color: var(--text-muted);}
 .ux-card.actor a.category {font-size: 1.6rem; color: var(--text-blue);}
-/* Actor (Mobile) */
+/* Card Actor (Mobile) */
 html.mobile .ux-group.actor {row-gap: 2rem;}
 html.mobile .ux-group.actor.col3 {--col: 1;}

@@ -95,8 +95,9 @@ export default function Home() {
 														target="_blank"
 													>
 														<span>{item.name.en}</span>
-														<span className="count">{item.movie.length}</span>
+														<i className="icon mask link orange x18" />
 													</a>
+													<span className="count">{item.movie.length}</span>
 												</div>
 												<div slot="details">
 													<dl className="define column">
@@ -164,6 +165,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>{item.name}</span>
+															<i className="icon mask link orange x18" />
 														</a>
 														<a
 															className="name"
@@ -171,6 +173,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>123AV</span>
+															<i className="icon mask link orange x18" />
 														</a>
 														<a
 															className="name"
@@ -178,6 +181,7 @@ export default function Home() {
 															target="_blank"
 														>
 															<span>MISSAV</span>
+															<i className="icon mask link orange x18" />
 														</a>
 													</div>
 													<div slot="details">
