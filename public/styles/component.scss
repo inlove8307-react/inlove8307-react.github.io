@@ -1406,9 +1406,9 @@ html.mobile .ux-group.count {display: none;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-summary .ux-collapse-button {display: none;}
 .ux-card.actor .ux-collapse.actor .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Collapse Movie */
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary {gap: 3.2rem;}
-.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {flex-grow: 1; justify-content: space-between;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {gap: 1.6rem;}
 .ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .2rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary em.bl.dot {color: var(--text-disabled);}
 .ux-card.actor .ux-collapse.movie .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Define */
 .ux-card.actor dl.define {display: flex; justify-content: space-between; gap: .8rem;}
