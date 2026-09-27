@@ -10,8 +10,9 @@ import UxContent from "@/components/layout/UxContent";
 import UxInput from "@/components/base/UxInput";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
+import UxCollapse from "@/components/base/UxCollapse";
 /* DATA */
-import data from '@/public/data/actor';
+import actor from '@/public/data/actor';
 
 export default function Home() {
 	const [actorData, setActorData] = useState([]);
@@ -48,7 +49,7 @@ export default function Home() {
 
 	useEffect(() => {
 		if (!actorData.length) {
-			setActorData(data);
+			setActorData(actor);
 		}
 
 		if (actorData.length) {
@@ -83,17 +84,19 @@ export default function Home() {
 											key={item.id}
 											className="actor"
 										>
-											<dl>
-												<dt className="subject">
+											<UxCollapse
+												className="actor"
+											>
+												<div slot="summary">
 													<a
 														className="name"
 														href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
 														target="_blank"
 													>
-														{item.name.en}
+														<span>{item.name.en}</span>
 													</a>
-												</dt>
-												<dd className="details">
+												</div>
+												<div slot="details">
 													<dl className="define column">
 														<dt>title</dt>
 														<dd className="ellipsis">
@@ -106,10 +109,6 @@ export default function Home() {
 															{item.desc}
 														</dd>
 													</dl>
-													{/* <dl className="define">
-														<dt>id</dt>
-														<dd>{item.id}</dd>
-													</dl> */}
 													<dl className="define name">
 														<dt>name</dt>
 														<dd>
@@ -147,8 +146,108 @@ export default function Home() {
 														<dt>debut</dt>
 														<dd>{item.debut}</dd>
 													</dl>
-												</dd>
-											</dl>
+												</div>
+											</UxCollapse>
+											{item.movie.map(item => (
+												<UxCollapse
+													key={item.id}
+													className="movie"
+												>
+													<div slot="summary">
+														<a
+															className="name"
+															href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${item.id}`}
+															target="_blank"
+														>
+															<span>{item.name}</span>
+														</a>
+														<a
+															className="name"
+															href={`https://123av.com/ko/v/${item.name}`}
+															target="_blank"
+														>
+															<span>123AV</span>
+														</a>
+														<a
+															className="name"
+															href={`https://missav123.com/ko/${item.name}`}
+															target="_blank"
+														>
+															<span>MISSAV</span>
+														</a>
+													</div>
+													<div slot="details">
+														<dl className="define column">
+															<dt>title</dt>
+															<dd className="ellipsis">{item.title}</dd>
+														</dl>
+														<dl className="define column">
+															<dt>story</dt>
+															<dd className="ellipsis">{item.story}</dd>
+														</dl>
+														<dl className="define column">
+															<dt>producer</dt>
+															<dd className="ellipsis">{item.producer}</dd>
+														</dl>
+														<dl className="define column">
+															<dt>publisher</dt>
+															<dd className="ellipsis">{item.publisher}</dd>
+														</dl>
+														<dl className="define column">
+															<dt>series</dt>
+															<dd className="ellipsis">{item.series}</dd>
+														</dl>
+														<dl className="define column">
+															<dt>director</dt>
+															<dd className="ellipsis">{item.director}</dd>
+														</dl>
+														<dl className="define">
+															<dt>runtime</dt>
+															<dd>{item.runtime}</dd>
+														</dl>
+														<dl className="define">
+															<dt>release</dt>
+															<dd>{item.release}</dd>
+														</dl>
+														<ul className="list cast">
+															{
+																item.cast.map((item, index) => (
+																	<li
+																		key={index}
+																		className="bl pound"
+																	>
+																		<a
+																			className="cast"
+																			href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
+																			target="_blank"
+																		>
+																			{item.name}
+																		</a>
+																	</li>
+																))
+															}
+														</ul>
+														<ul className="list category">
+															{
+																item.category.map((item, index) => (
+																	<li
+																		key={index}
+																		className="bl pound"
+																	>
+																		<a
+																			className="category"
+																			href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
+																			target="_blank"
+																		>
+																			{item.name}
+																		</a>
+																	</li>
+																))
+															}
+														</ul>
+													</div>
+												</UxCollapse>
+											))}
 										</UxCard>
 									);
 								})

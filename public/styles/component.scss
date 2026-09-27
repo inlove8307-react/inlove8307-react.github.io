@@ -1394,22 +1394,15 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.count em {font-weight: 700;}
 /* Count (Mobile) */
 html.mobile .ux-group.count {display: none;}
-/* Av */
-.ux-card.av dt.subject {padding-bottom: 2rem;}
-.ux-card.av dt.subject .name {font-weight: 700; font-size: 2.4rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.av dd.details {display: flex; flex-wrap: wrap; gap: .8rem; padding-top: 2.4rem; box-shadow: 0 -.1rem 0 0 var(--border-default);}
-.ux-card.av dd.details .link {display: inline-flex; align-items: center; padding: 0 2rem; height: 4rem; border-radius: 2rem; box-shadow: var(--inset); background-color: var(--background-default); font-weight: 500; font-size: 1.6rem; color: var(--text-default);}
-/* Av (Mobile) */
-html.mobile .ux-group.av {row-gap: 2rem;}
-html.mobile .ux-group.av.col3 {--col: 1;}
-html.mobile .ux-card.av dt.subject {padding-bottom: 1.6rem;}
-html.mobile .ux-card.av dt.subject .name {font-size: 2rem;}
-html.mobile .ux-card.av dd.details {padding-top: 2rem;}
-html.mobile .ux-card.av dd.details .link {padding: 0 1.6rem; height: 3.2rem; border-radius: 1.6rem; font-size: 1.4rem;}
 /* Actor */
-.ux-card.actor dt.subject {padding-bottom: 2rem;}
-.ux-card.actor dt.subject a.name {font-weight: 700; font-size: 2.4rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.actor dd.details {display: flex; flex-direction: column; gap: .8rem; padding-top: 2.4rem; box-shadow: 0 -.1rem 0 0 var(--border-default);}
+.ux-card.actor .ux-card-base {display: flex; flex-direction: column; gap: 1.6rem; padding: 2rem;}
+.ux-card.actor .ux-collapse .ux-collapse-details .ux-collapse-content {margin-top: 1.6rem; padding: 1.6rem; border-radius: 1.6rem; background-color: var(--background-muted);}
+.ux-card.actor .ux-collapse.actor .ux-collapse-summary a.name {display: flex; align-items: center; gap: .4rem; font-weight: 700; font-size: 2rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor .ux-collapse.actor .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary .ux-collapse-content {display: flex; align-items: center; gap: .4rem;}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name {display: flex; align-items: center; gap: .4rem; font-weight: 600; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor .ux-collapse.movie .ux-collapse-summary a.name + a.name::before {content: '/';}
+.ux-card.actor .ux-collapse.movie .ux-collapse-details {display: flex; flex-direction: column; gap: .8rem;}
 .ux-card.actor dl.define {display: flex; justify-content: space-between; gap: .8rem;}
 .ux-card.actor dl.define.column {flex-direction: column; gap: .2rem;}
 .ux-card.actor dl.define.column dd {text-align: left;}
@@ -1419,31 +1412,12 @@ html.mobile .ux-card.av dd.details .link {padding: 0 1.6rem; height: 3.2rem; bor
 .ux-card.actor dl.define.name dd {display: flex; flex-direction: column;}
 .ux-card.actor dl.define.birth dd span + span::before {content: '/';}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
+.ux-card.actor ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.actor ul.cast li.bl.pound {color: var(--text-muted);}
+.ux-card.actor a.cast {font-size: 1.6rem; color: var(--text-red);}
+.ux-card.actor ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.actor ul.category li.bl.pound {color: var(--text-muted);}
+.ux-card.actor a.category {font-size: 1.6rem; color: var(--text-blue);}
 /* Actor (Mobile) */
 html.mobile .ux-group.actor {row-gap: 2rem;}
 html.mobile .ux-group.actor.col3 {--col: 1;}
-html.mobile .ux-card.actor dt.subject {padding-bottom: 1.6rem;}
-html.mobile .ux-card.actor dt.subject a.name {font-size: 2rem;}
-html.mobile .ux-card.actor dd.details {padding-top: 2rem;}
-/* Movie */
-.ux-card.movie dt.subject {padding-bottom: 2rem;}
-.ux-card.movie dt.subject a.name {font-weight: 700; font-size: 2.4rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.movie dd.details {display: flex; flex-direction: column; gap: .8rem; padding-top: 2.4rem; box-shadow: 0 -.1rem 0 0 var(--border-default);}
-.ux-card.movie dl.define {display: flex; justify-content: space-between; gap: .8rem;}
-.ux-card.movie dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
-.ux-card.movie dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
-.ux-card.movie dl.define:has(dd:empty) {display: none;}
-.ux-card.movie dl.define.column {flex-direction: column; gap: .2rem;}
-.ux-card.movie dl.define.column dd {text-align: left;}
-.ux-card.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-card.movie ul.cast li.bl.pound {color: var(--text-muted);}
-.ux-card.movie a.cast {font-size: 1.6rem; color: var(--text-red);}
-.ux-card.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-card.movie ul.category li.bl.pound {color: var(--text-muted);}
-.ux-card.movie a.category {font-size: 1.6rem; color: var(--text-blue);}
-/* Movie (Mobile) */
-html.mobile .ux-group.movie {row-gap: 2rem;}
-html.mobile .ux-group.movie.col3 {--col: 1;}
-html.mobile .ux-card.movie dt.subject {padding-bottom: 1.6rem;}
-html.mobile .ux-card.movie dt.subject a.name {font-size: 2rem;}
-html.mobile .ux-card.movie dd.details {padding-top: 2rem;}
