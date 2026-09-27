@@ -1390,8 +1390,11 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* Count */
+.ux-group.count {display: none;}
 .ux-group.count p {font-size: 1.8rem;}
 .ux-group.count em {font-weight: 700;}
+/* Count (Desktop) */
+html.desktop .ux-group.count {display: flex;}
 /* Count (Mobile) */
 html.mobile .ux-group.count {display: none;}
 /* Card Actor */
