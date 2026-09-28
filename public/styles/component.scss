@@ -1390,40 +1390,37 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
-/* Define */
-dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
-dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
-dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
-/* Define Column */
-dl.define.column {flex-direction: column; gap: .2rem;}
-dl.define.column dd {text-align: left;}
-/* Define Empty */
-dl.define:has(dd:empty) {display: none;}
-
-
-
-
-
 /* Group Actor */
 .ux-group.actor {row-gap: 2rem;}
 /* Card Actor */
 .ux-card.actor .ux-card-base {display: flex; gap: .4rem; padding: 2rem;}
 /* Card Actor Dl Actor */
 .ux-card.actor dl.actor {display: flex; flex-direction: column; gap: .8rem;}
+/* Card Actor Dl Actor Subject */
 .ux-card.actor dl.actor dt.subject {display: flex; align-items: center; font-weight: 700; font-size: 2rem; line-height: 1;}
 .ux-card.actor dl.actor dt.subject a.name {display: flex; align-items: center; gap: .2rem; color: var(--text-default);}
 .ux-card.actor dl.actor dt.subject .ux-button {display: none;}
+/* Card Actor Dl Actor Details */
 .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .2rem;}
+/* Card Actor Define */
+dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
+dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
+dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
+/* Card Actor Define Column */
+dl.define.column {flex-direction: column; gap: .2rem;}
+dl.define.column dd {text-align: left;}
+/* Card Actor Define Empty */
+dl.define:has(dd:empty) {display: none;}
 /* Card Actor Define Name */
-.ux-card.actor dl.define.name dd {display: flex; flex-direction: column;}
+dl.define.name dd {display: flex; flex-direction: column;}
 /* Card Actor Define Birth */
-.ux-card.actor dl.define.birth dd {display: flex; gap: .4rem;}
-.ux-card.actor dl.define.birth dd span {display: flex; gap: .4rem;}
-.ux-card.actor dl.define.birth dd span + span::before {content: '/';}
+dl.define.birth dd {display: flex; gap: .4rem;}
+dl.define.birth dd span {display: flex; gap: .4rem;}
+dl.define.birth dd span + span::before {content: '/';}
 /* Card Actor Define Size */
-.ux-card.actor dl.define.size dd {display: flex; gap: .4rem;}
-.ux-card.actor dl.define.size dd span {display: flex; gap: .4rem;}
-.ux-card.actor dl.define.size dd span + span::before {content: '/';}
+dl.define.size dd {display: flex; gap: .4rem;}
+dl.define.size dd span {display: flex; gap: .4rem;}
+dl.define.size dd span + span::before {content: '/';}
 /* Card Actor Dl Movie */
 .ux-card.actor dl.movie {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Dl Movie Subject */
@@ -1444,11 +1441,12 @@ dl.define:has(dd:empty) {display: none;}
 
 
 /* Card Actor (Desktop) */
-html.desktop .ux-card.actor .ux-card-base {gap: 2rem;}
-html.desktop .ux-card.actor dl.actor {width: calc(50% - 1rem);}
-html.desktop .ux-card.actor dl.define dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
+html.desktop .ux-card.actor {--space: 2rem;}
+html.desktop .ux-card.actor .ux-card-base {gap: var(--space);}
+/* Card Actor (Desktop) Dl Actor */
+html.desktop .ux-card.actor dl.actor {width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Movie */
-html.desktop .ux-card.actor dl.movie {width: calc(50% - 1rem);}
+html.desktop .ux-card.actor dl.movie {width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Movie Subject */
 html.desktop .ux-card.actor dl.movie dt.subject .title,
 html.desktop .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
@@ -1463,7 +1461,9 @@ html.desktop .ux-card.actor .ux-group.link .ux-button {margin-left: initial;}
 
 /* Card Actor (Mobile) */
 html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: .8rem;}
+/* Card Actor (Mobile) Dl Actor Subject */
 html.mobile .ux-card.actor dl.actor dt.subject .ux-button {display: inline-flex; margin-left: auto;}
+/* Card Actor (Mobile) Dl Movie */
 html.mobile .ux-card.actor dl.movie {gap: .4rem;}
 
 
