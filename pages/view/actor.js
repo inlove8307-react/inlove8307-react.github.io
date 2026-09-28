@@ -34,71 +34,59 @@ const Actor = ({ ref, ...props }) => {
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
-						<dl className="define column">
-							<dt>title</dt>
-							<dd>
-								{data.title}
-							</dd>
-						</dl>
-						<dl className="define column">
-							<dt>description</dt>
-							<dd>
-								{data.desc}
-							</dd>
-						</dl>
-						<dl className="define name">
-							<dt>name</dt>
-							<dd>
-								<span>{data.name.kr}</span>
-								<span>{data.name.en}</span>
-								<span>{data.name.cn}</span>
-								{data.name.other.map((item, index) => (
-									<span key={index}>{item}</span>
-								))}
-							</dd>
-						</dl>
-						<dl className="define birth">
-							<dt>birth</dt>
-							<dd>
-								{data.birth && <span>{data.birth}</span>}
-								{data.birth && <span>{data.korean}</span>}
-								{data.birth && <span>{data.age}</span>}
-							</dd>
-						</dl>
-						<dl className="define">
-							<dt>height</dt>
-							<dd>{data.height}</dd>
-						</dl>
-						<dl className="define size">
-							<dt>size</dt>
-							<dd>
-								{data.size.bust && <span>{data.size.bust}</span>}
-								{data.size.waist && <span>{data.size.waist}</span>}
-								{data.size.hips && <span>{data.size.hips}</span>}
-							</dd>
-						</dl>
-						<dl className="define">
-							<dt>bra</dt>
-							<dd>{data.bra}</dd>
-						</dl>
-						<dl className="define">
-							<dt>debut</dt>
-							<dd>{data.debut}</dd>
-						</dl>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="footer">
-				<UxArticle>
-					<UxContent>
-						{/* <UxGroup className="gap8">
-							<UxButton
-								className="primary h3"
-								onClick={props.onClose}
-							>
-								확인
-							</UxButton>
-						</UxGroup> */}
+						<UxGroup className="col1 gap4">
+							<dl className="define column">
+								<dt>제목</dt>
+								<dd>
+									{data.title}
+								</dd>
+							</dl>
+							<dl className="define column">
+								<dt>설명</dt>
+								<dd>
+									{data.desc}
+								</dd>
+							</dl>
+							<dl className="define name">
+								<dt>이름</dt>
+								<dd>
+									<span>{data.name.kr}</span>
+									<span>{data.name.en}</span>
+									<span>{data.name.cn}</span>
+									{data.name.other.map((item, index) => (
+										<span key={index}>{item}</span>
+									))}
+								</dd>
+							</dl>
+							<dl className="define birth">
+								<dt>생년월일</dt>
+								<dd>
+									{data.birth && <span>{data.birth}</span>}
+									{data.birth && <span>{data.korean}</span>}
+									{data.birth && <span>{data.age}</span>}
+								</dd>
+							</dl>
+							<dl className="define">
+								<dt>신장</dt>
+								<dd>{data.height}</dd>
+							</dl>
+							<dl className="define size">
+								<dt>신체 사이즈</dt>
+								<dd>
+									{data.size.bust && <span>{data.size.bust}</span>}
+									{data.size.waist && <span>{data.size.waist}</span>}
+									{data.size.hips && <span>{data.size.hips}</span>}
+								</dd>
+							</dl>
+							<dl className="define">
+								<dt>컵 사이즈</dt>
+								<dd>{data.bra}</dd>
+							</dl>
+							<dl className="define">
+								<dt>데뷔</dt>
+								<dd>{data.debut}</dd>
+							</dl>
+						</UxGroup>
 					</UxContent>
 				</UxArticle>
 			</UxSection>
@@ -124,88 +112,102 @@ const Movie = ({ ref, ...props }) => {
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
-						<dl className="define column">
-							<dt>title</dt>
-							<dd>{data.title}</dd>
-						</dl>
-						<dl className="define column">
-							<dt>story</dt>
-							<dd>{data.story}</dd>
-						</dl>
-						<dl className="define column">
-							<dt>producer</dt>
-							<dd>{data.producer}</dd>
-						</dl>
-						<dl className="define column">
-							<dt>publisher</dt>
-							<dd>{data.publisher}</dd>
-						</dl>
-						<dl className="define column">
-							<dt>series</dt>
-							<dd>{data.series}</dd>
-						</dl>
-						<dl className="define column">
-							<dt>director</dt>
-							<dd>{data.director}</dd>
-						</dl>
-						<dl className="define">
-							<dt>runtime</dt>
-							<dd>{data.runtime}</dd>
-						</dl>
-						<dl className="define">
-							<dt>release</dt>
-							<dd>{data.release}</dd>
-						</dl>
-						<ul className="list cast">
-							{
-								data.cast.map((item, index) => (
-									<li
-										key={index}
-										className="bl pound"
-									>
-										<a
-											className="cast"
-											href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-											target="_blank"
+						<UxGroup className="col1 gap4">
+							<UxGroup>
+								<UxButton
+									role="link"
+									href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${data.id}`}
+									target="_blank"
+								>
+									<span>AVDBS</span>
+									<i className="icon mask muted link x18" />
+								</UxButton>
+								<UxButton
+									role="link"
+									href={`https://123av.com/ko/v/${data.name}`}
+									target="_blank"
+								>
+									<span>123AV</span>
+									<i className="icon mask muted link x18" />
+								</UxButton>
+								<UxButton
+									role="link"
+									href={`https://missav123.com/ko/${data.name}`}
+									target="_blank"
+								>
+									<span>MISSAV</span>
+									<i className="icon mask muted link x18" />
+								</UxButton>
+							</UxGroup>
+							<dl className="define column">
+								<dt>제목</dt>
+								<dd>{data.title}</dd>
+							</dl>
+							<dl className="define column">
+								<dt>설명</dt>
+								<dd>{data.story}</dd>
+							</dl>
+							<dl className="define column">
+								<dt>제작사</dt>
+								<dd>{data.producer}</dd>
+							</dl>
+							<dl className="define column">
+								<dt>레이블</dt>
+								<dd>{data.publisher}</dd>
+							</dl>
+							<dl className="define column">
+								<dt>시리즈</dt>
+								<dd>{data.series}</dd>
+							</dl>
+							<dl className="define column">
+								<dt>감독</dt>
+								<dd>{data.director}</dd>
+							</dl>
+							<dl className="define">
+								<dt>재생시간</dt>
+								<dd>{data.runtime}</dd>
+							</dl>
+							<dl className="define">
+								<dt>출시일</dt>
+								<dd>{data.release}</dd>
+							</dl>
+							<ul className="list cast">
+								{
+									data.cast.map((item, index) => (
+										<li
+											key={index}
+											className="bl pound"
 										>
-											{item.name}
-										</a>
-									</li>
-								))
-							}
-						</ul>
-						<ul className="list category">
-							{
-								data.category.map((item, index) => (
-									<li
-										key={index}
-										className="bl pound"
-									>
-										<a
-											className="category"
-											href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
-											target="_blank"
+											<a
+												className="cast"
+												href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
+												target="_blank"
+											>
+												{item.name}
+											</a>
+										</li>
+									))
+								}
+							</ul>
+							<ul className="list category">
+								{
+									data.category.map((item, index) => (
+										<li
+											key={index}
+											className="bl pound"
 										>
-											{item.name}
-										</a>
-									</li>
-								))
-							}
-						</ul>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="footer">
-				<UxArticle>
-					<UxContent>
-						{/* <UxGroup className="gap8">
-							<UxButton
-								className="primary h3"
-								onClick={props.onClose}
-							>
-								확인
-							</UxButton>
-						</UxGroup> */}
+											<a
+												className="category"
+												href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
+												target="_blank"
+											>
+												{item.name}
+											</a>
+										</li>
+									))
+								}
+							</ul>
+						</UxGroup>
 					</UxContent>
 				</UxArticle>
 			</UxSection>
@@ -328,62 +330,61 @@ const Page = ({ ref, ...props }) => {
 														<i className="icon mask muted share x18" />
 													</UxButton>
 												</dt>
-												<BrowserView
-													as="dd"
-													className="details"
-												>
-													<dl className="define column">
-														<dt>title</dt>
-														<dd>
-															{item.title}
-														</dd>
-													</dl>
-													<dl className="define column">
-														<dt>description</dt>
-														<dd>
-															{item.desc}
-														</dd>
-													</dl>
-													<dl className="define name">
-														<dt>name</dt>
-														<dd>
-															<span>{item.name.kr}</span>
-															<span>{item.name.en}</span>
-															<span>{item.name.cn}</span>
-															{item.name.other.map((item, index) => (
-																<span key={index}>{item}</span>
-															))}
-														</dd>
-													</dl>
-													<dl className="define birth">
-														<dt>birth</dt>
-														<dd>
-															{item.birth && <span>{item.birth}</span>}
-															{item.birth && <span>{item.korean}</span>}
-															{item.birth && <span>{item.age}</span>}
-														</dd>
-													</dl>
-													<dl className="define">
-														<dt>height</dt>
-														<dd>{item.height}</dd>
-													</dl>
-													<dl className="define size">
-														<dt>size</dt>
-														<dd>
-															{item.size.bust && <span>{item.size.bust}</span>}
-															{item.size.waist && <span>{item.size.waist}</span>}
-															{item.size.hips && <span>{item.size.hips}</span>}
-														</dd>
-													</dl>
-													<dl className="define">
-														<dt>bra</dt>
-														<dd>{item.bra}</dd>
-													</dl>
-													<dl className="define">
-														<dt>debut</dt>
-														<dd>{item.debut}</dd>
-													</dl>
-												</BrowserView>
+												<dd className="details">
+													<BrowserView renderWithFragment>
+														<dl className="define column">
+															<dt>제목</dt>
+															<dd>
+																{item.title}
+															</dd>
+														</dl>
+														<dl className="define column">
+															<dt>설명</dt>
+															<dd>
+																{item.desc}
+															</dd>
+														</dl>
+														<dl className="define name">
+															<dt>이름</dt>
+															<dd>
+																<span>{item.name.kr}</span>
+																<span>{item.name.en}</span>
+																<span>{item.name.cn}</span>
+																{item.name.other.map((item, index) => (
+																	<span key={index}>{item}</span>
+																))}
+															</dd>
+														</dl>
+														<dl className="define birth">
+															<dt>생일</dt>
+															<dd>
+																{item.birth && <span>{item.birth}</span>}
+																{item.birth && <span>{item.korean}</span>}
+																{item.birth && <span>{item.age}</span>}
+															</dd>
+														</dl>
+														<dl className="define">
+															<dt>신장</dt>
+															<dd>{item.height}</dd>
+														</dl>
+														<dl className="define size">
+															<dt>신체 사이즈</dt>
+															<dd>
+																{item.size.bust && <span>{item.size.bust}</span>}
+																{item.size.waist && <span>{item.size.waist}</span>}
+																{item.size.hips && <span>{item.size.hips}</span>}
+															</dd>
+														</dl>
+														<dl className="define">
+															<dt>브라 사이즈</dt>
+															<dd>{item.bra}</dd>
+														</dl>
+														<dl className="define">
+															<dt>데뷔</dt>
+															<dd>{item.debut}</dd>
+														</dl>
+													</BrowserView>
+												</dd>
 											</dl>
 											<dl className="movie">
 												<dt className="subject">
@@ -391,47 +392,18 @@ const Page = ({ ref, ...props }) => {
 													<span className="count">{item.movie.length}</span>
 												</dt>
 												<dd className="details">
-													<ul className="link">
+													<UxGroup className="link">
 														{item.movie.map(item => (
-															<li
+															<UxButton
 																key={item.id}
-																className="bl dot"
+																className="tertiary capsule h4"
+																onClick={() => handleMovie(item)}
 															>
-																<UxGroup className="link">
-																	<UxButton
-																		role="link"
-																		href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${item.id}`}
-																		target="_blank"
-																	>
-																		<span>{item.name}</span>
-																		<i className="icon mask muted link x18" />
-																	</UxButton>
-																	<UxButton
-																		role="link"
-																		href={`https://123av.com/ko/v/${item.name}`}
-																		target="_blank"
-																	>
-																		<span>123AV</span>
-																		<i className="icon mask muted link x18" />
-																	</UxButton>
-																	<UxButton
-																		role="link"
-																		href={`https://missav123.com/ko/${item.name}`}
-																		target="_blank"
-																	>
-																		<span>MissAV</span>
-																		<i className="icon mask muted link x18" />
-																	</UxButton>
-																	<UxButton
-																		className="info"
-																		onClick={() => handleMovie(item)}
-																	>
-																		<i className="icon mask muted share x18" />
-																	</UxButton>
-																</UxGroup>
-															</li>
+																<span>{item.name}</span>
+																<i className="icon mask share muted x18" />
+															</UxButton>
 														))}
-													</ul>
+													</UxGroup>
 												</dd>
 											</dl>
 										</UxCard>
