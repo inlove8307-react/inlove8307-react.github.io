@@ -334,13 +334,13 @@ const Page = ({ ref, ...props }) => {
 												>
 													<dl className="define column">
 														<dt>title</dt>
-														<dd className="ellipsis">
+														<dd>
 															{item.title}
 														</dd>
 													</dl>
 													<dl className="define column">
 														<dt>description</dt>
-														<dd className="ellipsis">
+														<dd>
 															{item.desc}
 														</dd>
 													</dl>
