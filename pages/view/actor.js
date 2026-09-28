@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -11,16 +12,136 @@ import UxInput from "@/components/base/UxInput";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
 import UxCollapse from "@/components/base/UxCollapse";
+import UxButton from "@/components/base/UxButton";
 /* DATA */
 import actor from '@/public/data/actor';
 
-export default function Home() {
+const Popup = ({ ref, ...props }) => {
+	const data = props.data;
+
+	useEffect(() => {
+		console.log(props);
+	}, []);
+
+	return (
+		<>
+			<UxSection className="header">
+				<UxArticle>
+					<UxSubject>
+						<h3>{data.name}</h3>
+						<UxButton onClick={props.onClose}>
+							<i className="icon close" />
+						</UxButton>
+					</UxSubject>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="main">
+				<UxArticle>
+					<UxContent>
+						<dl className="define column">
+							<dt>title</dt>
+							<dd className="ellipsis">{data.title}</dd>
+						</dl>
+						<dl className="define column">
+							<dt>story</dt>
+							<dd className="ellipsis">{data.story}</dd>
+						</dl>
+						<dl className="define column">
+							<dt>producer</dt>
+							<dd className="ellipsis">{data.producer}</dd>
+						</dl>
+						<dl className="define column">
+							<dt>publisher</dt>
+							<dd className="ellipsis">{data.publisher}</dd>
+						</dl>
+						<dl className="define column">
+							<dt>series</dt>
+							<dd className="ellipsis">{data.series}</dd>
+						</dl>
+						<dl className="define column">
+							<dt>director</dt>
+							<dd className="ellipsis">{data.director}</dd>
+						</dl>
+						<dl className="define">
+							<dt>runtime</dt>
+							<dd>{data.runtime}</dd>
+						</dl>
+						<dl className="define">
+							<dt>release</dt>
+							<dd>{data.release}</dd>
+						</dl>
+						<ul className="list cast">
+							{
+								data.cast.map((item, index) => (
+									<li
+										key={index}
+										className="bl pound"
+									>
+										<a
+											className="cast"
+											href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
+											target="_blank"
+										>
+											{item.name}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+						<ul className="list category">
+							{
+								data.category.map((item, index) => (
+									<li
+										key={index}
+										className="bl pound"
+									>
+										<a
+											className="category"
+											href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
+											target="_blank"
+										>
+											{item.name}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="footer">
+				<UxArticle>
+					<UxContent>
+						{/* <UxGroup className="gap8">
+							<UxButton
+								className="primary h3"
+								onClick={props.onClose}
+							>
+								확인
+							</UxButton>
+						</UxGroup> */}
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+		</>
+	);
+};
+
+const Actor = ({ ref, ...props }) => {
+	const modal = useModal();
 	const [actorData, setActorData] = useState([]);
 	const [filterData, setFilterData] = useState([]);
 	const [search, setSearch] = useState('');
 
 	const handleSearch = (value) => {
 		setSearch(value);
+	};
+
+	const handleClick = (data) => {
+		modal.center(Popup, {
+			caseClassName: 'movie',
+			data,
+		});
 	};
 
 	const getAge = (date) => {
@@ -84,11 +205,8 @@ export default function Home() {
 											key={item.id}
 											className="actor"
 										>
-											<UxCollapse
-												className="actor"
-												expanded
-											>
-												<div slot="summary">
+											<dl className="actor">
+												<dt className="subject">
 													<a
 														className="name"
 														href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
@@ -97,9 +215,8 @@ export default function Home() {
 														<span>{item.name.en}</span>
 														<i className="icon mask muted link x18" />
 													</a>
-													<span className="count">{item.movie.length}</span>
-												</div>
-												<div slot="details">
+												</dt>
+												<dd className="details">
 													<dl className="define column">
 														<dt>title</dt>
 														<dd className="ellipsis">
@@ -151,111 +268,58 @@ export default function Home() {
 														<dt>debut</dt>
 														<dd>{item.debut}</dd>
 													</dl>
+												</dd>
+											</dl>
+											<UxCollapse
+												entire
+											>
+												<div slot="summary">
+													<span>LIST</span>
+													<span>{item.movie.length}</span>
+												</div>
+												<div slot="details">
+													<ul className="link">
+														{item.movie.map(item => (
+															<li
+																key={item.id}
+																className="bl dot"
+															>
+																<UxGroup className="link">
+																	<a
+																		className="link"
+																		href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${item.id}`}
+																		target="_blank"
+																	>
+																		<span>{item.name}</span>
+																		<i className="icon mask muted link x18" />
+																	</a>
+																	<a
+																		className="link"
+																		href={`https://123av.com/ko/v/${item.name}`}
+																		target="_blank"
+																	>
+																		<span>123AV</span>
+																		<i className="icon mask muted link x18" />
+																	</a>
+																	<a
+																		className="link"
+																		href={`https://missav123.com/ko/${item.name}`}
+																		target="_blank"
+																	>
+																		<span>MISSAV</span>
+																		<i className="icon mask muted link x18" />
+																	</a>
+																	<UxButton
+																		onClick={() => handleClick(item)}
+																	>
+																		<i className="icon mask muted share x18" />
+																	</UxButton>
+																</UxGroup>
+															</li>
+														))}
+													</ul>
 												</div>
 											</UxCollapse>
-											{item.movie.map(item => (
-												<UxCollapse
-													key={item.id}
-													className="movie"
-												>
-													<div slot="summary">
-														<a
-															className="name"
-															href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${item.id}`}
-															target="_blank"
-														>
-															<span>{item.name}</span>
-															<i className="icon mask muted link x18" />
-														</a>
-														<a
-															className="name"
-															href={`https://123av.com/ko/v/${item.name}`}
-															target="_blank"
-														>
-															<span>123AV</span>
-															<i className="icon mask muted link x18" />
-														</a>
-														<a
-															className="name"
-															href={`https://missav123.com/ko/${item.name}`}
-															target="_blank"
-														>
-															<span>MISSAV</span>
-															<i className="icon mask muted link x18" />
-														</a>
-													</div>
-													<div slot="details">
-														<dl className="define column">
-															<dt>title</dt>
-															<dd className="ellipsis">{item.title}</dd>
-														</dl>
-														<dl className="define column">
-															<dt>story</dt>
-															<dd className="ellipsis">{item.story}</dd>
-														</dl>
-														<dl className="define column">
-															<dt>producer</dt>
-															<dd className="ellipsis">{item.producer}</dd>
-														</dl>
-														<dl className="define column">
-															<dt>publisher</dt>
-															<dd className="ellipsis">{item.publisher}</dd>
-														</dl>
-														<dl className="define column">
-															<dt>series</dt>
-															<dd className="ellipsis">{item.series}</dd>
-														</dl>
-														<dl className="define column">
-															<dt>director</dt>
-															<dd className="ellipsis">{item.director}</dd>
-														</dl>
-														<dl className="define">
-															<dt>runtime</dt>
-															<dd>{item.runtime}</dd>
-														</dl>
-														<dl className="define">
-															<dt>release</dt>
-															<dd>{item.release}</dd>
-														</dl>
-														<ul className="list cast">
-															{
-																item.cast.map((item, index) => (
-																	<li
-																		key={index}
-																		className="bl pound"
-																	>
-																		<a
-																			className="cast"
-																			href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-																			target="_blank"
-																		>
-																			{item.name}
-																		</a>
-																	</li>
-																))
-															}
-														</ul>
-														<ul className="list category">
-															{
-																item.category.map((item, index) => (
-																	<li
-																		key={index}
-																		className="bl pound"
-																	>
-																		<a
-																			className="category"
-																			href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
-																			target="_blank"
-																		>
-																			{item.name}
-																		</a>
-																	</li>
-																))
-															}
-														</ul>
-													</div>
-												</UxCollapse>
-											))}
 										</UxCard>
 									);
 								})
@@ -267,3 +331,5 @@ export default function Home() {
 		</UxSection>
 	);
 };
+
+export default Actor;
