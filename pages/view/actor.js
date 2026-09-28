@@ -401,7 +401,7 @@ const Page = ({ ref, ...props }) => {
 															</dd>
 														</dl>
 														<dl className="define">
-															<dt>브라 사이즈</dt>
+															<dt>컵 사이즈</dt>
 															<dd>{item.bra}</dd>
 														</dl>
 														<dl className="define">
