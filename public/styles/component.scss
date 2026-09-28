@@ -1478,7 +1478,8 @@ html.mobile .ux-card.actor .ux-group.link .ux-button span {display: none;}
 
 
 /* Popup Movie Define */
-.ux-modal.movie dl.define dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
+.ux-modal.movie dl.define.column dd {word-break: break-all;}
+.ux-modal.movie dl.define.column dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
 /* Popup Movie Cast */
 .ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
 .ux-modal.movie ul.cast li.bl.pound {color: var(--text-muted);}
