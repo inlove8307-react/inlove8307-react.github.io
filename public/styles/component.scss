@@ -1404,13 +1404,15 @@ dl.define:has(dd:empty) {display: none;}
 
 
 
+/* Group Actor */
+.ux-group.actor {row-gap: 2rem;}
 /* Card Actor */
-.ux-card.actor {}
 .ux-card.actor .ux-card-base {display: flex; gap: .4rem; padding: 2rem;}
-/* Card Actor Dl */
+/* Card Actor Dl Actor */
 .ux-card.actor dl.actor {display: flex; flex-direction: column; gap: .8rem;}
-.ux-card.actor dl.actor dt.subject {font-weight: 700; font-size: 2rem; line-height: 1;}
+.ux-card.actor dl.actor dt.subject {display: flex; align-items: center; font-weight: 700; font-size: 2rem; line-height: 1;}
 .ux-card.actor dl.actor dt.subject a.name {display: flex; align-items: center; gap: .2rem; color: var(--text-default);}
+.ux-card.actor dl.actor dt.subject .ux-button {display: none;}
 .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .2rem;}
 /* Card Actor Define Name */
 .ux-card.actor dl.define.name dd {display: flex; flex-direction: column;}
@@ -1422,19 +1424,16 @@ dl.define:has(dd:empty) {display: none;}
 .ux-card.actor dl.define.size dd {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.size dd span {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
-/* Card Actor Collapse */
-.ux-card.actor .ux-collapse {}
-/* Card Actor Collapse Summary */
-.ux-card.actor .ux-collapse .ux-collapse-summary {}
-.ux-card.actor .ux-collapse .ux-collapse-summary .ux-collapse-content {display: flex; gap: .4rem;}
-.ux-card.actor .ux-collapse .ux-collapse-summary .title {font-weight: 500; font-size: 1.6rem;}
-.ux-card.actor .ux-collapse .ux-collapse-summary .count {font-weight: 500; font-size: 1.6rem; color: var(--text-red);}
-/* Card Actor Collapse Details */
-.ux-card.actor .ux-collapse .ux-collapse-details {}
-.ux-card.actor .ux-collapse .ux-collapse-details .ux-collapse-content {padding-top: .4rem;}
+/* Card Actor Dl Movie */
+.ux-card.actor dl.movie {display: flex; flex-direction: column; gap: .8rem;}
+/* Card Actor Dl Movie Subject */
+.ux-card.actor dl.movie dt.subject {display: flex; gap: .4rem;}
+.ux-card.actor dl.movie dt.subject .title {font-weight: 500; font-size: 1.6rem;}
+.ux-card.actor dl.movie dt.subject .count {font-weight: 500; font-size: 1.6rem; color: var(--text-red);}
+/* Card Actor Dl Movie Details */
+.ux-card.actor dl.movie dd.details {padding-top: .4rem;}
 /* Card Actor Link */
 .ux-card.actor ul.link {display: flex; flex-direction: column; gap: .4rem;}
-.ux-card.actor ul.link li {}
 /* Card Actor Link Group */
 .ux-card.actor .ux-group.link {width: 100%;}
 .ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
@@ -1448,16 +1447,11 @@ dl.define:has(dd:empty) {display: none;}
 html.desktop .ux-card.actor .ux-card-base {gap: 2rem;}
 html.desktop .ux-card.actor dl.actor {width: calc(50% - 1rem);}
 html.desktop .ux-card.actor dl.define dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
-/* Card Actor (Desktop) Collapse */
-html.desktop .ux-card.actor .ux-collapse {width: calc(50% - 1rem);}
-/* Card Actor (Desktop) Collapse Summary */
-html.desktop .ux-card.actor .ux-collapse-summary .title,
-html.desktop .ux-card.actor .ux-collapse-summary .count {font-weight: 700; font-size: 2rem;}
-html.desktop .ux-card.actor .ux-collapse-summary .ux-collapse-button {pointer-events: none;}
-html.desktop .ux-card.actor .ux-collapse-summary .ux-collapse-button i.icon {display: none;}
-/* Card Actor (Desktop) Collapse Details */
-html.desktop .ux-card.actor .ux-collapse-details {max-height: none!important; height: initial!important;}
-html.desktop .ux-card.actor .ux-collapse-details .ux-collapse-content {padding-top: .8rem;}
+/* Card Actor (Desktop) Dl Movie */
+html.desktop .ux-card.actor dl.movie {width: calc(50% - 1rem);}
+/* Card Actor (Desktop) Dl Movie Subject */
+html.desktop .ux-card.actor dl.movie dt.subject .title,
+html.desktop .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
 /* Card Actor (Desktop) Link Group */
 html.desktop .ux-card.actor .ux-group.link {width: 100%;}
 html.desktop .ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
@@ -1467,11 +1461,10 @@ html.desktop .ux-card.actor .ux-group.link .ux-button {margin-left: initial;}
 
 
 
-/* Group Actor (Mobile) */
-html.mobile .ux-group.actor {row-gap: 2rem;}
 /* Card Actor (Mobile) */
-html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: .4rem;}
-html.mobile .ux-card.actor .ux-group.link .ux-button span {display: none;}
+html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: .8rem;}
+html.mobile .ux-card.actor dl.actor dt.subject .ux-button {display: inline-flex; margin-left: auto;}
+html.mobile .ux-card.actor dl.movie {gap: .4rem;}
 
 
 

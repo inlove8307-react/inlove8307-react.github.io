@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { isMobile, isBrowser } from "react-device-detect";
+import { isMobile, isBrowser, MobileView, BrowserView } from "react-device-detect";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
@@ -12,12 +12,101 @@ import UxContent from "@/components/layout/UxContent";
 import UxInput from "@/components/base/UxInput";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
-import UxCollapse from "@/components/base/UxCollapse";
 import UxButton from "@/components/base/UxButton";
 /* DATA */
 import actor from '@/public/data/actor';
 
-const Popup = ({ ref, ...props }) => {
+const Actor = ({ ref, ...props }) => {
+	const data = props.data;
+
+	return (
+		<>
+			<UxSection className="header">
+				<UxArticle>
+					<UxSubject>
+						<h3>{data.name.en}</h3>
+						<UxButton onClick={props.onClose}>
+							<i className="icon close" />
+						</UxButton>
+					</UxSubject>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="main">
+				<UxArticle>
+					<UxContent>
+						<dl className="define column">
+							<dt>title</dt>
+							<dd>
+								{data.title}
+							</dd>
+						</dl>
+						<dl className="define column">
+							<dt>description</dt>
+							<dd>
+								{data.desc}
+							</dd>
+						</dl>
+						<dl className="define name">
+							<dt>name</dt>
+							<dd>
+								<span>{data.name.kr}</span>
+								<span>{data.name.en}</span>
+								<span>{data.name.cn}</span>
+								{data.name.other.map((item, index) => (
+									<span key={index}>{item}</span>
+								))}
+							</dd>
+						</dl>
+						<dl className="define birth">
+							<dt>birth</dt>
+							<dd>
+								{data.birth && <span>{data.birth}</span>}
+								{data.birth && <span>{data.korean}</span>}
+								{data.birth && <span>{data.age}</span>}
+							</dd>
+						</dl>
+						<dl className="define">
+							<dt>height</dt>
+							<dd>{data.height}</dd>
+						</dl>
+						<dl className="define size">
+							<dt>size</dt>
+							<dd>
+								{data.size.bust && <span>{data.size.bust}</span>}
+								{data.size.waist && <span>{data.size.waist}</span>}
+								{data.size.hips && <span>{data.size.hips}</span>}
+							</dd>
+						</dl>
+						<dl className="define">
+							<dt>bra</dt>
+							<dd>{data.bra}</dd>
+						</dl>
+						<dl className="define">
+							<dt>debut</dt>
+							<dd>{data.debut}</dd>
+						</dl>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+			<UxSection className="footer">
+				<UxArticle>
+					<UxContent>
+						{/* <UxGroup className="gap8">
+							<UxButton
+								className="primary h3"
+								onClick={props.onClose}
+							>
+								확인
+							</UxButton>
+						</UxGroup> */}
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+		</>
+	);
+};
+
+const Movie = ({ ref, ...props }) => {
 	const data = props.data;
 
 	return (
@@ -124,8 +213,9 @@ const Popup = ({ ref, ...props }) => {
 	);
 };
 
-const Actor = ({ ref, ...props }) => {
+const Page = ({ ref, ...props }) => {
 	const modal = useModal();
+	const [isClient, setIsClient] = useState(false);
 	const [actorData, setActorData] = useState([]);
 	const [filterData, setFilterData] = useState([]);
 	const [search, setSearch] = useState('');
@@ -134,9 +224,16 @@ const Actor = ({ ref, ...props }) => {
 		setSearch(value);
 	};
 
-	const handleClick = (data) => {
+	const handleActor = (data) => {
+		modal.center(Actor, {
+			caseClassName: 'actor',
+			data,
+		});
+	};
+
+	const handleMovie = (data) => {
 		if (isBrowser) {
-			modal.full(Popup, {
+			modal.full(Movie, {
 				caseClassName: 'movie',
 				data,
 			});
@@ -184,6 +281,12 @@ const Actor = ({ ref, ...props }) => {
 		}
 	}, [actorData]);
 
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
+
+	if (!isClient) return;
+
 	return (
 		<UxSection>
 			<UxArticle className="h3">
@@ -200,8 +303,8 @@ const Actor = ({ ref, ...props }) => {
 					<UxContent>
 						<UxGroup className="actor col1">
 							{
-								filterData.map((item) => {
-									const { age, korean } = getAge(item.birth);
+								filterData.map((data) => {
+									const item = Object.assign(data, getAge(data.birth));
 
 									return (
 										<UxCard
@@ -218,8 +321,16 @@ const Actor = ({ ref, ...props }) => {
 														<span>{item.name.en}</span>
 														<i className="icon mask muted link x18" />
 													</a>
+													<UxButton
+														onClick={() => handleActor(item)}
+													>
+														<i className="icon mask muted share x18" />
+													</UxButton>
 												</dt>
-												<dd className="details">
+												<BrowserView
+													as="dd"
+													className="details"
+												>
 													<dl className="define column">
 														<dt>title</dt>
 														<dd className="ellipsis">
@@ -247,8 +358,8 @@ const Actor = ({ ref, ...props }) => {
 														<dt>birth</dt>
 														<dd>
 															{item.birth && <span>{item.birth}</span>}
-															{item.birth && <span>{korean}</span>}
-															{item.birth && <span>{age}</span>}
+															{item.birth && <span>{item.korean}</span>}
+															{item.birth && <span>{item.age}</span>}
 														</dd>
 													</dl>
 													<dl className="define">
@@ -271,16 +382,14 @@ const Actor = ({ ref, ...props }) => {
 														<dt>debut</dt>
 														<dd>{item.debut}</dd>
 													</dl>
-												</dd>
+												</BrowserView>
 											</dl>
-											<UxCollapse
-												entire
-											>
-												<div slot="summary">
+											<dl className="movie">
+												<dt className="subject">
 													<span className="title">Curated</span>
 													<span className="count">{item.movie.length}</span>
-												</div>
-												<div slot="details">
+												</dt>
+												<dd className="details">
 													<ul className="link">
 														{item.movie.map(item => (
 															<li
@@ -313,17 +422,16 @@ const Actor = ({ ref, ...props }) => {
 																		<i className="icon mask muted link x18" />
 																	</a>
 																	<UxButton
-																		onClick={() => handleClick(item)}
+																		onClick={() => handleMovie(item)}
 																	>
-																		<span>Details</span>
 																		<i className="icon mask muted share x18" />
 																	</UxButton>
 																</UxGroup>
 															</li>
 														))}
 													</ul>
-												</div>
-											</UxCollapse>
+												</dd>
+											</dl>
 										</UxCard>
 									);
 								})
@@ -336,4 +444,4 @@ const Actor = ({ ref, ...props }) => {
 	);
 };
 
-export default Actor;
+export default Page;
