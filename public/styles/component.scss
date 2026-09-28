@@ -1398,8 +1398,8 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor dl.actor {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor Dl Actor Subject */
 .ux-card.actor dl.actor dt.subject {display: flex; align-items: center; font-weight: 700; font-size: 2rem; line-height: 1;}
-.ux-card.actor dl.actor dt.subject a.name {display: flex; align-items: center; gap: .2rem; color: var(--text-default);}
-.ux-card.actor dl.actor dt.subject .ux-button {display: none;}
+.ux-card.actor dl.actor dt.subject .ux-button.link {display: flex; align-items: center; gap: .2rem; color: var(--text-default);}
+.ux-card.actor dl.actor dt.subject .ux-button.info {display: none;}
 /* Card Actor Dl Actor Details */
 .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .2rem;}
 /* Card Actor Define */
@@ -1433,8 +1433,8 @@ dl.define.size dd span + span::before {content: '/';}
 .ux-card.actor ul.link {display: flex; flex-direction: column; gap: .4rem;}
 /* Card Actor Link Group */
 .ux-card.actor .ux-group.link {width: 100%;}
-.ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-.ux-card.actor .ux-group.link .ux-button {margin-left: auto;}
+.ux-card.actor .ux-group.link .ux-button.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+.ux-card.actor .ux-group.link .ux-button.info {margin-left: auto;}
 
 
 
@@ -1452,8 +1452,7 @@ html.desktop .ux-card.actor dl.movie dt.subject .title,
 html.desktop .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
 /* Card Actor (Desktop) Link Group */
 html.desktop .ux-card.actor .ux-group.link {width: 100%;}
-html.desktop .ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
-html.desktop .ux-card.actor .ux-group.link .ux-button {margin-left: initial;}
+html.desktop .ux-card.actor .ux-group.link .ux-button.info {margin-left: initial;}
 
 
 
@@ -1462,9 +1461,12 @@ html.desktop .ux-card.actor .ux-group.link .ux-button {margin-left: initial;}
 /* Card Actor (Mobile) */
 html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: .8rem;}
 /* Card Actor (Mobile) Dl Actor Subject */
-html.mobile .ux-card.actor dl.actor dt.subject .ux-button {display: inline-flex; margin-left: auto;}
+html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-flex; margin-left: auto;}
 /* Card Actor (Mobile) Dl Movie */
 html.mobile .ux-card.actor dl.movie {gap: .4rem;}
+/* Card Actor (Mobile) Link Group */
+html.mobile .ux-card.actor .ux-group.link {justify-content: space-between; width: 100%;}
+html.mobile .ux-card.actor .ux-group.link .ux-button.info {margin-left: initial;}
 
 
 

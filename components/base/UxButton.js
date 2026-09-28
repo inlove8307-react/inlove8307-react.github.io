@@ -224,6 +224,27 @@ const Progress = ({ ref, ...props }) => {
 };
 
 /**
+ * <Link>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Link = ({ ref, ...props }) => {
+	return (
+		<a
+			ref={ref}
+			className={props.caseClassName}
+			href={props.href}
+			target={props.target}
+		>
+			{props.children}
+		</a>
+	);
+};
+
+/**
  * <Default>
  * [props]
  * className(String): 추가 클래스
@@ -294,6 +315,8 @@ const UxButton = ({ ref, ...props }) => {
 				return <Input ref={ref} {...props} />;
 			case 'progress':
 				return <Progress ref={ref} {...props} />;
+			case 'link':
+				return <Link ref={ref} {...props} />;
 			default:
 				return <Default ref={ref} {...props} />;
 		}

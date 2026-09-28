@@ -313,15 +313,16 @@ const Page = ({ ref, ...props }) => {
 										>
 											<dl className="actor">
 												<dt className="subject">
-													<a
-														className="name"
+													<UxButton
+														role="link"
 														href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
 														target="_blank"
 													>
 														<span>{item.name.en}</span>
 														<i className="icon mask muted link x18" />
-													</a>
+													</UxButton>
 													<UxButton
+														className="info"
 														onClick={() => handleActor(item)}
 													>
 														<i className="icon mask muted share x18" />
@@ -397,31 +398,32 @@ const Page = ({ ref, ...props }) => {
 																className="bl dot"
 															>
 																<UxGroup className="link">
-																	<a
-																		className="link"
+																	<UxButton
+																		role="link"
 																		href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${item.id}`}
 																		target="_blank"
 																	>
 																		<span>{item.name}</span>
 																		<i className="icon mask muted link x18" />
-																	</a>
-																	<a
-																		className="link"
+																	</UxButton>
+																	<UxButton
+																		role="link"
 																		href={`https://123av.com/ko/v/${item.name}`}
 																		target="_blank"
 																	>
 																		<span>123AV</span>
 																		<i className="icon mask muted link x18" />
-																	</a>
-																	<a
-																		className="link"
+																	</UxButton>
+																	<UxButton
+																		role="link"
 																		href={`https://missav123.com/ko/${item.name}`}
 																		target="_blank"
 																	>
 																		<span>MissAV</span>
 																		<i className="icon mask muted link x18" />
-																	</a>
+																	</UxButton>
 																	<UxButton
+																		className="info"
 																		onClick={() => handleMovie(item)}
 																	>
 																		<i className="icon mask muted share x18" />
