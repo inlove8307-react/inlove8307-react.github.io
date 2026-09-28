@@ -240,7 +240,7 @@ const Page = ({ ref, ...props }) => {
 		}
 
 		if (isMobile) {
-			modal.center(Popup, {
+			modal.center(Movie, {
 				caseClassName: 'movie',
 				data,
 			});
