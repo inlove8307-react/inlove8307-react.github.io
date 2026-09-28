@@ -630,7 +630,8 @@ html.desktop .ux-modal .ux-section {width: 100%;}
 html.desktop .ux-modal .ux-section.footer {padding: 1.6rem 2rem 2.4rem;}
 /* <UxModal> Center */
 .ux-modal.center {display: flex; justify-content: center; align-items: center;}
-.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); border-radius: var(--radius);}
+.ux-modal.center .ux-modal-base {width: calc(100% - var(--space) * 2); max-height: calc(100% - var(--header) * 2); border-radius: var(--radius);}
+.ux-modal.center .ux-modal-base .ux-section.main {overflow-y: auto;}
 /* <UxModal> Center Active */
 .ux-modal.center.active .ux-modal-base {transform: scale(1);}
 /* <UxModal> Center Desktop */
@@ -1390,32 +1391,23 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* Define */
-dl.define {display: flex; justify-content: space-between; gap: .8rem;}
-dl.define.column {flex-direction: column; gap: .2rem;}
-dl.define.column dd {text-align: left;}
+dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
 dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
 dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
+/* Define Column */
+dl.define.column {flex-direction: column; gap: .2rem;}
+dl.define.column dd {text-align: left;}
+/* Define Empty */
 dl.define:has(dd:empty) {display: none;}
 
 
 
 
 
-/* Count */
-.ux-group.count {display: none;}
-.ux-group.count p {font-size: 1.8rem;}
-.ux-group.count em {font-weight: 700;}
-/* Count (Desktop) */
-html.desktop .ux-group.count {display: flex;}
-/* Count (Mobile) */
-html.mobile .ux-group.count {display: none;}
-
-
-
-
-
 /* Card Actor */
-.ux-card.actor .ux-card-base {display: flex; flex-direction: column; gap: .4rem; padding: 2rem;}
+.ux-card.actor {}
+.ux-card.actor .ux-card-base {display: flex; gap: .4rem; padding: 2rem;}
+/* Card Actor Dl */
 .ux-card.actor dl.actor {display: flex; flex-direction: column; gap: .8rem;}
 .ux-card.actor dl.actor dt.subject {font-weight: 700; font-size: 2rem; line-height: 1;}
 .ux-card.actor dl.actor dt.subject a.name {display: flex; align-items: center; gap: .2rem; color: var(--text-default);}
@@ -1430,27 +1422,63 @@ html.mobile .ux-group.count {display: none;}
 .ux-card.actor dl.define.size dd {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.size dd span {display: flex; gap: .4rem;}
 .ux-card.actor dl.define.size dd span + span::before {content: '/';}
+/* Card Actor Collapse */
+.ux-card.actor .ux-collapse {}
 /* Card Actor Collapse Summary */
 .ux-card.actor .ux-collapse .ux-collapse-summary {}
-.ux-card.actor .ux-collapse .ux-collapse-summary .ux-collapse-content {gap: 1.6rem; font-weight: 500; font-size: 1.6rem;}
+.ux-card.actor .ux-collapse .ux-collapse-summary .ux-collapse-content {display: flex; gap: .4rem;}
+.ux-card.actor .ux-collapse .ux-collapse-summary .title {font-weight: 500; font-size: 1.6rem;}
+.ux-card.actor .ux-collapse .ux-collapse-summary .count {font-weight: 500; font-size: 1.6rem; color: var(--text-red);}
 /* Card Actor Collapse Details */
 .ux-card.actor .ux-collapse .ux-collapse-details {}
 .ux-card.actor .ux-collapse .ux-collapse-details .ux-collapse-content {padding-top: .4rem;}
 /* Card Actor Link */
 .ux-card.actor ul.link {display: flex; flex-direction: column; gap: .4rem;}
-.ux-card.actor ul.link li {display: flex;}
+.ux-card.actor ul.link li {}
 /* Card Actor Link Group */
 .ux-card.actor .ux-group.link {width: 100%;}
 .ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
 .ux-card.actor .ux-group.link .ux-button {margin-left: auto;}
-/* Card Actor (Mobile) */
+
+
+
+
+
+/* Card Actor (Desktop) */
+html.desktop .ux-card.actor .ux-card-base {gap: 2rem;}
+html.desktop .ux-card.actor dl.actor {width: calc(50% - 1rem);}
+html.desktop .ux-card.actor dl.define dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
+/* Card Actor (Desktop) Collapse */
+html.desktop .ux-card.actor .ux-collapse {width: calc(50% - 1rem);}
+/* Card Actor (Desktop) Collapse Summary */
+html.desktop .ux-card.actor .ux-collapse-summary .title,
+html.desktop .ux-card.actor .ux-collapse-summary .count {font-weight: 700; font-size: 2rem;}
+html.desktop .ux-card.actor .ux-collapse-summary .ux-collapse-button {pointer-events: none;}
+html.desktop .ux-card.actor .ux-collapse-summary .ux-collapse-button i.icon {display: none;}
+/* Card Actor (Desktop) Collapse Details */
+html.desktop .ux-card.actor .ux-collapse-details {max-height: none!important; height: initial!important;}
+html.desktop .ux-card.actor .ux-collapse-details .ux-collapse-content {padding-top: .8rem;}
+/* Card Actor (Desktop) Link Group */
+html.desktop .ux-card.actor .ux-group.link {width: 100%;}
+html.desktop .ux-card.actor .ux-group.link a.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-default);}
+html.desktop .ux-card.actor .ux-group.link .ux-button {margin-left: initial;}
+
+
+
+
+
+/* Group Actor (Mobile) */
 html.mobile .ux-group.actor {row-gap: 2rem;}
-html.mobile .ux-group.actor.col3 {--col: 1;}
+/* Card Actor (Mobile) */
+html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: .4rem;}
+html.mobile .ux-card.actor .ux-group.link .ux-button span {display: none;}
 
 
 
 
 
+/* Popup Movie Define */
+.ux-modal.movie dl.define dd.ellipsis {overflow: initial; white-space: initial; text-overflow: initial;}
 /* Popup Movie Cast */
 .ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
 .ux-modal.movie ul.cast li.bl.pound {color: var(--text-muted);}

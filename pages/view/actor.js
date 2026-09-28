@@ -19,10 +19,6 @@ import actor from '@/public/data/actor';
 const Popup = ({ ref, ...props }) => {
 	const data = props.data;
 
-	useEffect(() => {
-		console.log(props);
-	}, []);
-
 	return (
 		<>
 			<UxSection className="header">
@@ -192,10 +188,7 @@ const Actor = ({ ref, ...props }) => {
 				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
-						<UxGroup className="count">
-							<p>총 <em>{filterData.length}</em> 건</p>
-						</UxGroup>
-						<UxGroup className="actor col3">
+						<UxGroup className="actor col1">
 							{
 								filterData.map((item) => {
 									const { age, korean } = getAge(item.birth);
@@ -274,8 +267,8 @@ const Actor = ({ ref, ...props }) => {
 												entire
 											>
 												<div slot="summary">
-													<span>LIST</span>
-													<span>{item.movie.length}</span>
+													<span className="title">Curated</span>
+													<span className="count">{item.movie.length}</span>
 												</div>
 												<div slot="details">
 													<ul className="link">
@@ -306,12 +299,13 @@ const Actor = ({ ref, ...props }) => {
 																		href={`https://missav123.com/ko/${item.name}`}
 																		target="_blank"
 																	>
-																		<span>MISSAV</span>
+																		<span>MissAV</span>
 																		<i className="icon mask muted link x18" />
 																	</a>
 																	<UxButton
 																		onClick={() => handleClick(item)}
 																	>
+																		<span>Details</span>
 																		<i className="icon mask muted share x18" />
 																	</UxButton>
 																</UxGroup>
