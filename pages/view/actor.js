@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { isMobile, isBrowser } from "react-device-detect";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
@@ -36,27 +37,27 @@ const Popup = ({ ref, ...props }) => {
 					<UxContent>
 						<dl className="define column">
 							<dt>title</dt>
-							<dd className="ellipsis">{data.title}</dd>
+							<dd>{data.title}</dd>
 						</dl>
 						<dl className="define column">
 							<dt>story</dt>
-							<dd className="ellipsis">{data.story}</dd>
+							<dd>{data.story}</dd>
 						</dl>
 						<dl className="define column">
 							<dt>producer</dt>
-							<dd className="ellipsis">{data.producer}</dd>
+							<dd>{data.producer}</dd>
 						</dl>
 						<dl className="define column">
 							<dt>publisher</dt>
-							<dd className="ellipsis">{data.publisher}</dd>
+							<dd>{data.publisher}</dd>
 						</dl>
 						<dl className="define column">
 							<dt>series</dt>
-							<dd className="ellipsis">{data.series}</dd>
+							<dd>{data.series}</dd>
 						</dl>
 						<dl className="define column">
 							<dt>director</dt>
-							<dd className="ellipsis">{data.director}</dd>
+							<dd>{data.director}</dd>
 						</dl>
 						<dl className="define">
 							<dt>runtime</dt>
@@ -134,10 +135,19 @@ const Actor = ({ ref, ...props }) => {
 	};
 
 	const handleClick = (data) => {
-		modal.center(Popup, {
-			caseClassName: 'movie',
-			data,
-		});
+		if (isBrowser) {
+			modal.full(Popup, {
+				caseClassName: 'movie',
+				data,
+			});
+		}
+
+		if (isMobile) {
+			modal.center(Popup, {
+				caseClassName: 'movie',
+				data,
+			});
+		}
 	};
 
 	const getAge = (date) => {
