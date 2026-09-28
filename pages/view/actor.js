@@ -90,6 +90,17 @@ const Actor = ({ ref, ...props }) => {
 					</UxContent>
 				</UxArticle>
 			</UxSection>
+			<UxSection className="footer">
+				<UxArticle>
+					<UxContent>
+						<UxGroup>
+							<UxButton className="primary h3">
+								<span>확인</span>
+							</UxButton>
+						</UxGroup>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
 		</>
 	);
 };
@@ -112,33 +123,33 @@ const Movie = ({ ref, ...props }) => {
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
+						<UxGroup className="link">
+							<UxButton
+								role="link"
+								href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${data.id}`}
+								target="_blank"
+							>
+								<span>AVDBS</span>
+								<i className="icon mask muted link x18" />
+							</UxButton>
+							<UxButton
+								role="link"
+								href={`https://123av.com/ko/v/${data.name}`}
+								target="_blank"
+							>
+								<span>123AV</span>
+								<i className="icon mask muted link x18" />
+							</UxButton>
+							<UxButton
+								role="link"
+								href={`https://missav123.com/ko/${data.name}`}
+								target="_blank"
+							>
+								<span>MISSAV</span>
+								<i className="icon mask muted link x18" />
+							</UxButton>
+						</UxGroup>
 						<UxGroup className="col1 gap4">
-							<UxGroup>
-								<UxButton
-									role="link"
-									href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${data.id}`}
-									target="_blank"
-								>
-									<span>AVDBS</span>
-									<i className="icon mask muted link x18" />
-								</UxButton>
-								<UxButton
-									role="link"
-									href={`https://123av.com/ko/v/${data.name}`}
-									target="_blank"
-								>
-									<span>123AV</span>
-									<i className="icon mask muted link x18" />
-								</UxButton>
-								<UxButton
-									role="link"
-									href={`https://missav123.com/ko/${data.name}`}
-									target="_blank"
-								>
-									<span>MISSAV</span>
-									<i className="icon mask muted link x18" />
-								</UxButton>
-							</UxGroup>
 							<dl className="define column">
 								<dt>제목</dt>
 								<dd>{data.title}</dd>
@@ -211,6 +222,17 @@ const Movie = ({ ref, ...props }) => {
 					</UxContent>
 				</UxArticle>
 			</UxSection>
+			<UxSection className="footer">
+				<UxArticle>
+					<UxContent>
+						<UxGroup>
+							<UxButton className="primary h3">
+								<span>확인</span>
+							</UxButton>
+						</UxGroup>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
 		</>
 	);
 };
@@ -229,6 +251,7 @@ const Page = ({ ref, ...props }) => {
 	const handleActor = (data) => {
 		modal.center(Actor, {
 			caseClassName: 'actor',
+			footer: false,
 			data,
 		});
 	};
@@ -237,6 +260,7 @@ const Page = ({ ref, ...props }) => {
 		if (isBrowser) {
 			modal.full(Movie, {
 				caseClassName: 'movie',
+				footer: false,
 				data,
 			});
 		}
@@ -244,6 +268,7 @@ const Page = ({ ref, ...props }) => {
 		if (isMobile) {
 			modal.center(Movie, {
 				caseClassName: 'movie',
+				footer: false,
 				data,
 			});
 		}
@@ -327,7 +352,7 @@ const Page = ({ ref, ...props }) => {
 														className="info"
 														onClick={() => handleActor(item)}
 													>
-														<i className="icon mask muted share x18" />
+														<i className="icon mask muted share x20" />
 													</UxButton>
 												</dt>
 												<dd className="details">

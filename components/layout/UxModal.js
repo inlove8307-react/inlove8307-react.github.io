@@ -58,7 +58,11 @@ const UxModal = ({ ref, ...props }) => {
 		<UxContainer className="modal">
 			<AnimatePresence mode="sync">
 				{rootContext.modals.map(({id, Component, props, onClose}) => {
-					const caseClassName = classnames(baseClassName, props.baseClassName, props.caseClassName);
+					const caseClassName = classnames(baseClassName, props.baseClassName, props.caseClassName, {
+						'header': props.header != null ? props.header : true,
+						'footer': props.footer != null ? props.footer : true,
+					});
+
 					const transition = { duration: .25, ease: 'easeInOut' };
 					let current = variants['default'];
 
