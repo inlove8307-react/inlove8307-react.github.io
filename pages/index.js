@@ -27,13 +27,6 @@ export default function Home() {
 	const modal = useModal();
 	const [progress, setProgress] = useState(25);
 
-	const handleClick = ({name, link}) => {
-		modal.center(Popup, {
-			title: name,
-			link,
-		});
-	};
-
 	return (
 		<UxSection>
 			<UxArticle className="h3">
@@ -304,7 +297,7 @@ export default function Home() {
 							</UxGroup>
 							<UxGroup className="auto">
 								<UxButton
-									className="solid"
+									className="fill"
 									onClick={() => console.log('click')}
 								>
 									<span>solid</span>

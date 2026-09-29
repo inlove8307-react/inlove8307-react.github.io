@@ -900,6 +900,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.input .ux-input-submit {font-weight: 500; font-size: 1.4rem; color: var(--text-default);}
 /* <UxGroup> Role(Input) Search */
 .ux-group.input.search .ux-button {flex-grow: 1; display: flex; align-items: center; gap: .8rem; font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-group.input.search .ux-input ~ .ux-button {flex-grow: initial;}
 .ux-group.input.search.selected .ux-button {color: var(--text-default);}
 .ux-group.input.search.selected.disabled .ux-button {color: var(--text-muted);}
 /* <UxGroup> Role(Input) Select */
