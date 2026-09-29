@@ -320,39 +320,248 @@ export default function Home() {
 							</UxGroup>
 							<UxGroup className="auto">
 								<UxButton
-									onClick={() => console.log('click')}
+									role="link"
+									href="/view/guide/button"
+									target="_blank"
 								>
 									<span>링크</span>
 									<i className="icon mask arrow-right x16" />
 								</UxButton>
 							</UxGroup>
 							<UxButton
-								role="select"
-								valid={true}
-								onClick={() => console.log('click')}
-							>
-								<span>role(select)</span>
-							</UxButton>
-							<UxButton
-								role="search"
-								valid={false}
-								onClick={() => console.log('click')}
-							>
-								<span>role(search)</span>
-							</UxButton>
-							<UxButton
-								role="input"
-								readonly
-								onClick={() => console.log('click')}
-							>
-								<span>role(input)</span>
-							</UxButton>
-							<UxButton
 								role="progress"
 								progress={progress}
 								onClick={() => setProgress(75)}
 							>
-								<span>role(progress)</span>
+								<span>progress</span>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								onClick={() => console.log('click')}
+							>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								onClick={() => console.log('click')}
+							>
+								<span>SKT</span>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								readonly
+								onClick={() => console.log('click')}
+							>
+								<span>SKT</span>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								disabled
+								onClick={() => console.log('click')}
+							>
+								<span>SKT</span>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								valid={true}
+								onClick={() => console.log('click')}
+							>
+								<span>SKT</span>
+							</UxButton>
+							<UxButton
+								role="select"
+								placeholder="통신사를 선택하세요"
+								label1="통신사"
+								label2="를 선택하세요"
+								valid={false}
+								onClick={() => console.log('click')}
+							>
+								<span>SKT</span>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								onClick={() => console.log('click')}
+							>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								onClick={() => console.log('click')}
+							>
+								<span>검색어</span>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								readonly
+								onClick={() => console.log('click')}
+							>
+								<span>검색어</span>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								disabled
+								onClick={() => console.log('click')}
+							>
+								<span>검색어</span>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								valid={true}
+								onClick={() => console.log('click')}
+							>
+								<span>검색어</span>
+							</UxButton>
+							<UxButton
+								role="search"
+								placeholder="검색어를 입력하세요"
+								label1="검색어"
+								label2="를 입력하세요"
+								valid={false}
+								onClick={() => console.log('click')}
+							>
+								<span>검색어</span>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								onClick={() => console.log('click')}
+							>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								onClick={() => console.log('click')}
+							>
+								<span>이름</span>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								readonly
+								onClick={() => console.log('click')}
+							>
+								<span>이름</span>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								disabled
+								onClick={() => console.log('click')}
+							>
+								<span>이름</span>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								valid={true}
+								onClick={() => console.log('click')}
+							>
+								<span>이름</span>
+							</UxButton>
+							<UxButton
+								role="input"
+								placeholder="이름을 입력하세요"
+								label1="이름"
+								label2="을 입력하세요"
+								valid={false}
+								onClick={() => console.log('click')}
+							>
+								<span>이름</span>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								onClick={() => console.log('click')}
+							>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								onClick={() => console.log('click')}
+							>
+								<span>서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)</span>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								readonly
+								onClick={() => console.log('click')}
+							>
+								<span>서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)</span>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								disabled
+								onClick={() => console.log('click')}
+							>
+								<span>서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)</span>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								valid={true}
+								onClick={() => console.log('click')}
+							>
+								<span>서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)</span>
+							</UxButton>
+							<UxButton
+								role="address"
+								placeholder="주소를 입력하세요"
+								label1="주소"
+								label2="를 입력하세요"
+								valid={false}
+								onClick={() => console.log('click')}
+							>
+								<span>서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)</span>
 							</UxButton>
 							<UxForm>
 								<UxField>
@@ -1405,91 +1614,6 @@ export default function Home() {
 										label1="검색어"
 										label2="를 입력하세요"
 										value="김검색"
-										disabled
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										value="서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)"
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField valid={true}>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										value="서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)"
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField valid={false}>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										value="서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)"
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										value="서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)"
-										readonly
-										clear
-										onChange={(value) => console.log(value)}
-										onClear={() => console.log('clear')}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField>
-									<UxInput
-										role="address"
-										placeholder="주소를 입력하세요"
-										label1="주소"
-										label2="를 입력하세요"
-										value="서울특별시 마포구 연희로10길 5, 3층 301호 (연희동)"
 										disabled
 										clear
 										onChange={(value) => console.log(value)}

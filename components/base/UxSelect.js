@@ -66,11 +66,13 @@ const Dropdown = ({ ref, ...props }) => {
 			ref={openerRef}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', { inside: props.inside })}
+			className={classnames('select', {
+				inside: props.inside,
+				selected: label
+			})}
 			focused={value}
 		>
 			<UxButton
-				className={classnames({ selected: label })}
 				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>
@@ -140,11 +142,13 @@ const Bank = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', { inside: props.inside })}
+			className={classnames('select', {
+				inside: props.inside,
+				selected: name,
+			})}
 			focused={name}
 		>
 			<UxButton
-				className={classnames({ selected: name })}
 				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>
@@ -218,11 +222,13 @@ const Default = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', { inside: props.inside })}
+			className={classnames('select', {
+				inside: props.inside,
+				selected: label,
+			})}
 			focused={value}
 		>
 			<UxButton
-				className={classnames({ selected: label })}
 				disabled={props.readonly || props.disabled}
 				onClick={handleClick}
 			>

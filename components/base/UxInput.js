@@ -1040,7 +1040,7 @@ const Default = ({ ref, ...props }) => {
 			{
 				props.submit && !props.readonly && !props.disabled &&
 				<UxButton
-					className="tertiary small"
+					className="line"
 					onClick={handleSubmit}
 				>
 					{props.submit}

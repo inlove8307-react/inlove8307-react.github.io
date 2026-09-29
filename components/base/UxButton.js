@@ -51,13 +51,6 @@ const Tooltip = ({ ref, ...props }) => {
  */
 
 const Select = ({ ref, ...props }) => {
-	const caseClassName = classnames(props.caseClassName, {
-		placeholder: !props.children,
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-	});
-
 	const handleClick = () => {
 		!props.readonly && props.onClick && props.onClick();
 	};
@@ -67,18 +60,23 @@ const Select = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
+			className={classnames(props.role, { selected: props.children })}
+			focused={props.children}
 		>
 			<button
 				ref={ref}
 				type="button"
-				className={caseClassName}
+				className={props.baseClassName}
 				disabled={props.disabled}
 				title={props.title}
 				onClick={handleClick}
 			>
 				{props.children ? props.children : props.placeholder}
-				<i className={classnames('icon arrow-down x20 right', { vertical: props.active })} />
 			</button>
+			<i className={classnames('icon mask arrow-down x20', {
+				vertical: props.active,
+				disabled: props.readonly || props.disabled,
+			})} />
 		</UxGroup>
 	);
 };
@@ -92,13 +90,6 @@ const Select = ({ ref, ...props }) => {
  */
 
 const Search = ({ ref, ...props }) => {
-	const caseClassName = classnames(props.caseClassName, {
-		placeholder: !props.children,
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-	});
-
 	const handleClick = () => {
 		!props.readonly && props.onClick && props.onClick();
 	};
@@ -108,17 +99,56 @@ const Search = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
+			className={classnames(props.role, { selected: props.children })}
+			focused={props.children}
 		>
 			<button
 				ref={ref}
 				type="button"
-				className={caseClassName}
+				className={props.baseClassName}
 				disabled={props.disabled}
 				title={props.title}
 				onClick={handleClick}
 			>
 				{props.children ? props.children : props.placeholder}
-				<i className="icon search right x20" />
+			</button>
+			<i className={classnames('icon mask search x20', {
+				disabled: props.readonly || props.disabled,
+			})} />
+		</UxGroup>
+	);
+};
+
+/**
+ * <Address>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Address = ({ ref, ...props }) => {
+	const handleClick = () => {
+		!props.readonly && props.onClick && props.onClick();
+	};
+
+	return (
+		<UxGroup
+			{...props}
+			role="input"
+			tag="label"
+			className={classnames(props.role, { selected: props.children })}
+			focused={props.children}
+		>
+			<button
+				ref={ref}
+				type="button"
+				className={props.baseClassName}
+				title={props.title}
+				disabled={props.disabled}
+				onClick={handleClick}
+			>
+				{props.children || props.placeholder}
 			</button>
 		</UxGroup>
 	);
@@ -133,14 +163,6 @@ const Search = ({ ref, ...props }) => {
  */
 
 const Input = ({ ref, ...props }) => {
-	const baseClassName = props.baseClassName;
-	const caseClassName = classnames(props.caseClassName, {
-		placeholder: !props.value,
-		valid: props.valid === true,
-		invalid: props.valid === false,
-		readonly: props.readonly,
-	});
-
 	const handleClick = () => {
 		!props.readonly && props.onClick && props.onClick();
 	};
@@ -150,30 +172,31 @@ const Input = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
+			className={classnames({ selected: props.children })}
+			focused={props.children}
 		>
+			{
+				props.prefix &&
+				<span className={`${props.baseClassName}-prefix`}>
+					{props.prefix}
+				</span>
+			}
 			<button
 				ref={ref}
 				type="button"
-				className={caseClassName}
+				className={classnames(props.baseClassName, props.role)}
 				title={props.title}
 				disabled={props.disabled}
 				onClick={handleClick}
 			>
-				{
-					props.prefix &&
-					<span className={`${baseClassName}-prefix`}>
-						{props.prefix}
-					</span>
-				}
-				{props.value || props.placeholder}
-				{
-					props.suffix &&
-					<span className={`${baseClassName}-suffix`}>
-						{props.suffix}
-					</span>
-				}
-				{props.children}
+				{props.children || props.placeholder}
 			</button>
+			{
+				props.suffix &&
+				<span className={`${props.baseClassName}-suffix`}>
+					{props.suffix}
+				</span>
+			}
 		</UxGroup>
 	);
 };
@@ -238,6 +261,7 @@ const Link = ({ ref, ...props }) => {
 			className={props.caseClassName}
 			href={props.href}
 			target={props.target}
+			download={props.download}
 		>
 			{props.children}
 		</a>
@@ -311,6 +335,8 @@ const UxButton = ({ ref, ...props }) => {
 				return <Select ref={ref} {...props} />;
 			case 'search':
 				return <Search ref={ref} {...props} />;
+			case 'address':
+				return <Address ref={ref} {...props} />;
 			case 'input':
 				return <Input ref={ref} {...props} />;
 			case 'progress':
