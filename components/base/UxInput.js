@@ -224,7 +224,7 @@ const Resident = ({ ref, ...props }) => {
 					onChange={(event) => setValue2(event.target.value)}
 				/>
 			}
-			<Masking
+			<Mask
 				className={classnames('fill', { dash: !props.gender })}
 				value={props.gender ? value3 : value2}
 				maxLength={props.gender ? 6 : 7}
@@ -346,7 +346,7 @@ const License = ({ ref, ...props }) => {
 				disabled={props.disabled}
 				onChange={(event) => setValue2(event.target.value)}
 			/>
-			<Masking
+			<Mask
 				className="dash"
 				style={{ width: '8.2rem' }}
 				value={value3}
@@ -465,7 +465,7 @@ const Business = ({ ref, ...props }) => {
 				disabled={props.disabled}
 				onChange={(event) => setValue2(event.target.value)}
 			/>
-			<Masking
+			<Mask
 				className="dash fill"
 				value={value3}
 				maxLength={5}
@@ -536,7 +536,7 @@ const Password = ({ ref, ...props }) => {
 			className={props.role}
 			focused={value}
 		>
-			<Masking
+			<Mask
 				className="fill"
 				placeholder={props.placeholder}
 				value={value || ''}
@@ -1051,53 +1051,23 @@ const Default = ({ ref, ...props }) => {
 };
 
 /**
- * <Masking>
+ * <Mask>
  * [props]
  *
  * [event]
  *
  */
 
-const Masking = ({ ref, ...props }) => {
-	const baseClassName = 'ux-masking';
+const Mask = ({ ref, ...props }) => {
+	const baseClassName = 'ux-mask';
 	const caseClassName = classnames(baseClassName, props.className, {
 		readonly: props.readonly,
 		disabled: props.disabled
 	});
 
-	const Mask = (props) => {
-		const baseClassName = 'ux-masking';
-		const maxLength = props.maxLength || props.value.length;
-		const maskRef = useRef([]);
-		const array = (() => {
-			let result = [];
-			maskRef.current = [];
-
-			while (result.length < maxLength) {
-				result.length < props.value.length
-					? result.push(true)
-					: result.push(false);
-			}
-
-			return result;
-		})();
-
-		return (
-			<div className={`${baseClassName}-mask`}>
-				{array.map((enabled, index) => (
-					<span
-						key={index}
-						ref={(element) => maskRef.current[index] = element}
-						className={classnames(`${baseClassName}-item`, {enabled})}
-					/>
-				))}
-			</div>
-		);
-	}
-
 	const handleChange = (event) => {
 		props.onChange && props.onChange(event);
-	}
+	};
 
 	return (
 		<div
@@ -1105,9 +1075,10 @@ const Masking = ({ ref, ...props }) => {
 			className={caseClassName}
 			style={props.style}
 		>
-			<div className={`${baseClassName}-wrap`}>
-				<Mask
+			<div className={`${baseClassName}-origin`}>
+				<Bullet
 					{...props}
+					baseClassName={baseClassName}
 					value={props.value || ''}
 				/>
 				<input
@@ -1121,6 +1092,61 @@ const Masking = ({ ref, ...props }) => {
 					onChange={handleChange}
 				/>
 			</div>
+		</div>
+	);
+};
+
+/**
+ * <Bullet>
+ * [props]
+ *
+ * [event]
+ *
+ */
+
+const Bullet = ({ ref, ...props }) => {
+	const baseClassName = props.baseClassName;
+	const maxLength = props.maxLength || props.value.length;
+	const [initial, setInitial] = useState(false);
+	const bulletRef = useRef([]);
+	const array = (() => {
+		let result = [];
+		bulletRef.current = [];
+
+		while (result.length < maxLength) {
+			result.length < props.value.length
+				? result.push(true)
+				: result.push(false);
+		}
+
+		return result;
+	})();
+
+	const handleScroll = () => {
+		bulletRef.current[bulletRef.current.length - 1]?.scrollIntoView({
+			block: "nearest",
+			inline: "center",
+			behavior: "smooth",
+		});
+	};
+
+	useEffect(() => {
+		initial && handleScroll(props.value.length);
+	}, [props.value]);
+
+	useEffect(() => {
+		setInitial(true);
+	}, [])
+
+	return (
+		<div className={`${baseClassName}-bullet`}>
+			{array.map((enabled, index) => (
+				<span
+					key={index}
+					ref={(element) => bulletRef.current[index] = element}
+					className={classnames(`${baseClassName}-item`, {enabled})}
+				/>
+			))}
 		</div>
 	);
 };

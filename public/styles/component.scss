@@ -923,11 +923,11 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.input.disabled .ux-file-label {color: var(--text-muted);}
 /* <UxGroup> Role(Input) Dash */
 .ux-group.input .ux-input.dash::before,
-.ux-group.input .ux-masking.dash::before,
+.ux-group.input .ux-mask.dash::before,
 .ux-group.input .ux-select.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
 /* <UxGroup> Role(Input) Fill */
 .ux-group.input .ux-input.fill,
-.ux-group.input .ux-masking.fill,
+.ux-group.input .ux-mask.fill,
 .ux-group.input .ux-select.fill {flex-grow: 1; flex-shrink: initial;}
 /* <UxGroup> Role(Input) Inside */
 .ux-group.input.inside {display: flex; flex-direction: column; justify-content: center; position: relative; padding: initial; min-height: initial; border-radius: initial; box-shadow: initial; transition: var(--inset-transition);}
@@ -946,28 +946,28 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
-/* <UxMasking> */
-.ux-masking {overflow-x: auto; display: flex; align-items: center; gap: .8rem;}
-.ux-masking::-webkit-scrollbar {display: none;}
-/* <UxMasking> Wrap */
-.ux-masking .ux-masking-wrap {position: relative;}
-/* <UxMasking> Mask */
-.ux-masking .ux-masking-mask {display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
-.ux-masking .ux-masking-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--gray-50);}
-/* <UxMasking> Input */
-.ux-masking .ux-masking-base {padding: 0; width: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
-.ux-masking .ux-masking-base::placeholder {font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
-.ux-masking .ux-masking-base:focus,
-.ux-masking .ux-masking-base:focus-visible {outline: none;}
-.ux-masking .ux-masking-base::selection {background-color: transparent; /* WebKit/Blink Browsers */}
-.ux-masking .ux-masking-base::-moz-selection {background-color: transparent; /* Gecko Browsers */}
-/* <UxMasking> Enable */
-.ux-masking .ux-masking-item.enabled {background-color: var(--text-subtle);}
-/* <UxMasking> Readonly, Disabled */
-.ux-masking.readonly .ux-masking-item,
-.ux-masking.disabled .ux-masking-item {background-color: var(--gray-60);}
-/* <UxMasking> z-index */
-.ux-masking .ux-masking-mask {z-index: 1;}
+/* <UxMask> */
+.ux-mask {display: flex; align-items: center; gap: .8rem;}
+/* <UxMask> Origin */
+.ux-mask .ux-mask-origin {flex-grow: 1; position: relative;}
+/* <UxMask> Bullet */
+.ux-mask .ux-mask-bullet {overflow-x: auto; display: flex; align-items: center; gap: .4rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;}
+.ux-mask .ux-mask-bullet::-webkit-scrollbar {display: none;}
+.ux-mask .ux-mask-item {flex-shrink: 0; width: .8rem; height: .8rem; border-radius: 50%; background-color: var(--gray-50);}
+/* <UxMask> Input */
+.ux-mask .ux-mask-base {padding: 0; width: 100%; border: 0; background-color: transparent; color: transparent; caret-color: transparent;}
+.ux-mask .ux-mask-base::placeholder {font-weight: 700; font-size: 1.8rem; color: var(--text-disabled);}
+.ux-mask .ux-mask-base:focus,
+.ux-mask .ux-mask-base:focus-visible {outline: none;}
+.ux-mask .ux-mask-base::selection {background-color: transparent; /* WebKit/Blink Browsers */}
+.ux-mask .ux-mask-base::-moz-selection {background-color: transparent; /* Gecko Browsers */}
+/* <UxMask> Enable */
+.ux-mask .ux-mask-item.enabled {background-color: var(--text-subtle);}
+/* <UxMask> Readonly, Disabled */
+.ux-mask.readonly .ux-mask-item,
+.ux-mask.disabled .ux-mask-item {background-color: var(--gray-60);}
+/* <UxMask> z-index */
+.ux-mask .ux-mask-bullet {z-index: 1;}
 
 
 
