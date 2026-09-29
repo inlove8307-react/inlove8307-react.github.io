@@ -1549,6 +1549,19 @@ export default function Home() {
 										placeholder="검색어를 입력하세요"
 										label1="검색어"
 										label2="를 입력하세요"
+										clear
+										onChange={(value) => console.log(value)}
+										onClear={() => console.log('clear')}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxInput
+										role="search"
+										placeholder="검색어를 입력하세요"
+										label1="검색어"
+										label2="를 입력하세요"
 										value="김검색"
 										clear
 										onChange={(value) => console.log(value)}
