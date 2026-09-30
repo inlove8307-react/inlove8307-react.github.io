@@ -26,7 +26,18 @@ import Popup from "@/components/popup/PopupNew";
 
 export default function Home() {
 	const modal = useModal();
-	const [progress, setProgress] = useState(25);
+	const [progress, setProgress] = useState(0);
+	const [loaded, setLoaded] = useState(false);
+
+	const handleProgress = () => {
+		let percent = progress + 20;
+		if (percent >= 100) percent = 0;
+		setProgress(percent);
+	};
+
+	const handleLoaded = () => {
+		setLoaded(!loaded);
+	};
 
 	return (
 		<UxSection>
@@ -325,9 +336,17 @@ export default function Home() {
 							<UxButton
 								role="progress"
 								progress={progress}
-								onClick={() => setProgress(75)}
+								onClick={() => handleProgress()}
 							>
 								<span>progress</span>
+							</UxButton>
+							<UxButton
+								role="load"
+								className="primary h3"
+								loaded={loaded}
+								onClick={() => handleLoaded()}
+							>
+								<span>완료</span>
 							</UxButton>
 							<UxButton
 								role="select"

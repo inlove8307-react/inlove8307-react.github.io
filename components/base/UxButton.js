@@ -271,6 +271,46 @@ const Link = ({ ref, ...props }) => {
 };
 
 /**
+ * <Load>
+ * [props]
+ * className(String): 추가 클래스
+ * title(String): 접근성 타이틀
+ * disabled(Boolean): 비활성화 여부
+ * [event]
+ * onClick(Func): 클릭 이벤트 콜백
+ */
+
+const Load = ({ ref, ...props }) => {
+	const handleClick = (event) => {
+		props.onClick && props.onClick(event);
+	};
+
+	return (
+		<button
+			ref={ref}
+			type="button"
+			className={classnames(props.caseClassName, { loaded: props.loaded })}
+			title={props.title}
+			disabled={props.disabled}
+			loaded={props.loaded}
+			onClick={handleClick}
+		>
+			{
+				!props.loaded &&
+				<div className={`${props.baseClassName}-motion`} >
+					<div className={`${props.baseClassName}-bullet`} >
+						<div className={`${props.baseClassName}-item`} />
+						<div className={`${props.baseClassName}-item`} />
+						<div className={`${props.baseClassName}-item`} />
+					</div>
+				</div>
+			}
+			{props.loaded && props.children}
+		</button>
+	);
+};
+
+/**
  * <Default>
  * [props]
  * className(String): 추가 클래스
@@ -343,6 +383,8 @@ const UxButton = ({ ref, ...props }) => {
 				return <Input ref={ref} {...props} />;
 			case 'progress':
 				return <Progress ref={ref} {...props} />;
+			case 'load':
+				return <Load ref={ref} {...props} />;
 			case 'link':
 				return <Link ref={ref} {...props} />;
 			default:
