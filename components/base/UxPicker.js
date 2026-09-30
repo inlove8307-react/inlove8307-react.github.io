@@ -8,6 +8,7 @@ import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxButton from '@/components/base/UxButton';
@@ -327,14 +328,13 @@ const Picker = ({ ref, ...props }) => {
 						key={index}
 						ref={(el) => handleRef(el)}
 						root={listRef.current}
-						rootMargin="-120px 0px"
+						rootMargin="-140px 0px" // (height * 3) - (height / 2)
 						as="li"
 						className={`${baseClassName}-item`}
 						data-value={`${item}`}
 						onChange={handleChange}
 					>
-						<button
-							type="button"
+						<UxButton
 							className={`${baseClassName}-button`}
 							onClick={handleClick}
 						>
@@ -342,7 +342,7 @@ const Picker = ({ ref, ...props }) => {
 								{String(item).padStart(props.pad, '0')}
 								{props.suffix && props.suffix}
 							</span>
-						</button>
+						</UxButton>
 					</InView>
 				))}
 			</ul>
@@ -387,10 +387,12 @@ const Popup = ({ ref, ...props }) => {
 			<UxSection className="header">
 				<UxArticle>
 					<UxContent>
-						<h4>{props.title || '선택'}</h4>
-						<UxButton onClick={props.onClose}>
-							<i className="icon close" />
-						</UxButton>
+						<UxSubject>
+							<h4>{props.title || '선택'}</h4>
+							<UxButton onClick={props.onClose}>
+								<i className="icon close" />
+							</UxButton>
+						</UxSubject>
 					</UxContent>
 				</UxArticle>
 			</UxSection>
@@ -465,20 +467,19 @@ const UxPicker = ({ ref, ...props }) => {
 
 	return (
 		<UxButton
-			role="input"
+			role="select"
 			className={props.className}
-			placeholder={props.placeholder || '선택해주세요'}
-			value={value && props.suffix ? `${value}${props.suffix}` : value}
+			placeholder={props.placeholder}
+			label1={props.label1}
+			label2={props.label2}
+			active={active}
 			valid={props.valid}
+			icon={props.role === 'time' && 'time'}
 			readonly={props.readonly}
 			disabled={props.disabled}
 			onClick={handleClick}
 		>
-			<i className={classnames('icon right arrow-down x20', {
-				vertical: !props.role && active,
-				calendar: props.role === 'date',
-				time: props.role === 'time',
-			})} />
+			{value && `${value}${props.suffix ? props.suffix : ''}`}
 		</UxButton>
 	)
 };

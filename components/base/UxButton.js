@@ -73,8 +73,10 @@ const Select = ({ ref, ...props }) => {
 			>
 				{props.children ? props.children : props.placeholder}
 			</button>
-			<i className={classnames('icon mask arrow-down x20', {
-				vertical: props.active,
+			<i className={classnames('icon mask x20', {
+				'arrow-down': !props.icon,
+				[props.icon]: props.icon,
+				vertical: !props.icon && props.active,
 				disabled: props.readonly || props.disabled,
 			})} />
 		</UxGroup>
@@ -279,8 +281,8 @@ const Link = ({ ref, ...props }) => {
  */
 
 const Default = ({ ref, ...props }) => {
-	const handleClick = () => {
-		props.onClick && props.onClick();
+	const handleClick = (event) => {
+		props.onClick && props.onClick(event);
 	};
 
 	return (

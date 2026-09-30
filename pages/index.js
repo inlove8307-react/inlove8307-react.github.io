@@ -20,6 +20,7 @@ import UxButton from "@/components/base/UxButton";
 import UxCollapse from "@/components/base/UxCollapse";
 import UxTab from "@/components/base/UxTab";
 import UxPanel from "@/components/base/UxPanel";
+import UxPicker from "@/components/base/UxPicker";
 /* POPUP */
 import Popup from "@/components/popup/PopupNew";
 
@@ -2124,6 +2125,331 @@ export default function Home() {
 										clear
 										onChange={(value) => console.log(value)}
 										onClear={() => console.log('clear')}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										data={['2000', '2005', '2010', '2015', '2020', '2025']}
+										onChange={(value) => console.log(value)}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2026"
+										onChange={(value) => console.log(value)}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2026"
+										value="2025"
+										onChange={(value) => console.log(value)}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={true}>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2025"
+										value="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={false}>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2025"
+										value="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2025"
+										value="2025"
+										readonly
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										min="2010"
+										max="2025"
+										value="2025"
+										disabled
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+										value="2025.08.15"
+										year="2025"
+										month="8"
+										date="15"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={true}>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={false}>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										readonly
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										min="2010"
+										max="2025"
+										value="2025.08.01"
+										disabled
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										opts={['year']}
+										min="2010"
+										max="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="연월을 선택해주세요"
+										label1="연월"
+										label2="을 선택해주세요"
+										opts={['year', 'month']}
+										min="2010"
+										max="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="date"
+										placeholder="날짜를 선택해주세요"
+										label1="날짜"
+										label2="를 선택해주세요"
+										opts={['year', 'month', 'date']}
+										min="2010"
+										max="2025"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										value="12:34:56"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={true}>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										value="12:34:56"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField valid={false}>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										value="12:34:56"
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										value="12:34:56"
+										readonly
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										value="12:34:56"
+										disabled
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										opts={['hour']}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										opts={['hour', 'minute']}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										opts={['hour', 'minute', 'second']}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxPicker
+										role="time"
+										placeholder="시간을 선택해주세요"
+										label1="시간"
+										label2="을 선택해주세요"
+										opts={['half', 'hour', 'minute', 'second']}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
