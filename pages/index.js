@@ -346,7 +346,7 @@ export default function Home() {
 								loaded={loaded}
 								onClick={() => handleLoaded()}
 							>
-								<span>완료</span>
+								<span>Loaded</span>
 							</UxButton>
 							<UxButton
 								role="select"
