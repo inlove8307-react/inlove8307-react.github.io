@@ -823,7 +823,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-button.load .ux-button-item {flex-grow: 0; flex-shrink: 0; flex-basis: auto; position: relative; width: var(--size); height: var(--size); border-radius: 50%; transition: background-color 0.3s ease;}
 /* <UxButton> Role(Load) Animation */
 .ux-button.load .ux-button-item {
-	animation-name: color-morth-button;
+	animation-name: load-bullet-color;
 	animation-duration: var(--duration);
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
@@ -831,12 +831,12 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-button.load .ux-button-item:nth-child(1) {animation-delay: calc(var(--duration) * .1);}
 .ux-button.load .ux-button-item:nth-child(2) {animation-delay: calc(var(--duration) * .3);}
 .ux-button.load .ux-button-item:nth-child(3) {animation-delay: calc(var(--duration) * .5);}
-@keyframes color-morth-button {
+@keyframes load-bullet-color {
 	0%,
-	100% {background-color: var(--primary-20); }
-	25% {background-color: var(--primary-40); }
-	50% {background-color: var(--primary-60); }
-	75% {background-color: var(--primary-80); }
+	100% {background-color: var(--primary-20);}
+	25% {background-color: var(--primary-40);}
+	50% {background-color: var(--primary-60);}
+	75% {background-color: var(--primary-80);}
 }
 
 
