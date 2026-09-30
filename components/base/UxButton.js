@@ -60,8 +60,9 @@ const Select = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames(props.role, { selected: props.children })}
+			className={classnames(props.role, props.className, { selected: props.children })}
 			focused={props.children}
+			inside={props.inside}
 		>
 			<button
 				ref={ref}
@@ -101,8 +102,9 @@ const Search = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames(props.role, { selected: props.children })}
+			className={classnames(props.role, props.className, { selected: props.children })}
 			focused={props.children}
+			inside={props.inside}
 		>
 			<button
 				ref={ref}
@@ -139,8 +141,9 @@ const Address = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames(props.role, { selected: props.children })}
+			className={classnames(props.role, props.className, { selected: props.children })}
 			focused={props.children}
+			inside={props.inside}
 		>
 			<button
 				ref={ref}
@@ -174,8 +177,9 @@ const Input = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames({ selected: props.children })}
+			className={classnames(props.role, props.classname, { selected: props.children })}
 			focused={props.children}
+			inside={props.inside}
 		>
 			{
 				props.prefix &&

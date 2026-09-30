@@ -66,11 +66,9 @@ const Dropdown = ({ ref, ...props }) => {
 			ref={openerRef}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', {
-				inside: props.inside,
-				selected: label
-			})}
+			className={classnames('select', props.className, { selected: label })}
 			focused={value}
+			inside={props.inside}
 		>
 			<UxButton
 				disabled={props.readonly || props.disabled}
@@ -143,11 +141,12 @@ const Bank = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', {
+			className={classnames('select', props.className, {
 				inside: props.inside,
 				selected: name,
 			})}
 			focused={name}
+			inside={props.inside}
 		>
 			<UxButton
 				disabled={props.readonly || props.disabled}
@@ -223,11 +222,9 @@ const Default = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag={!props.inside && 'label'}
-			className={classnames('select', {
-				inside: props.inside,
-				selected: label,
-			})}
+			className={classnames('select', props.className, { selected: label })}
 			focused={value}
+			inside={props.inside}
 		>
 			<UxButton
 				disabled={props.readonly || props.disabled}

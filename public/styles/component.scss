@@ -869,7 +869,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.input {display: flex; flex-direction: column; justify-content: center; position: relative; padding: 1.2rem 2rem; border-radius: 1.6rem; box-shadow: var(--inset); transition: var(--inset-transition); transform: translateZ(0);}
 .ux-group.input .ux-group-placeholder {display: flex; align-items: center; position: absolute; z-index: 2; top: 50%; left: 50%; padding: 1rem 1.8rem; width: calc(100% - .4rem); height: calc(100% - .4rem); border-radius: 1.6rem; background-color: var(--background-default); font-weight: 700; font-size: 1.8rem; color: var(--text-disabled); transform: translate(-50%, -50%);}
 .ux-group.input .ux-group-label {display: flex; align-items: center; height: 2.4rem; font-weight: 500; font-size: 1.4rem; color: var(--text-muted);}
-.ux-group.input .ux-group-blend {display: flex; align-items: center; gap: .8rem; min-height: 3.2rem;}
+.ux-group.input .ux-group-blend {display: flex; align-items: center; gap: .8rem; min-height: 3.2rem; width: 100%;}
 .ux-group.input .ux-group-blend > * {flex-shrink: 0;}
 /* <UxGroup> Role(Input) Placeholder Motion */
 .ux-group.input.focused .ux-group-placeholder {animation-name: input-placeholder-hidden; animation-duration: .1s; animation-direction: alternate; animation-fill-mode: forwards; animation-iteration-count: 1; animation-timing-function: linear; background-color: transparent;}
@@ -959,9 +959,11 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* <UxGroup> Role(Input) Fill */
 .ux-group.input .ux-input.fill,
 .ux-group.input .ux-mask.fill,
-.ux-group.input .ux-select.fill {flex-grow: 1; flex-shrink: initial;}
+.ux-group.input .ux-button.fill,
+.ux-group.input.inside.fill,
+.ux-group.input.inside.select.fill {flex-grow: 1; flex-shrink: initial!important;}
 /* <UxGroup> Role(Input) Inside */
-.ux-group.input.inside {display: flex; flex-direction: column; justify-content: center; position: relative; padding: initial; min-height: initial; border-radius: initial; box-shadow: initial; transition: var(--inset-transition);}
+.ux-group.input.inside {display: flex; flex-direction: column; justify-content: center; position: relative; padding: initial; min-height: initial; border-radius: initial; box-shadow: initial;}
 /* <UxGroup> Role(Input) Gap */
 .ux-group.input.gap4 {--gap: .4rem;}
 .ux-group.input.gap8 {--gap: .8rem;}
@@ -971,7 +973,8 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.input.col1 {--col: 1;}
 .ux-group.input.col2 {--col: 2;}
 .ux-group.input.col3 {--col: 3;}
-.ux-group.input[class*=col] > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
+.ux-group.input.col4 {--col: 4;}
+.ux-group.input[class*=col] > .ux-group-blend > * {width: calc((100% / var(--col)) - var(--gap) + (var(--gap) / var(--col)));}
 
 
 

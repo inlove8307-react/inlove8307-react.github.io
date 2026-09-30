@@ -479,6 +479,7 @@ const UxPicker = ({ ref, ...props }) => {
 			icon={props.role === 'time' && 'time'}
 			readonly={props.readonly}
 			disabled={props.disabled}
+			inside={props.inside}
 			onClick={handleClick}
 		>
 			{value && `${value}${props.suffix ? props.suffix : ''}`}

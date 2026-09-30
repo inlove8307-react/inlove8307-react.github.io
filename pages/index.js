@@ -2497,6 +2497,57 @@ export default function Home() {
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
 								</UxField>
+								<UxField>
+									<UxGroup
+										role="input"
+										placeholder="날짜/시간을 선택하세요"
+										label1="날짜/시간"
+										label2="을 선택하세요"
+									>
+										<UxPicker
+											role="date"
+											className="fill"
+											placeholder="0000.00.00"
+											min="2010"
+											max="2025"
+											inside
+										/>
+										<UxPicker
+											role="time"
+											className="dash fill"
+											placeholder="00:00:00"
+											inside
+										/>
+									</UxGroup>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+								<UxField>
+									<UxGroup
+										role="input"
+										placeholder="검색어를 입력하세요"
+										label1="검색어"
+										label2="를 선택하세요"
+									>
+										<UxSelect
+											placeholder="분류"
+											inside
+										>
+											<UxOption value="0">제목</UxOption>
+											<UxOption value="1">내용</UxOption>
+										</UxSelect>
+										<UxInput
+											className="fill"
+											placeholder="검색어를 입력하세요"
+											inside
+										/>
+										<UxButton>
+											<i className="icon mask search" />
+										</UxButton>
+									</UxGroup>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
 							</UxForm>
 						</UxContent>
 					</UxArticle>

@@ -74,8 +74,9 @@ const Phone = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value1 || value2 || value3}
+			inside={props.inside}
 		>
 			{
 				props.carrier &&
@@ -200,8 +201,9 @@ const Resident = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value1 || value2 || value3}
+			inside={props.inside}
 		>
 			<Input
 				style={{ width: '6.8rem'}}
@@ -325,8 +327,9 @@ const License = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value1 || value2 || value3 || value4}
+			inside={props.inside}
 		>
 			<Input
 				style={{ width: '2.2rem' }}
@@ -444,8 +447,9 @@ const Business = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value1 || value2 || value3}
+			inside={props.inside}
 		>
 			<Input
 				style={{ width: '3.5rem' }}
@@ -534,8 +538,9 @@ const Password = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value}
+			inside={props.inside}
 		>
 			<Mask
 				className="fill"
@@ -592,8 +597,9 @@ const Search = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value}
+			inside={props.inside}
 		>
 			<Input
 				className="fill"
@@ -652,8 +658,9 @@ const Address = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames(props.role, { selected: value })}
+			className={classnames(props.role, props.className, { selected: value })}
 			focused={value}
+			inside={props.inside}
 		>
 			<UxButton
 				onClick={handleClick}
@@ -702,8 +709,9 @@ const DatePicker = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value}
+			inside={props.inside}
 		>
 			<Input
 				className="fill"
@@ -774,8 +782,9 @@ const DateRange = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={from || to}
+			inside={props.inside}
 		>
 			<Input
 				className="fill"
@@ -869,8 +878,9 @@ const Textarea = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={props.role}
+			className={classnames(props.role, props.className)}
 			focused={value}
+			inside={props.inside}
 		>
 			<textarea
 				ref={inputRef}
@@ -939,8 +949,9 @@ const File = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
-			className={classnames(props.role, { selected: value })}
+			className={classnames(props.role, props.className, { selected: value })}
 			focused={value}
+			inside={props.inside}
 		>
 			<input
 				type="file"
@@ -1009,7 +1020,9 @@ const Default = ({ ref, ...props }) => {
 			{...props}
 			role="input"
 			tag="label"
+			className={classnames(props.role, props.className)}
 			focused={value}
+			inside={props.inside}
 		>
 			{
 				props.prefix &&

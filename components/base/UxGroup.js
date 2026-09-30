@@ -204,6 +204,7 @@ const Input = ({ ref, ...props }) => {
 				disabled: props.disabled,
 				label: props.label1,
 				focused: focused || props.focused,
+				inside: props.inside,
 			})}
 			onFocus={handleFocus}
 			onClick={handleClick}
