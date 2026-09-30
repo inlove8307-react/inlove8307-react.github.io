@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import { isBrowser, isMobile } from 'react-device-detect';
 import useModal from '@/hook/useModal';
 import classnames from 'classnames';
 /* COMPONENT */
@@ -674,7 +675,7 @@ const Address = ({ ref, ...props }) => {
 
 const DatePicker = ({ ref, ...props }) => {
 	const modal = useModal();
-	const popup = modal.bottom;
+	const popup = isBrowser ? modal.center : modal.bottom;
 	const [value, setValue] = useState(props.value || '');
 
 	const handleClick = async () => {
@@ -735,7 +736,7 @@ const DatePicker = ({ ref, ...props }) => {
 
 const DateRange = ({ ref, ...props }) => {
 	const modal = useModal();
-	const popup = modal.bottom;
+	const popup = isBrowser ? modal.center : modal.bottom;
 	const [from, setFrom] = useState(props.from || '');
 	const [to, setTo] = useState(props.to || '');
 
@@ -1126,7 +1127,7 @@ const Bullet = ({ ref, ...props }) => {
 		bulletRef.current[bulletRef.current.length - 1]?.scrollIntoView({
 			block: "nearest",
 			inline: "center",
-			behavior: "smooth",
+			behavior: "auto",
 		});
 	};
 

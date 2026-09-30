@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { InView } from 'react-intersection-observer';
 import { getDate, endOfMonth, add } from 'date-fns';
+import { isBrowser, isMobile } from 'react-device-detect';
 import classnames from 'classnames';
 import useModal from "@/hook/useModal";
 /* LAYOUT */
@@ -439,6 +440,7 @@ const Popup = ({ ref, ...props }) => {
 
 const UxPicker = ({ ref, ...props }) => {
 	const modal = useModal();
+	const popup = isBrowser ? modal.center: modal.bottom;
 	const [value, setValue] = useState(props.value || '');
 	const [active, setActive] = useState(false);
 
@@ -446,7 +448,7 @@ const UxPicker = ({ ref, ...props }) => {
 		props.onClick && props.onClick();
 		setActive(true);
 
-		const result = await modal.bottom(Popup, {
+		const result = await popup(Popup, {
 			...props,
 			value,
 		});

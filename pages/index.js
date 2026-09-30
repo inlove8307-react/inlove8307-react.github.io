@@ -2177,6 +2177,7 @@ export default function Home() {
 										min="2010"
 										max="2025"
 										value="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2190,6 +2191,7 @@ export default function Home() {
 										min="2010"
 										max="2025"
 										value="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2204,6 +2206,7 @@ export default function Home() {
 										max="2025"
 										value="2025"
 										readonly
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2218,6 +2221,7 @@ export default function Home() {
 										max="2025"
 										value="2025"
 										disabled
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2230,6 +2234,7 @@ export default function Home() {
 										label2="를 선택해주세요"
 										min="2010"
 										max="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2246,6 +2251,7 @@ export default function Home() {
 										year="2025"
 										month="8"
 										date="15"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2259,6 +2265,7 @@ export default function Home() {
 										min="2010"
 										max="2025"
 										value="2025.08.01"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2272,6 +2279,7 @@ export default function Home() {
 										min="2010"
 										max="2025"
 										value="2025.08.01"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2286,6 +2294,7 @@ export default function Home() {
 										max="2025"
 										value="2025.08.01"
 										readonly
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2300,6 +2309,7 @@ export default function Home() {
 										max="2025"
 										value="2025.08.01"
 										disabled
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2313,6 +2323,7 @@ export default function Home() {
 										opts={['year']}
 										min="2010"
 										max="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2326,6 +2337,7 @@ export default function Home() {
 										opts={['year', 'month']}
 										min="2010"
 										max="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2339,6 +2351,7 @@ export default function Home() {
 										opts={['year', 'month', 'date']}
 										min="2010"
 										max="2025"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2349,6 +2362,7 @@ export default function Home() {
 										placeholder="시간을 선택해주세요"
 										label1="시간"
 										label2="을 선택해주세요"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2360,6 +2374,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										value="12:34:56"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2371,6 +2386,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										value="12:34:56"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2382,6 +2398,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										value="12:34:56"
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2394,6 +2411,7 @@ export default function Home() {
 										label2="을 선택해주세요"
 										value="12:34:56"
 										readonly
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2406,6 +2424,7 @@ export default function Home() {
 										label2="을 선택해주세요"
 										value="12:34:56"
 										disabled
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2417,6 +2436,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										opts={['hour']}
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2428,6 +2448,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										opts={['hour', 'minute']}
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2439,6 +2460,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										opts={['hour', 'minute', 'second']}
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
@@ -2450,6 +2472,7 @@ export default function Home() {
 										label1="시간"
 										label2="을 선택해주세요"
 										opts={['half', 'hour', 'minute', 'second']}
+										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>

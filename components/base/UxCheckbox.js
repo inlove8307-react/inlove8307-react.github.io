@@ -34,10 +34,6 @@ const Switch = ({ ref, ...props }) => {
 		}
 	}, [props.checked]);
 
-	useEffect(() => {
-		console.log(props.caseClassName);
-	}, []);
-
 	return (
 		<div
 			ref={ref}
@@ -131,7 +127,6 @@ const UxCheckbox = ({ ref, ...props }) => {
 	});
 
 	const getSlot = () => {
-		console.log('checkbox role', caseClassName);
 		Object.assign(props, {
 			baseClassName,
 			caseClassName,

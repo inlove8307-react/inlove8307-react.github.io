@@ -102,6 +102,7 @@ const Dropdown = ({ ref, ...props }) => {
 
 const Bank = ({ ref, ...props }) => {
 	const modal = useModal();
+	const popup = isBrowser ? modal.center : modal.bottom;
 	const [sector, setSector] = useState(props.sector);
 	const [code, setCode] = useState(props.code);
 	const [name, setName] = useState();
@@ -113,7 +114,7 @@ const Bank = ({ ref, ...props }) => {
 		setActive(true);
 		props.onClick && props.onClick(event);
 
-		result = await modal.bottom(PopupBank, {
+		result = await popup(PopupBank, {
 			title: props.label1,
 			sector,
 			code
