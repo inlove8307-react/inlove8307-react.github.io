@@ -74,9 +74,9 @@ const Select = ({ ref, ...props }) => {
 			>
 				{props.children ? props.children : props.placeholder}
 			</button>
-			<i className={classnames('icon mask x20', {
-				'arrow-down': !props.icon,
-				[props.icon]: props.icon,
+			<i className={classnames('icon mask', {
+				'arrow-down x20': !props.icon,
+				[`${props.icon} x24`]: props.icon,
 				vertical: !props.icon && props.active,
 				disabled: props.readonly || props.disabled,
 			})} />
