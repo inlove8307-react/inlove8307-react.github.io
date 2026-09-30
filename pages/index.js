@@ -30,8 +30,8 @@ export default function Home() {
 	const [loaded, setLoaded] = useState(false);
 
 	const handleProgress = () => {
-		let percent = progress + 20;
-		if (percent >= 100) percent = 0;
+		let percent = progress + 25;
+		if (percent > 100) percent = 0;
 		setProgress(percent);
 	};
 
@@ -336,9 +336,10 @@ export default function Home() {
 							<UxButton
 								role="progress"
 								progress={progress}
+								loaded={progress === 100}
 								onClick={() => handleProgress()}
 							>
-								<span>progress</span>
+								<span>Loaded</span>
 							</UxButton>
 							<UxButton
 								role="load"

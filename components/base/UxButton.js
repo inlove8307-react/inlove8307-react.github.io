@@ -226,13 +226,13 @@ const Progress = ({ ref, ...props }) => {
 		<button
 			ref={ref}
 			type="button"
-			className={props.caseClassName}
+			className={classnames(props.caseClassName, { loaded: props.loaded })}
 			title={props.title}
 			disabled={props.disabled}
 			onClick={handleClick}
 		>
 			<span className={`${props.baseClassName}-base`}>
-				{props.children}
+				{`${progress}%`}
 			</span>
 			<span className={`${props.baseClassName}-track`} >
 				<span
@@ -240,7 +240,8 @@ const Progress = ({ ref, ...props }) => {
 					style={{ clipPath: `inset(0 ${100 - progress}% 0 0 round 1.6rem)` }}
 				>
 					<span className={`${props.baseClassName}-base inverse`} >
-						{props.children}
+						{!props.loaded && `${progress}%`}
+						{props.loaded && props.children}
 					</span>
 				</span>
 			</span>
