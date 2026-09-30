@@ -443,6 +443,7 @@ const UxPicker = ({ ref, ...props }) => {
 	const popup = isBrowser ? modal.center: modal.bottom;
 	const [value, setValue] = useState(props.value || '');
 	const [active, setActive] = useState(false);
+	const [icon, setIcon] = useState('');
 
 	const handleClick = async () => {
 		props.onClick && props.onClick();
@@ -467,6 +468,13 @@ const UxPicker = ({ ref, ...props }) => {
 		}
 	}, [props.value]);
 
+	useEffect(() => {
+		switch (props.role) {
+			case 'date': setIcon('calendar'); break;
+			case 'time': setIcon('time'); break;
+		}
+	}, [props.role]);
+
 	return (
 		<UxButton
 			role="select"
@@ -476,7 +484,7 @@ const UxPicker = ({ ref, ...props }) => {
 			label2={props.label2}
 			active={active}
 			valid={props.valid}
-			icon={props.role === 'time' && 'time'}
+			icon={icon}
 			readonly={props.readonly}
 			disabled={props.disabled}
 			inside={props.inside}

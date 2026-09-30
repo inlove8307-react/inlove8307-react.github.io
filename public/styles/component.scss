@@ -955,13 +955,13 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* <UxGroup> Role(Input) Dash */
 .ux-group.input .ux-input.dash::before,
 .ux-group.input .ux-mask.dash::before,
-.ux-group.input .ux-select.dash::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
+.ux-group.input .ux-select.dash::before,
+.ux-group.input.inside.dash .ux-group-blend::before {content: ''; flex-shrink: 0; width: 6px; height: 2px; background-color: var(--light3);}
 /* <UxGroup> Role(Input) Fill */
 .ux-group.input .ux-input.fill,
 .ux-group.input .ux-mask.fill,
 .ux-group.input .ux-button.fill,
-.ux-group.input.inside.fill,
-.ux-group.input.inside.select.fill {flex-grow: 1; flex-shrink: initial!important;}
+.ux-group.input.inside.fill {flex-grow: 1; flex-shrink: initial!important;}
 /* <UxGroup> Role(Input) Inside */
 .ux-group.input.inside {display: flex; flex-direction: column; justify-content: center; position: relative; padding: initial; min-height: initial; border-radius: initial; box-shadow: initial;}
 /* <UxGroup> Role(Input) Gap */
