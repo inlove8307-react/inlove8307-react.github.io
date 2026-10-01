@@ -65,7 +65,10 @@ const UxHeader = ({ ref, ...props }) => {
 							</UxButton>
 							<UxButton
 								className="home"
-								onClick={() => router.push('/')}
+								onClick={() => {
+									setStatus(false);
+									router.push('/');
+								}}
 							>
 								<i className="icon mask home" />
 							</UxButton>
