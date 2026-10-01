@@ -26,18 +26,6 @@ import Popup from "@/components/popup/PopupNew";
 
 export default function Home() {
 	const modal = useModal();
-	const [progress, setProgress] = useState(0);
-	const [loaded, setLoaded] = useState(false);
-
-	const handleProgress = () => {
-		let percent = progress + 25;
-		if (percent > 100) percent = 0;
-		setProgress(percent);
-	};
-
-	const handleLoaded = () => {
-		setLoaded(!loaded);
-	};
 
 	return (
 		<UxSection>

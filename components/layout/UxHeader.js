@@ -57,8 +57,17 @@ const UxHeader = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxContent className="row space">
 						<UxGroup>
-							<UxButton onClick={() => setStatus(!status)}>
-								<i className="icon menu" />
+							<UxButton
+								className="menu"
+								onClick={() => setStatus(!status)}
+							>
+								<i className="icon mask menu" />
+							</UxButton>
+							<UxButton
+								className="home"
+								onClick={() => router.push('/')}
+							>
+								<i className="icon mask home" />
 							</UxButton>
 						</UxGroup>
 					</UxContent>
