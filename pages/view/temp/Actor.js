@@ -327,7 +327,10 @@ const Page = ({ ref, ...props }) => {
 					/>
 				</UxSubject>
 				<UxArticle className="h4 space">
+					{/* <UxSubject>
+					</UxSubject> */}
 					<UxContent>
+						<p className="fw500">총 <em className="fw600 red">{filterData.length}</em> 건</p>
 						<UxGroup className="actor col1">
 							{
 								filterData.map((data) => {

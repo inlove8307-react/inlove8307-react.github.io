@@ -629,50 +629,6 @@ const Search = ({ ref, ...props }) => {
 };
 
 /**
- * <Address>
- * [props]
- *
- * [event]
- *
- */
-
-const Address = ({ ref, ...props }) => {
-	const [value, setValue] = useState(props.value || '');
-
-	const handleClick = (event) => {
-		props.onClick && props.onClick(event);
-	}
-
-	useEffect(() => {
-		props.onChange && props.onChange(value);
-	}, [value]);
-
-	useEffect(() => {
-		if (typeof props.value === 'string' && props.value !== value) {
-			setValue(props.value);
-		}
-	}, [props.value]);
-
-	return (
-		<UxGroup
-			{...props}
-			role="input"
-			tag="label"
-			className={classnames(props.role, props.className, { selected: value })}
-			focused={value}
-			inside={props.inside}
-		>
-			<UxButton
-				onClick={handleClick}
-				disabled={props.readonly || props.disabled}
-			>
-				{ value ? value : props.placeholder }
-			</UxButton>
-		</UxGroup>
-	)
-};
-
-/**
  * <DatePicker>
  * [props]
  *
@@ -1267,12 +1223,8 @@ const UxInput = ({ ref, ...props }) => {
 		});
 
 		switch (props.role) {
-			case 'file':
-				return <File {...props} />;
 			case 'password':
 				return <Password {...props} />;
-			case 'textarea':
-				return <Textarea {...props} />;
 			case 'phone':
 				return <Phone {...props} />;
 			case 'resident':
@@ -1281,14 +1233,16 @@ const UxInput = ({ ref, ...props }) => {
 				return <License {...props} />;
 			case 'business':
 				return <Business {...props} />;
-			case 'search':
-				return <Search {...props} />;
-			case 'address':
-				return <Address {...props} />;
 			case 'datepicker':
 				return <DatePicker {...props} />;
 			case 'daterange':
 				return <DateRange {...props} />;
+			case 'textarea':
+				return <Textarea {...props} />;
+			case 'file':
+				return <File {...props} />;
+			case 'search':
+				return <Search {...props} />;
 			default:
 				return <Default {...props} />;
 		};
