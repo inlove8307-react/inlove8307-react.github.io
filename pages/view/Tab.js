@@ -59,7 +59,7 @@ export default function Guide() {
 							<h4>default</h4>
 						</UxSubject>
 						<UxContent>
-							<UxTab>
+							<UxTab className="scroll">
 								<UxPanel>
 									<div slot="summary">summary1</div>
 									<div slot="details">details1</div>
@@ -116,7 +116,7 @@ export default function Guide() {
 
 					<UxArticle className="h4 space">
 						<UxSubject>
-							<h4>chip</h4>
+							<h4>.chip</h4>
 						</UxSubject>
 						<UxContent>
 							<UxTab className="chip subtle scroll">
