@@ -1254,17 +1254,17 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* <UxPagination> */
-.ux-pagination {--size: 2.4rem; --gap: .4rem;}
-.ux-pagination .ux-pagination-base {display: flex; justify-content: center; align-items: center;}
+.ux-pagination {--size: 3.2rem; --gap: 1.2rem;}
+.ux-pagination .ux-pagination-base {display: flex; justify-content: center; align-items: center; gap: var(--gap);}
 /* <UxPagination> */
-.ux-pagination .ux-pagination-page {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; padding: 0 calc(var(--gap)); height: var(--size); color: var(--light3);}
+.ux-pagination .ux-pagination-page {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: var(--size); height: var(--size); border-radius: .8rem; background-color: var(--fill-disabled);}
 /* <UxPagination> Selected */
-.ux-pagination .ux-pagination-page.selected {font-weight: 800; color: var(--brand-blue); pointer-events: none;}
+.ux-pagination .ux-pagination-page.selected {background-color: var(--primary-80); font-weight: 800; color: var(--text-inverse); pointer-events: none;}
 /* <UxPagination> Disabled */
 .ux-pagination .ux-pagination-first,
 .ux-pagination .ux-pagination-prev,
 .ux-pagination .ux-pagination-next,
-.ux-pagination .ux-pagination-last {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: var(--size); height: var(--size);}
+.ux-pagination .ux-pagination-last {flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: 2rem; height: var(--size);}
 /* <UxPagination> Disabled */
 .ux-pagination .ux-pagination-first.disabled,
 .ux-pagination .ux-pagination-prev.disabled,
