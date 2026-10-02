@@ -155,6 +155,16 @@ export default function Guide() {
 									<p slot="message">도움말</p>
 									<p slot="valid">유효성</p>
 								</UxField>
+							</UxForm>
+						</UxContent>
+					</UxArticle>
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:opts</h4>
+						</UxSubject>
+						<UxContent>
+							<UxForm>
 								<UxField>
 									<UxPicker
 										role="date"

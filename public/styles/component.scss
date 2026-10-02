@@ -1227,9 +1227,9 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab.synced::before,
 .ux-tab.synced::after {display: none;}
 .ux-tab.synced .ux-tab-summary {position: sticky; top: var(--header); left: 0; z-index: 1; background-color: var(--background-default);}
-.ux-tab.synced .ux-panel {display: block; height: 50vh;}
+.ux-tab.synced .ux-panel {display: block;}
 /* <UxTab> Synced Example */
-.ux-tab.synced .ux-panel {height: 50vh;}
+.ux-tab.synced .ux-panel {display: flex; justify-content: center; align-items: center; height: 100vh;}
 .ux-tab.synced .ux-panel[data-index='0'] {background-color: var(--gray-5);}
 .ux-tab.synced .ux-panel[data-index='1'] {background-color: var(--gray-10);}
 .ux-tab.synced .ux-panel[data-index='2'] {background-color: var(--gray-5);}
@@ -1324,12 +1324,13 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* <UxSlider> */
-.ux-slider {--range-height: .6rem; --range-radius: calc(var(--range-height) / 2); --thumb-width: 2.4rem; --thumb-radius: calc(var(--thumb-width) / 2); display: flex; flex-direction: column; position: relative; width: 100%; height: var(--thumb-width);}
+.ux-slider {--range-height: .6rem; --range-radius: calc(var(--range-height) / 2); --thumb-width: 2.4rem; --thumb-radius: calc(var(--thumb-width) / 2);}
+.ux-slider {display: flex; flex-direction: column; position: relative; width: 100%; height: var(--thumb-width);}
 .ux-slider .ux-slider-base {position: relative; top: 50%; left: 0; transform: translateY(-50%);}
-.ux-slider .ux-slider-input[type=range] {-webkit-appearance: none; appearance: none; position: absolute; top: 50%; width: 100%; height: var(--range-height); border-radius: var(--range-radius); background-color: var(--light1); transform: translateY(-50%) translateZ(0); pointer-events: none;}
-.ux-slider .ux-slider-input[type=range].from { height: 0;}
-.ux-slider .ux-slider-input[type=range]::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
-.ux-slider .ux-slider-input[type=range]::-moz-range-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--light0); box-shadow: var(--inset-color-focus); pointer-events: all; cursor: pointer;}
+.ux-slider .ux-slider-input[type=range] {-webkit-appearance: none; appearance: none; position: absolute; top: 50%; width: 100%; height: var(--range-height); border-radius: var(--range-radius); background-color: var(--background-muted); transform: translateY(-50%) translateZ(0); pointer-events: none;}
+.ux-slider .ux-slider-input[type=range].from {height: 0;}
+.ux-slider .ux-slider-input[type=range]::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--background-default); box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .15); pointer-events: all; cursor: pointer;}
+.ux-slider .ux-slider-input[type=range]::-moz-range-thumb {-webkit-appearance: none; appearance: none; width: var(--thumb-width); height: var(--thumb-width); border: 0; border-radius: var(--thumb-radius); background-color: var(--background-default); box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .15); pointer-events: all; cursor: pointer;}
 /* <UxSlider> z-index */
 .ux-slider .ux-slider-base {z-index: 0;}
 .ux-slider .ux-slider-input[type=range].from {z-index: 1;}
@@ -1351,9 +1352,9 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-progress .ux-progress-track {position: relative;}
 .ux-progress .ux-progress-stack,
 .ux-progress .ux-progress-gauge {position: absolute; top: 0; left: 0;}
-.ux-progress .ux-progress-stack {width: 100%; background-color: var(--light1);}
+.ux-progress .ux-progress-stack {width: 100%; background-color: var(--background-muted);}
 .ux-progress .ux-progress-gauge {overflow: hidden; width: 100%;}
-.ux-progress .ux-progress-fill {background-color: var(--brand-blue); transform: translateX(-100%); transition: var(--trans);}
+.ux-progress .ux-progress-fill {background-color: var(--primary-80); transform: translateX(-100%); transition: var(--trans);}
 /* <UxProgress> Flag */
 .ux-progress .ux-progress-flag {display: flex; justify-content: flex-end; width: 100%; transform: translateX(-100%); transition: var(--trans); opacity: 0;}
 .ux-progress .ux-progress-text {display: inline-flex; padding: .4rem .8rem; border-radius: .8rem; background-color: var(--light1); font-size: 1.4rem; color: var(--dark3); line-height: 1;}
@@ -1406,17 +1407,17 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 /* <UxSortList> */
-.ux-sort-list {--radius: 1.2rem;}
-.ux-sort-list {display: flex; flex-direction: column; gap: .8rem;}
+.ux-sort-list {--radius: 1.6rem;}
+.ux-sort-list {display: flex; flex-direction: column; gap: 1.6rem;}
 /* <UxSortItem> */
-.ux-sort-item {border-radius: var(--radius); background-color: var(--light0); transition: var(--inset-transition);}
-.ux-sort-base {display: flex; justify-content: center; align-items: center; padding: 1.2rem 0 1.2rem 1.6rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
-.ux-sort-base dt {font-weight: 600;}
-.ux-sort-base dd {color: var(--dark3);}
+.ux-sort-item {border-radius: var(--radius); background-color: var(--background-default); transition: var(--inset-transition);}
+.ux-sort-base {display: flex; justify-content: center; align-items: center; padding: 1.2rem .4rem 1.6rem 2rem; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
+.ux-sort-base dt {font-weight: 700; font-size: 1.8rem; color: var(--text-default);}
+.ux-sort-base dd {font-weight: 500; font-size: 1.6rem; color: var(--text-muted);}
 .ux-sort-button {display: flex; justify-content: center; align-items: center; margin-left: auto; width: 4.8rem; height: 4.8rem; touch-action: none;}
 /* <UxSortItem> Active */
 .ux-sort-item.active {box-shadow: var(--shadow); z-index: 1;}
-.ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-color-focus);}
+.ux-sort-item.active .ux-sort-base {box-shadow: var(--inset-focus);}
 
 
 

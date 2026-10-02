@@ -57,58 +57,50 @@ export default function Guide() {
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle>
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGroup role="card">
-										<UxCard>CARD 01</UxCard>
-										<UxCard>CARD 02</UxCard>
-									</UxGroup>
-								</UxContent>
-							</UxArticle>
+							<UxCard>
+								<p className="bl dot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Provident nulla sapiente fugiat id distinctio quas expedita dolores facere at. Veniam asperiores do, accusamus dignissimos corrupti repudiandae voluptate commodo voluptatibus occaecati occaecat fuga. Impedit dolore excepteur dolorum, doloribus maiores aute. Dolorum accusamus expedita fugiat repudiandae veniam, adipiscing voluptate doloribus ut ducimus.</p>
+								<p className="bl dot">Nisi aute aute temporibus dolorum necessitatibus et. Occaecati aliquip irure praesentium sint occaecati, voluptatum, atque facere labore proident. Et doloribus minim optio asperiores fugiat dolores reprehenderit laborum, reprehenderit occaecat eveniet. Ipsum officia recusandae possimus proident, delectus nostrud expedita do impedit. Ullamco nostrud earum quod ut mollit laboris.</p>
+								<p className="bl dot">Laboris incididunt voluptas aute debitis duis adipiscing labore quidem, saepe exercitation sunt veniam. Cumque perferendis dolorum eiusmod aliqua nihil, et laborum pariatur. Est velit velit, est amet accusamus nisi. Recusandae ipsum cum minus expedita, quos voluptates non praesentium laboris. Tempor atque soluta corrupti sed quos necessitatibus duis cum, eveniet laboris ipsum ad eos.</p>
+							</UxCard>
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider className="linear" />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:role button</h4>
+						</UxSubject>
+						<UxContent>
+							<UxCard
+								role="button"
+								onClick={() => console.log('click')}
+							>
+								<p className="bl dot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Provident nulla sapiente fugiat id distinctio quas expedita dolores facere at. Veniam asperiores do, accusamus dignissimos corrupti repudiandae voluptate commodo voluptatibus occaecati occaecat fuga. Impedit dolore excepteur dolorum, doloribus maiores aute. Dolorum accusamus expedita fugiat repudiandae veniam, adipiscing voluptate doloribus ut ducimus.</p>
+								<p className="bl dot">Nisi aute aute temporibus dolorum necessitatibus et. Occaecati aliquip irure praesentium sint occaecati, voluptatum, atque facere labore proident. Et doloribus minim optio asperiores fugiat dolores reprehenderit laborum, reprehenderit occaecat eveniet. Ipsum officia recusandae possimus proident, delectus nostrud expedita do impedit. Ullamco nostrud earum quod ut mollit laboris.</p>
+								<p className="bl dot">Laboris incididunt voluptas aute debitis duis adipiscing labore quidem, saepe exercitation sunt veniam. Cumque perferendis dolorum eiusmod aliqua nihil, et laborum pariatur. Est velit velit, est amet accusamus nisi. Recusandae ipsum cum minus expedita, quos voluptates non praesentium laboris. Tempor atque soluta corrupti sed quos necessitatibus duis cum, eveniet laboris ipsum ad eos.</p>
+							</UxCard>
+						</UxContent>
+					</UxArticle>
 
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:type checkbox</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGroup
-										role="card"
-										type="checkbox"
-									>
-										<UxCard
-											value="0"
-											checked={true}
-										>
-											CARD 01
-										</UxCard>
-										<UxCard value="1">CARD 02</UxCard>
-									</UxGroup>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:type radio</h5>
-								</UxSubject>
-								<UxContent>
-									<UxGroup
-										role="card"
-										type="radio"
-										selected="0"
-									>
-										<UxCard value="0">CARD 01</UxCard>
-										<UxCard value="1">CARD 02</UxCard>
-									</UxGroup>
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:role checkbox</h4>
+						</UxSubject>
+						<UxContent>
+							<UxCard
+								role="checkbox"
+								onChange={(value) => console.log(value)}
+							>
+								<p className="bl dot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Provident nulla sapiente fugiat id distinctio quas expedita dolores facere at. Veniam asperiores do, accusamus dignissimos corrupti repudiandae voluptate commodo voluptatibus occaecati occaecat fuga. Impedit dolore excepteur dolorum, doloribus maiores aute. Dolorum accusamus expedita fugiat repudiandae veniam, adipiscing voluptate doloribus ut ducimus.</p>
+								<p className="bl dot">Nisi aute aute temporibus dolorum necessitatibus et. Occaecati aliquip irure praesentium sint occaecati, voluptatum, atque facere labore proident. Et doloribus minim optio asperiores fugiat dolores reprehenderit laborum, reprehenderit occaecat eveniet. Ipsum officia recusandae possimus proident, delectus nostrud expedita do impedit. Ullamco nostrud earum quod ut mollit laboris.</p>
+								<p className="bl dot">Laboris incididunt voluptas aute debitis duis adipiscing labore quidem, saepe exercitation sunt veniam. Cumque perferendis dolorum eiusmod aliqua nihil, et laborum pariatur. Est velit velit, est amet accusamus nisi. Recusandae ipsum cum minus expedita, quos voluptates non praesentium laboris. Tempor atque soluta corrupti sed quos necessitatibus duis cum, eveniet laboris ipsum ad eos.</p>
+							</UxCard>
 						</UxContent>
 					</UxArticle>
 				</UxContent>

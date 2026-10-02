@@ -23,8 +23,8 @@ const UxSlierSingle = ({ ref, ...props }) => {
 	const setFill = (input) => {
 		const distance = input.max - input.min;
 		const value = input.value - input.min;
-		const slider = 'rgb(238, 238, 238)';
-		const range = 'rgb(217, 13, 88)';
+		const slider = '#EBEFF5';
+		const range = '#046ADB';
 
 		setStyle({ background: `linear-gradient(
 			to right,
@@ -112,8 +112,8 @@ const UxSlierRange = ({ ref, ...props }) => {
 		const distance = to.max - to.min;
 		const fromValue = from.value - to.min;
 		const toValue = to.value - to.min;
-		const slider = 'rgb(238, 238, 238)';
-		const range = 'rgb(217, 13, 88)';
+		const slider = '#EBEFF5';
+		const range = '#046ADB';
 
 		setStyle({ background: `linear-gradient(
 			to right,

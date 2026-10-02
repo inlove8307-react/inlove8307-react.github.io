@@ -73,18 +73,6 @@ export default function Guide() {
 										label1="연도"
 										label2="를 선택해주세요"
 										suffix="년"
-										data={['2000', '2005', '2010', '2015', '2020', '2025']}
-										onChange={(value) => console.log(value)}
-									/>
-									<p slot="message">도움말</p>
-									<p slot="valid">유효성</p>
-								</UxField>
-								<UxField>
-									<UxPicker
-										placeholder="연도를 선택해주세요"
-										label1="연도"
-										label2="를 선택해주세요"
-										suffix="년"
 										min="2010"
 										max="2026"
 										onChange={(value) => console.log(value)}
@@ -159,6 +147,28 @@ export default function Guide() {
 										max="2025"
 										value="2025"
 										disabled
+										onChange={(value) => console.log(value)}
+									/>
+									<p slot="message">도움말</p>
+									<p slot="valid">유효성</p>
+								</UxField>
+							</UxForm>
+						</UxContent>
+					</UxArticle>
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:data</h4>
+						</UxSubject>
+						<UxContent>
+							<UxForm>
+								<UxField>
+									<UxPicker
+										placeholder="연도를 선택해주세요"
+										label1="연도"
+										label2="를 선택해주세요"
+										suffix="년"
+										data={['2000', '2005', '2010', '2015', '2020', '2025']}
 										onChange={(value) => console.log(value)}
 									/>
 									<p slot="message">도움말</p>

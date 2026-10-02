@@ -19,8 +19,8 @@ const UxHeader = ({ ref, ...props }) => {
 	const [status, setStatus] = useState(false);
 	const pages = [
 		{ name: 'Button', path: '/view/Button' },
-		// { name: 'Calendar', path: '/view/Calendar' },
-		// { name: 'Card', path: '/view/Card' },
+		{ name: 'Calendar', path: '/view/Calendar' },
+		{ name: 'Card', path: '/view/Card' },
 		{ name: 'Checkbox', path: '/view/Checkbox' },
 		{ name: 'Collapse', path: '/view/Collapse' },
 		{ name: 'Input', path: '/view/Input' },
@@ -44,8 +44,8 @@ const UxHeader = ({ ref, ...props }) => {
 		{ name: 'Select', path: '/view/Select' },
 		{ name: 'Bank', path: '/view/SelectBank' },
 		{ name: 'Dropdown', path: '/view/SelectDropdown' },
-		// { name: 'Slider', path: '/view/Slider' },
-		// { name: 'Sortlist', path: '/view/Sortlist' },
+		{ name: 'Slider', path: '/view/Slider' },
+		{ name: 'Sortlist', path: '/view/Sortlist' },
 		{ name: 'Tab', path: '/view/Tab' },
 		{ name: 'Icons', path: '/view/Icons' },
 		{ name: 'Actor', path: '/view/Actor' },
