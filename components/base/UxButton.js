@@ -297,7 +297,6 @@ const Load = ({ ref, ...props }) => {
 			className={classnames(props.caseClassName, { loaded: props.loaded })}
 			title={props.title}
 			disabled={props.disabled}
-			loaded={props.loaded}
 			onClick={handleClick}
 		>
 			{
