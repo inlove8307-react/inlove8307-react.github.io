@@ -904,6 +904,53 @@ const data = [
 		"id": "8339",
 		"movie": ["DVAJ-628", "LULU-229", "SDMF-033", "BF-695", "HMN-486", "MIAA-949", "MIAB-147", "BABM-022", "AMBI-183", "WAAA-316", "SUJI-203", "LULU-287", "SAME-131", "FJIN-025", "NACR-959", "SORA-599", "URKK-111", "PPPE-286", "LOL-237", "REAL-875", "MRHP-044", "MKON-119", "GVH-791", "PPPE-384", "NTRH-022", "SORA-629", "HMN-838", "DVAJ-735"]
 	},
+	{
+		"name": {
+			"kr": "모리 히나코",
+			"en": "Hinako Mori",
+			"cn": "森日向子",
+			"other": [
+				"히나타 유이(日向結衣)",
+				"모리노 히나코(森野日向子)",
+				"아사히나 에미리(朝比奈えみり)",
+				"시라이시 아이리(白石アイリ)"
+			]
+		},
+		"birth": "2000.09.09",
+		"height": "166",
+		"size": {
+			"bust": "B75",
+			"waist": "W56",
+			"hips": "H88"
+		},
+		"bra": "C",
+		"debut": "2020.06",
+		"title": "",
+		"desc": "",
+		"id": "6360",
+		"movie": ["KIR-029", "DASD-753", "GVH-426", "LULU-117", "ROYD-129", "ADN-529", "JUQ-502", "MIAB-009", "BLK-633", "BF-687", "MIAB-204", "HSODA-010", "RKI-677", "HSODA-029", "KSBJ-329", "MIKR-109", "WAAA-497", "PRED-734", "DVAJ-683"]
+	},
+	{
+		"name": {
+			"kr": "하나모리 카호",
+			"en": "Kaho Hanamori",
+			"cn": "花守夏歩",
+			"other": []
+		},
+		"birth": "2004.08.30",
+		"height": "158",
+		"size": {
+			"bust": "B87",
+			"waist": "W59",
+			"hips": "H89"
+		},
+		"bra": "D",
+		"debut": "2025.02",
+		"title": "소속사무소 마인즈(マインズ)",
+		"desc": "트위터 https://x.com/hanam0rikaho",
+		"id": "11139",
+		"movie": ["AVSA-451", "LULU-446", "EKDV-822", "SUJI-311", "GVH-843", "MKMP-721", "SAME-220", "NACT-075", "APNS-397", "NACT-056", "WAAA-598", "JUR-571", "MVSD-663", "IPZZ-656", "IPZZ-640", "IPZZ-604", "IPZZ-581", "RLMP-014", "DVAJ-752", "SQTE-716"]
+	}
 ];
 
 export default data;
