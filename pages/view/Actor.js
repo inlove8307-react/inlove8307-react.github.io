@@ -15,6 +15,8 @@ import UxCard from "@/components/base/UxCard";
 import UxButton from "@/components/base/UxButton";
 /* DATA */
 import actor from '@/public/data/actor';
+import movie from '@/public/data/movie';
+import thumb from '@/public/data/thumb';
 
 const Actor = ({ ref, ...props }) => {
 	const data = props.data;
@@ -106,7 +108,15 @@ const Actor = ({ ref, ...props }) => {
 };
 
 const Movie = ({ ref, ...props }) => {
-	const data = props.data;
+	const [data, setData] = useState({});
+
+	useEffect(() => {
+		const filterData = movie.filter(item => item.name === props.data);
+		const filterThumb = thumb.filter(item => item.name === props.data);
+		filterData[0].poster = filterThumb[0]?.poster;
+		filterData[0].detail = filterThumb[0]?.detail;
+		setData(filterData[0]);
+	}, [props.data]);
 
 	return (
 		<>
@@ -126,14 +136,6 @@ const Movie = ({ ref, ...props }) => {
 						<UxGroup className="link">
 							<UxButton
 								role="link"
-								href={`https://www.avdbs.com/menu/dvd.php?dvd_idx=${data.id}`}
-								target="_blank"
-							>
-								<span>AVDBS</span>
-								<i className="icon mask muted link x18" />
-							</UxButton>
-							<UxButton
-								role="link"
 								href={`https://123av.com/ko/v/${data.name}`}
 								target="_blank"
 							>
@@ -150,6 +152,9 @@ const Movie = ({ ref, ...props }) => {
 							</UxButton>
 						</UxGroup>
 						<UxGroup className="col1 gap4">
+							<span className="thumb">
+								<img src={data.poster} alt={data.name} />
+							</span>
 							<dl className="define column">
 								<dt>제목</dt>
 								<dd>{data.title}</dd>
@@ -184,7 +189,7 @@ const Movie = ({ ref, ...props }) => {
 							</dl>
 							<ul className="list cast">
 								{
-									data.cast.map((item, index) => (
+									data.cast?.map((item, index) => (
 										<li
 											key={index}
 											className="bl pound"
@@ -202,7 +207,7 @@ const Movie = ({ ref, ...props }) => {
 							</ul>
 							<ul className="list category">
 								{
-									data.category.map((item, index) => (
+									data.category?.map((item, index) => (
 										<li
 											key={index}
 											className="bl pound"
@@ -327,8 +332,6 @@ const Page = ({ ref, ...props }) => {
 					/>
 				</UxSubject>
 				<UxArticle className="h4 space">
-					{/* <UxSubject>
-					</UxSubject> */}
 					<UxContent>
 						<p className="fw500">총 <em className="fw600 red">{filterData.length}</em> 건</p>
 						<UxGroup className="actor col1">
@@ -343,14 +346,7 @@ const Page = ({ ref, ...props }) => {
 										>
 											<dl className="actor">
 												<dt className="subject">
-													<UxButton
-														role="link"
-														href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-														target="_blank"
-													>
-														<span>{item.name.en}</span>
-														<i className="icon mask muted link x18" />
-													</UxButton>
+													<span>{item.name.en}</span>
 													<UxButton
 														className="info"
 														onClick={() => handleActor(item)}
@@ -421,13 +417,13 @@ const Page = ({ ref, ...props }) => {
 												</dt>
 												<dd className="details">
 													<UxGroup className="link">
-														{item.movie.map(item => (
+														{item.movie.map((item, index) => (
 															<UxButton
-																key={item.id}
+																key={index}
 																className="tertiary capsule h4"
 																onClick={() => handleMovie(item)}
 															>
-																<span>{item.name}</span>
+																<span>{item}</span>
 																<i className="icon mask share muted x18" />
 															</UxButton>
 														))}
