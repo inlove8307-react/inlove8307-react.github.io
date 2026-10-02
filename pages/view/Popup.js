@@ -9,7 +9,6 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxGroup from "@/components/base/UxGroup";
-import UxCollapse from "@/components/base/UxCollapse";
 import UxButton from "@/components/base/UxButton";
 /* POPUP */
 import Popup from "@/components/popup/PopupNew";

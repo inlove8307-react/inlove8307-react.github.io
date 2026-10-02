@@ -20,7 +20,7 @@ export default function Guide() {
 					<h3>UxSlider</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -29,60 +29,51 @@ export default function Guide() {
 								<UxCollapse entire>
 									<div slot="summary">UxSlider Props</div>
 									<div slot="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>[event]</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSlider
-										min="0"
-										max="100"
-									/>
-								</UxContent>
-							</UxArticle>
+							<UxSlider
+								min="0"
+								max="100"
+							/>
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider className="linear" />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:step</h4>
+						</UxSubject>
+						<UxContent>
+							<UxSlider
+								min="0"
+								max="100"
+								step="10"
+							/>
+						</UxContent>
+					</UxArticle>
 
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:step</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSlider
-										min="0"
-										max="100"
-										step="10"
-									/>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:range</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSlider
-										type="range"
-										min="0"
-										max="100"
-									/>
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:range</h4>
+						</UxSubject>
+						<UxContent>
+							<UxSlider
+								type="range"
+								min="0"
+								max="100"
+							/>
 						</UxContent>
 					</UxArticle>
 				</UxContent>

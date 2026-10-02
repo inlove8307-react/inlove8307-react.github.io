@@ -19,7 +19,7 @@ export default function Guide() {
 					<h3>UxPagination</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -30,29 +30,25 @@ export default function Guide() {
 									<div slot="details">
 										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>[event]</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxPagination
-										page={1}
-										unit={5}
-										total={35}
-									/>
-								</UxContent>
-							</UxArticle>
+							<UxPagination
+								page={1}
+								unit={5}
+								total={35}
+							/>
 						</UxContent>
 					</UxArticle>
 				</UxContent>

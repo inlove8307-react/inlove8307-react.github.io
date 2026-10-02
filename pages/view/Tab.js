@@ -20,7 +20,7 @@ export default function Guide() {
 					<h3>UxTab</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -31,12 +31,7 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>selected(Number): 선택 값</li>
-											<li>linear(Boolean): 선택 변경 시 라인 효과 여부</li>
-											<li>scroll(Boolean): 스크롤 여부</li>
 											<li>[event]</li>
-											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -45,14 +40,12 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>active(Boolean): 활성화 여부</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
-					</UxArticle>
+					</UxArticle> */}
 
 					<UxArticle className="h4 space">
 						<UxSubject>

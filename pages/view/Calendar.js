@@ -20,7 +20,7 @@ export default function Guide() {
 					<h3>UxCalendar</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -31,66 +31,47 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>role(String): 유형 ('date', 'month', 'year')</li>
-											<li>format(String): 날짜 형식</li>
-											<li>date(String): 날짜</li>
-											<li>year(Number): 연도</li>
-											<li>scrollIntoView(Boolean): 자동 스크롤 여부</li>
-											<li>disables(Array): 비활성화 날짜 배열</li>
-											<li>icons(Object): 아이콘 추가 배열</li>
 											<li>[event]</li>
-											<li>onChange(Func): 값 변경 이벤트 콜백</li>
-											<li>onDateChange(Func): 날짜 변경 이벤트 콜백</li>
-											<li>onMonthChange(Func): 월 변경 이벤트 콜백</li>
-											<li>onYearChange(Func): 연도 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCalendar scrollIntoView />
-								</UxContent>
-							</UxArticle>
+							<UxCalendar scrollIntoView />
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:role date</h4>
+						</UxSubject>
+						<UxContent>
+							<UxCalendar role="date" />
+						</UxContent>
+					</UxArticle>
 
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:role date</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCalendar role="date" />
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:role month</h4>
+						</UxSubject>
+						<UxContent>
+							<UxCalendar role="month" />
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:role month</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCalendar role="month" />
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:role year</h5>
-								</UxSubject>
-								<UxContent>
-									<UxCalendar role="year" />
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:role year</h4>
+						</UxSubject>
+						<UxContent>
+							<UxCalendar role="year" />
 						</UxContent>
 					</UxArticle>
 				</UxContent>

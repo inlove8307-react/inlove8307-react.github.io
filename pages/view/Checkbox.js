@@ -19,7 +19,7 @@ export default function Guide() {
 					<h3>UxCheckbox</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -30,17 +30,13 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>checked(Boolean): 체크 여부</li>
-											<li>disabled(Boolean): 비활성화 여부</li>
 											<li>[event]</li>
-											<li>onChange(Func): 값 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
-					</UxArticle>
+					</UxArticle> */}
 
 					<UxArticle className="h4 space">
 						<UxSubject>

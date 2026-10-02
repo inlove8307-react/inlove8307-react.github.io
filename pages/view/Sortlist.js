@@ -19,7 +19,7 @@ export default function Guide() {
 					<h3>UxSortList</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -28,35 +28,30 @@ export default function Guide() {
 								<UxCollapse entire>
 									<div slot="summary">UxSortList Props</div>
 									<div slot="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>[event]</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxSortList
-										items={[
-											{ id: '1', name: 'youtube', info: 'youtub.com' },
-											{ id: '2', name: 'netflix', info: 'netflix.com' },
-											{ id: '3', name: 'coupangplay', info: 'coupangplay.com' },
-											{ id: '4', name: 'tving', info: 'tving.com' },
-											{ id: '5', name: 'soop', info: 'sooplive.co.kr' },
-										]}
-									/>
-								</UxContent>
-							</UxArticle>
+							<UxSortList
+								items={[
+									{ id: '1', name: 'youtube', info: 'youtub.com' },
+									{ id: '2', name: 'netflix', info: 'netflix.com' },
+									{ id: '3', name: 'coupangplay', info: 'coupangplay.com' },
+									{ id: '4', name: 'tving', info: 'tving.com' },
+									{ id: '5', name: 'soop', info: 'sooplive.co.kr' },
+								]}
+							/>
 						</UxContent>
 					</UxArticle>
 				</UxContent>

@@ -32,7 +32,7 @@ export default function Guide() {
 					<h3>UxButton</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -43,24 +43,13 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>title(String): 접근성 타이틀</li>
-											<li>role: 버튼 유형 ('select', 'search', 'input', 'progress')</li>
-											<li>placeholder(String): 표시 문구 (role 공통)</li>
-											<li>valid(Boolean): 유효성 여부 (role 공통)</li>
-											<li>readonly(Boolean): 읽기전용 여부 (role 공통)</li>
-											<li>disabled(Boolean): 비활성화 여부</li>
-											<li>prefix(String): 앞 표시 문구 (role input)</li>
-											<li>suffix(String): 뒤 표시 문구 (role input)</li>
-											<li>active(Boolean): 아이콘 유형 (role select)</li>
 											<li>[event]</li>
-											<li>onClick(Func): 클릭 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
-					</UxArticle>
+					</UxArticle> */}
 
 					<UxArticle className="h4 space">
 						<UxSubject>

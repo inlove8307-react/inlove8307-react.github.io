@@ -20,7 +20,7 @@ export default function Guide() {
 					<h3>UxProgress</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
@@ -29,98 +29,83 @@ export default function Guide() {
 								<UxCollapse entire>
 									<div slot="summary">UxProgress Props</div>
 									<div slot="details">
-										<p>[props]</p>
 										<ul>
-											<li></li>
-										</ul>
-										<p>[event]</p>
-										<ul>
-											<li></li>
+											<li>[props]</li>
+											<li>[event]</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
 						<UxContent>
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>default</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress value={50} />
-								</UxContent>
-							</UxArticle>
+							<UxProgress value={50} />
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider className="linear" />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:suffix</h4>
+						</UxSubject>
+						<UxContent>
+							<UxProgress
+								value={50}
+								suffix="%"
+							/>
+						</UxContent>
+					</UxArticle>
 
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:suffix</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress
-										value={50}
-										suffix="%"
-									/>
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:step</h4>
+						</UxSubject>
+						<UxContent>
+							<UxProgress
+								min={0}
+								max={100}
+								value={50}
+								step={[0, 25, 50, 75, 100]}
+							/>
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider className="linear" />
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>:from :to</h4>
+						</UxSubject>
+						<UxContent>
+							<UxProgress
+								value={50}
+								from="2025.08.01"
+								to="2025.08.30"
+							/>
+						</UxContent>
+					</UxArticle>
 
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:step</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress
-										min={0}
-										max={100}
-										value={50}
-										step={[0, 25, 50, 75, 100]}
-									/>
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>flag</h4>
+						</UxSubject>
+						<UxContent>
+							<UxProgress value={50}>
+								<div slot="flag">flag</div>
+							</UxProgress>
+						</UxContent>
+					</UxArticle>
 
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>:from :to</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress
-										value={50}
-										from="2025.08.01"
-										to="2025.08.30"
-									/>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>flag</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress value={50}>
-										<div slot="flag">flag</div>
-									</UxProgress>
-								</UxContent>
-							</UxArticle>
-
-							<UxDivider className="linear" />
-
-							<UxArticle className="h5">
-								<UxSubject>
-									<h5>legend</h5>
-								</UxSubject>
-								<UxContent>
-									<UxProgress value={50}>
-										<div slot="legend">legend</div>
-									</UxProgress>
-								</UxContent>
-							</UxArticle>
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>legend</h4>
+						</UxSubject>
+						<UxContent>
+							<UxProgress value={50}>
+								<div slot="legend">legend</div>
+							</UxProgress>
 						</UxContent>
 					</UxArticle>
 				</UxContent>

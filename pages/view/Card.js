@@ -20,22 +20,18 @@ export default function Guide() {
 					<h3>UxCard</h3>
 				</UxSubject>
 				<UxContent>
-					<UxArticle className="h4 space">
+					{/* <UxArticle className="h4 space">
 						<UxSubject>
 							<UxGroup
 								role="collapse"
 								className="sample"
 							>
 								<UxCollapse entire>
-									<div slot="summary">UxGroup Card Props</div>
+									<div slot="summary">UxGroup Props</div>
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>type(String): 유형('radio', 'checkbox')</li>
-											<li>selected(String): 선택 값</li>
 											<li>[event]</li>
-											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
@@ -44,20 +40,13 @@ export default function Guide() {
 									<div slot="details">
 										<ul>
 											<li>[props]</li>
-											<li>className(String): 추가 클래스</li>
-											<li>type(String): 유형 ('checkbox', 'radio')</li>
-											<li>checked(Boolean): 체크 여부</li>
-											<li>selected(String): 선택 값</li>
-											<li>disabled(Boolean): 비활성화 여부</li>
 											<li>[event]</li>
-											<li>onClick(Func): 클릭 이벤트 콜백</li>
-											<li>onChange(Func): 선택 변경 이벤트 콜백</li>
 										</ul>
 									</div>
 								</UxCollapse>
 							</UxGroup>
 						</UxSubject>
-					</UxArticle>
+					</UxArticle> */}
 
 					<UxArticle className="h4 space">
 						<UxSubject>
