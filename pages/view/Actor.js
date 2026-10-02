@@ -111,11 +111,13 @@ const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
 
 	useEffect(() => {
-		const filterData = movie.filter(item => item.name === props.data);
+		const filterMovie = movie.filter(item => item.name === props.data);
 		const filterThumb = thumb.filter(item => item.name === props.data);
-		filterData[0].poster = filterThumb[0]?.poster;
-		filterData[0].detail = filterThumb[0]?.detail;
-		setData(filterData[0]);
+
+		if (filterMovie.length) {
+			filterMovie[0].image = filterThumb[0].image;
+			setData(filterMovie[0]);
+		}
 	}, [props.data]);
 
 	return (
@@ -153,7 +155,7 @@ const Movie = ({ ref, ...props }) => {
 						</UxGroup>
 						<UxGroup className="col1 gap4">
 							<span className="thumb">
-								<img src={data.poster} alt={data.name} />
+								<img src={data.image} alt={data.name} />
 							</span>
 							<dl className="define column">
 								<dt>제목</dt>
