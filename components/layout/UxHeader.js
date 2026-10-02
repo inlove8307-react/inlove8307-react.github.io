@@ -48,7 +48,6 @@ const UxHeader = ({ ref, ...props }) => {
 		{ name: 'Sortlist', path: '/view/Sortlist' },
 		{ name: 'Tab', path: '/view/Tab' },
 		{ name: 'Icons', path: '/view/Icons' },
-		{ name: 'Actor', path: '/view/Actor' },
 	];
 
 	return (
