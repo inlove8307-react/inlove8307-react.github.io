@@ -43,7 +43,7 @@ export default function Guide() {
 						<UxContent>
 							<UxArticle className="h5">
 								<UxSubject>
-									<h5>:default</h5>
+									<h5>default</h5>
 								</UxSubject>
 								<UxContent>
 									<UxPagination
