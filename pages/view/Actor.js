@@ -44,48 +44,69 @@ const Actor = ({ ref, ...props }) => {
 									</span>
 								</dt>
 								<dd>
-									<dl className="define name">
-										<dt>이름</dt>
-										<dd>
-											<span>{data.name.kr}</span>
-											<span>{data.name.en}</span>
-											<span>{data.name.cn}</span>
-										</dd>
-									</dl>
-									<dl className="define birth">
-										<dt>생년월일</dt>
-										<dd>
-											{data.birth && <span>{data.birth}</span>}
-											{data.birth && <span>{data.korean}</span>}
-											{data.birth && <span>{data.age}</span>}
-										</dd>
-									</dl>
-									<dl className="define">
-										<dt>신장</dt>
-										<dd>{data.height}</dd>
-									</dl>
-									<dl className="define size">
-										<dt>신체 사이즈</dt>
-										<dd>
-											{data.size.bust && <span>{data.size.bust}</span>}
-											{data.size.waist && <span>{data.size.waist}</span>}
-											{data.size.hips && <span>{data.size.hips}</span>}
-										</dd>
-									</dl>
-									<dl className="define">
-										<dt>컵 사이즈</dt>
-										<dd>{data.bra}</dd>
-									</dl>
-									<dl className="define">
-										<dt>데뷔</dt>
-										<dd>{data.debut}</dd>
-									</dl>
+									{
+										(data.name.kr || data.name.en || data.name.cn) &&
+										<dl className="define name">
+											<dt>이름</dt>
+											<dd>
+												<span>{data.name.kr}</span>
+												<span>{data.name.en}</span>
+												<span>{data.name.cn}</span>
+											</dd>
+										</dl>
+									}
+									{
+										data.birth &&
+										<dl className="define birth">
+											<dt>생일</dt>
+											<dd>
+												<span>{data.birth}</span>
+												<span>{data.korean}</span>
+												<span>{data.age}</span>
+											</dd>
+										</dl>
+									}
+									{
+										data.height &&
+										<dl className="define">
+											<dt>신장</dt>
+											<dd>{data.height}</dd>
+										</dl>
+									}
+									{
+										(data.size.bust || data.size.waist || data.size.hips) &&
+										<dl className="define size">
+											<dt>신체 사이즈</dt>
+											<dd>
+												<span>{data.size.bust}</span>
+												<span>{data.size.waist}</span>
+												<span>{data.size.hips}</span>
+											</dd>
+										</dl>
+									}
+									{
+										data.bra &&
+										<dl className="define">
+											<dt>컵 사이즈</dt>
+											<dd>{data.bra}</dd>
+										</dl>
+									}
+									{
+										data.debut &&
+										<dl className="define">
+											<dt>데뷔</dt>
+											<dd>{data.debut}</dd>
+										</dl>
+									}
 								</dd>
 							</dl>
-							<dl className="define column desc">
-								<dt>{data.title}</dt>
-								<dd>{data.desc}</dd>
-							</dl>
+							{
+								(data.title || data.desc) &&
+								<dl className="define column desc">
+									<dt>{data.title}</dt>
+									<dd>{data.desc}</dd>
+								</dl>
+							}
 						</UxGroup>
 					</UxContent>
 				</UxArticle>
@@ -152,41 +173,68 @@ const Movie = ({ ref, ...props }) => {
 							</UxButton>
 						</UxGroup>
 						<UxGroup className="col1 gap4">
-							<span className="thumb">
-								<img src={data.image} alt={data.name} />
-							</span>
-							<dl className="define column">
-								<dt>제목</dt>
-								<dd>{data.title}</dd>
-							</dl>
-							<dl className="define column">
-								<dt>설명</dt>
-								<dd>{data.story}</dd>
-							</dl>
-							<dl className="define column">
-								<dt>제작사</dt>
-								<dd>{data.producer}</dd>
-							</dl>
-							<dl className="define column">
-								<dt>레이블</dt>
-								<dd>{data.publisher}</dd>
-							</dl>
-							<dl className="define column">
-								<dt>시리즈</dt>
-								<dd>{data.series}</dd>
-							</dl>
-							<dl className="define column">
-								<dt>감독</dt>
-								<dd>{data.director}</dd>
-							</dl>
-							<dl className="define">
-								<dt>재생시간</dt>
-								<dd>{data.runtime}</dd>
-							</dl>
-							<dl className="define">
-								<dt>출시일</dt>
-								<dd>{data.release}</dd>
-							</dl>
+							{
+								data.image &&
+								<span className="thumb">
+									<img src={data.image} alt={data.name} />
+								</span>
+							}
+							{
+								data.title &&
+								<dl className="define column">
+									<dt>제목</dt>
+									<dd>{data.title}</dd>
+								</dl>
+							}
+							{
+								data.story &&
+								<dl className="define column">
+									<dt>설명</dt>
+									<dd>{data.story}</dd>
+								</dl>
+							}
+							{
+								data.producer &&
+								<dl className="define column">
+									<dt>제작사</dt>
+									<dd>{data.producer}</dd>
+								</dl>
+							}
+							{
+								data.publisher &&
+								<dl className="define column">
+									<dt>레이블</dt>
+									<dd>{data.publisher}</dd>
+								</dl>
+							}
+							{
+								data.series &&
+								<dl className="define column">
+									<dt>시리즈</dt>
+									<dd>{data.series}</dd>
+								</dl>
+							}
+							{
+								data.director &&
+								<dl className="define column">
+									<dt>감독</dt>
+									<dd>{data.director}</dd>
+								</dl>
+							}
+							{
+								data.runtime &&
+								<dl className="define">
+									<dt>재생시간</dt>
+									<dd>{data.runtime}</dd>
+								</dl>
+							}
+							{
+								data.release &&
+								<dl className="define">
+									<dt>출시일</dt>
+									<dd>{data.release}</dd>
+								</dl>
+							}
 							<ul className="list cast">
 								{
 									data.cast?.map((item, index) => (
@@ -363,48 +411,69 @@ const Page = ({ ref, ...props }) => {
 																</span>
 															</dt>
 															<dd>
-																<dl className="define name">
-																	<dt>이름</dt>
-																	<dd>
-																		<span>{item.name.kr}</span>
-																		<span>{item.name.en}</span>
-																		<span>{item.name.cn}</span>
-																	</dd>
-																</dl>
-																<dl className="define birth">
-																	<dt>생일</dt>
-																	<dd>
-																		{item.birth && <span>{item.birth}</span>}
-																		{item.birth && <span>{item.korean}</span>}
-																		{item.birth && <span>{item.age}</span>}
-																	</dd>
-																</dl>
-																<dl className="define">
-																	<dt>신장</dt>
-																	<dd>{item.height}</dd>
-																</dl>
-																<dl className="define size">
-																	<dt>신체 사이즈</dt>
-																	<dd>
-																		{item.size.bust && <span>{item.size.bust}</span>}
-																		{item.size.waist && <span>{item.size.waist}</span>}
-																		{item.size.hips && <span>{item.size.hips}</span>}
-																	</dd>
-																</dl>
-																<dl className="define">
-																	<dt>컵 사이즈</dt>
-																	<dd>{item.bra}</dd>
-																</dl>
-																<dl className="define">
-																	<dt>데뷔</dt>
-																	<dd>{item.debut}</dd>
-																</dl>
+																{
+																	(item.name.kr || item.name.en || item.name.cn) &&
+																	<dl className="define name">
+																		<dt>이름</dt>
+																		<dd>
+																			<span>{item.name.kr}</span>
+																			<span>{item.name.en}</span>
+																			<span>{item.name.cn}</span>
+																		</dd>
+																	</dl>
+																}
+																{
+																	item.birth &&
+																	<dl className="define birth">
+																		<dt>생일</dt>
+																		<dd>
+																			<span>{item.birth}</span>
+																			<span>{item.korean}</span>
+																			<span>{item.age}</span>
+																		</dd>
+																	</dl>
+																}
+																{
+																	item.height &&
+																	<dl className="define">
+																		<dt>신장</dt>
+																		<dd>{item.height}</dd>
+																	</dl>
+																}
+																{
+																	(item.size.bust || item.size.waist || item.size.hips) &&
+																	<dl className="define size">
+																		<dt>신체 사이즈</dt>
+																		<dd>
+																			<span>{item.size.bust}</span>
+																			<span>{item.size.waist}</span>
+																			<span>{item.size.hips}</span>
+																		</dd>
+																	</dl>
+																}
+																{
+																	item.bra &&
+																	<dl className="define">
+																		<dt>컵 사이즈</dt>
+																		<dd>{item.bra}</dd>
+																	</dl>
+																}
+																{
+																	item.debut &&
+																	<dl className="define">
+																		<dt>데뷔</dt>
+																		<dd>{item.debut}</dd>
+																	</dl>
+																}
 															</dd>
 														</dl>
-														<dl className="define column desc">
-															<dt>{item.title}</dt>
-															<dd>{item.desc}</dd>
-														</dl>
+														{
+															(item.title || item.desc) &&
+															<dl className="define column desc">
+																<dt>{item.title}</dt>
+																<dd>{item.desc}</dd>
+															</dl>
+														}
 													</BrowserView>
 												</dd>
 											</dl>

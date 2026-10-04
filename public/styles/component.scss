@@ -1472,8 +1472,6 @@ dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 /* Define Column */
 dl.define.column {flex-direction: column; gap: .2rem;}
 dl.define.column dd {text-align: left;}
-/* Define Empty */
-dl.define:has( > dd:empty) {display: none;}
 /* Define Image (Desktop) */
 dl.define.image .image {overflow: hidden; display: inline-block;}
 dl.define.image .image img {max-width: 100%;}
