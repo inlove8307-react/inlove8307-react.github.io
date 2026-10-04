@@ -1180,6 +1180,55 @@ const data = [
 		"desc": "최근 살집이 붙었다.",
 		"id": "6298",
 		"movie": ["MIDA-030", "MIDV-989", "MIDV-945", "MIDV-871", "MIDV-813", "MIDV-757", "MIDV-747", "MIDV-570", "MIDV-387", "MIDV-275", "MIDV-293", "MIDV-256", "MIDV-237", "MIDV-218", "MIDV-153", "MIDV-086", "MIDV-068", "MIDV-031", "MIDA-347", "MIDA-260", "MIDA-216", "MDVR-332", "MIDA-653"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a00/113_n.jpg",
+		"name": {
+			"kr": "모리사와 카나 (이이오카 카나코)",
+			"en": "Kana Morisawa (Kanako Iioka)",
+			"cn": "森沢かな（飯岡かなこ）",
+			"other": [
+				"오키타 리노(沖田梨乃)",
+				"후지와라 료코(藤原遼子)",
+				"아사쿠라 아야나(浅倉彩菜)",
+				"이이지마 쿄코(飯島恭子)"
+			]
+		},
+		"birth": "1992.05.09",
+		"height": "160",
+		"size": {
+			"bust": "B82",
+			"waist": "W60",
+			"hips": "H86"
+		},
+		"bra": "C",
+		"debut": "2012.07",
+		"title": "후지와라 료코 → 이이오카 카나코 → 모리사와 카나",
+		"desc": "턱이 긴 것이 특징. 2012년 후지와라 료코라는 이름으로 도쿄핫에서 무수정을 찍었다. 이후 이이오카 카나코로 개명하고 정식 AV배우로 데뷔했다. 2016년 모리사와 카나로 개명했다. 모리사와 카나로 개명한 뒤로는 무수정을 찍지 않고 있다. 티파워즈 소속. 원래 외부 활동은 NG였으나 2019년 트위터 개설한 뒤로 팬들과의 소통을 점점 늘리고 있다. 2021년 현재 현역으로 활동중. 유튜브 채널 https://www.youtube.com/channel/UCf3RMqI-lvQntmGfMEcO7VQ",
+		"id": "113",
+		"movie": ["SPRD-1508", "JJDA-033", "NACR-582", "ALDN-067", "ADN-426", "NUKA-059", "DASS-127", "MVSD-541", "DVAJ-618", "HZGD-251", "ADN-511", "BF-697", "WAAA-347", "DASS-329", "ADN-535", "MIAB-221", "APNS-344", "MXGS-1344", "DASS-443", "JJDA-054", "KAM-216", "PRED-769", "SAME-160", "FAB-006", "SAME-165", "ADN-751", "ADN-760", "DVAJ-730", "NKKD-366", "NGOD-345"]
+	},
+		{
+		"image": "https://i2.avdbs.com/actor/a10/10375_n.jpg",
+		"name": {
+			"kr": "카와고에 니코",
+			"en": "Niko Kawagoe",
+			"cn": "川越にこ",
+			"other": []
+		},
+		"birth": "2003.04.23",
+		"height": "150",
+		"size": {
+			"bust": "B85",
+			"waist": "W55",
+			"hips": "H80"
+		},
+		"bra": "D",
+		"debut": "2024.02",
+		"title": "에스원 전속 AV배우",
+		"desc": "트위터 https://twitter.com/kawagoeniko",
+		"id": "10375",
+		"movie": ["SONE-350", "SONE-301", "SONE-966", "SONE-804", "SONE-487", "SONE-954", "SNOS-221", "SNOS-303", "SNOS-357"]
 	}
 ];
 
