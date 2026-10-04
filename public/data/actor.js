@@ -1,5 +1,6 @@
 const data = [
 	{
+		"image": "https://i1.avdbs.com/actor/a08/8130_n.jpg?v=1",
 		"name": {
 			"kr": "이시카와 미오",
 			"en": "Mio Ishikawa",
@@ -21,6 +22,7 @@ const data = [
 		"movie": ["MIDV-041", "MIDV-639", "MIDV-670", "MIDV-699", "MIDV-835", "MIDA-024", "MIDA-213", "MIMK-267"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a01/1224_n.jpg",
 		"name": {
 			"kr": "스즈무라 아이리",
 			"en": "Airi Suzumura",
@@ -43,6 +45,7 @@ const data = [
 		],
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a05/5569_n.jpg?v=5",
 		"name": {
 			"kr": "스즈모리 레무",
 			"en": "Remu Suzumori",
@@ -66,6 +69,7 @@ const data = [
 		"movie": ["ABP-901", "ABW-023", "ABW-232", "ABW-254", "ABW-265", "ABF-328"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a02/2583_n.jpg",
 		"name": {
 			"kr": "아카리 츠무기",
 			"en": "Tsumugi Akari",
@@ -87,6 +91,7 @@ const data = [
 		"movie": ["IPX-983", "JUQ-564", "JUQ-641", "IPZZ-250", "JUQ-775", "JUQ-880", "IPZZ-389", "JUQ-907", "JUR-139", "IPZZ-503", "IPZZ-547", "IPZZ-576", "IPZZ-652", "FNS-121", "FNS-122", "FNS-207", "FNS-257"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a04/4981_n.jpg",
 		"name": {
 			"kr": "카에데 카렌",
 			"en": "Karen Kaede",
@@ -110,6 +115,7 @@ const data = [
 		"movie": ["IPZZ-932", "IPZZ-677", "IPZZ-508", "IPZZ-435", "IPZZ-329", "IPZZ-240", "IPX-850", "IPX-811", "IPX-776", "IPX-758", "IPX-689", "IPX-658", "IPX-641", "IPX-627", "IPX-528", "IPX-515", "IPX-398"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a04/4066_n.jpg",
 		"name": {
 			"kr": "진구지 나오",
 			"en": "Nao Jinguji",
@@ -134,6 +140,7 @@ const data = [
 		"movie": ["JUR-806", "MIMK-276", "JUR-477", "MIDA-150", "JUR-186", "JUQ-980", "JUQ-530", "JUQ-272", "JUQ-223", "JUQ-150", "JUQ-037", "JUL-920", "JUL-364", "JUL-273", "JUL-157"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a08/8728_n.jpg",
 		"name": {
 			"kr": "카미키 레이",
 			"en": "Rei Kamiki",
@@ -158,6 +165,7 @@ const data = [
 		"movie": ["START-626", "START-542", "START-508", "START-326", "START-272", "START-111", "START-094", "STARS-947", "STARS-725"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a11/11066_n.jpg?v=1",
 		"name": {
 			"kr": "아이세 리아",
 			"en": "Ria Aise",
@@ -179,6 +187,7 @@ const data = [
 		"movie": ["IPZZ-918", "IPZZ-903", "IPZZ-881", "IPZZ-830", "IPZZ-812", "IPZZ-722", "IPZZ-643", "IPZZ-590"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a05/5908_n.jpg",
 		"name": {
 			"kr": "아오조라 히카리",
 			"en": "Hikari Aozora",
@@ -200,6 +209,7 @@ const data = [
 		"movie": ["START-568", "START-525", "START-438", "START-424", "START-258", "START-199", "START-034", "STARS-968", "STARS-277"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a03/3884_n.jpg",
 		"name": {
 			"kr": "카와키타 사이카",
 			"en": "Saika Kawakita",
@@ -223,6 +233,7 @@ const data = [
 		"movie": ["SSIS-499", "SSIS-586", "SSIS-951", "SONE-266", "SONE-360", "SONE-405", "SONE-543", "SONE-687", "SONE-853", "SNOS-056", "SNOS-320", "SNOS-377"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a09/9772_n.jpg?v=2",
 		"name": {
 			"kr": "코히나타 미유",
 			"en": "Miyu Kohinata",
@@ -247,6 +258,7 @@ const data = [
 		"movie": ["SONE-018", "SONE-115", "SONE-293", "SONE-480", "SONE-603", "SONE-884", "SONE-993", "SNOS-040", "SNOS-193", "SNOS-372", "SONE-832"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a04/4004_n.jpg",
 		"name": {
 			"kr": "혼조 스즈",
 			"en": "Suzu Honjo",
@@ -268,6 +280,7 @@ const data = [
 		"movie": ["START-464", "START-449", "START-402", "START-355", "START-220", "START-184", "START-036", "STARS-944", "STARS-924", "STARS-591", "STARS-527", "STARS-468", "STARS-345"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a05/5981_n.jpg",
 		"name": {
 			"kr": "안자이 라라",
 			"en": "Rara Anzai",
@@ -292,6 +305,7 @@ const data = [
 		"movie": ["SSIS-103", "SSIS-050", "SSNI-799", "SSNI-727"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a11/11715_n.jpg",
 		"name": {
 			"kr": "이노우에 모모",
 			"en": "Momo Inoue",
@@ -313,6 +327,7 @@ const data = [
 		"movie": ["MIDA-764", "MIDA-728", "MIDA-687", "MIDA-651", "MIDA-615"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a11/11086_n.jpg",
 		"name": {
 			"kr": "세토 칸나",
 			"en": "Kanna Seto",
@@ -334,6 +349,7 @@ const data = [
 		"movie": ["SONE-811", "SNOS-183", "SNOS-209", "SNOS-334"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a08/8669_n.jpg",
 		"name": {
 			"kr": "미야시타 레나",
 			"en": "Rena Miyashita",
@@ -355,6 +371,7 @@ const data = [
 		"movie": ["MIDV-266", "MIDV-402", "MIDV-432", "MIDV-461", "MIDV-671", "MIDV-700", "MIDA-087", "MIDA-094", "MIDA-200", "MIDA-368", "MIDA-479", "MIMK-288"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a10/10536_n.jpg",
 		"name": {
 			"kr": "시라카미 에미카",
 			"en": "Emika Shirakami",
@@ -376,6 +393,7 @@ const data = [
 		"movie": ["SNOS-200", "SNOS-161", "SNOS-079", "SONE-948", "SONE-860", "SONE-822", "SONE-732", "SONE-652", "SONE-604", "SONE-467", "SONE-373"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a10/10571_n.jpg",
 		"name": {
 			"kr": "쿠라키 하나",
 			"en": "Hana Kuraki",
@@ -397,6 +415,7 @@ const data = [
 		"movie": ["SONE-333", "SONE-398", "SONE-490", "SONE-733", "SONE-876", "SNOS-070", "SNOS-083", "SNOS-256", "SNOS-145"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a11/11328_n.jpg?v=3",
 		"name": {
 			"kr": "미요시 유카",
 			"en": "Yuka Miyoshi",
@@ -418,6 +437,7 @@ const data = [
 		"movie": ["PRED-902", "PRED-889", "PRED-879", "PRED-863", "PRED-845", "PRED-807"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a02/2319_n.jpg",
 		"name": {
 			"kr": "아라타 아리나",
 			"en": "Arina Arata",
@@ -444,6 +464,7 @@ const data = [
 		"movie": ["MIDA-117", "MIDA-079", "MIDV-999", "MIDV-592"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a11/11352_n.jpg?v=1",
 		"name": {
 			"kr": "마시로 사나",
 			"en": "Mashiro Sana",
@@ -465,6 +486,7 @@ const data = [
 		"movie": ["MIDA-610", "MIDA-571", "MIDA-530", "MIDA-494"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a04/4428_n.jpg",
 		"name": {
 			"kr": "사카미치 미루",
 			"en": "Miru Sakamichi",
@@ -489,6 +511,7 @@ const data = [
 		"movie": ["SNOS-218", "SONE-637", "SONE-618", "SONE-101", "SSIS-938", "SSIS-740", "SSIS-666", "SSIS-452", "SSIS-317", "SSIS-260", "SSIS-169", "SSIS-133"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a11/11714_n.jpg",
 		"name": {
 			"kr": "아오사카 아오이",
 			"en": "Aoi Aosaka",
@@ -510,6 +533,7 @@ const data = [
 		"movie": ["FTHTD-193", "EKDV-825", "CAWD-955"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a05/5877_n.jpg?v=1",
 		"name": {
 			"kr": "마츠모토 이치카",
 			"en": "Ichika Matsumoto",
@@ -535,6 +559,7 @@ const data = [
 		"movie": ["MIDA-168", "MIH-016", "DASS-552", "DASS-477", "DASS-417", "CAWD-595", "MTALL-084", "BABM-021", "MUDR-225", "MVSD-542", "MKON-085", "JUQ-007", "HHKL-103", "HZGD-203", "MIAA-513", "TPPN-204", "CAWD-276", "DVAJ-519", "MIAA-444", "KIMU-015"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a09/9860_n.jpg",
 		"name": {
 			"kr": "아시타바 미츠하",
 			"en": "Mitsuha Ashitaba",
@@ -556,6 +581,7 @@ const data = [
 		"movie": ["IPZZ-923", "SNOS-074", "SONE-979", "SONE-294", "SONE-061"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a06/6249_n.jpg",
 		"name": {
 			"kr": "키노시타 히마리",
 			"en": "Himari Kinoshita",
@@ -583,6 +609,7 @@ const data = [
 		"movie": ["YUJ-072", "NIMA-082", "DASS-942", "ROYD-313", "FPRE-217", "HZGD-311", "MKMP-643", "AVSA-348", "HODV-21920", "NACR-878", "MXGS-1350", "DVEH-033", "MIAB-197", "SORA-515", "SAME-098", "SAME-055", "LULU-171", "DASD-997", "MEYD-745", "PPPD-968", "SAN-015"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a07/7304_n.jpg",
 		"name": {
 			"kr": "아라이 리마",
 			"en": "Rima Arai",
@@ -604,6 +631,7 @@ const data = [
 		"movie": ["MIAA-783", "MIAA-810", "LULU-244", "WAAA-412", "PPPE-317", "WAAA-537", "WAAA-579", "WAAA-614", "WAAA-622", "WAAA-642", "WAAA-649", "CJOD-526", "CJOD-530"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a09/9174_n.jpg?v=1",
 		"name": {
 			"kr": "쿠노 히나노",
 			"en": "Hinano Kuno",
@@ -625,6 +653,7 @@ const data = [
 		"movie": ["MIDA-708", "MIDA-637", "MIDA-563", "MIDA-523", "MIDA-413", "MIDV-641", "MIDV-550", "MIDV-408"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a09/9610_n.jpg",
 		"name": {
 			"kr": "아사노 코코로",
 			"en": "Kokoro Asano",
@@ -649,6 +678,7 @@ const data = [
 		"movie": ["SNOS-399", "SNOS-237", "SNOS-118", "SNOS-099", "SNOS-029", "SONE-460", "SONE-272", "SONE-127", "SSIS-992"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a08/8391_n.jpg",
 		"name": {
 			"kr": "츠바사 마이",
 			"en": "Mai Tsubasa",
@@ -672,6 +702,7 @@ const data = [
 		"movie": ["SSIS-549", "SSIS-610", "SSIS-787", "JUQ-568", "SONE-341", "FSDSS-977", "FNS-036", "FNS-051", "FNS-096", "FNS-164", "FNS-205", "FNS-235", "FNS-247"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a10/10161_n.jpg",
 		"name": {
 			"kr": "츠키노에 스이",
 			"en": "Sui Tsukinoe",
@@ -693,6 +724,7 @@ const data = [
 		"movie": ["ADN-588", "DASS-433", "PFES-083", "JUQ-659", "WAAA-472", "RBK-103", "CAWD-758", "SAME-132", "BF-720", "RLMP-006", "MIAB-589", "JUR-433", "ADN-660", "PRED-752", "NGOD-356"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a09/9257_n.jpg",
 		"name": {
 			"kr": "이츠하",
 			"en": "Itsuha",
@@ -716,6 +748,7 @@ const data = [
 		"movie": ["ADN-536", "SAME-085", "MIDV-281", "YUJ-029", "SAME-146", "ADN-636", "ADN-625", "ADN-618", "SAME-127", "ADN-589", "ADN-569", "SAME-106", "YUJ-017", "ADN-674", "YUJ-036", "DVAJ-738", "SAN-413", "NTRH-017", "HZGD-325", "SORA-621", "MVSD-653", "FOCS-257", "MKMP-647", "NGOD-268"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a09/9095_n.jpg?v=1",
 		"name": {
 			"kr": "아다치 유리",
 			"en": "Yuri Adachi",
@@ -737,6 +770,7 @@ const data = [
 		"movie": ["SSIS-728", "SNOS-339", "SNOS-152", "SONE-316", "SONE-233", "SONE-077", "SSIS-990"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a06/6368_n.jpg?v=5",
 		"name": {
 			"kr": "아오이 이부키",
 			"en": "Ibuki Aoi",
@@ -760,6 +794,7 @@ const data = [
 		"movie": ["MIDV-478", "MIDV-296", "MIDV-241", "MIDV-111", "MIDV-073", "MIDE-853", "MIDA-624", "MIDA-143", "MIDA-107", "MIMK-186", "MIDV-910"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a03/3769_n.jpg?v=1",
 		"name": {
 			"kr": "미소노 와카",
 			"en": "Waka Misono",
@@ -786,6 +821,7 @@ const data = [
 		"movie": ["ATID-646", "SAME-193", "WAAA-383", "NTRH-002", "ATID-660", "MNGS-077", "ATID-685", "ADN-765"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a10/10495_n.jpg",
 		"name": {
 			"kr": "키타오카 카린",
 			"en": "Karin Kitaoka",
@@ -807,6 +843,7 @@ const data = [
 		"movie": ["MVSD-628", "MIAB-390", "IPZZ-332", "ROYD-216", "NGOD-247", "SAME-149", "AMBI-205", "IPZZ-564", "ADN-672", "REAL-913", "DVAJ-695", "WAAA-591", "DASS-797", "VEC-733", "MIAB-577", "LUCY-023", "WAAA-621", "GARA-023", "SUJI-308"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a03/3830_n.jpg",
 		"name": {
 			"kr": "텐마 유이",
 			"en": "Yui Tenma",
@@ -836,6 +873,7 @@ const data = [
 		"movie": ["DRPT-002", "LULU-115", "DASS-054", "MIAA-689", "MIAA-735", "LULU-186", "DVRT-015", "MEYD-839", "REAL-824", "NACR-790", "MOON-011", "MILK-208", "MADV-557", "DASS-373", "LULU-295", "SAME-129", "MIAB-320", "AVSA-384", "LULU-405", "REAL-953", "MKON-124", "SAN-458", "MUDR-392"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a06/6608_n.jpg",
 		"name": {
 			"kr": "사츠키 에나",
 			"en": "Ena Satsuki",
@@ -854,9 +892,10 @@ const data = [
 		"title": "2020년 팔레노 신인. 우머나이저를 좋아하는 현역 여대생.",
 		"desc": "이름 사츠키 에나(沙月恵奈 さつきえな). 생년월일 1999년 6월 11일. 치바 현 출신. 2019년에 첫 경험을 가진 현역 여대생. 린크스(LINX) 소속. 2020년 10월 팔레노에서 데뷔. 같은 달에 그라피스(Graphis) 화보 공개. 키 152cm의 작은 키에 E컵의 알찬 가슴. 젖꼭지도 유륜도 핑크핑크. 게임과 애니메이션을 좋아한다. 다이칸야마의 킹 죠지 샌드위치 바를 좋아한다. 주로 쓰는 자위기구는 우머나이저. 트위터 @satsukiena 유튜브 https://youtu.be/q5KEtwPLdqU",
 		"id": "6608",
-		"movie": ["SW-807", "FSDSS-277", "FSDSS-206", "WAAA-121", "BABM-008", "XVSR-675", "NSFS-101", "GVH-398", "HMN-161", "MIAA-599", "DVDMS-890", "REAL-810", "KHIP-006", "NSFS-164", "MVSD-593", "NSFS-239", "HZGD-307", "MVG-120", "MEYD-971", "MIAB-543", "MKMP-732"]
+		"movie": ["SW-807", "FSDSS-277", "FSDSS-206", "WAAA-121", "BABM-008", "XVSR-675", "NSFS-101", "GVH-398", "HMN-161", "MIAA-599", "DVDMS-890", "REAL-810", "KHIP-006", "NSFS-164", "MVSD-593", "NSFS-239", "HZGD-307", "MVG-120", "MEYD-971", "MIAB-543", "MKMP-732", "UMD-832"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a05/5771_n.jpg",
 		"name": {
 			"kr": "야요이 미즈키",
 			"en": "Mizuki Yayoi",
@@ -884,6 +923,7 @@ const data = [
 		"movie": ["HOMA-078", "WANZ-924", "VENU-919", "ADN-239", "APNS-170", "MEYD-571", "VENU-908", "HOMA-088", "HGOT-043", "ROYD-016", "SHKD-902", "DASD-739", "ATID-433", "KTB-063", "JUFE-428", "JUQ-059", "GVH-462", "NSFS-172", "URE-086", "MVSD-584", "NSFS-240", "WAAA-311", "BF-694", "GARA-002", "PJAM-016", "DRPT-085", "GOUL-010", "ALDN-470", "HODV-21986", "MKMP-691", "NAGST-014"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a08/8339_n.jpg",
 		"name": {
 			"kr": "카시와기 코나츠",
 			"en": "Konatsu Kashiwagi",
@@ -905,6 +945,7 @@ const data = [
 		"movie": ["DVAJ-628", "LULU-229", "SDMF-033", "BF-695", "HMN-486", "MIAA-949", "MIAB-147", "BABM-022", "AMBI-183", "WAAA-316", "SUJI-203", "LULU-287", "SAME-131", "FJIN-025", "NACR-959", "SORA-599", "URKK-111", "PPPE-286", "LOL-237", "REAL-875", "MRHP-044", "MKON-119", "GVH-791", "PPPE-384", "NTRH-022", "SORA-629", "HMN-838", "DVAJ-735"]
 	},
 	{
+		"image": "https://i1.avdbs.com/actor/a06/6360_n.jpg",
 		"name": {
 			"kr": "모리 히나코",
 			"en": "Hinako Mori",
@@ -931,6 +972,7 @@ const data = [
 		"movie": ["KIR-029", "DASD-753", "GVH-426", "LULU-117", "ROYD-129", "ADN-529", "JUQ-502", "MIAB-009", "BLK-633", "BF-687", "MIAB-204", "HSODA-010", "RKI-677", "HSODA-029", "KSBJ-329", "MIKR-109", "WAAA-497", "PRED-734", "DVAJ-683"]
 	},
 	{
+		"image": "https://i2.avdbs.com/actor/a11/11139_n.jpg",
 		"name": {
 			"kr": "하나모리 카호",
 			"en": "Kaho Hanamori",
@@ -949,8 +991,30 @@ const data = [
 		"title": "소속사무소 마인즈(マインズ)",
 		"desc": "트위터 https://x.com/hanam0rikaho",
 		"id": "11139",
-		"movie": ["AVSA-451", "LULU-446", "EKDV-822", "SUJI-311", "GVH-843", "MKMP-721", "SAME-220", "NACT-075", "APNS-397", "NACT-056", "WAAA-598", "JUR-571", "MVSD-663", "IPZZ-656", "IPZZ-640", "IPZZ-604", "IPZZ-581", "RLMP-014", "DVAJ-752", "SQTE-716"]
-	}
+		"movie": ["AVSA-451", "LULU-446", "EKDV-822", "SUJI-311", "GVH-843", "MKMP-721", "SAME-220", "NACT-075", "APNS-397", "NACT-056", "WAAA-598", "JUR-571", "MVSD-663", "IPZZ-656", "IPZZ-640", "IPZZ-604", "IPZZ-581", "RLMP-014", "DVAJ-752", "SQTE-716", "FTKD-044", "UMD-1018", "MIAB-595"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6907_n.jpg",
+		"name": {
+			"kr": "키타노 미나",
+			"en": "Mina Kitano",
+			"cn": "北野未奈",
+			"other": []
+		},
+		"birth": "2000.12.30",
+		"height": "162",
+		"size": {
+			"bust": "B92",
+			"waist": "W59",
+			"hips": "H89"
+		},
+		"bra": "H",
+		"debut": "2021.04",
+		"title": "긴자 호스티스 출신의 2021년 이바디 신인",
+		"desc": "소속사무소 라이트(LIGHT). 소속사 선배로는 시이나 소라, 이시하라 노조미, 니시미야 유메, 쿠루루기 아오이 등이 있다. 긴자의 모 유명 고급 클럽에서 근무하던 호스티스였지만, AV의 세계를 동경하여 배우로 전향했다. 2021년 4월 이바디에서 데뷔한다(데뷔작 EBOD-814). H컵 거유에 토크를 좋아하고 상냥한 성격. 취미는 뮤지컬 감상과 댄스. 트위터 @kitano_mina",
+		"id": "6907",
+		"movie": ["DASD-951", "VENX-099", "JUL-784", "JUL-690", "MEYD-695", "HODV-21637", "EYAN-181", "HMN-150", "NSFS-081", "HMN-248", "JUFE-451", "JUFE-467", "JUFE-498", "HMN-439", "JUFE-507", "FPRE-080", "HMN-545", "MIDV-586", "FPRE-004", "JUR-038", "JUR-271", "MFYD-028", "ALDN-480", "PPPE-351", "GVH-764", "T38-042", "NKKD-357", "NGOD-302", "VENX-346", "VENX-356", "REAL-977", "ADN-784", "OFES-043", "JJDA-075", "NGOD-352", "HOMA-167"]
+	},
 ];
 
 export default data;

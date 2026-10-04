@@ -1467,15 +1467,18 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor .ux-group.link {gap: .8rem;}
 /* Define */
 dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
-dl.define dt {font-size: 1.6rem; color: var(--text-muted);}
-dl.define dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
+dl.define > dt {font-size: 1.6rem; color: var(--text-muted);}
+dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 /* Define Column */
 dl.define.column {flex-direction: column; gap: .2rem;}
 dl.define.column dd {text-align: left;}
 /* Define Empty */
-dl.define:has(dd:empty) {display: none;}
+dl.define:has( > dd:empty) {display: none;}
+/* Define Image (Desktop) */
+dl.define.image .image {overflow: hidden; display: inline-block;}
+dl.define.image .image img {max-width: 100%;}
 /* Define Name */
-dl.define.name dd {display: flex; flex-direction: column;}
+dl.define.name dd {display: flex; flex-direction: column; text-align: right;}
 /* Define Birth */
 dl.define.birth dd {display: flex; gap: .4rem;}
 dl.define.birth dd span {display: flex; gap: .4rem;}
@@ -1484,6 +1487,10 @@ dl.define.birth dd span + span::before {content: '/';}
 dl.define.size dd {display: flex; gap: .4rem;}
 dl.define.size dd span {display: flex; gap: .4rem;}
 dl.define.size dd span + span::before {content: '/';}
+/* Define Desc */
+dl.define.desc {gap: .4rem;}
+dl.define.desc dt {font-weight: 500; color: var(--text-default);}
+dl.define.desc dd {font-weight: 400;}
 
 
 
@@ -1498,6 +1505,12 @@ html.desktop .ux-card.actor .ux-card-base {gap: var(--space);}
 html.desktop .ux-card.actor dl.actor {gap: 1.2rem; width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Actor Details */
 html.desktop .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .4rem;}
+/* Card Actor (Desktop) Define Image (Desktop) */
+html.desktop dl.define.image {gap: 1.6rem; padding: .4rem 0 1.2rem;}
+html.desktop dl.define.image > dt {flex-grow: 1; flex-basis: 0;}
+html.desktop dl.define.image > dt .image {width: 23.2rem; height: 23.2rem; border-radius: 1.6rem;}
+html.desktop dl.define.image > dt img {max-width: 100%;}
+html.desktop dl.define.image > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .4rem; text-align: initial;}
 /* Card Actor (Desktop) Dl Movie */
 html.desktop .ux-card.actor dl.movie {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Movie Subject */
@@ -1516,6 +1529,10 @@ html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: 1.2rem;}
 html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-flex; margin-left: auto;}
 /* Card Actor (Mobile) Dl Actor Details */
 html.mobile .ux-card.actor dl.actor dd.details {display: none;}
+/* Card Actor (Mobile) Define Image (Mobile) */
+html.mobile dl.define.image > dt {text-align: center;}
+html.mobile dl.define.image > dt .image {width: 20rem; height: 20rem; border-radius: 10rem;}
+html.mobile dl.define.image > dd {display: flex; flex-direction: column; gap: .4rem;}
 /* Card Actor (Mobile) Dl Movie */
 html.mobile .ux-card.actor dl.movie {gap: 1.2rem;}
 /* Card Actor (Mobile) Dl Movie Subject */

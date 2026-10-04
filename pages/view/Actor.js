@@ -37,56 +37,54 @@ const Actor = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxContent>
 						<UxGroup className="col1 gap4">
-							<dl className="define column">
-								<dt>제목</dt>
+							<dl className="define column image">
+								<dt>
+									<span className="image">
+										<img src={`/images/actor/${data.id}.jpg`} alt={data.name.en} />
+									</span>
+								</dt>
 								<dd>
-									{data.title}
+									<dl className="define name">
+										<dt>이름</dt>
+										<dd>
+											<span>{data.name.kr}</span>
+											<span>{data.name.en}</span>
+											<span>{data.name.cn}</span>
+										</dd>
+									</dl>
+									<dl className="define birth">
+										<dt>생년월일</dt>
+										<dd>
+											{data.birth && <span>{data.birth}</span>}
+											{data.birth && <span>{data.korean}</span>}
+											{data.birth && <span>{data.age}</span>}
+										</dd>
+									</dl>
+									<dl className="define">
+										<dt>신장</dt>
+										<dd>{data.height}</dd>
+									</dl>
+									<dl className="define size">
+										<dt>신체 사이즈</dt>
+										<dd>
+											{data.size.bust && <span>{data.size.bust}</span>}
+											{data.size.waist && <span>{data.size.waist}</span>}
+											{data.size.hips && <span>{data.size.hips}</span>}
+										</dd>
+									</dl>
+									<dl className="define">
+										<dt>컵 사이즈</dt>
+										<dd>{data.bra}</dd>
+									</dl>
+									<dl className="define">
+										<dt>데뷔</dt>
+										<dd>{data.debut}</dd>
+									</dl>
 								</dd>
 							</dl>
-							<dl className="define column">
-								<dt>설명</dt>
-								<dd>
-									{data.desc}
-								</dd>
-							</dl>
-							<dl className="define name">
-								<dt>이름</dt>
-								<dd>
-									<span>{data.name.kr}</span>
-									<span>{data.name.en}</span>
-									<span>{data.name.cn}</span>
-									{data.name.other.map((item, index) => (
-										<span key={index}>{item}</span>
-									))}
-								</dd>
-							</dl>
-							<dl className="define birth">
-								<dt>생년월일</dt>
-								<dd>
-									{data.birth && <span>{data.birth}</span>}
-									{data.birth && <span>{data.korean}</span>}
-									{data.birth && <span>{data.age}</span>}
-								</dd>
-							</dl>
-							<dl className="define">
-								<dt>신장</dt>
-								<dd>{data.height}</dd>
-							</dl>
-							<dl className="define size">
-								<dt>신체 사이즈</dt>
-								<dd>
-									{data.size.bust && <span>{data.size.bust}</span>}
-									{data.size.waist && <span>{data.size.waist}</span>}
-									{data.size.hips && <span>{data.size.hips}</span>}
-								</dd>
-							</dl>
-							<dl className="define">
-								<dt>컵 사이즈</dt>
-								<dd>{data.bra}</dd>
-							</dl>
-							<dl className="define">
-								<dt>데뷔</dt>
-								<dd>{data.debut}</dd>
+							<dl className="define column desc">
+								<dt>{data.title}</dt>
+								<dd>{data.desc}</dd>
 							</dl>
 						</UxGroup>
 					</UxContent>
@@ -358,56 +356,54 @@ const Page = ({ ref, ...props }) => {
 												</dt>
 												<dd className="details">
 													<BrowserView renderWithFragment>
-														<dl className="define column">
-															<dt>제목</dt>
+														<dl className="define image">
+															<dt>
+																<span className="image">
+																	<img src={`/images/actor/${data.id}.jpg`} alt={data.name.en} />
+																</span>
+															</dt>
 															<dd>
-																{item.title}
+																<dl className="define name">
+																	<dt>이름</dt>
+																	<dd>
+																		<span>{item.name.kr}</span>
+																		<span>{item.name.en}</span>
+																		<span>{item.name.cn}</span>
+																	</dd>
+																</dl>
+																<dl className="define birth">
+																	<dt>생일</dt>
+																	<dd>
+																		{item.birth && <span>{item.birth}</span>}
+																		{item.birth && <span>{item.korean}</span>}
+																		{item.birth && <span>{item.age}</span>}
+																	</dd>
+																</dl>
+																<dl className="define">
+																	<dt>신장</dt>
+																	<dd>{item.height}</dd>
+																</dl>
+																<dl className="define size">
+																	<dt>신체 사이즈</dt>
+																	<dd>
+																		{item.size.bust && <span>{item.size.bust}</span>}
+																		{item.size.waist && <span>{item.size.waist}</span>}
+																		{item.size.hips && <span>{item.size.hips}</span>}
+																	</dd>
+																</dl>
+																<dl className="define">
+																	<dt>컵 사이즈</dt>
+																	<dd>{item.bra}</dd>
+																</dl>
+																<dl className="define">
+																	<dt>데뷔</dt>
+																	<dd>{item.debut}</dd>
+																</dl>
 															</dd>
 														</dl>
-														<dl className="define column">
-															<dt>설명</dt>
-															<dd>
-																{item.desc}
-															</dd>
-														</dl>
-														<dl className="define name">
-															<dt>이름</dt>
-															<dd>
-																<span>{item.name.kr}</span>
-																<span>{item.name.en}</span>
-																<span>{item.name.cn}</span>
-																{item.name.other.map((item, index) => (
-																	<span key={index}>{item}</span>
-																))}
-															</dd>
-														</dl>
-														<dl className="define birth">
-															<dt>생일</dt>
-															<dd>
-																{item.birth && <span>{item.birth}</span>}
-																{item.birth && <span>{item.korean}</span>}
-																{item.birth && <span>{item.age}</span>}
-															</dd>
-														</dl>
-														<dl className="define">
-															<dt>신장</dt>
-															<dd>{item.height}</dd>
-														</dl>
-														<dl className="define size">
-															<dt>신체 사이즈</dt>
-															<dd>
-																{item.size.bust && <span>{item.size.bust}</span>}
-																{item.size.waist && <span>{item.size.waist}</span>}
-																{item.size.hips && <span>{item.size.hips}</span>}
-															</dd>
-														</dl>
-														<dl className="define">
-															<dt>컵 사이즈</dt>
-															<dd>{item.bra}</dd>
-														</dl>
-														<dl className="define">
-															<dt>데뷔</dt>
-															<dd>{item.debut}</dd>
+														<dl className="define column desc">
+															<dt>{item.title}</dt>
+															<dd>{item.desc}</dd>
 														</dl>
 													</BrowserView>
 												</dd>
