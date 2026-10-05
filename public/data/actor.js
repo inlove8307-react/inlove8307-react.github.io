@@ -1278,6 +1278,103 @@ const data = [
 		"desc": "",
 		"id": "6453",
 		"movie": ["SSIS-058", "SSIS-010", "SSIS-371", "SSIS-344", "SSIS-083", "SSIS-640", "SSIS-783", "SONE-011", "SONE-053", "JUQ-637", "SONE-247", "SNOS-084", "SNOS-255", "SNOS-369"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10628_n.jpg?v=1",
+		"name": {
+			"kr": "오노사카 유이카",
+			"en": "Yuika Onosaka",
+			"cn": "小野坂ゆいか",
+			"other": [
+				"오노사카 미사키(小野坂美咲)"
+			]
+		},
+		"birth": "2002.02.09",
+		"height": "164",
+		"size": {
+			"bust": "B102",
+			"waist": "W62",
+			"hips": "H100"
+		},
+		"bra": "H",
+		"debut": "2024.06",
+		"title": "",
+		"desc": "트위터 @yuika_onosaka",
+		"id": "10628",
+		"movie": ["PPPE-306", "IPZZ-401", "FOCS-242", "NACR-932", "KSBJ-379", "PFES-093", "MIAB-481", "AKDL-342", "ROYD-252", "MIAB-501", "NSFS-401", "ADN-734", "NGOD-284", "NSFS-466", "SAME-221", "SAME-202", "SY-219", "UMAN-002", "NACT-128", "SORA-634", "YMDD-506"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a08/8579_n.jpg",
+		"name": {
+			"kr": "쿠루미 사쿠라",
+			"en": "Sakura Kurumi",
+			"cn": "胡桃さくら",
+			"other": []
+		},
+		"birth": "2002.10.29",
+		"height": "161",
+		"size": {
+			"bust": "B89",
+			"waist": "W57",
+			"hips": "H85"
+		},
+		"bra": "F",
+		"debut": "2022.02",
+		"title": "트위터 https://twitter.com/kurumi__sakura",
+		"desc": "트위터 https://twitter.com/kurumi__sakura 서브 계정 https://twitter.com/sakurakuru3",
+		"id": "8579",
+		"movie": ["GVH-592", "CEMD-368", "DASS-183", "DVAJ-647", "DASS-269", "MIAB-274", "ROYD-186", "ROYD-205", "DASS-468", "ROYD-192", "FJIN-030", "DASS-555", "LULU-353", "FJIN-149", "FKRU-011"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a05/5992_n.jpg",
+		"name": {
+			"kr": "야기 나나",
+			"en": "Nana Yagi",
+			"cn": "八木奈々",
+			"other": [
+				"안 나나(杏奈々)"
+			]
+		},
+		"birth": "2000.09.03",
+		"height": "156",
+		"size": {
+			"bust": "B82",
+			"waist": "W56",
+			"hips": "H86"
+		},
+		"bra": "E",
+		"debut": "2019.12",
+		"title": "매일 책만 읽던 독서광, 자연미인 문학소녀",
+		"desc": "2019년 12월 무디즈에서 데뷔했다. 캐치 프레이즈는 뛰어난 정통파(ぶっちぎりの正統派), 10년에 1명 나오는 순진 퓨어 미소녀(10年に1人の純真ピュア美少女). 아마추어 느낌 넘치는 청순함이 매력. 플레이는 익숙하지 않은 편. 독서를 많이 해서 현학적인 말을 쉬운 말로 풀어 쓰곤 한다.",
+		"id": "5992",
+		"movie": ["MIDE-863", "MIDE-930", "MIDE-903", "MIDV-060", "MIDV-080", "MIDV-250", "MIDV-269", "MIDV-307", "MIDV-375", "MIDV-614", "MIDV-552", "MIDA-146", "MIDA-110", "MIDA-220", "MIDA-463", "MIDA-428", "MIDA-389", "MIDA-264", "MIDA-578", "MIMK-172", "MIDV-773", "MIDV-583", "MIDV-464", "MIDV-164", "MIMK-090"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6119_n.jpg",
+		"name": {
+			"kr": "토조 나츠",
+			"en": "Natsu Tojo",
+			"cn": "東條なつ",
+			"other": [
+				"토조 사키(東條咲)",
+				"아야세 나츠키(綾瀬なつき)",
+				"토조 나츠(東條なつ/東条なつ)",
+				"긴자 루나(銀座ルナ)"
+			]
+		},
+		"birth": "1999.08.19",
+		"height": "156",
+		"size": {
+			"bust": "B78",
+			"waist": "W55",
+			"hips": "H85"
+		},
+		"bra": "C",
+		"debut": "2020.02",
+		"title": "2020년 FALENO 전속으로 데뷔했다가 키카탄 전향, 이후 공장장으로 급부상",
+		"desc": "깜찍한 외모의 구릿빛 슬렌더 몸매. 1999년 도치기현에서 태어났다. 2019년 긴자 루나라는 예명으로 긴자 카가야키라는 곳에서 풍속일을 하다가, 같은 해 11월 트위터를 개설했다. 2020년 2월 FALENO의 전속 배우로 AV에 데뷔했다. 소속사는 링크스(LINX). AV에는 호기심에 지원했다고 한다. 데뷔작 FSDSS에서는 아나운서를 목표로 하는 현역 여대생으로 출연했다. 같은 해 8월 1st 사진집 발매. 같은 해 11월 25일, 키카탄으로 전향할 것으로 밝히며 공장장 모드에 돌입했고, 그 다음달인 12월에 바로 질싸를 해금했다(CAWD-161, CJOD-272, HND-927 3편 동시 질싸 해금). 취미는 가라오케라는데 2020년 11월 27일 레이디 마돈나에서 라이브 첫 무대를 가졌다. 2021년 1월 동인계 AV에도 출연. 트위터 @_tojo_natsu 인스타 @tojonatsu",
+		"id": "6119",
+		"movie": ["JUL-412", "MXGS-1166", "SHKD-926", "ROYD-039", "HODV-21579", "WAAA-090", "ADN-327", "RBK-020", "MIAA-584", "ATID-509", "MEYD-744", "DVAJ-564", "JUL-896", "VENX-115", "SAME-006", "SDMF-020", "VENX-151", "HMN-206", "MIAA-680", "NSFS-111", "CAWD-413", "ROYD-105", "DASS-124", "DASS-191", "DASS-179", "DASS-161", "DASS-574", "DASS-584", "DASS-637", "HMN-709", "HMN-725", "DASS-690", "HMN-774", "DASS-859", "HMN-752", "HMN-743", "HMN-796", "DASS-868", "DASS-974", "DASS-930", "DSOD-004", "HMN-884", "DSOD-090"]
 	}
 ];
 
