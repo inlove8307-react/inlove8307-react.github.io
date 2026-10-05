@@ -3470,6 +3470,34 @@ const data = [
 	{
 		"name": "DSOD-090",
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/dsod00090/dsod00090pl.jpg?f=webp"
+	},
+	{
+		"name": "SSIS-400",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ssis00400/ssis00400pl.jpg?f=webp"
+	},
+	{
+		"name": "SSIS-642",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ssis00642/ssis00642pl.jpg?f=webp"
+	},
+	{
+		"name": "SSIS-825",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ssis00825/ssis00825pl.jpg?f=webp"
+	},
+	{
+		"name": "SSIS-980",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ssis00980/ssis00980pl.jpg?f=webp"
+	},
+	{
+		"name": "SONE-639",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/sone00639/sone00639pl.jpg?f=webp"
+	},
+	{
+		"name": "SONE-591",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/sone00591/sone00591pl.jpg?f=webp"
+	},
+	{
+		"name": "SONE-403",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/sone00403/sone00403pl.jpg?f=webp"
 	}
 ];
 
