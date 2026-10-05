@@ -50,6 +50,39 @@ const UxHeader = ({ ref, ...props }) => {
 		{ name: 'Icons', path: '/view/Icons' },
 	];
 
+	// const pages = [
+	// 	{ name: 'Button', path: '/button' },
+	// 	{ name: 'Calendar', path: '/calendar' },
+	// 	{ name: 'Card', path: '/card' },
+	// 	{ name: 'Checkbox', path: '/checkbox' },
+	// 	{ name: 'Collapse', path: '/collapse' },
+	// 	{ name: 'Input', path: '/input' },
+	// 	{ name: 'Business', path: '/business' },
+	// 	{ name: 'DatePicker', path: '/datepicker' },
+	// 	{ name: 'DateRange', path: '/daterange' },
+	// 	{ name: 'File', path: '/file' },
+	// 	{ name: 'License', path: '/license' },
+	// 	{ name: 'Password', path: '/password' },
+	// 	{ name: 'Phone', path: '/phone' },
+	// 	{ name: 'Resident', path: '/resident' },
+	// 	{ name: 'Search', path: '/search' },
+	// 	{ name: 'Textarea', path: '/textarea' },
+	// 	{ name: 'Pagination', path: '/pagination' },
+	// 	{ name: 'Picker', path: '/picker' },
+	// 	{ name: 'Date', path: '/date' },
+	// 	{ name: 'Time', path: '/time' },
+	// 	{ name: 'Popup', path: '/popup' },
+	// 	{ name: 'Progress', path: '/progress' },
+	// 	{ name: 'Radio', path: '/radio' },
+	// 	{ name: 'Select', path: '/select' },
+	// 	{ name: 'Bank', path: '/bank' },
+	// 	{ name: 'Dropdown', path: '/dropdown' },
+	// 	{ name: 'Slider', path: '/slider' },
+	// 	{ name: 'Sortlist', path: '/sortlist' },
+	// 	{ name: 'Tab', path: '/tab' },
+	// 	{ name: 'Icons', path: '/icons' },
+	// ];
+
 	return (
 		<header className={caseClassName}>
 			<UxSection className="base">

@@ -1,0 +1,58 @@
+'use client';
+
+import React from "react";
+/* LAYOUT */
+import UxSection from "@/components/layout/UxSection";
+import UxArticle from "@/components/layout/UxArticle";
+import UxSubject from "@/components/layout/UxSubject";
+import UxContent from "@/components/layout/UxContent";
+/* COMPONENT */
+import UxPagination from "@/components/base/UxPagination";
+import UxCollapse from "@/components/base/UxCollapse";
+import UxGroup from "@/components/base/UxGroup";
+
+export default function Guide() {
+	return (
+		<UxSection>
+			<UxArticle className="h3">
+				<UxSubject className="space">
+					<h3>UxPagination</h3>
+				</UxSubject>
+				<UxContent>
+					{/* <UxArticle className="h4 space">
+						<UxSubject>
+							<UxGroup
+								role="collapse"
+								className="sample"
+							>
+								<UxCollapse entire>
+									<div slot="summary">UxPagination Props</div>
+									<div slot="details">
+										<p>[props]</p>
+										<ul>
+											<li>[props]</li>
+											<li>[event]</li>
+										</ul>
+									</div>
+								</UxCollapse>
+							</UxGroup>
+						</UxSubject>
+					</UxArticle> */}
+
+					<UxArticle className="h4 space">
+						<UxSubject>
+							<h4>default</h4>
+						</UxSubject>
+						<UxContent>
+							<UxPagination
+								page={1}
+								unit={5}
+								total={35}
+							/>
+						</UxContent>
+					</UxArticle>
+				</UxContent>
+			</UxArticle>
+		</UxSection>
+	)
+};
