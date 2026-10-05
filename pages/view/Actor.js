@@ -201,24 +201,10 @@ const Movie = ({ ref, ...props }) => {
 								</dl>
 							}
 							{
-								data.publisher &&
-								<dl className="define column">
-									<dt>레이블</dt>
-									<dd>{data.publisher}</dd>
-								</dl>
-							}
-							{
 								data.series &&
 								<dl className="define column">
 									<dt>시리즈</dt>
 									<dd>{data.series}</dd>
-								</dl>
-							}
-							{
-								data.director &&
-								<dl className="define column">
-									<dt>감독</dt>
-									<dd>{data.director}</dd>
 								</dl>
 							}
 							{
@@ -242,13 +228,7 @@ const Movie = ({ ref, ...props }) => {
 											key={index}
 											className="bl pound"
 										>
-											<a
-												className="cast"
-												href={`https://www.avdbs.com/menu/actor.php?actor_idx=${item.id}`}
-												target="_blank"
-											>
-												{item.name}
-											</a>
+											{item}
 										</li>
 									))
 								}
@@ -260,13 +240,7 @@ const Movie = ({ ref, ...props }) => {
 											key={index}
 											className="bl pound"
 										>
-											<a
-												className="category"
-												href={`https://www.avdbs.com/menu/genre_av.php?menu=${item.menu}&cate=${item.cate}`}
-												target="_blank"
-											>
-												{item.name}
-											</a>
+											{item}
 										</li>
 									))
 								}

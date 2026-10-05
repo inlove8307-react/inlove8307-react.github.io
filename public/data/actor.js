@@ -1132,7 +1132,7 @@ const data = [
 		"id": "4487",
 		"movie": ["REAL-848", "MIAB-159", "MIAB-102", "JUKF-107", "HODV-21774", "HMN-069", "DASD-755", "AQSH-058", "MILK-225", "MIAB-386", "LULU-364", "GVH-709", "MKMP-636", "MIAB-571", "LULU-432", "MKMP-722"]
 	},
-		{
+	{
 		"image": "https://i2.avdbs.com/actor/a02/2309_n.jpg",
 		"name": {
 			"kr": "미카미 유아",
@@ -1159,7 +1159,7 @@ const data = [
 		"id": "2309",
 		"movie": ["SSNI-542", "SSNI-344", "SSIS-241", "SSNI-703", "SSNI-674", "SSNI-566", "SSNI-845", "SSIS-181", "SSNI-989", "SSIS-448", "SSIS-338"]
 	},
-		{
+	{
 		"image": "https://i2.avdbs.com/actor/a06/6298_n.jpg",
 		"name": {
 			"kr": "오노 릿카",
@@ -1208,7 +1208,7 @@ const data = [
 		"id": "113",
 		"movie": ["SPRD-1508", "JJDA-033", "NACR-582", "ALDN-067", "ADN-426", "NUKA-059", "DASS-127", "MVSD-541", "DVAJ-618", "HZGD-251", "ADN-511", "BF-697", "WAAA-347", "DASS-329", "ADN-535", "MIAB-221", "APNS-344", "MXGS-1344", "DASS-443", "JJDA-054", "KAM-216", "PRED-769", "SAME-160", "FAB-006", "SAME-165", "ADN-751", "ADN-760", "DVAJ-730", "NKKD-366", "NGOD-345"]
 	},
-		{
+	{
 		"image": "https://i2.avdbs.com/actor/a10/10375_n.jpg",
 		"name": {
 			"kr": "카와고에 니코",
@@ -1229,6 +1229,55 @@ const data = [
 		"desc": "트위터 https://twitter.com/kawagoeniko",
 		"id": "10375",
 		"movie": ["SONE-350", "SONE-301", "SONE-966", "SONE-804", "SONE-487", "SONE-954", "SNOS-221", "SNOS-303", "SNOS-357"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a09/9790_n.jpg",
+		"name": {
+			"kr": "하루나 노아",
+			"en": "Noa Haruna",
+			"cn": "羽月乃蒼",
+			"other": [
+				"타츠미 아카리(辰美アカリ)"
+			]
+		},
+		"birth": "2002.11.13",
+		"height": "158",
+		"size": {
+			"bust": "B98",
+			"waist": "W63",
+			"hips": "H93"
+		},
+		"bra": "H",
+		"debut": "2023.06",
+		"title": "티파워즈 소속",
+		"desc": "트위터 @harunanoa1113",
+		"id": "9790",
+		"movie": ["BF-713", "LULU-301", "FOCS-197", "DVAJ-650", "PJAM-027", "ROYD-220", "JUR-209", "PPPE-232", "DASS-593", "KAM-246", "APNS-367", "CAWD-797", "LULU-427", "CAWD-971", "HBAD-726", "MKMP-742", "UMAN-003", "GVH-878"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a06/6453_n.jpg",
+		"name": {
+			"kr": "나나츠모리 리리",
+			"en": "Riri Nanatsumori",
+			"cn": "七ツ森りり",
+			"other": [
+				"마츠모토 레이카(松本鈴香)",
+				"나나츠모 리리"
+			]
+		},
+		"birth": "1995.11.11",
+		"height": "153",
+		"size": {
+			"bust": "B89",
+			"waist": "W62",
+			"hips": "H90"
+		},
+		"bra": "F",
+		"debut": "2020.08",
+		"title": "",
+		"desc": "",
+		"id": "6453",
+		"movie": ["SSIS-058", "SSIS-010", "SSIS-371", "SSIS-344", "SSIS-083", "SSIS-640", "SSIS-783", "SONE-011", "SONE-053", "JUQ-637", "SONE-247", "SNOS-084", "SNOS-255", "SNOS-369"]
 	}
 ];
 
