@@ -76,19 +76,15 @@ const Actor = ({ ref, ...props }) => {
 									{
 										(data.size.bust || data.size.waist || data.size.hips) &&
 										<dl className="define size">
-											<dt>신체 사이즈</dt>
+											<dt>신체사이즈</dt>
 											<dd>
-												<span>{data.size.bust}</span>
+												<span>
+													{data.size.bust}
+													{data.bra && `(${data.bra})`}
+												</span>
 												<span>{data.size.waist}</span>
 												<span>{data.size.hips}</span>
 											</dd>
-										</dl>
-									}
-									{
-										data.bra &&
-										<dl className="define">
-											<dt>컵 사이즈</dt>
-											<dd>{data.bra}</dd>
 										</dl>
 									}
 									{
@@ -417,19 +413,15 @@ const Page = ({ ref, ...props }) => {
 																{
 																	(item.size.bust || item.size.waist || item.size.hips) &&
 																	<dl className="define size">
-																		<dt>신체 사이즈</dt>
+																		<dt>신체사이즈</dt>
 																		<dd>
-																			<span>{item.size.bust}</span>
+																			<span>
+																				{item.size.bust}
+																				{item.bra && `(${item.bra})`}
+																			</span>
 																			<span>{item.size.waist}</span>
 																			<span>{item.size.hips}</span>
 																		</dd>
-																	</dl>
-																}
-																{
-																	item.bra &&
-																	<dl className="define">
-																		<dt>컵 사이즈</dt>
-																		<dd>{item.bra}</dd>
 																	</dl>
 																}
 																{

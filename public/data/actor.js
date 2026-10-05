@@ -1231,30 +1231,6 @@ const data = [
 		"movie": ["SONE-350", "SONE-301", "SONE-966", "SONE-804", "SONE-487", "SONE-954", "SNOS-221", "SNOS-303", "SNOS-357"]
 	},
 	{
-		"image": "https://i1.avdbs.com/actor/a09/9790_n.jpg",
-		"name": {
-			"kr": "하루나 노아",
-			"en": "Noa Haruna",
-			"cn": "羽月乃蒼",
-			"other": [
-				"타츠미 아카리(辰美アカリ)"
-			]
-		},
-		"birth": "2002.11.13",
-		"height": "158",
-		"size": {
-			"bust": "B98",
-			"waist": "W63",
-			"hips": "H93"
-		},
-		"bra": "H",
-		"debut": "2023.06",
-		"title": "티파워즈 소속",
-		"desc": "트위터 @harunanoa1113",
-		"id": "9790",
-		"movie": ["BF-713", "LULU-301", "FOCS-197", "DVAJ-650", "PJAM-027", "ROYD-220", "JUR-209", "PPPE-232", "DASS-593", "KAM-246", "APNS-367", "CAWD-797", "LULU-427", "CAWD-971", "HBAD-726", "MKMP-742", "UMAN-003", "GVH-878"]
-	},
-	{
 		"image": "https://i1.avdbs.com/actor/a06/6453_n.jpg",
 		"name": {
 			"kr": "나나츠모리 리리",
@@ -1374,7 +1350,7 @@ const data = [
 		"title": "2020년 FALENO 전속으로 데뷔했다가 키카탄 전향, 이후 공장장으로 급부상",
 		"desc": "깜찍한 외모의 구릿빛 슬렌더 몸매. 1999년 도치기현에서 태어났다. 2019년 긴자 루나라는 예명으로 긴자 카가야키라는 곳에서 풍속일을 하다가, 같은 해 11월 트위터를 개설했다. 2020년 2월 FALENO의 전속 배우로 AV에 데뷔했다. 소속사는 링크스(LINX). AV에는 호기심에 지원했다고 한다. 데뷔작 FSDSS에서는 아나운서를 목표로 하는 현역 여대생으로 출연했다. 같은 해 8월 1st 사진집 발매. 같은 해 11월 25일, 키카탄으로 전향할 것으로 밝히며 공장장 모드에 돌입했고, 그 다음달인 12월에 바로 질싸를 해금했다(CAWD-161, CJOD-272, HND-927 3편 동시 질싸 해금). 취미는 가라오케라는데 2020년 11월 27일 레이디 마돈나에서 라이브 첫 무대를 가졌다. 2021년 1월 동인계 AV에도 출연. 트위터 @_tojo_natsu 인스타 @tojonatsu",
 		"id": "6119",
-		"movie": ["JUL-412", "MXGS-1166", "SHKD-926", "ROYD-039", "HODV-21579", "WAAA-090", "ADN-327", "RBK-020", "MIAA-584", "ATID-509", "MEYD-744", "DVAJ-564", "JUL-896", "VENX-115", "SAME-006", "SDMF-020", "VENX-151", "HMN-206", "MIAA-680", "NSFS-111", "CAWD-413", "ROYD-105", "DASS-124", "DASS-191", "DASS-179", "DASS-161", "DASS-574", "DASS-584", "DASS-637", "HMN-709", "HMN-725", "DASS-690", "HMN-774", "DASS-859", "HMN-752", "HMN-743", "HMN-796", "DASS-868", "DASS-974", "DASS-930", "DSOD-004", "HMN-884", "DSOD-090"]
+		"movie": ["JUL-412", "SHKD-926", "ROYD-039", "HODV-21579", "ADN-327", "ATID-509", "MEYD-744", "DVAJ-564", "JUL-896", "SAME-006", "SDMF-020", "HMN-206", "MIAA-680", "CAWD-413", "DASS-124", "DASS-191", "DASS-179", "DASS-161", "DASS-574", "DASS-637", "HMN-709", "HMN-725", "DASS-690", "HMN-774", "DASS-859", "HMN-752", "HMN-743", "HMN-796", "DASS-868", "DASS-974", "DASS-930", "DSOD-004", "HMN-884", "DSOD-090"]
 	},
 	{
 		"image": "https://i1.avdbs.com/actor/a07/7694_n.jpg",
@@ -1426,7 +1402,29 @@ const data = [
 		"title": "하타노 유이의 영원한 라이벌",
 		"desc": "수많은 여배우들이 존경하는 인성 갑 배우 @hibiki0221 @OTSUKI221HIBIKI",
 		"id": "136",
-		"movie": []
+		"movie": ["JUQ-169", "HZGD-248", "MEYD-878", "DASS-334", "MXGS-1364", "ADN-644", "GVH-748", "NKKD-355", "NACT-024", "WAAA-602", "DASS-823", "DASS-900", "WAAA-650"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a08/8721_n.jpg",
+		"name": {
+			"kr": "스에히로 준",
+			"en": "Jun Suehiro",
+			"cn": "末広純",
+			"other": []
+		},
+		"birth": "1994.01.30",
+		"height": "154",
+		"size": {
+			"bust": "B82",
+			"waist": "W60",
+			"hips": "H86"
+		},
+		"bra": "D",
+		"debut": "2022.04",
+		"title": "",
+		"desc": "",
+		"id": "8721",
+		"movie": ["JUQ-017", "JUQ-049", "ALDN-088", "FOCS-101", "GVH-490", "APNS-305", "NSFS-148", "SAME-048", "LULU-191", "JUQ-265", "BF-684", "WAAA-268", "NSFS-184", "MKON-087", "REAL-822", "HMN-396", "MIAA-904", "ADN-478", "SAME-074", "HODV-21790", "NSFS-219", "JJDA-042", "HODV-21830", "LULU-266", "SAN-218", "NGOD-202", "MRHP-037", "NACR-868", "ALDN-415", "FTHTD-183"]
 	}
 ];
 
