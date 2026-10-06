@@ -146,6 +146,10 @@ const Movie = ({ ref, ...props }) => {
 			filterMovie[0].image = filterThumb[0].image;
 			setData(filterMovie[0]);
 		}
+
+		if (filterMovie[0].image === '') {
+			setStatus(false);
+		}
 	}, [props.data]);
 
 	return (
@@ -183,7 +187,6 @@ const Movie = ({ ref, ...props }) => {
 						</UxGroup>
 						<UxGroup className="col1 gap4">
 							{
-								data.image &&
 								<span className="thumb">
 									{
 										(!props.checked || !status) &&
@@ -194,7 +197,6 @@ const Movie = ({ ref, ...props }) => {
 										<img
 											src={data.image}
 											alt={data.name}
-											onError={() => setStatus(false)}
 										/>
 									}
 								</span>
