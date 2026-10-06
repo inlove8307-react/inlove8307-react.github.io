@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { isMobile, isBrowser, MobileView, BrowserView } from "react-device-detect";
+import { isMobile, isBrowser, BrowserView } from "react-device-detect";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";

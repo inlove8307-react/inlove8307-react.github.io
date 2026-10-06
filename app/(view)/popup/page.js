@@ -11,7 +11,7 @@ import UxContent from "@/components/layout/UxContent";
 import UxGroup from "@/components/base/UxGroup";
 import UxButton from "@/components/base/UxButton";
 /* POPUP */
-import Popup from "@/components/popup/PopupNew";
+import Popup from "@/components/popup/Popup";
 
 export default function Guide() {
 	const modal = useModal();

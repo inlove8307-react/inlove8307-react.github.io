@@ -1,17 +1,15 @@
+'use client';
+
 import { useEffect } from 'react';
 import { isDesktop, isWindows, isMacOs, isMobile, isIOS, isAndroid, isChrome, isFirefox, isSafari, isEdge } from 'react-device-detect';
 import classnames from 'classnames';
-import $ from 'jquery';
-import Layout from '@/components/layout';
-import RootContextProvider from '@/context/RootContext';
-
-// Styles
+/* STYLES */
 import "@/public/styles/icon.scss";
 import "@/public/styles/component.scss";
 
-export default function App({ Component, pageProps }) {
+export default function DeviceCssInjector() {
 	useEffect(() => {
-		$('html').addClass(classnames({
+		const detect = classnames({
 			desktop: isDesktop,
 			windows: isWindows,
 			macos: isMacOs,
@@ -22,14 +20,10 @@ export default function App({ Component, pageProps }) {
 			firefox: isFirefox,
 			safari: isSafari,
 			edge: isEdge
-		}));
+		}).split(/\s+/g);
+
+		document.documentElement.classList.add(...detect);
 	}, []);
 
-	return (
-		<RootContextProvider>
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-		</RootContextProvider>
-	)
+	return null;
 }
