@@ -726,6 +726,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.row.center {justify-content: center;}
 .ux-group.row.left {justify-content: flex-start;}
 .ux-group.row.right {justify-content: flex-end;}
+.ux-group.row.between {justify-content: space-between;}
 /* <UxGroup> Default Column */
 .ux-group.column {flex-direction: column;}
 .ux-group.column.center {align-items: center;}
@@ -1472,9 +1473,9 @@ dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 /* Define Column */
 dl.define.column {flex-direction: column; gap: .2rem;}
 dl.define.column dd {text-align: left;}
-/* Define Image (Desktop) */
-dl.define.image .image {overflow: hidden; display: inline-block;}
-dl.define.image .image img {max-width: 100%;}
+/* Define Image */
+dl.define.thumb .thumb {overflow: hidden; display: inline-flex; justify-content: center; align-items: center; background-color: var(--background-muted); vertical-align: top;}
+dl.define.thumb .thumb img {max-width: 100%;}
 /* Define Name */
 dl.define.name dd {display: flex; flex-direction: column; text-align: right;}
 /* Define Birth */
@@ -1487,8 +1488,8 @@ dl.define.size dd span {display: flex; gap: .4rem;}
 dl.define.size dd span + span::before {content: '/';}
 /* Define Desc */
 dl.define.desc {gap: .4rem;}
-dl.define.desc dt {font-weight: 500; color: var(--text-default);}
-dl.define.desc dd {font-weight: 400;}
+dl.define.desc dt {font-weight: 500; color: var(--text-default)!important;}
+dl.define.desc dd {font-weight: 500; color: var(--text-muted)!important;}
 
 
 
@@ -1500,15 +1501,15 @@ html.desktop .ux-group.actor {row-gap: 3.2rem;}
 html.desktop .ux-card.actor {--space: 2rem;}
 html.desktop .ux-card.actor .ux-card-base {gap: var(--space);}
 /* Card Actor (Desktop) Dl Actor */
-html.desktop .ux-card.actor dl.actor {gap: 1.2rem; width: calc(50% - var(--space) / 2);}
+html.desktop .ux-card.actor dl.actor {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Actor Details */
 html.desktop .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .4rem;}
-/* Card Actor (Desktop) Define Image (Desktop) */
-html.desktop dl.define.image {gap: 1.6rem; padding: .4rem 0 1.2rem;}
-html.desktop dl.define.image > dt {flex-grow: 1; flex-basis: 0;}
-html.desktop dl.define.image > dt .image {width: 23.2rem; height: 23.2rem; border-radius: 1.6rem;}
-html.desktop dl.define.image > dt img {max-width: 100%;}
-html.desktop dl.define.image > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .4rem; text-align: initial;}
+/* Card Actor (Desktop) Define Thumb (Desktop) */
+html.desktop dl.define.thumb {gap: 1.6rem; padding: 0 0 1.2rem;}
+html.desktop dl.define.thumb > dt {flex-grow: 1; flex-basis: 0;}
+html.desktop dl.define.thumb > dt .thumb {width: 23.2rem; height: 23.2rem; border-radius: 1.6rem;}
+html.desktop dl.define.thumb > dt img {max-width: 100%;}
+html.desktop dl.define.thumb > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .4rem; text-align: initial;}
 /* Card Actor (Desktop) Dl Movie */
 html.desktop .ux-card.actor dl.movie {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Movie Subject */
@@ -1528,9 +1529,9 @@ html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-
 /* Card Actor (Mobile) Dl Actor Details */
 html.mobile .ux-card.actor dl.actor dd.details {display: none;}
 /* Card Actor (Mobile) Define Image (Mobile) */
-html.mobile dl.define.image > dt {text-align: center;}
-html.mobile dl.define.image > dt .image {width: 20rem; height: 20rem; border-radius: 10rem;}
-html.mobile dl.define.image > dd {display: flex; flex-direction: column; gap: .4rem;}
+html.mobile dl.define.thumb > dt {text-align: center;}
+html.mobile dl.define.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
+html.mobile dl.define.thumb > dd {display: flex; flex-direction: column; gap: .4rem;}
 /* Card Actor (Mobile) Dl Movie */
 html.mobile .ux-card.actor dl.movie {gap: 1.2rem;}
 /* Card Actor (Mobile) Dl Movie Subject */
@@ -1562,12 +1563,10 @@ html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 
 .ux-modal.movie .thumb img {width: 100%;}
 /* Popup Movie Cast */
 .ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-modal.movie ul.cast li.bl.pound {color: var(--text-muted);}
-.ux-modal.movie a.cast {font-size: 1.6rem; color: var(--text-red);}
+.ux-modal.movie ul.cast li.bl.pound {color: var(--text-red);}
 /* Popup Movie Category */
 .ux-modal.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-modal.movie ul.category li.bl.pound {color: var(--text-muted);}
-.ux-modal.movie a.category {font-size: 1.6rem; color: var(--text-blue);}
+.ux-modal.movie ul.category li.bl.pound {color: var(--text-blue);}
 /* Popup Movie (Mobile) */
 html.mobile .ux-modal.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
 /* Popup Movie (Desktop) */

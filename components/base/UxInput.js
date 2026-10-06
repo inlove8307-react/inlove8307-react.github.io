@@ -952,21 +952,27 @@ const File = ({ ref, ...props }) => {
 const Default = ({ ref, ...props }) => {
 	const [value, setValue] = useState(props.value || '');
 
+	const handleChange = (event) => {
+		setValue(event.target.value);
+		props.onChange && props.onChange(event.target.value);
+	};
+
 	const handleClear = (event) => {
 		setValue('');
-		props.onClear && props.onClear(event);
+		props.onClear && props.onClear('');
+		props.onChange && props.onChange('');
 	};
 
 	const handleSubmit = (event) => {
 		props.onSubmit && props.onSubmit(event);
 	}
 
-	useEffect(() => {
-		props.onChange && props.onChange(value);
-	}, [value]);
+	// useEffect(() => {
+	// 	props.onChange && props.onChange(value);
+	// }, [value]);
 
 	useEffect(() => {
-		if (typeof props.value === 'string' && props.value !== value) {
+		if (typeof props.value !== 'undefined' && props.value !== value) {
 			setValue(props.value);
 		}
 	}, [props.value]);
@@ -992,7 +998,7 @@ const Default = ({ ref, ...props }) => {
 				value={value}
 				readonly={props.readonly}
 				disabled={props.disabled}
-				onChange={(event) => setValue(event.target.value)}
+				onChange={handleChange}
 			/>
 			{props.children}
 			{

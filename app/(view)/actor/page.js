@@ -10,9 +10,12 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxInput from "@/components/base/UxInput";
+import UxSelect from "@/components/base/UxSelect";
+import UxOption from "@/components/base/UxOption";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
 import UxButton from "@/components/base/UxButton";
+import UxCheckbox from "@/components/base/UxCheckbox";
 /* DATA */
 import actor from '@/public/data/actor';
 import movie from '@/public/data/movie';
@@ -37,9 +40,9 @@ const Actor = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxContent>
 						<UxGroup className="col1 gap4">
-							<dl className="define column image">
+							<dl className="define column thumb">
 								<dt>
-									<span className="image">
+									<span className="thumb">
 										<img src={`/images/actor/${data.id}.jpg`} alt={data.name.en} />
 									</span>
 								</dt>
@@ -76,19 +79,12 @@ const Actor = ({ ref, ...props }) => {
 									{
 										(data.size.bust || data.size.waist || data.size.hips) &&
 										<dl className="define size">
-											<dt>신체 사이즈</dt>
+											<dt>신체사이즈</dt>
 											<dd>
-												<span>{data.size.bust}</span>
+												<span>{data.size.bust}{data.bra && ` (${data.bra})`}</span>
 												<span>{data.size.waist}</span>
 												<span>{data.size.hips}</span>
 											</dd>
-										</dl>
-									}
-									{
-										data.bra &&
-										<dl className="define">
-											<dt>컵 사이즈</dt>
-											<dd>{data.bra}</dd>
 										</dl>
 									}
 									{
@@ -130,8 +126,8 @@ const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
 
 	useEffect(() => {
-		const filterMovie = movie.filter(item => item.name === props.data);
-		const filterThumb = thumb.filter(item => item.name === props.data);
+		const filterMovie = movie.filter(item => item.name === props.name);
+		const filterThumb = thumb.filter(item => item.name === props.name);
 
 		if (filterMovie.length) {
 			filterMovie[0].image = filterThumb[0].image;
@@ -269,7 +265,10 @@ const Page = ({ ref, ...props }) => {
 	const [isClient, setIsClient] = useState(false);
 	const [actorData, setActorData] = useState([]);
 	const [filterData, setFilterData] = useState([]);
+	const [select, setSelect] = useState('en');
 	const [search, setSearch] = useState('');
+	const [checked, setChecked] = useState(true);
+	const [status, setStatus] = useState([]);
 
 	const handleSearch = (value) => {
 		setSearch(value);
@@ -283,12 +282,20 @@ const Page = ({ ref, ...props }) => {
 		});
 	};
 
-	const handleMovie = (data) => {
+	const handleError = (id) => {
+		setStatus((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, exist: false } : item
+			)
+		);
+	};
+
+	const handleMovie = (name) => {
 		if (isBrowser) {
 			modal.full(Movie, {
 				caseClassName: 'movie',
 				footer: false,
-				data,
+				name,
 			});
 		}
 
@@ -296,7 +303,7 @@ const Page = ({ ref, ...props }) => {
 			modal.center(Movie, {
 				caseClassName: 'movie',
 				footer: false,
-				data,
+				name,
 			});
 		}
 	};
@@ -319,7 +326,12 @@ const Page = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		const array = actorData.filter((item) => {
-			return item.name.en.toLowerCase().includes(search.toLowerCase());
+			if (select === 'en') {
+				return item.name.en.toLowerCase().includes(search.toLowerCase());
+			}
+			if (select === 'kr') {
+				return item.name.kr.includes(search);
+			}
 		});
 
 		setFilterData(array);
@@ -336,6 +348,12 @@ const Page = ({ ref, ...props }) => {
 	}, [actorData]);
 
 	useEffect(() => {
+		if (!status.length) {
+			setStatus(actor.map(item => ({ id: item.id, exist: true })));
+		}
+	}, []);
+
+	useEffect(() => {
 		setIsClient(true);
 	}, []);
 
@@ -345,21 +363,52 @@ const Page = ({ ref, ...props }) => {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					<UxInput
+					{/* <UxInput
 						role="search"
 						placeholder="검색어를 입력하세요"
 						value={search}
 						clear
 						onChange={handleSearch}
-					/>
+					/> */}
+					<UxGroup
+						role="input"
+					>
+						<UxSelect
+							value={select}
+							inside
+							onChange={(value) => setSelect(value)}
+						>
+							<UxOption value="en">EN</UxOption>
+							<UxOption value="kr">KR</UxOption>
+						</UxSelect>
+						<UxInput
+							className="fill"
+							placeholder="검색어를 입력하세요"
+							value={search}
+							clear
+							inside
+							onChange={handleSearch}
+						/>
+						<UxButton>
+							<i className="icon mask search x24" />
+						</UxButton>
+					</UxGroup>
 				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
-						<p className="fw500">총 <em className="fw600 red">{filterData.length}</em> 건</p>
+						<UxGroup className="row between">
+							<span className="fw500 fs18">총 <em className="fw600 red">{filterData.length}</em> 건</span>
+							<UxCheckbox
+								role="switch"
+								checked={checked}
+								onChange={(value) => setChecked(value)}
+							/>
+						</UxGroup>
 						<UxGroup className="actor col1">
 							{
 								filterData.map((data) => {
-									const item = Object.assign(data, getAge(data.birth));
+									const item = {...data, ...getAge(data.birth)};
+									const exist = status.filter(item => item.id === data.id)[0].exist;
 
 									return (
 										<UxCard
@@ -378,10 +427,21 @@ const Page = ({ ref, ...props }) => {
 												</dt>
 												<dd className="details">
 													<BrowserView renderWithFragment>
-														<dl className="define image">
+														<dl className="define thumb">
 															<dt>
-																<span className="image">
-																	<img src={`/images/actor/${data.id}.jpg`} alt={data.name.en} />
+																<span className="thumb">
+																	{
+																		(!checked || !exist) &&
+																		<i className="icon mask image disabled x44" />
+																	}
+																	{
+																		(checked && exist) &&
+																		<img
+																			src={`/images/actor/${item.id}.jpg`}
+																			alt={item.name.en}
+																			onError={() => handleError(item.id)}
+																		/>
+																	}
 																</span>
 															</dt>
 															<dd>
@@ -417,19 +477,12 @@ const Page = ({ ref, ...props }) => {
 																{
 																	(item.size.bust || item.size.waist || item.size.hips) &&
 																	<dl className="define size">
-																		<dt>신체 사이즈</dt>
+																		<dt>신체사이즈</dt>
 																		<dd>
-																			<span>{item.size.bust}</span>
+																			<span>{item.size.bust}{item.bra && ` (${item.bra})`}</span>
 																			<span>{item.size.waist}</span>
 																			<span>{item.size.hips}</span>
 																		</dd>
-																	</dl>
-																}
-																{
-																	item.bra &&
-																	<dl className="define">
-																		<dt>컵 사이즈</dt>
-																		<dd>{item.bra}</dd>
 																	</dl>
 																}
 																{

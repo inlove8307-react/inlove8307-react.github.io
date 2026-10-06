@@ -22,14 +22,11 @@ const Switch = ({ ref, ...props }) => {
 
 	const handleChange = (event) => {
 		setChecked(event.target.checked);
+		props.onChange && props.onChange(event.target.checked);
 	};
 
 	useEffect(() => {
-		props.onChange && props.onChange(checked);
-	}, [checked]);
-
-	useEffect(() => {
-		if (typeof props.checked === 'boolean') {
+		if (typeof props.checked === 'boolean' && props.checked !== checked) {
 			setChecked(props.checked);
 		}
 	}, [props.checked]);
