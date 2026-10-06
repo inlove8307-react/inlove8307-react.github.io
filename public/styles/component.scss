@@ -1558,13 +1558,13 @@ html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 
 
 
 /* Popup Movie Group Link */
-.ux-modal.movie .ux-group.link {gap: .8rem; position: sticky; top: 0; left: 0; padding-bottom: 1.6rem; background-color: var(--background-default);}
+.ux-modal.movie .ux-group.link {gap: .8rem; position: sticky; top: 0; left: 0; z-index: 1; padding-bottom: 1.6rem; background-color: var(--background-default);}
 /* Popup Movie Define */
 .ux-modal.movie dl.define.column dd {word-break: break-all;}
 /* Popup Movie Link */
 .ux-modal.movie .ux-button.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-red);}
 /* Popup Movie Thumb */
-.ux-modal.movie .thumb {padding: 0 0 .8rem;}
+.ux-modal.movie .thumb {overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: .8rem; border-radius: 1.6rem; background-color: var(--background-muted);}
 .ux-modal.movie .thumb img {width: 100%;}
 /* Popup Movie Cast */
 .ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
@@ -1574,8 +1574,12 @@ html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 
 .ux-modal.movie ul.category li.bl.pound {color: var(--text-blue);}
 /* Popup Movie (Mobile) */
 html.mobile .ux-modal.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
+/* Popup Movie (Mobile) Thumb */
+html.mobile .ux-modal.movie .thumb {min-height: 20.3rem;}
 /* Popup Movie (Desktop) */
 html.desktop .ux-modal.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
 /* Popup Movie (Desktop) Define */
 html.desktop .ux-modal.movie dl.define {flex-direction: column; gap: .2rem;}
 html.desktop .ux-modal.movie dl.define dd {text-align: left;}
+/* Popup Movie (Desktop) Thumb */
+html.desktop .ux-modal.movie .thumb {min-height: 48.7rem;}

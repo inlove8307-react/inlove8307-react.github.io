@@ -23,6 +23,7 @@ import thumb from '@/public/data/thumb';
 
 const Actor = ({ ref, ...props }) => {
 	const data = props.data;
+	const [status, setStatus] = useState(true);
 
 	return (
 		<>
@@ -43,7 +44,18 @@ const Actor = ({ ref, ...props }) => {
 							<dl className="define column thumb">
 								<dt>
 									<span className="thumb">
-										<img src={`/images/actor/${data.id}.jpg`} alt={data.name.en} />
+										{
+											(!props.checked || !status) &&
+											<i className="icon mask image disabled x44" />
+										}
+										{
+											(props.checked && status) &&
+											<img
+												src={`/images/actor/${data.id}.jpg`}
+												alt={data.name.en}
+												onError={() => setStatus(false)}
+											/>
+										}
 									</span>
 								</dt>
 								<dd>
@@ -124,6 +136,7 @@ const Actor = ({ ref, ...props }) => {
 
 const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
+	const [status, setStatus] = useState(true);
 
 	useEffect(() => {
 		const filterMovie = movie.filter(item => item.name === props.name);
@@ -172,7 +185,18 @@ const Movie = ({ ref, ...props }) => {
 							{
 								data.image &&
 								<span className="thumb">
-									<img src={data.image} alt={data.name} />
+									{
+										(!props.checked || !status) &&
+										<i className="icon mask image disabled x44" />
+									}
+									{
+										(props.checked && status) &&
+										<img
+											src={data.image}
+											alt={data.name}
+											onError={() => setStatus(false)}
+										/>
+									}
 								</span>
 							}
 							{
@@ -279,15 +303,8 @@ const Page = ({ ref, ...props }) => {
 			caseClassName: 'actor',
 			footer: false,
 			data,
+			checked,
 		});
-	};
-
-	const handleError = (id) => {
-		setStatus((prev) =>
-			prev.map((item) =>
-				item.id === id ? { ...item, exist: false } : item
-			)
-		);
 	};
 
 	const handleMovie = (name) => {
@@ -296,6 +313,7 @@ const Page = ({ ref, ...props }) => {
 				caseClassName: 'movie',
 				footer: false,
 				name,
+				checked,
 			});
 		}
 
@@ -304,8 +322,17 @@ const Page = ({ ref, ...props }) => {
 				caseClassName: 'movie',
 				footer: false,
 				name,
+				checked,
 			});
 		}
+	};
+
+	const handleError = (id) => {
+		setStatus((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, exist: false } : item
+			)
+		);
 	};
 
 	const getAge = (date) => {
