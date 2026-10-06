@@ -391,13 +391,11 @@ const Page = ({ ref, ...props }) => {
 					<UxContent>
 						<UxGroup className="row between">
 							<span className="fw500 fs18">총 <em className="fw600 red">{filterData.length}</em> 건</span>
-							<BrowserView renderWithFragment>
-								<UxCheckbox
-									role="switch"
-									checked={checked}
-									onChange={(value) => setChecked(value)}
-								/>
-							</BrowserView>
+							<UxCheckbox
+								role="switch"
+								checked={checked}
+								onChange={(value) => setChecked(value)}
+							/>
 						</UxGroup>
 						<UxGroup className="actor col1">
 							{
@@ -421,25 +419,25 @@ const Page = ({ ref, ...props }) => {
 													</UxButton>
 												</dt>
 												<dd className="details">
-													<BrowserView renderWithFragment>
-														<dl className="define thumb">
-															<dt>
-																<span className="thumb">
-																	{
-																		(!checked || !exist) &&
-																		<i className="icon mask image disabled x44" />
-																	}
-																	{
-																		(checked && exist) &&
-																		<img
-																			src={`/images/actor/${item.id}.jpg`}
-																			alt={item.name.en}
-																			onError={() => handleError(item.id)}
-																		/>
-																	}
-																</span>
-															</dt>
-															<dd>
+													<dl className="define thumb">
+														<dt>
+															<span className="thumb">
+																{
+																	(!checked || !exist) &&
+																	<i className="icon mask image disabled x44" />
+																}
+																{
+																	(checked && exist) &&
+																	<img
+																		src={`/images/actor/${item.id}.jpg`}
+																		alt={item.name.en}
+																		onError={() => handleError(item.id)}
+																	/>
+																}
+															</span>
+														</dt>
+														<dd>
+															<BrowserView renderWithFragment>
 																{
 																	(item.name.kr || item.name.en || item.name.cn) &&
 																	<dl className="define name">
@@ -487,8 +485,10 @@ const Page = ({ ref, ...props }) => {
 																		<dd>{item.debut}</dd>
 																	</dl>
 																}
-															</dd>
-														</dl>
+															</BrowserView>
+														</dd>
+													</dl>
+													<BrowserView renderWithFragment>
 														{
 															(item.title || item.desc) &&
 															<dl className="define column desc">

@@ -1504,7 +1504,7 @@ html.desktop .ux-card.actor .ux-card-base {gap: var(--space);}
 html.desktop .ux-card.actor dl.actor {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Actor Details */
 html.desktop .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .4rem;}
-/* Card Actor (Desktop) Define Thumb (Desktop) */
+/* Card Actor (Desktop) Define Thumb */
 html.desktop dl.define.thumb {gap: 1.6rem; padding: 0 0 1.2rem;}
 html.desktop dl.define.thumb > dt {flex-grow: 1; flex-basis: 0;}
 html.desktop dl.define.thumb > dt .thumb {width: 23.2rem; height: 23.2rem; border-radius: 1.6rem;}
@@ -1526,9 +1526,12 @@ html.mobile .ux-group.actor {row-gap: 2.4rem;}
 html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: 1.2rem;}
 /* Card Actor (Mobile) Dl Actor Subject */
 html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-flex; margin-left: auto;}
-/* Card Actor (Mobile) Dl Actor Details */
-html.mobile .ux-card.actor dl.actor dd.details {display: none;}
-/* Card Actor (Mobile) Define Image (Mobile) */
+/* Card Actor (Desktop) Dl Actor Details */
+html.mobile .ux-card.actor dl.actor dd.details {padding-top: 1.2rem;}
+html.mobile .ux-card.actor dl.actor dd.details dl.define.thumb {justify-content: center;}
+// html.mobile .ux-card.actor dl.actor dd.details dl.define.thumb dt .thumb {width: 16rem; height: 16rem;}
+html.mobile .ux-card.actor dl.actor dd.details dl.define.thumb > dd {display: none;}
+/* Card Actor (Mobile) Define Thumb */
 html.mobile dl.define.thumb > dt {text-align: center;}
 html.mobile dl.define.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
 html.mobile dl.define.thumb > dd {display: flex; flex-direction: column; gap: .4rem;}
