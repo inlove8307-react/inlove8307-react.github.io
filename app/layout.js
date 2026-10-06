@@ -1,4 +1,4 @@
-import { headers, cookies } from 'next/headers';
+// import { headers, cookies } from 'next/headers';
 /* CONTEXT */
 import RootContextProvider from '@/context/RootContext';
 /* CSS */
@@ -35,8 +35,8 @@ export const viewport = {
 };
 
 export default async function RootLayout({ children }) {
-	const header = await headers();
-	const cookie = await cookies();
+	// const header = await headers();
+	// const cookie = await cookies();
 
 	return (
 		<html lang="ko">
