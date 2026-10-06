@@ -478,7 +478,7 @@ html.desktop .ux-container {--space: 0rem;}
 /* <UxHeader> */
 .ux-header {position: fixed; top: 0; left: 0; right: 0; height: var(--header); border-bottom: .1rem solid var(--divider-gray); background-color: var(--background-default); transition: box-shadow .25s ease-in-out;}
 /* <UxHeader> Section */
-.ux-header .ux-section {justify-content: center;}
+.ux-header .ux-section:not(.menu) {justify-content: center;}
 /* <UxHeader> Base */
 .ux-header .ux-section.base {position: relative; z-index: 1; height: 100%; background-color: var(--background-default);}
 /* <UxHeader> Menu */
@@ -493,7 +493,7 @@ html.desktop .ux-container:not(.modal) .ux-article {width: var(--desktop);}
 /* <UxHeader> Desktop Modal */
 html.desktop.modal .ux-header {padding-right: var(--scrollbar-width);}
 /* <UxHeader> Mobile */
-html.mobile .ux-header .ux-section.menu {padding: 0 var(--space) 2.4rem;}
+html.mobile .ux-header .ux-section.menu {padding: 0 var(--space) 2.4rem; height: calc(100vh - var(--header));}
 html.mobile .ux-header .ux-section.menu .ux-group {--col: 3;}
 /* <UxHeader> z-index */
 .ux-header {z-index: 20;}
@@ -1457,7 +1457,6 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor dl.actor {display: flex; flex-direction: column;}
 /* Card Actor Dl Actor Subject */
 .ux-card.actor dl.actor dt.subject {display: flex; align-items: center; font-weight: 700; font-size: 2rem; line-height: 1;}
-.ux-card.actor dl.actor dt.subject .ux-button.info {display: none;}
 /* Card Actor Dl Movie */
 .ux-card.actor dl.movie {display: flex; flex-direction: column;}
 /* Card Actor Dl Movie Subject */
@@ -1549,7 +1548,8 @@ html.mobile .ux-card.actor .ux-button.tertiary.capsule.h4 i.icon {display: none;
 
 
 
-
+/* Popup Actor */
+.ux-modal.actor dl.define.column dd {word-break: break-all;}
 /* Popup Actor (Mobile) */
 html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 2);}
 

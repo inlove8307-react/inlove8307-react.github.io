@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { isMobile, isBrowser, BrowserView } from "react-device-detect";
+import { isMobile, isBrowser, BrowserView, MobileView } from "react-device-detect";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
@@ -411,12 +411,14 @@ const Page = ({ ref, ...props }) => {
 											<dl className="actor">
 												<dt className="subject">
 													<span>{item.name.en}</span>
-													<UxButton
-														className="info"
-														onClick={() => handleActor(item)}
-													>
-														<i className="icon mask muted share x20" />
-													</UxButton>
+													<MobileView renderWithFragment>
+														<UxButton
+															className="info"
+															onClick={() => handleActor(item)}
+														>
+															<i className="icon mask muted share x20" />
+														</UxButton>
+													</MobileView>
 												</dt>
 												<dd className="details">
 													<dl className="define thumb">
