@@ -363,13 +363,6 @@ const Page = ({ ref, ...props }) => {
 		<UxSection>
 			<UxArticle className="h3">
 				<UxSubject className="space">
-					{/* <UxInput
-						role="search"
-						placeholder="검색어를 입력하세요"
-						value={search}
-						clear
-						onChange={handleSearch}
-					/> */}
 					<UxGroup
 						role="input"
 					>
@@ -398,11 +391,13 @@ const Page = ({ ref, ...props }) => {
 					<UxContent>
 						<UxGroup className="row between">
 							<span className="fw500 fs18">총 <em className="fw600 red">{filterData.length}</em> 건</span>
-							<UxCheckbox
-								role="switch"
-								checked={checked}
-								onChange={(value) => setChecked(value)}
-							/>
+							<BrowserView renderWithFragment>
+								<UxCheckbox
+									role="switch"
+									checked={checked}
+									onChange={(value) => setChecked(value)}
+								/>
+							</BrowserView>
 						</UxGroup>
 						<UxGroup className="actor col1">
 							{
