@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { isMobile, isBrowser, BrowserView, MobileView } from "react-device-detect";
+import { isMobile, isBrowser, BrowserView } from "react-device-detect";
 import classnames from "classnames";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
@@ -302,6 +302,8 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	const handleActor = (data) => {
+		if (isBrowser) return;
+
 		modal.center(Actor, {
 			caseClassName: 'actor',
 			footer: false,
@@ -441,19 +443,14 @@ const Page = ({ ref, ...props }) => {
 											<dl className="actor">
 												<dt className="subject">
 													<span>{item.name.en}</span>
-													<MobileView renderWithFragment>
-														<UxButton
-															className="info"
-															onClick={() => handleActor(item)}
-														>
-															<i className="icon mask muted share x20" />
-														</UxButton>
-													</MobileView>
 												</dt>
 												<dd className="details">
 													<dl className="define thumb">
 														<dt>
-															<span className={classnames('thumb', {exist: checked && exist})}>
+															<UxButton
+																className={classnames('thumb', {exist: checked && exist})}
+																onClick={() => handleActor(item)}
+															>
 																{
 																	(!checked || !exist) &&
 																	<i className="icon mask image disabled x44" />
@@ -466,7 +463,7 @@ const Page = ({ ref, ...props }) => {
 																		onError={() => handleError(item.id)}
 																	/>
 																}
-															</span>
+															</UxButton>
 														</dt>
 														<dd>
 															<BrowserView renderWithFragment>
