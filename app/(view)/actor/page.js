@@ -302,8 +302,6 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	const handleActor = (data) => {
-		if (isBrowser) return;
-
 		modal.center(Actor, {
 			caseClassName: 'actor',
 			footer: false,
@@ -449,6 +447,7 @@ const Page = ({ ref, ...props }) => {
 														<dt>
 															<UxButton
 																className={classnames('thumb', {exist: checked && exist})}
+																disabled={isBrowser}
 																onClick={() => handleActor(item)}
 															>
 																{
