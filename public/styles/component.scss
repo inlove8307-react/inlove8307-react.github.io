@@ -1474,6 +1474,7 @@ dl.define.column {flex-direction: column; gap: .2rem;}
 dl.define.column dd {text-align: left;}
 /* Define Image */
 dl.define.thumb .thumb {overflow: hidden; display: inline-flex; justify-content: center; align-items: center; background-color: var(--background-muted); vertical-align: top;}
+dl.define.thumb .thumb.exist {align-items: flex-start;}
 dl.define.thumb .thumb img {max-width: 100%;}
 /* Define Name */
 dl.define.name dd {display: flex; flex-direction: column; text-align: right;}
@@ -1565,6 +1566,7 @@ html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 
 .ux-modal.movie .ux-button.link {display: flex; align-items: center; gap: .2rem; font-size: 1.6rem; line-height: 1; vertical-align: top; color: var(--text-red);}
 /* Popup Movie Thumb */
 .ux-modal.movie .thumb {overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: .8rem; border-radius: 1.6rem; background-color: var(--background-muted);}
+.ux-modal.movie .thumb.exist {align-items: flex-start;}
 .ux-modal.movie .thumb img {width: 100%;}
 /* Popup Movie Cast */
 .ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}

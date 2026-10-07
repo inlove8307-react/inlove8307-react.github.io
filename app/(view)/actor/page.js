@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { isMobile, isBrowser, BrowserView, MobileView } from "react-device-detect";
+import classnames from "classnames";
 import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
@@ -43,7 +44,7 @@ const Actor = ({ ref, ...props }) => {
 						<UxGroup className="col1 gap4">
 							<dl className="define column thumb">
 								<dt>
-									<span className="thumb">
+									<span className={classnames('thumb', {exist: status})}>
 										{
 											(!props.checked || !status) &&
 											<i className="icon mask image disabled x44" />
@@ -187,7 +188,7 @@ const Movie = ({ ref, ...props }) => {
 						</UxGroup>
 						<UxGroup className="col1 gap4">
 							{
-								<span className="thumb">
+								<span className={classnames('thumb', {exist: status})}>
 									{
 										(!props.checked || !status) &&
 										<i className="icon mask image disabled x44" />
@@ -452,7 +453,7 @@ const Page = ({ ref, ...props }) => {
 												<dd className="details">
 													<dl className="define thumb">
 														<dt>
-															<span className="thumb">
+															<span className={classnames('thumb', {exist})}>
 																{
 																	(!checked || !exist) &&
 																	<i className="icon mask image disabled x44" />
