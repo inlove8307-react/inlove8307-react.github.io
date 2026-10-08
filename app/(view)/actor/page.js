@@ -138,6 +138,7 @@ const Actor = ({ ref, ...props }) => {
 const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
 	const [status, setStatus] = useState(true);
+	const [name, setName] = useState('');
 
 	useEffect(() => {
 		const filterMovie = movie.filter(item => item.name === props.name);
@@ -146,6 +147,7 @@ const Movie = ({ ref, ...props }) => {
 		if (filterMovie.length) {
 			filterMovie[0].image = filterThumb[0].image;
 			setData(filterMovie[0]);
+			setName(filterMovie[0].name.toLowerCase());
 		}
 
 		if (filterMovie[0].image === '') {
@@ -171,7 +173,7 @@ const Movie = ({ ref, ...props }) => {
 						<UxGroup className="link">
 							<UxButton
 								role="link"
-								href={`https://123av.com/ko/v/${data.name}`}
+								href={`https://123av.com/ko/v/${name}`}
 								target="_blank"
 							>
 								<span>123AV</span>
@@ -179,10 +181,18 @@ const Movie = ({ ref, ...props }) => {
 							</UxButton>
 							<UxButton
 								role="link"
-								href={`https://missav123.com/ko/${data.name}`}
+								href={`https://missav123.com/ko/${name}`}
 								target="_blank"
 							>
 								<span>MISSAV</span>
+								<i className="icon mask muted link x18" />
+							</UxButton>
+							<UxButton
+								role="link"
+								href={`https://www.njav.com/ko/xvideos/${name}`}
+								target="_blank"
+							>
+								<span>NJAV</span>
 								<i className="icon mask muted link x18" />
 							</UxButton>
 						</UxGroup>
