@@ -1566,7 +1566,7 @@ const data = [
 		"title": "",
 		"desc": "",
 		"id": "11742",
-		"movie": []
+		"movie": ["IPZZ-980", "IPZZ-948", "IPZZ-922", "IPZZ-882", "IPZZ-860", "IPZZ-833"]
 	}
 ];
 

@@ -187,14 +187,14 @@ const Movie = ({ ref, ...props }) => {
 								<span>MISSAV</span>
 								<i className="icon mask muted link x18" />
 							</UxButton>
-							<UxButton
+							{/* <UxButton
 								role="link"
 								href={`https://www.njav.com/ko/xvideos/${name}`}
 								target="_blank"
 							>
 								<span>NJAV</span>
 								<i className="icon mask muted link x18" />
-							</UxButton>
+							</UxButton> */}
 						</UxGroup>
 						<UxGroup className="col1 gap4">
 							{
