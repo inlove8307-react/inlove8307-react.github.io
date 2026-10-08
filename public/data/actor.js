@@ -1523,6 +1523,50 @@ const data = [
 		"desc": "",
 		"id": "10135",
 		"movie": ["IPZZ-446", "IPZZ-393", "MIMK-187", "IPZZ-541", "IPZZ-641", "IPZZ-562", "PFES-103", "IPZZ-661", "IPZZ-926", "IPZZ-891", "IPZZ-975"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10679_n.jpg",
+		"name": {
+			"kr": "세오 린",
+			"en": "Rin Seo",
+			"cn": "瀬緒凛",
+			"other": []
+		},
+		"birth": "2003.04.02",
+		"height": "149",
+		"size": {
+			"bust": "B85",
+			"waist": "W55",
+			"hips": "H84"
+		},
+		"bra": "F",
+		"debut": "2024.07",
+		"title": "프레스티지에서 데뷔",
+		"desc": "트위터 https://x.com/seorin_oqoz",
+		"id": "10679",
+		"movie": ["IPZZ-983", "IPZZ-925", "IPZZ-866", "ABF-277", "ABF-210", "ABF-176"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11742_n.jpg",
+		"name": {
+			"kr": "하야시 메이",
+			"en": "Mei Hayashi",
+			"cn": "林芽依",
+			"other": []
+		},
+		"birth": "2003.01.01",
+		"height": "161",
+		"size": {
+			"bust": "B83",
+			"waist": "W51",
+			"hips": "H85"
+		},
+		"bra": "E",
+		"debut": "2026.01",
+		"title": "",
+		"desc": "",
+		"id": "11742",
+		"movie": []
 	}
 ];
 
