@@ -1480,6 +1480,50 @@ const data = [
 		"id": "11234",
 		"movie": ["FNS-253", "FNS-243", "FNS-231", "FNS-210", "FNS-196", "FNS-149", "FNS-117", "FNS-088"]
 	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11171_n.jpg",
+		"name": {
+			"kr": "사쿠라노 리노",
+			"en": "Rino Sakurano",
+			"cn": "桜乃りの",
+			"other": []
+		},
+		"birth": "2004.11.12",
+		"height": "156",
+		"size": {
+			"bust": "B85",
+			"waist": "W56",
+			"hips": "H83"
+		},
+		"bra": "E",
+		"debut": "2025.03",
+		"title": "소속사무소 티파워즈 T-POWERS",
+		"desc": "트위터 @sakurano_rino",
+		"id": "11171",
+		"movie": ["SONE-897", "SONE-995", "SNOS-045", "IPZZ-795", "SNOS-102", "SNOS-224", "SNOS-332", "SNOS-388"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10135_n.jpg?v=1",
+		"name": {
+			"kr": "사사키 사키",
+			"en": "Saki Sasaki",
+			"cn": "佐々木さき",
+			"other": []
+		},
+		"birth": "2003.05.30",
+		"height": "150",
+		"size": {
+			"bust": "B84",
+			"waist": "W58",
+			"hips": "H85"
+		},
+		"bra": "E",
+		"debut": "2023.11",
+		"title": "",
+		"desc": "",
+		"id": "10135",
+		"movie": ["IPZZ-446", "IPZZ-393", "MIMK-187", "IPZZ-541", "IPZZ-641", "IPZZ-562", "PFES-103", "IPZZ-661", "IPZZ-926", "IPZZ-891", "IPZZ-975"]
+	}
 ];
 
 export default data;
