@@ -1547,26 +1547,121 @@ const data = [
 		"movie": ["IPZZ-983", "IPZZ-925", "IPZZ-866", "ABF-277", "ABF-210", "ABF-176"]
 	},
 	{
-		"image": "https://i1.avdbs.com/actor/a11/11742_n.jpg",
+		"image": "https://i1.avdbs.com/actor/a10/10984_n.jpg",
 		"name": {
-			"kr": "하야시 메이",
-			"en": "Mei Hayashi",
-			"cn": "林芽依",
+			"kr": "키라 키라",
+			"en": "Kira Kira",
+			"cn": "輝星きら",
 			"other": []
 		},
-		"birth": "2003.01.01",
-		"height": "161",
+		"birth": "2004.03.03",
+		"height": "158",
+		"size": {
+			"bust": "B80",
+			"waist": "W55",
+			"hips": "H82"
+		},
+		"bra": "C",
+		"debut": "2024.12",
+		"title": "소속사무소 라이트 LIGHT",
+		"desc": "트위터 https://x.com/kira_kira0303",
+		"id": "10984",
+		"movie": ["MIDA-648", "MIDA-612", "MIDA-496", "MIDA-422", "MIDA-383", "MIDA-344", "MIDA-212", "MIDA-100", "MIDA-062"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11507_n.jpg",
+		"name": {
+			"kr": "유키무라 이츠키",
+			"en": "Itsuki Yukimura",
+			"cn": "幸村泉希",
+			"other": []
+		},
+		"birth": "2000.12.28",
+		"height": "156",
 		"size": {
 			"bust": "B83",
-			"waist": "W51",
+			"waist": "W58",
 			"hips": "H85"
 		},
-		"bra": "E",
-		"debut": "2026.01",
+		"bra": "D",
+		"debut": "2025.09",
 		"title": "",
 		"desc": "",
-		"id": "11742",
-		"movie": ["IPZZ-980", "IPZZ-948", "IPZZ-922", "IPZZ-882", "IPZZ-860", "IPZZ-833"]
+		"id": "11507",
+		"movie": ["SQTE-721", "SAME-230", "WAAA-698", "PRED-899", "IMO-038", "PRED-871", "SUJI-314", "PRED-870", "APNS-415", "NACT-132", "MMPV-003", "PRED-866", "APNS-409", "CAWD-983", "PFES-122", "ADN-762", "MIKR-039"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a07/7591_n.jpg",
+		"name": {
+			"kr": "유키 리노",
+			"en": "Rino Yuki",
+			"cn": "結城りの",
+			"other": [
+				"하라시마 치카(原嶋ちか)",
+				"미즈사와 아이(水沢愛)",
+				"후지사키 카논(藤崎かのん)",
+				"유키 란(結城蘭)"
+			]
+		},
+		"birth": "1999.04.30",
+		"height": "151",
+		"size": {
+			"bust": "B90",
+			"waist": "W55",
+			"hips": "H88"
+		},
+		"bra": "G",
+		"debut": "2021.08",
+		"title": "색기로는 10년차 배우들도 쌈싸먹는 모태 패왕색기",
+		"desc": "소속사무소 밤비프로모션. 외모는 특출나진 않지만 그걸 커버하고도 남는 엄청난 몸매와 색기로 큰 주목을 받은 2021년 신예 배우. AAA급의 가슴과 핑두는 물론 연기력과 성실함까지 갖춰 키카탄 데뷔 초부터 작품을 쏟아내고 있다. 이런저런 호불호 갈리는 약점들도 공존하지만 색기 하나만큼은 그야말로 타고났다는 평.",
+		"id": "7591",
+		"movie": ["SAN-109", "NPH-016", "JJDA-034", "DDFF-023", "IENFH-030", "KAM-112", "HMN-181", "VENX-127", "HHKL-104", "BABM-009", "AKDL-164", "MVSD-487", "REXD-509"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a09/9542_n.jpg",
+		"name": {
+			"kr": "스즈노야 린",
+			"en": "Rin Suzunoya",
+			"cn": "鈴の家りん",
+			"other": []
+		},
+		"birth": "2002.09.10",
+		"height": "151",
+		"size": {
+			"bust": "B86",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "E",
+		"debut": "2023.02",
+		"title": "2023년 프레스티지 전속 신인(프레스티지 ABW 전속배우)",
+		"desc": "티파워즈 소속. 데뷔작 BGN-073 트위터 @rinrin_dayou",
+		"id": "9542",
+		"movie": ["HMN-792", "WAAA-601", "HMN-758", "HMN-742", "WAAA-575", "HMN-726", "HMN-676", "HMN-643", "HMN-635", "HMN-883", "WAAA-658", "HMN-852", "PFES-123", "HMN-903", "WAAA-672"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10498_n.jpg",
+		"name": {
+			"kr": "마루이시 레아",
+			"en": "Rea Maruishi",
+			"cn": "丸石レア",
+			"other": [
+				"마루모 레아(丸最レア)"
+			]
+		},
+		"birth": "2001.10.30",
+		"height": "",
+		"size": {
+			"bust": "B95",
+			"waist": "W60",
+			"hips": "H93"
+		},
+		"bra": "J",
+		"debut": "2024.04",
+		"title": "마루이시 레아 → 마루모 레아",
+		"desc": "트위터 https://x.com/Marumo_Rea (구계정 https://x.com/maruishi_rea )",
+		"id": "10498",
+		"movie": ["DASS-726", "SQTE-706", "HOMA-157", "HBAD-729", "DVAJ-719"]
 	}
 ];
 
