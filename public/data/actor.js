@@ -1384,9 +1384,9 @@ const data = [
 	{
 		"image": "https://i1.avdbs.com/actor/a00/113_n.jpg",
 		"name": {
-			"kr": "모리사와 카나 (이이오카 카나코)",
-			"en": "Kana Morisawa (Kanako Iioka)",
-			"cn": "森沢かな（飯岡かなこ）",
+			"kr": "모리사와 카나",
+			"en": "Kana Morisawa",
+			"cn": "森沢かな",
 			"other": [
 				"오키타 리노(沖田梨乃)",
 				"후지와라 료코(藤原遼子)",

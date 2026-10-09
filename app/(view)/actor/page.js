@@ -116,29 +116,6 @@ const Actor = ({ ref, ...props }) => {
 									<dd>{data.desc}</dd>
 								</dl>
 							}
-							{
-								(data.sns?.x || data.sns?.instagram) &&
-								<ul className="sns">
-									<li>
-										<UxButton
-											role="link"
-											href={data.sns.x}
-											target="_blank"
-										>
-											<i className="icon mask i854 x18" />
-										</UxButton>
-									</li>
-									<li>
-										<UxButton
-											role="link"
-											href={data.sns.instagram}
-											target="_blank"
-										>
-											<i className="icon mask i812 x20" />
-										</UxButton>
-									</li>
-								</ul>
-							}
 						</UxGroup>
 					</UxContent>
 				</UxArticle>
@@ -474,6 +451,26 @@ const Page = ({ ref, ...props }) => {
 											<dl className="actor">
 												<dt className="subject">
 													<span>{item.name.en}</span>
+														{
+															item.sns?.x &&
+															<UxButton
+																role="link"
+																href={item.sns.x}
+																target="_blank"
+															>
+																<i className="icon mask i854 x18" />
+															</UxButton>
+														}
+														{
+															item.sns?.instagram &&
+															<UxButton
+																role="link"
+																href={item.sns.instagram}
+																target="_blank"
+															>
+																<i className="icon mask i812 x20" />
+															</UxButton>
+														}
 												</dt>
 												<dd className="details">
 													<dl className="define thumb">
@@ -556,35 +553,6 @@ const Page = ({ ref, ...props }) => {
 																<dt>{item.title}</dt>
 																<dd>{item.desc}</dd>
 															</dl>
-														}
-														{
-															(item.sns?.x || item.sns?.instagram) &&
-															<ul className="sns">
-																{
-																	item.sns?.x &&
-																	<li>
-																		<UxButton
-																			role="link"
-																			href={item.sns.x}
-																			target="_blank"
-																		>
-																			<i className="icon mask i854 x18" />
-																		</UxButton>
-																	</li>
-																}
-																{
-																	item.sns?.instagram &&
-																	<li>
-																		<UxButton
-																			role="link"
-																			href={item.sns.instagram}
-																			target="_blank"
-																		>
-																			<i className="icon mask i812 x20" />
-																		</UxButton>
-																	</li>
-																}
-															</ul>
 														}
 													</BrowserView>
 												</dd>

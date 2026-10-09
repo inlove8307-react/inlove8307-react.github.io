@@ -1456,7 +1456,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 /* Card Actor Dl Actor */
 .ux-card.actor dl.actor {display: flex; flex-direction: column;}
 /* Card Actor Dl Actor Subject */
-.ux-card.actor dl.actor dt.subject {display: flex; align-items: center; font-weight: 700; font-size: 2rem; line-height: 1;}
+.ux-card.actor dl.actor dt.subject {display: flex; align-items: center; gap: .4rem; font-weight: 700; font-size: 2rem; line-height: 1;}
 /* Card Actor Dl Movie */
 .ux-card.actor dl.movie {display: flex; flex-direction: column;}
 /* Card Actor Dl Movie Subject */
