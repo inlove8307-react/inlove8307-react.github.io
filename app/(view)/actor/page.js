@@ -61,7 +61,7 @@ const Actor = ({ ref, ...props }) => {
 								</dt>
 								<dd>
 									{
-										(data.name.kr || data.name.en || data.name.cn) &&
+										(data.name?.kr || data.name?.en || data.name?.cn) &&
 										<dl className="define name">
 											<dt>이름</dt>
 											<dd>
@@ -90,7 +90,7 @@ const Actor = ({ ref, ...props }) => {
 										</dl>
 									}
 									{
-										(data.size.bust || data.size.waist || data.size.hips) &&
+										(data.size?.bust || data.size?.waist || data.size?.hips) &&
 										<dl className="define size">
 											<dt>신체사이즈</dt>
 											<dd>
@@ -115,6 +115,29 @@ const Actor = ({ ref, ...props }) => {
 									<dt>{data.title}</dt>
 									<dd>{data.desc}</dd>
 								</dl>
+							}
+							{
+								(data.sns?.x || data.sns?.instagram) &&
+								<ul className="sns">
+									<li>
+										<UxButton
+											role="link"
+											href={data.sns.x}
+											target="_blank"
+										>
+											<i className="icon mask i854 x18" />
+										</UxButton>
+									</li>
+									<li>
+										<UxButton
+											role="link"
+											href={data.sns.instagram}
+											target="_blank"
+										>
+											<i className="icon mask i812 x20" />
+										</UxButton>
+									</li>
+								</ul>
 							}
 						</UxGroup>
 					</UxContent>
@@ -145,7 +168,7 @@ const Movie = ({ ref, ...props }) => {
 		const filterThumb = thumb.filter(item => item.name === props.name);
 
 		if (filterMovie.length) {
-			filterMovie[0].image = filterThumb[0].image;
+			filterMovie[0].image = filterThumb[0]?.image || '';
 			setData(filterMovie[0]);
 			setName(filterMovie[0].name.toLowerCase());
 		}
@@ -477,7 +500,7 @@ const Page = ({ ref, ...props }) => {
 														<dd>
 															<BrowserView renderWithFragment>
 																{
-																	(item.name.kr || item.name.en || item.name.cn) &&
+																	(item.name?.kr || item.name?.en || item.name?.cn) &&
 																	<dl className="define name">
 																		<dt>이름</dt>
 																		<dd>
@@ -506,7 +529,7 @@ const Page = ({ ref, ...props }) => {
 																	</dl>
 																}
 																{
-																	(item.size.bust || item.size.waist || item.size.hips) &&
+																	(item.size?.bust || item.size?.waist || item.size?.hips) &&
 																	<dl className="define size">
 																		<dt>신체사이즈</dt>
 																		<dd>
@@ -533,6 +556,35 @@ const Page = ({ ref, ...props }) => {
 																<dt>{item.title}</dt>
 																<dd>{item.desc}</dd>
 															</dl>
+														}
+														{
+															(item.sns?.x || item.sns?.instagram) &&
+															<ul className="sns">
+																{
+																	item.sns?.x &&
+																	<li>
+																		<UxButton
+																			role="link"
+																			href={item.sns.x}
+																			target="_blank"
+																		>
+																			<i className="icon mask i854 x18" />
+																		</UxButton>
+																	</li>
+																}
+																{
+																	item.sns?.instagram &&
+																	<li>
+																		<UxButton
+																			role="link"
+																			href={item.sns.instagram}
+																			target="_blank"
+																		>
+																			<i className="icon mask i812 x20" />
+																		</UxButton>
+																	</li>
+																}
+															</ul>
 														}
 													</BrowserView>
 												</dd>

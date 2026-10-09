@@ -1490,6 +1490,8 @@ dl.define.size dd span + span::before {content: '/';}
 dl.define.desc {gap: .4rem;}
 dl.define.desc dt {font-weight: 500; color: var(--text-default)!important;}
 dl.define.desc dd {font-weight: 500; color: var(--text-muted)!important;}
+/* SNS */
+ul.sns {display: flex; align-items: center; gap: .4rem; padding-top: .8rem;}
 
 
 
