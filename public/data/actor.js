@@ -1243,7 +1243,7 @@ const data = [
 		"image": "https://i1.avdbs.com/actor/a08/8573_n.jpg",
 		"name": {
 			"kr": "운파이",
-			"en": "うんぱい",
+			"en": "Unpai",
 			"cn": "うんぱい",
 			"other": []
 		},
