@@ -1994,6 +1994,142 @@ const data = [
 		},
 		"id": "10993",
 		"movie": ["APNS-419", "ROYD-339", "NACT-166", "SORA-641", "DSOD-015", "REAL-993", "MXGS-1428", "MUDR-377", "NGOD-333", "APNS-405", "CAWD-895", "SONE-990", "CKCK-014", "SONE-911", "SONE-681", "HBAD-740"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11801_n.jpg",
+		"name": {
+			"kr": "히나가타 미쿠루",
+			"en": "Mikuru Hinagata",
+			"cn": "雛形みくる",
+			"other": []
+		},
+		"birth": "2005.08.30",
+		"height": "170",
+		"size": {
+			"bust": "B95",
+			"waist": "W54",
+			"hips": "H90"
+		},
+		"bra": "I",
+		"debut": "2026.02",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/mikuru__hi",
+			"instagram": "https://www.instagram.com/mkl____.h/"
+		},
+		"id": "11801",
+		"movie": ["SNOS-380", "SNOS-363", "SNOS-249", "SNOS-216", "SNOS-129"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11547_n.jpg?v=1",
+		"name": {
+			"kr": "오가사와라 나노",
+			"en": "Nano Ogasawara",
+			"cn": "小笠原菜乃",
+			"other": []
+		},
+		"birth": "2005.04.12",
+		"height": "159",
+		"size": {
+			"bust": "B90",
+			"waist": "W53",
+			"hips": "H84"
+		},
+		"bra": "I",
+		"debut": "2025.09",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/nano_ogasawara",
+			"instagram": "https://www.instagram.com/nano_ogasawara"
+		},
+		"id": "11547",
+		"movie": ["START-567", "START-499", "START-604", "START-545"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a05/5570_n.jpg",
+		"name": {
+			"kr": "아이미 리카",
+			"en": "Rika Aimi",
+			"cn": "逢見リカ",
+			"other": [
+				"아이미 리카(逢見リカ/逢美リカ)",
+				"메이메이(めいめい)",
+				"마츠야마 리카(松山りか)",
+				"하루미 리카(晴海梨華)",
+				"사와시타 카즈키(澤下和希)"
+			]
+		},
+		"birth": "1999.12.30",
+		"height": "145",
+		"size": {
+			"bust": "B79",
+			"waist": "W53",
+			"hips": "H78"
+		},
+		"bra": "H",
+		"debut": "2019.04",
+		"title": "2019년 에스원 전속 출신 → 2020년 키카탄 전향. 예술을 추구하는 프로페셔널",
+		"desc": "1999년 기후현 출생. 키 145cm에 체중 38kg의 작은 체구지만 가슴은 커다란 미니멈 거유. 이국적인 느낌의 또렷한 이목구비와 구릿빛 피부를 지녔으며 실제로 혼혈이라고 밝혔다. 학창시절 낯가림이 심해서 별명이 '그림자'였으나 좋아하는 일에 열중하는 스타일. 2019년 에스원 전속 AV배우로 데뷔. 소속사무소 린쿠스(LINX). 애칭 리카탄. 2020년 마돈나 이적했다가 키카탄으로 바로 전향했다. AV 연기에 굉장히 자부심을 갖고 있고 전문성을 추구하는 프로페셔널. *배우 트위터@aimi__rika 일상 트위터@aimirika_2nd 팬클럽 https://www.fansnet.jp/aimi-rika *또 다른 이름 하루미 리카(라구주TV), 마츠야마 리카(마이와이프), 사와시타 카즈키(かぐや姫Pt), 메이메이(素人ホイホイpower)",
+		"sns": {
+			"x": "https://x.com/aimi__rika",
+			"instagram": "https://www.instagram.com/aimi__rika/"
+		},
+		"id": "5570",
+		"movie": ["HZGD-196", "NSPS-994", "PPPD-891", "NACR-362", "TPIN-089", "SORA-537", "DLDSS-555", "DLDSS-526", "FJIN-074"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9956_n.jpg?v=1",
+		"name": {
+			"kr": "메가미 준",
+			"en": "Jun Megami",
+			"cn": "女神ジュン",
+			"other": []
+		},
+		"birth": "1999.01.08",
+		"height": "158",
+		"size": {
+			"bust": "B90",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2024.10",
+		"title": "8man 소속",
+		"desc": "트위터 @Megami_Jun_",
+		"sns": {
+			"x": "https://x.com/Megami_Jun_",
+			"instagram": ""
+		},
+		"id": "9956",
+		"movie": ["FNS-197", "FNS-186", "FNS-150", "FNS-118", "FNS-071", "FNS-014", "FNS-224", "DLDSS-537"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11541_n.jpg",
+		"name": {
+			"kr": "미사키 소노카",
+			"en": "Sonoka Misaki",
+			"cn": "美咲そのか",
+			"other": []
+		},
+		"birth": "2005.01.10",
+		"height": "150",
+		"size": {
+			"bust": "B85",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "",
+		"debut": "2025.02",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "",
+			"instagram": ""
+		},
+		"id": "11541",
+		"movie": ["FNS-233", "FNS-250", "FNS-229", "FNS-226", "FNS-194", "FNS-167"]
 	}
 ];
 
