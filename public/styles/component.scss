@@ -611,7 +611,7 @@ html.mobile .ux-article.h6 {gap: 1.2rem;}
 
 /* <UxModal> */
 .ux-modal {--radius: 2.4rem; --modal-header: 6.3rem; --modal-footer: 8.8rem;}
-.ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+.ux-modal {position: fixed; top: 0; left: 0; width: 100%; height: 100dvh;}
 .ux-modal-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--black-70);}
 .ux-modal-base {overflow: hidden; position: relative; display: flex; flex-direction: column; background-color: var(--background-default);}
 /* <UxModal> Desktop */
