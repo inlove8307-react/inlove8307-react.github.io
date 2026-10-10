@@ -150,7 +150,7 @@ const Movie = ({ ref, ...props }) => {
 			setName(filterMovie[0].name.toLowerCase());
 		}
 
-		if (filterMovie[0].image === '') {
+		if (filterMovie[0]?.image === '') {
 			setStatus(false);
 		}
 	}, [props.data]);

@@ -1942,6 +1942,58 @@ const data = [
 		},
 		"id": "10498",
 		"movie": ["DASS-726", "SQTE-706", "HOMA-157", "HBAD-729", "DVAJ-719"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10924_n.jpg",
+		"name": {
+			"kr": "히나타 유나",
+			"en": "Yuna Hinata",
+			"cn": "日向由奈",
+			"other": []
+		},
+		"birth": "2004.03.03",
+		"height": "145",
+		"size": {
+			"bust": "B82",
+			"waist": "W56",
+			"hips": "H84"
+		},
+		"bra": "D",
+		"debut": "2024.11",
+		"title": "소속사무소 어트랙티브 엘엘씨 AttractiveLLC",
+		"desc": "트위터 https://x.com/hinata__yuna",
+		"sns": {
+			"x": "https://x.com/hinata__yuna",
+			"instagram": ""
+		},
+		"id": "10924",
+		"movie": ["APNS-395", "FOCS-284", "PIYO-224", "FTHTD-142", "CAWD-873", "CAWD-863", "IPZZ-624", "IPZZ-494", "HOMA-162", "SUJI-301", "SQTE-676", "PRED-894", "MKON-146", "XVSR-902"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10993_n.jpg",
+		"name": {
+			"kr": "이토이 루카",
+			"en": "Ruka Itoi",
+			"cn": "糸井瑠花",
+			"other": []
+		},
+		"birth": "2002.07.05",
+		"height": "160",
+		"size": {
+			"bust": "B88",
+			"waist": "W54",
+			"hips": "H92"
+		},
+		"bra": "F",
+		"debut": "2024.12",
+		"title": "소속사무소 에스플러트 S-Flirt",
+		"desc": "트위터 https://x.com/ruka_sflirt",
+		"sns": {
+			"x": "https://x.com/ruka_sflirt",
+			"instagram": ""
+		},
+		"id": "10993",
+		"movie": ["APNS-419", "ROYD-339", "NACT-166", "SORA-641", "DSOD-015", "REAL-993", "MXGS-1428", "MUDR-377", "NGOD-333", "APNS-405", "CAWD-895", "SONE-990", "CKCK-014", "SONE-911", "SONE-681", "HBAD-740"]
 	}
 ];
 
