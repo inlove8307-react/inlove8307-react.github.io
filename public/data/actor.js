@@ -2130,6 +2130,162 @@ const data = [
 		},
 		"id": "11541",
 		"movie": ["FNS-233", "FNS-250", "FNS-229", "FNS-226", "FNS-194", "FNS-167"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a04/4399_n.jpg",
+		"name": {
+			"kr": "타다이 마히로",
+			"en": "Mahiro Tadai",
+			"cn": "唯井まひろ",
+			"other": []
+		},
+		"birth": "2000.04.03",
+		"height": "156",
+		"size": {
+			"bust": "B86",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "E",
+		"debut": "2018.06",
+		"title": "사쿠라 마나를 동경해 머리를 짧게 자르고 있는 게임 중독녀 (SOD STAR 전속배우)",
+		"desc": "아이돌을 동경해 아이돌 사무소에 소속되었으나, 오히려 기존 아이돌에 위화감을 품게 됐다. 이후 에비스 마스캇츠를 통해 AV의 존재를 알게 되었고, 사쿠라 마나를 좋아해서 머리도 숏컷으로 하게 됐다. 2018년 주간 플레이보이에서 누드 화보로 먼저 데뷔했다가, 곧바로 AV에 데뷔했다. 소속 사무소는 마인즈, 전속 메이커는 SOD크리에이트. 2019년 SOD 어워드 최우수신인상 수상. 가장 친한 친구는 오구라 유나. 유튜브에도 자주 같이 출연한다. 2019년에 본인 유튜브 채널도 따로 열었다. 구독자 1만 명. 트위치에서 마히푸린(まひぷりん)이란 이름으로 리그 오브 레전드 방송중. 조곤조곤하고 러블리한 성격",
+		"sns": {
+			"x": "https://x.com/tadai_mahiro",
+			"instagram": "https://www.instagram.com/tadai_mahiro/"
+		},
+		"id": "4399",
+		"movie": ["STARS-488", "STARS-393", "STARS-381", "STARS-261", "STARS-235", "STARS-898", "STARS-882", "START-143", "STARS-965", "START-444", "START-371", "START-262", "START-534", "START-633"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10807_n.jpg",
+		"name": {
+			"kr": "사카키바라 모에",
+			"en": "Moe Sakakibara",
+			"cn": "榊原萌",
+			"other": []
+		},
+		"birth": "2004.07.07",
+		"height": "158",
+		"size": {
+			"bust": "B86",
+			"waist": "W55",
+			"hips": "H83"
+		},
+		"bra": "E",
+		"debut": "2024.09",
+		"title": "S1 전속 AV배우",
+		"desc": "트위터 https://x.com/moe_millky",
+		"sns": {
+			"x": "https://x.com/moe_millky",
+			"instagram": "https://www.instagram.com/moe._.nyanvv/"
+		},
+		"id": "10807",
+		"movie": ["SNOS-341", "SNOS-043", "SONE-949", "SNOS-394", "SNOS-351"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10492_n.jpg",
+		"name": {
+			"kr": "나기사 아이리",
+			"en": "Airi Nagisa",
+			"cn": "渚あいり",
+			"other": []
+		},
+		"birth": "2004.07.27",
+		"height": "153",
+		"size": {
+			"bust": "B89",
+			"waist": "W58",
+			"hips": "H92"
+		},
+		"bra": "D",
+		"debut": "2024.03",
+		"title": "소속사무소 캡슐 에이전시(Capsule Agency)",
+		"desc": "트위터 https://twitter.com/Nagisa_Airi. 2024년에 S1 전속으로 데뷔했다. 2026년 7월 10일, 소속사를 캡슐 에이전시에서 T-POWERS로 이적과 동시에 나기사 아이카로 예명을 바꾸었다고 X 계정에 알렸다.",
+		"sns": {
+			"x": "https://x.com/Nagisa_Aika",
+			"instagram": ""
+		},
+		"id": "10492",
+		"movie": ["SNOS-402", "SNOS-268", "SNOS-226", "SNOS-163", "SNOS-092", "SNOS-026", "SONE-988", "SONE-416", "SONE-278"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11669_n.jpg",
+		"name": {
+			"kr": "코우키 미아",
+			"en": "Mia Kouki",
+			"cn": "神喜ミア",
+			"other": []
+		},
+		"birth": "2005.10.17",
+		"height": "158",
+		"size": {
+			"bust": "B85",
+			"waist": "W58",
+			"hips": "H85"
+		},
+		"bra": "G",
+		"debut": "2025.12",
+		"title": "FNS-138",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/miamia_nyann",
+			"instagram": ""
+		},
+		"id": "11669",
+		"movie": ["FNS-254", "FNS-244", "FNS-232", "FNS-188", "FNS-216"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10949_n.jpg",
+		"name": {
+			"kr": "요리모토 시오리",
+			"en": "Shiori Yorimoto",
+			"cn": "依本しおり",
+			"other": []
+		},
+		"birth": "1998.10.01",
+		"height": "160",
+		"size": {
+			"bust": "B88",
+			"waist": "W60",
+			"hips": "H88"
+		},
+		"bra": "E",
+		"debut": "2024.11",
+		"title": "소속사무소 티파워즈",
+		"desc": "트위터 https://x.com/yorimoto_s",
+		"sns": {
+			"x": "https://x.com/yorimoto_s",
+			"instagram": "https://www.instagram.com/yorimoto_s/"
+		},
+		"id": "10949",
+		"movie": ["DVMM-415", "MRSS-188", "MXGS-1405", "SQTE-633", "DASS-736", "SORA-612", "VENX-334", "SQDE-018", "FOCS-260", "SONE-559", "FJIN-167"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10138_n.jpg",
+		"name": {
+			"kr": "미타 마린",
+			"en": "Marin Mita",
+			"cn": "三田真鈴",
+			"other": []
+		},
+		"birth": "2003.06.28",
+		"height": "",
+		"size": {
+			"bust": "B0",
+			"waist": "W55",
+			"hips": "H0"
+		},
+		"bra": "F",
+		"debut": "2023.11",
+		"title": "2023년 에스원(S1) 전속 AV배우로 데뷔. 소속사무소 라이트(LIGHT).",
+		"desc": "2023년 에스원(S1) 전속 AV배우로 데뷔. 소속사무소 라이트(LIGHT). \n도쿄도 출신. 취미는 강아지 산책과 마술. 존경하는 선배는 나나츠모리 리리. \n트위터 @mitamarin0628 인스타 @mitamarin2023",
+		"sns": {
+			"x": "https://x.com/mitamarin0628",
+			"instagram": "https://www.instagram.com/mitamarin0628/"
+		},
+		"id": "10138",
+		"movie": ["SONE-347", "SONE-182", "SNOS-279", "SNOS-179", "SNOS-109", "SNOS-069", "SONE-836", "SONE-747", "SONE-709", "SONE-626", "SONE-392"]
 	}
 ];
 
