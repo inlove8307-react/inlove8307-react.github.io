@@ -306,6 +306,7 @@ const Page = ({ ref, ...props }) => {
 	const [search, setSearch] = useState('');
 	const [checked, setChecked] = useState(false);
 	const [status, setStatus] = useState([]);
+	const empty = '-';
 
 	const handleSearch = (value) => {
 		setSearch(value);
@@ -488,7 +489,7 @@ const Page = ({ ref, ...props }) => {
 																	(checked && exist) &&
 																	<img
 																		src={`/images/actor/${item.id}.jpg`}
-																		alt={item.name.en}
+																		alt={item.name?.en}
 																		onError={() => handleError(item.id)}
 																	/>
 																}
@@ -496,53 +497,38 @@ const Page = ({ ref, ...props }) => {
 														</dt>
 														<dd>
 															<BrowserView renderWithFragment>
-																{
-																	(item.name?.kr || item.name?.en || item.name?.cn) &&
-																	<dl className="define name">
-																		<dt>이름</dt>
-																		<dd>
-																			<span>{item.name.kr}</span>
-																			<span>{item.name.en}</span>
-																			<span>{item.name.cn}</span>
-																		</dd>
-																	</dl>
-																}
-																{
-																	item.birth &&
-																	<dl className="define birth">
-																		<dt>생일</dt>
-																		<dd>
-																			<span>{item.birth}</span>
-																			<span>{item.korean}</span>
-																			<span>{item.age}</span>
-																		</dd>
-																	</dl>
-																}
-																{
-																	item.height &&
-																	<dl className="define">
-																		<dt>신장</dt>
-																		<dd>{item.height}</dd>
-																	</dl>
-																}
-																{
-																	(item.size?.bust || item.size?.waist || item.size?.hips) &&
-																	<dl className="define size">
-																		<dt>신체사이즈</dt>
-																		<dd>
-																			<span>{item.size.bust}{item.bra && ` (${item.bra})`}</span>
-																			<span>{item.size.waist}</span>
-																			<span>{item.size.hips}</span>
-																		</dd>
-																	</dl>
-																}
-																{
-																	item.debut &&
-																	<dl className="define">
-																		<dt>데뷔</dt>
-																		<dd>{item.debut}</dd>
-																	</dl>
-																}
+																<dl className="define name">
+																	<dt>이름</dt>
+																	<dd>
+																		<span>{item.name?.kr || empty}</span>
+																		<span>{item.name?.en || empty}</span>
+																		<span>{item.name?.cn || empty}</span>
+																	</dd>
+																</dl>
+																<dl className="define birth">
+																	<dt>생일</dt>
+																	<dd>
+																		<span>{item.birth || empty}</span>
+																		<span>{item.korean || empty}</span>
+																		<span>{item.age || empty}</span>
+																	</dd>
+																</dl>
+																<dl className="define">
+																	<dt>신장</dt>
+																	<dd>{item.height || empty}</dd>
+																</dl>
+																<dl className="define size">
+																	<dt>신체사이즈</dt>
+																	<dd>
+																		<span>{item.size?.bust || empty}{item.bra && `(${item.bra})`}</span>
+																		<span>{item.size?.waist || empty}</span>
+																		<span>{item.size?.hips || empty}</span>
+																	</dd>
+																</dl>
+																<dl className="define">
+																	<dt>데뷔</dt>
+																	<dd>{item.debut || empty}</dd>
+																</dl>
 															</BrowserView>
 														</dd>
 													</dl>
