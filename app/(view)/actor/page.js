@@ -161,6 +161,20 @@ const Movie = ({ ref, ...props }) => {
 				<UxArticle>
 					<UxSubject>
 						<h3>{data.name}</h3>
+						<UxButton
+							role="link"
+							href={`https://123av.com/ko/v/${name}`}
+							target="_blank"
+						>
+							<span>123AV</span>
+						</UxButton>
+						<UxButton
+							role="link"
+							href={`https://missav123.com/ko/${name}`}
+							target="_blank"
+						>
+							<span>MISSAV</span>
+						</UxButton>
 						<UxButton onClick={props.onClose}>
 							<i className="icon close" />
 						</UxButton>
@@ -170,34 +184,9 @@ const Movie = ({ ref, ...props }) => {
 			<UxSection className="main">
 				<UxArticle>
 					<UxContent>
-						<UxGroup className="link">
-							<UxButton
-								role="link"
-								href={`https://123av.com/ko/v/${name}`}
-								target="_blank"
-							>
-								<span>123AV</span>
-								<i className="icon mask muted link x18" />
-							</UxButton>
-							<UxButton
-								role="link"
-								href={`https://missav123.com/ko/${name}`}
-								target="_blank"
-							>
-								<span>MISSAV</span>
-								<i className="icon mask muted link x18" />
-							</UxButton>
-							{/* <UxButton
-								role="link"
-								href={`https://www.njav.com/ko/xvideos/${name}`}
-								target="_blank"
-							>
-								<span>NJAV</span>
-								<i className="icon mask muted link x18" />
-							</UxButton> */}
-						</UxGroup>
-						<UxGroup className="col1 gap4">
-							{
+						{
+							data.name &&
+							<UxGroup className="col1 gap4">
 								<span className={classnames('thumb', {exist: props.checked && status})}>
 									{
 										(!props.checked || !status) &&
@@ -211,74 +200,80 @@ const Movie = ({ ref, ...props }) => {
 										/>
 									}
 								</span>
-							}
-							{
-								data.title &&
-								<dl className="define column">
-									<dt>제목</dt>
-									<dd>{data.title}</dd>
-								</dl>
-							}
-							{
-								data.story &&
-								<dl className="define column">
-									<dt>설명</dt>
-									<dd>{data.story}</dd>
-								</dl>
-							}
-							{
-								data.producer &&
-								<dl className="define column">
-									<dt>제작사</dt>
-									<dd>{data.producer}</dd>
-								</dl>
-							}
-							{
-								data.series &&
-								<dl className="define column">
-									<dt>시리즈</dt>
-									<dd>{data.series}</dd>
-								</dl>
-							}
-							{
-								data.runtime &&
-								<dl className="define">
-									<dt>재생시간</dt>
-									<dd>{data.runtime}</dd>
-								</dl>
-							}
-							{
-								data.release &&
-								<dl className="define">
-									<dt>출시일</dt>
-									<dd>{data.release}</dd>
-								</dl>
-							}
-							<ul className="list cast">
 								{
-									data.cast?.map((item, index) => (
-										<li
-											key={index}
-											className="bl pound"
-										>
-											{item}
-										</li>
-									))
+									data.title &&
+									<dl className="define column">
+										<dt>제목</dt>
+										<dd>{data.title}</dd>
+									</dl>
 								}
-							</ul>
-							<ul className="list category">
 								{
-									data.category?.map((item, index) => (
-										<li
-											key={index}
-											className="bl pound"
-										>
-											{item}
-										</li>
-									))
+									data.story &&
+									<dl className="define column">
+										<dt>설명</dt>
+										<dd>{data.story}</dd>
+									</dl>
 								}
-							</ul>
-						</UxGroup>
+								{
+									data.producer &&
+									<dl className="define column">
+										<dt>제작사</dt>
+										<dd>{data.producer}</dd>
+									</dl>
+								}
+								{
+									data.series &&
+									<dl className="define column">
+										<dt>시리즈</dt>
+										<dd>{data.series}</dd>
+									</dl>
+								}
+								{
+									data.runtime &&
+									<dl className="define">
+										<dt>재생시간</dt>
+										<dd>{data.runtime}</dd>
+									</dl>
+								}
+								{
+									data.release &&
+									<dl className="define">
+										<dt>출시일</dt>
+										<dd>{data.release}</dd>
+									</dl>
+								}
+								{
+									data.cast &&
+									<ul className="list cast">
+										{
+											data.cast.map((item, index) => (
+												<li
+													key={index}
+													className="bl pound"
+												>
+													{item}
+												</li>
+											))
+										}
+									</ul>
+								}
+								{
+									data.category &&
+									<ul className="list category">
+										{
+											data.category.map((item, index) => (
+												<li
+													key={index}
+													className="bl pound"
+												>
+													{item}
+												</li>
+											))
+										}
+									</ul>
+								}
+							</UxGroup>
+						}
 					</UxContent>
 				</UxArticle>
 			</UxSection>
@@ -557,7 +552,6 @@ const Page = ({ ref, ...props }) => {
 																onClick={() => handleMovie(item)}
 															>
 																<span>{item}</span>
-																<i className="icon mask share muted x18" />
 															</UxButton>
 														))}
 													</UxGroup>
