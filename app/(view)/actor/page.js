@@ -243,7 +243,7 @@ const Movie = ({ ref, ...props }) => {
 									</dl>
 								}
 								{
-									data.cast &&
+									data.cast[0] &&
 									<ul className="list cast">
 										{
 											data.cast.map((item, index) => (
@@ -258,7 +258,7 @@ const Movie = ({ ref, ...props }) => {
 									</ul>
 								}
 								{
-									data.category &&
+									data.category[0] &&
 									<ul className="list category">
 										{
 											data.category.map((item, index) => (
@@ -299,7 +299,7 @@ const Page = ({ ref, ...props }) => {
 	const [filterData, setFilterData] = useState([]);
 	const [select, setSelect] = useState('en');
 	const [search, setSearch] = useState('');
-	const [checked, setChecked] = useState(false);
+	const [checked, setChecked] = useState(true);
 	const [status, setStatus] = useState([]);
 	const empty = '-';
 

@@ -1667,42 +1667,6 @@ const data = [
 		"movie": ["JUQ-017", "JUQ-049", "ALDN-088", "FOCS-101", "GVH-490", "APNS-305", "NSFS-148", "SAME-048", "LULU-191", "JUQ-265", "BF-684", "WAAA-268", "NSFS-184", "MKON-087", "REAL-822", "HMN-396", "MIAA-904", "ADN-478", "SAME-074", "HODV-21790", "NSFS-219", "JJDA-042", "HODV-21830", "LULU-266", "SAN-218", "NGOD-202", "MRHP-037", "NACR-868", "ALDN-415", "FTHTD-183"]
 	},
 	{
-		"image": "https://i2.avdbs.com/actor/a01/1465_n.jpg",
-		"name": {
-			"kr": "시노다 유",
-			"en": "Yu Shinoda",
-			"cn": "篠田ゆう",
-			"other": [
-				"아키모토 유코(秋元優子)",
-				"시노자키 유코(篠崎ゆう子)",
-				"나카야마 유(中山ユウ)",
-				"하시모토 마키(橋本真紀)",
-				"시로다 유코(城田優子)",
-				"타카기 사키(高木早希)",
-				"시라이 유(白井ゆう)",
-				"마츠시마 토모코(松島智子)",
-				"히야마 아야네(桧山彩音)"
-			]
-		},
-		"birth": "1991.07.21",
-		"height": "155",
-		"size": {
-			"bust": "B88",
-			"waist": "W60",
-			"hips": "H87"
-		},
-		"bra": "F",
-		"debut": "2010.12",
-		"title": "미시계의 이쁜 외모와 활처럼 휘어지는 허리, 군살 없이 큰 엉덩이가 특징인 섹시 필라테스",
-		"desc": "긴 활동 경력 동안 인기의 굴곡이 많았던 배우. 데뷔 초반 어느 정도 인기가 많았으나 점점 하락, 그러다 2018년 즈음부터 제2의 전성기라고 할 수 있는 정도로 큰 인기를 얻고 공장장 급으로 작품 촬영을 많이 하고 있다. 사실상 AV 배우 인생에 있어서 변곡점을 맞이한 것. 과거 성인돌그룹 RW108과 핑키 활동의 경험으로 수준급의 재즈 댄스 실력을 갖고 있으며 현재 자신의 유튜브 채널에서는 요가와 필라테스를 주 컨텐츠로 삼고 있다.",
-		"sns": {
-			"x": "",
-			"instagram": "https://www.instagram.com/yushinoda0721/"
-		},
-		"id": "1465",
-		"movie": ["HZGD-045", "MRXD-047", "ADN-142", "JUY-872", "HZGD-098", "PRED-183", "DASD-578", "DASD-747", "MEYD-677", "PRED-319", "MEYD-709", "JUL-709", "ADN-383", "JUL-912", "VENX-134", "JUL-959", "JUQ-056", "JUQ-179", "SAME-021", "JUQ-328", "JUQ-412", "JUQ-449"]
-	},
-	{
 		"image": "https://i1.avdbs.com/actor/a11/11234_n.jpg?v=1",
 		"name": {
 			"kr": "하마베 야요이",
@@ -2048,38 +2012,6 @@ const data = [
 		"movie": ["START-567", "START-499", "START-604", "START-545"]
 	},
 	{
-		"image": "https://i1.avdbs.com/actor/a05/5570_n.jpg",
-		"name": {
-			"kr": "아이미 리카",
-			"en": "Rika Aimi",
-			"cn": "逢見リカ",
-			"other": [
-				"아이미 리카(逢見リカ/逢美リカ)",
-				"메이메이(めいめい)",
-				"마츠야마 리카(松山りか)",
-				"하루미 리카(晴海梨華)",
-				"사와시타 카즈키(澤下和希)"
-			]
-		},
-		"birth": "1999.12.30",
-		"height": "145",
-		"size": {
-			"bust": "B79",
-			"waist": "W53",
-			"hips": "H78"
-		},
-		"bra": "H",
-		"debut": "2019.04",
-		"title": "2019년 에스원 전속 출신 → 2020년 키카탄 전향. 예술을 추구하는 프로페셔널",
-		"desc": "1999년 기후현 출생. 키 145cm에 체중 38kg의 작은 체구지만 가슴은 커다란 미니멈 거유. 이국적인 느낌의 또렷한 이목구비와 구릿빛 피부를 지녔으며 실제로 혼혈이라고 밝혔다. 학창시절 낯가림이 심해서 별명이 '그림자'였으나 좋아하는 일에 열중하는 스타일. 2019년 에스원 전속 AV배우로 데뷔. 소속사무소 린쿠스(LINX). 애칭 리카탄. 2020년 마돈나 이적했다가 키카탄으로 바로 전향했다. AV 연기에 굉장히 자부심을 갖고 있고 전문성을 추구하는 프로페셔널. *배우 트위터@aimi__rika 일상 트위터@aimirika_2nd 팬클럽 https://www.fansnet.jp/aimi-rika *또 다른 이름 하루미 리카(라구주TV), 마츠야마 리카(마이와이프), 사와시타 카즈키(かぐや姫Pt), 메이메이(素人ホイホイpower)",
-		"sns": {
-			"x": "https://x.com/aimi__rika",
-			"instagram": "https://www.instagram.com/aimi__rika/"
-		},
-		"id": "5570",
-		"movie": ["HZGD-196", "NSPS-994", "PPPD-891", "NACR-362", "TPIN-089", "SORA-537", "DLDSS-555", "DLDSS-526", "FJIN-074"]
-	},
-	{
 		"image": "https://i2.avdbs.com/actor/a09/9956_n.jpg?v=1",
 		"name": {
 			"kr": "메가미 준",
@@ -2286,6 +2218,115 @@ const data = [
 		},
 		"id": "10138",
 		"movie": ["SONE-347", "SONE-182", "SNOS-279", "SNOS-179", "SNOS-109", "SNOS-069", "SONE-836", "SONE-747", "SONE-709", "SONE-626", "SONE-392"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9117_n.jpg",
+		"name": {
+			"kr": "토츠키 루이사",
+			"en": "Ruisa Totsuki",
+			"cn": "都月るいさ",
+			"other": []
+		},
+		"birth": "1997.11.30",
+		"height": "165",
+		"size": {
+			"bust": "B89",
+			"waist": "W56",
+			"hips": "H86"
+		},
+		"bra": "E",
+		"debut": "2022.08",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/totsukiruisa",
+			"instagram": ""
+		},
+		"id": "9117",
+		"movie": ["DASS-340", "VENX-265", "MEYD-912", "NACR-829", "ALDN-325", "DASS-493", "VENX-282", "ALDN-350", "MIAB-377", "NTRD-124", "DVAJ-677", "REAL-886", "PRED-735", "ALDN-425", "MKMP-615", "SAME-162", "ROYD-255", "ROYD-261", "YUJ-051", "GARA-019"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6996_n.jpg",
+		"name": {
+			"kr": "코요이 코난",
+			"en": "Konan Koyoi",
+			"cn": "小宵こなん",
+			"other": [
+				"코요이 코난(小宵こなん/小宵虎南)"
+			]
+		},
+		"birth": "1999.04.02",
+		"height": "164",
+		"size": {
+			"bust": "B96",
+			"waist": "W59",
+			"hips": "H94"
+		},
+		"bra": "H",
+		"debut": "2021.05",
+		"title": "AV 덕질하다가 데뷔했다고 하는 2021년 5월 S1 전속 신인",
+		"desc": "씨모어(C-more Entertainment) 소속. 취미는 AV 감상. 모 유명 학교를 졸업했지만 AV를 좋아해 S1 전속으로 AV에 데뷔했다. 시원시원하고 품위있는 외형과 깨끗한 얼굴, 속옷에서 삐져 나오는 H컵 거유! 성적 매력을 풍기는 어른스러운 인상과는 달리 만화를 좋아하고 매우 솔직한 성격. 삭제 @koyoikonannn  현재 계정 @konan_cmore",
+		"sns": {
+			"x": "https://x.com/konankoyoiOA",
+			"instagram": "https://www.instagram.com/konankoyoiiii/"
+		},
+		"id": "6996",
+		"movie": ["SSIS-561", "SSIS-469", "SSIS-362", "SSIS-309", "SSIS-157", "SONE-267", "SONE-201"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a12/12190_n.jpg?v=1",
+		"name": {
+			"kr": "코마츠 소라",
+			"en": "Sora Komatsu",
+			"cn": "小松空",
+			"other": []
+		},
+		"birth": "2001.05.02",
+		"height": "160",
+		"size": {
+			"bust": "B88",
+			"waist": "W55",
+			"hips": "H90"
+		},
+		"bra": "G",
+		"debut": "2026.04",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/sora_komatsu",
+			"instagram": ""
+		},
+		"id": "12190",
+		"movie": ["PRWF-017", "PRWF-014"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10481_n.jpg",
+		"name": {
+			"kr": "카네마츠 키호",
+			"en": "Kiho Kanematsu",
+			"cn": "金松季歩",
+			"other": [
+				"카네코 사토미",
+				"金松季歩"
+			]
+		},
+		"birth": "1989.12.22",
+		"height": "160",
+		"size": {
+			"bust": "B87",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "F",
+		"debut": "2024.04",
+		"title": "그라비아 아이돌 출신의 AV배우",
+		"desc": "트위터 https://twitter.com/kiho_kanematsu",
+		"sns": {
+			"x": "https://x.com/kiho_kanematsu",
+			"instagram": "https://www.instagram.com/kiho_kanematsu/"
+		},
+		"id": "10481",
+		"movie": ["SNOS-309", "SNOS-269", "SNOS-059", "SONE-792", "SONE-521", "SNOS-392"]
 	}
 ];
 

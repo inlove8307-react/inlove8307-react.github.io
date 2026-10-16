@@ -36,6 +36,8 @@ export default function Page() {
 				'clip',
 				'clear',
 				'reset',
+				'link',
+				'image',
 			]
 		},
 		{
