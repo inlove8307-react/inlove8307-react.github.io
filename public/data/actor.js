@@ -2327,6 +2327,377 @@ const data = [
 		},
 		"id": "10481",
 		"movie": ["SNOS-309", "SNOS-269", "SNOS-059", "SONE-792", "SONE-521", "SNOS-392"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11798_n.jpg",
+		"name": {
+			"kr": "이치카",
+			"en": "Ichika",
+			"cn": "いち花",
+			"other": []
+		},
+		"birth": "1995.08.18",
+		"height": "162",
+		"size": {
+			"bust": "B92",
+			"waist": "W57",
+			"hips": "H87"
+		},
+		"bra": "H",
+		"debut": "2026.02",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/ichika_cmore",
+			"instagram": "https://www.instagram.com/ichika__x/"
+		},
+		"id": "11798",
+		"movie": ["JUR-857", "JUR-822", "JUR-791", "JUR-091", "JUR-081", "JUR-072", "JUR-070"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11057_n.jpg",
+		"name": {
+			"kr": "안즈 안",
+			"en": "An Anzu",
+			"cn": "あんづ杏",
+			"other": []
+		},
+		"birth": "2004.12.03",
+		"height": "146",
+		"size": {
+			"bust": "B92",
+			"waist": "W57",
+			"hips": "H85"
+		},
+		"bra": "I",
+		"debut": "2025.01",
+		"title": "소속사무소 액트 ACT",
+		"desc": "트위터 https://x.com/anzuan123",
+		"sns": {
+			"x": "https://x.com/anzuan123",
+			"instagram": "https://www.instagram.com/anzu_an123/"
+		},
+		"id": "11057",
+		"movie": ["MIDA-431", "MIDA-313", "PPPE-403", "PPPE-438"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11665_n.jpg",
+		"name": {
+			"kr": "후쿠다 유아",
+			"en": "Yua Fukuda",
+			"cn": "福田ゆあ",
+			"other": []
+		},
+		"birth": "2005.02.20",
+		"height": "162",
+		"size": {
+			"bust": "B90",
+			"waist": "W55",
+			"hips": "H90"
+		},
+		"bra": "H",
+		"debut": "2025.12",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/yua_fucuda",
+			"instagram": "https://www.instagram.com/yuafukuda_official/"
+		},
+		"id": "11665",
+		"movie": ["MIDA-688", "MIDA-616", "MIDA-584"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10215_n.jpg",
+		"name": {
+			"kr": "아이자와 미유",
+			"en": "Miyu Aizawa",
+			"cn": "逢沢みゆ",
+			"other": []
+		},
+		"birth": "2001.01.25",
+		"height": "155",
+		"size": {
+			"bust": "B90",
+			"waist": "W56",
+			"hips": "H88"
+		},
+		"bra": "F",
+		"debut": "2023.12",
+		"title": "소속사무소 올프로(ALL PROMOTION)",
+		"desc": "트위터 https://twitter.com/Aizawa_miyu03",
+		"sns": {
+			"x": "https://x.com/aizawa_miyu03",
+			"instagram": "https://www.instagram.com/miyumiyu_ai"
+		},
+		"id": "10215",
+		"movie": ["DASS-670", "SAME-164", "MIAB-461", "PRED-740", "MVSD-634", "HSODA-056", "DASS-562", "NACR-991", "DOCZ-004", "NGOD-279", "NACT-013", "T38-048", "MIAB-569", "SQTE-656", "UMD-997", "PRED-859", "MIAB-639", "CJOD-513", "DASS-960", "PRED-869", "MOON-057", "GARA-025", "NACT-163", "PRED-887", "HODV-22103", "WO-027"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a02/2611_n.jpg",
+		"name": {
+			"kr": "사쿠라 모모",
+			"en": "Momo Sakura",
+			"cn": "桜空もも",
+			"other": []
+		},
+		"birth": "1996.12.03",
+		"height": "160",
+		"size": {
+			"bust": "B90",
+			"waist": "W55",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2017.05",
+		"title": "가슴, 허리, 골반의 완벽한 하모니",
+		"desc": "그라비아 아이돌 출신. 티파워즈 소속, 아이디어 포켓 전속. 가슴, 허리, 골반 삼박자가 모두 완벽하다고 인정받는 발군의 몸매에 귀염상 얼굴을 지녔다. 2018년 DMM 어워드 최우수 신인여우상 수상. 말빨이 좋은 배우로도 잘 알려져 있다. 한때 소속사와의 트러블로 은퇴 예고까지 했었지만 현재는 케어받고 잘 크고 있는 중. https://twitter.com/sakumomo1203 https://twitter.com/Sakura__sub",
+		"sns": {
+			"x": "https://x.com/sakumomo1203",
+			"instagram": "https://www.instagram.com/sakuramomo_official"
+		},
+		"id": "2611",
+		"movie": ["IPX-321", "IPX-642", "IPX-851", "IPZZ-002", "IPZZ-046", "IPX-980", "IPZZ-295", "IPZZ-268", "IPZZ-366", "IPZZ-388", "IPZZ-450", "IPZZ-651", "IPZZ-673", "IPZZ-805"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a05/5718_n.jpg",
+		"name": {
+			"kr": "타케우치 유키",
+			"en": "Yuki Takeuchi",
+			"cn": "竹内有紀",
+			"other": []
+		},
+		"birth": "1995.11.30",
+		"height": "158",
+		"size": {
+			"bust": "B83",
+			"waist": "W59",
+			"hips": "H86"
+		},
+		"bra": "D",
+		"debut": "2019.07",
+		"title": "숏컷 스타일의 전직 아나운서 출신 여배우, 허리를 잘 놀린다",
+		"desc": "2019년 7월 프리미엄 전속 데뷔. 단발머리 보브컷에 상큼하고 건강미 넘치는 미소를 지닌 배우. 원래 지방 방송국에서 스포츠 프로그램을 담당하던 아나운서 출신이다. D컵의 미유에 탄력 있는 히프의 슬림 몸매 소유자. 기승위에서의 허리놀림을 맛깔나게 잘 한다고 한다.",
+		"sns": {
+			"x": "https://x.com/YukiTake_life",
+			"instagram": "https://www.instagram.com/yuki.takeuchi_life/"
+		},
+		"id": "5718",
+		"movie": ["PRED-347", "PRED-385", "PRED-479", "JUQ-658", "JUQ-450", "JUQ-409", "JUQ-363", "JUQ-784", "JUQ-864", "URE-120", "JUR-276", "MVSD-661", "YUJ-049", "JUR-507", "JUR-570", "JUR-692", "ROYD-293", "DASS-963", "JUR-823", "JUR-847", "WAAA-690"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a06/6823_n.jpg",
+		"name": {
+			"kr": "유즈리하 카렌",
+			"en": "Karen Yuzuriha",
+			"cn": "楪カレン",
+			"other": []
+		},
+		"birth": "2001.11.30",
+		"height": "148",
+		"size": {
+			"bust": "B96",
+			"waist": "W58",
+			"hips": "H85"
+		},
+		"bra": "H",
+		"debut": "2021.02",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/yuzuriha_karen",
+			"instagram": "https://www.instagram.com/karen_yuzuriha/"
+		},
+		"id": "6823",
+		"movie": ["PPPE-052", "PRED-403", "PPPE-013", "PRED-375", "PRED-362", "PPPE-062", "PPPE-089", "PRED-520", "PPPE-153", "PPPE-146", "PPPE-183", "PRED-532", "JUQ-587", "PRED-694", "PRED-717", "PRED-730", "PPPE-305", "PRED-763", "PRED-755", "PPPE-346", "PRED-773", "PPPE-356", "PPPE-401", "PPPE-392", "PPPE-378", "PRED-843", "PRED-860", "PRED-874", "PPPE-447"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a03/3741_n.jpg",
+		"name": {
+			"kr": "이토 마유키",
+			"en": "Mayuki Ito",
+			"cn": "伊藤舞雪",
+			"other": []
+		},
+		"birth": "1997.11.30",
+		"height": "160",
+		"size": {
+			"bust": "B88",
+			"waist": "W54",
+			"hips": "H89"
+		},
+		"bra": "F",
+		"debut": "2018.03",
+		"title": "글래머 바디로 2018년을 달군 카와이 전속 인기 신인 중 한 명",
+		"desc": "커다란 가슴(F컵), 개미허리(W-54cm), 튼실한 골반의 바디 밸런스가 절묘한 신인 배우. 2018년 카와이 전속배우로 데뷔했다. 아야미 슌카의 빈 자리를 채워줄 만한 몸매 갑. 착에로 그라비아부터 시작했다가 2018년 카와이 전속으로 AV에 데뷔했다. 소속사 NAX(New Actor eXperience)로 스즈무라 아이리와 같은 소속사. 2019년 FANZA 어워드 신인상 후보에 올랐지만 아쉽게도 수상에는 실패했다. 하지만 팬들의 인기에 힘입어 활동반경을 점점 넓히는 중. 현재 트위터 팔로워 만 명 돌파.",
+		"sns": {
+			"x": "https://x.com/mayukiito",
+			"instagram": "https://www.instagram.com/myk__gram/"
+		},
+		"id": "3741",
+		"movie": ["CAWD-065", "CAWD-081", "CAWD-105", "CAWD-139", "CAWD-177", "CAWD-201", "CAWD-243", "MEYD-698", "CAWD-313", "CAWD-365", "CAWD-329", "CAWD-428", "CAWD-400", "CAWD-447", "PRED-465", "CAWD-557", "CAWD-582", "CAWD-639", "CAWD-656", "CAWD-706", "CAWD-740", "CAWD-762", "CAWD-853", "CAWD-949", "CAWD-964", "CAWB-019"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6755_n.jpg",
+		"name": {
+			"kr": "시로미네 미우",
+			"en": "Miu Shiromine",
+			"cn": "白峰ミウ",
+			"other": []
+		},
+		"birth": "1997.09.30",
+		"height": "170",
+		"size": {
+			"bust": "B90",
+			"waist": "W60",
+			"hips": "H94"
+		},
+		"bra": "F",
+		"debut": "2021.01",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/shiromine_miu",
+			"instagram": "https://www.instagram.com/miu_shiromine/"
+		},
+		"id": "6755",
+		"movie": ["IPX-771", "ADN-405", "IPX-826", "ATID-557", "ATID-566", "PRED-488", "ADN-503", "PRED-526", "PRED-498", "ADN-525", "ADN-533", "ADN-538", "ADN-622", "ADN-601", "ADN-582", "ADN-573", "PRED-678", "ADN-564", "PRED-714", "ADN-641", "PRED-722", "ADN-663", "PRED-750", "ADN-687", "PRED-775", "PRED-757", "SAME-183", "OFES-026", "DASS-805", "ADN-738", "ADN-757", "ADN-746", "DASS-891", "SAME-234", "DASS-943", "ATID-686", "ADN-789", "ADN-804"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a03/3677_n.jpg",
+		"name": {
+			"kr": "나나사와 미아",
+			"en": "Mia Nanasawa",
+			"cn": "七沢みあ",
+			"other": [
+				"나나사와 미아(七沢みあ/七澤みあ)"
+			]
+		},
+		"birth": "1998.12.13",
+		"height": "145",
+		"size": {
+			"bust": "B79",
+			"waist": "W54",
+			"hips": "H80"
+		},
+		"bra": "C",
+		"debut": "2017.11",
+		"title": "무디즈의 에이스. 2023년 현재 트위터 팔로워 약 90만명",
+		"desc": "애칭 먀짱(みゃーちゃん). 도쿄도 출신. 캡슐에이전시(カプセルエージェンシー) 소속. 밝고 쾌활한 성격 덕분에 고등학교 시절부터 인기가 많았지만 다른 여자들의 질투를 많이 받았다. 게임과 애니메이션 오타쿠라서 만 17세 무렵 코스어로 활동했으며, 대학에서는 외식업 관련 전공을 공부했다. 2017년 선배 AV배우 아이스 코코아를 보고 나도 유명해지고 싶다는 생각에 데뷔했다. 2017년 무디즈 전속배우로 들어가 미우라 사쿠라와 함께 주목받는 여동생 로리계 신인으로 이름을 알렸다. 145cm 작은 키에 앙증맞은 외모지만 플레이는 웬만한 노장 저리가라 하는 재주꾼이다. 2019년 FANZA 어워드 최우수여배우상 노미네이트. 유튜브에 도전한 적 있으나 현재는 모두 내렸다. 코가 점점 커지고 있다.",
+		"sns": {
+			"x": "https://x.com/mia_nanasawa",
+			"instagram": "https://www.instagram.com/mia.nanasawa_/"
+		},
+		"id": "3677",
+		"movie": ["MIDV-002", "MIDE-786", "MIDE-773", "MIDE-642", "MIDE-799", "MIDE-923", "MIDE-909", "MIDE-870", "MIDE-960", "MIDE-938", "MIDV-049", "MIDV-032", "MIDV-130", "MIDV-274", "MIDV-357", "MIDV-443", "MIDV-416", "MIDV-787", "MIDA-006", "MIDA-239", "MIDA-324", "MIDA-668", "MIDA-744"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a05/5461_n.jpg",
+		"name": {
+			"kr": "이나바 루카",
+			"en": "Ruka Inaba",
+			"cn": "稲場るか",
+			"other": [
+				"리리 하루카(莉々はるか)",
+				"이치노세 진(一ノ瀬迅)",
+				"稲場瑠香",
+				"南優里"
+			]
+		},
+		"birth": "2000.01.08",
+		"height": "160",
+		"size": {
+			"bust": "B93",
+			"waist": "W59",
+			"hips": "H86"
+		},
+		"bra": "H",
+		"debut": "2019.03",
+		"title": "이나바 루카 → 리리 하루카",
+		"desc": "얼굴과 몸매의 매칭이 반전을 이루는 로리 육덕계 패트리어트. 까무잡잡한 피부, 육덕한 몸매, 귀여운 얼굴을 갖고 있는 배우로 2019년 3월에 데뷔 후 1년여만에 180편을 찍은 미친 체력의 공장장이다. 거의 뭐 휴일도 없이 이틀에 한 번씩은 찍은 꼴. 하드디스크 용량 파괴자. 트위터 https://x.com/ririharuka_",
+		"sns": {
+			"x": "https://x.com/ririharuka_",
+			"instagram": "https://www.instagram.com/ririharuka_/"
+		},
+		"id": "5461",
+		"movie": ["EBWH-212", "EBWH-166", "EBWH-127", "EBWH-274", "EBWH-323", "EBWH-302", "EBWH-337", "EBWH-341"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10308_n.jpg",
+		"name": {
+			"kr": "나가하마 미츠리",
+			"en": "Mitsuri Nagahama",
+			"cn": "長浜みつり",
+			"other": []
+		},
+		"birth": "2002.06.01",
+		"height": "161",
+		"size": {
+			"bust": "B90",
+			"waist": "W58",
+			"hips": "H90"
+		},
+		"bra": "G",
+		"debut": "2024.01",
+		"title": "소속사무소 티파워즈(T-POWERS)",
+		"desc": "트위터 https://twitter.com/mitsuri_n0601",
+		"sns": {
+			"x": "https://x.com/mitsuri_n0601",
+			"instagram": "https://www.instagram.com/mitsuri_nagahama"
+		},
+		"id": "10308",
+		"movie": ["IPZZ-370", "IPZZ-347", "IPZZ-314", "IPZZ-771", "IPZZ-676", "MIMK-247", "IPZZ-631", "IPZZ-601", "IPZZ-506", "IPZZ-454", "IPZZ-431", "IPZZ-411", "IPZZ-917", "IPZZ-810", "IPZZ-791"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11505_n.jpg",
+		"name": {
+			"kr": "카와구치 사쿠라",
+			"en": "Sakura Kawaguchi",
+			"cn": "川口桜",
+			"other": []
+		},
+		"birth": "2005.07.08",
+		"height": "163",
+		"size": {
+			"bust": "B86",
+			"waist": "W56",
+			"hips": "H80"
+		},
+		"bra": "D",
+		"debut": "2025.09",
+		"title": "",
+		"desc": "",
+		"sns": {
+			"x": "https://x.com/sakura07082005",
+			"instagram": ""
+		},
+		"id": "11505",
+		"movie": ["MIDA-772", "MIDA-623", "MIDA-849"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9616_n.jpg",
+		"name": {
+			"kr": "히비키 렌",
+			"en": "Ren Hibiki",
+			"cn": "響蓮",
+			"other": []
+		},
+		"birth": "2002.12.04",
+		"height": "160",
+		"size": {
+			"bust": "B85",
+			"waist": "W50",
+			"hips": "H88"
+		},
+		"bra": "F",
+		"debut": "2023.04",
+		"title": "2023년 카와이 전속",
+		"desc": "비스타 프로모션 소속",
+		"sns": {
+			"x": "https://x.com/renren_hibiki",
+			"instagram": ""
+		},
+		"id": "9616",
+		"movie": ["HODV-22113", "HODV-22101", "DSOD-069", "NACT-171", "MRSS-190", "NACT-153", "XVSR-884", "MVSD-687", "YUJ-064", "PRED-861", "EBWH-137", "EBWH-097", "EBWH-090", "EBWH-079", "EBWH-044", "EKDV-830", "WAAA-692"]
 	}
 ];
 
