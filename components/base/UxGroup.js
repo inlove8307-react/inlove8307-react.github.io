@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { getArray, mergeProps, getRandomChar } from '@/utils/core';
 import { useInView } from 'react-intersection-observer';
 import classnames from 'classnames';
+import ScrollContainer from "react-indiana-drag-scroll";
 /* COMPONENT */
 
 /**
@@ -244,6 +245,29 @@ const Input = ({ ref, ...props }) => {
 };
 
 /**
+ * <Scroll>
+ * [props]
+ * className(String): 추가 클래스
+ * [event]
+ */
+
+const Scroll = ({ ref, ...props }) => {
+	return (
+		<ScrollContainer
+			className={props.caseClassName}
+			horizontal={true}
+			hideScrollbars={true}
+		>
+			{
+				getArray(props.children).map((item, index) => mergeProps(item, {
+					key: index,
+				}))
+			}
+		</ScrollContainer>
+	);
+};
+
+/**
  * <Default>
  * [props]
  * className(String): 추가 클래스
@@ -284,6 +308,8 @@ const UxGroup = ({ ref, ...props }) => {
 		});
 
 		switch (props.role) {
+			case 'scroll':
+				return <Scroll ref={ref} {...props} />;
 			case 'collapse':
 				return <Collapse ref={ref} {...props} />;
 			case 'radio':

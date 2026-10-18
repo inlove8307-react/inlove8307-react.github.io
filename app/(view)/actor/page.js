@@ -401,7 +401,10 @@ const Page = ({ ref, ...props }) => {
 														}
 													</dt>
 													<dd className="details">
-														<UxGroup className="link">
+														<UxGroup
+															role="scroll"
+															className="link"
+														>
 															{item.movie.map((name, index) => {
 																const active = name === selected;
 
