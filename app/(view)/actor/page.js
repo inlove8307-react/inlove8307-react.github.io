@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { isMobile, isBrowser, BrowserView } from "react-device-detect";
+import { BrowserView } from "react-device-detect";
 import classnames from "classnames";
-import useModal from "@/hook/useModal";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
 import UxArticle from "@/components/layout/UxArticle";
@@ -21,119 +20,6 @@ import UxCheckbox from "@/components/base/UxCheckbox";
 import actor from '@/public/data/actor';
 import movie from '@/public/data/movie';
 import thumb from '@/public/data/thumb';
-
-const Actor = ({ ref, ...props }) => {
-	const data = props.data;
-	const [status, setStatus] = useState(true);
-
-	return (
-		<>
-			<UxSection className="header">
-				<UxArticle>
-					<UxSubject>
-						<h3>{data.name.en}</h3>
-						<UxButton onClick={props.onClose}>
-							<i className="icon close" />
-						</UxButton>
-					</UxSubject>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="main">
-				<UxArticle>
-					<UxContent>
-						<UxGroup className="col1 gap4">
-							<dl className="define column thumb">
-								<dt>
-									<span className={classnames('thumb', {exist: props.checked && status})}>
-										{
-											(!props.checked || !status) &&
-											<i className="icon mask image disabled x44" />
-										}
-										{
-											(props.checked && status) &&
-											<img
-												src={`/images/actor/${data.id}.jpg`}
-												alt={data.name.en}
-												onError={() => setStatus(false)}
-											/>
-										}
-									</span>
-								</dt>
-								<dd>
-									{
-										(data.name?.kr || data.name?.en || data.name?.cn) &&
-										<dl className="define name">
-											<dt>이름</dt>
-											<dd>
-												<span>{data.name.kr}</span>
-												<span>{data.name.en}</span>
-												<span>{data.name.cn}</span>
-											</dd>
-										</dl>
-									}
-									{
-										data.birth &&
-										<dl className="define birth">
-											<dt>생일</dt>
-											<dd>
-												<span>{data.birth}</span>
-												<span>{data.korean}</span>
-												<span>{data.age}</span>
-											</dd>
-										</dl>
-									}
-									{
-										data.height &&
-										<dl className="define">
-											<dt>신장</dt>
-											<dd>{data.height}</dd>
-										</dl>
-									}
-									{
-										(data.size?.bust || data.size?.waist || data.size?.hips) &&
-										<dl className="define size">
-											<dt>신체사이즈</dt>
-											<dd>
-												<span>{data.size.bust}{data.bra && ` (${data.bra})`}</span>
-												<span>{data.size.waist}</span>
-												<span>{data.size.hips}</span>
-											</dd>
-										</dl>
-									}
-									{
-										data.debut &&
-										<dl className="define">
-											<dt>데뷔</dt>
-											<dd>{data.debut}</dd>
-										</dl>
-									}
-								</dd>
-							</dl>
-							{
-								(data.title || data.desc) &&
-								<dl className="define column desc">
-									<dt>{data.title}</dt>
-									<dd>{data.desc}</dd>
-								</dl>
-							}
-						</UxGroup>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="footer">
-				<UxArticle>
-					<UxContent>
-						<UxGroup>
-							<UxButton className="primary h3">
-								<span>확인</span>
-							</UxButton>
-						</UxGroup>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-		</>
-	);
-};
 
 const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
@@ -249,7 +135,6 @@ const Movie = ({ ref, ...props }) => {
 };
 
 const Page = ({ ref, ...props }) => {
-	const modal = useModal();
 	const [isClient, setIsClient] = useState(false);
 	const [actorData, setActorData] = useState([]);
 	const [filterData, setFilterData] = useState([]);
@@ -261,15 +146,6 @@ const Page = ({ ref, ...props }) => {
 
 	const handleSearch = (value) => {
 		setSearch(value);
-	};
-
-	const handleActor = (data) => {
-		modal.center(Actor, {
-			caseClassName: 'actor',
-			footer: false,
-			data,
-			checked,
-		});
 	};
 
 	const handleMovie = ({ target, id, name, selected }) => {
@@ -439,10 +315,8 @@ const Page = ({ ref, ...props }) => {
 													<dd className="details">
 														<dl className="define thumb">
 															<dt>
-																<UxButton
+																<span
 																	className={classnames('thumb', {exist: checked && exist})}
-																	disabled={isBrowser}
-																	onClick={() => handleActor(item)}
 																>
 																	{
 																		(!checked || !exist) &&
@@ -456,7 +330,7 @@ const Page = ({ ref, ...props }) => {
 																			onError={() => handleError(item.id)}
 																		/>
 																	}
-																</UxButton>
+																</span>
 															</dt>
 															<dd>
 																<dl className="define name">
