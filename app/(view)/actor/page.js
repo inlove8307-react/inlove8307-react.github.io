@@ -272,18 +272,29 @@ const Page = ({ ref, ...props }) => {
 		});
 	};
 
-	const handleMovie = ({ target, id, name }) => {
-		setStatus((prev) =>
-			prev.map((item) =>
-				item.id === id ? { ...item, name } : item
-			)
-		);
+	const handleMovie = ({ target, id, name, selected }) => {
+		const equal = name === selected;
 
-		target.scrollIntoView({
-			block: "nearest",
-			inline: "center",
-			behavior: "smooth",
-		});
+		if (equal) {
+			setStatus((prev) =>
+				prev.map((item) =>
+					item.id === id ? { ...item, name: '' } : item
+				)
+			);
+		}
+		else {
+			setStatus((prev) =>
+				prev.map((item) =>
+					item.id === id ? { ...item, name } : item
+				)
+			);
+
+			target.scrollIntoView({
+				block: "nearest",
+				inline: "center",
+				behavior: "smooth",
+			});
+		}
 	};
 
 	const handleError = (id) => {
@@ -527,7 +538,8 @@ const Page = ({ ref, ...props }) => {
 																		onClick={(event) => handleMovie({
 																			target: event.target,
 																			id: item.id,
-																			name
+																			selected,
+																			name,
 																		})}
 																	>
 																		<span>{name}</span>
