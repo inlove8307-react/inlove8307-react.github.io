@@ -1217,7 +1217,6 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-tab.scroll .ux-tab-summary {overflow-x: auto;}
 .ux-tab.scroll .ux-tab-summary {scrollbar-width: none;}
 .ux-tab.scroll .ux-tab-summary::-webkit-scrollbar {display: none;}
-.ux-tab.scroll .ux-tab-summary::-webkit-scrollbar {display: none}
 .ux-tab.scroll .ux-tab-before,
 .ux-tab.scroll .ux-tab-after {display: initial;}
 .ux-tab.scroll .ux-tab-before {margin-right: calc(var(--gap) * -1);}
@@ -1453,6 +1452,8 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 /* Card Actor */
 .ux-card.actor .ux-card-base {display: flex; padding: 2rem;}
+/* Card Actor Div Actor */
+.ux-card.actor div.actor {display: flex; flex-direction: column; gap: 1.6rem;}
 /* Card Actor Dl Actor */
 .ux-card.actor dl.actor {display: flex; flex-direction: column;}
 /* Card Actor Dl Actor Subject */
@@ -1464,8 +1465,18 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor dl.movie dt.subject {display: flex; gap: .4rem;}
 .ux-card.actor dl.movie dt.subject .title {color: var(--text-default);}
 .ux-card.actor dl.movie dt.subject .count {color: var(--text-red);}
+.ux-card.actor dl.movie dt.subject .link {font-weight: 500; font-size: 1.6rem; line-height: 1;}
+.ux-card.actor dl.movie dt.subject .link:first-of-type {margin-left: auto;}
 /* Card Actor Group Link */
-.ux-card.actor .ux-group.link {gap: .8rem;}
+.ux-card.actor dl.movie dd.details .ux-group.link {overflow-y: auto; flex-wrap: nowrap; gap: .8rem;}
+.ux-card.actor dl.movie dd.details .ux-group.link {scrollbar-width: none;}
+.ux-card.actor dl.movie dd.details .ux-group.link::-webkit-scrollbar {display: none;}
+.ux-card.actor dl.movie dd.details .ux-group.link .ux-button {flex-shrink: 0; box-shadow: initial; background-color: var(--fill-disabled);}
+.ux-card.actor dl.movie dd.details .ux-group.link .ux-button.active {box-shadow: var(--inset); background-color: var(--background-default);};
+/* Card Actor Div Movie */
+.ux-card.actor div.movie {border-radius: 1.6rem;}
+.ux-card.actor div.movie {scrollbar-width: none;}
+.ux-card.actor div.movie::-webkit-scrollbar {display: none;}
 /* Define */
 dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
 dl.define > dt {font-size: 1.6rem; color: var(--text-muted);}
@@ -1502,25 +1513,34 @@ ul.sns {display: flex; align-items: center; gap: .4rem; padding-top: .8rem;}
 html.desktop .ux-group.actor {row-gap: 3.2rem;}
 /* Card Actor (Desktop) */
 html.desktop .ux-card.actor {--space: 2rem;}
-html.desktop .ux-card.actor .ux-card-base {gap: var(--space);}
+html.desktop .ux-card.actor .ux-card-base {gap: var(--space); align-items: stretch;}
+/* Card Actor (Desktop) Div Actor */
+html.desktop .ux-card.actor div.actor {width: calc(50% - var(--space) / 2);}
 /* Card Actor (Desktop) Dl Actor */
-html.desktop .ux-card.actor dl.actor {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
+html.desktop .ux-card.actor dl.actor {gap: 1.6rem;}
 /* Card Actor (Desktop) Dl Actor Details */
 html.desktop .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .4rem;}
-/* Card Actor (Desktop) Define Thumb */
-html.desktop dl.define.thumb {gap: 2rem;}
-html.desktop dl.define.thumb > dt {flex-shrink: 0;}
-html.desktop dl.define.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
-html.desktop dl.define.thumb > dt .thumb.disabled {cursor: default;}
-html.desktop dl.define.thumb > dt img {max-width: 100%;}
-html.desktop dl.define.thumb > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .8rem; text-align: initial;}
+/* Card Actor (Desktop) Dl Thumb */
+html.desktop dl.thumb {gap: 2rem;}
+html.desktop dl.thumb > dt {flex-shrink: 0;}
+html.desktop dl.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
+html.desktop dl.thumb > dt .thumb.disabled {cursor: default;}
+html.desktop dl.thumb > dt img {max-width: 100%;}
+html.desktop dl.thumb > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .8rem; text-align: initial;}
 /* Card Actor (Desktop) Define Desc */
 html.desktop dl.define.desc {padding-top: 1.2rem; gap: .8rem;}
 /* Card Actor (Desktop) Dl Movie */
-html.desktop .ux-card.actor dl.movie {gap: 1.6rem; width: calc(50% - var(--space) / 2);}
+html.desktop .ux-card.actor dl.movie {gap: 1.6rem;}
 /* Card Actor (Desktop) Dl Movie Subject */
+html.desktop .ux-card.actor dl.movie dt.subject {display: flex; align-items: center;}
 html.desktop .ux-card.actor dl.movie dt.subject .title,
 html.desktop .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
+html.desktop .ux-card.actor dl.movie dt.subject .link i {align-self: flex-start;}
+/* Card Actor (Desktop) Div Movie */
+html.desktop .ux-card.actor div.movie {overflow-y: auto; width: calc(50% - var(--space) / 2); height: 32.8rem;}
+html.desktop .ux-card.actor div.movie:not(.exist) {display: flex; justify-content: center; align-items: center; border-radius: 1.6rem; background-color: var(--background-muted);}
+html.desktop .ux-card.actor div.movie:not(.exist)::before {content: 'Please select a work by this actor.'; font-weight: 700; font-size: 1.8rem; color: var(--text-muted);}
+html.desktop .ux-card.actor div.movie .thumb {min-height: 32.8rem;}
 
 
 
@@ -1534,12 +1554,13 @@ html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: 1.2rem;}
 html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-flex; margin-left: auto;}
 /* Card Actor (Desktop) Dl Actor Details */
 html.mobile .ux-card.actor dl.actor dd.details {padding-top: 1.2rem;}
-html.mobile .ux-card.actor dl.actor dd.details dl.define.thumb {justify-content: center;}
-html.mobile .ux-card.actor dl.actor dd.details dl.define.thumb > dd {display: none;}
+html.mobile .ux-card.actor dl.actor dd.details dl.thumb {justify-content: space-between;}
+html.mobile .ux-card.actor dl.actor dd.details dl.thumb dl.define dt {display: none;}
+html.mobile .ux-card.actor dl.actor dd.details dl.thumb dl.define dd {margin-left: auto;}
 /* Card Actor (Mobile) Define Thumb */
-html.mobile dl.define.thumb > dt {text-align: center;}
-html.mobile dl.define.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
-html.mobile dl.define.thumb > dd {display: flex; flex-direction: column; gap: .4rem;}
+html.mobile dl.thumb > dt {text-align: center;}
+html.mobile dl.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
+html.mobile dl.thumb > dd {display: flex; flex-direction: column; gap: .8rem;}
 /* Card Actor (Mobile) Dl Movie */
 html.mobile .ux-card.actor dl.movie {gap: 1.2rem;}
 /* Card Actor (Mobile) Dl Movie Subject */
@@ -1547,6 +1568,11 @@ html.mobile .ux-card.actor dl.movie dt.subject .title,
 html.mobile .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
 /* Card Actor (Mobile) Group Link */
 html.mobile .ux-card.actor .ux-button.tertiary.capsule.h4 {padding: 0 calc(var(--height) / 3);}
+/* Card Actor (Mobile) Div Movie */
+html.mobile .ux-card.actor div.movie {overflow-y: auto; height: 20.3rem;}
+html.mobile .ux-card.actor div.movie:not(.exist) {display: none;}
+html.mobile .ux-card.actor div.movie .thumb {min-height: 20.3rem;}
+
 
 
 
@@ -1560,30 +1586,24 @@ html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 
 
 
 
-/* Popup Movie Subject */
-.ux-modal.movie .ux-section.header .ux-subject {gap: 1.2rem;}
-.ux-modal.movie .ux-section.header .ux-subject .ux-button.link {font-weight: 700; font-size: 1.8rem; color: var(--text-red);}
-.ux-modal.movie .ux-section.header .ux-subject .ux-button:not(.link) {margin-left: auto;}
 /* Popup Movie Define */
-.ux-modal.movie dl.define.column dd {word-break: break-all;}
+.ux-card.actor div.movie dl.define.column dd {word-break: break-all;}
 /* Popup Movie Thumb */
-.ux-modal.movie .thumb {overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: .8rem; border-radius: 1.6rem; background-color: var(--background-muted);}
-.ux-modal.movie .thumb.exist {align-items: flex-start;}
-.ux-modal.movie .thumb img {width: 100%;}
+.ux-card.actor div.movie .thumb {overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: .8rem; border-radius: 1.6rem; background-color: var(--background-muted);}
+.ux-card.actor div.movie .thumb.exist {align-items: flex-start;}
+.ux-card.actor div.movie .thumb img {width: 100%;}
 /* Popup Movie Cast */
-.ux-modal.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-modal.movie ul.cast li.bl.pound {font-weight: 500; color: var(--text-red);}
+.ux-card.actor div.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.actor div.movie ul.cast li.bl.pound {font-weight: 500; color: var(--text-red);}
 /* Popup Movie Category */
-.ux-modal.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-modal.movie ul.category li.bl.pound {font-weight: 500; color: var(--text-blue);}
+.ux-card.actor div.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
+.ux-card.actor div.movie ul.category li.bl.pound {font-weight: 500; color: var(--text-blue);}
 /* Popup Movie (Mobile) */
-html.mobile .ux-modal.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
+.ux-card.actor div.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
 /* Popup Movie (Mobile) Thumb */
-html.mobile .ux-modal.movie .thumb {min-height: 20.3rem;}
+// .ux-card.actor div.movie .thumb {min-height: 20.3rem;}
 /* Popup Movie (Desktop) */
-html.desktop .ux-modal.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
+.ux-card.actor div.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
 /* Popup Movie (Desktop) Define */
-html.desktop .ux-modal.movie dl.define {flex-direction: column; gap: .2rem;}
-html.desktop .ux-modal.movie dl.define dd {text-align: left;}
-/* Popup Movie (Desktop) Thumb */
-html.desktop .ux-modal.movie .thumb {min-height: 48.7rem;}
+.ux-card.actor div.movie dl.define {flex-direction: column; gap: .2rem;}
+.ux-card.actor div.movie dl.define dd {text-align: left;}

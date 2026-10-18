@@ -147,148 +147,104 @@ const Movie = ({ ref, ...props }) => {
 		if (filterMovie.length) {
 			filterMovie[0].image = filterThumb[0]?.image || '';
 			setData(filterMovie[0]);
-			setName(filterMovie[0].name.toLowerCase());
+			setName(filterMovie[0]?.name?.toLowerCase());
 		}
 
 		if (filterMovie[0]?.image === '') {
 			setStatus(false);
 		}
-	}, [props.data]);
+	}, [props.name]);
+
+	if (!name) return;
 
 	return (
-		<>
-			<UxSection className="header">
-				<UxArticle>
-					<UxSubject>
-						<h3>{data.name}</h3>
-						<UxButton
-							role="link"
-							href={`https://123av.com/ko/v/${name}`}
-							target="_blank"
-						>
-							<span>123AV</span>
-						</UxButton>
-						<UxButton
-							role="link"
-							href={`https://missav123.com/ko/${name}`}
-							target="_blank"
-						>
-							<span>MISSAV</span>
-						</UxButton>
-						<UxButton onClick={props.onClose}>
-							<i className="icon close" />
-						</UxButton>
-					</UxSubject>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="main">
-				<UxArticle>
-					<UxContent>
-						{
-							data.name &&
-							<UxGroup className="col1 gap4">
-								<span className={classnames('thumb', {exist: props.checked && status})}>
-									{
-										(!props.checked || !status) &&
-										<i className="icon mask image disabled x44" />
-									}
-									{
-										(props.checked && status) &&
-										<img
-											src={data.image}
-											alt={data.name}
-										/>
-									}
-								</span>
-								{
-									data.title &&
-									<dl className="define column">
-										<dt>제목</dt>
-										<dd>{data.title}</dd>
-									</dl>
-								}
-								{
-									data.story &&
-									<dl className="define column">
-										<dt>설명</dt>
-										<dd>{data.story}</dd>
-									</dl>
-								}
-								{
-									data.producer &&
-									<dl className="define column">
-										<dt>제작사</dt>
-										<dd>{data.producer}</dd>
-									</dl>
-								}
-								{
-									data.series &&
-									<dl className="define column">
-										<dt>시리즈</dt>
-										<dd>{data.series}</dd>
-									</dl>
-								}
-								{
-									data.runtime &&
-									<dl className="define">
-										<dt>재생시간</dt>
-										<dd>{data.runtime}</dd>
-									</dl>
-								}
-								{
-									data.release &&
-									<dl className="define">
-										<dt>출시일</dt>
-										<dd>{data.release}</dd>
-									</dl>
-								}
-								{
-									data.cast[0] &&
-									<ul className="list cast">
-										{
-											data.cast.map((item, index) => (
-												<li
-													key={index}
-													className="bl pound"
-												>
-													{item}
-												</li>
-											))
-										}
-									</ul>
-								}
-								{
-									data.category[0] &&
-									<ul className="list category">
-										{
-											data.category.map((item, index) => (
-												<li
-													key={index}
-													className="bl pound"
-												>
-													{item}
-												</li>
-											))
-										}
-									</ul>
-								}
-							</UxGroup>
-						}
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-			<UxSection className="footer">
-				<UxArticle>
-					<UxContent>
-						<UxGroup>
-							<UxButton className="primary h3">
-								<span>확인</span>
-							</UxButton>
-						</UxGroup>
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-		</>
+		<UxGroup className="col1 gap4">
+			<span className={classnames('thumb', {exist: props.checked && status})}>
+				{
+					(!props.checked || !status) &&
+					<i className="icon mask image disabled x44" />
+				}
+				{
+					(props.checked && status) &&
+					<img
+						src={data.image}
+						alt={data.name}
+					/>
+				}
+			</span>
+			{
+				data.title &&
+				<dl className="define column">
+					<dt>제목</dt>
+					<dd>{data.title}</dd>
+				</dl>
+			}
+			{
+				data.story &&
+				<dl className="define column">
+					<dt>설명</dt>
+					<dd>{data.story}</dd>
+				</dl>
+			}
+			{
+				data.producer &&
+				<dl className="define column">
+					<dt>제작사</dt>
+					<dd>{data.producer}</dd>
+				</dl>
+			}
+			{
+				data.series &&
+				<dl className="define column">
+					<dt>시리즈</dt>
+					<dd>{data.series}</dd>
+				</dl>
+			}
+			{
+				data.runtime &&
+				<dl className="define">
+					<dt>재생시간</dt>
+					<dd>{data.runtime}</dd>
+				</dl>
+			}
+			{
+				data.release &&
+				<dl className="define">
+					<dt>출시일</dt>
+					<dd>{data.release}</dd>
+				</dl>
+			}
+			{
+				data.cast[0] &&
+				<ul className="list cast">
+					{
+						data.cast.map((item, index) => (
+							<li
+								key={index}
+								className="bl pound"
+							>
+								{item}
+							</li>
+						))
+					}
+				</ul>
+			}
+			{
+				data.category[0] &&
+				<ul className="list category">
+					{
+						data.category.map((item, index) => (
+							<li
+								key={index}
+								className="bl pound"
+							>
+								{item}
+							</li>
+						))
+					}
+				</ul>
+			}
+		</UxGroup>
 	);
 };
 
@@ -299,7 +255,7 @@ const Page = ({ ref, ...props }) => {
 	const [filterData, setFilterData] = useState([]);
 	const [select, setSelect] = useState('en');
 	const [search, setSearch] = useState('');
-	const [checked, setChecked] = useState(true);
+	const [checked, setChecked] = useState(false);
 	const [status, setStatus] = useState([]);
 	const empty = '-';
 
@@ -316,24 +272,18 @@ const Page = ({ ref, ...props }) => {
 		});
 	};
 
-	const handleMovie = (name) => {
-		if (isBrowser) {
-			modal.full(Movie, {
-				caseClassName: 'movie',
-				footer: false,
-				name,
-				checked,
-			});
-		}
+	const handleMovie = ({ target, id, name }) => {
+		setStatus((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, name } : item
+			)
+		);
 
-		if (isMobile) {
-			modal.center(Movie, {
-				caseClassName: 'movie',
-				footer: false,
-				name,
-				checked,
-			});
-		}
+		target.scrollIntoView({
+			block: "nearest",
+			inline: "center",
+			behavior: "smooth",
+		});
 	};
 
 	const handleError = (id) => {
@@ -385,7 +335,11 @@ const Page = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		if (!status.length) {
-			setStatus(actor.map(item => ({ id: item.id, exist: true })));
+			setStatus(actor.map(item => ({
+				id: item.id,
+				exist: true,
+				name: '',
+			})));
 		}
 	}, []);
 
@@ -437,61 +391,63 @@ const Page = ({ ref, ...props }) => {
 							{
 								filterData.map((data) => {
 									const item = {...data, ...getAge(data.birth)};
-									const exist = status.filter(item => item.id === data.id)[0].exist;
+									const filter = status.filter(item => item.id === data.id)[0];
+									const exist = filter?.exist;
+									const selected = filter?.name;
 
 									return (
 										<UxCard
 											key={item.id}
 											className="actor"
 										>
-											<dl className="actor">
-												<dt className="subject">
-													<span>{item.name.en}</span>
-														{
-															item.sns?.x &&
-															<UxButton
-																role="link"
-																href={item.sns.x}
-																target="_blank"
-															>
-																<i className="icon mask i854 x18" />
-															</UxButton>
-														}
-														{
-															item.sns?.instagram &&
-															<UxButton
-																role="link"
-																href={item.sns.instagram}
-																target="_blank"
-															>
-																<i className="icon mask i812 x20" />
-															</UxButton>
-														}
-												</dt>
-												<dd className="details">
-													<dl className="define thumb">
-														<dt>
-															<UxButton
-																className={classnames('thumb', {exist: checked && exist})}
-																disabled={isBrowser}
-																onClick={() => handleActor(item)}
-															>
-																{
-																	(!checked || !exist) &&
-																	<i className="icon mask image disabled x44" />
-																}
-																{
-																	(checked && exist) &&
-																	<img
-																		src={`/images/actor/${item.id}.jpg`}
-																		alt={item.name?.en}
-																		onError={() => handleError(item.id)}
-																	/>
-																}
-															</UxButton>
-														</dt>
-														<dd>
-															<BrowserView renderWithFragment>
+											<div className="actor">
+												<dl className="actor">
+													<dt className="subject">
+														<span>{item.name.en}</span>
+															{
+																item.sns?.x &&
+																<UxButton
+																	role="link"
+																	href={item.sns.x}
+																	target="_blank"
+																>
+																	<i className="icon mask i854 x18" />
+																</UxButton>
+															}
+															{
+																item.sns?.instagram &&
+																<UxButton
+																	role="link"
+																	href={item.sns.instagram}
+																	target="_blank"
+																>
+																	<i className="icon mask i812 x20" />
+																</UxButton>
+															}
+													</dt>
+													<dd className="details">
+														<dl className="define thumb">
+															<dt>
+																<UxButton
+																	className={classnames('thumb', {exist: checked && exist})}
+																	disabled={isBrowser}
+																	onClick={() => handleActor(item)}
+																>
+																	{
+																		(!checked || !exist) &&
+																		<i className="icon mask image disabled x44" />
+																	}
+																	{
+																		(checked && exist) &&
+																		<img
+																			src={`/images/actor/${item.id}.jpg`}
+																			alt={item.name?.en}
+																			onError={() => handleError(item.id)}
+																		/>
+																	}
+																</UxButton>
+															</dt>
+															<dd>
 																<dl className="define name">
 																	<dt>이름</dt>
 																	<dd>
@@ -504,8 +460,10 @@ const Page = ({ ref, ...props }) => {
 																	<dt>생일</dt>
 																	<dd>
 																		<span>{item.birth || empty}</span>
-																		<span>{item.korean || empty}</span>
-																		<span>{item.age || empty}</span>
+																		<BrowserView renderWithFragment>
+																			<span>{item.korean || empty}</span>
+																			<span>{item.age || empty}</span>
+																		</BrowserView>
 																	</dd>
 																</dl>
 																<dl className="define">
@@ -516,47 +474,79 @@ const Page = ({ ref, ...props }) => {
 																	<dt>신체사이즈</dt>
 																	<dd>
 																		<span>{item.size?.bust || empty}{item.bra && `(${item.bra})`}</span>
-																		<span>{item.size?.waist || empty}</span>
-																		<span>{item.size?.hips || empty}</span>
+																		<BrowserView renderWithFragment>
+																			<span>{item.size?.waist || empty}</span>
+																			<span>{item.size?.hips || empty}</span>
+																		</BrowserView>
 																	</dd>
 																</dl>
 																<dl className="define">
 																	<dt>데뷔</dt>
 																	<dd>{item.debut || empty}</dd>
 																</dl>
-															</BrowserView>
-														</dd>
-													</dl>
-													<BrowserView renderWithFragment>
+															</dd>
+														</dl>
+													</dd>
+												</dl>
+												<dl className="movie">
+													<dt className="subject">
+														<span className="title">Curated</span>
+														<span className="count">{item.movie.length}</span>
 														{
-															(item.title || item.desc) &&
-															<dl className="define column desc">
-																<dt>{item.title}</dt>
-																<dd>{item.desc}</dd>
-															</dl>
-														}
-													</BrowserView>
-												</dd>
-											</dl>
-											<dl className="movie">
-												<dt className="subject">
-													<span className="title">Curated</span>
-													<span className="count">{item.movie.length}</span>
-												</dt>
-												<dd className="details">
-													<UxGroup className="link">
-														{item.movie.map((item, index) => (
+															selected &&
 															<UxButton
-																key={index}
-																className="tertiary capsule h4"
-																onClick={() => handleMovie(item)}
+																role="link"
+																href={`https://123av.com/ko/v/${selected}`}
+																target="_blank"
 															>
-																<span>{item}</span>
+																<span>123AV</span>
+																<i className="icon mask arrow-right x14" />
 															</UxButton>
-														))}
-													</UxGroup>
-												</dd>
-											</dl>
+														}
+														{
+															selected &&
+															<UxButton
+																role="link"
+																href={`https://missav123.com/ko/${selected}`}
+																target="_blank"
+															>
+																<span>MISSAV</span>
+																<i className="icon mask arrow-right x14" />
+															</UxButton>
+														}
+													</dt>
+													<dd className="details">
+														<UxGroup className="link">
+															{item.movie.map((name, index) => {
+																const active = name === selected;
+
+																return (
+																	<UxButton
+																		key={index}
+																		className={classnames('tertiary capsule h4', { active })}
+																		onClick={(event) => handleMovie({
+																			target: event.target,
+																			id: item.id,
+																			name
+																		})}
+																	>
+																		<span>{name}</span>
+																	</UxButton>
+																);
+															})}
+														</UxGroup>
+													</dd>
+												</dl>
+											</div>
+											<div className={classnames('movie', { exist: selected })}>
+												{
+													selected &&
+													<Movie
+														name={selected}
+														checked={checked}
+													/>
+												}
+											</div>
 										</UxCard>
 									);
 								})
