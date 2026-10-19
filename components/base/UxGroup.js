@@ -252,18 +252,34 @@ const Input = ({ ref, ...props }) => {
  */
 
 const Scroll = ({ ref, ...props }) => {
+	const [beforeRef, beforeInView] = useInView();
+	const [afterRef, afterInView] = useInView();
+
 	return (
-		<ScrollContainer
-			className={props.caseClassName}
-			horizontal={true}
-			hideScrollbars={true}
-		>
-			{
-				getArray(props.children).map((item, index) => mergeProps(item, {
-					key: index,
-				}))
-			}
-		</ScrollContainer>
+		<div className={classnames(`${props.baseClassName}-scroll`, {
+			before: beforeInView,
+			after: afterInView,
+		})}>
+			<ScrollContainer
+				className={props.caseClassName}
+				horizontal={true}
+				hideScrollbars={true}
+			>
+				<span
+					ref={beforeRef}
+					className={`${props.baseClassName}-before`}
+				/>
+				{
+					getArray(props.children).map((item, index) => mergeProps(item, {
+						key: index,
+					}))
+				}
+				<span
+					ref={afterRef}
+					className={`${props.baseClassName}-after`}
+				/>
+			</ScrollContainer>
+		</div>
 	);
 };
 

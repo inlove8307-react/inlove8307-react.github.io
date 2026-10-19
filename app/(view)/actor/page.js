@@ -60,7 +60,7 @@ const Movie = ({ ref, ...props }) => {
 			</span>
 			{
 				data.title &&
-				<dl className="define column">
+				<dl className="define column title">
 					<dt>제목</dt>
 					<dd>{data.title}</dd>
 				</dl>

@@ -1133,6 +1133,27 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
+/* <UxGroup> Scroll */
+.ux-group-scroll {position: relative;}
+.ux-group-scroll::before,
+.ux-group-scroll::after {content: ''; position: absolute; z-index: 1; top: 0; width: 3.2rem; height: 100%; pointer-events: none; opacity: 0;}
+.ux-group-scroll::before {left: 0; background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
+.ux-group-scroll::after {right: 0; background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%);}
+.ux-group-scroll:not(.before)::before {opacity: 1;}
+.ux-group-scroll:not(.after)::after {opacity: 1;}
+.ux-group-scroll .ux-group {display: flex; flex-wrap: nowrap; gap: .8rem; overflow-x: auto;}
+.ux-group-scroll .ux-group {scrollbar-width: none;}
+.ux-group-scroll .ux-group::-webkit-scrollbar {display: none;}
+.ux-group-scroll .ux-group-before,
+.ux-group-scroll .ux-group-after {flex-shrink: 0; width: .1rem; height: .1rem;}
+.ux-group-scroll .ux-group-before {margin-right: -.9rem;}
+.ux-group-scroll .ux-group-after {margin-left: -.9rem;}
+.ux-group-scroll .ux-group * {flex-shrink: 0;}
+
+
+
+
+
 /* <UxCard> */
 .ux-card {--radius: 2.4rem;}
 .ux-card-base {position: relative; padding: 2.4rem 2rem; width: 100%; border-radius: var(--radius); box-shadow: var(--inset); transition: var(--inset-transition);}
@@ -1468,9 +1489,9 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor dl.movie dt.subject .link {font-weight: 500; font-size: 1.6rem; line-height: 1;}
 .ux-card.actor dl.movie dt.subject .link:first-of-type {margin-left: auto;}
 /* Card Actor Group Link */
-.ux-card.actor dl.movie dd.details .ux-group.link {overflow-y: auto; flex-wrap: nowrap; gap: .8rem;}
-.ux-card.actor dl.movie dd.details .ux-group.link {scrollbar-width: none;}
-.ux-card.actor dl.movie dd.details .ux-group.link::-webkit-scrollbar {display: none;}
+// .ux-card.actor dl.movie dd.details .ux-group.link {overflow-y: auto; flex-wrap: nowrap; gap: .8rem;}
+// .ux-card.actor dl.movie dd.details .ux-group.link {scrollbar-width: none;}
+// .ux-card.actor dl.movie dd.details .ux-group.link::-webkit-scrollbar {display: none;}
 .ux-card.actor dl.movie dd.details .ux-group.link .ux-button {flex-shrink: 0; box-shadow: initial; background-color: var(--fill-disabled);}
 .ux-card.actor dl.movie dd.details .ux-group.link .ux-button.active {box-shadow: var(--inset); background-color: var(--background-default);};
 /* Card Actor Div Movie */
@@ -1478,32 +1499,32 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-card.actor div.movie {scrollbar-width: none;}
 .ux-card.actor div.movie::-webkit-scrollbar {display: none;}
 /* Define */
-dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
-dl.define > dt {font-size: 1.6rem; color: var(--text-muted);}
-dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
+.ux-card.actor dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
+.ux-card.actor dl.define > dt {font-size: 1.6rem; color: var(--text-muted);}
+.ux-card.actor dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
 /* Define Column */
-dl.define.column {flex-direction: column; gap: .2rem;}
-dl.define.column dd {text-align: left;}
+.ux-card.actor dl.column {flex-direction: column; gap: .2rem;}
+.ux-card.actor dl.column dd {text-align: left;}
 /* Define Image */
-dl.define.thumb .thumb {overflow: hidden; display: inline-flex; justify-content: center; align-items: center; background-color: var(--background-muted); vertical-align: top;}
-dl.define.thumb .thumb.exist {align-items: flex-start;}
-dl.define.thumb .thumb img {max-width: 100%;}
+.ux-card.actor div.actor dl.thumb .thumb {overflow: hidden; display: inline-flex; justify-content: center; align-items: center; background-color: var(--background-muted); vertical-align: top;}
+.ux-card.actor div.actor dl.thumb .thumb.exist {align-items: flex-start;}
+.ux-card.actor div.actor dl.thumb .thumb img {max-width: 100%;}
 /* Define Name */
-dl.define.name dd {display: flex; flex-direction: column; text-align: right;}
+.ux-card.actor div.actor dl.name dd {display: flex; flex-direction: column; text-align: right;}
 /* Define Birth */
-dl.define.birth dd {display: flex; gap: .4rem;}
-dl.define.birth dd span {display: flex; gap: .4rem;}
-dl.define.birth dd span + span::before {content: '/';}
+.ux-card.actor div.actor dl.birth dd {display: flex; gap: .4rem;}
+.ux-card.actor div.actor dl.birth dd span {display: flex; gap: .4rem;}
+.ux-card.actor div.actor dl.birth dd span + span::before {content: '/';}
 /* Define Size */
-dl.define.size dd {display: flex; gap: .4rem;}
-dl.define.size dd span {display: flex; gap: .4rem;}
-dl.define.size dd span + span::before {content: '/';}
+.ux-card.actor div.actor dl.size dd {display: flex; gap: .4rem;}
+.ux-card.actor div.actor dl.size dd span {display: flex; gap: .4rem;}
+.ux-card.actor div.actor dl.size dd span + span::before {content: '/';}
 /* Define Desc */
-dl.define.desc {gap: .4rem;}
-dl.define.desc dt {font-weight: 500; color: var(--text-default)!important;}
-dl.define.desc dd {font-weight: 500; color: var(--text-muted)!important;}
+.ux-card.actor div.actor dl.desc {gap: .4rem;}
+.ux-card.actor div.actor dl.desc dt {font-weight: 500; color: var(--text-default)!important;}
+.ux-card.actor div.actor dl.desc dd {font-weight: 500; color: var(--text-muted)!important;}
 /* SNS */
-ul.sns {display: flex; align-items: center; gap: .4rem; padding-top: .8rem;}
+.ux-card.actor div.actor ul.sns {display: flex; align-items: center; gap: .4rem; padding-top: .8rem;}
 
 
 
@@ -1540,6 +1561,11 @@ html.desktop .ux-card.actor div.movie {overflow-y: auto; width: calc(50% - var(-
 html.desktop .ux-card.actor div.movie:not(.exist) {display: flex; justify-content: center; align-items: center; border-radius: 1.6rem; background-color: var(--background-muted);}
 html.desktop .ux-card.actor div.movie:not(.exist)::before {content: 'Please select a work by this actor.'; font-weight: 700; font-size: 1.8rem; color: var(--text-muted);}
 html.desktop .ux-card.actor div.movie .thumb {min-height: 32.8rem;}
+/* Card Actor (Desktop) Div Movie Title */
+// html.desktop .ux-card.actor div.movie {position: relative;}
+// html.desktop .ux-card.actor div.movie dl.title {position: absolute; top: 0; left: 0; padding: .8rem; width: 100%;}
+// html.desktop .ux-card.actor div.movie dl.title dt {display: none;}
+// html.desktop .ux-card.actor div.movie dl.title dd {padding: .8rem; border-radius: .8rem; box-shadow: 0 .4rem .8rem -.4rem rgba(0, 0, 0, .1); background-color: rgba(255, 255, 255, .25); backdrop-filter: blur(.8rem); -webkit-backdrop-filter: blur(.8rem);}
 
 
 
