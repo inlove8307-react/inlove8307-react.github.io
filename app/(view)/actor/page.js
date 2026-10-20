@@ -291,26 +291,26 @@ const Page = ({ ref, ...props }) => {
 												<dl className="actor">
 													<dt className="subject">
 														<span>{item.name.en}</span>
-															{
-																item.sns?.x &&
-																<UxButton
-																	role="link"
-																	href={item.sns.x}
-																	target="_blank"
-																>
-																	<i className="icon mask i854 x18" />
-																</UxButton>
-															}
-															{
-																item.sns?.instagram &&
-																<UxButton
-																	role="link"
-																	href={item.sns.instagram}
-																	target="_blank"
-																>
-																	<i className="icon mask i812 x20" />
-																</UxButton>
-															}
+														{
+															item.sns.map((item, index) => {
+																if (!item.url) return;
+																return (
+																	<UxButton
+																		key={index}
+																		role="link"
+																		href={item.url}
+																		target="_blank"
+																	>
+																		<i className={classnames('icon mask', {
+																			'i854 x18': item.name === 'x',
+																			'i812 x20': item.name === 'instagram',
+																			'i813 x16': item.name === 'tiktok',
+																			'i808 x20': item.name === 'youtube',
+																		})} />
+																	</UxButton>
+																);
+															})
+														}
 													</dt>
 													<dd className="details">
 														<dl className="define thumb">
