@@ -259,7 +259,7 @@ const Page = ({ ref, ...props }) => {
 							inside
 							onChange={handleSearch}
 						/>
-						<UxButton>
+						<UxButton disabled>
 							<i className="icon mask search x24" />
 						</UxButton>
 					</UxGroup>
