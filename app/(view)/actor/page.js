@@ -140,7 +140,7 @@ const Page = ({ ref, ...props }) => {
 	const [filterData, setFilterData] = useState([]);
 	const [select, setSelect] = useState('en');
 	const [search, setSearch] = useState('');
-	const [checked, setChecked] = useState(false);
+	const [checked, setChecked] = useState(true);
 	const [status, setStatus] = useState([]);
 	const empty = '-';
 

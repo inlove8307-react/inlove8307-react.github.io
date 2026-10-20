@@ -2926,6 +2926,123 @@ const data = [
 		],
 		"id": "1920",
 		"movie": ["STAR-808", "STAR-788", "STARS-026", "STARS-154", "STARS-228", "STARS-822", "START-101", "START-578", "START-541", "START-470", "START-595"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a00/790_n.jpg",
+		"name": {
+			"kr": "하타노 유이",
+			"en": "Yui Hatano",
+			"cn": "波多野結衣",
+			"other": [
+				"포포마루(ぽぽまる)",
+				"사카이 마나미(酒井愛美)"
+			]
+		},
+		"birth": "1988.05.24",
+		"height": "163",
+		"size": {
+			"bust": "B88",
+			"waist": "W59",
+			"hips": "H85"
+		},
+		"bra": "D",
+		"debut": "2008.06",
+		"title": "일본과 대만, 한국, 아시아를 아우르는 세계의 하타노",
+		"desc": "얼굴+스타일+거유. 어디 하나 나무랄 데 없는 여배우. 우에하라 아이와 함께 2010년대를 대표하는 공장장 키카탄 아이콘. 대만에서 린즈링 닮은 AV배우로 큰 히트를 치고 일본 뿐만 아니라 대만, 한국과 중국 등지에서 인기를 몰면서 세계의 하타노라는 별칭을 얻었다. 오츠키 히비키와는 베프이자 세기의 라이벌. 업계에서 가장착하고 성격 좋은 배우 중 한 명. 얼굴, 몸매, 연기, 성품 모두 빠지지 않는 역대급 레전드. 쓰나미 때 사망설도 돌았으나 거짓. 2019년 야하군 방송에 출연한 적 있다. '포포마루 타이쇼'라는 별명이 있다. 대만에선 영화배우 '린즈링'을 닮았다는 이유로 '블랙 린즈링'(暗黒林志玲)이라고 불린다. 에미야 고로는 말한다. \"AV에 대한 표현력이 우수해서 하고 있으면 남자배우가 잘하는 거처럼 보입니다. 왕년의 안토니오 이노키와도 같은 AV여배우입니다.\"",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/hatano_yui" },
+			{ "name": "instagram", "url": "https://www.instagram.com/hatachan524/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "790",
+		"movie": ["KAM-279", "NGOD-347", "GVH-841", "FTHTD-199", "NGOD-324", "LULU-421", "NGOD-304", "NGOD-298", "JJDA-065", "NACT-005", "GVH-766", "NGOD-278", "NGOD-258", "JJDA-058", "NGOD-241", "NGOD-208", "NKKD-328", "SAN-177", "NKKD-294", "HZGD-245", "NGOD-183", "XVSR-597", "XVSR-570", "JUY-937", "HZGD-124", "JUY-904", "ATID-345", "ANGR-004", "PPPD-726", "NDRA-042"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a09/9630_n.jpg",
+		"name": {
+			"kr": "아사히 리오",
+			"en": "Rio Asahi",
+			"cn": "朝妃りお（朝日りお）",
+			"other": [
+				"아사히 리오(朝妃りお/朝日りお)"
+			]
+		},
+		"birth": "2002.10.22",
+		"height": "160",
+		"size": {
+			"bust": "B89",
+			"waist": "W58",
+			"hips": "H88"
+		},
+		"bra": "F",
+		"debut": "2023.04",
+		"title": "2023년 아이디어 포켓 전속 데뷔",
+		"desc": "소속사 ALL PROMOTION",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/RioAsahi" },
+			{ "name": "instagram", "url": "https://www.instagram.com/rio_asahi_/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9630",
+		"movie": ["MXGS-1446", "NGOD-322", "VENX-363", "MIKR-080", "JUR-308", "URE-117", "JUR-112", "JUQ-934", "JUQ-863", "JUQ-828", "JUQ-795", "IPZZ-252", "IPZZ-138", "IPZZ-109"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11861_n.jpg",
+		"name": {
+			"kr": "아사미 나미",
+			"en": "Nami Asami",
+			"cn": "浅海なみ",
+			"other": []
+		},
+		"birth": "2005.06.23",
+		"height": "154",
+		"size": {
+			"bust": "B84",
+			"waist": "W60",
+			"hips": "H89"
+		},
+		"bra": "D",
+		"debut": "2026.03",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/nami_asami" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11861",
+		"movie": ["NACT-201", "APNS-422", "CAWB-025", "CAWD-995"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a06/6384_n.jpg",
+		"name": {
+			"kr": "미야지마 메이",
+			"en": "Mei Miyajima",
+			"cn": "宮島めい",
+			"other": []
+		},
+		"birth": "2000.10.17",
+		"height": "155",
+		"size": {
+			"bust": "B88",
+			"waist": "W59",
+			"hips": "H80"
+		},
+		"bra": "F",
+		"debut": "2020.07",
+		"title": "(SOD STAR 전속배우)",
+		"desc": "(SOD STAR 전속배우)",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/miyajima100" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "6384",
+		"movie": ["START-547", "START-529", "START-301", "START-274", "START-072", "STARS-985", "STARS-847", "STARS-798", "STARS-750", "STARS-578", "STARS-521", "STARS-504", "STARS-427", "STARS-376", "STARS-301"]
 	}
 ];
 
