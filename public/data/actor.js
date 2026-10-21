@@ -3043,6 +3043,34 @@ const data = [
 		],
 		"id": "6384",
 		"movie": ["START-547", "START-529", "START-301", "START-274", "START-072", "STARS-985", "STARS-847", "STARS-798", "STARS-750", "STARS-578", "STARS-521", "STARS-504", "STARS-427", "STARS-376", "STARS-301"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9258_n.jpg",
+		"name": {
+			"kr": "호시노 리코",
+			"en": "Riko Hoshino",
+			"cn": "星乃莉子",
+			"other": []
+		},
+		"birth": "1999.04.20",
+		"height": "152",
+		"size": {
+			"bust": "B84",
+			"waist": "W57",
+			"hips": "H85"
+		},
+		"bra": "E",
+		"debut": "2022.10",
+		"title": "(SOD STAR 전속배우)",
+		"desc": "(SOD STAR 전속배우)",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/riko_hoshino" },
+			{ "name": "instagram", "url": "https://www.instagram.com/rikohoshino420/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9258",
+		"movie": ["START-490","START-337","START-030","START-002","STARS-892","STARS-827"]
 	}
 ];
 

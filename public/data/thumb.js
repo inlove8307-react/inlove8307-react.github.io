@@ -5826,6 +5826,30 @@ const data = [
 	{
 		"name": "STARS-301",
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1stars00301/1stars00301pl.jpg?f=webp"
+	},
+	{
+		"name": "START-490",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1start00490/1start00490pl.jpg?f=webp"
+	},
+	{
+		"name": "START-337",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1start00337/1start00337pl.jpg?f=webp"
+	},
+	{
+		"name": "START-030",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1start00030/1start00030pl.jpg?f=webp"
+	},
+	{
+		"name": "START-002",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1start00002/1start00002pl.jpg?f=webp"
+	},
+	{
+		"name": "STARS-892",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1stars00892/1stars00892pl.jpg?f=webp"
+	},
+	{
+		"name": "STARS-827",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1stars00827/1stars00827pl.jpg?f=webp"
 	}
 ];
 
