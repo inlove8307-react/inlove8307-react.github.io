@@ -38,6 +38,7 @@ export default function Page() {
 				'reset',
 				'link',
 				'image',
+				'copy',
 			]
 		},
 		{
