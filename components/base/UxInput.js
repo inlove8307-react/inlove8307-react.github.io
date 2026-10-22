@@ -801,6 +801,7 @@ const Textarea = ({ ref, ...props }) => {
 		}
 		setValue(event.target.value);
 		setCount(event.target.value.length);
+		props.onChange && props.onChange(event.target.value);
 	};
 
 	const handleFocus = (event) => {
@@ -819,12 +820,12 @@ const Textarea = ({ ref, ...props }) => {
 		props.onKeyDown && props.onKeyDown(event);
 	};
 
-	useEffect(() => {
-		props.onChange && props.onChange(value);
-	}, [value]);
+	// useEffect(() => {
+	// 	props.onChange && props.onChange(value);
+	// }, [value]);
 
 	useEffect(() => {
-		if (typeof props.value === 'string') {
+		if (typeof props.value !== 'undefined' && props.value !== value) {
 			setValue(props.value);
 		}
 	}, [props.value]);
