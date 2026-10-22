@@ -5850,6 +5850,54 @@ const data = [
 	{
 		"name": "STARS-827",
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/1stars00827/1stars00827pl.jpg?f=webp"
+	},
+	{
+		"name": "URE-142",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ure00142/ure00142pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-819",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00819/jur00819pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-764",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00764/jur00764pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-080",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00080/jur00080pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-643",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00643/jur00643pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-577",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00577/jur00577pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-525",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00525/jur00525pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-402",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00402/jur00402pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-356",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00356/jur00356pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-041",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00041/jur00041pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-040",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00040/jur00040pl.jpg?f=webp"
+	},
+	{
+		"name": "JUR-241",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00241/jur00241pl.jpg?f=webp"
 	}
 ];
 

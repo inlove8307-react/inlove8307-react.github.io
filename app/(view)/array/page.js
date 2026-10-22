@@ -24,7 +24,8 @@ const Page = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		const array = inputValue.split(',');
-		setTextareaValue(JSON.stringify(array));
+		const value = JSON.stringify(array);
+		setTextareaValue(value);
 		setCopied(false);
 	}, [inputValue]);
 

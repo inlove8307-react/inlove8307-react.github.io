@@ -967,10 +967,6 @@ const Default = ({ ref, ...props }) => {
 		props.onSubmit && props.onSubmit(event);
 	}
 
-	// useEffect(() => {
-	// 	props.onChange && props.onChange(value);
-	// }, [value]);
-
 	useEffect(() => {
 		if (typeof props.value !== 'undefined' && props.value !== value) {
 			setValue(props.value);
@@ -1163,6 +1159,18 @@ const Input = ({ ref, ...props }) => {
 		props.onKeyUp && props.onKeyUp(event);
 	};
 
+	const handleCut = (event) => {
+		props.onCut && props.onCut(event);
+	};
+
+	const handleCopy = (event) => {
+		props.onCopy && props.onCopy(event);
+	};
+
+	const handlePaste = (event) => {
+		props.onPaste && props.onPaste(event);
+	};
+
 	return (
 		<div
 			ref={ref}
@@ -1183,6 +1191,9 @@ const Input = ({ ref, ...props }) => {
 				onBlur={handleBlur}
 				onKeyDown={handleKeyDown}
 				onKeyUp={handleKeyUp}
+				onCut={handleCut}
+				onCopy={handleCopy}
+				onPaste={handlePaste}
 			/>
 		</div>
 	)

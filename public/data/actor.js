@@ -3071,6 +3071,34 @@ const data = [
 		],
 		"id": "9258",
 		"movie": ["START-490","START-337","START-030","START-002","STARS-892","STARS-827"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11035_n.jpg",
+		"name": {
+			"kr": "시노하라 이요",
+			"en": "Iyo Shinohara",
+			"cn": "篠原いよ",
+			"other": []
+		},
+		"birth": "1994.06.30",
+		"height": "160",
+		"size": {
+			"bust": "B92",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "H",
+		"debut": "2024.12",
+		"title": "소속사무소 리스타 프로 LiStar PRO",
+		"desc": "트위터 https://x.com/iyo_shinohara",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/iyo_shinohara" },
+			{ "name": "instagram", "url": "https://www.instagram.com/iyo_shinohara" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11035",
+		"movie": ["URE-142","JUR-819","JUR-764","JUR-080","JUR-643","JUR-577","JUR-525","JUR-402","JUR-356","JUR-041","JUR-040","JUR-241"]
 	}
 ];
 
