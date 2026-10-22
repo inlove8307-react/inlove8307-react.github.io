@@ -74,8 +74,8 @@ const Page = ({ ref, ...props }) => {
 							/>
 							<UxInput
 								role="textarea"
-								readonly
 								value={arrayTrans}
+								readonly
 							/>
 						</UxGroup>
 					</UxContent>
@@ -98,8 +98,8 @@ const Page = ({ ref, ...props }) => {
 							/>
 							<UxInput
 								role="textarea"
-								readonly
 								value={jsonTrans}
+								readonly
 							/>
 						</UxGroup>
 					</UxContent>

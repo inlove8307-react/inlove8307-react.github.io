@@ -953,7 +953,7 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .ux-group.input.selected .ux-button.input {color: var(--text-default);}
 .ux-group.input.selected.disabled .ux-button.input {color: var(--text-muted);}
 /* <UxGroup> Role(Input) Textarea */
-.ux-group.input.textarea textarea.ux-input-base {overflow: hidden; width: 100%; border: 0; background-color: transparent; font-weight: 700; font-size: 1.8rem; color: var(--text-default); line-height: 3.2rem; white-space: normal; word-break: break-all; resize: none;}
+.ux-group.input.textarea textarea.ux-input-base {overflow: hidden; width: 100%; border: 0; background-color: transparent; font-weight: 700; font-size: 1.8rem; color: var(--text-default); line-height: 3.2rem; white-space: normal; word-break: break-all; resize: none; white-space: pre-wrap;}
 .ux-group.input.textarea textarea.ux-input-base:focus,
 .ux-group.input.textarea textarea.ux-input-base:focus-visible {outline: none;}
 /* <UxGroup> Role(Input) Address */
