@@ -3127,6 +3127,34 @@ const data = [
 		],
 		"id": "11326",
 		"movie": ["EBWH-374", "EBWH-365", "EBWH-356", "EBWH-338", "EBWH-294", "EBWH-267"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10737_n.jpg",
+		"name": {
+			"kr": "요다 린",
+			"en": "Rin Yoda",
+			"cn": "与田りん",
+			"other": []
+		},
+		"birth": "2003.11.08",
+		"height": "158",
+		"size": {
+			"bust": "B86",
+			"waist": "W57",
+			"hips": "H90"
+		},
+		"bra": "F",
+		"debut": "2024.08",
+		"title": "소속사무소 에이트맨 프로덕션(8man)",
+		"desc": "트위터 https://x.com/_yodarin_",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/_yodarin_" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10737",
+		"movie": ["DLDSS-550", "DLDSS-521", "DLDSS-505", "FNS-181", "FNS-133", "FNS-060"]
 	}
 ];
 
