@@ -3070,7 +3070,7 @@ const data = [
 			{ "name": "youtube", "url": "" }
 		],
 		"id": "9258",
-		"movie": ["START-490","START-337","START-030","START-002","STARS-892","STARS-827"]
+		"movie": ["START-490", "START-337", "START-030", "START-002", "STARS-892", "STARS-827"]
 	},
 	{
 		"image": "https://i2.avdbs.com/actor/a11/11035_n.jpg",
@@ -3098,7 +3098,7 @@ const data = [
 			{ "name": "youtube", "url": "" }
 		],
 		"id": "11035",
-		"movie": ["URE-142","JUR-819","JUR-764","JUR-080","JUR-643","JUR-577","JUR-525","JUR-402","JUR-356","JUR-041","JUR-040","JUR-241"]
+		"movie": ["URE-142", "JUR-819", "JUR-764", "JUR-080", "JUR-643", "JUR-577", "JUR-525", "JUR-402", "JUR-356", "JUR-041", "JUR-040", "JUR-241"]
 	}
 ];
 

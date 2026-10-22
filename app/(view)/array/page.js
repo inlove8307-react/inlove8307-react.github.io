@@ -33,7 +33,8 @@ const Page = ({ ref, ...props }) => {
 
 	useEffect(() => {
 		const array = arrayValue.split(',');
-		setArrayTrans(JSON.stringify(array));
+		const string = JSON.stringify(array).replace(/,/g, ', ');
+		setArrayTrans(string);
 		setArrayCopied(false);
 	}, [arrayValue]);
 
