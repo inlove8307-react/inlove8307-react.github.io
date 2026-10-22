@@ -3099,6 +3099,34 @@ const data = [
 		],
 		"id": "11035",
 		"movie": ["URE-142", "JUR-819", "JUR-764", "JUR-080", "JUR-643", "JUR-577", "JUR-525", "JUR-402", "JUR-356", "JUR-041", "JUR-040", "JUR-241"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11326_n.jpg",
+		"name": {
+			"kr": "카시와기 후미카",
+			"en": "Fumika Kashiwagi",
+			"cn": "柏木ふみか",
+			"other": []
+		},
+		"birth": "1996.01.01",
+		"height": "162",
+		"size": {
+			"bust": "B98",
+			"waist": "W56",
+			"hips": "H100"
+		},
+		"bra": "I",
+		"debut": "2025.05",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/KashiwagiFumika" },
+			{ "name": "instagram", "url": "https://www.instagram.com/fumikakashiwagi" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11326",
+		"movie": ["EBWH-374", "EBWH-365", "EBWH-356", "EBWH-338", "EBWH-294", "EBWH-267"]
 	}
 ];
 

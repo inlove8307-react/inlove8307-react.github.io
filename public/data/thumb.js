@@ -5898,6 +5898,30 @@ const data = [
 	{
 		"name": "JUR-241",
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00241/jur00241pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-374",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00374/ebwh00374pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-365",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00365/ebwh00365pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-356",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00356/ebwh00356pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-338",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00338/ebwh00338pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-294",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00294/ebwh00294pl.jpg?f=webp"
+	},
+	{
+		"name": "EBWH-267",
+		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/ebwh00267/ebwh00267pl.jpg?f=webp"
 	}
 ];
 
