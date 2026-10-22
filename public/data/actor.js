@@ -3155,6 +3155,34 @@ const data = [
 		],
 		"id": "10737",
 		"movie": ["DLDSS-550", "DLDSS-521", "DLDSS-505", "FNS-181", "FNS-133", "FNS-060"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11169_n.jpg",
+		"name": {
+			"kr": "니이즈마 유카",
+			"en": "Yuka Niizuma",
+			"cn": "新妻ゆうか",
+			"other": []
+		},
+		"birth": "1993.12.03",
+		"height": "160",
+		"size": {
+			"bust": "B90",
+			"waist": "W60",
+			"hips": "H88"
+		},
+		"bra": "H",
+		"debut": "2025.03",
+		"title": "소속사무소 씨모어 엔터 C-more Entertainment",
+		"desc": "트위터 @niizuma_cmore",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/yuuka_dino" },
+			{ "name": "instagram", "url": "https://www.instagram.com/yuuka_dino" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11169",
+		"movie": ["JUR-792", "JUR-768", "JUR-735", "JUR-648", "JUR-530", "JUR-524", "JUR-473", "JUR-422", "JUR-390", "JUR-370", "JUR-371 "]
 	}
 ];
 
