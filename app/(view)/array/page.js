@@ -13,10 +13,10 @@ import UxInput from "@/components/base/UxInput";
 import UxButton from "@/components/base/UxButton";
 
 const Page = ({ ref, ...props }) => {
-	const [array, setArray] = useState('');
+	const [arrayValue, setArrayValue] = useState('');
 	const [arrayTrans, setArrayTrans] = useState('');
 	const [arrayCopied, setArrayCopied] = useState(false);
-	const [json, setJson] = useState('');
+	const [jsonValue, setJsonValue] = useState('');
 	const [jsonTrans, setJsonTrans] = useState('');
 	const [jsonCopied, setJsonCopied] = useState(false);
 
@@ -32,20 +32,23 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		if (!array) return;
-		const split = array.split(',');
-
+		if (!arrayValue) return;
+		const split = arrayValue.split(',');
 		setArrayTrans(JSON.stringify(split));
 		setArrayCopied(false);
-	}, [array]);
+	}, [arrayValue]);
 
 	useEffect(() => {
-		const parsed = JSON.parse(json || null);
-		const beautified = JSON.stringify(parsed, null, '\t');
-
-		setJsonTrans(beautified);
+		try {
+			const parsed = JSON.parse(jsonValue);
+			const beautified = JSON.stringify(parsed, null, '\t');
+			setJsonTrans(beautified);
+		}
+		catch (error) {
+			setJsonTrans('It is not in JSON format.');
+		}
 		setJsonCopied(false);
-	}, [json]);
+	}, [jsonValue]);
 
 	return (
 		<UxSection>
@@ -66,8 +69,8 @@ const Page = ({ ref, ...props }) => {
 						<UxGroup className="col2">
 							<UxInput
 								role="textarea"
-								value={array}
-								onChange={(value) => setArray(value)}
+								value={arrayValue}
+								onChange={(value) => setArrayValue(value)}
 							/>
 							<UxInput
 								role="textarea"
@@ -93,8 +96,8 @@ const Page = ({ ref, ...props }) => {
 						<UxGroup className="col2">
 							<UxInput
 								role="textarea"
-								value={json}
-								onChange={(value) => setJson(value)}
+								value={jsonValue}
+								onChange={(value) => setJsonValue(value)}
 							/>
 							<UxInput
 								role="textarea"
