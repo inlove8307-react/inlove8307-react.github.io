@@ -32,9 +32,8 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		if (!arrayValue) return;
-		const split = arrayValue.split(',');
-		setArrayTrans(JSON.stringify(split));
+		const array = arrayValue.split(',');
+		setArrayTrans(JSON.stringify(array));
 		setArrayCopied(false);
 	}, [arrayValue]);
 
@@ -77,9 +76,6 @@ const Page = ({ ref, ...props }) => {
 								readonly
 								value={arrayTrans}
 							/>
-						</UxGroup>
-						<UxGroup className="col1">
-
 						</UxGroup>
 					</UxContent>
 				</UxArticle>
