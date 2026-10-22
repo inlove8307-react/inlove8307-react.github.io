@@ -820,10 +820,6 @@ const Textarea = ({ ref, ...props }) => {
 		props.onKeyDown && props.onKeyDown(event);
 	};
 
-	// useEffect(() => {
-	// 	props.onChange && props.onChange(value);
-	// }, [value]);
-
 	useEffect(() => {
 		if (typeof props.value !== 'undefined' && props.value !== value) {
 			setValue(props.value);
