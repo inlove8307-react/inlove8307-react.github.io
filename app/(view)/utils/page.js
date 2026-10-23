@@ -9,12 +9,14 @@ import UxSubject from "@/components/layout/UxSubject";
 import UxContent from "@/components/layout/UxContent";
 /* COMPONENT */
 import UxGroup from "@/components/base/UxGroup";
+import UxField from "@/components/base/UxField";
 import UxInput from "@/components/base/UxInput";
 import UxButton from "@/components/base/UxButton";
 
 const Page = ({ ref, ...props }) => {
 	const [arrayValue, setArrayValue] = useState('');
 	const [arrayTrans, setArrayTrans] = useState('');
+	const [arrayCount, setArrayCount] = useState('');
 	const [arrayCopied, setArrayCopied] = useState(false);
 	const [jsonValue, setJsonValue] = useState('');
 	const [jsonTrans, setJsonTrans] = useState('');
@@ -36,6 +38,7 @@ const Page = ({ ref, ...props }) => {
 	useEffect(() => {
 		const array = arrayValue.replace(/\s+/g, '').split(',');
 		const string = JSON.stringify(array).replace(/,/g, ', ');
+		setArrayCount(array.length);
 		setArrayTrans(string);
 		setArrayCopied(false);
 	}, [arrayValue]);
@@ -72,16 +75,21 @@ const Page = ({ ref, ...props }) => {
 					</UxSubject>
 					<UxContent>
 						<UxGroup className="col2">
-							<UxInput
-								role="textarea"
-								value={arrayValue}
-								onChange={(value) => setArrayValue(value)}
-							/>
-							<UxInput
-								role="textarea"
-								value={arrayTrans}
-								readonly
-							/>
+							<UxField>
+								<UxInput
+									role="textarea"
+									value={arrayValue}
+									onChange={(value) => setArrayValue(value)}
+								/>
+								<p className="fw500 fs18">length <em className="red fw700">{arrayCount}</em></p>
+							</UxField>
+							<UxField>
+								<UxInput
+									role="textarea"
+									value={arrayTrans}
+									readonly
+								/>
+							</UxField>
 						</UxGroup>
 					</UxContent>
 				</UxArticle>
@@ -99,16 +107,20 @@ const Page = ({ ref, ...props }) => {
 					</UxSubject>
 					<UxContent>
 						<UxGroup className="col2">
-							<UxInput
-								role="textarea"
-								value={jsonValue}
-								onChange={(value) => setJsonValue(value)}
-							/>
-							<UxInput
-								role="textarea"
-								value={jsonTrans}
-								readonly
-							/>
+							<UxField>
+								<UxInput
+									role="textarea"
+									value={jsonValue}
+									onChange={(value) => setJsonValue(value)}
+								/>
+							</UxField>
+							<UxField>
+								<UxInput
+									role="textarea"
+									value={jsonTrans}
+									readonly
+								/>
+							</UxField>
 						</UxGroup>
 					</UxContent>
 				</UxArticle>
