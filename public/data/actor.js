@@ -3183,6 +3183,186 @@ const data = [
 		],
 		"id": "11169",
 		"movie": ["JUR-792", "JUR-768", "JUR-735", "JUR-648", "JUR-530", "JUR-524", "JUR-473", "JUR-422", "JUR-390", "JUR-370", "JUR-371"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a05/5884_n.jpg",
+		"name": {
+			"kr": "사이토 아미리",
+			"en": "Amiri Saito",
+			"cn": "斎藤あみり",
+			"other": [
+				"사이토 아메리(斉藤あめり)",
+				"사이토 아미리(斎藤あみり/斉藤あみり)"
+			]
+		},
+		"birth": "2000.01.23",
+		"height": "160",
+		"size": {
+			"bust": "B85",
+			"waist": "W59",
+			"hips": "H88"
+		},
+		"bra": "F",
+		"debut": "2019.08",
+		"title": "오구라 유나처럼 유명해지고 싶어서 데뷔했다!",
+		"desc": "아키하바라 메이드 카페에서 근무하다가, 2019년 프레스티지 전속 AV배우로 데뷔했다(데뷔작 SIRO-3924). 유명해지고 싶어서 AV배우로 지원했고, 롤모델은 오구라 유나라고 한다. 취미는 아이돌 감상 및 코스프레. 매운 걸 잘 먹는다. 판매량 높은 AV배우가 되고 싶다고 한다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/amirichan123" },
+			{ "name": "instagram", "url": "https://www.instagram.com/amirichan123/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@amirichan123" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "5884",
+		"movie": ["MIMK-253", "MIAB-545", "SAME-186", "HZGD-314", "MIAB-472", "BF-729", "MIMK-138", "DASS-219", "ROYD-142", "DASS-200", "ROYD-136", "ROYD-132", "DASS-185", "MIAA-892", "DASS-170", "DASS-159", "DASS-110", "DVAJ-605", "DASS-102", "ROYD-108", "GVH-450", "HZGD-229", "MRSS-137", "IPX-858", "IPX-839", "IPX-820", "ABP-970"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a00/739_n.jpg",
+		"name": {
+			"kr": "모모노기 카나",
+			"en": "Kana Momonogi",
+			"cn": "桃乃木かな",
+			"other": [
+				"마츠시마 마아사"
+			]
+		},
+		"birth": "1996.12.24",
+		"height": "153",
+		"size": {
+			"bust": "B80",
+			"waist": "W54",
+			"hips": "H80"
+		},
+		"bra": "F",
+		"debut": "2015.02",
+		"title": "팬 조련 & 체중 관리의 신! 먹보노기! 노꼴갑!",
+		"desc": "한국에서 가장 인지도 높은 AV배우 중 한 명. 아이디어 포켓 전속. 엄청난 식사량에도 불구하고 철저한 체중 관리로 다이어트에 성공했다. 이쁜 외모, 귀여움에, 팬들에 대한 극진 정성으로 엄청난 팬덤을 몰고 있지만, 이상하게 영상에선 노꼴갑. 학창시절 배구부 캡틴. 라이프 프로모션 소속. 마츠시마 마아사 시절을 흑역사로 생각중. 에비스 마스캇츠 멤버. 2017년 스카파 성인방송대상 신인여우상 수상. 노기자카46의 니시노 나나세, 시노자키 아이 등의 팬. 좋아하는 음식은 지로계 라멘 & 빙수. 한국 3회 방문. BJ남순과의 방송으로 인지도를 높였다. 버라이어티 모모산보 진행중. 성형은 아쉽.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/Kana_Momonogi" },
+			{ "name": "instagram", "url": "https://www.instagram.com/kana_momonogi" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "https://www.youtube.com/channel/UCYYICkoSPISiq_nIOh_R_sg" }
+		],
+		"id": "739",
+		"movie": ["IPZZ-672", "IPZZ-597", "IPZZ-523", "IPZZ-501", "IPZZ-474", "IPZZ-386", "IPZZ-364", "IPZZ-340", "IPZZ-317", "IPZZ-225", "IPZZ-178", "IPZZ-151", "IPZZ-117", "IPZZ-086", "IPZZ-048", "IPZZ-033", "IPZZ-014", "IPZZ-008", "IPX-981", "IPX-934", "IPX-917", "IPX-901", "IPX-885", "IPX-852", "IPX-760", "IPX-744", "IPX-691", "IPX-675", "IPX-643", "IPX-565", "IPX-551", "IPX-471", "IPX-439", "IPX-429", "IPX-354"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a08/8306_n.jpg",
+		"name": {
+			"kr": "야마테 리아",
+			"en": "Ria Yamate",
+			"cn": "山手梨愛",
+			"other": []
+		},
+		"birth": "2000.02.23",
+		"height": "170",
+		"size": {
+			"bust": "B99",
+			"waist": "W58",
+			"hips": "H88"
+		},
+		"bra": "I",
+		"debut": "2021.11",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/tukishiiii" },
+			{ "name": "instagram", "url": "https://www.instagram.com/ria_yamate/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "8306",
+		"movie": ["SSIS-899", "SSIS-804", "SSIS-724", "SSIS-535", "SSIS-503", "SSIS-402"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a02/2426_n.jpg",
+		"name": {
+			"kr": "아이자와 미나미",
+			"en": "Minami Aizawa",
+			"cn": "相沢みなみ",
+			"other": []
+		},
+		"birth": "1996.06.14",
+		"height": "155",
+		"size": {
+			"bust": "B80",
+			"waist": "W54",
+			"hips": "H82"
+		},
+		"bra": "C",
+		"debut": "2016.09",
+		"title": "2019 FANZA 어워드 최우수 여배우상을 거머쥔 前 아이디어 포켓의 여왕님",
+		"desc": "부유한 집안에서 자랐으며 유명 사립대학에서 영어를 전공했다. 대학교 재학중 길거리에서 만난 전 소속사 사장이 1년간 끈질기게 설득한 결과 호기심 반, 평범한 자신을 바꿔보겠단 생각 반으로 2016년 AV에 데뷔했다. 소속사 이름은 44 그룹 E-point. 부모님한테 바로 들켰다. 2019 판자 어워드에서 최우수여배우상을 거머쥐고, 그녀의 우여곡절 신데렐라 스토리도 화제가 된다. 이 시기에 절친한 소속사 사장이 투병 생활 중 결국 세상을 떠나게 되자 상심한 나머지 은퇴를 결심하지만, 갑작스러운 코로나 확산으로 팬들을 직접 볼 수 없게 되어서 '팬들을 만날 날까지 열심히 해보자'라고 마음을 바꾸어, 이후에도 성실히 배우 생활에 임했다. 그러다 세계적으로 팬데믹이 거의 끝난 2023년 6월 2일에 대만의 기자회견에서 은퇴를 발표하게 된다. 현재는 일본, 홍콩, 대만 등지에서 방송인으로 활동하고 있다. 홍콩 출신이라 그런지 대만을 비롯한 중화권 팬들이 많다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/pixy_yxip" },
+			{ "name": "instagram", "url": "https://www.instagram.com/epoint2016/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "2426",
+		"movie": ["IPZZ-054", "IPZZ-003", "IPX-998", "IPX-939", "IPX-922", "IPX-889", "IPX-873", "IPX-857", "IPX-819", "IPX-784", "IPX-750", "IPX-714", "IPX-697", "IPX-680", "IPX-666", "IPX-649", "IPX-604", "IPX-557", "IPX-543", "IPX-273", "IPX-177", "IPX-159", "IPX-118", "IPX-034"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a01/1427_n.jpg",
+		"name": {
+			"kr": "메구리",
+			"en": "Meguri",
+			"cn": "めぐり",
+			"other": [
+				"후지우라 메구(藤浦めぐ)"
+			]
+		},
+		"birth": "1989.05.04",
+		"height": "155",
+		"size": {
+			"bust": "B85",
+			"waist": "W60",
+			"hips": "H88"
+		},
+		"bra": "G",
+		"debut": "2009.01",
+		"title": "친한파 AV 배우의 선구자, 한국을 좋아해도 너무 좋아하는 그녀",
+		"desc": "하네다 아이, 미카미 유아와 함께 대표적인 친한파 AV 배우에 속한다. 한국어 실력이 수준급이며, 한국에 대한 애착도 꽤 깊어서 수시로 한국인들을 위한 메시지를 SNS에 남기곤 한다. 그라비아 출신, 2009년 '후지우라 메구'라는 이름으로 AV 데뷔, 육덕 체형에 이목구비 뚜렷한 미인형. 2015년 한국 팬미팅을 성공적으로 마무리했으며 아부나이 니홍고에 출연한 적도 있다. 2019년 유튜버로 데뷔. AV에서는 2017년 은퇴했다가 2019년 복귀했다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/meguri0504" },
+			{ "name": "instagram", "url": "https://www.instagram.com/meguri.0504/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "1427",
+		"movie": ["JUR-856", "JUR-786", "JUR-713", "JUR-633", "JUR-628", "JUR-589", "JUR-511", "JUR-448", "JUR-354", "JUQ-982", "JUQ-943", "MEYD-605", "MEYD-599", "MEYD-589", "MEYD-575", "MEYD-559", "JUY-195", "MEYD-271", "MIAE-064", "PGD-954", "JUY-148", "MEYD-255", "PGD-945", "MEYD-245", "MEYD-236", "MEYD-134", "MEYD-124", "MEYD-115", "MEYD-105", "PPPD-392", "PPPD-355", "PPPD-305", "PPPD-257", "SOE-349"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a03/3707_n.jpg",
+		"name": {
+			"kr": "아리무라 노조미",
+			"en": "Nozomi Arimura",
+			"cn": "有村のぞみ",
+			"other": [
+				"植村希美",
+				"사와무라 카츠키(澤村香)",
+				"하야카와 히토미(早川ひとみ)",
+				"나카이 노조미(中井のぞみ)"
+			]
+		},
+		"birth": "1997.02.14",
+		"height": "155",
+		"size": {
+			"bust": "B84",
+			"waist": "W57",
+			"hips": "H88"
+		},
+		"bra": "C",
+		"debut": "2018.01",
+		"title": "2018년 프레스티지 전속 데뷔, 2019년부터 키카탄으로 활동중",
+		"desc": "AV 일을 천직이라고 생각할 정도로 적성에 맞는다고 한다. 데뷔 전에는 의류업체에서 일하고 있었다. 스스로 옷 디자인부터 봉제까지 할 수 있어서 스스로 제작한 의상을 입은 그라비아 사진을 찍기도 했다. 2018년 프레스티지 전속으로 AV 데뷔. 2019년 키카탄 전향. FANZA 어워드 최우수 신인상 후보. 2020년 맨즈 사이조 이미지 걸 활동. 좋아하는 여배우는 하마사키 마오. 체액 페티쉬가 있어서 물총, 오줌, 모유 장르의 AV를 즐겨보며 자위용으로 쓴다. 유튜브 https://www.youtube.com/channel/UC8cKfuaYM0xTZ6O_PiuMq3A",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/nozomi_arimura" },
+			{ "name": "instagram", "url": "https://www.instagram.com/nozomi__arimura/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@nozomi_arimura" },
+			{ "name": "youtube", "url": "https://www.youtube.com/channel/UC8cKfuaYM0xTZ6O_PiuMq3A" }
+		],
+		"id": "3707",
+		"movie": ["SAN-475", "NGOD-334", "GARA-021", "SAN-438", "VEC-757", "CJOD-477", "ADHN-007", "MTALL-136", "PJAB-005", "WAAA-413", "HZGD-255", "ATID-450", "NSPS-876", "MXGS-1131", "SOJU-019", "SOJU-017", "MACB-013", "HZGD-125", "HOMA-068", "MEYD-515", "ATID-354", "MIAA-107", "ATID-348", "DASD-531"]
 	}
 ];
 
