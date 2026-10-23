@@ -3422,6 +3422,67 @@ const data = [
 		],
 		"id": "8319",
 		"movie": ["EBWH-285", "EBWH-277", "EBWH-263", "EBWH-260", "CAWD-835", "MIMK-191", "CAWD-807", "CAWD-764", "CAWD-739", "CAWD-741", "CAWD-723", "CAWD-658", "CAWD-623", "CAWD-590", "CAWD-570", "CAWD-551", "CAWD-530"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a03/3783_n.jpg",
+		"name": {
+			"kr": "타치바나 메리",
+			"en": "Mary Tachibana",
+			"cn": "橘メアリー",
+			"other": [
+				"티나(TINA)"
+			]
+		},
+		"birth": "1993.07.07",
+		"height": "166",
+		"size": {
+			"bust": "B92",
+			"waist": "W63",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2014.05",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/mary_tachibana" },
+			{ "name": "instagram", "url": "https://www.instagram.com/tachibanamary/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "3783",
+		"movie": ["JUR-622", "DASS-843", "JUR-590", "DASS-842", "JUR-538", "JUR-504", "DASS-715", "JUR-446", "JUR-334", "DASS-650", "DASS-630", "JUR-287", "JUR-242", "JUR-213", "DASS-541", "JUR-154", "JUQ-958", "DASS-490", "JUQ-969", "DASS-480", "JUQ-897", "DASS-434", "NGOD-215", "VENX-276", "DASS-426", "DVAJ-655", "NKKD-336", "ROYD-175", "NKKD-333", "VEC-643", "DASS-387", "ROYD-171", "SAN-227", "JJDA-047", "DASS-360", "NKKD-322", "JUQ-545", "NKKD-314", "ROYD-156", "DASS-250", "ADN-506", "DVAJ-631", "DASS-221", "NGOD-192", "GVH-558", "DASS-167", "NKKD-280", "NDRA-099", "NKKD-252", "JJDA-026", "AQSH-082", "JJDA-016"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a00/373_n.jpg",
+		"name": {
+			"kr": "하마사키 마오",
+			"en": "Mao Hamasaki",
+			"cn": "浜崎真緒",
+			"other": [
+				"하마사키 마오(浜崎真緒/浜崎まお)",
+				"쿄노 에리나(京野恵理奈)"
+			]
+		},
+		"birth": "1993.10.20",
+		"height": "165",
+		"size": {
+			"bust": "B85",
+			"waist": "W59",
+			"hips": "H84"
+		},
+		"bra": "E",
+		"debut": "2012.08",
+		"title": "모든 품번을 제패하고 싶다! 2017년 한국 팬미팅 진행, 2018년 상류사회 출연",
+		"desc": "1993년 치바현 출신. 중학교 졸업 후 공부하기가 싫어 고등학교에 진학하지 않고 아르바이트를 했다. 2012년 프레스티지에서 AV에 데뷔했고, 2013년까지 전속으로 있었다. 이후 키카탄으로 활발하게 활동했다. 글래머 몸매에 허스키 보이스, 과장된 연기에 거침 없는 도전 정신이 특징이다. 2016년 스카파 성인방송대상 주연상 및 작품상 후보로 올랐고, 2018년 같은 시상식에 주연상으로 다시 노미네이트되었지만 아쉽게도 상복은 없다. AV배우를 은퇴할 때까지 가능한 한 모든 품번을 제패하고 싶다고 밝혔다. 다양한 장르의 작품에 폭넓게 출연했다. 2017년 팝콘TV에서 스트리밍 개인방송을 정기적으로 진행했으며, 같은 해 2번이나 한국 팬미팅을 열었다. 2018년 한국영화 '상류사회'에 출연, 한국과 인연이 깊다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/Hamasaki_mao" },
+			{ "name": "instagram", "url": "https://www.instagram.com/MaoHamasaki_Official" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@mao_hamasaki" },
+			{ "name": "youtube", "url": "https://www.youtube.com/@MaoHamasaki" }
+		],
+		"id": "373",
+		"movie": ["ADHN-002", "AVSA-370", "PJAM-021", "SAN-275", "HZGD-281", "BKD-338", "SAN-160", "HMN-303", "SAN-080", "KSBJ-220", "MOND-237", "ALDN-049", "NDRA-098", "JUKF-074", "NGOD-161", "MKMP-393", "GNAX-046", "XVSR-569", "XVSR-558", "JUKF-022"]
 	}
 ];
 
