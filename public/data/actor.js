@@ -3545,6 +3545,140 @@ const data = [
 		],
 		"id": "7373",
 		"movie": ["ADN-810", "MIDA-693", "MIDA-621", "MIDA-580", "MIDA-539", "MIDA-465", "MIDA-391", "MIDA-352", "MIDA-268", "MIDA-225", "MIDA-189", "MIDA-074", "START-196", "START-071", "STARS-999", "STARS-978", "STARS-919", "STARS-807", "STARS-771", "STARS-747", "STARS-709", "STARS-624", "STARS-540"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6756_n.jpg",
+		"name": {
+			"kr": "오토리 미유",
+			"en": "Miyu Otori",
+			"cn": "鳳みゆ",
+			"other": [
+				"카와키타 메이사(川北メイサ)",
+				"사와키타 미나미(沢北みなみ)",
+				"오토리 미유(鳳みゆ)",
+				"미야모토 치에(宮本ちえ)",
+				"川北友里"
+			]
+		},
+		"birth": "2000.07.21",
+		"height": "154",
+		"size": {
+			"bust": "B85",
+			"waist": "W62",
+			"hips": "H90"
+		},
+		"bra": "E",
+		"debut": "2020.12",
+		"title": "카와키타 메이사 → 오토리 미유",
+		"desc": "카와키타 메이사 → 오토리 미유",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/ootori_miyu" },
+			{ "name": "instagram", "url": "https://www.instagram.com/ootori_miyu/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@ootori_miyu" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "6756",
+		"movie": ["JUFE-509", "SAME-039", "MKMP-487", "ROYD-106", "ROYD-100", "MEYD-776", "DVAJ-583", "PPPE-043", "NITR-522", "IESP-696", "HOMA-115", "MVSD-502", "ROYD-080", "JUFE-358", "PPPD-992", "MVSD-492", "WAAA-126"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a07/7211_n.jpg",
+		"name": {
+			"kr": "미나모",
+			"en": "MINAMO",
+			"cn": "MINAMO",
+			"other": [
+				"타이요 시즈쿠(太陽しずく)"
+			]
+		},
+		"birth": "2000.05.10",
+		"height": "153",
+		"size": {
+			"bust": "B88",
+			"waist": "W54",
+			"hips": "H87"
+		},
+		"bra": "E",
+		"debut": "2021.06",
+		"title": "그라비아 아이돌 출신 (SOD STAR 전속배우)",
+		"desc": "데뷔작 STARS-371. 소속사무소 티파워즈(T-POWERS).",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/M_I_N_A_M_O_" },
+			{ "name": "instagram", "url": "https://www.instagram.com/minamo_j" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "https://www.youtube.com/@MINAMO_MINAMOJCT" }
+		],
+		"id": "7211",
+		"movie": ["START-559", "START-510", "START-503", "START-425", "START-406", "START-284", "START-148", "START-107", "START-088", "START-035", "START-022", "STARS-980", "STARS-969", "STARS-935", "STARS-867", "STARS-797", "STARS-751", "STARS-713", "STARS-579", "STARS-525"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a02/2675_n.jpg?v=2",
+		"name": {
+			"kr": "미타니 아카네",
+			"en": "Akari Mitani",
+			"cn": "美谷朱音",
+			"other": [
+				"니시나 리리(仁科璃々)",
+				"요시미 이리아(吉見いりあ)",
+				"미타니 아카리(美谷朱里)",
+				"미카미 에리(三上江里)",
+				"타니사카 카나(谷坂かな)",
+				"미타니 아카네(美谷朱音)"
+			]
+		},
+		"birth": "1997.04.15",
+		"height": "166",
+		"size": {
+			"bust": "B83",
+			"waist": "W58",
+			"hips": "H86"
+		},
+		"bra": "C",
+		"debut": "2017.07",
+		"title": "미타니 아카리 → 미타니 아카네",
+		"desc": "2025년 현재 한국에서 팬트리 활동을 하고 있다. 춤으로 다져진 탄탄한 몸매에 작품을 가리지 않는 공장장 키카탄. 에비스 마스캇츠 2세대를 통해 AV에 빠져 AV 여자 팬으로 활동한 경력이 있다. 2017년 지인을 통해 AV감독을 알게 되었고, 그대로 AV에 데뷔했다. 시미켄이 무심결에 사귀자고 고백할 정도로 테크닉이 뛰어난 키카탄 배우. 댄스를 좋아해 종종 케이팝 커버 댄스를 SNS에 올리고 있다. 하관이 돌출되어 호불호는 갈리지만, 탄탄한 몸매에 연기력과 테크닉이 뛰어나고 마인드도 좋아 스탭들로부터도 많은 사랑을 받는 배우. 현 세대를 대표하는 공장장이다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/akari_mitani17" },
+			{ "name": "instagram", "url": "https://www.instagram.com/akanemitani0415" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "2675",
+		"movie": ["ROYD-265", "JUR-461", "MNGS-021", "ADN-717", "JUR-442", "HMN-687", "JUR-382", "SAME-189", "HMN-669", "ROYD-232", "DASS-558", "DASS-532", "DASS-508", "DASS-374", "DASS-356", "DASS-220", "DASS-194", "DASS-134", "NBES-072", "HMN-340", "DASS-116", "DASS-070", "HMN-196", "DASS-002", "DASD-988", "HMN-123", "DASD-965", "DASD-956", "DASD-900", "DASD-884", "DASD-843", "DASD-792", "HND-926", "DASD-743", "NSSTH-053", "DASD-700", "DASD-669", "CAWD-054", "DVAJ-434", "JUL-054", "HOMA-073", "NGOD-110", "MIAA-143", "GNAX-010", "MIAA-130", "DASD-536", "JUY-843", "NDRA-053", "MEYD-480", "ADN-207", "WANZ-837", "MIAA-025", "NACR-211", "HODV-21355", "MEYD-464", "NDRA-049", "HND-612", "MKMP-247", "NSPS-754", "MEYD-388", "HZGD-081"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a02/2680_n.jpg",
+		"name": {
+			"kr": "미히 나나미",
+			"en": "Nanami Mihi",
+			"cn": "三比菜々美",
+			"other": [
+				"야기하라 유키(八木原ゆき)",
+				"미히나(みひな)",
+				"요코야마 모에(横山萌)",
+				"아즈 미히나(あずみひな)",
+				"요시다 유우(吉田優)",
+				"사쿠라 하루나(佐倉陽菜)"
+			]
+		},
+		"birth": "1994.11.30",
+		"height": "157",
+		"size": {
+			"bust": "B83",
+			"waist": "W59",
+			"hips": "H87"
+		},
+		"bra": "D",
+		"debut": "2017.06",
+		"title": "나가이 미히나 → 아즈 미히나 → 미히나",
+		"desc": "1995년생. 2017년 '나가이 미히나'로 AV 데뷔했다. 당시 소속사는 NAX 프로모션이었으나 2018년 소속사를 '마인즈'로 옮기면서 예명도 아즈 미히나로 개명, 2019년에는 '미히나'로 개명했다. '아즈 미히나'라는 이름을 사람들이 '아즈미 히나'로 자꾸 읽어서 '미히나'로 개명했다고 한다. 연기력이 탁월해서 데뷔 초창기부터 신이 내린 연기력으로 호평을 받았고 어린 역할부터 나이든 숙녀 역까지 다양한 배역을 폭넓게 소화하고 있다. 좌우명은 매일매일 흑역사를 찍자.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/mihi_nanami" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "2680",
+		"movie": ["FKOU-007", "DRPT-089", "JUAN-020", "SDMF-022", "NSPS-974", "GRKG-006", "NSPS-946", "MIAA-268", "LULU-009", "RBD-955", "CLO-014", "HOMA-060", "SPRD-1071"]
 	}
 ];
 
