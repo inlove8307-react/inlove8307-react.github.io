@@ -3363,6 +3363,34 @@ const data = [
 		],
 		"id": "3707",
 		"movie": ["SAN-475", "NGOD-334", "GARA-021", "SAN-438", "VEC-757", "CJOD-477", "ADHN-007", "MTALL-136", "PJAB-005", "WAAA-413", "HZGD-255", "ATID-450", "NSPS-876", "MXGS-1131", "SOJU-019", "SOJU-017", "MACB-013", "HZGD-125", "HOMA-068", "MEYD-515", "ATID-354", "MIAA-107", "ATID-348", "DASD-531"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a03/3596_n.jpg",
+		"name": {
+			"kr": "요시타카 네네",
+			"en": "Nene Yoshitaka",
+			"cn": "吉高寧々",
+			"other": []
+		},
+		"birth": "1995.12.01",
+		"height": "155",
+		"size": {
+			"bust": "B84",
+			"waist": "W56",
+			"hips": "H85"
+		},
+		"bra": "C",
+		"debut": "2017.09",
+		"title": "2017년 AV 오픈 대상 수상자 (팔레노 FSDSS 전속배우)",
+		"desc": "극강 외모의 슬림파 미소녀. 요시타카 유리코와 오츠카 네네에서 이름을 따왔다. 집 주변 카페에서 근무하던 도중 스카웃되어 평범한 자신에게 변화를 주고 싶단 이유로 그라비아 아이돌에 데뷔했지만 생각보다 인기가 없었다. 그라비아 아이돌이었던 타카하시 쇼코가 AV로 전향하니깐 AV 오픈 2016에서 그랑프리를 탔다는 데서 고무받아, 2017년 AV로 전향했다. AV 오픈 2017에서 그랑프리 수상(3관왕)!!! 에이트맨 프로덕션 소속 및 에스원 전속.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/yoshitakanene" },
+			{ "name": "instagram", "url": "https://www.instagram.com/_yoshitaka_nene/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "3596",
+		"movie": ["FNS-271", "FNS-165", "FSDSS-989", "FSDSS-969", "FSDSS-825", "FSDSS-757", "FSDSS-733", "FSDSS-703", "FSDSS-672", "FSDSS-659", "FSDSS-622", "FSDSS-589", "FSDSS-457", "FSDSS-336", "FSDSS-321", "FSDSS-305", "FSDSS-185", "FSDSS-139", "FSDSS-099", "FSDSS-070", "FSDSS-054", "FSDSS-031", "SSNI-648", "SSNI-570", "SSNI-547"]
 	}
 ];
 
