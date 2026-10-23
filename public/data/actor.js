@@ -3483,6 +3483,37 @@ const data = [
 		],
 		"id": "373",
 		"movie": ["ADHN-002", "AVSA-370", "PJAM-021", "SAN-275", "HZGD-281", "BKD-338", "SAN-160", "HMN-303", "SAN-080", "KSBJ-220", "MOND-237", "ALDN-049", "NDRA-098", "JUKF-074", "NGOD-161", "MKMP-393", "GNAX-046", "XVSR-569", "XVSR-558", "JUKF-022"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9256_n.jpg",
+		"name": {
+			"kr": "미츠하 치하루",
+			"en": "Chiharu Mitsuha",
+			"cn": "三葉ちはる",
+			"other": [
+				"룬룬 츠키노(るんるん月野)",
+				"츠키노 치하루(ツキノ・チハル)"
+			]
+		},
+		"birth": "1997.07.24",
+		"height": "160",
+		"size": {
+			"bust": "B84",
+			"waist": "W64",
+			"hips": "H89"
+		},
+		"bra": "F",
+		"debut": "2022.10",
+		"title": "그라비아 아이돌 출신의 AV배우 (팔레노 FSDSS 전속배우)",
+		"desc": "4자매 중 2째로 태어나 나름 공부를 잘 했다고 한다. 하지만 대학교 1학년 1학기 기말시험 때 가출하고 퇴학하며 부랑소녀가 됐다. 이 무렵 지하 아이돌로 스카웃됐다. 2018년 지하 아이돌 시발대기언더그라운드(始発待ちアンダーグラウンド)의 멤버로 활동했다. 당시 이름은 츠키노 치하루. 같은 해 코단샤 주최의 미스id 2019 결승전에 올랐다. 2019년 그룹을 졸업하고, 의류전문학교를 졸업했다. 색채 검정시험 1급, 일본 화장품 검정시험 1급 자격을 갖고 있다. 아이돌 의상 제작에 직접 참여한 적도 있다. 이후 룬룬 츠키노(@chi_harunrun)라는 이름으로 모델 활동을 했다. 패션 브랜드 모델 겸 그라비아 아이돌로 활동하면서 디지털 화보집을 수차례 발매했다. 2022년 미츠하 치하루로 개명하고 AV배우로 데뷔했다. 룬룬 츠키노라는 이름으로도 병행활동할 예정이다. 턱에 점이 있다. 틱톡 @328chiharun 인스타 @328chiharun",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/328chiharun" },
+			{ "name": "instagram", "url": "https://www.instagram.com/chi_harunrun/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@328chiharun" },
+			{ "name": "youtube", "url": "https://www.youtube.com/@328chiharun" }
+		],
+		"id": "9256",
+		"movie": ["DLDSS-520", "DLDSS-493", "DLDSS-486", "DLDSS-484", "DLDSS-467", "DLDSS-405", "FSDSS-873", "FSDSS-827", "FSDSS-808", "FSDSS-787", "FSDSS-773", "FSDSS-722", "FSDSS-708", "FSDSS-680", "FSDSS-667", "FSDSS-655", "FSDSS-643", "FSDSS-631", "FSDSS-596", "FSDSS-583", "FSDSS-570", "FSDSS-557", "FSDSS-528"]
 	}
 ];
 
