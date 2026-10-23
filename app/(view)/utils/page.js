@@ -21,7 +21,9 @@ const Page = ({ ref, ...props }) => {
 	const [jsonCopied, setJsonCopied] = useState(false);
 
 	const handleArray = async () => {
-		await navigator.clipboard.writeText(arrayTrans);
+		const string = arrayTrans.replace(/,\s""/g, '');
+		await navigator.clipboard.writeText(string);
+		setArrayTrans(string);
 		setArrayCopied(true);
 	};
 
@@ -32,7 +34,7 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
-		const array = arrayValue.split(',');
+		const array = arrayValue.replace(/\s+/g, '').split(',');
 		const string = JSON.stringify(array).replace(/,/g, ', ');
 		setArrayTrans(string);
 		setArrayCopied(false);
@@ -62,7 +64,10 @@ const Page = ({ ref, ...props }) => {
 						<UxButton
 							onClick={handleArray}
 						>
-							<i className={classnames('icon mask copy', { muted: arrayCopied })} />
+							<i className={classnames('icon mask copy x20', { disabled: arrayCopied })} />
+							<em className={classnames('fw700', { disabled: arrayCopied })}>
+								{!arrayCopied ? 'Copy' : 'Copied'}
+							</em>
 						</UxButton>
 					</UxSubject>
 					<UxContent>
@@ -86,7 +91,10 @@ const Page = ({ ref, ...props }) => {
 						<UxButton
 							onClick={handleJson}
 						>
-							<i className={classnames('icon mask copy', { muted: jsonCopied })} />
+							<i className={classnames('icon mask copy x20', { disabled: jsonCopied })} />
+							<em className={classnames('fw700', { disabled: jsonCopied })}>
+								{!jsonCopied ? 'Copy' : 'Copied'}
+							</em>
 						</UxButton>
 					</UxSubject>
 					<UxContent>
