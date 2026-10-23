@@ -3391,6 +3391,37 @@ const data = [
 		],
 		"id": "3596",
 		"movie": ["FNS-271", "FNS-165", "FSDSS-989", "FSDSS-969", "FSDSS-825", "FSDSS-757", "FSDSS-733", "FSDSS-703", "FSDSS-672", "FSDSS-659", "FSDSS-622", "FSDSS-589", "FSDSS-457", "FSDSS-336", "FSDSS-321", "FSDSS-305", "FSDSS-185", "FSDSS-139", "FSDSS-099", "FSDSS-070", "FSDSS-054", "FSDSS-031", "SSNI-648", "SSNI-570", "SSNI-547"]
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a08/8319_n.jpg?v=1",
+		"name": {
+			"kr": "시타라 유히",
+			"en": "Yuhi Shitara",
+			"cn": "設楽ゆうひ",
+			"other": [
+				"쿠리미야 후타바(栗宮ふたば)",
+				"시타라 유히(設楽ゆうひ)"
+			]
+		},
+		"birth": "2001.06.30",
+		"height": "156",
+		"size": {
+			"bust": "B86",
+			"waist": "W55",
+			"hips": "H85"
+		},
+		"bra": "D",
+		"debut": "2021.12",
+		"title": "쿠리미야 후타바 → 시타라 유히",
+		"desc": "트위터 https://x.com/shitara_yuuhi (구 계정 @_kuri_futaba 은 2022년 4월 15일 삭제)",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/shitara_yuuhi" },
+			{ "name": "instagram", "url": "https://www.instagram.com/kogik254" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "8319",
+		"movie": ["EBWH-285", "EBWH-277", "EBWH-263", "EBWH-260", "CAWD-835", "MIMK-191", "CAWD-807", "CAWD-764", "CAWD-739", "CAWD-741", "CAWD-723", "CAWD-658", "CAWD-623", "CAWD-590", "CAWD-570", "CAWD-551", "CAWD-530"]
 	}
 ];
 
