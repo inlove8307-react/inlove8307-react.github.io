@@ -3514,6 +3514,37 @@ const data = [
 		],
 		"id": "9256",
 		"movie": ["DLDSS-520", "DLDSS-493", "DLDSS-486", "DLDSS-484", "DLDSS-467", "DLDSS-405", "FSDSS-873", "FSDSS-827", "FSDSS-808", "FSDSS-787", "FSDSS-773", "FSDSS-722", "FSDSS-708", "FSDSS-680", "FSDSS-667", "FSDSS-655", "FSDSS-643", "FSDSS-631", "FSDSS-596", "FSDSS-583", "FSDSS-570", "FSDSS-557", "FSDSS-528"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a07/7373_n.jpg",
+		"name": {
+			"kr": "아마미야 카난",
+			"en": "Kanan Amamiya",
+			"cn": "天宮花南",
+			"other": [
+				"사노 호노카(佐野ほのか)",
+				"나카가와 모코(那珂川もこ)"
+			]
+		},
+		"birth": "1996.05.08",
+		"height": "153",
+		"size": {
+			"bust": "B88",
+			"waist": "W57",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2021.07",
+		"title": "(SOD STAR 전속배우)",
+		"desc": "(SOD STAR 전속배우)",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/amamiya_kanan" },
+			{ "name": "instagram", "url": "https://www.instagram.com/amamiya_kanan/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "7373",
+		"movie": ["ADN-810", "MIDA-693", "MIDA-621", "MIDA-580", "MIDA-539", "MIDA-465", "MIDA-391", "MIDA-352", "MIDA-268", "MIDA-225", "MIDA-189", "MIDA-074", "START-196", "START-071", "STARS-999", "STARS-978", "STARS-919", "STARS-807", "STARS-771", "STARS-747", "STARS-709", "STARS-624", "STARS-540"]
 	}
 ];
 
