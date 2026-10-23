@@ -3182,7 +3182,7 @@ const data = [
 			{ "name": "youtube", "url": "" }
 		],
 		"id": "11169",
-		"movie": ["JUR-792", "JUR-768", "JUR-735", "JUR-648", "JUR-530", "JUR-524", "JUR-473", "JUR-422", "JUR-390", "JUR-370", "JUR-371 "]
+		"movie": ["JUR-792", "JUR-768", "JUR-735", "JUR-648", "JUR-530", "JUR-524", "JUR-473", "JUR-422", "JUR-390", "JUR-370", "JUR-371"]
 	}
 ];
 

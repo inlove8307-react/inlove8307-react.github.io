@@ -5988,7 +5988,7 @@ const data = [
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00370/jur00370pl.jpg?f=webp"
 	},
 	{
-		"name": "JUR-371 ",
+		"name": "JUR-371",
 		"image": "https://awsimgsrc.dmm.co.jp/pics_dig/digital/video/jur00371/jur00371pl.jpg?f=webp"
 	}
 ];
