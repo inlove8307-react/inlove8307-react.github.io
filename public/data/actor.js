@@ -3585,7 +3585,7 @@ const data = [
 		"name": {
 			"kr": "미나모",
 			"en": "MINAMO",
-			"cn": "MINAMO",
+			"cn": "みなも",
 			"other": [
 				"타이요 시즈쿠(太陽しずく)"
 			]
