@@ -3679,7 +3679,127 @@ const data = [
 		],
 		"id": "2680",
 		"movie": ["FKOU-007", "DRPT-089", "JUAN-020", "SDMF-022", "NSPS-974", "GRKG-006", "NSPS-946", "MIAA-268", "LULU-009", "RBD-955", "CLO-014", "HOMA-060", "SPRD-1071"]
-	}
+	},
+{
+		"image": "https://i2.avdbs.com/actor/a06/6158_n.jpg",
+		"name": {
+			"kr": "아즈사 히카리",
+			"en": "Hikari Azusa",
+			"cn": "梓ヒカリ",
+			"other": []
+		},
+		"birth": "1999.11.30",
+		"height": "155",
+		"size": {
+			"bust": "B89",
+			"waist": "W54",
+			"hips": "H86"
+		},
+		"bra": "F",
+		"debut": "2020.03",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/azusa_hikari_" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "6158",
+		"movie": ["YUJ-071", "ADN-793", "ADN-785", "YUJ-065", "SAME-223", "YUJ-053", "ADN-725", "ADN-715", "ADN-699", "ADN-692", "ADN-683", "YUJ-030", "YUJ-027", "SAME-141", "IPZZ-406", "IPZZ-267", "JUQ-605", "IPZZ-062", "IPZZ-031", "IPZZ-022", "IPX-965", "IPX-931", "IPX-882", "IPX-792", "IPX-774", "IPX-687", "IPX-656", "IPX-610", "IPX-562"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11531_n.jpg",
+		"name": {
+			"kr": "치사키 치나",
+			"en": "China Chisaki",
+			"cn": "千咲ちな",
+			"other": []
+		},
+		"birth": "1999.11.05",
+		"height": "170",
+		"size": {
+			"bust": "B92",
+			"waist": "W61",
+			"hips": "H90"
+		},
+		"bra": "G",
+		"debut": "2025.09",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/__chinadayo__" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11531",
+		"movie": ["YUJ-076", "ADN-805", "ROYD-329", "ROYD-301", "DASS-853", "ROYD-290", "ROYD-285"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a06/6832_n.jpg",
+		"name": {
+			"kr": "이츠카이치 메이",
+			"en": "Mei Itsukaichi",
+			"cn": "五日市芽依",
+			"other": [
+				"마나카 아유미(愛花あゆみ)",
+				"이츠카이치 메이(五日市芽依)",
+				"카시와기 아유미(柏木あゆみ)",
+				"이노우에 유코(井上裕子)",
+				"아카사키 리나(赤崎理奈)",
+				"카와사키 메이(川崎芽衣)",
+				"아이다 아유미(相田亜由美)"
+			]
+		},
+		"birth": "2000.09.18",
+		"height": "161",
+		"size": {
+			"bust": "B90",
+			"waist": "W59",
+			"hips": "H89"
+		},
+		"bra": "G",
+		"debut": "2021.02",
+		"title": "2021~2022년 마나카 아유미 → 2023~2024년 현재 이츠카이치 메이",
+		"desc": "취미 애니메이션, 특기 과자만들기. 2021년 2월 25일 혼나카에서 AV배우 '마나카 아유미'로 데뷔했다. 당시 소속사는 밤비 프로모션(バンビプロモーション). 데뷔부터 나카다시를 해금하고, 1년 간 키카탄으로 활동했으나 인기가 없었다. 트위터 @manaka_ayumi1 2022년 1월 15일 소속사무소를 '애로우즈'(ARROWS)로 이적하고 한동안 활동을 중단한다. 아마도 이 기간 동안 성형을 한 것으로 추정된다. 당시 트위터 @arrows_5may 2023년 7월 4일 무디즈에서 AV배우 '이츠카이치 메이'로 재데뷔했다. 이 때 D컵에서 G75컵으로 바뀌었고, 음모도 강모에서 무모로 밀었다. 키카탄으로 활동하면서 다작을 뛰어 2024년 5월 FANZA 월간 랭킹 2위를 기록했다. 같은 해 9월 27일 타케쇼보에서 첫 번째 사진집을 발간한다. 현재 트위터 @5may_itsukaichi 서브 트위터 @5may__sub 인스타 @5may_itsukaichi",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/5may_itsukaichi" },
+			{ "name": "instagram", "url": "https://www.instagram.com/5may_itsukaichi" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "6832",
+		"movie": ["DSOD-080", "HMN-872", "WAAA-653", "HMN-863", "WAAA-639", "DASS-944", "WAAA-604", "HMN-760", "WAAA-557", "DASS-722", "HMN-728", "DASS-688", "HMN-699", "WAAA-501", "HMN-678", "DASS-578", "WAAA-477", "DASS-559", "WAAA-455", "WAAA-426", "HMN-585", "NGOD-213", "PPPE-225", "ROYD-181", "VENX-269", "MIMK-159", "DVAJ-653", "WAAA-371", "NACR-794", "ROYD-174", "DASS-371", "VEC-636", "MADM-179", "VEC-632", "BKYNB-044", "EKDV-734", "MVSD-578", "YUJ-012", "MIAB-071", "ATID-576", "JUFE-538", "ROYD-146", "DASS-238", "RKI-643"]
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10730_n.jpg",
+		"name": {
+			"kr": "니지무라 유미",
+			"en": "Yumi Nijimura",
+			"cn": "虹村ゆみ",
+			"other": []
+		},
+		"birth": "2003.07.10",
+		"height": "164",
+		"size": {
+			"bust": "B85",
+			"waist": "W63",
+			"hips": "H87"
+		},
+		"bra": "E",
+		"debut": "2024.08",
+		"title": "소속사무소 티파워즈(T-POWERS)",
+		"desc": "트위터 https://x.com/nijimurayumi710",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/nijimurayumi710" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10730",
+		"movie": ["NSFS-514", "URMT-003", "SQTE-663", "APNS-402", "PIYO-227", "DVAJ-723", "NACT-062", "MIAB-583", "SORA-614", "SAME-176", "APNS-380", "ROYD-254", "HSODA-073", "DVEH-057", "REAL-916", "HZGD-308", "VENX-324", "MUDR-316", "VENZ-052", "ROYD-237", "DASS-625"]
+	},
 ];
 
 export default data;
