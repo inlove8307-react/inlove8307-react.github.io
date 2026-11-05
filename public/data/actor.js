@@ -3800,6 +3800,501 @@ const data = [
 		"id": "10730",
 		"movie": ["NSFS-514", "URMT-003", "SQTE-663", "APNS-402", "PIYO-227", "DVAJ-723", "NACT-062", "MIAB-583", "SORA-614", "SAME-176", "APNS-380", "ROYD-254", "HSODA-073", "DVEH-057", "REAL-916", "HZGD-308", "VENX-324", "MUDR-316", "VENZ-052", "ROYD-237", "DASS-625"]
 	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11022_n.jpg",
+		"name": {
+			"kr": "산노키 칸나",
+			"en": "Kanna Sannoki",
+			"cn": "三木環奈",
+			"other": []
+		},
+		"birth": "2004.06.30",
+		"height": "163",
+		"size": {
+			"bust": "B102",
+			"waist": "W60",
+			"hips": "H89"
+		},
+		"bra": "J",
+		"debut": "2024.12",
+		"title": "무디즈 데뷔 AV배우",
+		"desc": "트위터 https://x.com/sannokikanna",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/sannokikanna" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@kannna.neko" },
+			{ "name": "youtube", "url": "https://www.youtube.com/@sannnokikannna" }
+		],
+		"id": "11022",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a02/2521_n.jpg",
+		"name": {
+			"kr": "오나미 아야",
+			"en": "Aya Onami",
+			"cn": "小那海あや",
+			"other": [
+				"오나미 아야(小那海あや)",
+				"스즈미야 하루카(涼宮遙香)",
+				"사자나미 아야(佐々波綾)",
+				"오가사와라 루카(小笠原るか)"
+			]
+		},
+		"birth": "1997.04.10",
+		"height": "150",
+		"size": {
+			"bust": "B82",
+			"waist": "W56",
+			"hips": "H90"
+		},
+		"bra": "E",
+		"debut": "2016.12",
+		"title": "사자나미 아야 → 오나미 아야",
+		"desc": "87cm의 엉덩이를 가진 엉덩이계 최강자. 사자나미 하면 엉덩이, 엉덩이 하면 사자나미. 거기다 뛰어난 연기력과 귀여운 외모까지 갖춰 골수 팬들이 많았다. 그러나 2018년 7월에 은퇴해 엉요미 팬들을 통곡하게 만들었다. 팬들은 아직도 그녀의 엉덩이를 떠올리며 밤을 지새고 있다고.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/yuyu_chan22" },
+			{ "name": "instagram", "url": "https://www.instagram.com/073ay_a" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@onami.073chan" },
+			{ "name": "youtube", "url": "https://www.youtube.com/c/%E3%81%8A%E3%81%AA%E3%81%BF%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B" }
+		],
+		"id": "2521",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a08/8439_n.jpg",
+		"name": {
+			"kr": "미야니시 히카루",
+			"en": "Hikaru Miyanishi",
+			"cn": "宮西ひかる",
+			"other": [
+				"후지이 치카(藤井知花)"
+			]
+		},
+		"birth": "1999.08.22",
+		"height": "161",
+		"size": {
+			"bust": "B88",
+			"waist": "W61",
+			"hips": "H86"
+		},
+		"bra": "E",
+		"debut": "2022.01",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/miyanishihikaru" },
+			{ "name": "instagram", "url": "https://www.instagram.com/hikarun_0822/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "8439",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9759_n.jpg",
+		"name": {
+			"kr": "젠바 마미",
+			"en": "Mami Zenba",
+			"cn": "善場まみ（茉城まみ）",
+			"other": [
+				"마시로 마미(茉城まみ)",
+				"젠바 마미(善場まみ)"
+			]
+		},
+		"birth": "1999.07.20",
+		"height": "152",
+		"size": {
+			"bust": "B86",
+			"waist": "W58",
+			"hips": "H88"
+		},
+		"bra": "G",
+		"debut": "2023.05",
+		"title": "팔레노 FSDSS 전속배우",
+		"desc": "트위터 https://x.com/mamizemba",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/mamizemba" },
+			{ "name": "instagram", "url": "https://www.instagram.com/mamizemba/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@mamizemba" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9759",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10537_n.jpg",
+		"name": {
+			"kr": "나카사키 유키네",
+			"en": "Yukine Nakasaki",
+			"cn": "那賀崎ゆきね",
+			"other": []
+		},
+		"birth": "1993.10.30",
+		"height": "165",
+		"size": {
+			"bust": "B87",
+			"waist": "W59",
+			"hips": "H88"
+		},
+		"bra": "D",
+		"debut": "2024.04",
+		"title": "소속사무소 링스(LINX)",
+		"desc": "트위터 https://twitter.com/nakasakiyukine",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/yukine_nakasaki" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10537",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a06/6002_n.jpg",
+		"name": {
+			"kr": "츠지이 호노카",
+			"en": "Honoka Tsujii",
+			"cn": "辻井ほのか",
+			"other": [
+				"사쿠라이 유리(桜井由梨)",
+				"츠지이 호노카(辻井ほのか/辻井穂香)"
+			]
+		},
+		"birth": "1996.11.15",
+		"height": "172",
+		"size": {
+			"bust": "B96",
+			"waist": "W60",
+			"hips": "H88"
+		},
+		"bra": "H",
+		"debut": "2019.11",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/tsujiiHonoka" },
+			{ "name": "instagram", "url": "https://www.instagram.com/5.tsujihoka" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@tsujiihonoka45" },
+			{ "name": "youtube", "url": "https://www.youtube.com/channel/UC2nxliWsqh3ocbBCjTV8hAA" }
+		],
+		"id": "6002",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a07/7051_n.jpg",
+		"name": {
+			"kr": "미노시마 메구리",
+			"en": "Meguri Minoshima",
+			"cn": "美ノ嶋めぐり",
+			"other": []
+		},
+		"birth": "2001.12.08",
+		"height": "156",
+		"size": {
+			"bust": "B86",
+			"waist": "W58",
+			"hips": "H85"
+		},
+		"bra": "E",
+		"debut": "2021.04",
+		"title": "(프레스티지 ABW 전속배우)",
+		"desc": "소속사무소 링스(LINX). 2021년 5월 프레스티지에서 데뷔(BGN-063).",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/minoshimameguri" },
+			{ "name": "instagram", "url": "https://www.instagram.com/minoshimameguri/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "7051",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a12/12620_n.jpg",
+		"name": {
+			"kr": "카시와기 시즈쿠",
+			"en": "Shizuku Kashiwagi",
+			"cn": "柏木雫",
+			"other": []
+		},
+		"birth": "2003.10.29",
+		"height": "155",
+		"size": {
+			"bust": "B84",
+			"waist": "W56",
+			"hips": "H82"
+		},
+		"bra": "D",
+		"debut": "2026.08",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/kswg_shizuku" },
+			{ "name": "instagram", "url": "https://www.instagram.com/shizuku_kashiwagi/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@shizuku_kashiwagi" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "12620",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a08/8942_n.jpg",
+		"name": {
+			"kr": "스미 스미레",
+			"en": "Sumire Sumi",
+			"cn": "鷲見すみれ",
+			"other": []
+		},
+		"birth": "1993.01.30",
+		"height": "162",
+		"size": {
+			"bust": "B86",
+			"waist": "W58",
+			"hips": "H88"
+		},
+		"bra": "E",
+		"debut": "2022.06",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/sumi_sumire__" },
+			{ "name": "instagram", "url": "https://www.instagram.com/sumi_sumire__/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "8942",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11873_n.jpg",
+		"name": {
+			"kr": "츠지 미이나",
+			"en": "Miina Tsuji",
+			"cn": "辻みいな",
+			"other": []
+		},
+		"birth": "2004.04.15",
+		"height": "157",
+		"size": {
+			"bust": "B88",
+			"waist": "W57",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2026.03",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/tsujimiina" },
+			{ "name": "instagram", "url": "https://www.instagram.com/tsujimiina/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11873",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11630_n.jpg",
+		"name": {
+			"kr": "사카이 미오",
+			"en": "Mio Sakai",
+			"cn": "坂井美桜",
+			"other": []
+		},
+		"birth": "2004.04.10",
+		"height": "162",
+		"size": {
+			"bust": "B91",
+			"waist": "W54",
+			"hips": "H88"
+		},
+		"bra": "H",
+		"debut": "2025.11",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/mio_sakai_" },
+			{ "name": "instagram", "url": "https://www.instagram.com/mio_sakai_/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11630",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a11/11363_n.jpg?v=1",
+		"name": {
+			"kr": "야마다 스즈나",
+			"en": "Suzuna Yamada",
+			"cn": "山田鈴奈",
+			"other": []
+		},
+		"birth": "2005.03.07",
+		"height": "151",
+		"size": {
+			"bust": "B88",
+			"waist": "W54",
+			"hips": "H85"
+		},
+		"bra": "F",
+		"debut": "2025.07",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/Suzuna_307" },
+			{ "name": "instagram", "url": "https://www.instagram.com/suzuna_yamada/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11363",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10496_n.jpg",
+		"name": {
+			"kr": "에비사키 아오",
+			"en": "Ao Ebisaki",
+			"cn": "海老咲あお",
+			"other": []
+		},
+		"birth": "2001.09.15",
+		"height": "151",
+		"size": {
+			"bust": "B89",
+			"waist": "W57",
+			"hips": "H92"
+		},
+		"bra": "G",
+		"debut": "2024.04",
+		"title": "귀여운 미각 누나계 AV배우.",
+		"desc": "출신지 후쿠오카현. 소속사 씨모어 엔터테인먼트(C-more Entertainment). 트위터 https://twitter.com/ergerg863134 인스타 불명.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/piyomaru_cmore" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10496",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a09/9644_n.jpg",
+		"name": {
+			"kr": "코지마 미코",
+			"en": "Miko Kojima",
+			"cn": "小島みこ",
+			"other": []
+		},
+		"birth": "2001.10.04",
+		"height": "156",
+		"size": {
+			"bust": "B75",
+			"waist": "W55",
+			"hips": "H85"
+		},
+		"bra": "B",
+		"debut": "2023.04",
+		"title": "2023년 SOD 신인 (SDAB 품번 전속배우)",
+		"desc": "Ys Entertainment 소속.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/kojima_35" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9644",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9676_n.jpg",
+		"name": {
+			"kr": "카미키 아야",
+			"en": "Aya Kamiki",
+			"cn": "神木彩（月雲よる）",
+			"other": [
+				"츠쿠모 요루(月雲よる)"
+			]
+		},
+		"birth": "2002.09.15",
+		"height": "153",
+		"size": {
+			"bust": "B0",
+			"waist": "W0",
+			"hips": "H0"
+		},
+		"bra": "G",
+		"debut": "2023.05",
+		"title": "2023년 무디즈 전속배우",
+		"desc": "소속사무소 ALVIROSSO",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/Tsukumo_aya" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9676",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a01/1038_n.jpg",
+		"name": {
+			"kr": "미사키 칸나",
+			"en": "Kanna Misaki",
+			"cn": "美咲かんな",
+			"other": [
+				"야하기 카스미(矢作香澄)",
+				"아리사와 료코(有沢涼子)",
+				"미사키 칸나(三崎かんな)"
+			]
+		},
+		"birth": "1994.07.03",
+		"height": "158",
+		"size": {
+			"bust": "B85",
+			"waist": "W58",
+			"hips": "H88"
+		},
+		"bra": "E",
+		"debut": "2014.12",
+		"title": "키카탄 배우",
+		"desc": "2021년 은퇴. 이후 다시 복귀.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/kanna_misaki" },
+			{ "name": "instagram", "url": "https://www.instagram.com/__iloveholic/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "1038",
+		"movie": []
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a09/9695_n.jpg",
+		"name": {
+			"kr": "시바사키 하루",
+			"en": "Haru Shibasaki",
+			"cn": "柴崎はる",
+			"other": []
+		},
+		"birth": "2000.01.08",
+		"height": "155",
+		"size": {
+			"bust": "B0",
+			"waist": "W0",
+			"hips": "H0"
+		},
+		"bra": "",
+		"debut": "2023.04",
+		"title": "SDJS 품번 전속",
+		"desc": "SDJS 품번 전속",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/shibasakiharu2" },
+			{ "name": "instagram", "url": "https://www.instagram.com/shibasaki.haru/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "9695",
+		"movie": []
+	}
 ];
 
 export default data;
