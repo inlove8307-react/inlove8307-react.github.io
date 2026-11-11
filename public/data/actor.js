@@ -3943,7 +3943,8 @@ const data = [
 		"desc": "트위터 https://twitter.com/nakasakiyukine",
 		"sns": [
 			{ "name": "x", "url": "https://x.com/yukine_nakasaki" },
-			{ "name": "instagram", "url": "" },
+			{ "name": "x", "url": "https://x.com/yukirin_sub0727" },
+			{ "name": "instagram", "url": "https://www.instagram.com/yukine_nakasaki" },
 			{ "name": "tiktok", "url": "" },
 			{ "name": "youtube", "url": "" }
 		],
@@ -4294,7 +4295,66 @@ const data = [
 		],
 		"id": "9695",
 		"movie": []
-	}
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a10/10100_n.jpg",
+		"name": {
+			"kr": "나기사 코이키",
+			"en": "Koiki Nagisa",
+			"cn": "渚恋生",
+			"other": [
+				"오즈키 노아(桜月のあ)"
+			]
+		},
+		"birth": "1998.09.14",
+		"height": "167",
+		"size": {
+			"bust": "B85",
+			"waist": "W59",
+			"hips": "H88"
+		},
+		"bra": "F",
+		"debut": "2023.10",
+		"title": "소속사무소 펀스타 프로모션 FUNSTAR",
+		"desc": "트위터 https://x.com/nagisa_koiki",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/nagisa_koiki" },
+			{ "name": "instagram", "url": "https://www.instagram.com/nagisa_koiki/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10100",
+		"movie": []
+	},
+	{
+		"image": "https://i1.avdbs.com/actor/a08/8742_n.jpg",
+		"name": {
+			"kr": "유라 카나",
+			"en": "Kana Yura",
+			"cn": "由良かな",
+			"other": []
+		},
+		"birth": "2003.11.30",
+		"height": "143",
+		"size": {
+			"bust": "B0",
+			"waist": "W0",
+			"hips": "H0"
+		},
+		"bra": "B",
+		"debut": "2022.04",
+		"title": "",
+		"desc": "",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/yura_kana_" },
+			{ "name": "instagram", "url": "https://www.instagram.com/yura_kana_" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@yura_kana_" },
+			{ "name": "youtube", "url": "https://www.youtube.com/@%E7%94%B1%E8%89%AF%E3%81%8B%E3%81%AA" }
+		],
+		"id": "8742",
+		"movie": []
+	},
+
 ];
 
 export default data;
