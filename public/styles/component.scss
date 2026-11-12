@@ -1473,164 +1473,43 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 
 
 
-/* Card Actor */
-.ux-card.actor .ux-card-base {display: flex; padding: 2rem;}
-/* Card Actor Div Actor */
-.ux-card.actor div.actor {display: flex; flex-direction: column; gap: 1.6rem;}
-/* Card Actor Dl Actor */
-.ux-card.actor dl.actor {display: flex; flex-direction: column;}
-/* Card Actor Dl Actor Subject */
-.ux-card.actor dl.actor dt.subject {display: flex; align-items: center; gap: .8rem; font-weight: 700; font-size: 2rem; line-height: 1;}
-.ux-card.actor dl.actor dt.subject span {margin-right: auto;}
-/* Card Actor Dl Movie */
-.ux-card.actor dl.movie {display: flex; flex-direction: column;}
-/* Card Actor Dl Movie Subject */
-.ux-card.actor dl.movie dt.subject {display: flex; gap: .4rem;}
-.ux-card.actor dl.movie dt.subject .title {color: var(--text-default);}
-.ux-card.actor dl.movie dt.subject .count {color: var(--text-red);}
-.ux-card.actor dl.movie dt.subject .link {font-weight: 500; font-size: 1.6rem; line-height: 1;}
-.ux-card.actor dl.movie dt.subject .link:first-of-type {margin-left: auto;}
-/* Card Actor Group Link */
-// .ux-card.actor dl.movie dd.details .ux-group.link {overflow-y: auto; flex-wrap: nowrap; gap: .8rem;}
-// .ux-card.actor dl.movie dd.details .ux-group.link {scrollbar-width: none;}
-// .ux-card.actor dl.movie dd.details .ux-group.link::-webkit-scrollbar {display: none;}
-.ux-card.actor dl.movie dd.details .ux-group.link .ux-button {flex-shrink: 0; box-shadow: initial; background-color: var(--fill-disabled);}
-.ux-card.actor dl.movie dd.details .ux-group.link .ux-button.active {box-shadow: var(--inset); background-color: var(--background-default);};
-/* Card Actor Div Movie */
-.ux-card.actor div.movie {border-radius: 1.6rem;}
-.ux-card.actor div.movie {scrollbar-width: none;}
-.ux-card.actor div.movie::-webkit-scrollbar {display: none;}
-/* Define */
-.ux-card.actor dl.define {display: flex; justify-content: space-between; gap: .8rem; width: 100%;}
-.ux-card.actor dl.define > dt {font-size: 1.6rem; color: var(--text-muted);}
-.ux-card.actor dl.define > dd {font-weight: 500; font-size: 1.6rem; text-align: right;}
-/* Define Column */
-.ux-card.actor dl.column {flex-direction: column; gap: .2rem;}
-.ux-card.actor dl.column dd {text-align: left;}
-/* Define Image */
-.ux-card.actor div.actor dl.thumb .thumb {overflow: hidden; display: inline-flex; justify-content: center; align-items: center; background-color: var(--background-muted); vertical-align: top;}
-.ux-card.actor div.actor dl.thumb .thumb.exist {align-items: flex-start;}
-.ux-card.actor div.actor dl.thumb .thumb img {max-width: 100%;}
-/* Define Name */
-.ux-card.actor div.actor dl.name dd {display: flex; flex-direction: column; text-align: right;}
-/* Define Birth */
-.ux-card.actor div.actor dl.birth dd {display: flex; gap: .4rem;}
-.ux-card.actor div.actor dl.birth dd span {display: flex; gap: .4rem;}
-.ux-card.actor div.actor dl.birth dd span + span::before {content: '/';}
-/* Define Size */
-.ux-card.actor div.actor dl.size dd {display: flex; gap: .4rem;}
-.ux-card.actor div.actor dl.size dd span {display: flex; gap: .4rem;}
-.ux-card.actor div.actor dl.size dd span + span::before {content: '/';}
-/* Define Desc */
-.ux-card.actor div.actor dl.desc {gap: .4rem;}
-.ux-card.actor div.actor dl.desc dt {font-weight: 500; color: var(--text-default)!important;}
-.ux-card.actor div.actor dl.desc dd {font-weight: 500; color: var(--text-muted)!important;}
-/* SNS */
-.ux-card.actor div.actor ul.sns {display: flex; align-items: center; gap: .4rem; padding-top: .8rem;}
-
-
-
-
-
-/* Group Actor (Desktop) */
-html.desktop .ux-group.actor {row-gap: 3.2rem;}
-/* Card Actor (Desktop) */
-html.desktop .ux-card.actor {--space: 2rem;}
-html.desktop .ux-card.actor .ux-card-base {gap: var(--space); align-items: stretch;}
-/* Card Actor (Desktop) Div Actor */
-html.desktop .ux-card.actor div.actor {width: calc(50% - var(--space) / 2);}
-/* Card Actor (Desktop) Dl Actor */
-html.desktop .ux-card.actor dl.actor {gap: 1.6rem;}
-/* Card Actor (Desktop) Dl Actor Details */
-html.desktop .ux-card.actor dl.actor dd.details {display: flex; flex-direction: column; gap: .4rem;}
-/* Card Actor (Desktop) Dl Thumb */
-html.desktop dl.thumb {gap: 2rem;}
-html.desktop dl.thumb > dt {flex-shrink: 0;}
-html.desktop dl.thumb > dt .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
-html.desktop dl.thumb > dt img {max-width: 100%;}
-html.desktop dl.thumb > dd {flex-grow: 1; flex-basis: 0; display: flex; flex-direction: column; gap: .8rem; text-align: initial;}
-/* Card Actor (Desktop) Define Desc */
-html.desktop dl.define.desc {padding-top: 1.2rem; gap: .8rem;}
-/* Card Actor (Desktop) Dl Movie */
-html.desktop .ux-card.actor dl.movie {gap: 1.6rem;}
-/* Card Actor (Desktop) Dl Movie Subject */
-html.desktop .ux-card.actor dl.movie dt.subject {display: flex; align-items: center;}
-html.desktop .ux-card.actor dl.movie dt.subject .title,
-html.desktop .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
-html.desktop .ux-card.actor dl.movie dt.subject .link i {align-self: flex-start;}
-/* Card Actor (Desktop) Div Movie */
-html.desktop .ux-card.actor div.movie {overflow-y: auto; width: calc(50% - var(--space) / 2); height: 32.8rem;}
-html.desktop .ux-card.actor div.movie:not(.exist) {display: flex; justify-content: center; align-items: center; border-radius: 1.6rem; background-color: var(--background-muted);}
-html.desktop .ux-card.actor div.movie:not(.exist)::before {content: 'Please select a work by this actor.'; font-weight: 700; font-size: 1.8rem; color: var(--text-muted);}
-html.desktop .ux-card.actor div.movie .thumb {min-height: 32.8rem;}
-/* Card Actor (Desktop) Div Movie Title */
-// html.desktop .ux-card.actor div.movie {position: relative;}
-// html.desktop .ux-card.actor div.movie dl.title {position: absolute; top: 0; left: 0; padding: .8rem; width: 100%;}
-// html.desktop .ux-card.actor div.movie dl.title dt {display: none;}
-// html.desktop .ux-card.actor div.movie dl.title dd {padding: .8rem; border-radius: .8rem; box-shadow: 0 .4rem .8rem -.4rem rgba(0, 0, 0, .1); background-color: rgba(255, 255, 255, .25); backdrop-filter: blur(.8rem); -webkit-backdrop-filter: blur(.8rem);}
-
-
-
-
-
-/* Group Actor (Mobile) */
-html.mobile .ux-group.actor {row-gap: 2.4rem;}
-/* Card Actor (Mobile) */
-html.mobile .ux-card.actor .ux-card-base {flex-direction: column; gap: 1.2rem;}
-/* Card Actor (Mobile) Dl Actor Subject */
-html.mobile .ux-card.actor dl.actor dt.subject .ux-button.info {display: inline-flex; margin-left: auto;}
-/* Card Actor (Desktop) Dl Actor Details */
-html.mobile .ux-card.actor dl.actor dd.details {padding-top: 1.2rem;}
-html.mobile .ux-card.actor dl.actor dd.details dl.thumb {justify-content: space-between;}
-html.mobile .ux-card.actor dl.actor dd.details dl.thumb dl.define dt {display: none;}
-html.mobile .ux-card.actor dl.actor dd.details dl.thumb dl.define dd {margin-left: auto;}
-/* Card Actor (Mobile) Define Thumb */
-html.mobile dl.thumb > dt {text-align: center;}
-html.mobile dl.thumb > dt .thumb {width: 17.6rem; height: 17.6rem; border-radius: 10rem;}
-html.mobile dl.thumb > dd {display: flex; flex-direction: column; gap: .2rem;}
-/* Card Actor (Mobile) Dl Movie */
-html.mobile .ux-card.actor dl.movie {gap: 1.2rem;}
-/* Card Actor (Mobile) Dl Movie Subject */
-html.mobile .ux-card.actor dl.movie dt.subject .title,
-html.mobile .ux-card.actor dl.movie dt.subject .count {font-weight: 700; font-size: 2rem; line-height: 1;}
-/* Card Actor (Mobile) Group Link */
-html.mobile .ux-card.actor .ux-button.tertiary.capsule.h4 {padding: 0 calc(var(--height) / 3);}
-/* Card Actor (Mobile) Div Movie */
-html.mobile .ux-card.actor div.movie {overflow-y: auto; height: 20.3rem;}
-html.mobile .ux-card.actor div.movie:not(.exist) {display: none;}
-html.mobile .ux-card.actor div.movie .thumb {min-height: 20.3rem;}
-
-
-
-
-
-/* Popup Actor */
-.ux-modal.actor dl.define.column dd {word-break: break-all;}
-/* Popup Actor (Mobile) */
-html.mobile .ux-modal.actor .ux-modal-base {height: calc(100% - var(--header) / 2);}
-
-
-
-
-
-/* Popup Movie Define */
-.ux-card.actor div.movie dl.define.column dd {word-break: break-all;}
-/* Popup Movie Thumb */
-.ux-card.actor div.movie .thumb {overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: .8rem; border-radius: 1.6rem; background-color: var(--background-muted);}
-.ux-card.actor div.movie .thumb.exist {align-items: flex-start;}
-.ux-card.actor div.movie .thumb img {width: 100%;}
-/* Popup Movie Cast */
-.ux-card.actor div.movie ul.cast {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-card.actor div.movie ul.cast li.bl.pound {font-weight: 500; color: var(--text-red);}
-/* Popup Movie Category */
-.ux-card.actor div.movie ul.category {display: flex; flex-wrap: wrap; gap: 0rem .8rem;}
-.ux-card.actor div.movie ul.category li.bl.pound {font-weight: 500; color: var(--text-blue);}
-/* Popup Movie (Mobile) */
-.ux-card.actor div.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
-/* Popup Movie (Mobile) Thumb */
-// .ux-card.actor div.movie .thumb {min-height: 20.3rem;}
-/* Popup Movie (Desktop) */
-.ux-card.actor div.movie .ux-modal-base {height: calc(100% - var(--header) / 2);}
-/* Popup Movie (Desktop) Define */
-.ux-card.actor div.movie dl.define {flex-direction: column; gap: .2rem;}
-.ux-card.actor div.movie dl.define dd {text-align: left;}
+/* Actors */
+.actors .ux-card-base {display: flex; flex-direction: column; min-height: 44.2rem;}
+.actors .subject {display: flex; align-items: center; gap: .4rem;}
+.actors .subject .name {margin-right: auto; font-weight: 700; font-size: 2rem; line-height: 1;}
+.actors .actor {flex-grow: 1; display: flex; align-items: center;}
+.actors .actor .thumb {flex-shrink: 0; overflow: hidden; width: 28rem; height: 28rem; border-radius: 14rem; background-color: var(--background-muted);}
+.actors .actor .thumb img {width: 100%;}
+// .actors .actor .thumb img {width: 100%; opacity: .075;}
+.actors .actor ul {flex-grow: 1; display: flex; flex-direction: column; align-items: flex-end; gap: 1.2rem;}
+.actors .actor li {font-weight: 500; font-size: 1.6rem;}
+.actors .actor li.name {display: flex; flex-direction: column; text-align: right;}
+.actors .actor li.birth {display: flex; gap: .4rem;}
+.actors .actor li.birth span:not(:first-of-type)::before {content: '/'; padding-right: .4rem;}
+.actors .actor li.size {display: flex; gap: .4rem;}
+.actors .actor li.size span:not(:first-of-type)::before {content: '/'; padding-right: .4rem;}
+.actors .actor li.sns {display: flex; align-items: center; gap: .4rem;}
+.actors .movie .ux-group.scroll {padding: 1.6rem 0;}
+.actors .movie .ux-group.scroll .ux-button {background-color: var(--fill-disabled); box-shadow: initial;}
+.actors .movie .ux-group.scroll .ux-button.active {background-color: var(--background-default); box-shadow: var(--inset);}
+.actors .movie .details {overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; height: 30rem; border-radius: 1.6rem;}
+.actors .movie .details::-webkit-scrollbar {display: none;}
+.actors .movie .thumb {overflow: hidden; width: 100%; min-height: 33rem; border-radius: 1.6rem; background-color: var(--background-muted);}
+.actors .movie .thumb img {width: 100%;}
+// .actors .movie .thumb img {width: 100%; opacity: .075;}
+.actors .movie ul {display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem 0;}
+.actors .movie li {font-weight: 500;}
+.actors .movie li.title {padding-bottom: .8rem;}
+.actors .movie li.story {padding-bottom: .8rem; color: var(--text-muted);}
+.actors .movie li.info {display: flex; flex-direction: column; gap: .4rem;}
+.actors .movie li.info dl {display: flex; justify-content: space-between; gap: .8rem;}
+.actors .movie li.info dt {color: var(--text-muted);}
+.actors .movie li.info dd {text-align: right;}
+.actors .movie li.cast {display: flex; flex-wrap: wrap; gap: 0 .8rem; color: var(--text-red);}
+.actors .movie li.category {display: flex; flex-wrap: wrap; gap: 0 .8rem; color: var(--text-orange);}
+/* Actors Mobile */
+html.mobile .actors .ux-card-base {min-height: 34.2rem;}
+html.mobile .actors .actor .thumb {width: 20rem; height: 20rem; border-radius: 10rem;}
+html.mobile .actors .actor ul {gap: .4rem;}
+html.mobile .actors .movie .details {height: 20rem;}
+html.mobile .actors .movie .thumb {min-height: 20rem;}

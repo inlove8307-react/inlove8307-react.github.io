@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { BrowserView } from "react-device-detect";
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 import classnames from "classnames";
 /* LAYOUT */
 import UxSection from "@/components/layout/UxSection";
@@ -15,171 +15,14 @@ import UxOption from "@/components/base/UxOption";
 import UxGroup from "@/components/base/UxGroup";
 import UxCard from "@/components/base/UxCard";
 import UxButton from "@/components/base/UxButton";
-import UxCheckbox from "@/components/base/UxCheckbox";
 /* DATA */
 import actor from '@/public/data/actor';
 import movie from '@/public/data/movie';
 import thumb from '@/public/data/thumb';
 
-const Movie = ({ ref, ...props }) => {
-	const [data, setData] = useState({});
-	const [status, setStatus] = useState(true);
-	const [name, setName] = useState('');
-
-	useEffect(() => {
-		const filterMovie = movie.filter(item => item.name === props.name);
-		const filterThumb = thumb.filter(item => item.name === props.name);
-
-		if (filterMovie.length) {
-			filterMovie[0].image = filterThumb[0]?.image || '';
-			setData(filterMovie[0]);
-			setName(filterMovie[0]?.name?.toLowerCase());
-		}
-
-		if (filterMovie[0]?.image === '') {
-			setStatus(false);
-		}
-	}, [props.name]);
-
-	if (!name) return;
-
-	return (
-		<UxGroup className="col1 gap4">
-			<span className={classnames('thumb', {exist: props.checked && status})}>
-				{
-					(!props.checked || !status) &&
-					<i className="icon mask image disabled x44" />
-				}
-				{
-					(props.checked && status) &&
-					<img
-						src={data.image}
-						alt={data.name}
-					/>
-				}
-			</span>
-			{
-				data.title &&
-				<dl className="define column title">
-					<dt>제목</dt>
-					<dd>{data.title}</dd>
-				</dl>
-			}
-			{
-				data.story &&
-				<dl className="define column">
-					<dt>설명</dt>
-					<dd>{data.story}</dd>
-				</dl>
-			}
-			{
-				data.producer &&
-				<dl className="define column">
-					<dt>제작사</dt>
-					<dd>{data.producer}</dd>
-				</dl>
-			}
-			{
-				data.series &&
-				<dl className="define column">
-					<dt>시리즈</dt>
-					<dd>{data.series}</dd>
-				</dl>
-			}
-			{
-				data.runtime &&
-				<dl className="define">
-					<dt>재생시간</dt>
-					<dd>{data.runtime}</dd>
-				</dl>
-			}
-			{
-				data.release &&
-				<dl className="define">
-					<dt>출시일</dt>
-					<dd>{data.release}</dd>
-				</dl>
-			}
-			{
-				data.cast[0] &&
-				<ul className="list cast">
-					{
-						data.cast.map((item, index) => (
-							<li
-								key={index}
-								className="bl pound"
-							>
-								{item}
-							</li>
-						))
-					}
-				</ul>
-			}
-			{
-				data.category[0] &&
-				<ul className="list category">
-					{
-						data.category.map((item, index) => (
-							<li
-								key={index}
-								className="bl pound"
-							>
-								{item}
-							</li>
-						))
-					}
-				</ul>
-			}
-		</UxGroup>
-	);
-};
-
-const Page = ({ ref, ...props }) => {
-	const [isClient, setIsClient] = useState(false);
-	const [actorData, setActorData] = useState([]);
-	const [filterData, setFilterData] = useState([]);
-	const [select, setSelect] = useState('en');
-	const [search, setSearch] = useState('');
-	const [checked, setChecked] = useState(true);
-	const [status, setStatus] = useState([]);
+const Actor = ({ ref, ...props }) => {
+	const [data, setData] = useState();
 	const empty = '-';
-
-	const handleSearch = (value) => {
-		setSearch(value);
-	};
-
-	const handleMovie = ({ target, id, name, selected }) => {
-		const equal = name === selected;
-
-		if (equal) {
-			setStatus((prev) =>
-				prev.map((item) =>
-					item.id === id ? { ...item, name: '' } : item
-				)
-			);
-		}
-		else {
-			setStatus((prev) =>
-				prev.map((item) =>
-					item.id === id ? { ...item, name } : item
-				)
-			);
-
-			target.scrollIntoView({
-				block: "nearest",
-				inline: "center",
-				behavior: "smooth",
-			});
-		}
-	};
-
-	const handleError = (id) => {
-		setStatus((prev) =>
-			prev.map((item) =>
-				item.id === id ? { ...item, exist: false } : item
-			)
-		);
-	};
 
 	const getAge = (date) => {
 		const today = new Date();
@@ -198,10 +41,253 @@ const Page = ({ ref, ...props }) => {
 	};
 
 	useEffect(() => {
+		const data = {...props.data, ...getAge(props.data.birth)};
+
+		setData(data);
+	}, [props.data]);
+
+	if (!data) return;
+
+	return (
+		<div className="actor">
+			<span className="thumb">
+				<img
+					src={`/images/actor/${data.id}.jpg`}
+					alt={data.name?.en}
+				/>
+			</span>
+			<ul>
+				<li className="name">
+					<span>{data.name?.kr || empty}</span>
+					<span>{data.name?.en || empty}</span>
+					<span>{data.name?.cn || empty}</span>
+				</li>
+				<li className="birth">
+					<span>{data.birth || empty}</span>
+					<BrowserView renderWithFragment>
+						<span>{data.korean || empty}</span>
+						<span>{data.age || empty}</span>
+					</BrowserView>
+				</li>
+				<li className="height">
+					{`${data.height}cm` || empty}
+				</li>
+				<li className="size">
+					<span>{data.size?.bust || empty}{data.bra && `(${data.bra})`}</span>
+					<BrowserView renderWithFragment>
+						<span>{data.size?.waist || empty}</span>
+						<span>{data.size?.hips || empty}</span>
+					</BrowserView>
+				</li>
+				<li className="debut">
+					{`${data.debut} 데뷔` || empty}
+				</li>
+				<BrowserView renderWithFragment>
+					<li className="id">
+						{data.id}
+					</li>
+				</BrowserView>
+				<li className="sns">
+					{
+						data.sns.map((item, index) => {
+							if (!item.url) return;
+							return (
+								<UxButton
+									key={index}
+									role="link"
+									href={item.url}
+									target="_blank"
+								>
+									<i className={classnames('icon mask', {
+										'i854 x18': item.name === 'x',
+										'i812 x20': item.name === 'instagram',
+										'i813 x16': item.name === 'tiktok',
+										'i808 x20': item.name === 'youtube',
+									})} />
+								</UxButton>
+							);
+						})
+					}
+				</li>
+			</ul>
+		</div>
+	);
+};
+
+const Movie = ({ ref, ...props }) => {
+	const [data, setData] = useState({});
+	const [list, setList] = useState([]);
+	const [name, setName] = useState('');
+	const empty = '-';
+
+	const handleMovie = ({ target, name }) => {
+		setName(name);
+		target.scrollIntoView({
+			block: "nearest",
+			inline: "center",
+			behavior: "smooth",
+		});
+	};
+
+	useEffect(() => {
+		if (!name) return;
+
+		const filtered = movie.filter(item => item.name === name);
+
+		setData(filtered[0]);
+	}, [name]);
+
+	useEffect(() => {
+		if (!list.length) return;
+
+		props.onCount && props.onCount({
+			id: props.id,
+			count: list.length,
+		});
+	}, [list]);
+
+	useEffect(() => {
+		const array = movie.filter(item => item.id === props.id && item.name);
+
+		if (array.length) {
+			setList(array);
+			setName(array[0].name);
+		}
+	}, [props.id]);
+
+	return (
+		<div className="movie">
+			<UxGroup role="scroll">
+				{list.map((item, index) => {
+					const active = name === item.name;
+					if (!item.name) return;
+					return (
+						<UxButton
+							key={index}
+							className={classnames('tertiary capsule h4', { active })}
+							onClick={(event) => handleMovie({
+								target: event.target,
+								name: item.name,
+							})}
+						>
+							<span>{item.name}</span>
+						</UxButton>
+					);
+				})}
+			</UxGroup>
+			<div className="details">
+				{
+					data.name &&
+					<UxButton
+						role="link"
+						className="thumb"
+						href={`https://missav123.com/ko/${name?.toLowerCase()}`}
+						// href={`https://123av.com/ko/v/${name?.toLowerCase()}`}
+						target="_blank"
+					>
+						<img src={data.image} />
+					</UxButton>
+				}
+				<ul>
+					{
+						data.title &&
+						<li className="title">{data.title}</li>
+					}
+					{
+						data.story &&
+						<li className="story">{data.story}</li>
+					}
+					{
+						(data.producer || data.series || data.runtime || data.release) &&
+						<li className="info">
+							<dl className="producer">
+								<dt>제작사</dt>
+								<dd>{data.producer || empty}</dd>
+							</dl>
+							<dl className="series">
+								<dt>시리즈</dt>
+								<dd>{data.series || empty}</dd>
+							</dl>
+							<dl className="runtime">
+								<dt>재생시간</dt>
+								<dd>{data.runtime || empty}</dd>
+							</dl>
+							<dl className="release">
+								<dt>출시일</dt>
+								<dd>{data.release || empty}</dd>
+							</dl>
+						</li>
+					}
+					{
+						data.cast &&
+						<li className="cast">
+							{
+								data.cast.map((item, index) => (
+									<span
+										key={index}
+										className="bl pound"
+									>
+										{item}
+									</span>
+								))
+							}
+						</li>
+					}
+					{
+						data.category &&
+						<li className="category">
+							{
+								data.category.map((item, index) => (
+									<span
+										key={index}
+										className="bl pound"
+									>
+										{item}
+									</span>
+								))
+							}
+						</li>
+					}
+				</ul>
+			</div>
+		</div>
+	);
+};
+
+const Page = ({ ref, ...props }) => {
+	const [isClient, setIsClient] = useState(false);
+	const [actorData, setActorData] = useState([]);
+	const [filterData, setFilterData] = useState([]);
+	const [status, setStatus] = useState([]);
+	const [select, setSelect] = useState('en');
+	const [search, setSearch] = useState('');
+
+	const handleSearch = (value) => {
+		setSearch(value);
+	};
+
+	const handleSwitch = ({ id, switched }) => {
+		setStatus((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, switched: !switched } : item
+			)
+		);
+	};
+
+	const handleCount = ({ id, count }) => {
+		setStatus((prev) =>
+			prev.map((item) =>
+				item.id === id ? { ...item, count } : item
+			)
+		);
+	};
+
+	useEffect(() => {
 		const array = actorData.filter((item) => {
 			if (select === 'en') {
 				return item.name.en.toLowerCase().includes(search.toLowerCase());
 			}
+
 			if (select === 'kr') {
 				return item.name.kr.includes(search);
 			}
@@ -213,22 +299,17 @@ const Page = ({ ref, ...props }) => {
 	useEffect(() => {
 		if (!actorData.length) {
 			setActorData(actor);
+			setStatus(actor.map(item => ({
+				id: item.id,
+				switched: false,
+				count: null,
+			})));
 		}
 
 		if (actorData.length) {
 			setFilterData(actorData);
 		}
 	}, [actorData]);
-
-	useEffect(() => {
-		if (!status.length) {
-			setStatus(actor.map(item => ({
-				id: item.id,
-				exist: true,
-				name: '',
-			})));
-		}
-	}, []);
 
 	useEffect(() => {
 		setIsClient(true);
@@ -239,7 +320,7 @@ const Page = ({ ref, ...props }) => {
 	return (
 		<UxSection>
 			<UxArticle className="h3">
-				<UxSubject className="space">
+				{/* <UxSubject className="space">
 					<UxGroup
 						role="input"
 					>
@@ -263,179 +344,45 @@ const Page = ({ ref, ...props }) => {
 							<i className="icon mask search x24" />
 						</UxButton>
 					</UxGroup>
-				</UxSubject>
+				</UxSubject> */}
 				<UxArticle className="h4 space">
 					<UxContent>
-						<UxGroup className="row between">
-							<span className="fw500 fs18">총 <em className="fw600 red">{filterData.length}</em> 건</span>
-							<UxCheckbox
-								role="switch"
-								checked={checked}
-								onChange={(value) => setChecked(value)}
-							/>
-						</UxGroup>
-						<UxGroup className="actor col1">
+						<UxGroup className={classnames('actors', {
+							'col1': isMobile,
+							'col2': isBrowser
+						})}>
 							{
-								filterData.map((data) => {
-									const item = {...data, ...getAge(data.birth)};
-									const filter = status.filter(item => item.id === data.id)[0];
-									const exist = filter?.exist;
-									const selected = filter?.name;
+								filterData.map((item) => {
+									const data = {...item};
+									const filtered = status.filter(item => item.id === data.id);
+									const switched = filtered[0].switched;
+									const count = filtered[0].count || '';
 
 									return (
 										<UxCard
 											key={item.id}
-											className="actor"
 										>
-											<div className="actor">
-												<dl className="actor">
-													<dt className="subject">
-														<span>{item.name.en}</span>
-														{
-															item.sns.map((item, index) => {
-																if (!item.url) return;
-																return (
-																	<UxButton
-																		key={index}
-																		role="link"
-																		href={item.url}
-																		target="_blank"
-																	>
-																		<i className={classnames('icon mask', {
-																			'i854 x18': item.name === 'x',
-																			'i812 x20': item.name === 'instagram',
-																			'i813 x16': item.name === 'tiktok',
-																			'i808 x20': item.name === 'youtube',
-																		})} />
-																	</UxButton>
-																);
-															})
-														}
-													</dt>
-													<dd className="details">
-														<dl className="define thumb">
-															<dt>
-																<span
-																	className={classnames('thumb', {exist: checked && exist})}
-																>
-																	{
-																		(!checked || !exist) &&
-																		<i className="icon mask image disabled x44" />
-																	}
-																	{
-																		(checked && exist) &&
-																		<img
-																			src={`/images/actor/${item.id}.jpg`}
-																			alt={item.name?.en}
-																			onError={() => handleError(item.id)}
-																		/>
-																	}
-																</span>
-															</dt>
-															<dd>
-																<dl className="define name">
-																	<dt>이름</dt>
-																	<dd>
-																		<span>{item.name?.kr || empty}</span>
-																		<span>{item.name?.en || empty}</span>
-																		<span>{item.name?.cn || empty}</span>
-																	</dd>
-																</dl>
-																<dl className="define birth">
-																	<dt>생일</dt>
-																	<dd>
-																		<span>{item.birth || empty}</span>
-																		<BrowserView renderWithFragment>
-																			<span>{item.korean || empty}</span>
-																			<span>{item.age || empty}</span>
-																		</BrowserView>
-																	</dd>
-																</dl>
-																<dl className="define">
-																	<dt>신장</dt>
-																	<dd>{item.height || empty}</dd>
-																</dl>
-																<dl className="define size">
-																	<dt>신체사이즈</dt>
-																	<dd>
-																		<span>{item.size?.bust || empty}{item.bra && `(${item.bra})`}</span>
-																		<BrowserView renderWithFragment>
-																			<span>{item.size?.waist || empty}</span>
-																			<span>{item.size?.hips || empty}</span>
-																		</BrowserView>
-																	</dd>
-																</dl>
-																<dl className="define">
-																	<dt>데뷔</dt>
-																	<dd>{item.debut || empty}</dd>
-																</dl>
-															</dd>
-														</dl>
-													</dd>
-												</dl>
-												<dl className="movie">
-													<dt className="subject">
-														<span className="title">Curated</span>
-														<span className="count">{item.movie.length}</span>
-														{
-															selected &&
-															<UxButton
-																role="link"
-																href={`https://123av.com/ko/v/${selected}`}
-																target="_blank"
-															>
-																<span>123AV</span>
-																<i className="icon mask arrow-right x14" />
-															</UxButton>
-														}
-														{
-															selected &&
-															<UxButton
-																role="link"
-																href={`https://missav123.com/ko/${selected}`}
-																target="_blank"
-															>
-																<span>MISSAV</span>
-																<i className="icon mask arrow-right x14" />
-															</UxButton>
-														}
-													</dt>
-													<dd className="details">
-														<UxGroup
-															role="scroll"
-															className="link"
-														>
-															{item.movie.map((name, index) => {
-																const active = name === selected;
-
-																return (
-																	<UxButton
-																		key={index}
-																		className={classnames('tertiary capsule h4', { active })}
-																		onClick={(event) => handleMovie({
-																			target: event.target,
-																			id: item.id,
-																			selected,
-																			name,
-																		})}
-																	>
-																		<span>{name}</span>
-																	</UxButton>
-																);
-															})}
-														</UxGroup>
-													</dd>
-												</dl>
+											<div className="subject">
+												<span className="name">
+													{`${item.name.en} ${switched ? count : ''}`}
+												</span>
+												<UxButton
+													onClick={() => handleSwitch({
+														id: item.id,
+														switched,
+													})}
+												>
+													<i className={classnames('icon mask x20', {
+														'user': switched,
+														'play': !switched,
+													})} />
+												</UxButton>
 											</div>
-											<div className={classnames('movie', { exist: selected })}>
-												{
-													selected &&
-													<Movie
-														name={selected}
-														checked={checked}
-													/>
-												}
-											</div>
+											{
+												!switched
+													? <Actor data={item} />
+													: <Movie id={item.id} onCount={handleCount} />
+											}
 										</UxCard>
 									);
 								})

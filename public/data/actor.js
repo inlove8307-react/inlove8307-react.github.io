@@ -4353,8 +4353,7 @@ const data = [
 		],
 		"id": "8742",
 		"movie": []
-	},
-
+	}
 ];
 
 export default data;

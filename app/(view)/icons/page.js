@@ -39,6 +39,8 @@ export default function Page() {
 				'link',
 				'image',
 				'copy',
+				'user',
+				'play',
 			]
 		},
 		{
