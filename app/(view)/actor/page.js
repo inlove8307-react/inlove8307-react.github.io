@@ -185,7 +185,10 @@ const Movie = ({ ref, ...props }) => {
 						// href={`https://123av.com/ko/v/${name?.toLowerCase()}`}
 						target="_blank"
 					>
-						<img src={data.image} />
+						<img
+							src={data.image}
+							alt={data.title}
+						/>
 					</UxButton>
 				}
 				<ul>
