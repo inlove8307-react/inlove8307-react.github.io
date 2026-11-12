@@ -364,7 +364,12 @@ const Page = ({ ref, ...props }) => {
 										>
 											<div className="subject">
 												<span className="name">
-													{`${item.name.en} ${switched ? count : ''}`}
+													{item.name.en}
+													{
+														switched
+														? <em className="red">{` ${count}`}</em>
+														: ''
+													}
 												</span>
 												<UxButton
 													onClick={() => handleSwitch({
