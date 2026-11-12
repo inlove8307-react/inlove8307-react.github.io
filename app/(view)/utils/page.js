@@ -79,7 +79,7 @@ const Page = ({ ref, ...props }) => {
 								<UxInput
 									role="textarea"
 									value={arrayValue}
-									onChange={(value) => setArrayValue(value)}
+									onChange={(value) => setArrayValue(`${value},`)}
 								/>
 								<p className="fw500 fs18">length <em className="red fw700">{arrayCount}</em></p>
 							</UxField>
