@@ -352,7 +352,7 @@ const Page = ({ ref, ...props }) => {
 							'col2': isBrowser
 						})}>
 							{
-								filterData.map((item) => {
+								filterData.map((item, index) => {
 									const data = {...item};
 									const filtered = status.filter(item => item.id === data.id);
 									const switched = filtered[0].switched;
@@ -363,14 +363,10 @@ const Page = ({ ref, ...props }) => {
 											key={item.id}
 										>
 											<div className="subject">
-												<span className="name">
-													{item.name.en}
-													{
-														switched
-														? <em className="red">{` ${count}`}</em>
-														: ''
-													}
-												</span>
+												<p className="name">
+													<span>{item.name.en}</span>
+													<em className="red">{switched ? ` ${count}` : ''}</em>
+												</p>
 												<UxButton
 													onClick={() => handleSwitch({
 														id: item.id,
