@@ -1480,7 +1480,6 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .actors .actor {flex-grow: 1; display: flex; align-items: center;}
 .actors .actor .thumb {flex-shrink: 0; overflow: hidden; width: 28rem; height: 28rem; border-radius: 14rem; background-color: var(--background-muted);}
 .actors .actor .thumb img {width: 100%;}
-// .actors .actor .thumb img {width: 100%; opacity: .075;}
 .actors .actor ul {flex-grow: 1; display: flex; flex-direction: column; align-items: flex-end; gap: 1.2rem;}
 .actors .actor li {font-weight: 500; font-size: 1.6rem;}
 .actors .actor li.name {display: flex; flex-direction: column; text-align: right;}
@@ -1494,9 +1493,11 @@ hr.divider.dashed {height: .1rem; background-image: repeating-linear-gradient(to
 .actors .movie .ux-group.scroll .ux-button.active {background-color: var(--background-default); box-shadow: var(--inset);}
 .actors .movie .details {overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; height: 30rem; border-radius: 1.6rem;}
 .actors .movie .details::-webkit-scrollbar {display: none;}
-.actors .movie .thumb {overflow: hidden; width: 100%; min-height: 33rem; border-radius: 1.6rem; background-color: var(--background-muted);}
+.actors .movie .thumb {overflow: hidden; position: relative; width: 100%; min-height: 33rem; border-radius: 1.6rem; background-color: var(--background-muted);}
 .actors .movie .thumb img {width: 100%;}
-// .actors .movie .thumb img {width: 100%; opacity: .075;}
+.actors .movie .thumb .links {display: flex; align-items: center; gap: .8rem; position: absolute; top: 0; right: 0; padding: .8rem;}
+.actors .movie .thumb .link {justify-content: center; align-items: center; width: 3.2rem; height: 3.2rem; border-radius: 1.6rem; background-color: var(--white-70); box-shadow: inset 0 0 .2rem 0 var(--gray-0); backdrop-filter: blur(.1rem); -webkit-backdrop-filter: blur(.1rem);}
+.actors .movie .thumb .link i.icon {width: 2rem; height: 2rem; background-color: var(--gray-100);}
 .actors .movie ul {display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem 0;}
 .actors .movie li {font-weight: 500;}
 .actors .movie li.title {padding-bottom: .8rem;}

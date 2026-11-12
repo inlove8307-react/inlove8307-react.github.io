@@ -178,18 +178,28 @@ const Movie = ({ ref, ...props }) => {
 			<div className="details">
 				{
 					data.name &&
-					<UxButton
-						role="link"
-						className="thumb"
-						href={`https://missav123.com/ko/${name?.toLowerCase()}`}
-						// href={`https://123av.com/ko/v/${name?.toLowerCase()}`}
-						target="_blank"
-					>
+					<div className="thumb">
 						<img
 							src={data.image}
 							alt={data.title}
 						/>
-					</UxButton>
+						<span className="links">
+							<UxButton
+								role="link"
+								href={`https://123av.com/ko/v/${name?.toLowerCase()}`}
+								target="_blank"
+							>
+								<i className="icon mask link x20" />
+							</UxButton>
+							<UxButton
+								role="link"
+								href={`https://missav123.com/ko/${name?.toLowerCase()}`}
+								target="_blank"
+							>
+								<i className="icon mask link x20" />
+							</UxButton>
+						</span>
+					</div>
 				}
 				<ul>
 					{
