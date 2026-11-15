@@ -41,6 +41,7 @@ export default function Page() {
 				'copy',
 				'user',
 				'play',
+				'change',
 			]
 		},
 		{

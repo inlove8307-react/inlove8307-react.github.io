@@ -386,10 +386,7 @@ const Page = ({ ref, ...props }) => {
 														switched,
 													})}
 												>
-													<i className={classnames('icon mask x20', {
-														'user': switched,
-														'play': !switched,
-													})} />
+													<i className={classnames('icon mask change x20')} />
 												</UxButton>
 											</div>
 											{

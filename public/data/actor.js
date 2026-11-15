@@ -4264,6 +4264,87 @@ const data = [
 			{ "name": "youtube", "url": "https://www.youtube.com/c/%E6%A0%B9%E5%B0%BE%E3%81%82%E3%81%8B%E3%82%8AAkariNeo" }
 		],
 		"id": "5565"
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a06/6377_n.jpg",
+		"name": {
+			"kr": "사츠키 메이",
+			"en": "Mei Satsuki",
+			"cn": "さつき芽衣",
+			"other": []
+		},
+		"birth": "2000.08.16",
+		"height": "154",
+		"size": {
+			"bust": "B87",
+			"waist": "W60",
+			"hips": "H86"
+		},
+		"bra": "G",
+		"debut": "2020.07",
+		"title": "뛰어난 몸매와 색기 어린 외모로 데뷔부터 화제를 모은 신흥 기대주",
+		"desc": "G컵의 훌륭한 가슴과 색기, 귀여움을 두루 갖춘 외모로 인기몰이 중인 배우. 소속사가 아쉽다는 평이 많았는데 키카탄 전향 후 공장장 모드를 풀가동시키고 있어 팬들을 기쁘게 하고 있다.",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/satsuki_meisabu" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "6377"
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a11/11149_n.jpg",
+		"name": {
+			"kr": "와카 나츠키",
+			"en": "Natsuki Waka",
+			"cn": "和香なつき",
+			"other": []
+		},
+		"birth": "2000.01.11",
+		"height": "160",
+		"size": {
+			"bust": "B86",
+			"waist": "W89",
+			"hips": "H88"
+		},
+		"bra": "E",
+		"debut": "2025.02",
+		"title": "소속사무소 와이즈 엔터 Y's Entertainment",
+		"desc": "전직 지방방송국 아나운서. 트위터 @waka_natsuki_ys",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/waka_natsuki_ys" },
+			{ "name": "instagram", "url": "" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "11149"
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a10/10516_n.jpg",
+		"name": {
+			"kr": "키요미야 토아",
+			"en": "Toa Kiyomiya",
+			"cn": "清宮仁愛",
+			"other": []
+		},
+		"birth": "2002.03.15",
+		"height": "172",
+		"size": {
+			"bust": "B105",
+			"waist": "W55",
+			"hips": "H0"
+		},
+		"bra": "J",
+		"debut": "2024.04",
+		"title": "장신 미각 거유 롱헤어 AV배우.",
+		"desc": "출신지 불명. 소속사 밤비 프로모션(バンビプロモーション). 트위터 https://twitter.com/toa_kiyomiya_ 인스타 https://www.instagram.com/toa_kiyomiya/",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/toa_kiyomiya_" },
+			{ "name": "instagram", "url": "https://www.instagram.com/toa_kiyomiya/" },
+			{ "name": "tiktok", "url": "" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "10516"
 	}
 ];
 
