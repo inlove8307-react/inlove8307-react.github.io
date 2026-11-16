@@ -211,16 +211,8 @@ const Movie = ({ ref, ...props }) => {
 						<li className="story">{data.story}</li>
 					}
 					{
-						(data.producer || data.series || data.runtime || data.release) &&
+						(data.runtime || data.release) &&
 						<li className="info">
-							<dl className="producer">
-								<dt>제작사</dt>
-								<dd>{data.producer || empty}</dd>
-							</dl>
-							<dl className="series">
-								<dt>시리즈</dt>
-								<dd>{data.series || empty}</dd>
-							</dl>
 							<dl className="runtime">
 								<dt>재생시간</dt>
 								<dd>{data.runtime || empty}</dd>
@@ -229,36 +221,6 @@ const Movie = ({ ref, ...props }) => {
 								<dt>출시일</dt>
 								<dd>{data.release || empty}</dd>
 							</dl>
-						</li>
-					}
-					{
-						data.cast &&
-						<li className="cast">
-							{
-								data.cast.map((item, index) => (
-									<span
-										key={index}
-										className="bl pound"
-									>
-										{item}
-									</span>
-								))
-							}
-						</li>
-					}
-					{
-						data.category &&
-						<li className="category">
-							{
-								data.category.map((item, index) => (
-									<span
-										key={index}
-										className="bl pound"
-									>
-										{item}
-									</span>
-								))
-							}
 						</li>
 					}
 				</ul>
