@@ -128,11 +128,14 @@ const Movie = ({ ref, ...props }) => {
 			inline: "center",
 			behavior: "smooth",
 		});
+	};
+
+	useEffect(() => {
 		detailsRef.current.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
-	};
+	}, [data]);
 
 	useEffect(() => {
 		if (!name) return;
