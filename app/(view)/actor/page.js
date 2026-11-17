@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 import classnames from "classnames";
 /* LAYOUT */
@@ -118,6 +118,7 @@ const Movie = ({ ref, ...props }) => {
 	const [data, setData] = useState({});
 	const [list, setList] = useState([]);
 	const [name, setName] = useState('');
+	const detailsRef = useRef();
 	const empty = '-';
 
 	const handleMovie = ({ target, name }) => {
@@ -126,6 +127,10 @@ const Movie = ({ ref, ...props }) => {
 			block: "nearest",
 			inline: "center",
 			behavior: "smooth",
+		});
+		detailsRef.current.scrollTo({
+			top: 0,
+			behavior: 'smooth',
 		});
 	};
 
@@ -175,7 +180,10 @@ const Movie = ({ ref, ...props }) => {
 					);
 				})}
 			</UxGroup>
-			<div className="details">
+			<div
+				ref={detailsRef}
+				className="details"
+			>
 				{
 					data.name &&
 					<div className="thumb">
@@ -244,7 +252,9 @@ const Page = ({ ref, ...props }) => {
 	const handleSwitch = ({ id, switched }) => {
 		setStatus((prev) =>
 			prev.map((item) =>
-				item.id === id ? { ...item, switched: !switched } : item
+				item.id === id
+					? { ...item, switched: !switched }
+					: { ...item, switched: false }
 			)
 		);
 	};
@@ -295,7 +305,7 @@ const Page = ({ ref, ...props }) => {
 	return (
 		<UxSection>
 			<UxArticle className="h3">
-				{/* <UxSubject className="space">
+				<UxSubject className="space">
 					<UxGroup
 						role="input"
 					>
@@ -319,7 +329,7 @@ const Page = ({ ref, ...props }) => {
 							<i className="icon mask search x24" />
 						</UxButton>
 					</UxGroup>
-				</UxSubject> */}
+				</UxSubject>
 				<UxArticle className="h4 space">
 					<UxContent>
 						<UxGroup className={classnames('actors', {
