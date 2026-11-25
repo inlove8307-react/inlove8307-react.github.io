@@ -4345,6 +4345,34 @@ const data = [
 			{ "name": "youtube", "url": "" }
 		],
 		"id": "10516"
+	},
+	{
+		"image": "https://i2.avdbs.com/actor/a08/8997_n.jpg",
+		"name": {
+			"kr": "하치미츠 린",
+			"en": "Rin Hachimitsu",
+			"cn": "八蜜凛",
+			"other": []
+		},
+		"birth": "2000.01.08",
+		"height": "166",
+		"size": {
+			"bust": "B95",
+			"waist": "W55",
+			"hips": "H90"
+		},
+		"bra": "H",
+		"debut": "2022.07",
+		"title": "아이디어 포켓 전속배우. 에이트맨 소속. 취미는 근육 트레이닝",
+		"desc": "트위터 @Rin_hachimitu 서브 계정 @rin_hachimitsu",
+		"sns": [
+			{ "name": "x", "url": "https://x.com/Rin_hachimitu" },
+			{ "name": "instagram", "url": "https://www.instagram.com/hachimitsu_rin/" },
+			{ "name": "tiktok", "url": "https://www.tiktok.com/@hachimitsu_rin" },
+			{ "name": "youtube", "url": "" }
+		],
+		"id": "8997",
+		"movie": []
 	}
 ];
 
